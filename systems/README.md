@@ -10,6 +10,8 @@ Online systems and examples available for testing.
 
 ### Online Systems
 
+* [wotify](https://wotify.org/)
+
 ### Installable Examples
 
 * [Test Thing from node-wot]()
