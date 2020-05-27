@@ -10,9 +10,7 @@ Instructions for setup
    - [Setup instructions](tools/vpn.md)
    - Local bridge
    - TODO : [ip reservation](tools/ip.md), fixed IPs from 128 up
-* LinkSmart directory service
-   - [Setup instructions for local instance](https://github.com/linksmart/thing-directory)
-   - [Cloud instance wiki](https://github.com/linksmart/thing-directory/wiki/Demo)
-   - [List TDs in directory](https://demo.linksmart.eu/thing-directory/td)
-   - [Manual TD registration](https://linksmart.eu/swagger-ui/dist/?url=https://raw.githubusercontent.com/linksmart/thing-directory/master/apidoc/openapi-spec.yml)
+* [LinkSmart directory service](https://github.com/linksmart/thing-directory/blob/master/README.md)
+   - [Setup instructions for local deployment](https://github.com/linksmart/thing-directory/wiki/Deployment)
+   - [Cloud demo instance](https://github.com/linksmart/thing-directory/wiki/Demo)
    
