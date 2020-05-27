@@ -1,0 +1,14 @@
+"Producer",                     "Consumer",                "Security",     "Status",   "Comment"
+"Intel-camera",                 "Hitachi-nodegen",         "nosec",        "pass",
+"Intel-camera",                 "Hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
+"Intel-camera",                 "Hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
+"Intel-speak",                  "Hitachi-nodegen",         "nosec",        "pass",     
+"Intel-speak",                  "Hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
+"Intel-speak",                  "Hitachi-nodegen",         "digest",       "pass",     "via portal.mmccool.net"
+"Intel-ocf",                    "Hitachi-nodegen",         "nosec",        "pass",
+"Intel-ocf",                    "Hitachi-nodegen",         "basic",        "pass",     "via portal.mmccool.net"
+"Intel-ocf",                    "Hitachi-nodegen",         "digest",       "pass",    "via tiktok.mmccool.net"
+"Panasonic-server-real",        "Hitachi-nodegen",         "bearer",       "pass", "Late-Binding is not supported"
+"Panasonic-server-simulator",   "Hitachi-nodegen",         "bearer",       "pass", 
+"SmartThings-device-1",         "Hitachi-nodegen",         "nosec",        "pass",
+"Oracle-simulators",            "Hitachi-nodegen",         "basic",        "pass",
