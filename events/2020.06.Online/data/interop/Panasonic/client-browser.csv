@@ -1,0 +1,2 @@
+"Producer",           "Consumer",                  "Security",  "Status",  "Comment"
+"Oracle-simulators",  "Panasonic-client-browser",  "basic",     "pass",    "could get blue pump status (but could not invoke actions)"

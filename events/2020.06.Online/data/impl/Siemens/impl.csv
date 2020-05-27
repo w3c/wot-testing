@@ -1,0 +1,4 @@
+"Implementation",      "Name",                              "Roles"
+"node-wot",            "node-wot",                          "consumer producer"
+"thingweb-directory",  "Thingweb Directory",                "consumer producer"
+"wot-fxui",            "WoT-fxUI",                          "consumer"

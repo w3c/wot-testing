@@ -1,0 +1,6 @@
+"Producer",                    "Consumer",                  "Security",  "Status",  "Comment"
+"SmartThings-device-1",        "Panasonic-client-nodered",  "nosec",     "pass",    "turn light on/off"
+"SmartThings-device-3",        "Panasonic-client-nodered",  "nosec",     "pass",    "get motion state and illuminance"
+"Panasonic-server-real",       "Panasonic-client-nodered",  "bearer",    "pass",
+"Panasonic-server-simulator",  "Panasonic-client-nodered",  "bearer",    "pass",
+"Intel-speak",                 "Panasonic-client-nodered",  "basic",     "pass",

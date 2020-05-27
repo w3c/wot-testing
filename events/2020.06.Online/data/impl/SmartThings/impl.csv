@@ -1,0 +1,5 @@
+"Implementation",         "Name",                              "Roles"
+"device-1",               "SmartThings 1",                     "producer"
+"device-2",               "SmartThings 2",                     "producer"
+"device-3",               "SmartThings 3",                     "producer"
+

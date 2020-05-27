@@ -1,0 +1,6 @@
+"Implementation",        "Name",                              "Roles"
+"security",              "Security Proxy",                    "component"
+"ocf",                   "OCF Metadata Translator",           "producer"
+"speak",                 "WebSpeak",                          "producer"
+"camera",                "Simple Web Camera",                 "producer"
+
