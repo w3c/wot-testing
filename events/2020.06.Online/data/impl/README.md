@@ -1,4 +1,3 @@
 # WoT Testing - June 2020 Online Plugfest 
-## TDs
+## Implementation Descriptions
 
-* [Intel](Intel/README.md)

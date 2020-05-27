@@ -1,4 +1,3 @@
 # WoT Testing - June 2020 Online Plugfest 
-## TDs
+## Interop Test Results
 
-* [Intel](Intel/README.md)
