@@ -1,0 +1,7 @@
+"Implementation",    "Name",                              "Roles"
+"authentication",    "Authentication Server",             "component"
+"client-browser",    "Browser Based Client",              "consumer"
+"client-nodered",    "Node-RED Based Client",             "consumer"
+"server-real",       "WoT Server for Real Devices",       "producer"
+"server-simulator",  "WoT Simulator",                     "producer"
+

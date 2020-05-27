@@ -1,0 +1,6 @@
+"Implementation",                   "Name",                              "Roles"
+"component-example",                "Component Example",                 "component"
+"producer-example",                 "Producer Example",                  "producer"
+"consumer-example",                 "Consumer Example",                  "consumer"
+"servient-example",                 "Servient Example",                  "consumer producer"
+
