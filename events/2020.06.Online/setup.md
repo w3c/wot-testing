@@ -9,6 +9,7 @@ Instructions for setup
    - In progress; see https://lists.w3.org/Archives/Member/member-wot-wg/2020May/0051.html
    - [Setup instructions](tools/vpn.md)
    - Local bridge
+   - TODO : [ip reservation](tools/ip.md), fixed IPs from 128 up
 * LinkSmart directory service
    - [Setup instructions for local instance](https://github.com/linksmart/thing-directory)
    - [Cloud instance wiki](https://github.com/linksmart/thing-directory/wiki/Demo)
