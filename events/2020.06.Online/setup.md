@@ -6,6 +6,7 @@ Instructions for setup
    - Put TDs in TDs subdirectory, under an org subdirectory (eg. Fraunhofer/*.jsonld)
    - Also register TDs with LinkSmart directory (see below)
 * SoftEther VPN
+   - In progress; see https://lists.w3.org/Archives/Member/member-wot-wg/2020May/0051.html
 * LinkSmart directory service
    - [Setup instructions for local instance](https://github.com/linksmart/thing-directory)
    - [Cloud instance wiki](https://github.com/linksmart/thing-directory/wiki/Demo)
