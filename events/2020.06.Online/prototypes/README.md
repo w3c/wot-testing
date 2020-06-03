@@ -3,5 +3,6 @@ Descriptions of various prototypes
     - [LinkSmart - Fraunhofer](linksmart.md)
 * AI services
     - [Person identification - Intel](personid.md)
-* Query state feature on actions
-    - TO DO - TD TF
+* Hypermedia controls
+    - Query state feature on actions
+    - [Hypermedia Proposals](hypermedia.md)
