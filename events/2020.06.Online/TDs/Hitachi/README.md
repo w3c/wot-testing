@@ -15,6 +15,7 @@ Parts list:
 - 4 wires
 
 1. create a circuit as follows:
+
 ![schematic](schematic.svg)
 
 2. [install Node-RED](https://nodered.org/docs/getting-started/raspberrypi).
@@ -22,6 +23,7 @@ Parts list:
 3. [install node-red-node-discovery](https://flows.nodered.org/node/node-red-node-discovery) 
 
 4. write a flow.
+
 ![flow diagram](flow.png)
 - [source file](flows.json)
 
