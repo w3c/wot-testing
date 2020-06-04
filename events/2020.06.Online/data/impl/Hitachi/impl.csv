@@ -1,3 +1,4 @@
 "Implementation",      "Name",                              "Roles"
 "nodegen",             "Node generator for Node-RED",       "consumer"
+"led",                 "Simple LED Lamp",                   "producer"
 
