@@ -18,7 +18,7 @@ There are four ways to connect to a VPN network. Please choose good ways that su
 If you connect device/PCs to the VPN one by one, Softether VPN Client or L2TP/IPSec are better. 
 If you connect your local network with multiple device/PCs to the VPN, Softether VPN Bridge or OpenVPN are better.
 .
-- [SoftEther VPN client]( https://github.com/mryuichi/docs/blob/master/vpn_softetherclient.md )
+- [SoftEther VPN client](https://github.com/w3c/wot-testing/blob/master/events/2020.06.Online/tools/vpn_softetherclient.md)
 - L2TP/IPSec client
-- [SoftEther VPN bridge]( https://github.com/mryuichi/docs/blob/master/vpn_softetherbridge.md )
+- [SoftEther VPN bridge](https://github.com/w3c/wot-testing/blob/master/events/2020.06.Online/tools/vpn_softetherbridge.md)
 - OpenVPN client
