@@ -5,8 +5,9 @@ Online systems and examples available for testing.
 ### Frameworks
 
 * [node-wot]()
-* [nodegen]()
-* [NodeRED WoT Module](https://www.npmjs.com/package/node-red-contrib-web-of-things)
+* [Node-RED Node Generator](https://github.com/node-red/node-red-nodegen)
+   * Given a TD, generates a custom Node-RED node.
+* [Node-RED WoT Module](https://www.npmjs.com/package/node-red-contrib-web-of-things)
 
 ### Online Systems
 
