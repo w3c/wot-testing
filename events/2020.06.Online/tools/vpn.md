@@ -19,6 +19,6 @@ If you connect device/PCs to the VPN one by one, Softether VPN Client or L2TP/IP
 If you connect your local network with multiple device/PCs to the VPN, Softether VPN Bridge or OpenVPN are better.
 .
 - [SoftEther VPN client]( vpn_softetherclient.md )
-- L2TP/IPSec client
+- [L2TP/IPSec client]( vpn_l2tp.md )
 - [SoftEther VPN bridge]( vpn_softetherbridge.md )
 - OpenVPN client
