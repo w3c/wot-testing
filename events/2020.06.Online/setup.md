@@ -10,7 +10,6 @@ Instructions for setup
    - [Setup instructions](tools/vpn.md)
    - Local bridge
    - [Fixed IP reservation](tools/ip.csv), Fixed is 1-127, dynamic IPs (allocated by DHCP) from 128 up
-* [LinkSmart directory service](https://github.com/linksmart/thing-directory/blob/master/README.md)
-   - [Setup instructions for local deployment](https://github.com/linksmart/thing-directory/wiki/Deployment)
-   - [Cloud demo instance](https://github.com/linksmart/thing-directory/wiki/Demo)
+* LinkSmart directory service
+   - See [details](prototypes/linksmart.md)
    
