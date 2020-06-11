@@ -96,7 +96,7 @@ you should make a bridge,
 ```
 % sudo apt install bridge-utils
 
-% sudo brctl addbr br0**
+% sudo brctl addbr br0
 ```
 
 create tap interface on step 6 in above,
