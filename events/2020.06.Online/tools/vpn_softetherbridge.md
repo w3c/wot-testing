@@ -102,7 +102,7 @@ you should make a bridge,
 create tap interface on step 6 in above,
 
 ```
-**VPN Server>BridgeCreate BRIDGE /DEVICE:svpn /TAP:yes      <----
+VPN Server>BridgeCreate BRIDGE /DEVICE:svpn /TAP:yes      <----
 ```
 
 then bridge the tap interface and physical interface (`eth0`) using:
