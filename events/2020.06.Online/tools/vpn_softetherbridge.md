@@ -81,7 +81,7 @@ VPN Server>BridgeCreate BRIDGE /DEVICE:eth0      <----
 ```
 VPN Server>Hub BRIDGE            <---
 
-VPN Server/BRIDGE>CascadeCreate mybridge /SERVER:xxx.xxx.xxx.xxx:443 /HUB:main /USERNAME:testuser  <---
+VPN Server/BRIDGE>CascadeCreate mybridge /SERVER:xxx.xxx.xxx.xxx:443 /HUB:wotpf /USERNAME:testuser  <---
 
 VPN Server/BRIDGE>CascadePasswordSet mybridge /PASSWORD:pftest /TYPE:standard    <---
 
