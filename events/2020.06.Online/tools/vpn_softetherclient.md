@@ -58,13 +58,13 @@ VPN Client>NicCreate tun0      <----
 ## 7. Create an account for the connection to VPN server
 
 ```
-VPN Client>AccountCreate pf2020 /SERVER:xxx.xxx.xxx.xxx:443 /HUB:wotpf /USERNAME:`testuser` /NICNAME:tun0            <---
+VPN Client>AccountCreate pf2020 /SERVER:xxx.xxx.xxx.xxx:443 /HUB:wotpf /USERNAME:testuser /NICNAME:tun0            <---
 
 VPN Client>NicEnable tun0            <---
 
-VPN Client>AccountUsernameSet pf2020 /USERNAME:`testuser`            <---
+VPN Client>AccountUsernameSet pf2020 /USERNAME:testuser            <---
 
-VPN Client>AccountPasswordSet pf2020 /PASSWORD:`pftest` /TYPE:standard            <---
+VPN Client>AccountPasswordSet pf2020 /PASSWORD:pftest /TYPE:standard            <---
 
 VPN Client>AccountConnect pf2020            <---
 ```
