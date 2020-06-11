@@ -60,7 +60,7 @@ VPN Client>NicCreate tun0      <----
 ```
 VPN Client>AccountCreate pf2020 /SERVER:xxx.xxx.xxx.xxx:443 /HUB:wotpf /USERNAME:`testuser` /NICNAME:tun0            <---
 
-VPN Client>NicEnable pf2020            <---
+VPN Client>NicEnable tun0            <---
 
 VPN Client>AccountUsernameSet pf2020 /USERNAME:`testuser`            <---
 
