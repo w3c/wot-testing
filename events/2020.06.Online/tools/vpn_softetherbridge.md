@@ -1,9 +1,9 @@
-# Setup instruction for SoftEther VPN Bridge
+# Setup Instructions for SoftEther VPN Bridge
 
-NOTE: This instaruction asumes using linux on Raspberry Pi.
+NOTE: These instructions assume you are using linux on Raspberry Pi.
 `testuser/pftest` is a sample User ID and password in the instruction.
 
-## 1. Download VPN bridge from SoftEther Download Center
+## 1. Download VPN Bridge from SoftEther Download Center
 - go to https://www.softether-download.com/en.aspx?product=softether
 - Select Software -> SoftEther VPN (Freeware)
 - Select Component -> SoftEther VPN Bridge
@@ -12,7 +12,7 @@ NOTE: This instaruction asumes using linux on Raspberry Pi.
 - Download newest file
 - (as of July 4th, newest file is: https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.34-9745-beta/softether-vpnbridge-v4.34-9745-beta-2020.04.05-linux-arm_eabi-32bit.tar.gz )
 
-## 2. Extract downloaded archive file
+## 2. Extract Downloaded Archive File
 
 ```
 % tar zxf softether-....tar.gz
@@ -60,7 +60,7 @@ Password: *************          <--- Password for your bridge. not for vpn serv
 Confirm input: **************    <--- again
 ```
 
-## 6. Connect Virtual Hub `BRIDGE` with physical interface (e.g. `eth0`)
+## 6. Connect Virtual Hub `BRIDGE` with Physical Interface (e.g. `eth0`)
 
 ```
 VPN Server>BridgeDeviceList      <----
@@ -88,7 +88,7 @@ VPN Server/BRIDGE>CascadePasswordSet mybridge /PASSWORD:pftest /TYPE:standard   
 VPN Server/BRIDGE>CascadeOnline mybridge   <---
 ```
 
-## 8. Note for local bridging
+## 8. Note for Local Bridging
 If you need to connect the machines in VPN from the machine where `vpnbridge` is running,
 
 you should make a bridge,
