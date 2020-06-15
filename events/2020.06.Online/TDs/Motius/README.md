@@ -61,7 +61,7 @@ Historic (Sensor)data is something that we need in a lot of our projects. To exp
         ...
         {
           "@type": "getHistoricData",
-          "href": "http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/temperature{?from,to}",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature{?from,to}",
           "contentType": "application/json",
           "op": "readproperty",
           "htv:methodName": "GET",
@@ -73,8 +73,10 @@ Historic (Sensor)data is something that we need in a lot of our projects. To exp
 
 This points to a simple API, that fetches the historic data from an InfluxDB and returns it as an JSON array. 
 You can e.g. check it out with a GET request to 
-`GET http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/temperature?from=2020-06-14T00:00:00Z&to=2020-06-16T00:00:00Z`
+`GET http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature?from=2020-06-14T00:00:00Z&to=2020-06-16T00:00:00Z`
+
 or 
-`GET http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/temperature`
+
+`GET http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature`
 
 ATTENTION: the API is experimental, not very well tested (yet) and might be not 100% stable (yet). 
