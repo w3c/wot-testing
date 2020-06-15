@@ -1,18 +1,24 @@
 # WoT Testing
+
 ## Systems
+
 Online systems and examples available for testing.
 
 ### Frameworks
 
-* [node-wot]()
+* [Thingweb node-wot](https://github.com/eclipse/thingweb.node-wot)
+  * Reference implementation of the W3C WoT Scripting API
 * [Node-RED Node Generator](https://github.com/node-red/node-red-nodegen)
-   * Given a TD, generates a custom Node-RED node.
+  * Given a TD, generates a custom Node-RED nodes through the command line
 * [Node-RED WoT Module](https://www.npmjs.com/package/node-red-contrib-web-of-things)
+  * A node that needs to be configured with a TD. Based on node-wot
 
 ### Online Systems
 
-* [wotify](https://wotify.org/)
+* [Test Thing from node-wot](http://plugfest.thingweb.io:8083/TestThing)
+  * Always online instance of a Thing that has various payload types
 
 ### Installable Examples
 
-* [Test Thing from node-wot]()
+* [wotify](https://wotify.org/)
+  * This is a collection of existing open-source WoT devices. There are also TDs (or TD templates) for closed source devices such as Philips Hue
