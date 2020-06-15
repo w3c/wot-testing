@@ -1,7 +1,7 @@
 {
   "@context": ["https://www.w3.org/2019/wot/td/v1", { "@language": "en" }],
   "@type": ["Thing", "MoSense"],
-  "id": "urn:motius:mosense:STUTTGART:BC:DD:C2:2D:C8:31",
+  "id": "urn:motius:mosense:DEVBOARDBC:DD:C2:2D:C8:31",
   "title": "mosense",
   "description": "Sensor board for environmental data, made by MotiusIO.",
   "links": [
@@ -44,14 +44,14 @@
       },
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/temperature",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature",
           "contentType": "application/json",
           "op": ["readproperty", "observeproperty", "unobserveproperty"],
           "mqv:controlPacketValue": "SUBSCRIBE"
         },
         {
           "@type": "getHistoricData",
-          "href": "http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/temperature{?from,to}",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature{?from,to}",
           "contentType": "application/json",
           "op": "readproperty",
           "htv:methodName": "GET",
@@ -67,13 +67,13 @@
       "readOnly": true,
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/humidity",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/humidity",
           "contentType": "application/json",
           "op": ["readproperty", "observeproperty", "unobserveproperty"]
         },
         {
           "@type": "getHistoricData",
-          "href": "http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/humidity{?from,to}",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/humidity{?from,to}",
           "contentType": "application/json",
           "op": "readproperty",
           "htv:methodName": "GET",
@@ -89,13 +89,13 @@
       "readOnly": true,
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/pressure",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/pressure",
           "contentType": "application/json",
           "op": ["readproperty", "observeproperty", "unobserveproperty"]
         },
         {
           "@type": "getHistoricData",
-          "href": "http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/pressure{?from,to}",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/pressure{?from,to}",
           "contentType": "application/json",
           "op": "readproperty",
           "htv:methodName": "GET",
@@ -111,13 +111,13 @@
       "readOnly": true,
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/voc",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/voc",
           "contentType": "application/json",
           "op": ["readproperty", "observeproperty", "unobserveproperty"]
         },
         {
           "@type": "getHistoricData",
-          "href": "http://historic.motius.io/things/STUTTGART:BC:DD:C2:2D:C8:31/properties/voc{?from,to}",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/voc{?from,to}",
           "contentType": "application/json",
           "op": "readproperty",
           "htv:methodName": "GET",
@@ -133,7 +133,7 @@
       "data": { "type": "boolean" },
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/events/airQualityCritical",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/events/airQualityCritical",
           "contentType": "application/json",
           "op": ["subscribeevent", "unsubscribeevent"]
         }
@@ -146,7 +146,7 @@
       "input": { "type": "boolean" },
       "forms": [
         {
-          "href": "mqtts://mqtt.motius.io:8883/things/STUTTGART:BC:DD:C2:2D:C8:31/actions/blink",
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/actions/blink",
           "contentType": "application/json",
           "op": ["invokeaction"]
         }
