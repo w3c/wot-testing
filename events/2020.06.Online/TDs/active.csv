@@ -1,3 +1,4 @@
-"Org",    "Name",    "Active"
-"Intel",  "camera",  "no"
-"Hitachi","led",     "yes"
+"Org",    "Name",          "Active",  "Comment"
+"Intel",  "intel-camera",  "no",      "expect ready by June 16"
+"Intel",  "intel-speak",   "no",      "expect ready by June 16"
+"Hitachi","led",           "yes",
