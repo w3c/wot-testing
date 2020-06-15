@@ -5,3 +5,5 @@
 * [Setup](setup.md): Prework to do before the plugfest.
 * [TDs](TDs/README.md): TD archive.
 * [Data](data/README.md): Data to be captured during the plugfest.
+
+![Current Netowrk Configuration](./plugfestnetwork.png)
