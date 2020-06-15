@@ -76,7 +76,7 @@ VPN Client>AccountPasswordSet pf2020 /PASSWORD:pftest /TYPE:standard            
 VPN Client>AccountConnect pf2020            <---
 ```
 
-## 8. Note for local bridging
+## 8. Enable DHCP for assign IP address to the interface
 You should get IP address from DHCP server
 
 ```
