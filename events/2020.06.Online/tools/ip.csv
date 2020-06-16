@@ -1,0 +1,14 @@
+IP addresss, User,  Remark
+192.168.30.10, Fujitsu, WoT Proxy
+192.168.30.20, Siemens, 
+192.168.30.30, Intel, 
+192.168.30.40, Oracle, 
+192.168.30.50, Panasonic, 
+192.168.30.60, Hitachi, 
+192.168.30.70, TUM, 
+192.168.30.90, SmartThings, 
+192.168.30.100, Fraunhofer, Local LinkSmart Directory
+192.168.30.110, Unallocated,
+,,
+192.168.30.127,,
+129.168.30.128-254, Reserve, assinged from DHCP server
