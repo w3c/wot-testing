@@ -1,0 +1,78 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "id": "urn:dev:mac:b827ebfffe4b6d0b",
+  "title": "myRasPiLED",
+  "titles": {
+    "en": "myRasPiLED",
+    "ja": "私のラズパイLED"
+  },
+  "description": "Simple LED Lamp using Node-RED",
+  "descriptions": {
+    "en": "Simple LED Lamp using Node-RED",
+    "ja": "Node-REDをつかったシンプルなLEDランプ"
+  },
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    },
+    "no_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "basic_sc"
+  ],
+  "properties": {
+    "led": {
+      "title": "LED status",
+      "titles": {
+        "en": "LED status",
+        "jp": "LEDの状態"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://ktorpi.local:1880/led",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {
+    "toggled": {
+      "title": "switch is toggled",
+      "titles": {
+        "en": "switch is toggled",
+        "ja": "スイッチがトグルされた"
+      },
+      "data": {
+        "type": "object"
+      },
+      "properties": {
+        "value": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "href": "ws://ktorpi.local:1880/ws/toggled",
+          "op": "subscribeevent",
+          "contentType": "application/json",
+          "security": [
+            "no_sc"
+          ]
+        }
+      ]
+    }
+  }
+}

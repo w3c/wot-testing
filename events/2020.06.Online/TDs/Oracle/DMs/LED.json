@@ -1,0 +1,71 @@
+{
+  "urn": "urn:com:siemens:led",
+  "name": "LED",
+  "description": "WoT Plugfest LED",
+  "system": false,
+  "draft": false,
+  "created": 1591774437391,
+  "createdAsString": "2020-06-10T07:33:57.391Z",
+  "lastModified": 1591774667006,
+  "lastModifiedAsString": "2020-06-10T07:37:47.006Z",
+  "userLastModified": "iot-cloudops_ww_grp@oracle.com",
+  "attributes": [
+    {
+      "defaultValue": true,
+      "description": "",
+      "name": "status",
+      "type": "BOOLEAN",
+      "writable": true
+    },
+    {
+      "defaultValue": 0,
+      "description": "",
+      "name": "brightness",
+      "type": "INTEGER",
+      "writable": true
+    }
+  ],
+  "actions": [
+    {
+      "alias": "",
+      "description": "",
+      "name": "ledOn"
+    },
+    {
+      "alias": "",
+      "description": "",
+      "name": "ledOff"
+    },
+    {
+      "alias": "",
+      "arguments": [
+        {
+          "description": "delay in seconds",
+          "name": "delay",
+          "type": "INTEGER"
+        }
+      ],
+      "description": "",
+      "name": "ledFade"
+    }
+  ],
+  "formats": [],
+  "links": [
+    {
+      "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Aled",
+      "rel": "self"
+    },
+    {
+      "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Aled",
+      "rel": "canonical"
+    }
+  ],
+  "devicePolicies": {
+    "links": [
+      {
+        "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com/iot/webapi/v2/deviceModels/urn%253Acom%253Asiemens%253Aled/devicePolicies",
+        "rel": "devicePolicies"
+      }
+    ]
+  }
+}
