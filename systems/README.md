@@ -17,6 +17,9 @@ Online systems and examples available for testing.
 
 * [Test Thing from node-wot](http://plugfest.thingweb.io:8083/TestThing)
   * Always online instance of a Thing that has various payload types
+* Virtual Coffee Machine instances from TUM
+  * [List of HTTP TDs](http://129.187.45.174:8080)
+  * [List of CoAP TDs](coap://129.187.45.174:5683)
 
 ### Installable Examples
 
