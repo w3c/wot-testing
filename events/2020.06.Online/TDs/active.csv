@@ -1,7 +1,6 @@
 "Org",        "Name",              "Active",  "Comment"
 "Intel",      "intel-camera",      "no",      "expect ready by June 16"
-"Intel",      "intel-speak",       "no",      "expect ready by June 16"
-"Intel",      "intel-speak-alt",   "no",       "expect ready by June 16"
+"Intel",      "intel-speak",       "partial",     "VPN-local active"
 "Hitachi",    "hitachi-led",       "yes",
 "Oracle",     "oracle-Blue_Pump_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
 "Oracle",     "oracle-Festo_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
