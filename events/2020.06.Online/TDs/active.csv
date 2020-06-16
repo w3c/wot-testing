@@ -8,3 +8,5 @@
 "Oracle",     "oracle-HVAC_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
 "Oracle",     "oracle-LED_Siemens.jsonld", "yes",  "If you need credentials please send mail to Michael.Lagally@oracle.com"
 "Oracle",     "oracle-Truck_Shared.jsonld", "yes",  "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"TUM",        "HTTP_CoffeeMachine.jsonld", "yes", "16 HTTP instances until 1_16 in the hrefs. All simulated."
+"TUM",        "CoAP_CoffeeMachine.jsonld", "yes", "16 CoAP instances until 2_16 in the hrefs. All simulated."
