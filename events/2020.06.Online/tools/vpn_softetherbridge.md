@@ -2,6 +2,8 @@
 
 NOTE: These instructions assume you are using linux on Raspberry Pi.
 `testuser/pftest` is a sample User ID and password in the instruction.
+This setup is NOT a persistent service; if you reboot, you will have to 
+reconfigure it.
 
 ## 1. Download VPN Bridge from SoftEther Download Center
 - go to https://www.softether-download.com/en.aspx?product=softether
