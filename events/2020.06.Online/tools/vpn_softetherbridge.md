@@ -127,7 +127,7 @@ then setting up an `init.d` service file.  However the instructions for the serv
 quite right for the Raspberry Pi which does not have `chkconfig`.
 Instead you have to 
 manually set the dependencies in the service file (see here for an appropriate 
-[init.d/vpnbridge service file](vpnbridge) and then use the following to 
+[init.d/vpnbridge service file](vpnbridge)) and then use the following to 
 make it executable and register it:
 ```
    sudo chmod +x /etc/init.d/vpnbridge
@@ -144,5 +144,11 @@ bridge creation to `/etc/network/interfaces`, but the Raspberry Pi makes this co
 that file from a DHCP configuration file...
 A simpler if slightly hacky solution is to add the 
 bridge creation commands to the `init.d` script, which is what I have done above.
-Note that I use `eth1` for my external (downstream) interface, so you might have to edit that part to
-make it work for your interfaces.
+
+Note that I use `eth0` for my connection to the upstream external network (internet) and
+`eth1` for my downstream (local) VLAN interface, so you might have to edit that part to
+make it work for your interfaces.  For example, you might be using `wlan0` for your upstream network
+and `eth0` for your downstream network instead.  In addition the static route command is included
+in this service file but if the IP of the VPN server changes that part will have to be changed,
+and also your local gateway may have a different address than what I used.  In short, make sure to
+check and edit these elements.
