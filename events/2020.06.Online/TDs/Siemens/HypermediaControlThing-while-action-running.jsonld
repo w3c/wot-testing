@@ -1,0 +1,31 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "title": "HypermediaControlThing",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "nosec_sc",
+    "actions": {
+        "fade": {
+            "forms": [
+                {
+                    "href": "http://192.168.30.137:8084/HypermediaControlThing/fade",
+                    "htv:methodName": "POST",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "http://192.168.30.137:8084/HypermediaControlThing/fade/1",
+                    "htv:methodName": "GET",
+                    "op": "readaction"
+                },
+                {
+                    "href": "http://192.168.30.137:8084/HypermediaControlThing/fade/1",
+                    "htv:methodName": "DELETE",
+                    "op": "cancelaction"
+                }
+            ]
+        }
+    }
+}

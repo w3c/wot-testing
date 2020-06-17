@@ -1,0 +1,319 @@
+[
+    {
+        "id": "4214c046.c2618",
+        "type": "tab",
+        "label": "Simple Thing",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "aebf68cb.1c40b8",
+        "type": "rpi-gpio in",
+        "z": "4214c046.c2618",
+        "name": "Switch(GPIO25)",
+        "pin": "22",
+        "intype": "down",
+        "debounce": "25",
+        "read": true,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "59b8bbe9.a70264"
+            ]
+        ]
+    },
+    {
+        "id": "3d450721.2e8e28",
+        "type": "rpi-gpio out",
+        "z": "4214c046.c2618",
+        "name": "LED(GPIO17)",
+        "pin": "11",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 730,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "59b8bbe9.a70264",
+        "type": "function",
+        "z": "4214c046.c2618",
+        "name": "toggle and write ledStatus",
+        "func": "let status = flow.get(\"ledStatus\") || 0;\n\nif (msg.payload === 1) {\n    status ^= 1;\n    flow.set(\"ledStatus\", status);\n    msg.payload = status;\n} else {\n    msg = null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "3d450721.2e8e28",
+                "df85785b.4b7da8"
+            ]
+        ]
+    },
+    {
+        "id": "366406e0.79f4ba",
+        "type": "http in",
+        "z": "4214c046.c2618",
+        "name": "",
+        "url": "/led",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "7e27775c.242258"
+            ]
+        ]
+    },
+    {
+        "id": "d9cf26c5.386ee8",
+        "type": "http response",
+        "z": "4214c046.c2618",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fe4718b2.4c4398",
+        "type": "http in",
+        "z": "4214c046.c2618",
+        "name": "",
+        "url": "/led",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "d6724a5b.49b248"
+            ]
+        ]
+    },
+    {
+        "id": "83f00d03.a4b5a",
+        "type": "http response",
+        "z": "4214c046.c2618",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "7e27775c.242258",
+        "type": "function",
+        "z": "4214c046.c2618",
+        "name": "fetch ledStatus",
+        "func": "let status = flow.get(\"ledStatus\") || 0;\n\nmsg.payload = {value: status};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "d9cf26c5.386ee8"
+            ]
+        ]
+    },
+    {
+        "id": "4993753e.fe40ec",
+        "type": "http in",
+        "z": "4214c046.c2618",
+        "name": "",
+        "url": "/.well-known/wot-td",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "4645080f.1f98b8"
+            ]
+        ]
+    },
+    {
+        "id": "4645080f.1f98b8",
+        "type": "function",
+        "z": "4214c046.c2618",
+        "name": "generate TD",
+        "func": "let ipaddress= \"ktorpi.local\";\n\nmsg.payload = {\n    \"@context\": \"https://www.w3.org/2019/wot/td/v1\",\n    id: \"urn:dev:mac:b827ebfffe4b6d0b\",\n    title: \"myRasPiLED\",\n    securityDefinitions: {\n        basic_sc: {\n            scheme: \"basic\",\n            \"in\": \"header\"\n        },\n        no_sc: {\n            scheme: \"nosec\"\n        }\n    },\n    security: [\"basic_sc\"],\n    properties: {\n        led: {\n            type: \"object\",\n            properties: {\n                value: { type: \"number\" },\n            },\n            forms: [\n                {\n                    href: `http://${ipaddress}:1880/led`,\n                    op: [\n                        \"readproperty\",\n                        \"writeproperty\"\n                    ],\n                    contentType: \"application/json\",\n                }\n            ]\n        }\n    },\n    events: {\n        toggled: {\n            data: {type: \"object\" },\n            properties: {value: {type: \"numbber\" }},\n            forms: [{\n                href: `ws://${ipaddress}:1880/ws/toggled`,\n                op: \"subscribeevent\",\n                contentType: \"application/json\",\n                security: [\"no_sc\"]\n            }]\n        }\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "3a8a42cf.f429ee"
+            ]
+        ]
+    },
+    {
+        "id": "3a8a42cf.f429ee",
+        "type": "http response",
+        "z": "4214c046.c2618",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d6724a5b.49b248",
+        "type": "function",
+        "z": "4214c046.c2618",
+        "name": "update ledStatus",
+        "func": "let msg1 = null;\n\nif (msg.payload.hasOwnProperty(\"value\")) {\n    let s = msg.payload.value;\n    if (s === 1 || s === 0) {\n        msg1 = {payload: s}\n        flow.set(\"ledStatus\", s);\n    } \n}\n\nreturn [msg1, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "3d450721.2e8e28",
+                "df85785b.4b7da8"
+            ],
+            [
+                "83f00d03.a4b5a"
+            ]
+        ]
+    },
+    {
+        "id": "dfb4c4dc.65eb58",
+        "type": "websocket out",
+        "z": "4214c046.c2618",
+        "name": "",
+        "server": "1dfa7788.d62758",
+        "client": "",
+        "x": 740,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "df85785b.4b7da8",
+        "type": "function",
+        "z": "4214c046.c2618",
+        "name": "make event message",
+        "func": "msg.payload = {value: msg.payload};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "dfb4c4dc.65eb58"
+            ]
+        ]
+    },
+    {
+        "id": "c5a3bded.cf0f2",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "toggle a LED with a swich",
+        "info": "",
+        "x": 130,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "19506a16.883ed6",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "read property",
+        "info": "",
+        "x": 90,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "77bb239b.01dd5c",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "write property",
+        "info": "",
+        "x": 90,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a51ad130.98d64",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "subscribe event",
+        "info": "",
+        "x": 100,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4e72a6cf.5dcb18",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "TD self hosting",
+        "info": "",
+        "x": 100,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8edace6a.a9bde",
+        "type": "announce",
+        "z": "4214c046.c2618",
+        "name": "myRasPiLED",
+        "service": "_wot._tcp",
+        "port": "1880",
+        "txt": "\"retrieve\":\"/.well-known/wot-td\"",
+        "x": 730,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "598d290b.ec5288",
+        "type": "inject",
+        "z": "4214c046.c2618",
+        "name": "",
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 130,
+        "y": 580,
+        "wires": [
+            [
+                "8edace6a.a9bde"
+            ]
+        ]
+    },
+    {
+        "id": "ed917734.6426a8",
+        "type": "comment",
+        "z": "4214c046.c2618",
+        "name": "Advertise this thing using mDNS",
+        "info": "",
+        "x": 150,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1dfa7788.d62758",
+        "type": "websocket-listener",
+        "z": "",
+        "path": "/ws/toggled",
+        "wholemsg": "false"
+    }
+]

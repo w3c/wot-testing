@@ -1,0 +1,158 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1", { "@language": "en" }],
+  "@type": ["Thing", "MoSense"],
+  "id": "urn:motius:mosense:DEVBOARDBC:DD:C2:2D:C8:31",
+  "title": "mosense",
+  "description": "Sensor board for environmental data, made by MotiusIO.",
+  "links": [
+    {
+      "href": "https://www.motius.de/",
+      "rel": "appendix"
+    },
+    {
+      "href": "http://office.motius.io/",
+      "rel": "status"
+    },
+    {
+      "href": "https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors-bme680/",
+      "rel": "external"
+    }
+  ],
+  "securityDefinitions": {
+    "basic_sc": { "scheme": "basic", "in": "header" },
+    "no_sc": { "scheme": "nosec" }
+  },
+  "security": ["basic_sc"],
+  "properties": {
+    "temperature": {
+      "title": "Temperature Sensor from the BME680",
+      "unit": "°C",
+      "type": "number",
+      "observable": true,
+      "readOnly": true,
+      "uriVariables": {
+        "from": {
+          "type": "string",
+          "@type": "ISO8601DateTime",
+          "description": "Start of Timerange in format 2020-06-09T00:00:00Z"
+        },
+        "to": {
+          "type": "string",
+          "@type": "ISO8601DateTime",
+          "description": "End of Timerange in format 2020-06-10T00:00:00Z"
+        }
+      },
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature",
+          "contentType": "application/json",
+          "op": ["readproperty", "observeproperty", "unobserveproperty"],
+          "mqv:controlPacketValue": "SUBSCRIBE"
+        },
+        {
+          "@type": "getHistoricData",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/temperature{?from,to}",
+          "contentType": "application/json",
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "security": ["no_sc"]
+        }
+      ]
+    },
+    "humidity": {
+      "title": "Humidity Sensor from the BME680",
+      "unit": "% r.H.",
+      "type": "number",
+      "observable": true,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/humidity",
+          "contentType": "application/json",
+          "op": ["readproperty", "observeproperty", "unobserveproperty"]
+        },
+        {
+          "@type": "getHistoricData",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/humidity{?from,to}",
+          "contentType": "application/json",
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "security": ["no_sc"]
+        }
+      ]
+    },
+    "pressure": {
+      "title": "Barometric Pressure from the BME680",
+      "unit": "hPa",
+      "type": "number",
+      "observable": true,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/pressure",
+          "contentType": "application/json",
+          "op": ["readproperty", "observeproperty", "unobserveproperty"]
+        },
+        {
+          "@type": "getHistoricData",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/pressure{?from,to}",
+          "contentType": "application/json",
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "security": ["no_sc"]
+        }
+      ]
+    },
+    "voc": {
+      "title": "Volatile Organic Compounds from the BME680",
+      "unit": "ppb",
+      "type": "number",
+      "observable": true,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/voc",
+          "contentType": "application/json",
+          "op": ["readproperty", "observeproperty", "unobserveproperty"]
+        },
+        {
+          "@type": "getHistoricData",
+          "href": "http://historic.motius.io/things/DEVBOARDBC:DD:C2:2D:C8:31/properties/voc{?from,to}",
+          "contentType": "application/json",
+          "op": "readproperty",
+          "htv:methodName": "GET",
+          "security": ["no_sc"]
+        }
+      ]
+    }
+  },
+  "events": {
+    "airQualityCritical": {
+      "title": "Air quality critical",
+      "description": "[FAKED FOR NOW] The Edge AI predicts a critical air quality",
+      "data": { "type": "boolean" },
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/events/airQualityCritical",
+          "contentType": "application/json",
+          "op": ["subscribeevent", "unsubscribeevent"]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "blink": {
+      "title": "Blink NeoPixel LED in Red",
+      "input": { "type": "boolean" },
+      "forms": [
+        {
+          "href": "mqtts://mqtt.motius.io:8883/things/DEVBOARDBC:DD:C2:2D:C8:31/actions/blink",
+          "contentType": "application/json",
+          "op": ["invokeaction"]
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    }
+  }
+}

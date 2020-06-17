@@ -5,7 +5,7 @@
                }
   ],
   "@type": ["Thing"],
-  "title": "Intel-WebSpeak-miix",
+  "title": "Intel-WebSpeak-jv",
   "description": "A simple text to speech service",
   "support": "mailto:michael.mccool@intel.com",
   "version": {"instance":"0.1.0"},
@@ -16,7 +16,7 @@
         "rel": "repository",
         "type": "application/vnd.github.v3+json"
   }],
-  "id": "urn:uuid:a8b46aa9-14db-5b46-9af0-f00d576ffed7",
+  "id": "urn:uuid:4458dc73-b30e-5aba-ba71-f17a5f050203",
   "securityDefinitions": {
     "nosec_sc": {"scheme":"nosec"},
     "basic_sc": {"scheme":"basic"},
@@ -30,30 +30,30 @@
       }, 
       "forms": [
         {
-          "href": "http://miix.local:8085/api/say",
+          "href": "http://jv.local:8090/api/say",
           "contentType": "application/json",
           "op":"invokeaction"
         },
         {
-          "href": "https://portal.mmccool.net:8086/api/say",
+          "href": "https://portal.mmccool.net:8096/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
           "security": ["basic_sc"]
         },
         {
-          "href": "https://portal.mmccool.net:8087/api/say",
+          "href": "https://portal.mmccool.net:8097/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
           "security": ["digest_sc"]
         },
         {
-          "href": "https://tiktok.mmccool.org:8086/api/say",
+          "href": "https://tiktok.mmccool.org:8096/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
           "security": ["basic_sc"]
         },
         {
-          "href": "https://tiktok.mmccool.org:8087/api/say",
+          "href": "https://tiktok.mmccool.org:8097/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
           "security": ["digest_sc"]
