@@ -6,8 +6,8 @@
   "draft": false,
   "created": 1591774437391,
   "createdAsString": "2020-06-10T07:33:57.391Z",
-  "lastModified": 1591774667006,
-  "lastModifiedAsString": "2020-06-10T07:37:47.006Z",
+  "lastModified": 1592298403017,
+  "lastModifiedAsString": "2020-06-16T09:06:43.017Z",
   "userLastModified": "iot-cloudops_ww_grp@oracle.com",
   "attributes": [
     {
@@ -28,11 +28,25 @@
   "actions": [
     {
       "alias": "",
+      "arguments": [
+        {
+          "description": "",
+          "name": "dummy",
+          "type": "BOOLEAN"
+        }
+      ],
       "description": "",
       "name": "ledOn"
     },
     {
       "alias": "",
+      "arguments": [
+        {
+          "description": "",
+          "name": "dummy",
+          "type": "BOOLEAN"
+        }
+      ],
       "description": "",
       "name": "ledOff"
     },
