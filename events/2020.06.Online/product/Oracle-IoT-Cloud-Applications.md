@@ -1,0 +1,1 @@
+The official Oracle IoT Cloud product documentation is available at https://www.oracle.com/internet-of-things/

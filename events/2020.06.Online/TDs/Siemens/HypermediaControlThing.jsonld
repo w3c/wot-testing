@@ -11,7 +11,7 @@
         "fade": {
             "forms": [
                 {
-                    "href": "http://192.168.56.1:8084/HypermediaControlThing/fade",
+                    "href": "http://192.168.30.137:8084/HypermediaControlThing/fade",
                     "htv:methodName": "POST",
                     "op": "invokeaction"
                 }
