@@ -1,5 +1,13 @@
 "Org",        "Name",              "Active",  "Comment"
 "Intel",      "intel-camera",      "no",      "expect ready by June 16"
-"Intel",      "intel-speak",       "no",      "expect ready by June 16"
-"Intel",      "intel-speak-alt",   "no",       "expect ready by June 16"
+"Intel",      "intel-speak",       "partial",     "VPN-local active"
 "Hitachi",    "hitachi-led",       "yes",
+"Oracle",     "oracle-Blue_Pump_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"Oracle",     "oracle-Festo_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"Oracle",     "oracle-HVAC_Shared.jsonld", "yes", "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"Oracle",     "oracle-LED_Siemens.jsonld", "yes",  "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"Oracle",     "oracle-Truck_Shared.jsonld", "yes",  "If you need credentials please send mail to Michael.Lagally@oracle.com"
+"TUM",        "HTTP_CoffeeMachine.jsonld", "yes", "16 HTTP instances until 1_16 in the hrefs. All simulated."
+"TUM",        "CoAP_CoffeeMachine.jsonld", "yes", "16 CoAP instances until 2_16 in the hrefs. All simulated."
+"Fujitsu",    "local proxy",       "yes",
+"Fujitsu",    "sensor unit",       "yes",     "you can access directly or via local proxy"

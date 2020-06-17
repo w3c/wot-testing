@@ -1,0 +1,8 @@
+"Hostname",                   "Org",         "Latest IP",     "Comment"
+"jv.local",                   "Intel",       192.168.30.129,  "Bridge"
+"iot-linksmart-white.local",  "Fraunhofer",  192.168.30.132,  "Local LinkSmart Thing Directory Service"19
+"ryuichi-p4",                 "Fujitsu",     192.168.30.134,  "Consumer(application)"
+"ktorpi.local",               "Hitachi",     192.168.30.135,  "Simple LED"
+"fj-vpnbridge",               "Fujitsu",     192.168.30.136,  "Bridge"
+"espressif",                  "Fujitsu",     192.168.30.138,  "Sensor unit"
+"GL-MT300N-V2-b7f",           "Fujitsu",     192.168.30.141,  "WiFi AP"

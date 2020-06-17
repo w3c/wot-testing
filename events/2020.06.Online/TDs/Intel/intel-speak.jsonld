@@ -5,7 +5,7 @@
                }
   ],
   "@type": ["Thing"],
-  "title": "Intel-WebSpeak-plus2",
+  "title": "Intel-WebSpeak-jv",
   "description": "A simple text to speech service",
   "support": "mailto:michael.mccool@intel.com",
   "version": {"instance":"0.1.0"},
@@ -16,7 +16,7 @@
         "rel": "repository",
         "type": "application/vnd.github.v3+json"
   }],
-  "id": "urn:uuid:e2690f1e-97dc-567c-b487-bc60e448a0a4",
+  "id": "urn:uuid:4458dc73-b30e-5aba-ba71-f17a5f050203",
   "securityDefinitions": {
     "nosec_sc": {"scheme":"nosec"},
     "basic_sc": {"scheme":"basic"},
@@ -30,7 +30,7 @@
       }, 
       "forms": [
         {
-          "href": "http://plus2.local:8085/api/say",
+          "href": "http://jv.local:8090/api/say",
           "contentType": "application/json",
           "op":"invokeaction"
         },
