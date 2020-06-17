@@ -2,6 +2,9 @@
 
 NOTE: These instructions assume you are using linux on Raspberry Pi.
 `testuser/pftest` is a sample User ID and password in the instruction.
+This setup is NOT a persistent service; if you reboot, you will have to 
+reconfigure it.  TODO: separate static and per-boot parts of instructions;
+create a service and a configuration file.
 
 ## 1. Download VPN Bridge from SoftEther Download Center
 - go to https://www.softether-download.com/en.aspx?product=softether
@@ -27,12 +30,13 @@ NOTE: These instructions assume you are using linux on Raspberry Pi.
 ```
 ## 3.5. Add static route for VPN server (only for Linux)
 
-To avoid looping, set static route for VPN server.  For example:
+To avoid looping, on the bridge,
+set static route for VPN server in the cloud.  For example:
 ```
 % sudo ip route add xxx.xxx.xxx.xxx via yyy.yyy.yyy.yyy dev zzz0
 ```
 where 
-- xxx.xxx.xxx.xxx: IP address of Softether VPN server
+- xxx.xxx.xxx.xxx: IP address of Softether VPN server in the cloud
 - yyy.yyy.yyy.yyy: Default gateway of your local network
 - zzz0: Interface name which is connected to your local network. 
 
