@@ -1,6 +1,7 @@
 {
     "@context": "https://www.w3.org/2019/wot/td/v1",
     "title": "HypermediaControlThing",
+	"id": "urn:com:siemens:HypermediaControlThing",
     "securityDefinitions": {
         "nosec_sc": {
             "scheme": "nosec"
