@@ -5,7 +5,7 @@ Fujitsu provides two services:
 - Sensor units (temperature, humidity, air pressure, human detection, etc.)
 - A local proxy
 
-![image of Fujitsu services](fujitsu.png)
+<img src="fujitsu.png" width=50%>
 
 ## Sensor units
 
@@ -17,11 +17,12 @@ Example:
 curl http://IP addr of sensor unit/Things/TD
 ```
 
-![image of sensor unit](sensorunit.png)
+<img src="sensorunit.png" width=40%>
 
 ## Local proxy
 
-The proxy is allinged to the intermediary specified in the WoT achitecture document. It can aggregate multiple WoT devices and manage the device information inside.
+The proxy is allinged to the intermediary specified in the WoT achitecture document. It can aggregate muple WoT devices and manage the device information inside.
+The proxy can keep TDs of things that cannot be accessed from others due to suspended or sleeping, and can behave them instead of the actual things.
 
 First, a new WoT device is requied to register to the proxy. After this, comsumers can get TDs of WoT devices to be registered before.
 
