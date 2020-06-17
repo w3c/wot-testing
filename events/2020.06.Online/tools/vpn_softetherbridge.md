@@ -115,3 +115,33 @@ then bridge the tap interface and physical interface (`eth0`) using:
 You may adjust DHCP setting for physical interfaces.
 
 Further information about local bridge is [here](https://www.softether.org/4-docs/1-manual/3._SoftEther_VPN_Server_Manual/3.6_Local_Bridges#3.6.11_Points_to_Note_when_Local_Bridging_in_Linux.2C_FreeBSD.2C_Solaris_or_Mac_OS_X).
+
+## Automatically starting at boot
+The local VPN bridge software automatically saves its configuration in a file (`vpn_bridge.config`, owned by root) so
+you do not have to reconfigure it each time you run it.
+If you set it up to run in 
+["service mode"](https://www.softether.org/4-docs/1-manual/7._Installing_SoftEther_VPN_Server/7.3_Install_on_Linux_and_Initial_Configurations) 
+then it will also run automatically at boot using `init.d`.
+This starts by copying the files to `/usr/local` and making them owned by root,
+then setting up an `init.d` service file.  However the instructions for the service file are not
+quite right for the Raspberry Pi which does not have `chkconfig`.
+Instead you have to 
+manually set the dependencies in the service file (see here for an appropriate 
+[init.d/vpnbridge service file](vpnbridge) and then use the following to 
+make it executable and register it:
+```
+   sudo chmod +x /etc/init.d/vpnbridge
+   sudo update-rc.d vpnbridge defaults
+```
+
+As a secondary problem,
+if you want to use a bridge interface (see `br0` above) then you have to make the 
+`br0` interface persistent.  This is a bit tricky since `br0` depends on the
+`tap_svpn` interface which
+is actually dynamically created by `vpnbridge` when it starts.
+One way around this is to add the 
+bridge creation to `/etc/network/interfaces`.
+However a simpler solution is to add the 
+bridge creation commands to the `init.d` script, which is what I have done above.
+Note that I use `eth1` for my external (downstream) interface, so you might have to edit that part to
+make it work for your interfaces.
