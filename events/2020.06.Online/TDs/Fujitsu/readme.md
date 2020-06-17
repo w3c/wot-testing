@@ -5,6 +5,8 @@ Fujitsu provides two services:
 - Sensor units (temperature, humidity, air pressure, human detection, etc.)
 - A local proxy
 
+![image of Fujitsu services](fujitsu.prn)
+
 ## Sensor units
 
 Several sensors equipped on a ESP32 wifi module that has a WoT interface software. 
