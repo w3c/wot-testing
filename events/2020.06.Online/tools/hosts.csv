@@ -1,4 +1,4 @@
 "Hostname",                   "Org",         "Latest IP",     "Comment"
 "jv.local",                   "Intel",       192.168.30.129,  "Bridge"
 "iot-linksmart-white.local",  "Fraunhofer",  192.168.30.132,  "Local LinkSmart Thing Directory Service"
-"x.local",                    "Hitachi",     192.168.30.135,  "Simple LED"
+"ktorpi.local",               "Hitachi",     192.168.30.135,  "Simple LED"
