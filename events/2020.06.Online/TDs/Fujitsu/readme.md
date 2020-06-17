@@ -5,7 +5,7 @@ Fujitsu provides two services:
 - Sensor units (temperature, humidity, air pressure, human detection, etc.)
 - A local proxy
 
-![image of Fujitsu services](fujitsu.png)
+![image of Fujitsu services](fujitsu.gif)
 
 ## Sensor units
 
@@ -17,7 +17,7 @@ Example:
 curl http://IP addr of sensor unit/Things/TD
 ```
 
-![image of sensor unit](sensorunit.png)
+![image of sensor unit](sensorunit.gif)
 
 ## Local proxy
 
