@@ -11,4 +11,4 @@
 "TUM",        "CoAP_CoffeeMachine.jsonld", "yes", "16 CoAP instances until 2_16 in the hrefs. All simulated."
 "Fujitsu",    "local proxy",       "yes",
 "Fujitsu",    "sensor unit",       "yes",     "you can access directly or via local proxy"
-"Motius",     "motius-mosense",    "yes",     "If you need credentials please send mail to benjamin.braun@motius.de"
+"Motius",     "motius-mosense.jsonld",    "yes",     "If you need credentials please send mail to benjamin.braun@motius.de"
