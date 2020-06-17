@@ -22,7 +22,7 @@ touch $LOCK
 sleep 5
 brctl addbr br0
 ip link set eth1 down
-ip addr add 0.0.0.0/24 dev eth1
+# ip addr add 0.0.0.0/24 dev eth1
 brctl addif br0 tap_svpn
 brctl addif br0 eth1
 ip link set br0 up
@@ -44,7 +44,7 @@ $DAEMON start
 sleep 5
 brctl addbr br0
 ip link set eth1 down
-ip addr add 0.0.0.0/24 dev eth1
+# ip addr add 0.0.0.0/24 dev eth1
 brctl addif br0 tap_svpn
 brctl addif br0 eth1
 ip link set br0 up
