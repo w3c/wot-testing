@@ -16,6 +16,7 @@ LOCK=/var/lock/subsys/vpnbridge
 test -x $DAEMON || exit 0
 case "$1" in
 start)
+ip route add 52.38.92.17 via 192.168.2.1 dev eth0
 $DAEMON start
 touch $LOCK
 sleep 5
