@@ -5,7 +5,7 @@ Fujitsu provides two services:
 - Sensor units (temperature, humidity, air pressure, human detection, etc.)
 - A local proxy
 
-![image of Fujitsu services](fujitsu.prn)
+![image of Fujitsu services](fujitsu.png)
 
 ## Sensor units
 
@@ -16,6 +16,9 @@ You can get the TD of this device with HTTP access as follows:
 Example:
 curl http://IP addr of sensor unit/Things/TD
 ```
+
+![image of sensor unit](sensorunit.png)
+
 ## Local proxy
 
 The proxy is allinged to the intermediary specified in the WoT achitecture document. It can aggregate multiple WoT devices and manage the device information inside.
