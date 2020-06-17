@@ -140,8 +140,9 @@ if you want to use a bridge interface (see `br0` above) then you have to make th
 `tap_svpn` interface which
 is actually dynamically created by `vpnbridge` when it starts.
 One way around this is to add the 
-bridge creation to `/etc/network/interfaces`.
-However a simpler solution is to add the 
+bridge creation to `/etc/network/interfaces`, but the Raspberry Pi makes this complicated by autogenerating 
+that file from a DHCP configuration file...
+A simpler if slightly hacky solution is to add the 
 bridge creation commands to the `init.d` script, which is what I have done above.
 Note that I use `eth1` for my external (downstream) interface, so you might have to edit that part to
 make it work for your interfaces.
