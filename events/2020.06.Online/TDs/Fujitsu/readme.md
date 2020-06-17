@@ -9,9 +9,9 @@ Fujitsu provides two services:
 
 ## Sensor units
 
-Several sensors equipped on a ESP32 wifi module that has a WoT interface software. 
+Several sensors equipped on a ESP32 wifi module that has a WoT interface software. 2 different TDs for this sensor unit are in this folder. One is the TD for direct access, another is for access via a local proxy.
 
-You can get the TD of this device with HTTP access as follows:
+You can get the TD(direct access) of this device with HTTP access as follows:
 ```
 Example:
 curl http://IP addr of sensor unit/Things/TD
