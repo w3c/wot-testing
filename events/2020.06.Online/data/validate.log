@@ -11,13 +11,12 @@ Processing organization Fujitsu
   Processing implementation Fujitsu/sensor_gw
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor_gw.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
 Validating a single TD
 =================================================================
 "ID","Status","Comment"
@@ -358,27 +357,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv/result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv/result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv' }
+The result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor_gw.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
   Processing implementation Fujitsu/sensor
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
 Validating a single TD
 =================================================================
 "ID","Status","Comment"
@@ -719,29 +715,26 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv/result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv/result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv' }
+The result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
 Processing organization Hitachi
   in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi
   Processing implementation Hitachi/hitachi-led
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Hitachi/hitachi-led.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
 Validating a single TD
 =================================================================
 "ID","Status","Comment"
@@ -1082,29 +1075,26 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv/result-urn_dev_mac_b827ebfffe4b6d0b.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv/result-urn_dev_mac_b827ebfffe4b6d0b.csv' }
+The result-urn_dev_mac_b827ebfffe4b6d0b.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Hitachi/hitachi-led.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
 Processing organization Intel
   in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel
   Processing implementation Intel/intel-camera
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-camera.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv
 Validating a single TD
 =================================================================
 
@@ -1449,27 +1439,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv/result-urn_uuid_57a9ebb4-f7c9-5828-bf8d-7c34fcff0c31.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv/result-urn_uuid_57a9ebb4-f7c9-5828-bf8d-7c34fcff0c31.csv' }
+The result-urn_uuid_57a9ebb4-f7c9-5828-bf8d-7c34fcff0c31.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-camera.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-camera.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-camera.csv
   Processing implementation Intel/intel-speak
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-speak.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv
 Validating a single TD
 =================================================================
 
@@ -1814,29 +1801,26 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv/result-urn_uuid_4458dc73-b30e-5aba-ba71-f17a5f050203.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv/result-urn_uuid_4458dc73-b30e-5aba-ba71-f17a5f050203.csv' }
+The result-urn_uuid_4458dc73-b30e-5aba-ba71-f17a5f050203.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-speak.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-speak.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-speak.csv
 Processing organization Motius
   in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius
   Processing implementation Motius/motius-mosense
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Motius/motius-mosense.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
 Validating a single TD
 =================================================================
 
@@ -2181,19 +2165,18 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv/result-urn_motius_mosense_DEVBOARDBC_DD_C2_2D_C8_31.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv/result-urn_motius_mosense_DEVBOARDBC_DD_C2_2D_C8_31.csv' }
+The result-urn_motius_mosense_DEVBOARDBC_DD_C2_2D_C8_31.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Motius/motius-mosense.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
   Processing implementation Motius/Discovery.Examples
     under /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/Discovery.Examples
+    Merging /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/Discovery.Examples/*.csv into /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/Discovery.Examples.csv
 >>>>>>>>>>>> Merge: /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/Discovery.Examples/*.csv
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/Discovery.Examples/*.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/Discovery.Examples.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
@@ -2205,13 +2188,12 @@ Processing organization Oracle
   Processing implementation Oracle/oracle-Blue_Pump_Shared
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Blue_Pump_Shared.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
 Validating a single TD
 =================================================================
 
@@ -2556,27 +2538,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv/result-urn_com_blue_pump_data.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv/result-urn_com_blue_pump_data.csv' }
+The result-urn_com_blue_pump_data.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Blue_Pump_Shared.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
   Processing implementation Oracle/oracle-Festo_Shared
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Festo_Shared.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
 Validating a single TD
 =================================================================
 
@@ -2921,27 +2900,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv/result-urn_com_siemens_wot_festo.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv/result-urn_com_siemens_wot_festo.csv' }
+The result-urn_com_siemens_wot_festo.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Festo_Shared.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
   Processing implementation Oracle/oracle-HVAC_Shared
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-HVAC_Shared.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
 Validating a single TD
 =================================================================
 
@@ -3286,27 +3262,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv/result-urn_com_oracle_iot_device_hvac.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv/result-urn_com_oracle_iot_device_hvac.csv' }
+The result-urn_com_oracle_iot_device_hvac.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-HVAC_Shared.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
   Processing implementation Oracle/oracle-LED_Siemens
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-LED_Siemens.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
 Validating a single TD
 =================================================================
 
@@ -3651,27 +3624,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv/result-urn_com_siemens_led.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv/result-urn_com_siemens_led.csv' }
+The result-urn_com_siemens_led.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-LED_Siemens.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
   Processing implementation Oracle/oracle-Truck_Shared
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Truck_Shared.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
 Validating a single TD
 =================================================================
 
@@ -4016,19 +3986,18 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv/result-urn_com_oracle_iot_device_obd2.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv/result-urn_com_oracle_iot_device_obd2.csv' }
+The result-urn_com_oracle_iot_device_obd2.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Truck_Shared.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
   Processing implementation Oracle/DMs
     under /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/DMs
+    Merging /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs/*.csv into /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs.csv
 >>>>>>>>>>>> Merge: /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs/*.csv
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs/*.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
@@ -4037,6 +4006,7 @@ Unhandled rejection Error: File does not exist. Check to make sure the file path
 <<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/DMs.csv
   Processing implementation Oracle/images
     under /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/images
+    Merging /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/images/*.csv into /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/images.csv
 >>>>>>>>>>>> Merge: /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/images/*.csv
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/images/*.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/images.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
@@ -4048,13 +4018,12 @@ Processing organization Siemens
   Processing implementation Siemens/HypermediaControlThing
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
 Validating a single TD
 =================================================================
 "ID","Status","Comment"
@@ -4395,49 +4364,49 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv/result-urn_com_siemens_HypermediaControlThing.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv/result-urn_com_siemens_HypermediaControlThing.csv' }
+The result-urn_com_siemens_HypermediaControlThing.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
   Processing implementation Siemens/HypermediaControlThing-while-action-running
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing-while-action-running.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
 Validating a single TD
 =================================================================
 { ID: 'invalid TD', Status: 'fail' }
 { ID: 'Invalid TD', Status: 'fail', Comment: 'Invalid TD' }
+cp: cannot stat 'Results/*.csv': No such file or directory
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing-while-action-running.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
 Processing organization TUM
   in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM
   Processing implementation TUM/CoAP_CoffeeMachine_16
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_16.csv
+rm: cannot remove 'Results/*.csv': No such file or directory
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
 Validating a single TD
 =================================================================
 
@@ -4782,27 +4751,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv/result-de_tum_ei_esi_fp_coffee_2-16.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv/result-de_tum_ei_esi_fp_coffee_2-16.csv' }
+The result-de_tum_ei_esi_fp_coffee_2-16.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_16.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
   Processing implementation TUM/CoAP_CoffeeMachine_1
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_1.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
 Validating a single TD
 =================================================================
 
@@ -5147,27 +5113,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv/result-de_tum_ei_esi_fp_coffee_2-1.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv/result-de_tum_ei_esi_fp_coffee_2-1.csv' }
+The result-de_tum_ei_esi_fp_coffee_2-1.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_1.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
   Processing implementation TUM/HTTP_CoffeeMachine_16
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_16.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
 Validating a single TD
 =================================================================
 
@@ -5512,27 +5475,24 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv/result-de_tum_ei_esi_fp_coffee_1-16.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv/result-de_tum_ei_esi_fp_coffee_1-16.csv' }
+The result-de_tum_ei_esi_fp_coffee_1-16.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_16.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
   Processing implementation TUM/HTTP_CoffeeMachine_1
     in /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld
 >>>>>>>>>>>> Processing: /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld
-npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
+npm run-script testTD /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_1.csv
 
 > tdplayground@1.0.0 testTD /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester
-> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld" "/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv"
+> node assertionTester.js "/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld"
 
 Taking input  /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.jsonld
-Taking output  /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
 Validating a single TD
 =================================================================
 
@@ -5877,14 +5837,12 @@ Validating a single TD
 "td-security-no-extras","null","not testable with Assertion Tester"
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
-{ Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv/result-de_tum_ei_esi_fp_coffee_1-1.csv'
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: '/home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv/result-de_tum_ei_esi_fp_coffee_1-1.csv' }
+The result-de_tum_ei_esi_fp_coffee_1-1.csv is saved!
 node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
 mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
-<<<<<<<<<<<< Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
+mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp': No such file or directory
+<<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_1.csv
+<<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
