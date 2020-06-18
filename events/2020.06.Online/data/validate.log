@@ -357,12 +357,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor_gw.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor_gw.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor_gw.csv
   Processing implementation Fujitsu/sensor
@@ -715,12 +715,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_fujitsu_iot_WiFi-Sensor_3C71BF428EFC.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Fujitsu/sensor.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Fujitsu/sensor.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Fujitsu/sensor.csv
 Processing organization Hitachi
@@ -1075,12 +1075,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_dev_mac_b827ebfffe4b6d0b.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Hitachi/hitachi-led.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Hitachi/hitachi-led.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Hitachi/hitachi-led.csv
 Processing organization Intel
@@ -2165,12 +2165,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_3932ae08-31b4-4882-b299-5d488ec8775c.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button1touch.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button1touch.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button1touch.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button1touch.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button1touch.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button1touch.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button1touch.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-button1touch.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button1touch.csv
     Processing instance Intel/intel-ocf/Intel-OCF-button2touch
@@ -2527,12 +2527,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_15603e08-5f45-4bd5-b3ef-6a192ae39f76.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button2touch.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button2touch.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button2touch.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button2touch.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button2touch.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-button2touch.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button2touch.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-button2touch.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-button2touch.csv
     Processing instance Intel/intel-ocf/Intel-OCF-buzzer0
@@ -2889,12 +2889,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_893e9dbb-a298-4123-a041-80f386115958.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-buzzer0.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-buzzer0.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-buzzer0.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-buzzer0.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-buzzer0.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-buzzer0.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-buzzer0.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-buzzer0.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-buzzer0.csv
     Processing instance Intel/intel-ocf/Intel-OCF-illuminance0
@@ -3251,12 +3251,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_3255959d-741c-4b2b-81c2-42a4caa2223e.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance0.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance0.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance0.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance0.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance0.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance0.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance0.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-illuminance0.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance0.csv
     Processing instance Intel/intel-ocf/Intel-OCF-illuminance2
@@ -3613,12 +3613,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_c75fe336-28d3-4b02-b52c-9a4daa9577f6.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance2.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance2.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance2.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance2.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance2.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-illuminance2.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance2.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-illuminance2.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-illuminance2.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led0blue
@@ -3975,12 +3975,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_397a9167-88bc-4b52-844a-dade5b772c30.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0blue.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0blue.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0blue.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0blue.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0blue.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0blue.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0blue.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led0blue.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0blue.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led0green
@@ -4337,12 +4337,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_6573313c-da1e-4068-beb1-884b0c4c3c5d.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0green.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0green.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0green.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0green.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0green.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0green.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0green.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led0green.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0green.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led0mosfet
@@ -4699,12 +4699,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_ea16d184-95ad-4af7-bfc9-53e86f55f3a4.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0mosfet.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0mosfet.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0mosfet.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0mosfet.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0mosfet.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0mosfet.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0mosfet.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led0mosfet.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0mosfet.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led0red
@@ -5061,12 +5061,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_c331fb1b-8568-48be-9033-4aaaa95bf2cf.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0red.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0red.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0red.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0red.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0red.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led0red.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0red.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led0red.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led0red.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led1mosfet
@@ -5423,12 +5423,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_336db92b-45f6-496b-997c-e196ba7b49fd.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1mosfet.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1mosfet.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1mosfet.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1mosfet.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1mosfet.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1mosfet.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1mosfet.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led1mosfet.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1mosfet.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led1red
@@ -5785,12 +5785,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_8c2c6907-ed4a-4527-8f23-57df6999b8aa.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1red.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1red.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1red.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1red.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1red.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1red.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1red.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led1red.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1red.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led1relay
@@ -6147,12 +6147,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_5081db06-f405-4ecf-bcdd-2424bf5af1ca.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1relay.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1relay.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1relay.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1relay.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1relay.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led1relay.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1relay.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led1relay.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led1relay.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led2mosfet
@@ -6509,12 +6509,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_3ee85e44-7a56-4f0e-a8b8-b250c868e513.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2mosfet.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2mosfet.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2mosfet.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2mosfet.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2mosfet.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2mosfet.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2mosfet.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led2mosfet.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2mosfet.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led2relay
@@ -6871,12 +6871,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_79683ab5-8df1-4b7a-b110-c1b8fe251e7d.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2relay.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2relay.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2relay.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2relay.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2relay.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2relay.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2relay.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led2relay.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2relay.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led2side
@@ -7233,12 +7233,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_594ee957-fd3e-4547-9430-5267bcdb3ed7.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2side.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2side.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2side.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2side.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2side.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2side.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2side.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led2side.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2side.csv
     Processing instance Intel/intel-ocf/Intel-OCF-led2top
@@ -7595,12 +7595,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_e6b060cf-dc10-4375-ae08-1f9e2de0aa2b.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2top.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2top.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2top.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2top.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2top.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-led2top.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2top.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-led2top.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-led2top.csv
     Processing instance Intel/intel-ocf/Intel-OCF-motion0
@@ -7957,12 +7957,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_0800f07a-178d-48ec-9ddf-d8a941071298.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion0.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion0.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion0.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion0.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion0.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion0.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion0.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-motion0.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion0.csv
     Processing instance Intel/intel-ocf/Intel-OCF-motion1
@@ -8319,12 +8319,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_5dc3f14e-4976-44d4-bfe8-57838db97ab5.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-motion1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion1.csv
     Processing instance Intel/intel-ocf/Intel-OCF-motion2
@@ -8681,12 +8681,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_c440e5ef-a02f-49cf-b036-00b0738b0d86.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion2.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion2.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion2.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion2.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion2.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-motion2.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion2.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-motion2.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-motion2.csv
     Processing instance Intel/intel-ocf/Intel-OCF-rgbled1
@@ -9043,12 +9043,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_ae9b3aa5-1476-4fcb-9908-dd96a293572d.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-rgbled1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-rgbled1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-rgbled1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-rgbled1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-rgbled1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-rgbled1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-rgbled1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-rgbled1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-rgbled1.csv
     Processing instance Intel/intel-ocf/Intel-OCF-temperature0
@@ -9405,12 +9405,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_f2305852-4f82-47ce-871d-a0af237932c1.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature0.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature0.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature0.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature0.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature0.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature0.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature0.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-temperature0.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature0.csv
     Processing instance Intel/intel-ocf/Intel-OCF-temperature1
@@ -9767,12 +9767,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_086d490d-90c6-4785-a677-c911bd2af919.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-temperature1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature1.csv
     Processing instance Intel/intel-ocf/Intel-OCF-temperature2
@@ -10129,12 +10129,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_e855ad80-c435-4614-a4b7-01d63afc712e.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature2.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature2.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature2.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature2.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature2.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-temperature2.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature2.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-temperature2.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-temperature2.csv
     Processing instance Intel/intel-ocf/Intel-OCF-toggle0
@@ -10491,12 +10491,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_4b74842c-8bfe-4f14-8bc5-31b4c79658a4.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle0.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle0.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle0.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle0.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle0.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle0.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle0.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-toggle0.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle0.csv
     Processing instance Intel/intel-ocf/Intel-OCF-toggle1
@@ -10853,12 +10853,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_f057c263-58db-4cb1-9470-bba9344e1ba8.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-toggle1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle1.csv
     Processing instance Intel/intel-ocf/Intel-OCF-toggle2
@@ -11215,12 +11215,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_uuid_e7678d50-6a14-426b-a1f0-fb1b8ade4cd5.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle2.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle2.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle2.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle2.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle2.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Intel/intel-ocf/Intel-OCF-toggle2.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle2.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Intel/intel-ocf/Intel-OCF-toggle2.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/Intel-OCF-toggle2.csv
     Merging /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf/*.csv into /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Intel/intel-ocf.csv
@@ -11587,12 +11587,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_motius_mosense_DEVBOARDBC_DD_C2_2D_C8_31.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Motius/motius-mosense.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Motius/motius-mosense.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Motius/motius-mosense.csv
   Processing implementation Motius/Discovery.Examples
@@ -11960,12 +11960,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_blue_pump_data.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Blue_Pump_Shared.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Blue_Pump_Shared.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Blue_Pump_Shared.csv
   Processing implementation Oracle/oracle-Festo_Shared
@@ -12322,12 +12322,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_siemens_wot_festo.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Festo_Shared.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Festo_Shared.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Festo_Shared.csv
   Processing implementation Oracle/oracle-HVAC_Shared
@@ -12684,12 +12684,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_oracle_iot_device_hvac.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-HVAC_Shared.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-HVAC_Shared.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-HVAC_Shared.csv
   Processing implementation Oracle/oracle-LED_Siemens
@@ -13046,12 +13046,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_siemens_led.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-LED_Siemens.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-LED_Siemens.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-LED_Siemens.csv
   Processing implementation Oracle/oracle-Truck_Shared
@@ -13408,12 +13408,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_oracle_iot_device_obd2.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Oracle/oracle-Truck_Shared.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Oracle/oracle-Truck_Shared.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Oracle/oracle-Truck_Shared.csv
   Processing implementation Oracle/DMs
@@ -13786,12 +13786,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-urn_com_siemens_HypermediaControlThing.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing.csv
   Processing implementation Siemens/HypermediaControlThing-while-action-running
@@ -13808,12 +13808,12 @@ Validating a single TD
 { ID: 'invalid TD', Status: 'fail' }
 { ID: 'Invalid TD', Status: 'fail', Comment: 'Invalid TD' }
 cp: cannot stat 'Results/*.csv': No such file or directory
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/Siemens/HypermediaControlThing-while-action-running.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/Siemens/HypermediaControlThing-while-action-running.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/Siemens/HypermediaControlThing-while-action-running.csv
 Processing organization TUM
@@ -14173,12 +14173,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-de_tum_ei_esi_fp_coffee_2-16.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_16.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_16.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_16.csv
   Processing implementation TUM/CoAP_CoffeeMachine_1
@@ -14535,12 +14535,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-de_tum_ei_esi_fp_coffee_2-1.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/CoAP_CoffeeMachine_1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/CoAP_CoffeeMachine_1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/CoAP_CoffeeMachine_1.csv
   Processing implementation TUM/HTTP_CoffeeMachine_16
@@ -14897,12 +14897,12 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-de_tum_ei_esi_fp_coffee_1-16.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_16.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_16.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_16.csv
   Processing implementation TUM/HTTP_CoffeeMachine_1
@@ -15259,11 +15259,11 @@ Validating a single TD
 "td-vocabulary-defaults","null","not testable with Assertion Tester"
 "well-known-operation-types-only","null","not testable with Assertion Tester"
 The result-de_tum_ei_esi_fp_coffee_1-1.csv is saved!
-node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv > /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp
+node mergeResults.js /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv > temp.csv
 Unhandled rejection Error: File does not exist. Check to make sure the file path to your csv is correct.
     at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/AssertionTester/node_modules/csvtojson/v2/Converter.js:81:37
     at FSReqWrap.cb [as oncomplete] (fs.js:312:19)
-mv /home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
-mv: cannot stat '/home/mmccool/Dev/wot-testing/events/2020.06.Online/TDs/TUM/HTTP_CoffeeMachine_1.csv.temp': No such file or directory
+mv temp.csv /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv
+mv: cannot stat 'temp.csv': No such file or directory
 <<<<<<<<<<<< Auto Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/auto/TUM/HTTP_CoffeeMachine_1.csv
 <<<<<<<<<<<< Merged Output written to /home/mmccool/Dev/wot-testing/events/2020.06.Online/data/validation/merged/TUM/HTTP_CoffeeMachine_1.csv

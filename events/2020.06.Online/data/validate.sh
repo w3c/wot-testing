@@ -109,14 +109,15 @@ function process() {
       cp Results/*.csv $AutoOutput
     fi
     Extras="${Input%.*}.csv"
-    Temp="${Extras}.temp"
     if [[ -f $Extras ]]; then
+      Temp="${Extras}.temp"
       echo "node mergeResults.js $MergedOutput $Extras > $Temp"
       node mergeResults.js $MergedOutput $Extras > $Temp
       echo "mv $Temp $MergedOutput"
       mv $Temp $MergedOutput
     else
       # merge even if no extras to sort and merge children
+      Temp="temp.csv"
       echo "node mergeResults.js $MergedOutput > $Temp"
       node mergeResults.js $MergedOutput $Temp
       echo "mv $Temp $MergedOutput"
