@@ -13,8 +13,8 @@
 #
 # Config parameters:
 Source="../TDs"
-Dest="validation"
-Tools="../tools"
+Dest="validation/merged"
+Tools="../../../tools"
 Suf="{jsonld}"
 
 # Expected input, processing, and output:
