@@ -13,6 +13,7 @@ of testing, such as interoperability.
      Can be used as a CLI tool or via an online system.
   * [Online instance](http://plugfest.thingweb.io/playground/)
   * [Github repo](https://github.com/thingweb/thingweb-playground)
+    * This repo is checked out recursively here for the purpose of running automated validation scripts.
 * [WoT TestBench](testbench/README.md)
   * Generates network interactions to test a Thing given a TD.
   * [Github repo](https://github.com/tum-esi/testbench)
