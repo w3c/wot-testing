@@ -15,7 +15,6 @@
 Source="../TDs"
 Dest="validation/merged"
 Tools="../../../tools"
-Suf="{jsonld}"
 
 # Expected input, processing, and output:
 #   Source/Org/X.csv at top level:
@@ -131,7 +130,7 @@ for OrgDir in $Source/* ; do
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
     # Process implementations found at the top level (singletons)
-    for ImplPath in $AbsOrgDir/*.$Suf ; do
+    for ImplPath in $AbsOrgDir/*.jsonld ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
           export Impl="${ImplFile%.*}"
@@ -151,7 +150,7 @@ for OrgDir in $Source/* ; do
           mkdir -p $Dest/$Org/$Impl
           export AbsOutOrgDir=$(cd $Dest/$Org; pwd)
           export AbsOutDir=$(cd $Dest/$Org/$Impl; pwd)
-          for InstancePath in $ImplPath/*.$Suf ; do
+          for InstancePath in $ImplPath/*.jsonld ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
