@@ -1,49 +1,49 @@
 #!/bin/bash
-# Update automated results: scan "inputs", put results in "outputs".
+# Automated TD Validation
+#
 # In the following, Org is an organization name, X is the name of an
 # implementation, and S is a subdirectory name (also an implementation
 # name, but one with multiple "instances" whose results should be merged).
-# TDs can have either .jsontd .jsonls, or .json suffixes.  CSV files 
+# TDs must have a .jsontd suffix (there is code supporting additional suffixes
+# that can be turned back on if useful...)  CSV files 
 # can also be given and should be for manual assertion reports; these
 # will be merged with the results of automated testing using the processing
 # described below. Manual assertion reports should use templates/manual.csv
 # as a template.  
 #
+# Config parameters:
+Source="../TDs"
+Dest="validation"
+Tools="../tools"
+Suf="{jsonld}"
+
 # Expected input, processing, and output:
-#   inputs/Org/X.csv at top level:
+#   Source/Org/X.csv at top level:
 #      CSV files with NO corresponding TD file will simply be copied
-#      as-is to outputs/Org/X.csv. These should correspond to manual results
+#      as-is to Dest/Org/X.csv. These should correspond to manual results
 #      for separate implementations without a corresponding TD, that is,
 #      "consumer" or "component" implementations.  Here X should be the
 #      implementation name.
-#   inputs/Org/X.{jsontd,jsonld,json} (+ optional matched csv files) at top level: 
+#   Source/Org/X.jsonld (+ optional matched csv files) at top level: 
 #      Implementation with a single TD, which by definition will be a 
 #      "producer".  TDs will be scanned with AssertionTester, 
 #      results will be MERGED with any CSV file of the same base name (if it 
-#      exists used for manual assertions), and results written to 
-#      outputs/Org/X.csv.  Here X should be the implementation name.
-#   inputs/Org/S/*.{jsontd,jsonld,json} (+ optional inputs/Org/S.csv files 
-#   and/or optional inputs/S.csv file):
+#      exists; used for manual assertions), and results written to 
+#      Dest/Org/X.csv.  Here X should be the implementation name.
+#   Source/Org/S/*.jsonld (+ optional Source/Org/S.csv files 
+#   and/or optional Source/S.csv file):
 #      TDs will be scanned with AssertionTester, results will be merged with
 #      matching CSV files for each TD if it exists (for manual results specific
 #      to each TD), all results will then be merged, then results will be merged 
 #      with an S.csv if it exists (for manual results for the entire implementation),
-#      and the results will be written to outputs/Org/S.csv.  Note that subdirectory
+#      and the results will be written to Dest/Org/S.csv.  Note that subdirectory
 #      name S should be the implementation name and will be used for both the manual 
 #      CSV input file name and output name.
-#
-# Implementation descriptions may also be included in descriptions/Org/org.html;
-# these should include descriptions of all implementations. 
-#
-# If you want to report interop results, which have a different
-# CSV format, please put them in the "interops" directory, using templates/interop.csv
-# as a template.
 
 # Merge CSV results (any number, 1 or more) into a target 
 # output CSV file.  If the output CSV file already exists, 
 # merge any existing content in it as well. 
 # Absolute paths should be used, with suffixes.
-Tools="../../tools"
 function merge() {
   Inputs=$1
   Output=$2
@@ -110,35 +110,35 @@ function process() {
 }
 
 # Delete any previous outputs; this avoids stale results from persisting
-rm -r outputs/*
+rm -r $Dest/*
 
 # Copy any CSV files at the top level to output.  Note that any files
 # that have the same names as TD inputs will be overwritten later (after
 # merging their contents...), but those without matches will not.  
 # This takes care of manually-reported "consumer" or "component" inputs 
 # without corresponding TD files.
-for OrgDir in inputs/* ; do
+for OrgDir in $Source/* ; do
   export Org=$(basename $OrgDir)
-  mkdir -p outputs/$Org
-  cp inputs/$Org/*.csv outputs/$Org/
+  mkdir -p $Dest/$Org
+  cp $Source/$Org/*.csv $Dest/$Org/
 done
 
 # For all reporting organizations...
-for OrgDir in inputs/* ; do
+for OrgDir in $Source/* ; do
   if [[ -d $OrgDir ]]; then
     export AbsOrgDir=$(cd $OrgDir; pwd)
     export Org=$(basename $AbsOrgDir)
     echo "Processing organization $Org"
     echo "  in $AbsOrgDir"
     # Process implementations found at the top level (singletons)
-    for ImplPath in $AbsOrgDir/*.{jsontd,JSONTD,jsonld,JSONLD,json,JSON} ; do
+    for ImplPath in $AbsOrgDir/*.$Suf ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
           export Impl="${ImplFile%.*}"
           echo "  Processing implementation $Org/$Impl"
           echo "    in $ImplPath"
-          mkdir -p outputs/$Org
-          export AbsOutDir=$(cd outputs/$Org; pwd)
+          mkdir -p $Dest/$Org
+          export AbsOutDir=$(cd $Dest/$Org; pwd)
           process $ImplPath $AbsOutDir/$Impl.csv
        fi
     done
@@ -148,10 +148,10 @@ for OrgDir in inputs/* ; do
           export Impl=$(basename $ImplPath)
           echo "  Processing implementation $Org/$Impl"
           echo "    under $ImplPath"
-          mkdir -p outputs/$Org/$Impl
-          export AbsOutOrgDir=$(cd outputs/$Org; pwd)
-          export AbsOutDir=$(cd outputs/$Org/$Impl; pwd)
-          for InstancePath in $ImplPath/*.{jsontd,JSONTD,jsonld,JSONLD,json,JSON} ; do
+          mkdir -p $Dest/$Org/$Impl
+          export AbsOutOrgDir=$(cd $Dest/$Org; pwd)
+          export AbsOutDir=$(cd $Dest/$Org/$Impl; pwd)
+          for InstancePath in $ImplPath/*.$Suf ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
