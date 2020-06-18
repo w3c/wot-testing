@@ -1,6 +1,6 @@
 # Simple nodegen population script
 
-A hacky script for incorporate all Things from LinkSmart Thing Directory to Node-RED (this is also an use case of JSONPath)
+A hacky script for incorporate all Things from LinkSmart Thing Directory to Node-RED (this is also an use case of XPath)
 
 [Download](./nodepop.sh)
 
