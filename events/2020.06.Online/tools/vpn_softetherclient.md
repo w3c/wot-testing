@@ -27,12 +27,12 @@ NOTE: This instaruction asumes using linux on Raspberry Pi. `testuser/pftest` is
 
 ## 3.5. Add static route for VPN server (only for Linux)
 
-To avoid looping, set static route for VPN server.  For example:
+To avoid looping, on the client, set a static route for the VPN server in the cloud.  For example:
 ```
 % sudo ip route add xxx.xxx.xxx.xxx via yyy.yyy.yyy.yyy dev zzz0
 ```
 where 
-- xxx.xxx.xxx.xxx: IP address of Softether VPN server
+- xxx.xxx.xxx.xxx: IP address of Softether VPN server in the cloud
 - yyy.yyy.yyy.yyy: Default gateway of your local network
 - zzz0: Interface name which is connected to your local network. 
 

@@ -1,6 +1,7 @@
 {
     "@context": "https://www.w3.org/2019/wot/td/v1",
     "title": "HypermediaControlThing",
+	"id": "urn:com:siemens:HypermediaControlThing",
     "securityDefinitions": {
         "nosec_sc": {
             "scheme": "nosec"
@@ -11,7 +12,7 @@
         "fade": {
             "forms": [
                 {
-                    "href": "http://192.168.30.133:8084/HypermediaControlThing/fade",
+                    "href": "http://192.168.30.137:8084/HypermediaControlThing/fade",
                     "htv:methodName": "POST",
                     "op": "invokeaction"
                 }
