@@ -21,3 +21,7 @@ Not yet fully tested.  Use carefully.
 ```
 
 4. execute Node-RED.  Incorporated nodes are in 'Web of Things' category on your pallette.
+
+## Todo
+- Integrate into Node-RED editor
+- Dynamic loading
