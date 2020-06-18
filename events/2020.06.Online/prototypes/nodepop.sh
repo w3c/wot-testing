@@ -3,10 +3,10 @@
 # Need to execute in Node-RED user directory (i.e. ~/.node-red)
 
 lsendpoint='https://demo.linksmart.eu/thing-directory'
-jpath='$[:]'    # all TDs
-#jpath='$[?(@.base=~/^http/)]'   # only TDs which have HTTP endpoint
+#xpath='*'    # all TDs
+xpath='*[starts-with(*//href,"http")%20or%20starts-with(base,"http")]'   # only TDs which have HTTP endpoint
 #ids=$(curl -g $lsendpoint/td\?jsonpath=$\[\?\(@.base=\~/^http/\)\]| jq -r '.items | .[] | .id')
-ids=$(curl -s -g $lsendpoint/td?jsonpath=$jpath | jq -r '.items | .[] | .id')
+ids=$(curl -L -s -g $lsendpoint/td?xpath=$xpath | jq -r '.items | .[] | .id')
 
 tmpdir=$(mktemp -d) 
 
