@@ -89,7 +89,7 @@ function process() {
       echo "npm run-script testTD $Input $Output"
       npm run-script testTD $Input $Output
     fi
-    Extras="${Input%.*}.{csv,CSV}"
+    Extras="${Input%.*}.csv"
     Temp="${Extras}.temp"
     if [[ -f $Extras ]]; then
       echo "node mergeResults.js $Output $Extras > $Temp"
