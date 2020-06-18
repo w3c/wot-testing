@@ -12,32 +12,44 @@
 # as a template.  
 #
 # Config parameters:
+
+# Input: TD Archive and manual assertion CSV files
 Source="../TDs"
-Dest="validation/merged"
+
+# Output: Automatic validation results for each TD
+Auto="validation/auto"
+
+# Output: Automatic validation results for each TD merged with manual assertions
+Merged="validation/merged"
+
+# Tools: Relative location of validation tools
 Tools="../../../tools"
 
-# Expected input, processing, and output:
+# Expected input, processing, and output (path elements in initial caps are 
+# variables):
 #   Source/Org/X.csv at top level:
 #      CSV files with NO corresponding TD file will simply be copied
-#      as-is to Dest/Org/X.csv. These should correspond to manual results
+#      as-is to Merged/Org/X.csv. These should correspond to manual results
 #      for separate implementations without a corresponding TD, that is,
 #      "consumer" or "component" implementations.  Here X should be the
 #      implementation name.
 #   Source/Org/X.jsonld (+ optional matched csv files) at top level: 
 #      Implementation with a single TD, which by definition will be a 
 #      "producer".  TDs will be scanned with AssertionTester, 
-#      results will be MERGED with any CSV file of the same base name (if it 
-#      exists; used for manual assertions), and results written to 
-#      Dest/Org/X.csv.  Here X should be the implementation name.
+#      results will copied to Auto/Org/X.csv, then merged with any CSV file 
+#      of the same base name (if it exists; used for manual assertions), 
+#      and the merged results written to Merged/Org/X.csv.  
+#      Here X should be the implementation name.
 #   Source/Org/S/*.jsonld (+ optional Source/Org/S.csv files 
 #   and/or optional Source/S.csv file):
-#      TDs will be scanned with AssertionTester, results will be merged with
-#      matching CSV files for each TD if it exists (for manual results specific
-#      to each TD), all results will then be merged, then results will be merged 
-#      with an S.csv if it exists (for manual results for the entire implementation),
-#      and the results will be written to Dest/Org/S.csv.  Note that subdirectory
-#      name S should be the implementation name and will be used for both the manual 
-#      CSV input file name and output name.
+#      TDs will be scanned with AssertionTester, results will be copied to 
+#      Auto/Org/S, then merged with matching CSV files in Source/Org/S for each TD 
+#      if it exists (for manual results specific to each TD), all results will then 
+#      be merged, then results will be merged with a Source/Org/S.csv if it exists 
+#      (for manual results for the entire implementation), and the results will be 
+#      written to Merged/Org/S.csv.  Note that subdirectory name S should be the 
+#      implementation name and will be used for both the manual CSV input file name
+#      and the output name.
 
 # Merge CSV results (any number, 1 or more) into a target 
 # output CSV file.  If the output CSV file already exists, 
@@ -66,60 +78,60 @@ function merge() {
 
 # Run the AssertionTester against a TD or a set of TDs, 
 # and merge the results against any manally reported results,
-# if they are given.
+# if they are given.  Saves both the automatic test results
+# and the merged results.
 # Absolute paths should be used, without suffixes.
 function process() {
   Input=$1
-  Output=$2
+  AutoOutput=$2
+  MergedOutput=$3
   echo ">>>>>>>>>>>> Processing: $Input"
   (
     cd $Tools/thingweb-playground/AssertionTester
-    if [[ -f $Output ]]; then
-      Temp1="${Output}.temp1"
-      Temp2="${Output}.temp2"
-      echo "npm run-script testTD $Input $Temp1"
-      npm run-script testTD $Input $Temp1
-      echo "node mergeResults.js $Temp1 $Output > $Temp2"
-      node mergeResults.js $Temp1 $Output > $Temp2
-      echo "mv $Temp2 $Output"
-      mv $Temp2 $Output
-      echo "rm $Temp1"
-      rm $Temp1
+    if [[ -f $MergedOutput ]]; then
+      Temp="${MergedOutput}.temp"
+      echo "npm run-script testTD $Input $AutoOutput"
+      npm run-script testTD $Input > $AutoOutput
+      echo "node mergeResults.js $AutoOutput $MergedOutput > $Temp"
+      node mergeResults.js $AutoOutput $MergedOutput > $Temp
+      echo "mv $Temp $MergedOutput"
+      mv $Temp $MergedOutput
     else
-      echo "npm run-script testTD $Input $Output"
-      npm run-script testTD $Input $Output
+      echo "npm run-script testTD $Input $AutoOutput"
+      npm run-script testTD $Input $AutoOutput
     fi
     Extras="${Input%.*}.csv"
     Temp="${Extras}.temp"
     if [[ -f $Extras ]]; then
-      echo "node mergeResults.js $Output $Extras > $Temp"
-      node mergeResults.js $Output $Extras > $Temp
-      echo "mv $Temp $Output"
-      mv $Temp $Output
+      echo "node mergeResults.js $MergedOutput $Extras > $Temp"
+      node mergeResults.js $MergedOutput $Extras > $Temp
+      echo "mv $Temp $MergedOutput"
+      mv $Temp $MergedOutput
     else
       # merge even if no extras to sort and merge children
-      echo "node mergeResults.js $Output > $Temp"
-      node mergeResults.js $Output > $Temp
-      echo "mv $Temp $Output"
-      mv $Temp $Output
+      echo "node mergeResults.js $MergedOutput > $Temp"
+      node mergeResults.js $MergedOutput $Temp
+      echo "mv $Temp $MergedOutput"
+      mv $Temp $MergedOutput
     fi
   )
-  echo "<<<<<<<<<<<< Output written to $Output"
-  # touch $Output
+  echo "<<<<<<<<<<<< Auto Output written to $AutoOutput"
+  echo "<<<<<<<<<<<< Merged Output written to $MergedOutput"
 }
 
 # Delete any previous outputs; this avoids stale results from persisting
-rm -r $Dest/*
+rm -r $Auto/*
+rm -r $Merged/*
 
-# Copy any CSV files at the top level to output.  Note that any files
-# that have the same names as TD inputs will be overwritten later (after
-# merging their contents...), but those without matches will not.  
+# Copy any CSV files at the top level to Merged output directory.  Note
+# that any files that have the same names as TD inputs will be overwritten 
+# later (after merging their contents...), but those without matches will not.  
 # This takes care of manually-reported "consumer" or "component" inputs 
 # without corresponding TD files.
 for OrgDir in $Source/* ; do
   export Org=$(basename $OrgDir)
-  mkdir -p $Dest/$Org
-  cp $Source/$Org/*.csv $Dest/$Org/
+  mkdir -p $Merged/$Org
+  cp $Source/$Org/*.csv $Merged/$Org/
 done
 
 # For all reporting organizations...
@@ -136,9 +148,11 @@ for OrgDir in $Source/* ; do
           export Impl="${ImplFile%.*}"
           echo "  Processing implementation $Org/$Impl"
           echo "    in $ImplPath"
-          mkdir -p $Dest/$Org
-          export AbsOutDir=$(cd $Dest/$Org; pwd)
-          process $ImplPath $AbsOutDir/$Impl.csv
+          mkdir -p $Auto/$Org
+          export AbsAutoDir=$(cd $Auto/$Org; pwd)
+          mkdir -p $Merged/$Org
+          export AbsMergedDir=$(cd $Merged/$Org; pwd)
+          process $ImplPath $AbsAutoDir/$Impl.csv $AbsMergedDir/$Impl.csv
        fi
     done
     # Process (and merge) implementation instances found in subdirectories
@@ -147,23 +161,27 @@ for OrgDir in $Source/* ; do
           export Impl=$(basename $ImplPath)
           echo "  Processing implementation $Org/$Impl"
           echo "    under $ImplPath"
-          mkdir -p $Dest/$Org/$Impl
-          export AbsOutOrgDir=$(cd $Dest/$Org; pwd)
-          export AbsOutDir=$(cd $Dest/$Org/$Impl; pwd)
+          mkdir -p $Auto/$Org/$Impl
+          export AbsAutoOrgDir=$(cd $Auto/$Org; pwd)
+          export AbsAutoDir=$(cd $Auto/$Org/$Impl; pwd)
+          mkdir -p $Merged/$Org/$Impl
+          export AbsMergedOrgDir=$(cd $Merged/$Org; pwd)
+          export AbsMergedDir=$(cd $Merged/$Org/$Impl; pwd)
           for InstancePath in $ImplPath/*.jsonld ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 export Instance="${InstanceFile%.*}"
                 echo "    Processing instance $Org/$Impl/$Instance"
                 echo "      in $InstancePath"
-                process $InstancePath $AbsOutDir/$Instance.csv
+                process $InstancePath $AbsAutoDir/$Instance.csv $AbsMergedDir/$Instance.csv
              fi
           done
-          Inputs=($AbsOutDir/*.csv)
-          if [[ -f $AbsOrgDir/$Impl.csv ]]; then
-            Inputs=($AbsOrgDir/$Impl.csv "${Inputs[@]}")
+          Inputs=($AbsMergedDir/*.csv)
+          if [[ -f $AbsMergedDir/$Impl.csv ]]; then
+            Inputs=($AbsMergedDir/$Impl.csv "${Inputs[@]}")
           fi
-          merge $Inputs $AbsOutOrgDir/$Impl.csv
+          echo "    Merging $Inputs into $AbsMergedOrgDir/$Impl.csv"
+          merge $Inputs $AbsMergedOrgDir/$Impl.csv
        fi
     done
   fi
