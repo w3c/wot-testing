@@ -6,6 +6,11 @@ A hacky script for incorporate all Things from LinkSmart Thing Directory to Node
 
 Not yet fully tested.  Use carefully.
 
+## Prerequisites
+
+- [Node-RED Node Generator](https://github.com/node-red/node-red-nodegen)
+- [jq](https://stedolan.github.io/jq/)
+
 ## Usage
 
 1. stop Node-RED if already started
