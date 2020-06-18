@@ -8,7 +8,14 @@ We've extended our Sensor boards (MoSense) with WoT capabilities.
 <img src="MotiusIO_architecture.png" alt="Architecture of the MotiusIO Ecosystem" width="100%">
 
 #### RabbitMQ
-All the communication with the Things and services around that go through our RabbitMQ message broker, either via MQTT or MQTT over WebSocket. 
+All the communication with the Things and services around that go through our RabbitMQ message broker. 
+Apart from standard MQTT, the broker does also allow MQTT over WebSocket, to explore pure browser-based consumers. An example of this was implemented using 
+
+1. [node-wot](https://github.com/eclipse/thingweb.node-wot) 
+2. an experimental implementation of a MQTT over WebSocket protocol binding and 
+3. [Eclipse Paho MQTT JavaScript Client](https://github.com/eclipse/paho.mqtt.javascript)
+
+as part of our Smart Office Showcase, that can be found on [office.motius.io](https://office.motius.io/).
 
 ### Authentication
 The RabbitMQ message broker needs basic credentials, that will be communicated with W3C WoT members. 
