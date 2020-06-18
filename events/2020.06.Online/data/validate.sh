@@ -91,14 +91,22 @@ function process() {
     if [[ -f $MergedOutput ]]; then
       Temp="${MergedOutput}.temp"
       echo "npm run-script testTD $Input $AutoOutput"
-      npm run-script testTD $Input > $AutoOutput
+      # npm run-script testTD $Input $AutoOutput
+      # HACK
+      rm Results/*.csv
+      npm run-script testTD $Input 
+      cp Results/*.csv $AutoOutput
       echo "node mergeResults.js $AutoOutput $MergedOutput > $Temp"
       node mergeResults.js $AutoOutput $MergedOutput > $Temp
       echo "mv $Temp $MergedOutput"
       mv $Temp $MergedOutput
     else
       echo "npm run-script testTD $Input $AutoOutput"
-      npm run-script testTD $Input $AutoOutput
+      # npm run-script testTD $Input $AutoOutput
+      # HACK
+      rm Results/*.csv
+      npm run-script testTD $Input 
+      cp Results/*.csv $AutoOutput
     fi
     Extras="${Input%.*}.csv"
     Temp="${Extras}.temp"
