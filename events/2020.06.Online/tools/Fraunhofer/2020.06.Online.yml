@@ -1,0 +1,35 @@
+
+name: Sync 2020.06.Online TDs with LinkSmart Thing Directory
+
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron:  '*/60 * * * *' # same as TTL; see below
+
+jobs:
+  run:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    - name: Clone TDs
+      run: |
+        svn export https://github.com/w3c/wot-testing/trunk/events/2020.06.Online/TDs
+        ls -l
+        
+    - name: Sync
+      run: python sync.py
+      env:
+        ENDPOINT: 'https://demo.linksmart.eu/thing-directory' # directory root endpoint
+        AUTHORIZATION: ${{ secrets.AUTHORIZATION }} # authorization header
+        TTL: 3600 # 1 hour
