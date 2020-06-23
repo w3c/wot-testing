@@ -2,6 +2,8 @@
 
 A hacky script for incorporate all Things from LinkSmart Thing Directory to Node-RED (this is also an use case of XPath)
 
+![diagram](./nodepop.svg)
+
 [Download](./nodepop.sh)
 
 Not yet fully tested.  Use carefully.
