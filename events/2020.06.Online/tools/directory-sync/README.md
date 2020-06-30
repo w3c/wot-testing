@@ -19,4 +19,4 @@ where:
 ## Github Actions
 An example Github Actions workflow to sync periodically is available in [2020.06.Online.yml](2020.06.Online.yml)
 
-The Github Actions workflow is live [here](https://github.com/farshidtz/wot-testing-directory-sync/runs)
+The Github Actions workflow is live [here](https://github.com/farshidtz/wot-testing-directory-sync/actions)
