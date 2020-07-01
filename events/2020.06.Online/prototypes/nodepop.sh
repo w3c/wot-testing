@@ -11,8 +11,8 @@ lsendpoint='https://demo.linksmart.eu/thing-directory'
 
 # Retrieve IDs of TDs which have HTTP endpoint. 
 echo Search LinkSmart directory ...
-xpath='*[starts-with(*//forms//href,"http")%20or%20starts-with(base,"http")]/id'   # only TDs which have HTTP endpoint
-ids=$(curl -L -s -g $lsendpoint/td?xpath=$xpath | jq -r '.items[]')
+xpath='(*[*//forms/*[starts-with(href,"http")]]%20or%20*[starts-with(base,"http")])/id'   # only TDs which have HTTP endpoint
+ids=$(curl -L -s -g $lsendpoint/td?xpath=$xpath | jq -r '.items[]' | sort | uniq)
 
 echo nodes are: $ids
     # for example:
