@@ -32,3 +32,5 @@ Not yet fully tested.  Use carefully.
 ## Todo
 - Integrate into Node-RED editor
 - Dynamic loading
+  - Future version of Node-RED (maybe v1.2.0?) will support a dynamic loading of node from tarball on the HTTP server.
+    (see https://github.com/node-red/node-red/pull/2378).
