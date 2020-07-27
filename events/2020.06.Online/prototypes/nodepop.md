@@ -41,4 +41,4 @@ Not yet fully tested.  Use carefully.
 
 ## Demo
 
-[Demo video](./autopop.mov)
+[Demo video](./autopop.mp4)
