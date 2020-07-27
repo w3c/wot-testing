@@ -29,8 +29,16 @@ Not yet fully tested.  Use carefully.
 
 4. execute Node-RED.  Incorporated nodes are in 'Web of Things' category on your pallette.
 
-## Todo
-- Integrate into Node-RED editor
-- Dynamic loading
-  - Future version of Node-RED (maybe v1.2.0?) will support a dynamic loading of node from tarball on the HTTP server.
-    (see https://github.com/node-red/node-red/pull/2378).
+# Updated version (2020.7)
+- Support dynamic loading.  No need for restart Node-RED runtime.
+- Install WoT nodes from standard Node-RED palette management UI.
+
+![diagram2](./nodepop2.svg)
+
+## Usage, code
+
+(TBD)
+
+## Demo
+
+[Demo video](./autopop.mov)
