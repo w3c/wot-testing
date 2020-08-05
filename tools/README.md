@@ -6,7 +6,7 @@ Tools and systems for testing WoT Things and systems and for
 tracking data associated with testing.
 Testing includes conformance testing as well as other forms
 of testing, such as interoperability.
-To make it easier to use CLI tools they can be set up as [github submodules](https://github.blog/2016-02-01-working-with-submodules/)
+To make it easier to use CLI tools they can be set up as [github submodules](https://github.blog/2016-02-01-working-with-submodules/).
 
 * [ThingWeb Playground](playground/README.md)
   * Check a TD for conformance with the 
