@@ -22,4 +22,6 @@
 
 ## Scenarios
 * Retail
-** Conexxus/ORI/EdgeX use case: AI service, virtual devices, Node-RED, discovery, etc.
+   - Conexxus/ORI/EdgeX use case: AI service, virtual devices, Node-RED, discovery, etc.
+* Smart City
+   - Geolocation: SSN, geolocation data ontology, etc.
