@@ -6,7 +6,17 @@
    - https://www.timeanddate.com/worldclock/fixedtime.html?msg=WoT+Fall+2020+Plugfest&iso=20200928T09&p1=43&ah=1
 * WebEx
    - link TBD
-   
+### Setup
+* [Setup](setup.md)
+* Prework to do before the plugfest.
+
+### Archives
+* [TDs](TDs/README.md): TD archive and manual assertion input data.
+* [Data](data/README.md): Data captured during the plugfest and report generation tools. 
+
+### Tools
+TBD
+
 ## Testing
 * WoT Discovery implementations
    - FPWD should be ready
