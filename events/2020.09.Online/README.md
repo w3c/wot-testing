@@ -15,7 +15,7 @@
 * [Data](data/README.md): Data captured during the plugfest and report generation tools. 
 
 ### Tools
-TBD
+Links to use [useful tools](tools/README.md).
 
 ## Testing
 * WoT Discovery implementations
