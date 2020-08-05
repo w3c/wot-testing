@@ -9,14 +9,16 @@
    
 ## Testing
 * WoT Discovery implementations
-** FPWD should be ready, need two implementations...
+   - FPWD should be ready
+   - Updated LinkSmart implementation at least
+   - Eventually need a second implementation
 * Updated TDs, including new features
-** OAuth2 - client and device flows, extensions
-** TD Proofs - signing, including in directories
+   - OAuth2 - client and device flows, extensions
+   - TD Proofs - ld-proofs signing, including in directories
 * Scripting API
-** node-wot
+   - node-wot
 * Edge Computing
-** AI services as Things
+   - AI services as Things
 
 ## Scenarios
 * Retail
