@@ -6,6 +6,19 @@
    - https://www.timeanddate.com/worldclock/fixedtime.html?msg=WoT+Fall+2020+Plugfest&iso=20200928T09&p1=43&ah=1
 * WebEx
    - https://lists.w3.org/Archives/Member/member-wot-wg/2020Aug/0023.html
+   
+### To Do
+* Establish directory/README structure in repo for event (Toumura)
+* Test VPN - server, client (Toumura/McCool)
+* Define scenarios, goals, etc.
+** Use the issue tracker
+** OneDM integration
+*** Enhanced Node-RED integration, eg. semantic categories, semantic/queries queries
+*** JSONPath vs. SPARQL
+* Capture implementations, prototype definitions
+* Requirements
+* Services (directory instances, etc)
+
 ### Setup
 * [Setup](setup.md)
 * Prework to do before the plugfest.
