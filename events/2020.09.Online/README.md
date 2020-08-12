@@ -11,13 +11,24 @@
 * Establish directory/README structure in repo for event (Toumura)
 * Test VPN - server, client (Toumura/McCool)
 * Define scenarios, goals, etc.
-** Use the issue tracker
-** OneDM integration
-*** Enhanced Node-RED integration, eg. semantic categories, semantic/queries queries
-*** JSONPath vs. SPARQL
-* Capture implementations, prototype definitions
+    - Use the issue tracker
+    - OneDM integration: https://github.com/w3c/wot-testing/issues/47
+        * Enhanced Node-RED integration, eg. semantic categories, semantic/queries queries
+        * JSONPath vs. SPARQL
+    - Profiles
+* Implementations
+* Prototypes
+    - Semantic proxy
 * Requirements
-* Services (directory instances, etc)
+* Services 
+    - LinkSmart directory instances (local, global)
+    - Proxy services
+    - Gateways (protocol translators)
+    - Metadata translators
+    - Discoverers (eg read github, register TDs with directory...)
+* Tools
+    - Validation
+    - Report generator
 
 ### Setup
 * [Setup](setup.md)
