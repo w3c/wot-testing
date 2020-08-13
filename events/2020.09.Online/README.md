@@ -6,6 +6,9 @@
    - https://www.timeanddate.com/worldclock/fixedtime.html?msg=WoT+Fall+2020+Plugfest&iso=20200928T09&p1=43&ah=1
 * WebEx
    - https://lists.w3.org/Archives/Member/member-wot-wg/2020Aug/0023.html
+* Slack 
+   - #plugfest channel on https://wotpf.slack.com/
+     - (invitation URL will be posted on member-wot-{wg/ig/guests})
    
 ### To Do
 * Establish directory/README structure in repo for event (Toumura)

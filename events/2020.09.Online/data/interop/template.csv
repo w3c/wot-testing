@@ -1,0 +1,4 @@
+"Producer",  "Consumer",   "Security",  "Status",  "Comment"
+"ORG-IMPL",  "ORG-IMPL",   "nosec",     "pass",    "a passing interop test"
+"ORG-IMPL",  "ORG-IMPL",   "basic",     "fail",    "a failing interop test (state why)"
+"ORG-IMPL",  "ORG-IMPL",   "basic",     "partial", "kinda worked, but not fully (state why)"
