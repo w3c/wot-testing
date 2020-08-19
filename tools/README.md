@@ -28,3 +28,6 @@ To make it easier to use CLI tools they can be set up as [github submodules](htt
 
 * [W-ADE: WoT API Development Environment](https://github.com/tum-esi/wade)
   * Similar to Postman, it allows sending requests to WoT devices. However, it parses TDs and generates a UI automatically and supports HTTP, CoAP and MQTT. Based on Thingweb node-wot
+
+* [Online Plugfest VPN](vpn/README.md)
+  * VPN configuration instruction for the online plugfest.
