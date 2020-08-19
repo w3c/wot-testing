@@ -9,15 +9,26 @@
 * Slack 
    - #plugfest channel on https://wotpf.slack.com/
      - (invitation URL will be posted on member-wot-{wg/ig/guests})
+* Google Hangout?
    
 ## Discussion
 * Possible demo during Breakouts week, Oct 26-30?
+   - Or a video?  Plus Q&A?
+* Hackathon?
+   - "Use WoT to do something interesting"
+   - Goal is developer community engagement and training
+   - Needs lots better organization, support, docs, tutorials, etc.
+   - PLH has a [docs project](https://www.w3.org/PM/) that is relevant
+   - (further discuss in Marketing)
    
 ### To Do
-* Establish directory/README structure in repo for event (Toumura)
 * Test VPN - server, client (Toumura/McCool)
+    - Reorg init.d script to use wlan0 for upstream and eth0 for downstream
+    - Make sure server is up, certs are valid, IPs getting assigned, doc static/dynamic IP ranges
+    - Test some devices
 * Define scenarios, goals, etc.
     - Use the issue tracker
+        * Start with the ones below...
     - OneDM integration: https://github.com/w3c/wot-testing/issues/47
         * Enhanced Node-RED integration, eg. semantic categories, semantic/queries queries
         * JSONPath vs. SPARQL
@@ -25,9 +36,10 @@
 * Implementations
 * Prototypes
     - Semantic proxy
+    - NodeRED integration w/ directories
 * Requirements
 * Services 
-    - LinkSmart directory instances (local, global)
+    - LinkSmart directory instances (local, global, models/instances, sparql/jsonpath/xpath)
     - Proxy services
     - Gateways (protocol translators)
     - Metadata translators
