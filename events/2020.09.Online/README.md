@@ -7,6 +7,9 @@
 * WebEx
    - https://lists.w3.org/Archives/Member/member-wot-wg/2020Aug/0023.html
    
+## Discussion
+* Possible demo during Breakouts week, Oct 26-30?
+   
 ### To Do
 * Establish directory/README structure in repo for event (Toumura)
 * Test VPN - server, client (Toumura/McCool)
