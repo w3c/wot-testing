@@ -24,7 +24,7 @@
 ### To Do
 * Test VPN - server, client (Toumura/McCool)
     - Reorg init.d script to use wlan0 for upstream and eth0 for downstream
-    - Make sure server is up, certs are valid, IPs getting assigned, doc static/dynamic IP ranges
+    - Make sure server is up, certs are valid, IPs getting assigned, doc static/dynamic IP ranges (done)
     - Test some devices
 * Define scenarios, goals, etc.
     - Use the issue tracker
