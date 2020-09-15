@@ -8,7 +8,7 @@
    - https://lists.w3.org/Archives/Member/member-wot-wg/2020Aug/0023.html
 * Slack 
    - #plugfest channel on https://wotpf.slack.com/
-     - (invitation URL will be posted on member-wot-{wg/ig/guests})
+     - invitation URL: https://lists.w3.org/Archives/Member/member-wot-ig/2020Sep/0014.html
 * Google Hangout?
    
 ## Discussion
