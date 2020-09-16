@@ -10,6 +10,7 @@
    - #plugfest channel on https://wotpf.slack.com/
      - invitation URL: https://lists.w3.org/Archives/Member/member-wot-ig/2020Sep/0014.html
 * Google Hangout?
+   - Alternatively, links to live video streams (add here) to monitor devices
    
 ## Discussion
 * Possible demo during Breakouts week, Oct 26-30?
