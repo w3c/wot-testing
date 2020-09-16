@@ -7,8 +7,12 @@
 * WebEx
    - https://lists.w3.org/Archives/Member/member-wot-wg/2020Aug/0023.html
 * Slack 
+   - For general always-on chat
    - #plugfest channel on https://wotpf.slack.com/
      - invitation URL: https://lists.w3.org/Archives/Member/member-wot-ig/2020Sep/0014.html
+* W3C IRC
+   - for minutes during meetings only
+   - #wot-pf channel
 * Google Hangout?
    - Alternatively, links to live video streams (add here) to monitor devices
    
