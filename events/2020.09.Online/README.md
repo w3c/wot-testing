@@ -16,9 +16,13 @@
 * Google Hangout?
    - Alternatively, links to live video streams (add here) to monitor devices
    
+
+# Breakout
+   - Doodle needed to decide date and time during week of Oct 26-30
+   - Will prepare slide deck to review plugfests, provide links to demo videos
+   - Format, 1h, 30m (max) for presentation, 30m for discussion
+   
 ## Discussion
-* Possible demo during Breakouts week, Oct 26-30?
-   - Or a video?  Plus Q&A?
 * Hackathon?
    - "Use WoT to do something interesting"
    - Goal is developer community engagement and training
