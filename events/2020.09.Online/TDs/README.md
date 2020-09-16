@@ -15,6 +15,7 @@ Each contributing organization's directory may have other files using other suff
 for example `.md` files, and in particular a `README.md` describing the organization's
 contributions is useful:
 * [ExampleLink](Example/README.md)
+* [Hitachi](Hitachi/README.md)
 
 Whether or not a Thing is active and online should be indicated in the 
 [active CSV file](../active.csv).
