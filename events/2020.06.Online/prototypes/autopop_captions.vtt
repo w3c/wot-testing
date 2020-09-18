@@ -1,0 +1,84 @@
+WEBVTT
+
+
+00:06.000 --> 00:10.000
+Node-RED, the well-known low-code development tool from the OpenJS Foundation,
+
+00:10.000 --> 00:12.500
+supports the Web of Things Thing Description
+
+00:12.500 --> 00:17.400
+as part of the Node Generator project to simplify the development of Node-RED nodes.
+
+00:17.500 --> 00:23.000
+In this demo, we'll show you how to automatically populate Things in the Node-RED's editor screen. 
+
+00:23.300 --> 00:25.000
+This is a Node-RED editor.
+
+00:25.000 --> 00:30.000
+With Node-RED, you can create applications by connecting boxes, called 'nodes'.
+
+00:30.000 --> 00:32.000
+Let's import a Thing into the palette on the left side.
+
+00:32.500 --> 00:36.000
+To import a Thing, use the palette manager.
+
+00:36.000 --> 00:39.000
+On this screen, you can see a list of all the Things you've discovered.
+
+00:39.000 --> 00:41.000
+There are currently two Things.
+
+00:41.000 --> 00:43.500
+As you update, you will find more new Things.
+
+00:43.500 --> 00:47.500
+You can enter keywords to narrow down the types of Things you want to add to your palette.
+
+00:47.500 --> 00:51.500
+If you type "coffee", you'll see that there are two coffee machines.
+
+00:51.500 --> 00:55.000
+Let's try installing one of them.
+
+01:00.000 --> 01:05.000
+After the installation is complete, you will see a node on the left side of the palette.
+
+01:05.000 --> 01:08.500
+Let's take a look at the state of the coffee machine using this node.
+
+01:08.500 --> 01:11.500
+Select a node from the palette and incorporate it into the flow.
+
+01:11.500 --> 01:15.000
+Double-click on the node to bring up the configuration screen.
+
+01:15.000 --> 01:18.700
+Here you can configure the interaction to the Thing when it receives a message.
+
+01:18.700 --> 01:23.500
+You can get the state of the coffee machine by selecting 'Property', 'state', and 'Read'.
+
+01:27.000 --> 01:30.000
+Now, let's try out the completed flow.
+
+01:30.000 --> 01:32.500
+Press the 'deploy' button to start running it.
+
+01:32.500 --> 01:36.000
+You can access the Thing and get its state by sending a message to the Thing's nodes.
+
+01:39.000 --> 01:42.000
+If you go back to the palette management interface again, ...
+
+01:49.000 --> 01:53.000
+... this time you can see the 20 Things.
+
+01:53.000 --> 01:57.000
+You can enter a variety of keywords to search for even more new Things.
+
+02:09.000 --> 02:18.000
+In this way, you can easily create IoT applications by using Node-RED to import real-world 'Things' described in Thing Descriptions and stitch them together.
+
