@@ -56,6 +56,8 @@
 * Tools
     - Validation
     - Report generator
+* Coordination with other projects
+    - WebThings
 
 ### Setup
 * [Setup](setup.md)
