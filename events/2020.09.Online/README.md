@@ -86,3 +86,5 @@ Links to use [useful tools](tools/README.md).
    - Conexxus/ORI/EdgeX use case: AI service, virtual devices, Node-RED, discovery, etc.
 * Smart City
    - Geolocation: SSN, geolocation data ontology, etc.
+* Media
+   - NHK, gaming (haptics - accessibility), streaming, media control
