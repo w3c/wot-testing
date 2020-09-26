@@ -1,4 +1,4 @@
-# Hitachi - Sepember 2020 Online Plugfest
+# Hitachi - September 2020 Online Plugfest
 
 We provide a simple LED lamp.
 
