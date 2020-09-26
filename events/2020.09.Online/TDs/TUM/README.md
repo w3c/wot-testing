@@ -32,29 +32,35 @@ We did not have any issues regarding scalability after one semester of teaching.
 
 ### Desk1
 
+### Custom Made Devices
 
-- HueColorLight
-- HueDaylight
-- HueDimmerSwitch
-- HueIndoorSensor
-- HueOutdoorSensor
-- PanTiltHat
-- RainbowHAT
-- SenseHat
-- UnicornPHat
+- PanTiltHat: This is a platform meant to attach video surveillance cameras. Ours do not have a camera attached, but the platform can tilt (moving up and down) and pan (moving left and right). The actions are asynchronous, meaning that a response is returned when the request is successful but the platform will keep moving. The platform stops automatically when it reaches end points.
+- RainbowHAT: This HAT has different environment sensors, LEDs and touch buttons. The touch buttons are capacitive and need human interaction.
+- SenseHat: This HAT is similar to RainbowHAT but it has an LED matrix instead of single LEDs and 7 segment displays. There is a button that can be pressed which triggers the event emissions. On Monday, Tuesday and Thursday, this button will be pressed by a robot every 20 minutes.
+- UnicornPHat: This is small LED Matrix.
+
+**Note:** Most environment sensor values should not be trusted since the sensors are not calibrated. However, they are reliable :)
+
+### Philips Hue Devices
+
+- HueColorLight: This is a light bulb whose color can be adjusted in different ways. The descriptions of each interaction should be read to understand how to use different parameters. The light bulbs do not point to the cameras to not have problems with exposure, they point to the wall behind them.
+- HueDaylight: This is a software running in the Hue Bridge that tells whether there is daylight outside or not. This is based on the current time and the GPS position. However, the room's windows are covered to have regulated lighting, so not much use of this "sensor". 
+- HueDimmerSwitch: This is a switch that is preprogrammed to turn off/on the lights and change their brightness. The button presses are not events but they need to be constantly polled.
+- HueIndoorSensor: These are the two white square Things on the table. They measure light intensity and notify if there is movement in the room.
+- HueOutdoorSensor: This sensor is not visible in any camera stream but it is positioned to the left of the Desk 1. Its functionality is identical to the IndoorSensor.
 
 
-**Note on Philips Hue Devices:** The lights are bridged over the Hue Bridge and we do not change their APIs in any way. The responses returned from the devices (which is the Hue Bridge) have always 2XX code, even if the light is not even screwed in.
-You have to parse the responses if you want to handle such states.
+**Note:** The lights are bridged over the Hue Bridge and we do not change their APIs in any way. The responses returned from the devices (which is the Hue Bridge) have always 2XX code, even if the light is not even screwed in.
+You have to parse the responses if you want to handle such status responses.
 In other words, do not put any meaning into the status codes.
 
 
 ### Desk2
 
-- Uarm
-- InfraredSensor
-- ConveyorBelt
-- DobotMagician
+- Uarm: This is the black robot seen on the top part of the second stream. It can be moved to any position and pick up objects. If you move the robot when it cannot move (when there is something on the way), the software library that we are using loses the position and thinks that it has moved to where you wanted it to. Thus, in such cases, use the reset action. Otherwise, the robot restarts every hour and fixes this problem. 
+- DobotMagician: This is the white robot seen on the bottom part of the second stream. It is mounted on a sliding rail and can be moved to preprogrammed locations and pick up objects if the objects are on those positions.
+- InfraredSensor: These sensor detect if a cube passes in front of them and send an event.
+- ConveyorBelt: These belts can be run forward or backwards with a speed set in their properties. They should be stopped when not in use to avoid damaging the hardware.
 
 
 
