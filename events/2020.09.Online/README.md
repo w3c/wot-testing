@@ -90,3 +90,7 @@ Links to use [useful tools](tools/README.md).
    - Geolocation: SSN, geolocation data ontology, etc.
 * Media
    - NHK, gaming (haptics - accessibility), streaming, media control
+
+## Configuration
+![Plugfest Network Diagram](./plugfestnetwork.svg)
+- [Source file](./plugfestnetwork.drawio)
