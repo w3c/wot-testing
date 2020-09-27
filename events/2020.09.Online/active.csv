@@ -16,3 +16,4 @@
 "TUM",          "ConveyorBelt1-2",      "yes",      "2 identical devices. Desk 2. Needs to be stopped"
 "TUM",          "DobotMagician",        "yes",      "Slow initial response. Preprogrammed locations Desk 2"
 "TUM",          "Uarm",                 "yes",      "Freedom of movement (double edged sword). Desk 2"
+"Hitachi",      "myRasPiLED",           "yes",
