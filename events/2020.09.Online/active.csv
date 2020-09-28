@@ -19,7 +19,7 @@
 "Intel",        "intel-camera",         "no",       "web camera (still images only, supports cropping)"
 "Intel",        "intel-speak",          "no",       "text to speech interface (English)"
 "Intel",        "intel-inference",      "no",       "object recognition service (yolo)"
-"Intel",        "Intel-OCF-button1touch",	"no",	"OCF 1.1 push button (binary input)"
+"Intel",  "Intel-OCF-button1touch", "no", "OCF 1.1 push button (binary input)"
 "Intel",        "Intel-OCF-button2touch", "no",	"OCF 1.1 push button (binary input)"
 "Intel",	"Intel-OCF-buzzer0", "no", "OCF 1.1 buzzer (binary output)"
 "Intel",	"Intel-OCF-illuminance0", "no", "OCF 1.1 illuminance sensor (scalar input)"
