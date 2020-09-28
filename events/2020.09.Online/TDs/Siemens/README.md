@@ -11,3 +11,4 @@ Moreover, there are several Web UIs available:
 * [Generic WebUI](http://plugfest.thingweb.io/webui/)
 * [Smart Coffee Machine - Property Live Monitor](http://plugfest.thingweb.io/examples/smart-coffee-machine.html)
 * [Counter UI](http://plugfest.thingweb.io/examples/counter.html)
+* [WoT-FXUI](http://plugfest.thingweb.io:8088/test/fullscreen/default)
