@@ -48,7 +48,10 @@ please use [this](./hitachi-led.jsonld).
 
 Basic security scheme is supported.
 
-The credential will be posted on member's mailing list.
+Credential:
+- https://lists.w3.org/Archives/Member/member-wot-ig/2020Sep/0030.html
+- https://lists.w3.org/Archives/Member/member-wot-wg/2020Sep/0040.html
+- https://lists.w3.org/Archives/Member/member-wot-guests/2020Sep/0016.html
 
 ## API
 
