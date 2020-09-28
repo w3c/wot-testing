@@ -24,7 +24,7 @@ We provide an emulator of Hybrid TV (Hybridcast).
 ```
 2. retrieve TD using above information
 ```
-% curl -u http://192.168.30.132:8887/td/nhktv.jsonld
+% curl http://192.168.30.132:8887/td/nhktv.jsonld
 ```
 
 ## API
@@ -32,8 +32,7 @@ Please see [flows for Node-RED](https://github.com/endouhhc/wot-testing/new/mast
 
 ## Hybrid TV Emulator Android App 
 - https://github.com/nhkrd/antwapp4hc
-- dns-sd is not supported in above version.
-
+- dns-sd is not supported in current version.
 
 ## Related Works
 
@@ -42,5 +41,5 @@ Please see [flows for Node-RED](https://github.com/endouhhc/wot-testing/new/mast
 - https://github.com/nhkrd/hyconet.js
 
 ### node-red-contrib-hyconet
-- Node-RED extra node plugin for hyconet.js(Hybridcast-Connect Javascript SDK)
+- Node-RED extra node plugin for hyconet.js (Hybridcast-Connect Javascript SDK)
 - https://github.com/nhkrd/node-red-contrib-hyconet
