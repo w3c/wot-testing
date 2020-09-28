@@ -20,6 +20,8 @@ curl http://[IP addr of sensor unit]/Things/TD
 The proxy is allinged to the intermediary specified in the WoT achitecture document. It can aggregate muple WoT devices and manage the device information inside.
 The proxy can keep TDs of things that cannot be accessed from others due to suspended or sleeping, and can behave them instead of the actual things.
 
+This proxy has supported the local discovery mechanism using mDNS. You can find the detail interface and sequence diagram in https://github.com/w3c/wot-discovery/blob/master/prior-work/fujitsu/README.md.
+
 First, a new WoT device is requied to register to the proxy. After this, comsumers can get TDs of WoT devices to be registered before.
 
 ```
