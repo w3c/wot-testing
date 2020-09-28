@@ -24,7 +24,7 @@
 "Intel",        "Intel-OCF-buzzer0",      "no",  "OCF 1.1 buzzer (binary output)"
 "Intel",        "Intel-OCF-illuminance0", "no",  "OCF 1.1 illuminance sensor (scalar input)"
 "Intel",        "Intel-OCF-illuminance2", "no",  "OCF 1.1 illuminance sensor (scalar input)"
-"Intel",        "Intel-OCF-led0blue",	    "no",  "OCF 1.1 indicator LED (binary output)"
+"Intel",        "Intel-OCF-led0blue",     "no",  "OCF 1.1 indicator LED (binary output)"
 "Intel",        "Intel-OCF-led0green",    "no",  "OCF 1.1 indicator LED (binary output)"
 "Intel",        "Intel-OCF-led0mosfet",   "no",  "OCF 1.1 bright external LED driven by MOSFET (binary output)"
 "Intel",        "Intel-OCF-led0red",      "no",  "OCF 1.1 indicator LED (binary output)"
