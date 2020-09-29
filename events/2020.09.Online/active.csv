@@ -45,3 +45,6 @@
 "Intel",        "Intel-OCF-toggle0",      "no",  "OCF 1.1 toggle switch (binary input)"
 "Intel",        "Intel-OCF-toggle1",      "no",  "OCF 1.1 toggle switch (binary input)"
 "Intel",        "Intel-OCF-toggle2",      "no",  "OCF 1.1 toggle switch (binary input)"
+"Siemens",        "Smart-Coffee-Machine",      "yes",  "http://plugfest.thingweb.io:8083/smart-coffee-machine"
+"Siemens",        "TestThing",      "yes",  "http://plugfest.thingweb.io:8083/testthing"
+"Siemens",        "Multilanguage Counter",      "yes",  "http://plugfest.thingweb.io:8083/counter"
