@@ -2,16 +2,22 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/"
+      "iot": "http://iotschema.org/",
+      "s": "http://schema.org",
+      "cap": "https://onedm.org/exploratory/cap/" 
     }
   ],
   "@type": [
     "Thing",
     "Switch",
     "iot:Sensor",
-    "iot:BinarySwitch"
+    "iot:BinarySwitch",
+    "cap:#/sdfObject/Switch"
   ],
   "id": "urn:uuid:3932ae08-31b4-4882-b299-5d488ec8775c",
+  "s:longitude": "47.3816744",
+  "s:latitude": "-68.3193975",
+  "s:elevation": "238.049",
   "securityDefinitions": {
     "nosec_sc": {
       "scheme": "nosec"
@@ -47,7 +53,8 @@
       "observable": true,
       "@type": [
         "OnOffState",
-        "iot:SwitchStatus"
+        "iot:SwitchStatus",
+        "cap:#/sdfObject/Switch/sdfProperty/State"
       ],
       "type": "object",
       "properties": {
