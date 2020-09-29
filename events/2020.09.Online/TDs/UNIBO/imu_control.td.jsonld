@@ -1,0 +1,181 @@
+{
+    "title": "DA00AW2N-2-control",
+    "description": "Cluster Head test thing",
+    "support": "https://site.unibo.it/mac4pro/it/persone",
+    "@type": [
+        "sosa:Sensor",
+        "Thing"
+    ],
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+        },
+        {
+            "ssn": "https://raw.githubusercontent.com/oeg-upm/ssn-resource-center/master/json-ld/ssnContextV2.json"
+        },
+        {
+            "qudt": "http://www.qudt.org/qudt/owl/1.0.0/quantity/"
+        },
+        {
+            "xsd": "http://www.w3.org/2001/XMLSchema"
+        },
+        {
+            "san": "https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "links": [
+        {
+            "href": "./DA00AW2N-2-control",
+            "rel": "san:isController"
+        },
+        {
+            "href": "https://api.jsonbin.io/b/5f6afc2b7243cd7e8241dc6b",
+            "rel": "sosa:isHostedBy",
+            "type": "application/ld+json"
+        }
+    ],
+    "properties": {
+        "GravityScale": {
+            "type": "number",
+            "readOnly": false,
+            "writeOnly": true,
+            "observable": false,
+            "description": "Set a gravivity scale used to output data samples",
+            "value": 2,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/properties/GravityScale",
+                    "contentType": "application/json",
+                    "op": [
+                        "writeproperty"
+                    ],
+                    "htv:methodName": "PUT"
+                }
+            ]
+        },
+        "GyroscopeScale": {
+            "type": "number",
+            "readOnly": false,
+            "writeOnly": true,
+            "observable": false,
+            "description": "Set a gyroscope scale used to output data samples",
+            "value": 125,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/properties/GyroscopeScale",
+                    "contentType": "application/json",
+                    "op": [
+                        "writeproperty"
+                    ],
+                    "htv:methodName": "PUT"
+                }
+            ]
+        },
+        "AccelerationThreshold": {
+            "type": "number",
+            "readOnly": false,
+            "writeOnly": true,
+            "observable": false,
+            "description": "Set a threshold for ThresholdReached event",
+            "value": 1000,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/properties/AccelerationThreshold",
+                    "contentType": "application/json",
+                    "op": [
+                        "writeproperty"
+                    ],
+                    "htv:methodName": "PUT"
+                }
+            ]
+        },
+        "GyroscopeThreshold": {
+            "type": "number",
+            "readOnly": false,
+            "writeOnly": true,
+            "observable": false,
+            "description": "Set a threshold for ThresholdReached event",
+            "value": 1000,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/properties/GyroscopeThreshold",
+                    "contentType": "application/json",
+                    "op": [
+                        "writeproperty"
+                    ],
+                    "htv:methodName": "PUT"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "SelfTest": {
+            "description": "Test sensor voltage",
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/actions/SelfTest",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "events": {
+        "AccelerationThresholdReached": {
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/events/AccelerationThresholdReached",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent"
+                    ]
+                }
+            ]
+        },
+        "GyroscopeThresholdReached": {
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-control/events/GyroscopeThresholdReached",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "@id": "urn:dev:serial:DA00AW2N",
+    "@serialNumber": "DA00AW2N",
+    "@sensorAddress": "2",
+    "@sensorType": "control",
+    "security": [
+        "nosec_sc"
+    ],
+    "id": "urn:uuid:2aec4e3f-d9b8-4100-a5fb-4ac527cd159e",
+    "forms": [
+        {
+            "href": "http://example.it/DA00AW2N-2-control/all/properties",
+            "contentType": "application/json",
+            "op": [
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    }
+}
