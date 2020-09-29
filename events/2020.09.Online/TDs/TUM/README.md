@@ -32,21 +32,29 @@ We did not have any issues regarding scalability after one semester of teaching.
 
 ### Desk1
 
+![Desk1 Overview](Images/Desk1/Desk1.jpg "Desk1 Overview")
+
 ### Custom Made Devices
 
-- PanTiltHat: This is a platform meant to attach video surveillance cameras. Ours do not have a camera attached, but the platform can tilt (moving up and down) and pan (moving left and right). The actions are asynchronous, meaning that a response is returned when the request is successful but the platform will keep moving. The platform stops automatically when it reaches end points.
-- RainbowHAT: This HAT has different environment sensors, LEDs and touch buttons. The touch buttons are capacitive and need human interaction.
-- SenseHat: This HAT is similar to RainbowHAT but it has an LED matrix instead of single LEDs and 7 segment displays. There is a button that can be pressed which triggers the event emissions. On Monday, Tuesday and Thursday, this button will be pressed by a robot every 20 minutes.
-- UnicornPHat: This is small LED Matrix.
+- PanTilt HAT: This is a platform meant to attach video surveillance cameras. Ours do not have a camera attached, but the platform can tilt (moving up and down) and pan (moving left and right). The actions are asynchronous, meaning that a response is returned when the request is successful but the platform will keep moving. The platform stops automatically when it reaches end points.
+![PanTilt HAT](Images/Desk1/PanTiltHAT.jpg "PanTilt HAT")
+- Rainbow HAT: This HAT has different environment sensors, LEDs and touch buttons. The touch buttons are capacitive and need human interaction.
+![Rainbow HAT](Images/Desk1/RainbowHAT.jpg "Rainbow HAT")
+- Sense HAT: This HAT is similar to RainbowHAT but it has an LED matrix instead of single LEDs and 7 segment displays. There is a button that can be pressed which triggers the event emissions. On Monday, Tuesday and Thursday, this button will be pressed by a robot every 20 minutes.
+![Sense HAT](Images/Desk1/SenseHAT.jpg "Sense HAT")
+- Unicorn pHAT: This is small LED Matrix.
+![Unicorn pHAT](Images/Desk1/UnicornPHAT.jpg "Unicorn pHAT")
 
 **Note:** Most environment sensor values should not be trusted since the sensors are not calibrated. However, they are reliable :)
 
 ### Philips Hue Devices
 
 - HueColorLight: This is a light bulb whose color can be adjusted in different ways. The descriptions of each interaction should be read to understand how to use different parameters. The light bulbs do not point to the cameras to not have problems with exposure, they point to the wall behind them.
+![Hue Color Light](Images/Desk1/HueColor.jpg "Hue Color Light")
 - HueDaylight: This is a software running in the Hue Bridge that tells whether there is daylight outside or not. This is based on the current time and the GPS position. However, the room's windows are covered to have regulated lighting, so not much use of this "sensor". 
 - HueDimmerSwitch: This is a switch that is preprogrammed to turn off/on the lights and change their brightness. The button presses are not events but they need to be constantly polled.
 - HueIndoorSensor: These are the two white square Things on the table. They measure light intensity and notify if there is movement in the room.
+![Hue Indoor Sensor](Images/Desk1/HueIndoor.jpg "Hue Indoor Sensor")
 - HueOutdoorSensor: This sensor is not visible in any camera stream but it is positioned to the left of the Desk 1. Its functionality is identical to the IndoorSensor.
 
 
@@ -57,10 +65,14 @@ In other words, do not put any meaning into the status codes.
 
 ### Desk2
 
-- Uarm: This is the black robot seen on the top part of the second stream. It can be moved to any position and pick up objects. If you move the robot when it cannot move (when there is something on the way), the software library that we are using loses the position and thinks that it has moved to where you wanted it to. Thus, in such cases, use the reset action. Otherwise, the robot restarts every hour and fixes this problem. 
-- DobotMagician: This is the white robot seen on the bottom part of the second stream. It is mounted on a sliding rail and can be moved to preprogrammed locations and pick up objects if the objects are on those positions.
-- InfraredSensor: These sensor detect if a cube passes in front of them and send an event.
-- ConveyorBelt: These belts can be run forward or backwards with a speed set in their properties. They should be stopped when not in use to avoid damaging the hardware.
+- uArm Robot: This is the black robot seen on the top part of the second stream. It can be moved to any position and pick up objects. If you move the robot when it cannot move (when there is something on the way), the software library that we are using loses the position and thinks that it has moved to where you wanted it to. Thus, in such cases, use the reset action. Otherwise, the robot restarts every hour and fixes this problem. 
+![uArm](Images/Desk2/uArm.jpg "uArm")
+- Dobot Magician Robot: This is the white robot seen on the bottom part of the second stream. It is mounted on a sliding rail and can be moved to preprogrammed locations and pick up objects if the objects are on those positions.
+![Dobot](Images/Desk2/Dobot.jpg "Dobot")
+- Infrared Sensor: These sensor detect if a cube passes in front of them and send an event.
+![Infrared](Images/Desk2/Infrared.jpg "Infrared Sensor")
+- Conveyor Belt: These belts can be run forward or backwards with a speed set in their properties. They should be stopped when not in use to avoid damaging the hardware.
+![Conveyor Belt](Images/Desk2/ConveyorBelt.jpg "Conveyor Belt")
 
 
 
@@ -90,3 +102,4 @@ One example would be coap://129.187.45.174:5683/Virtual-Coffee-Machine_2_1  unti
 ### Implementation details
 
 They are made possible via [shadow-thing](https://github.com/tum-esi/shadow-thing)
+[Images/Desk1/Desk1.jpg]: https://dl.acm.org/doi/abs/10.1145/1985394.1985398
