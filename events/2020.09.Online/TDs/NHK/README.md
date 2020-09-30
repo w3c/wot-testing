@@ -1,12 +1,17 @@
 # NHK - September 2020 Online Plugfest
 
-We provide an emulator of Hybrid TV (Hybridcast). 
-
+We provide 
+- an emulator of Hybrid TV (Hybridcast)
+- an android app for program viewing
+- a haptic device
+ 
 ## TD Discovery
 
 ### [Direct](https://w3c.github.io/wot-discovery/#introduction-direct)
 
-- written URL: http://android.local:8887/td/nhktv.jsonld
+- Hybridcast TV: http://android.local:8887/td/nhktv.jsonld
+- Player app: http://192.168.30.130/tpac2020/td/playerapp.jsonld
+
 
 ### [DNS-Based Service Discovery](https://w3c.github.io/wot-discovery/#introduction-dns-sd)
 
@@ -30,9 +35,9 @@ We provide an emulator of Hybrid TV (Hybridcast).
 ## API
 Please see [flows for Node-RED](https://github.com/endouhhc/wot-testing/new/master/events/2020.09.Online/TDs/NHK/flows_nhk_plugfest202009.json)
 
-## Hybrid TV Emulator Android App 
+## Hybrid TV Emulator AndroidTV App 
 - https://github.com/nhkrd/antwapp4hc
-- dns-sd is not supported in current version.
+- dns-sd is not supported in current version on github.
 
 ## Related Works
 
