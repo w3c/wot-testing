@@ -87,8 +87,14 @@
     "@serialNumber": "DA00AW2N",
     "@sensorType": "control-network",
     "@type": "Thing",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        }
+    },
     "security": [
-        "nosec_sc"
+        "basic_sc"
     ],
     "id": "urn:uuid:e9589095-f6df-4124-b3d7-1fcfd163c73e",
     "forms": [
@@ -100,10 +106,5 @@
                 "readmultipleproperties"
             ]
         }
-    ],
-    "securityDefinitions": {
-        "nosec_sc": {
-            "scheme": "nosec"
-        }
-    }
+    ]
 }

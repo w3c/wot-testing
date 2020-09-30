@@ -1,0 +1,47 @@
+{
+    "@context": ["https://www.w3.org/2019/wot/td/v1",{
+        "sosa": "http://www.w3.org/ns/sosa/"
+        }],
+    "title": "SoilSensor",
+    "@type": "sosa:Sensor",
+    "description": "A soil sensor",
+    "links": [
+        {
+            "href": "http://arces143100.arces.unibo.it/assets/farm/soilsensor.obj",
+            "rel": "model"
+        }
+    ],
+    "securityDefinitions": {
+        "no_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "no_sc"
+    ],
+    "properties": {
+        "temperature": {
+            "description": "Soil Temperature",
+            "type": "number",
+            "unit": "Celsius",
+            "readOnly": true,
+            "forms": []
+        },
+        "moisture": {
+            "description": "Soil water content in %",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "readOnly": true,
+        }
+    },
+    "events": {
+        "tooDry": {
+            "description": "Informs if the soil is too try",
+            "data": {
+                "type": "number",
+                "unit": "Celsius"
+            }
+        }
+    }
+}
