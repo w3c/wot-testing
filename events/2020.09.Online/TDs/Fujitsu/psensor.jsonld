@@ -1,0 +1,151 @@
+{
+	"@context":	["https://www.w3.org/2019/wot/td/v1"],
+	"title":	"fsensor-f4",
+	"id":	"urn:com:fujitsu:sensor-f4",
+	"base":	"http://192.168.30.138/Things/Property/",
+	"forms":	[{
+			"op":	"readallproperties",
+			"href":	"allSensorData",
+			"contentType":	"application/json"
+		}],
+	"securityDefinitions":	{
+		"nosec_sc":	{
+			"scheme":	"nosec"
+		}
+	},
+	"security":	"nosec_sc",
+	"properties":	{
+		"Accel":	{
+			"@type":	"iot:Accel",
+			"type":	"object",
+			"properties":	{
+				"accelX":	{
+					"type":	"number"
+				},
+				"accelY":	{
+					"type":	"number"
+				},
+				"accelZ":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"accel",
+					"contentType":	"application/json"
+				}]
+		},
+		"Light":	{
+			"@type":	"iot:Light",
+			"type":	"object",
+			"properties":	{
+				"light":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"light",
+					"contentType":	"application/json"
+				}]
+		},
+		"Proximity":	{
+			"@type":	"iot:Proximity",
+			"type":	"object",
+			"properties":	{
+				"proximity":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"proximity",
+					"contentType":	"application/json"
+				}]
+		},
+		"Pir":	{
+			"@type":	"iot:Pir",
+			"type":	"object",
+			"properties":	{
+				"pir":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"pir",
+					"contentType":	"application/json"
+				}]
+		},
+		"Temperature":	{
+			"@type":	"iot:Temperature",
+			"type":	"object",
+			"properties":	{
+				"temperature":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"temperature",
+					"contentType":	"application/json"
+				}]
+		},
+		"Humidity":	{
+			"@type":	"iot:Humidity",
+			"type":	"object",
+			"properties":	{
+				"humidity":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"humidity",
+					"contentType":	"application/json"
+				}]
+		},
+		"AirPressure":	{
+			"@type":	"iot:AirPressure",
+			"type":	"object",
+			"properties":	{
+				"airPressure":	{
+					"type":	"number"
+				},
+				"rssi":	{
+					"type":	"number"
+				}
+			},
+			"readOnly":	true,
+			"observable":	false,
+			"forms":	[{
+					"href":	"airPressure",
+					"contentType":	"application/json"
+				}]
+		}
+	}
+}
