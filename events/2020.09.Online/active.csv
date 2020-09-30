@@ -17,3 +17,6 @@
 "TUM",          "DobotMagician",        "yes",      "Slow initial response. Preprogrammed locations Desk 2"
 "TUM",          "Uarm",                 "yes",      "Freedom of movement (double edged sword). Desk 2"
 "Hitachi",      "myRasPiLED",           "yes",
+"NHK",          "HybridcastConnectReceiver", "yes", 
+"NHK",          "Player Emulator",      "yes",
+"NHK",          "Haptic Cube",          "no",       "expect ready by Oct. 1"
