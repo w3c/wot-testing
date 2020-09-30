@@ -14,7 +14,36 @@ need SPARQL and when JSONPath is good enough.
 Is there a concrete and useful example where SPARQL is *necessary*?
 * Smart City data source search (and other large problems), need to coordinate multiple vocabularies from many vendors, dynamic vocabularies
 
-## Possible Scenarios for TUM Devices
+## Media Content Management
+NHK TDs extended with content lists.
+
+## Geolocation Use Cases
+* Agricultural (Farming) feedback
+* AR games (MEIG; will ask Oct 1)
+* Smart City
+* Geolocation requirements and definitions
+* Plugfest activity: [Visualization and maps](https://github.com/w3c/wot-testing/issues/76) (Siemens)
+   - Google Maps (paid...)
+   - OpenStreet Maps
+   
+## Mashups
+* Look at [active devices](https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/active.csv)
+
+### Coffee Status and Control
+* Take status from Siemens coffee machine, display on TUM matrix
+* Push button in TUM, make coffee in Siemens
+* Test interop
+* Take first set of TUM displays
+
+### Farm Status and Control
+* Integrate TUM devices and farm status
+* Take second set of TUM displays
+
+## Node-RED Integration
+* Updates to node-gen
+* NHK node-RED integration
+
+## Examples: Scenarios for TUM Devices
 
 These are the mashup scenarios that were used during the teaching sessions.
 
