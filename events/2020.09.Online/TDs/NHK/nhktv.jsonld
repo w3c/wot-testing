@@ -85,6 +85,49 @@
         "contentType": "application/json",
         "htv:methodName": "GET"
       }]
+    },
+    "media": {
+      "title": "available media on a TV set",
+      "titles": {
+        "en": "available media on a TV set",
+        "ja": "メディア利用可否"
+      },
+      "description": "available media on a TV set",
+      "descriptions": {
+        "en": "available media on a TV set",
+        "ja": "メディア利用可否"
+      },
+      "properties":{
+        "head":{"type":"object", "properties":{"code":{},"message":{}}},
+        "body":{"type":"object", "properties":{
+            "created_at": {
+                "type": "string",
+              "title": "The date of the file created"
+            },
+            "TD": {
+              "type": "string",
+              "title": "Availability of receiving Telestrial Digital broadcasting",
+              "enum": [ "Available", "NotAvailable" ]
+            },
+            "BS": {
+              "type": "string",
+              "title": "Availability of receiving Broadcasting Satelite",
+              "enum": [ "Available", "NotAvailable" ]
+            },
+            "CS": {
+              "type": "string",
+              "title": "Availability of receiving Comunication Satelite",
+              "enum": [ "Available", "NotAvailable" ]
+            }
+          }
+        }
+      },
+      "forms": [{
+        "href": "http://192.168.30.132:8887/antwapp/tvcontrol/channels?media=TD",
+        "contentType": "application/json",
+        "htv:methodName": "GET",
+        "scopes": ["full_access"]
+      }]
     }
   },
   "actions": {
