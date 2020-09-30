@@ -1,0 +1,195 @@
+{
+  "security": "nosec_sc",
+  "modified": "2020-09-30T18:33:04+09:00",
+  "id": "urn:com:fujitsu:sensor-f4",
+  "title": "fsensor-f4",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1"
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "actions": {},
+  "forms": [
+    {
+      "op": [
+        "readallproperties"
+      ],
+      "href": "allProperty",
+      "contentType": "application/json"
+    }
+  ],
+  "properties": {
+    "Temperature": {
+      "@type": "iot:Temperature",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "temperature": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Temperature",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "Proximity": {
+      "@type": "iot:Proximity",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "proximity": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Proximity",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "Light": {
+      "@type": "iot:Light",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "light": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Light",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "Humidity": {
+      "@type": "iot:Humidity",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "humidity": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Humidity",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "Pir": {
+      "@type": "iot:Pir",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "pir": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Pir",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "Accel": {
+      "@type": "iot:Accel",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "accelX": {
+          "type": "number"
+        },
+        "accelY": {
+          "type": "number"
+        },
+        "accelZ": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/Accel",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "AirPressure": {
+      "@type": "iot:AirPressure",
+      "observable": false,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+        "airPressure": {
+          "type": "number"
+        },
+        "rssi": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "op": [
+            "readproperty"
+          ],
+          "href": "properties/AirPressure",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {},
+  "base": "http://192.168.30.10/Things/urn:com:fujitsu:sensor-f4"
+}

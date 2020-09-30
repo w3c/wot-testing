@@ -1,0 +1,50 @@
+{
+   "@context":[
+      "https://www.w3.org/2019/wot/td/v1",
+      {
+         "cov":"http://www.example.org/coap-binding#"
+      },
+      {
+         "saref":"https://w3id.org/saref#"
+      }
+   ],
+   "securityDefinitions":{
+      "basic_schema":{
+         "scheme":"basic",
+         "descriptions":{
+
+         },
+         "description":"Basic sec schema",
+         "in":"query",
+         "name":"querykey"
+      }
+   },
+   "security":[
+      "basic_schema"
+   ],
+   "@type":[
+      "saref:LightSwitch"
+   ],
+   "titles":{
+      "de":"Deutscher Titel"
+   },
+   "title":"English title",
+   "descriptions":{
+      "de":"Deutsche Beschreibung"
+   },
+   "description":"English description",
+   "properties":{
+      "echo":{
+         "observable":false,
+         "forms":[
+            {
+               "op":[
+                  "readproperty"
+               ],
+               "href":"/echo",
+               "contentType":"application/json"
+            }
+         ]
+      }
+   }
+}
