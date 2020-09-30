@@ -51,3 +51,6 @@
 "Fujitsu",       "Local Proxy",           "yes", "local proxy supporting local discovery and directory"
 "Fujitsu",       "Sensor Unit", 　　　　　 "yes", "sensor unit with multiple types of sensors"
 "Fujitsu",       "Vritual Sensor",        "yes", "virtual thing(sensor) corresponding to physical sensor unit above"
+"NHK",          "HybridcastConnectReceiver", "yes", 
+"NHK",          "Player Emulator",      "yes",
+"NHK",          "Haptic Cube",          "no",       "expect ready by Oct. 1"
