@@ -24,7 +24,7 @@ search `_wot._tcp` service on plugfest VPN.
    txt = ["type=Thing" "td=/Things/td"]
 ```
 
-### retriving TD from this device
+### retrieving TD from this device
 
 ```
 % curl http://192.168.30.139/Things/td
