@@ -159,8 +159,14 @@
     "@serialNumber": "DA00AW2N",
     "@sensorAddress": "2",
     "@sensorType": "control",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        }
+    },
     "security": [
-        "nosec_sc"
+        "basic_sc"
     ],
     "id": "urn:uuid:2aec4e3f-d9b8-4100-a5fb-4ac527cd159e",
     "forms": [
@@ -172,10 +178,5 @@
                 "writemultipleproperties"
             ]
         }
-    ],
-    "securityDefinitions": {
-        "nosec_sc": {
-            "scheme": "nosec"
-        }
-    }
+    ]
 }

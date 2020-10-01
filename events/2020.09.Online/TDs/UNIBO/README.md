@@ -36,7 +36,16 @@ We provide two sets of Thing Descriptions. The first is published in this folder
 ```
 Each device has two Thing Description: one is publicly available while the other can be only accessed with a privileged access. For example, the IMU sensor `imu_sensor_control.td.jsonld` is protect with user and password.  
 
-The second set is published as a live application at http://arces143100.arces.unibo.it/. The application is a simulated farm IoT deployment called WoT Farm. Currently, there are only two type of devices: SoilSensors and Sprinkles. Please see the [roadmap](https://github.com/relu91/WoTSimFarm#wot-farm-simulator) for planned future updates. If you have any suggestions or bug to report use the [github issue tracker](https://github.com/relu91/WoTSimFarm/issues). Any contribution is welcomed!
+The second set is published as a live application at http://arces143100.arces.unibo.it/. The application is a simulated IoT farm deployment called WoT Farm. Currently, there are only two type of devices: SoilSensors and Sprinkles. The TDs are generated starting from Thing Models provided in this folder (files with tm-jsonld extension).
+Please see the [roadmap](https://github.com/relu91/WoTSimFarm#wot-farm-simulator) for planned future updates. If you have any suggestions or bug to report use the [github issue tracker](https://github.com/relu91/WoTSimFarm/issues). Any contribution is welcomed!
 
-
-
+## Points of interests
+In the following some topics that might be interesting for the Working Group:
+- Static TDs
+   - Two TDs with different access level describing the same Device. One can infer that they are interconnect using the link with relational type `san:controlledBy`.
+   - Location information is not directly accessible inside the device TD but is linked using `sosa:isHostedBy` relation type. 
+   - `imu_sensor.td.jsonld` shows an example of using sosa ontology for data returned by a property (i.e. sosa in a DataSchema)
+- WoT Farm
+   - Geolocation does not make a lot of sense for virtual devices. Currently, the position is given without any semantic annotation [see here](http://arces143100.arces.unibo.it:8080/SoilSensor0)
+   - WoT Farm backend runs completely on `node-wot` (i.e. it is a WoT application)
+   - WoT Farm is deployed using docker -> as a result of this plugfest we could provide some guidance about how to set up a WoT application using docker
