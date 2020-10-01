@@ -29,6 +29,11 @@ NHK TDs extended with content lists.
 ## Mashups
 * Look at [active devices](https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/active.csv)
 
+## Virtual things and their management
+* Proxy collect TDs of the physical devices and generate their virtual devices
+* The physical devices on the local network can be discovered and registered to the proxy
+* Directory has both of physical and virtual TDs and provide them on request
+
 ### Coffee Status and Control
 * Take status from Siemens coffee machine, display on TUM matrix
 * Push button in TUM, make coffee in Siemens
