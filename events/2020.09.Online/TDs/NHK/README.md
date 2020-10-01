@@ -33,7 +33,7 @@ We provide
 ```
 
 ## API
-Please see [flows for Node-RED](https://github.com/endouhhc/wot-testing/new/master/events/2020.09.Online/TDs/NHK/flows_nhk_plugfest202009.json)
+Please see [flows for Node-RED](https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/TDs/NHK/flows_nhk_plugfest202009.json)
 
 ## Hybrid TV Emulator AndroidTV App 
 - https://github.com/nhkrd/antwapp4hc
