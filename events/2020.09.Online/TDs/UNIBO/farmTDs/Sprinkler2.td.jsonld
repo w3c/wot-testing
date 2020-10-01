@@ -1,0 +1,123 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": [
+        "Thing"
+    ],
+    "title": "Sprinkler2",
+    "securityDefinitions": {
+        "no_sec": {
+            "scheme": "nosec"
+        }
+    },
+    "links": [
+        {
+            "href": "http://arces143100.arces.unibo.it/assets/farm/sprinkler.obj",
+            "rel": "model"
+        }
+    ],
+    "security": "no_sec",
+    "actions": {
+        "startSprinkler": {
+            "description": "Run sprinkler for a set time; stops automatically",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "timeout": {
+                        "type": "number",
+                        "minimum": 1
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/Sprinkler2/actions/startSprinkler",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/Sprinkler2/actions/startSprinkler",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "stopSprinkler": {
+            "description": "stop sprinkler immediately",
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/Sprinkler2/actions/stopSprinkler",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/Sprinkler2/actions/stopSprinkler",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "properties": {
+        "status": {
+            "type": "string",
+            "enum": [
+                "on",
+                "off"
+            ],
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/Sprinkler2/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/Sprinkler2/properties/status",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "position": {
+        "x": 11.735054969787598,
+        "y": 0.5283291339874268,
+        "z": 8.872842788696289
+    },
+    "id": "urn:uuid:b88c666c-2e78-4597-b8fc-94a9ec5f5329",
+    "forms": [
+        {
+            "href": "http://arces143100.arces.unibo.it:8080/Sprinkler2/all/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}
