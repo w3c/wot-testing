@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocation of WoT Things</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+	<!--<script src="https://cdn.jsdelivr.net/npm/@node-wot/browser-bundle@latest/dist/wot-bundle.min.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@node-wot/browser-bundle@0.7.1/dist/wot-bundle.min.js"></script>
+</head>
+<body>
+<h1>Geolocation of WoT Things<sub><code>(events/2020.09.Online)</code></sub></h1>
+
+<!--
+# What do we want to show on the map ?
+* of course the location
+* Where to find the ThingDescription
+  * is not part of the TD
+  * what is the best way to indicate it
+* Is there a user interface one can use
+  * e.g., http://plugfest.thingweb.io/examples/smart-coffee-machine.html or http://plugfest.thingweb.io/examples/counter.html
+  * again not part of a TD
+* What else ?
+  * current property values (difficult when it comes to protected things)?
+  * ...
+-->
+
+<div id="mapid" style="width: 98%; height: 600px;"></div>
+<script>
+    // IDEA *how* tp populate a map with things
+	// 1. Collect list of TDs
+	// 2. Interpret location (different vocabularies)
+	// 3. Show marker on map with reference to additional information like UIs, TDs, ...
+	
+	/*
+	var servient = new Wot.Core.Servient();
+	servient.addClientFactory(new Wot.Http.HttpClientFactory());
+	servient.addClientFactory(new Wot.Http.HttpsClientFactory());
+	var helpers = new Wot.Core.Helpers(servient);
+	// https://raw.githubusercontent.com/w3c/wot-testing/master/events/2020.09.Online/TDs/Hitachi/hitachi-led.jsonld
+	helpers.fetch("https://raw.githubusercontent.com/w3c/wot-testing/master/events/2020.09.Online/TDs/Siemens/counter.jsonld").then((td) => {
+		alert(td.title + " loaded");
+		
+		// walk over file and load longitude and latitude
+	}).catch((error) => {
+		window.alert("Could not fetch TD.\n" + error)
+	})
+	*/
+
+	// var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+	var mymap = L.map('mapid').setView([51.505, -0.09], 2);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512 ,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+	// L.marker([51.5, -0.09]).addTo(mymap)
+	// 	.bindPopup("<b>Hello world!</b><br />I am a popup.");
+	// .openPopup();
+	
+	// Siemens
+	L.marker([48.089919, 11.649187]).addTo(mymap)
+		.bindPopup("<b>Siemens</b><br /><a target='_blank' href='http://plugfest.thingweb.io/examples/smart-coffee-machine.html'>Smart Coffee Machine</a> <br /><a target='_blank' href='http://plugfest.thingweb.io/examples/counter.html'>Multilanguage Counter</a>");
+
+	// Intel
+	// events/2020.09.Online/TDs/Intel/intel-ocf/Intel-OCF-button1touch.jsonld
+	//   "s:longitude": "47.3816744",
+	// "s:latitude": "-68.3193975",
+	L.marker([47.3816744, -68.3193975]).addTo(mymap)
+		.bindPopup("<b>Intel</b>");
+
+
+	// Hitachi
+	// events/2020.09.Online/TDs/Hitachi/hitachi-led.jsonld
+	// "s:longitude": "35.70352",
+	// "s:latitude": "139.4720174",
+	L.marker([35.70352, 139.4720174]).addTo(mymap)
+		.bindPopup("<b>Hitachi</b>");
+		
+	// UNIBO
+	// https://github.com/w3c/wot-testing/tree/master/events/2020.09.Online/TDs/UNIBO
+	// "geo":{
+    //   "latitude":"44.513348",
+    //  "longitude":"11.3193218"
+    // }
+	L.marker([44.513348, 11.3193218]).addTo(mymap)
+		.bindPopup("<b>UNIBO</b>");
+	// events/2020.09.Online/TDs/UNIBO/farmTDs/SoilSensor0.td.jsonld
+	//     "position": {
+    //     "x": 11.703963279724121,
+    //    "y": -19.781078338623047,
+    //     "z": 9.677474021911621
+    // },
+	L.marker([11.703963279724121, -19.781078338623047]).addTo(mymap)
+		.bindPopup("<b>UNIBO SoilSensor0</b>");
+	
+	/* L.circle([51.508, -0.11], 500, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5
+	}).addTo(mymap).bindPopup("I am a circle."); */
+
+	/* L.polygon([
+		[51.509, -0.08],
+		[51.503, -0.06],
+		[51.51, -0.047]
+	]).addTo(mymap).bindPopup("I am a polygon."); */
+
+
+	var popup = L.popup();
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("You clicked the map at " + e.latlng.toString())
+			.openOn(mymap);
+	}
+
+	mymap.on('click', onMapClick);
+
+</script>
+
+
+
+</body>
+</html>
