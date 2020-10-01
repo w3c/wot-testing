@@ -36,7 +36,7 @@ We provide two sets of Thing Descriptions. The first is published in this folder
 ```
 Each device has two Thing Description: one is publicly available while the other can be only accessed with a privileged access. For example, the IMU sensor `imu_sensor_control.td.jsonld` is protect with user and password.  
 
-The second set is published as a live application at http://arces143100.arces.unibo.it/. The application is a simulated IoT farm deployment called WoT Farm. Currently, there are only two type of devices: SoilSensors and Sprinkles. The TDs are generated starting from Thing Models provided in this folder (files with tm-jsonld extension).
+The second set is published as a live application at http://arces143100.arces.unibo.it/. The application is a simulated IoT farm deployment called WoT Farm. Currently, there are only two type of devices: SoilSensors and Sprinkles. The TDs are generated starting from Thing Models provided in this folder (files with tm-jsonld extension). For your convenience live TDs are also reported here in the `farmTDs` folder. 
 Please see the [roadmap](https://github.com/relu91/WoTSimFarm#wot-farm-simulator) for planned future updates. If you have any suggestions or bug to report use the [github issue tracker](https://github.com/relu91/WoTSimFarm/issues). Any contribution is welcomed!
 
 ## Points of interests
