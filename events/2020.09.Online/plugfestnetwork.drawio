@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-09-30T00:11:07.971Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="DuZ2wauJmVUUP0JrG0-q" version="13.7.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-01T02:01:39.094Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="Y-Tcz8-B8NFC_jw70Npa" version="13.7.7" type="github">
   <diagram id="u5zMc34dIf03BYUIIh_0" name="Page-1">
-    <mxGraphModel dx="537" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="978" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -76,7 +76,7 @@
         <mxCell id="Yr2aDynTFDVX90KfaygX-28" value="Counter&lt;br&gt;Smart-Coffee-Machine&lt;br&gt;TestThing" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1">
           <mxGeometry x="500" y="820" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="Yr2aDynTFDVX90KfaygX-35" value="Plugfest network (2020-09-30 0000UTC)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontStyle=1;fontSize=20;" parent="1" vertex="1">
+        <mxCell id="Yr2aDynTFDVX90KfaygX-35" value="Plugfest network (2020-10-01 0200UTC)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;fontStyle=1;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="10" y="10" width="450" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Wgf2KxVO73DfJVwTnlXT-1" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
@@ -106,76 +106,61 @@
         <mxCell id="Wgf2KxVO73DfJVwTnlXT-11" value="Simple Web Camera&lt;br&gt;Simple Speech Synthesizer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1">
           <mxGeometry x="500" y="950" width="210" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-1" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-1" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="180" y="80" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-2" value="local proxy&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-2" value="local proxy&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-1" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-3" value="30.10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-3" value="30.10" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-1" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-5" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="180" y="180" width="120" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-6" value="directory&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;dashed=1;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-5">
-          <mxGeometry width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-7" value="30.30" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-5">
-          <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-13" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-13" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="480" y="380" width="120" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-14" value="Router?&lt;br&gt;(?)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;dashed=1;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-13">
-          <mxGeometry width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-15" value="30.136" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-13">
-          <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-19" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="xwS3CkZTHqkVud5CIDs6-13">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-19" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-13" vertex="1" connectable="0">
           <mxGeometry y="100" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-20" value="fsensor-a0&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-19">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-20" value="fsensor-a0&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-19" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-21" value="30.137" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-19">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-21" value="30.137" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-19" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-24" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-24" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="640" y="180" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-25" value="fsensor-fc&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-24">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-25" value="fsensor-fc&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-24" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-26" value="30.139" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-24">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-26" value="30.139" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-24" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-27" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-27" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="640" y="80" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-28" value="fsensor-f4&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-27">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-28" value="fsensor-f4&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-27" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-29" value="30.138" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-27">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-29" value="30.138" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-27" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-30" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-30" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="640" y="280" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-31" value="fsensor-e0&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-30">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-31" value="fsensor-e0&lt;br&gt;(Fujitsu)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-30" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-32" value="30.140" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-30">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-32" value="30.140" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-30" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-36" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" connectable="0" parent="1">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-36" value="" style="group;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="480" y="80" width="120" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-37" value="?&lt;br&gt;(?)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;dashed=1;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-36">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-37" value="MyPhoneThing3&lt;br&gt;(NHK)" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;dashed=1;" parent="xwS3CkZTHqkVud5CIDs6-36" vertex="1">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xwS3CkZTHqkVud5CIDs6-38" value="?&lt;br&gt;30.133" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" vertex="1" parent="xwS3CkZTHqkVud5CIDs6-36">
+        <mxCell id="xwS3CkZTHqkVud5CIDs6-38" value="?&lt;br&gt;30.133" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Noto Sans;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DNoto%2BSans;" parent="xwS3CkZTHqkVud5CIDs6-36" vertex="1">
           <mxGeometry x="40" y="70" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
