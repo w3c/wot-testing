@@ -1,7 +1,8 @@
 {
   "@context": ["https://www.w3.org/2019/wot/td/v1",
                {
-                 "iot": "http://iotschema.org/"
+                 "iot": "http://iotschema.org/",
+                 "g": "https://www.w3.org/2019/wot/td/geo/v1"
                }
   ],
   "@type": ["Thing"],
@@ -11,11 +12,17 @@
   "version": {"instance":"0.1.0"},
   "created": "2018-09-10T06:30:00Z",
   "modified": "2019-05-28T03:29:00Z",
-  "links": [{
+  "links": [
+     {
         "href": "https://github.com/mmccool/simple-webcam",
         "rel": "repository",
         "type": "application/vnd.github.v3+json"
-  }],
+     },
+     {
+        "href": "https://intel-geolocator/properties/location",
+        "rel": "g:geolocationOf"
+     }
+  ],
   "id": "urn:uuid:57a9ebb4-f7c9-5828-bf8d-7c34fcff0c31",
   "securityDefinitions": {
     "nosec_sc": {"scheme": "nosec"},
