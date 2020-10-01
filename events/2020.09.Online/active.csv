@@ -52,5 +52,5 @@
 "Fujitsu",       "Sensor Unit", 　　　　　 "yes", "sensor unit with multiple types of sensors"
 "Fujitsu",       "Vritual Sensor",        "yes", "virtual thing(sensor) corresponding to physical sensor unit above"
 "NHK",          "HybridcastConnectReceiver", "yes", 
-"NHK",          "Player Emulator",      "yes",
-"NHK",          "Haptic Cube",          "no",       "expect ready by Oct. 1"
+"NHK",          "Player Emulator",      "no",       "expect ready by TPAC event"  
+"NHK",          "Haptic Cube",          "no",       "expect ready by TPAC event"
