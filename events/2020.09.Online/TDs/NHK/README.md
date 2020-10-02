@@ -35,6 +35,18 @@ We provide
 ## API
 Please see [flows for Node-RED](https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/TDs/NHK/flows_nhk_plugfest202009.json)
 
+### readproperty to get a list of available TV channels & TV status
+![readproperty to get available TV Channels & TV Status](property.png)
+### invokeaction to tune to a specified TV channel & launch Hybridcast applications
+![invokeaction to tune TV channel & launch HybridcastAPP](action.png)
+### subscribeevent to receive message from TV applictions
+![subscribeevent to receive message from TV programs](event.png)
+
+
+
+## DEMO
+[[Video] invokeaction to tune to a specified TV channel](actionTune.mp4)
+
 ## Hybrid TV Emulator AndroidTV App 
 - https://github.com/nhkrd/antwapp4hc
 - dns-sd is not supported in current version on github.
