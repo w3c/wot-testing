@@ -12,3 +12,8 @@ Moreover, there are several Web UIs available:
 * [Smart Coffee Machine - Property Live Monitor](http://plugfest.thingweb.io/examples/smart-coffee-machine.html)
 * [Counter UI](http://plugfest.thingweb.io/examples/counter.html)
 * [WoT-FXUI](http://plugfest.thingweb.io:8088/test/fullscreen/default)
+
+
+## Geolocation of WoT Things (Mockup)
+
+see [map](https://htmlpreview.github.io/?https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/TDs/Siemens/geolocation-ui.html)

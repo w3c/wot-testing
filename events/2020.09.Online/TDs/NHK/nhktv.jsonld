@@ -27,7 +27,7 @@
   "security": ["nosec_sc"],
   "properties": {
     "receiverStatus":{
-      "title": "HybridcastReceiveStatus",
+      "title": "HybridcastReceiverStatus",
       "titles": {
         "en": "HybridcastReceiverStatus",
         "ja": "受信機状態"
@@ -83,7 +83,8 @@
       "forms" : [{
         "href": "http://192.168.30.132:8887/antwapp/tvcontrol/status",
         "contentType": "application/json",
-        "htv:methodName": "GET"
+        "htv:methodName": "GET",
+        "op":"readproperty"
       }]
     },
     "media": {
@@ -126,12 +127,15 @@
         "href": "http://192.168.30.132:8887/antwapp/tvcontrol/channels?media=TD",
         "contentType": "application/json",
         "htv:methodName": "GET",
+        "op":"readproperty",
         "scopes": ["full_access"]
       }]
     }
   },
   "actions": {
     "startAIT": {
+      "safe": true,
+      "idempotent": false,
       "forms": [{
         "op": "invokeaction",
         "contentType": "application/json",
