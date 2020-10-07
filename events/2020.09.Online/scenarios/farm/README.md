@@ -1,5 +1,5 @@
 # Farm Status Mashup
-This simple WoT application show the [WoT farm](http://arces143100.arces.unibo.it/) sprinkler status on [TUM SenseHat](../../TDs/TUM). 
+This simple WoT application show the [WoT farm](http://arces143100.arces.unibo.it/) sprinkler status on [TUM SenseHat](../../TDs/TUM). Please see the [video](https://youtu.be/JqKBwkvrjio) & [slides](./outcome-farm-tum.pptx) for further information. 
 
 ## instructions
 First you need the latest [node-wot](https://github.com/eclipse/thingweb.node-wot/blob/master/examples/security/wot-servient.conf.json) distribution. Install it globally using npm:
