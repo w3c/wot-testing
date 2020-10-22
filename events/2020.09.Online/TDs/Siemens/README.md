@@ -16,4 +16,5 @@ Moreover, there are several Web UIs available:
 
 ## Geolocation of WoT Things (Mockup)
 
-see [map](https://htmlpreview.github.io/?https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/TDs/Siemens/geolocation-ui.html)
+see [HTML map online](https://htmlpreview.github.io/?https://github.com/w3c/wot-testing/blob/master/events/2020.09.Online/TDs/Siemens/geolocation-ui.html)
+![Geolocation Screenshot](geolocation-ui.png "Geolocation Screenshot")
