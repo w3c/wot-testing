@@ -1,10 +1,10 @@
 # NHK - September 2020 Online Plugfest
 
-We provide 
+We provide
 - an emulator of Hybrid TV (Hybridcast)
 - an android app for program viewing
 - a haptic device
- 
+
 ## TD Discovery
 
 ### [Direct](https://w3c.github.io/wot-discovery/#introduction-direct)
@@ -45,16 +45,16 @@ Please see [flows for Node-RED](https://github.com/w3c/wot-testing/blob/master/e
 
 
 ## DEMO
-[[Video] invokeaction to tune to a specified TV channel](actionTune.mp4)
+[[Video] invokeaction to tune to a specified TV channel and to launch a Hybridcast app](actionTune_and_actionLaunchHybridcastApp.mp4)
 
-## Hybrid TV Emulator AndroidTV App 
+## Hybrid TV Emulator AndroidTV App
 - https://github.com/nhkrd/antwapp4hc
 - dns-sd is not supported in current version on github.
 
 ## Related Works
 
 ### hyconet.js
-- Javascript inplementation of standardized Hybridcast-Connect API 
+- Javascript inplementation of standardized Hybridcast-Connect API
 - https://github.com/nhkrd/hyconet.js
 
 ### node-red-contrib-hyconet
