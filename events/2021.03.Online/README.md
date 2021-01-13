@@ -7,6 +7,9 @@ Web of Things online plugfest, to be held March 2021.
 * Daily Sync meeting: 9am ET
 * WebEx: TBD
 * IRC: wot-pf
+* VPN?
+    - Depends on use cases that need it, e.g. mDNS discovery
+    - If IETF hackathon has one... 
 
 ## Goals
 Plugfest themes:
@@ -14,7 +17,7 @@ Plugfest themes:
 ## Themes
 ### Semantics
 * ASDF integration
-   - IETF collaboration
+   - IETF collaboration (during IETF hackathon...)
 * Accessibility support
 * OPC-UA alignment
 
@@ -30,6 +33,16 @@ Plugfest themes:
 * Collaborations
    - SDW
    - OGC
+   
+### Discovery
+* Node-RED Integration
+    - Directory-based discovery and autopopulation (in addition to existing mDNS discovery)
+* Semantic search
+* Keyword (JSON Path) search
+* Use cases and applications
+* Geospatial queries (prototypes)
+    - SPARQL implementation of basic geospatial filters, e.g. proximity
+    - Depends on having a standard for location encoding (see above)
 
 ## Scenarios
 These can also be used as the basis of tutorials.
