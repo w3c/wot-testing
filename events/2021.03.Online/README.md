@@ -12,14 +12,41 @@ Web of Things online plugfest, to be held March 2021.
     - If IETF hackathon has one... 
 
 ## Goals
-Plugfest themes:
+* Refine and test new features in specifications
+    - Discovery
+    - Thing Models
+    - MQTT protocol binding
+    - OAuth2 and other new security schemes (e.g. combo)
+* Interoperability testing
+    - Do separate implementations work together
+    - Does not need to be new features...
+    - Look again at gaps in implementation report, e.g. security
+* Tools testing
+    - Validating Partial TDs and TD fragments
+    - Directory validation - what are requirements?
+    - Fuzz testing
+* Implementation Report Prework
+    - Draft
+    - Assertion list
+    - Testing planningv (TD, Discovery, Profiles)
 
 ## Themes
+### Thing Models
+* Instantiation of TDs from TMs from two different implementations
+    - Oracle, TUM?
+* Use of TMs in Directorys - use cases?
+
 ### Semantics
 * ASDF integration
    - IETF collaboration (during IETF hackathon...)
 * Accessibility support
 * OPC-UA alignment
+
+### Protocols
+* MQTT interop
+    - Two separate implementations that can interoperate
+* OPC-UA
+    - XML examples
 
 ### Geolocation
 * Geospatial data 
