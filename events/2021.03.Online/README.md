@@ -34,18 +34,32 @@ Plugfest themes:
    - SDW
    - OGC
    
+Plan:
+1. Define information model for geolocation data (in TDs, static/dynamic) - proposed spec needed.
+2. Applications - map, but with better automation this time (depends on 1!)
+3. (stretch) Geospatial filters (proposed spec) for discovery (JSON Path filter options) (depends on 1!)
+   
 ### Discovery
 * Node-RED Integration
     - Directory-based discovery and autopopulation (in addition to existing mDNS discovery)
-* Semantic search
-* Keyword (JSON Path) search
-* Use cases and applications
+    - (stretch goal) keyword-based filtering of results (using JSON Path queries, UI just has keywords to filter on)
+* Queries
+    - Semantic search - SPARQL
+    - Keyword (JSON Path, X Path) search
+    - Use cases and applications
 * Geospatial queries (prototypes)
     - SPARQL implementation of basic geospatial filters, e.g. proximity
     - Depends on having a standard for location encoding (see above)
+    - Non-SPARQL/JSON Path geospatial filters
+* AR?
+    
+Plan:
+1. Toumura plans improvements to Node-RED discovery
+2. Farshid to spin up LinkSmart directory service as soon as possible
+3. Examples for use of queries for various purposes -> spec, tutorial
+4. Geospatial: see above
 
 ## Scenarios
-These can also be used as the basis of tutorials.
 * Smart Agriculture theme 
      - University of Barcelona online farm simulator
      - Agriculture CG
@@ -62,3 +76,6 @@ These can also be used as the basis of tutorials.
      - Intel
      - Siemens
      - Linked Building Data CG
+     
+## Tutorials
+Review and update material if necessary.
