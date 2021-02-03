@@ -4,12 +4,17 @@ Web of Things online plugfest, to be held March 2021.
 ## Logistics:
 * 1-5 March 2021
 * Overlapping with IETF Hackathon
-* Daily Sync meeting: 9am ET
+* Daily Sync meeting: 
+    - Monday 1 March - 8am ET 
+    - Tuesday 2 March - 9am ET
+    - Wednesday 3 March - 9am ET
+    - Thursday 4 March - 10am ET
+    - Friday 5 March - 9am ET
 * WebEx: TBD
 * IRC: wot-pf
 * VPN?
     - Depends on use cases that need it, e.g. mDNS discovery
-    - If IETF hackathon has one... 
+    - IETF hackathon has one, let's see if we can use that (action: McCool to request slot)
 
 ## Goals
 * Refine and test new features in specifications
