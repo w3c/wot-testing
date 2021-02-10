@@ -36,6 +36,10 @@ Web of Things online plugfest, to be held March 2021.
     - Draft
     - Assertion list
     - Testing planningv (TD, Discovery, Profiles)
+* Foundational Material
+    - [Reference Hardware Platforms](reference/hw.md)
+    - [Reference Implementations](reference/impl.md)
+    - Tutorials
 
 ## Themes
 ### Thing Models
