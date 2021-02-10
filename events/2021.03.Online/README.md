@@ -10,7 +10,9 @@ Web of Things online plugfest, to be held March 2021.
     - Wednesday 3 March - 9am ET
     - Thursday 4 March - 10am ET
     - Friday 5 March - 9am ET
-* WebEx: TBD
+* WebEx: 
+    - [IG](https://lists.w3.org/Archives/Member/member-wot-ig/2021Feb/0010.html)
+    - [WG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0010.html)
 * IRC: wot-pf
 * VPN?
     - Depends on use cases that need it, e.g. mDNS discovery
