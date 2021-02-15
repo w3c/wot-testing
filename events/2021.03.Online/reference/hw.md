@@ -33,6 +33,11 @@ These should align with profile requirements (see https://github.com/w3c/wot-pro
 - Capacities: 512KB RAM and 1M Flash
 - Example: ESP32-based NodeMCU or M5Stack
 
+- Notes: 
+    - Profiles is looking at 64KB as a minimum requirement
+    - Philipp is working with the Nordic NRF-52832, which can do some of the above, and has 32KB RAM and 256KB flash, but would probably not be consuming TDs (need to understand use cases)
+    - Hardware acceleration widely available for some relevant features (e.g. signing, TLS, etc.)
+
 ## Minimum Reference Hardware Platform
 - Not required to self-host own TD
 - Has network connectivity but may not be TCP/IP
