@@ -22,4 +22,4 @@ To do: capabilities for each HW platform
 ## RIOT-OS
 * Nordic
 * ESP-32 (M5Stack, NodeMCU), etc.
-* ESP-8266 
+* ESP-8266 (NodeMCU)
