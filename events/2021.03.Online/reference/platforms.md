@@ -20,6 +20,6 @@ To do: capabilities for each HW platform
 * [IoT-2020](https://www.automation.siemens.com/sce-static/iot2000/dffa-b10254-00-7600-simatic-iot2020-en.pdf)
 
 ## RIOT-OS
-* Nordic
+* Nordic-NRF52 (dev kit under development w/ RIOT SW stack)
 * ESP-32 (M5Stack, NodeMCU), etc.
 * ESP-8266 (NodeMCU)
