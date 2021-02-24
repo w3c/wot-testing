@@ -5,7 +5,7 @@ Web of Things online plugfest, to be held March 2021.
 ## Logistics:
 * 1-5 March 2021
 * Overlapping with IETF Hackathon
-    - See [email from T2TRG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0013.html)
+    - See [email from T2TRG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0014.html)
     - Meetings 10am/11am ET for IETF 
 * Daily Sync meeting: 
     - Monday 1 March - 8am ET 
