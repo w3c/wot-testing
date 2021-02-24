@@ -30,8 +30,18 @@ Web of Things online plugfest, to be held March 2021.
 ### Semantics
 * ASDF integration
    - IETF collaboration (during IETF hackathon...)
+   - ITRF: "convert" between WoT TD and SDF, further developing instance-specific mapping files
+   - Project link: https://github.com/roman-kravtsov/sdf-object-converter
 * Accessibility support
-* OPC-UA alignment
+
+Stretch/future:
+* OPC-UA/ECLASS alignment
+
+### Discovery
+* CoRE RD Introductions
+* Semantic/syntactic queries
+    - LinkSmart (JSONPath)
+    - WoT Semantic Directory (SPARQL)
 
 ### Protocols
 * MQTT interop
@@ -54,8 +64,9 @@ Web of Things online plugfest, to be held March 2021.
    
 Plan:
 1. Define information model for geolocation data (in TDs, static/dynamic) - proposed spec needed.
+     - DONE: https://github.com/w3c/wot-discovery/pull/114
 2. Applications - map, but with better automation this time (depends on 1!)
-3. (stretch) Geospatial filters (proposed spec) for discovery (JSON Path filter options) (depends on 1!)
+4. (stretch) Geospatial filters (proposed spec) for discovery (JSON Path filter options) (depends on 1!)
    
 ### Discovery
 * Node-RED Integration
