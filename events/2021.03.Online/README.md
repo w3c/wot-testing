@@ -26,17 +26,19 @@ Web of Things online plugfest, to be held March 2021.
 ## Themes
 ### Thing Models
 * Instantiation of TDs from TMs from two different implementations
-    - Oracle, TUM?
-* Use of TMs in Directorys - use cases?
+    - Oracle, Siemens, Bosch?
+    - ASDF conversion (see below)
+* Use of TMs in Directories 
+    - use cases?
 
 ### Semantics
 * ASDF integration
    - IETF collaboration (during IETF hackathon...)
-   - ITRF: "convert" between WoT TD and SDF, further developing instance-specific mapping files
+   - ITRF: "convert" between WoT TD/TM and SDF, further developing instance-specific mapping files
    - Project link: https://github.com/roman-kravtsov/sdf-object-converter
 * Accessibility support
 
-Stretch/future:
+Future:
 * OPC-UA/ECLASS alignment
 
 ### Discovery
@@ -89,6 +91,9 @@ Plan:
 2. Farshid to spin up LinkSmart directory service as soon as possible
 3. Examples for use of queries for various purposes -> spec, tutorial
 4. Geospatial: see above
+
+## Tooling
+- [Editdor](https://github.com/eclipse/editdor)
      
 ## Tutorials
 Review and update material if necessary.
