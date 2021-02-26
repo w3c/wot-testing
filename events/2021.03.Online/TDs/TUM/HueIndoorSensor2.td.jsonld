@@ -10,7 +10,7 @@
             "in":"header"
         }
     },
-    "security": "basic_sc"
+    "security": "basic_sc",
     "base":"https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/sensors/",
     "description": "Hue Sensor for indoor applications that can measure temperature, light level and presence of motion",
     "properties": {
