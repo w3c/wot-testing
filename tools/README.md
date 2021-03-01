@@ -8,14 +8,14 @@ Testing includes conformance testing as well as other forms
 of testing, such as interoperability.
 To make it easier to use CLI tools they can be set up as [github submodules](https://github.blog/2016-02-01-working-with-submodules/).
 
-* [ThingWeb Playground](playground/README.md)
+* [ThingWeb Playground](https://github.com/thingweb/thingweb-playground)
   * Check a TD for conformance with the 
      [WoT Thing Description](https://www.w3.org/TR/wot-thing-description/) specification.
      Can be used as a CLI tool or via an online system.
   * [Online instance](http://plugfest.thingweb.io/playground/)
   * [Github repo](https://github.com/thingweb/thingweb-playground)
     * This repo is checked out recursively here for the purpose of running automated validation scripts.
-* [WoT TestBench](testbench/README.md)
+* [WoT TestBench](https://github.com/tum-esi/testbench)
   * Generates network interactions to test a Thing given a TD.
   * [Github repo](https://github.com/tum-esi/testbench)
 * [Implementation Report Generator](implreportgen/README.md)
