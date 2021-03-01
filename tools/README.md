@@ -31,3 +31,7 @@ To make it easier to use CLI tools they can be set up as [github submodules](htt
 
 * [Online Plugfest VPN](vpn/README.md)
   * VPN configuration instruction for the online plugfest.
+
+* [Eclipse Edi{TD}or](https://github.com/eclipse/editdor)
+  * Editor for easy creation of Thing description instances and Thing Models
+  * Try it live [here](https://eclipse.github.io/editdor/) 
