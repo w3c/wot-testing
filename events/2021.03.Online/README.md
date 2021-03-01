@@ -20,10 +20,20 @@ Web of Things online plugfest, to be held March 2021.
 * Slack: wotpf.slack.com
     - Invitation URL: [IG](https://lists.w3.org/Archives/Member/member-wot-ig/2021Feb/0013.html)/[WG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0013.html)/[Guests](https://lists.w3.org/Archives/Member/member-wot-guests/2021Feb/0004.html)
 * VPN
-    - Depends on use cases that need it, e.g. mDNS discovery
-    - IETF hackathon: [cancelled](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon#Network)
+    - Necessary for certain use cases, e.g. mDNS discovery
+    - Also handy to avoid having to set up global internet URLs
+    - IETF hackathon: [cancelled!](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon#Network)
     - Is up: https://github.com/w3c/wot-testing/tree/main/tools/vpn
-    
+* Themes:
+    - https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/themes
+* Tools:
+    - https://github.com/w3c/wot-testing/tree/main/tools
+* Goals:
+    - https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/goals
+* Projects:
+    - Post details in an issue, like this one: https://github.com/w3c/wot-testing/issues/100
+    - Eventually make a PR to "projects" here:  https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/projects 
+     
 ## Themes
 ### Thing Models
 * Instantiation of TDs from TMs from two different implementations
@@ -92,9 +102,6 @@ Plan:
 2. Farshid to spin up LinkSmart directory service as soon as possible
 3. Examples for use of queries for various purposes -> spec, tutorial
 4. Geospatial: see above
-
-## Tooling
-- [Editdor](https://github.com/eclipse/editdor)
      
 ## Tutorials
 Review and update material if necessary.
