@@ -19,10 +19,11 @@ Web of Things online plugfest, to be held March 2021.
 * IRC: [wot-pf](http://irc.w3.org/?channels=wot-pf)
 * Slack: wotpf.slack.com
     - Invitation URL: [IG](https://lists.w3.org/Archives/Member/member-wot-ig/2021Feb/0013.html)/[WG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0013.html)/[Guests](https://lists.w3.org/Archives/Member/member-wot-guests/2021Feb/0004.html)
-* VPN?
+* VPN
     - Depends on use cases that need it, e.g. mDNS discovery
-    - IETF hackathon has one, let's see if we can use that (action: McCool to request slot)
-
+    - IETF hackathon: [cancelled](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon#Network)
+    - Is up: https://github.com/w3c/wot-testing/tree/main/tools/vpn
+    
 ## Themes
 ### Thing Models
 * Instantiation of TDs from TMs from two different implementations
