@@ -16,7 +16,7 @@ Web of Things online plugfest, to be held March 2021.
 * WebEx: 
     - [IG](https://lists.w3.org/Archives/Member/member-wot-ig/2021Feb/0010.html)
     - [WG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0010.html)
-* IRC: wot-pf
+* IRC: [wot-pf](http://irc.w3.org/?channels=wot-pf)
 * Slack: wotpf.slack.com
     - Invitation URL: [IG](https://lists.w3.org/Archives/Member/member-wot-ig/2021Feb/0013.html)/[WG](https://lists.w3.org/Archives/Member/member-wot-wg/2021Feb/0013.html)/[Guests](https://lists.w3.org/Archives/Member/member-wot-guests/2021Feb/0004.html)
 * VPN?
