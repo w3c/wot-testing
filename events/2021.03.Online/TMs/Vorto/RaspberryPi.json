@@ -1,0 +1,44 @@
+{
+  "@context": ["http://www.w3.org/ns/td"], 
+  "@type" : "ThingModel",
+  "title": "RaspberryPi",
+  "description": "RaspberryPi used by Eclipse Vorto tutorials",
+  "properties": {
+    "location.latitude": {
+      "title": "latitude",
+      "type": "number",
+      "readOnly": true
+    },
+    "location.longitude": {
+      "title": "longitude",
+      "type": "number",
+      "readOnly": true
+    },
+    "battery.remainingCapacityAmpHour": {
+      "title": "remainingCapacityAmpHour",
+      "type": "number"
+    },
+    "battery.remainingCapacity": {
+      "title": "remainingCapacity",
+      "type": "number",
+      "readOnly": true
+    },
+    "cpuTemperature.currentMeasured": {
+      "title": "currentMeasured",
+      "type": "number",
+      "readOnly": true
+    },
+    "cpuTemperature.minMeasured": {
+      "title": "minMeasured",
+      "type": "number",
+      "readOnly": true
+    },
+    "cpuTemperature.maxMeasured": {
+      "title": "maxMeasured",
+      "type": "number",
+      "readOnly": true
+    }
+  },
+  "actions": {},
+  "events": {}
+}

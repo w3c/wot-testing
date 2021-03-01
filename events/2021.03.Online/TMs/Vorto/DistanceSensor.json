@@ -1,0 +1,22 @@
+{
+  "@context": ["http://www.w3.org/ns/td"], 
+  "@type" : "ThingModel",
+  "title" : "DistanceSensor",
+  "description": "Information Model used by the Eclipse Vorto Tutorial",
+  "properties": {
+    "distance.currentMeasured": {
+      "title": "currentMeasured",
+      "type": "number"
+    },
+    "distance.minMeasured": {
+      "title": "minMeasured",
+      "type": "number"
+    },
+    "distance.maxMeasured": {
+      "title": "maxMeasured",
+      "type": "number"
+    }
+  },
+  "actions": {},
+  "events": {}
+}

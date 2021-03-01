@@ -1,1 +1,1 @@
-
+This directory contains ThingModels based on some common Vorto models.
