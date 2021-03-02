@@ -52,12 +52,6 @@ Web of Things online plugfest, to be held March 2021.
 Future:
 * OPC-UA/ECLASS alignment
 
-### Discovery
-* CoRE RD Introductions
-* Semantic/syntactic queries
-    - LinkSmart (JSONPath)
-    - WoT Semantic Directory (SPARQL)
-
 ### Protocols
 * MQTT interop
     - Two separate implementations that can interoperate
@@ -84,11 +78,14 @@ Plan:
 4. (stretch) Geospatial filters (proposed spec) for discovery (JSON Path filter options) (depends on 1!)
    
 ### Discovery
+* Introductions
+    - CoRE RD
 * Node-RED Integration
     - Directory-based discovery and autopopulation (in addition to existing mDNS discovery)
     - (stretch goal) keyword-based filtering of results (using JSON Path queries, UI just has keywords to filter on)
 * Queries
-    - Semantic search - SPARQL
+    - LinkSmart (JSONPath)
+    - WoT Semantic Directory (SPARQL)
     - Keyword (JSON Path, X Path) search
     - Use cases and applications
 * Geospatial queries (prototypes)
