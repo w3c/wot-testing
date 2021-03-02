@@ -17,6 +17,9 @@ contributions is useful:
 
 * [Hitachi](Hitachi/README.md)
 * [Intel](Intel/README.md)
+* [Oracle](Oracle/README.md)
+* [Siemens](Siemens/README.md)
+* [TUM](TUM/README.md)
 
 Whether or not a Thing is active and online should be indicated in the 
 [active CSV file](../active.csv).
