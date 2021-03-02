@@ -29,6 +29,6 @@ simply indicate the Thing is inactive to avoid
 having people waste time trying to test against it.
 
 If you want to experiment with OneDM semantic annotation,
-see [here](https://github.com/one-data-model/playground/tree/master/sdfObject).
+see the [OneDM SDF Playground](https://github.com/one-data-model/playground/tree/master/sdfObject).
 [An example TD is here (TO DO: Fix link)](https://github.com/mjkoster/ODM-Examples/blob/master/examples/switch-td.json).
 There is also a tool to [convert SDF files to TMs](https://github.com/roman-kravtsov/sdf-object-converter).
