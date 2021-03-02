@@ -1,6 +1,7 @@
 # March 2021 Online WoT Plugfest
 Web of Things online plugfest, to be held March 2021.
 * [Goals](goals/README.md)
+* [Themes](themes/README.md)
 
 ## Logistics:
 * 1-5 March 2021
@@ -28,11 +29,7 @@ Web of Things online plugfest, to be held March 2021.
     - https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/themes
 * Tools:
     - https://github.com/w3c/wot-testing/tree/main/tools
-* Goals:
-    - https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/goals
 * Projects:
     - Post details in an issue, like this one: https://github.com/w3c/wot-testing/issues/100
     - Eventually make a PR to "projects" here:  https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/projects 
      
-## Themes
-
