@@ -25,8 +25,6 @@ Web of Things online plugfest, to be held March 2021.
     - Also handy to avoid having to set up global internet URLs
     - IETF hackathon: [cancelled!](https://trac.ietf.org/trac/ietf/meeting/wiki/110hackathon#Network)
     - Is up: https://github.com/w3c/wot-testing/tree/main/tools/vpn
-* Themes:
-    - https://github.com/w3c/wot-testing/tree/main/events/2021.03.Online/themes
 * Tools:
     - https://github.com/w3c/wot-testing/tree/main/tools
 * Projects:
