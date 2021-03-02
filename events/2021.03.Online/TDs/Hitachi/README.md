@@ -30,7 +30,7 @@ This thing is connected to Plugfest VPN.  It is also connected to the IPv6 Inter
 ```
 2. retrieve TD using above information
 ```
-% curl -u user:pass http://192.168.30.135:1880/.well-known/wot-thing-description > hitachi-led.jsonld
+% curl -u user:pass http://192.168.30.135:1880/.well-known/wot-thing-description > hitachi-led.td.jsonld
 ```
 
 ### [CoRE Link Format and CoRE Resource Directory](https://w3c.github.io/wot-discovery/#introduction-core-rd)
