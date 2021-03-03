@@ -1,6 +1,8 @@
 # WoT Plugfest
 ## Themes
 
+[Project isssues](https://github.com/w3c/wot-testing/issues?q=is:issue+is:open+label:%22Project+2021-03%22)
+
 ### Thing Models
 * Instantiation of TDs from TMs from two different implementations
     - Oracle, Siemens, Bosch?
