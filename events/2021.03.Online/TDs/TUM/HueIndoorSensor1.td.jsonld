@@ -4,13 +4,13 @@
     }],
     "title": "Hue Indoor Sensor 1",
     "id": "urn:dev:ops:32473-HueIndoorSensor-1",
+    "security": "basic_sc",
     "securityDefinitions": {
         "basic_sc": {
             "scheme": "basic",
             "in":"header"
         }
     },
-    "security": "basic_sc",
     "base":"https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/sensors/",
     "description": "Hue Sensor for indoor applications that can measure temperature, light level and presence of motion",
     "properties": {
@@ -40,7 +40,7 @@
                         },
                         "lastupdated": {
                             "type": "string",
-                            "type": "date-time",
+                            "format": "date-time",
                             "description": "Last update date of the sensor"
                         }
                     }

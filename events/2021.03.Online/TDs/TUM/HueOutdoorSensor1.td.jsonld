@@ -4,6 +4,7 @@
     }],
     "title": "Hue Outdoor Sensor 1",
     "id": "urn:dev:ops:32473-HueOutdoorSensor-1",
+    "security": "basic_sc",
     "securityDefinitions": {
         "basic_sc": {
             "scheme": "basic",
@@ -39,7 +40,7 @@
                         },
                         "lastupdated": {
                             "type": "string",
-                            "type": "date-time",
+                            "format": "date-time",
                             "description": "Last update date of the sensor"
                         }
                     }
