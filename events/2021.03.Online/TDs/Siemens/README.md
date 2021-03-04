@@ -16,4 +16,8 @@ Moreover, there are several Web UIs available:
 
 ## Geolocation of WoT Things
 
-TODO, see [previous PlugFest](https://github.com/w3c/wot-testing/tree/main/events/2020.09.Online/TDs/Siemens#geolocation-of-wot-things-mockup)
+Map demo, see https://danielpeintner.github.io/wot-pages/2021.03.Online/geolocation-ui.html
+Mockup code geolocation-ui.html
+
+TODOs:
+* autopopulate map with markers from Plugfest TDs (see `L.marker()` calls in geolocation-ui.html)
