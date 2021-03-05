@@ -6,7 +6,7 @@
 	"title": "MyLight Control Device",
     "links" : [{
         "rel": "type",
-        "href": "./MyLight-Extends-LwM2M.tm.jsonld",
+        "href": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.03.Online/TMs/Siemens/MyLight-Extends-LwM2M.tm.jsonld",
         "type" : "application/jsonld"
     }],
 	"properties": {
