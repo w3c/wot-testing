@@ -1,0 +1,108 @@
+{
+    "T1": [
+        {
+            "name": "status",
+            "passed": true,
+            "time": "16:36:36",
+            "readInteraction": {
+                "data": "off",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 71654519.67829439,
+                    "sunt_f62": -29293572.815055937,
+                    "elit_c": "aute incididunt deserunt qui",
+                    "voluptate55": -92060388
+                },
+                "result": "OP level invokeAction with payload Success"
+            }
+        },
+        {
+            "name": "stopSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "result": "OP level invokeAction without payload Success"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "occaecat_6_": false,
+                    "enim61": 50630331,
+                    "nostrud_1e": "nostrud fugiat sunt eu",
+                    "Excepteur0c6": -24333163.225721583,
+                    "tempor_3": -49794672,
+                    "in__da": "dolore Excepteur labore laborum aute"
+                },
+                "result": "Parameter level invokeAction Success"
+            }
+        }
+    ],
+    "T3": [
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 42150813.66425634,
+                    "enimb47": true,
+                    "occaecat14": "incididunt labore",
+                    "irurec": "nulla aliqua sit"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 68464181.57742496,
+                    "ut_9_f": -95241512
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 17263905.098803066,
+                    "adipisicing_b1": "commodo amet sit",
+                    "sint7": "qui",
+                    "cupidatat_d1a": false
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "16:36:37",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 59634208.345388785,
+                    "esse_0": "minim"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        }
+    ],
+    "T4": []
+}

@@ -1,0 +1,25 @@
+{
+    "T1": [
+        {
+            "name": "temperature",
+            "passed": true,
+            "time": "16:35:59",
+            "readInteraction": {
+                "data": 0,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "moisture",
+            "passed": true,
+            "time": "16:35:59",
+            "readInteraction": {
+                "data": 0,
+                "result": "OP level readProperty Success"
+            }
+        }
+    ],
+    "T2": [],
+    "T3": [],
+    "T4": []
+}

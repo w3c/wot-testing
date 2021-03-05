@@ -1,0 +1,123 @@
+[
+    [
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:51:47.787Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:51:55.006Z",
+                        "payload": "On"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": false,
+                "report": {
+                    "sent": null,
+                    "received": null,
+                    "result": {
+                        "id": 999,
+                        "message": "Invoke Action Error: Timed out in 4000ms."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:51:59.012Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:52:06.970Z",
+                        "payload": "On"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": false,
+                "report": {
+                    "sent": null,
+                    "received": null,
+                    "result": {
+                        "id": 999,
+                        "message": "Invoke Action Error: Timed out in 4000ms."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:52:10.974Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:52:13.441Z",
+                        "payload": "On"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": false,
+                "report": {
+                    "sent": null,
+                    "received": null,
+                    "result": {
+                        "id": 999,
+                        "message": "Invoke Action Error: Timed out in 4000ms."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:52:17.448Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:52:20.400Z",
+                        "payload": "On"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T22:52:20.401Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            }
+        ]
+    ]
+]

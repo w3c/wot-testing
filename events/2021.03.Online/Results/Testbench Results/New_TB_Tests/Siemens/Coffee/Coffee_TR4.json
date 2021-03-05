@@ -1,0 +1,1031 @@
+{
+    "T1": [
+        {
+            "name": "allAvailableResources",
+            "passed": true,
+            "time": "16:31:24",
+            "readInteraction": {
+                "data": {
+                    "water": 1,
+                    "milk": 82,
+                    "chocolate": 98,
+                    "coffeeBeans": 30
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "availableResourceLevel",
+            "passed": true,
+            "time": "16:31:24",
+            "writeInteraction": {
+                "payload": 33493668.51513174,
+                "result": "OP level writeProperty Success"
+            }
+        },
+        {
+            "name": "availableResourceLevel",
+            "passed": true,
+            "time": "16:31:24",
+            "readInteraction": {
+                "data": "Please specify id variable as uriVariables.",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "possibleDrinks",
+            "passed": true,
+            "time": "16:31:24",
+            "readInteraction": {
+                "data": [
+                    "espresso",
+                    "americano",
+                    "cappuccino",
+                    "latte",
+                    "hotChocolate",
+                    "hotWater"
+                ],
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:24",
+            "writeInteraction": {
+                "payload": 47922832,
+                "result": "OP level writeProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:25",
+            "readInteraction": {
+                "data": 47922832,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:25",
+            "writeInteraction": {
+                "payload": true,
+                "result": "OP level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:25",
+            "readInteraction": {
+                "data": true,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "schedules",
+            "passed": true,
+            "time": "16:31:25",
+            "readInteraction": {
+                "data": [
+                    {
+                        "drinkId": "latte",
+                        "size": "s",
+                        "quantity": 1,
+                        "time": "10:00",
+                        "mode": "everyday"
+                    },
+                    {
+                        "drinkId": "latte",
+                        "size": "m",
+                        "quantity": 5,
+                        "time": "09:00",
+                        "mode": "everyMo"
+                    },
+                    {
+                        "drinkId": "espresso",
+                        "size": "m",
+                        "quantity": 2,
+                        "time": "10:00",
+                        "mode": "everyday"
+                    },
+                    {
+                        "drinkId": "espresso",
+                        "size": "m",
+                        "quantity": 2,
+                        "time": "10:00",
+                        "mode": "everyday"
+                    },
+                    {
+                        "drinkId": "hotWater",
+                        "size": "m",
+                        "quantity": 1,
+                        "time": "23:00",
+                        "mode": "everyday"
+                    },
+                    {
+                        "drinkId": "hotChocolate",
+                        "size": "l",
+                        "quantity": 1,
+                        "time": "13:00",
+                        "mode": "everyTu"
+                    },
+                    {
+                        "drinkId": "hotChocolate",
+                        "size": "l",
+                        "quantity": 1,
+                        "time": "13:00",
+                        "mode": "everyTu"
+                    },
+                    {
+                        "drinkId": "1",
+                        "size": "s",
+                        "quantity": 1,
+                        "time": "1",
+                        "mode": "once"
+                    },
+                    {
+                        "drinkId": "",
+                        "size": "s",
+                        "quantity": 0,
+                        "time": "",
+                        "mode": "once"
+                    },
+                    {
+                        "time": "proident sed eiusmod",
+                        "mode": "everyTh",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "do tempor labore",
+                        "mode": "once",
+                        "drinkId": "velit veniam cupidatat Excepteur",
+                        "quantity": 4,
+                        "size": "m"
+                    },
+                    {
+                        "time": "qui enim sunt",
+                        "mode": "everyday",
+                        "quantity": 4,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "Ut eu anim amet aliqua",
+                        "mode": "everySat",
+                        "drinkId": "cillum ut",
+                        "quantity": 5,
+                        "size": "s"
+                    },
+                    {
+                        "time": "do",
+                        "mode": "everyTu",
+                        "size": "l",
+                        "drinkId": "aliquip proident ut",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "Ut in ea",
+                        "mode": "everyTu",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "est",
+                        "mode": "everyTu",
+                        "quantity": 4,
+                        "drinkId": "nisi sint",
+                        "size": "l"
+                    },
+                    {
+                        "time": "sint in anim eiusmod dolor",
+                        "mode": "once",
+                        "size": "l",
+                        "drinkId": "veniam laborum laboris",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "Duis laboris pariatur",
+                        "mode": "everySat",
+                        "quantity": 5,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "dolor enim in aute voluptate",
+                        "mode": "everySat",
+                        "size": "l",
+                        "quantity": 5,
+                        "drinkId": "sit qui"
+                    },
+                    {
+                        "time": "dolor tempor ad esse mollit",
+                        "mode": "once",
+                        "quantity": 2,
+                        "size": "s",
+                        "drinkId": "ex nisi"
+                    },
+                    {
+                        "time": "culpa cillum incididunt tempor enim",
+                        "mode": "once",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "laborum ea voluptate consequat commodo",
+                        "mode": "once",
+                        "quantity": 1,
+                        "drinkId": "et",
+                        "size": "s"
+                    },
+                    {
+                        "time": "ad dolor",
+                        "mode": "everyMo",
+                        "drinkId": "elit ullamco sunt consectetur est",
+                        "quantity": 4,
+                        "size": "m"
+                    },
+                    {
+                        "time": "aliqua dolor mollit nostrud",
+                        "mode": "everySun",
+                        "size": "l",
+                        "drinkId": "quis",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "labore et culpa tempor id",
+                        "mode": "everySat",
+                        "size": "m",
+                        "quantity": 4,
+                        "drinkId": "sint laborum nostrud"
+                    },
+                    {
+                        "time": "ut ex",
+                        "mode": "everyday",
+                        "size": "m",
+                        "quantity": 4,
+                        "drinkId": "voluptate dolor in Duis in"
+                    },
+                    {
+                        "time": "in ut quis",
+                        "mode": "everyTu",
+                        "size": "l",
+                        "quantity": 2,
+                        "drinkId": "Ut Duis dolore cillum"
+                    },
+                    {
+                        "time": "ullamco deserunt Excepteur labore occaecat",
+                        "mode": "everyFr",
+                        "drinkId": "tempor deserunt mollit nostrud",
+                        "quantity": 4,
+                        "size": "m"
+                    },
+                    {
+                        "time": "laborum anim adipisicing",
+                        "mode": "everyday",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "commodo pariatur irure dolor",
+                        "mode": "everyTh",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "sed",
+                        "mode": "everySun",
+                        "drinkId": "ut ea minim",
+                        "size": "l",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "officia",
+                        "mode": "everyMo",
+                        "size": "m",
+                        "quantity": 2,
+                        "drinkId": "do"
+                    },
+                    {
+                        "time": "anim",
+                        "mode": "once",
+                        "size": "m",
+                        "drinkId": "americano",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "dolore sint culpa non laboris",
+                        "mode": "everyFr",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "mollit",
+                        "mode": "everyTu",
+                        "drinkId": "pariatur ad laborum dolor ut",
+                        "size": "l",
+                        "quantity": 2
+                    },
+                    {
+                        "time": "ullamco qui Ut pariatur",
+                        "mode": "everyTu",
+                        "quantity": 1,
+                        "size": "m",
+                        "drinkId": "cillum"
+                    },
+                    {
+                        "time": "sit",
+                        "mode": "everyTh",
+                        "size": "s",
+                        "drinkId": "aliquip in",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "nisi cillum fugiat pariatur",
+                        "mode": "everyTu",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "quis consectetur sit exercitation ullamco",
+                        "mode": "everyTu",
+                        "size": "l",
+                        "drinkId": "cupidatat eiusmod ut exercitation Ut",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "mollit consectetur",
+                        "mode": "everyFr",
+                        "quantity": 5,
+                        "size": "m",
+                        "drinkId": "americano"
+                    },
+                    {
+                        "time": "quis do ea id",
+                        "mode": "everySat",
+                        "quantity": 2,
+                        "size": "m",
+                        "drinkId": "consectetur dolore laborum veniam culpa"
+                    },
+                    {
+                        "time": "dolore esse Excepteur",
+                        "mode": "everySat",
+                        "size": "m",
+                        "quantity": 3,
+                        "drinkId": "sit Ut in"
+                    },
+                    {
+                        "time": "irure ea mollit",
+                        "mode": "everySat",
+                        "drinkId": "commodo enim dolore minim deserunt",
+                        "quantity": 3,
+                        "size": "m"
+                    },
+                    {
+                        "time": "exercitation",
+                        "mode": "once",
+                        "size": "m",
+                        "drinkId": "Lorem laborum sit id occaecat",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "Lorem voluptate sunt laborum nostrud",
+                        "mode": "everyWe",
+                        "size": "s",
+                        "drinkId": "americano",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "dolor elit irure ad ut",
+                        "mode": "everyWe",
+                        "drinkId": "qui minim",
+                        "size": "m",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "mollit officia eu ea",
+                        "mode": "everySat",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "fugiat elit qui",
+                        "mode": "everyFr",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "nostrud voluptate deserunt magna",
+                        "mode": "everyMo",
+                        "quantity": 3,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "Duis adipisicing dolor amet aliqua",
+                        "mode": "everyTh",
+                        "size": "s",
+                        "quantity": 3,
+                        "drinkId": "magna"
+                    },
+                    {
+                        "time": "sint dolore",
+                        "mode": "everyTu",
+                        "size": "l",
+                        "drinkId": "americano",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "nostrud eiusmod adipisicing",
+                        "mode": "everySat",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "aute",
+                        "mode": "everyFr",
+                        "quantity": 1,
+                        "drinkId": "magna non",
+                        "size": "m"
+                    },
+                    {
+                        "time": "nisi culpa cupidatat ea id",
+                        "mode": "everyMo",
+                        "drinkId": "ut",
+                        "size": "l",
+                        "quantity": 2
+                    },
+                    {
+                        "time": "elit minim",
+                        "mode": "everySat",
+                        "quantity": 1,
+                        "size": "s",
+                        "drinkId": "americano"
+                    },
+                    {
+                        "time": "anim mollit amet",
+                        "mode": "everySat",
+                        "quantity": 5,
+                        "drinkId": "sit amet exercitation ea",
+                        "size": "m"
+                    },
+                    {
+                        "time": "ut ex esse sed voluptate",
+                        "mode": "everyday",
+                        "quantity": 4,
+                        "size": "s",
+                        "drinkId": "labore"
+                    },
+                    {
+                        "time": "et nulla",
+                        "mode": "everyday",
+                        "quantity": 2,
+                        "drinkId": "in voluptate mollit in velit",
+                        "size": "s"
+                    },
+                    {
+                        "time": "elit consequat",
+                        "mode": "everyday",
+                        "drinkId": "laborum proident",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "ipsum sit mollit",
+                        "mode": "everyMo",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "officia",
+                        "mode": "everyTh",
+                        "quantity": 5,
+                        "size": "s",
+                        "drinkId": "consequat eiusmod sint proident tempor"
+                    },
+                    {
+                        "time": "cillum labore cupidatat deserunt",
+                        "mode": "once",
+                        "drinkId": "magna exercitation in deserunt",
+                        "size": "s",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "Excepteur Lorem consectetur",
+                        "mode": "everySun",
+                        "quantity": 1,
+                        "drinkId": "magna ullamco sit eiusmod consectetur",
+                        "size": "s"
+                    },
+                    {
+                        "time": "officia Excepteur culpa do veniam",
+                        "mode": "everyday",
+                        "size": "m",
+                        "drinkId": "mollit exercitation magna id",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "anim labore",
+                        "mode": "once",
+                        "quantity": 4,
+                        "drinkId": "cupidatat ipsum Ut",
+                        "size": "m"
+                    },
+                    {
+                        "time": "id magna tempor enim",
+                        "mode": "everyMo",
+                        "drinkId": "pariatur veniam Duis ea",
+                        "quantity": 1,
+                        "size": "s"
+                    },
+                    {
+                        "time": "velit deserunt Duis",
+                        "mode": "once",
+                        "quantity": 1,
+                        "drinkId": "in dolor adipisicing Duis ut",
+                        "size": "m"
+                    },
+                    {
+                        "time": "amet reprehenderit consequat ad magna",
+                        "mode": "everyMo",
+                        "size": "m",
+                        "drinkId": "minim ad ut",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "nostrud",
+                        "mode": "everyTh",
+                        "size": "l",
+                        "quantity": 5,
+                        "drinkId": "reprehenderit culpa"
+                    },
+                    {
+                        "time": "est aliqua amet irure Excepteur",
+                        "mode": "everyMo",
+                        "drinkId": "minim",
+                        "size": "m",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "elit proident pariatur",
+                        "mode": "everySat",
+                        "quantity": 2,
+                        "drinkId": "laborum elit ut sit",
+                        "size": "s"
+                    },
+                    {
+                        "time": "dolore",
+                        "mode": "everySun",
+                        "drinkId": "aute labore dolore incididunt elit",
+                        "size": "l",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "non consectetur minim",
+                        "mode": "everyMo",
+                        "drinkId": "Lorem incididunt",
+                        "quantity": 1,
+                        "size": "l"
+                    },
+                    {
+                        "time": "ex consectetur eiusmod anim",
+                        "mode": "once",
+                        "drinkId": "ex tempor",
+                        "quantity": 4,
+                        "size": "l"
+                    },
+                    {
+                        "time": "et ea id ullamco in",
+                        "mode": "everyFr",
+                        "quantity": 2,
+                        "drinkId": "proident pariatur est voluptate",
+                        "size": "s"
+                    },
+                    {
+                        "time": "sint tempor",
+                        "mode": "everyTu",
+                        "quantity": 1,
+                        "drinkId": "id et culpa exercitation",
+                        "size": "s"
+                    },
+                    {
+                        "time": "consequat mollit",
+                        "mode": "everySat",
+                        "drinkId": "in nisi",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "et voluptate ad",
+                        "mode": "everyday",
+                        "drinkId": "aliqua est ut ipsum amet",
+                        "size": "l",
+                        "quantity": 5
+                    },
+                    {
+                        "time": "fugiat magna in aliqua",
+                        "mode": "everyMo",
+                        "drinkId": "dolor minim",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "commodo",
+                        "mode": "everyTu",
+                        "quantity": 1,
+                        "drinkId": "voluptate non nulla",
+                        "size": "l"
+                    },
+                    {
+                        "time": "anim officia",
+                        "mode": "everyTh",
+                        "size": "m",
+                        "quantity": 4,
+                        "drinkId": "americano"
+                    },
+                    {
+                        "time": "ea sunt",
+                        "mode": "everyTu",
+                        "size": "l",
+                        "drinkId": "americano",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "esse ut et",
+                        "mode": "everyTh",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "aliqua anim",
+                        "mode": "everyday",
+                        "size": "l",
+                        "drinkId": "proident ea dolor tempor sed",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "aliquip in",
+                        "mode": "everySat",
+                        "quantity": 4,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "sit ut minim do Excepteur",
+                        "mode": "everyFr",
+                        "drinkId": "americano",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "mollit ut irure non Lorem",
+                        "mode": "everyday",
+                        "quantity": 2,
+                        "drinkId": "sit",
+                        "size": "l"
+                    },
+                    {
+                        "time": "proident officia ut",
+                        "mode": "everyTu",
+                        "quantity": 1,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "proident mollit anim eu aliqua",
+                        "mode": "everyWe",
+                        "size": "s",
+                        "quantity": 1,
+                        "drinkId": "dolore aliquip amet aute in"
+                    },
+                    {
+                        "time": "ea",
+                        "mode": "everyFr",
+                        "quantity": 4,
+                        "size": "l",
+                        "drinkId": "americano"
+                    },
+                    {
+                        "time": "incididunt laborum elit consectetur aliqua",
+                        "mode": "everySun",
+                        "size": "m",
+                        "drinkId": "elit",
+                        "quantity": 3
+                    },
+                    {
+                        "time": "nostrud aliqua",
+                        "mode": "everyday",
+                        "size": "l",
+                        "quantity": 4,
+                        "drinkId": "voluptate dolor pariatur ullamco"
+                    },
+                    {
+                        "time": "commodo occaecat culpa sit ex",
+                        "mode": "everyFr",
+                        "drinkId": "in velit fugiat",
+                        "size": "s",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "ipsum",
+                        "mode": "everySun",
+                        "drinkId": "exercitation",
+                        "size": "m",
+                        "quantity": 1
+                    },
+                    {
+                        "time": "ipsum tempor nostrud nulla Duis",
+                        "mode": "everyday",
+                        "quantity": 4,
+                        "drinkId": "americano",
+                        "size": "m"
+                    },
+                    {
+                        "time": "ullamco qui",
+                        "mode": "once",
+                        "quantity": 5,
+                        "size": "s",
+                        "drinkId": "consequat Ut deserunt labore ut"
+                    }
+                ],
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "makeDrink",
+            "passed": true,
+            "time": "16:31:26",
+            "actionInteraction": {
+                "response": {
+                    "result": false,
+                    "message": "water level is not sufficient"
+                },
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:26",
+            "actionInteraction": {
+                "payload": {
+                    "time": "occaecat aute non pariatur id",
+                    "mode": "everyWe",
+                    "quantity": 3,
+                    "size": "l",
+                    "drinkId": "ea reprehenderit incididunt in"
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "OP level invokeAction with payload Success"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "availableResourceLevel",
+            "passed": true,
+            "time": "16:31:27",
+            "writeInteraction": {
+                "payload": -71940890.45942351,
+                "result": "Parameter level writeProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:27",
+            "writeInteraction": {
+                "payload": 14502614,
+                "result": "Parameter level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:27",
+            "writeInteraction": {
+                "payload": false,
+                "result": "Parameter level writeProperty Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:27",
+            "actionInteraction": {
+                "payload": {
+                    "time": "veniam esse reprehenderit Duis labore",
+                    "mode": "everyTu",
+                    "drinkId": "voluptate",
+                    "quantity": 4,
+                    "size": "s"
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "Parameter level invokeAction Success"
+            }
+        }
+    ],
+    "T3": [
+        {
+            "name": "availableResourceLevel",
+            "passed": false,
+            "time": "16:31:28",
+            "writeInteraction": {
+                "payload": 88570140.73244014,
+                "result": "Input level read/writeProperty Fail : Read value not the same as Write value"
+            }
+        },
+        {
+            "name": "availableResourceLevel",
+            "passed": false,
+            "time": "16:31:28",
+            "writeInteraction": {
+                "payload": -40606543.525432356,
+                "result": "Input level read/writeProperty Fail : Read value not the same as Write value"
+            }
+        },
+        {
+            "name": "availableResourceLevel",
+            "passed": false,
+            "time": "16:31:29",
+            "writeInteraction": {
+                "payload": -98272091.203114,
+                "result": "Input level read/writeProperty Fail : Read value not the same as Write value"
+            }
+        },
+        {
+            "name": "availableResourceLevel",
+            "passed": false,
+            "time": "16:31:29",
+            "writeInteraction": {
+                "payload": -10395092.097445339,
+                "result": "Input level read/writeProperty Fail : Read value not the same as Write value"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:30",
+            "writeInteraction": {
+                "payload": 8401076,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:30",
+            "writeInteraction": {
+                "payload": 28907206,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:31",
+            "writeInteraction": {
+                "payload": 77617128,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "servedCounter",
+            "passed": true,
+            "time": "16:31:31",
+            "writeInteraction": {
+                "payload": 7998867,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:32",
+            "writeInteraction": {
+                "payload": false,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:32",
+            "writeInteraction": {
+                "payload": false,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:33",
+            "writeInteraction": {
+                "payload": true,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "maintenanceNeeded",
+            "passed": true,
+            "time": "16:31:33",
+            "writeInteraction": {
+                "payload": true,
+                "result": "Input level writeProperty Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:34",
+            "actionInteraction": {
+                "payload": {
+                    "time": "sit aliquip",
+                    "mode": "everySun",
+                    "quantity": 4,
+                    "size": "m",
+                    "drinkId": "minim magna"
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:34",
+            "actionInteraction": {
+                "payload": {
+                    "time": "dolor proident aute laborum elit",
+                    "mode": "everyTu",
+                    "drinkId": "fugiat nulla eu",
+                    "size": "s"
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:34",
+            "actionInteraction": {
+                "payload": {
+                    "time": "aute Ut dolore",
+                    "mode": "everyTu",
+                    "quantity": 3
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        },
+        {
+            "name": "setSchedule",
+            "passed": true,
+            "time": "16:31:34",
+            "actionInteraction": {
+                "payload": {
+                    "time": "est ut",
+                    "mode": "everyFr",
+                    "size": "m"
+                },
+                "response": {
+                    "result": true,
+                    "message": "Your schedule has been set!"
+                },
+                "result": "Input level invokeAction Success"
+            }
+        }
+    ],
+    "T4": []
+}

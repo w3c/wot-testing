@@ -1,0 +1,23 @@
+{
+    "T1": [
+        {
+            "name": "temperature",
+            "passed": true,
+            "time": "22:49:43",
+            "readInteraction": {
+                "data": 0
+            }
+        },
+        {
+            "name": "moisture",
+            "passed": true,
+            "time": "22:49:43",
+            "readInteraction": {
+                "data": 0.9409219517447367
+            }
+        }
+    ],
+    "T2": [],
+    "T3": [],
+    "T4": []
+}
