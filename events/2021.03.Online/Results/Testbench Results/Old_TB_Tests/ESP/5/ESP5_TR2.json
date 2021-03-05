@@ -1,0 +1,132 @@
+[
+    [
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:59:50.937Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:59:52.690Z",
+                        "payload": "Off"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T22:59:52.691Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T22:59:55.148Z",
+                    "received": {
+                        "timestamp": "2021-03-03T22:59:58.324Z",
+                        "payload": "Off"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T22:59:58.325Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:00:01.011Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:00:05.995Z",
+                        "payload": "Off"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:00:05.996Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "status",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:00:07.578Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:00:10.609Z",
+                        "payload": "On"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "toggle",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:00:10.611Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            }
+        ]
+    ]
+]

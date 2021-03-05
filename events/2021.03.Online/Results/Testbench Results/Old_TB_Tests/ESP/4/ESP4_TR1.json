@@ -1,0 +1,147 @@
+{
+    "T1": [
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:44:46",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:44:50",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:45:46",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:45:53",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:46:03",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:46:56",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:47:12",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:47:19",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:47:44",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:47:47",
+            "readInteraction": {
+                "data": "Off"
+            }
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:48:19",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:48:25",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:49:07",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:49:12",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:49:14",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:49:21",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:49:28",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:50:12",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:51:42",
+            "actionInteraction": {}
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "22:51:54",
+            "actionInteraction": {}
+        }
+    ],
+    "T2": [],
+    "T3": [],
+    "T4": []
+}

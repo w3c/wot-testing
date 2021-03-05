@@ -1,0 +1,1588 @@
+[
+    [
+        [
+            {
+                "name": "bool",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:36.512Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:36.893Z",
+                        "payload": true
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:36.896Z",
+                        "payload": true
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:37.342Z",
+                        "payload": true
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:37.343Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:37.558Z",
+                        "payload": 15838320
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:37.560Z",
+                        "payload": 59128879
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:37.970Z",
+                        "payload": 59128879
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "num",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:37.970Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:38.173Z",
+                        "payload": -76388986.3380354
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:38.175Z",
+                        "payload": 20344648.272301763
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:38.581Z",
+                        "payload": 20344648.272301763
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "string",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:38.582Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:38.788Z",
+                        "payload": "pariatur occaecat in consequat"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:38.789Z",
+                        "payload": "veniam sit minim dolore"
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:39.195Z",
+                        "payload": "veniam sit minim dolore"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "array",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:39.196Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:39.402Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:39.404Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:39.814Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "object",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:39.815Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:40.019Z",
+                        "payload": {
+                            "name": "aliqua ut ipsum",
+                            "id": 90258984,
+                            "aliqua_6": false
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:40.021Z",
+                        "payload": {
+                            "id": -72947549,
+                            "name": "velit"
+                        }
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:41.018Z",
+                        "payload": {
+                            "id": -72947549,
+                            "name": "velit"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:41.019Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "void-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:41.228Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:41.436Z",
+                        "payload": -78497053
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:41.640Z",
+                        "payload": -84328428
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:41.857Z",
+                        "payload": -84328427
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int-string",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:41.859Z",
+                        "payload": -8455564
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:42.080Z",
+                        "payload": "-eight-four-five-five-five-six-four-"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-obj",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:42.082Z",
+                        "payload": null
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:42.300Z",
+                        "payload": {
+                            "prop1": 123,
+                            "prop2": "abc"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "obj-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:42.302Z",
+                        "payload": {
+                            "prop1": 36523368,
+                            "prop2": "ad eu proident reprehenderit"
+                        }
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "on-bool",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:42.516Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-int",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:42.917Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-num",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:43.321Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "bool",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:43.724Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:43.929Z",
+                        "payload": true
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:43.930Z",
+                        "payload": false
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:45.019Z",
+                        "payload": false
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:45.020Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:48.013Z",
+                        "payload": 59128879
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:48.014Z",
+                        "payload": 9720568
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:48.434Z",
+                        "payload": 9720568
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "num",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:48.434Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:48.640Z",
+                        "payload": 20344648.272301763
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:48.640Z",
+                        "payload": 66482564.99595994
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:49.048Z",
+                        "payload": 66482564.99595994
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "string",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:49.049Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:49.261Z",
+                        "payload": "veniam sit minim dolore"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:49.262Z",
+                        "payload": "in irure dolor veniam dolore"
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:49.681Z",
+                        "payload": "in irure dolor veniam dolore"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "array",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:49.682Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:49.883Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:49.884Z",
+                        "payload": [
+                            {}
+                        ]
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:50.290Z",
+                        "payload": [
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "object",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:50.292Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:50.498Z",
+                        "payload": {
+                            "id": -72947549,
+                            "name": "velit"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:50.499Z",
+                        "payload": {
+                            "name": "elit",
+                            "id": -54642238,
+                            "occaecat9": "sit Excepteur Lorem",
+                            "in_2": -48976490.822943844,
+                            "ad_e99": false
+                        }
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:50.912Z",
+                        "payload": {
+                            "name": "elit",
+                            "id": -54642238,
+                            "occaecat9": "sit Excepteur Lorem",
+                            "in_2": -48976490.822943844,
+                            "ad_e99": false
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:50.914Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "void-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:51.130Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:51.333Z",
+                        "payload": 27243908
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:51.541Z",
+                        "payload": -3241447
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:51.747Z",
+                        "payload": -3241446
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int-string",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:51.748Z",
+                        "payload": 70736947
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:51.950Z",
+                        "payload": "seven-zero-seven-three-six-nine-four-seven-"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-obj",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:51.951Z",
+                        "payload": null
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:52.167Z",
+                        "payload": {
+                            "prop1": 123,
+                            "prop2": "abc"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "obj-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:52.168Z",
+                        "payload": {
+                            "prop1": -92554176,
+                            "prop2": "fugiat"
+                        }
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "on-bool",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:52.374Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-int",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:52.777Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-num",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:53.180Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "bool",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:53.583Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:53.794Z",
+                        "payload": false
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:53.795Z",
+                        "payload": false
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:54.222Z",
+                        "payload": false
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:54.223Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:54.434Z",
+                        "payload": 9720568
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:54.435Z",
+                        "payload": -35605000
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:54.845Z",
+                        "payload": -35605000
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "num",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:54.846Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:55.052Z",
+                        "payload": 66482564.99595994
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:55.053Z",
+                        "payload": 35919043.69327131
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:55.465Z",
+                        "payload": 35919043.69327131
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "string",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:55.466Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:55.672Z",
+                        "payload": "in irure dolor veniam dolore"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:55.673Z",
+                        "payload": "occaecat velit in"
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:56.091Z",
+                        "payload": "occaecat velit in"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "array",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:56.093Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:56.297Z",
+                        "payload": [
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:56.298Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:56.710Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "object",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:56.711Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:56.917Z",
+                        "payload": {
+                            "name": "elit",
+                            "id": -54642238,
+                            "occaecat9": "sit Excepteur Lorem",
+                            "in_2": -48976490.822943844,
+                            "ad_e99": false
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:56.918Z",
+                        "payload": {
+                            "sunt_21": -83911382
+                        }
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:57.331Z",
+                        "payload": {
+                            "sunt_21": -83911382
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:57.332Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "void-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:57.544Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:57.756Z",
+                        "payload": 53226960
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:57.962Z",
+                        "payload": 29277582
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:58.178Z",
+                        "payload": 29277583
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int-string",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:58.179Z",
+                        "payload": -2897815
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:58.386Z",
+                        "payload": "-two-eight-nine-seven-eight-one-five-"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-obj",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:58.388Z",
+                        "payload": null
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:42:58.595Z",
+                        "payload": {
+                            "prop1": 123,
+                            "prop2": "abc"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "obj-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:42:58.596Z",
+                        "payload": {
+                            "prop1": 83461064,
+                            "prop2": "reprehenderit dolore"
+                        }
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "on-bool",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:58.810Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-int",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:59.214Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-num",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:42:59.616Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            }
+        ],
+        [
+            {
+                "name": "bool",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:00.019Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:00.222Z",
+                        "payload": false
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:00.223Z",
+                        "payload": false
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:00.661Z",
+                        "payload": false
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:00.662Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:00.865Z",
+                        "payload": -35605000
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:00.866Z",
+                        "payload": 35217368
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:01.278Z",
+                        "payload": 35217368
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "num",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:01.279Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:01.481Z",
+                        "payload": 35919043.69327131
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:01.483Z",
+                        "payload": 33434863.590494454
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:01.898Z",
+                        "payload": 33434863.590494454
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "string",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:01.899Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:02.363Z",
+                        "payload": "occaecat velit in"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:02.364Z",
+                        "payload": "laboris"
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:05.438Z",
+                        "payload": "laboris"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "array",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:05.439Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:05.782Z",
+                        "payload": [
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:05.783Z",
+                        "payload": [
+                            {},
+                            {}
+                        ]
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:06.287Z",
+                        "payload": [
+                            {},
+                            {}
+                        ]
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "object",
+                "passed": true,
+                "readPropertyReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:06.287Z",
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:06.504Z",
+                        "payload": {
+                            "sunt_21": -83911382
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                },
+                "writePropertyReport": {
+                    "passed": true,
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:06.504Z",
+                        "payload": {
+                            "id": -37742854,
+                            "name": "esse irure aliqua mollit",
+                            "eiusmod_4": 81498379
+                        }
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:06.937Z",
+                        "payload": {
+                            "id": -37742854,
+                            "name": "esse irure aliqua mollit",
+                            "eiusmod_4": 81498379
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:06.938Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "void-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:07.160Z",
+                        "payload": null
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:07.379Z",
+                        "payload": 39900466
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "int-int",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:07.605Z",
+                        "payload": -52309683
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:07.826Z",
+                        "payload": -52309682
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "int-string",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:07.830Z",
+                        "payload": -69531477
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:08.033Z",
+                        "payload": "-six-nine-five-three-one-four-seven-seven-"
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "void-obj",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:08.033Z",
+                        "payload": null
+                    },
+                    "received": {
+                        "timestamp": "2021-03-03T23:43:08.237Z",
+                        "payload": {
+                            "prop1": 123,
+                            "prop2": "abc"
+                        }
+                    },
+                    "result": {
+                        "id": 200
+                    }
+                }
+            },
+            {
+                "name": "obj-void",
+                "passed": true,
+                "report": {
+                    "sent": {
+                        "timestamp": "2021-03-03T23:43:08.239Z",
+                        "payload": {
+                            "prop1": 7925325,
+                            "prop2": "in dolor Ut minim nostrud"
+                        }
+                    },
+                    "received": null,
+                    "result": {
+                        "id": 201,
+                        "message": "The event did as expected not have a return value."
+                    }
+                }
+            },
+            {
+                "name": "on-bool",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:08.445Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-int",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:08.847Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            },
+            {
+                "name": "on-num",
+                "passed": true,
+                "subscriptionReport": {
+                    "passed": true,
+                    "sendTimestamp": "2021-03-03T23:43:09.250Z",
+                    "result": {
+                        "id": 100,
+                        "message": "Timeout when subscribing: Due to the design of node-wot this can mean either the subscription was unsuccessful or it was successful but no data was received."
+                    }
+                },
+                "eventDataReport": {
+                    "passed": true,
+                    "received": [],
+                    "result": {
+                        "id": 100,
+                        "message": "Never received any data, thus no checks could be made."
+                    }
+                },
+                "cancellationReport": {
+                    "passed": true,
+                    "result": {
+                        "id": 100,
+                        "message": "Subscription cancellation test not possible: Timeout during subscription (see subscriptionReport)."
+                    }
+                }
+            }
+        ]
+    ],
+    [
+        []
+    ]
+]
