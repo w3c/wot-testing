@@ -1,0 +1,447 @@
+{
+    "T1": [
+        {
+            "name": "Cycle_Maximum_Inlet_Pressure",
+            "passed": true,
+            "time": "12:47:33",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Maximum_Inlet_Pressure": 247.00529806174126
+                }
+            }
+        },
+        {
+            "name": "Cycle_Return_Pressure_Min",
+            "passed": true,
+            "time": "12:47:33",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Return_Pressure_Min": 3.591471098200905
+                }
+            }
+        },
+        {
+            "name": "Cycle_Return_Pressure_Max",
+            "passed": true,
+            "time": "12:47:34",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Return_Pressure_Max": 16.82533877057489
+                }
+            }
+        },
+        {
+            "name": "Cycle_Cases_Pressure_Min",
+            "passed": true,
+            "time": "12:47:34",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Cases_Pressure_Min": 0
+                }
+            }
+        },
+        {
+            "name": "Cycle_Cases_Pressure_Max",
+            "passed": true,
+            "time": "12:47:34",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Cases_Pressure_Max": 3
+                }
+            }
+        },
+        {
+            "name": "Cycle_Peak_Operation_Percent_Of_Minute",
+            "passed": true,
+            "time": "12:47:35",
+            "readInteraction": {
+                "data": {
+                    "Cycle_Peak_Operation_Percent_Of_Minute": 0
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:35",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:35Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "bffe5d54-167e-4797-a72a-e4685dcd3f68",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/bffe5d54-167e-4797-a72a-e4685dcd3f68"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "diagnose",
+            "passed": true,
+            "time": "12:47:36",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:36Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "218a190c-4eb7-4651-8615-ed3e46386010",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/diagnose",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/218a190c-4eb7-4651-8615-ed3e46386010"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "resetFilter",
+            "passed": true,
+            "time": "12:47:36",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:36Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "c26aa28c-09ee-4738-afa3-14d5c4a029c5",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/resetFilter",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/c26aa28c-09ee-4738-afa3-14d5c4a029c5"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:36",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:36Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "440a0c11-39d5-4b37-9ba9-8c5f20fd391e",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/440a0c11-39d5-4b37-9ba9-8c5f20fd391e"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "diagnose",
+            "passed": true,
+            "time": "12:47:37",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:37Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "86ff9d9f-bf19-40bd-8f56-88678f90a68d",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/diagnose",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/86ff9d9f-bf19-40bd-8f56-88678f90a68d"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "resetFilter",
+            "passed": true,
+            "time": "12:47:37",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:37Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "65996154-83af-44e7-bfc5-f24562e6ca00",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/resetFilter",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/65996154-83af-44e7-bfc5-f24562e6ca00"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "T3": [
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:38",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:38Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "db697c0e-779b-4f65-baad-d76aa99a94b0",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/db697c0e-779b-4f65-baad-d76aa99a94b0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:38",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:38Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "3ac7cd0d-2ab9-4dc0-9651-1a3c07ea3740",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/3ac7cd0d-2ab9-4dc0-9651-1a3c07ea3740"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:39",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:39Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "48c53870-c7ce-477e-80ca-30585b843cf0",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/48c53870-c7ce-477e-80ca-30585b843cf0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:39",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:39Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "9eca279b-700b-4683-807c-aac4e610c8ed",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/9eca279b-700b-4683-807c-aac4e610c8ed"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:39",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:39Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "d359f8ea-ca7b-4eea-9c7c-bc9efb03b64f",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/d359f8ea-ca7b-4eea-9c7c-bc9efb03b64f"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:40",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:40Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "e06d6ec6-ea77-43ba-b5d8-6914a3857304",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/e06d6ec6-ea77-43ba-b5d8-6914a3857304"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:40",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:40Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "afcbde6b-5c46-470b-8d9f-f923e766c211",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/afcbde6b-5c46-470b-8d9f-f923e766c211"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:40",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:40Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "3aa8873d-7aeb-4377-a3d5-d40e57d1565f",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/3aa8873d-7aeb-4377-a3d5-d40e57d1565f"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:41",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:41Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "d6c301cb-f718-4690-b1b8-f08e1f5740a0",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/d6c301cb-f718-4690-b1b8-f08e1f5740a0"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:41",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:41Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "7da3a1fe-413d-4d56-9ef3-c874461f0db2",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/7da3a1fe-413d-4d56-9ef3-c874461f0db2"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:41",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:41Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "85c4e500-9402-479e-bdc9-deaa8eef4c35",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/85c4e500-9402-479e-bdc9-deaa8eef4c35"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "12:47:42",
+            "actionInteraction": {
+                "response": {
+                    "requestTime": "2021-03-03T11:47:42Z",
+                    "method": "POST",
+                    "endpointId": "0A8701E8-5D80-4B57-99A7-A4133D03A203",
+                    "id": "58cc4af9-c05a-479b-86f7-275142410b2f",
+                    "url": "deviceModels/urn:com:blue:pump:data/actions/power",
+                    "status": "RECEIVED",
+                    "links": [
+                        {
+                            "rel": "requests",
+                            "href": "https://w3cpoc-dev.frapoc.iot.ocs.oraclecloud.com:443/iot/api/v2/requests/58cc4af9-c05a-479b-86f7-275142410b2f"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "T4": []
+}

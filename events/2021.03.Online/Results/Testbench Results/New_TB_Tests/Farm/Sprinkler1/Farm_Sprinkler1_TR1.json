@@ -1,0 +1,197 @@
+{
+    "T1": [
+        {
+            "name": "status",
+            "passed": true,
+            "time": "22:31:54",
+            "readInteraction": {
+                "data": "off"
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 96211829.6056168,
+                    "cupidatat_748": -80950785,
+                    "cillum6": "in incididunt",
+                    "anim1": true
+                }
+            }
+        },
+        {
+            "name": "stopSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {}
+        }
+    ],
+    "T2": [
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {
+                "payload": {
+                    "voluptate_83": true,
+                    "nulla_b": 6841809.762119725,
+                    "ad_2_": 94614661
+                }
+            }
+        }
+    ],
+    "T3": [
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {
+                "payload": {}
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 43488103.5029216,
+                    "Excepteur__": true,
+                    "sinta86": 70355875,
+                    "cillum96a": 84281088,
+                    "eiusmod9ed": -59478287
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:54",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 1
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "inb": 353431.05957071483,
+                    "officiacfc": "qui minim magna ut cillum"
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 52717759.66219213
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "nullae9e": "irure",
+                    "in___4": true,
+                    "laborum2f": true,
+                    "exercitation7": "consequat aliquip proident ullamco sunt"
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 158271.09472345578,
+                    "deserunt_b1": true,
+                    "ullamco_0": false,
+                    "aliqua_4": -12459584
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "irure_3da": true
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 2380797.7261775355,
+                    "sit_36_": -4248208
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 36023017.65335959
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:55",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 85627646.93245532,
+                    "pariaturb0": "dolor tempor in",
+                    "qui__b8": true,
+                    "sit09": 24310099,
+                    "dolor_6d9": "tempor sit",
+                    "velit_93": 39127393
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:56",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 48827588.35434448,
+                    "consequat_2": "id non aliquip"
+                }
+            }
+        },
+        {
+            "name": "startSprinkler",
+            "passed": true,
+            "time": "22:31:56",
+            "actionInteraction": {
+                "payload": {
+                    "timeout": 81058570.97925627,
+                    "do59": 50123052,
+                    "in_3aa": false,
+                    "elit_cfe": 65476724
+                }
+            }
+        }
+    ],
+    "T4": []
+}
