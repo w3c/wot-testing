@@ -1,0 +1,158 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "modv": "https://www.example.com/ns/modbustcp/"
+        }
+    ],
+    "title": "EHD_RTU",
+    "description": "Modbus RTU for EHD Thruster experiment, measures HV voltage, HV current, and resulting thrust",
+    "id": "uri:dev:uuid:5de7f6c9-0cef-412d-9754-2b844ed63637",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "nosec_sc",
+
+    "base": "modbus+tcp://71.202.145.92:502/",
+    "@type": [
+        "Thing",
+        {
+            "@id": "https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU",
+            "contentType": "application/sdf+json"
+        }
+    ],
+    "links": [
+        {
+            "rel": "implements",
+            "href": "https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/UHVMeasurement",
+            "contentType": "application/sdf+json"
+        },
+        {
+            "rel": "implements",
+            "href": "https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/IHVMeasurement",
+            "contentType": "application/sdf+json"
+        },
+        {
+            "rel": "implements",
+            "href": "https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/ThrustMeasurement",
+            "contentType": "application/sdf+json"
+        }
+    ],
+    "properties": {
+        "UHVMeasurement/Sensor_Value": {
+            "description": "Thruster HV Voltage Measurement Value",
+            "@type": [
+                { 
+                    "@id" :"https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/UHVMeasurement/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                },
+                {
+                    "@id": "https://onedm.org/playground/#/sdfObject/Voltage/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                }
+            ],
+            "readOnly": true,
+            "type": "number",
+            "unit": "V",
+            "minimum": 0,
+            "maximum": 1200,
+            "multipleOf": 1,
+            "scaleMinimum": 0,
+            "scaleMaximum": 120000,
+            "Forms": [{
+                "op": "readproperty",
+                "href": "modbus+tcp://71.202.145.92:502/",
+                "modv:unitID": "2",
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "0",
+                "modv:function": "3",
+                "modv:length": 1
+            }]
+        },
+        "IHVMeasurement/Sensor_Value": {
+            "description": "Thruster HV Amperage Measurement Value",
+            "@type": [
+                { 
+                    "@id" :"https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/IHVMeasurement/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                },
+                {
+                    "@id": "https://onedm.org/playground/onefb/#/sdfObject/Current/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                }
+            ],
+           "readOnly": true,
+            "type": "number",
+            "unit": "A",
+            "minimum": 0,
+            "maximum": 2000,
+            "multipleOf": 1,  
+            "scaleMinimum": 0,
+            "scaleMaximum": 0.002,
+            "Forms": [{
+                "op": "readproperty",
+                "href": "modbus+tcp://71.202.145.92:502/",
+                "modv:unitID": "2",
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1",
+                "modv:function": "3",
+                "modv:length": 1
+            }]
+        },
+        "ThrustMeasurement/Sensor_Value": {
+            "description": "Thrust Measurement Value",
+            "@type": [
+                { 
+                    "@id" :"https://onedm.org/exploratory/onefb/#/sdfThing/EHD_RTU/sdfObject/ThrustMeasurement/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                },
+                {
+                    "@id": "https://onedm.org/playground/onefb/#/sdfObject/Load/sdfProperty/Sensor_Value",
+                    "contentType": "application/sdf+json"
+                }
+            ],
+           "readOnly": true,
+            "type": "number",
+            "unit": "N",
+            "minimum": 0,
+            "maximum": 2000,
+            "multipleOf": 1,  
+            "scaleMinimum": 0,
+            "scaleMaximum": 2,
+            "Forms": [{
+                "op": "readproperty",
+                "href": "modbus+tcp://71.202.145.92:502/",
+                "modv:unitID": "2",
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "2",
+                "modv:function": "3",
+                "modv:length": 1
+            }]
+        },
+        "HoldingRegisters/RegisterBlock": {
+            "description": "Read all registers",
+            "@type": { 
+                "@id" :"fb:#/sdfThing/EHD_RTU/sdfObject/HoldingRegisters/sdfProperty/RegisterBlock",
+                "contentType": "application/sdf+json"
+            },
+            "readOnly": true,
+            "type": "array",
+            "items": {
+                "UHVMeasurement/Sensor_Value": { "@id": "#/properties/UHVMeasurement/Sensor_Value" },
+                "IHVMeasurement/Sensor_Value": { "@id": "#/properties/IHVMeasurement/Sensor_Value" },
+                "ThrustMeasurement/Sensor_Value": { "@id": "#/properties/ThrustMeasurement/Sensor_Value" }
+            },
+            "Forms": [{
+                "op": "readproperty",
+                "href": "modbus+tcp://71.202.145.92:502/",
+                "modv:unitID": "2",
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "0",
+                "modv:function": "3",
+                "modv:length": 3
+            }]
+        }
+    }
+}

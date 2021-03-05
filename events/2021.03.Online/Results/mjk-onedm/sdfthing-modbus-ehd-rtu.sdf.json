@@ -1,0 +1,172 @@
+{
+  "info": {
+    "title": "RTU for EHD thrust experiment", 
+    "version": "2021-02-26", 
+    "copyright": "Copyright 2021, Michael J. Koster. All rights reserved.", 
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  }, 
+  "namespace": {
+    "fb": "https://onedm.org/exploratory/onefb/",
+    "pg": "https://onedm.org/playground/",
+    "modv": "https://example.org/tbd/modbus-rdf-vocabulary"
+  }, 
+  "defaultNamespace": "fb", 
+
+  "extensionPoint": {
+    "DataSchema" : { 
+      "description": "Additional data schema constraints and mappings for sdfData declarations",
+      "sdfRef": "#/sdfExtensionSchema/DataSchema"
+    },
+    "WotProtocolBinding": {
+      "description": "Protocol Binding Form compatible with WoT TD Form",
+      "sdfRef": "#/sdfExtensionSchema/WotProtocolBinding"
+    }
+  },
+
+  "sdfThing": {
+    "EHD_RTU": {
+      "description": "Modbus RTU for EHD Thruster experiment, measures HV voltage, HV current, and resulting thrust",
+      "sdfObject": {
+        "UHVMeasurement": {
+          "sdfRef": "pg:#/sdfObject/Voltage",
+          "label": "HV Voltage Measurement",
+          "sdfProperty": {
+            "Sensor_Value": {
+              "description": "Thruster HV Voltage Measurement Value",
+              "label": "UHV",
+              "sdfRef": "#/sdfThing/EHD_RTU/sdfData/VoltageData",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "readproperty",
+                "href": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "0",
+                "modv:function": "3",
+                "modv:length": 1
+              }
+            }
+          }
+        },
+        "IHVMeasurement": {
+          "sdfRef": "pg:#/sdfObject/Current",
+          "label": "HV Amperage Measurement",
+          "sdfProperty": {
+            "Sensor_Value": {
+              "description": "Thruster HV Amperage Measurement Value",
+              "label": "IHV",
+              "sdfRef": "#/sdfThing/EHD_RTU/sdfData/AmperageData",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "readproperty",
+                "href": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1",
+                "modv:function": "3",
+                "modv:length": 1
+              }
+            }
+          }
+        },
+        "ThrustMeasurement": {
+          "sdfRef": "pg:#/sdfObject/Load",
+          "label": "Thrust measurement",
+          "sdfProperty": {
+            "Sensor_Value": {
+              "description": "Thrust Measurement Value",
+              "label": "T",
+              "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThrustData",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "readproperty",
+                "href": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "2",
+                "modv:function": "3",
+                "modv:length": 1
+              }
+            }
+          }
+        },
+        "HoldingRegisters": {
+          "description": "Holding Register Block for ReadMultiple",
+          "sdfProperty": {
+            "RegisterBlock": {
+              "type": "array",
+              "items": [
+                "#/sdfThing/EHD_RTU/sdfObject/UHVMeasurement/sdfProperty/Sensor_Value",
+                "#/sdfThing/EHD_RTU/sdfObject/IHVMeasurement/sdfProperty/Sensor_Value",
+                "#/sdfThing/EHD_RTU/sdfObject/ThrustMeasurement/sdfProperty/Sensor_Value"
+              ],
+              "WotProtocolBinding": {
+                "op": "readproperty",
+                "href": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "3",
+                "modv:function": "3",
+                "modv:length": 3
+              }
+            }
+          }
+        }
+      },
+      "sdfData": {
+        "UHVData": {
+          "type": "number",
+          "units": "V",
+          "minimum": 0,
+          "maximum": 1200,
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 120000
+        },
+        "IHVData": {
+          "type": "number",
+          "units": "A",
+          "minimum": 0,
+          "maximum": 2000,
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 0.002
+        },
+        "ThrustData": {
+          "type": "number",
+          "units": "N",
+          "minimum": 0,
+          "maximum": 2000,
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 2
+        },
+        "ModbusUnitID": {
+          "description": "Modbus RTU Unit ID",
+          "label": "Modbus Unit ID",
+          "type": "number",
+          "multipleOf": 1,
+          "minimum": 1,
+          "maximum": 255,
+          "default": 1
+        },
+        "ThisUnitID": {
+          "sdfRef": "#/sdfThing/EHD_RTU/sdfData/ModbusUnitID",
+          "const": 2
+        },
+        "ThisIPAddress": {
+          "const": "modbus+tcp://71.202.145.92:502/"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "info": {
+    "title": "Modbus DC Power Supply", 
+    "version": "2021-02-26", 
+    "copyright": "Copyright 2021, Michael J. Koster. All rights reserved.", 
+    "license": "https://github.com/one-data-model/oneDM/blob/master/LICENSE"
+  }, 
+  "namespace": {
+    "fb": "https://onedm.org/exploratory/onefb/",
+    "pg": "https://onedm.org/playground/",
+    "modv": "https://example.org/tbd/modbus-rdf-vocabulary"
+  }, 
+  "defaultNamespace": "fb", 
+
+  "extensionPoint": {
+    "DataSchema" : { 
+      "description": "Additional data schema constraints and mappings for sdfData declarations",
+      "sdfRef": "#/sdfExtensionSchema/DataSchema"
+    },
+    "WotProtocolBinding": {
+      "description": "Protocol Binding Form compatible with WoT TD Form",
+      "sdfRef": "#/sdfExtensionSchema/WotProtocolBinding"
+    }
+  },
+
+  "sdfThing": {
+    "DCPowerSupply_LW3010E": {
+      "sdfObject": {
+        "ProductInformation": {
+          "sdfProperty": {
+            "VendorName": { "const": "Longwei" },
+            "ModelName": { "const": "LW-3010E" },
+            "ProductDescription": { "const": "DC Power Supply" }
+          }
+        },
+        "VoltageSetPoint": {
+          "sdfRef": "pg:#/sdfObject/Set_Point",
+          "label": "Voltage Set Point",
+          "sdfProperty": {
+            "Set_Point_Value": {
+              "description": "Voltage Set Point Value",
+              "label": "Set-U",
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/VoltageData",
+              "writable": true,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "writeproperty",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1000",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            },
+            "Application_Type": {
+              "const": "Voltage Set Point"
+            },
+            "Sensor_Units": {
+              "const": "V"
+            },
+            "Minimum_Set_Point_Value": {
+              "const": 0
+            },
+            "Maximum_Set_Point_Value": {
+              "const": 30
+            }
+          },
+          "sdfAction": {
+            "SetVoltage": {
+              "sdfInputData":{
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/VoltageData"
+              },
+              "WotProtocolBinding": {
+                "op": "invokeaction",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1000",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            }
+          }
+        },
+        "AmperageSetPoint": {
+          "sdfRef": "pg:#/sdfObject/Set_Point",
+          "label": "Amperage Set Point",
+          "sdfProperty": {
+            "Set_Point_Value": {
+              "description": "Amperage Set Point Value",
+              "label": "Set-I",
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/AmperageData",
+              "writable": true,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "writeproperty",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:offset": "1001",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            },
+            "Application_Type": {
+              "const": "Amperage Set Point"
+            },
+            "Sensor_Units": {
+              "const": "A"
+            },
+            "Minimum_Set_Point_Value": {
+              "const": 0
+            },
+            "Maximum_Set_Point_Value": {
+              "const": 10
+            }
+          },
+          "sdfAction": {
+            "SetAmperage": {
+              "sdfInputData":{
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/AmperageData"
+              },
+              "WotProtocolBinding": {
+                "op": "invokeaction",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:offset": "1001",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            }
+          }
+        },
+        "VoltageMeasurement": {
+          "sdfRef": "pg:#/sdfObject/Voltage",
+          "label": "Voltage Measurement",
+          "sdfProperty": {
+            "Sensor_Value": {
+              "description": "Voltage  Measurement Value",
+              "label": "U",
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/VoltageData",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1002",
+                "modv:length": 1
+              }
+            }
+          }
+        },
+        "AmperageMeasurement": {
+          "sdfRef": "pg:#/sdfObject/Current",
+          "label": "Amperage Measurement",
+          "sdfProperty": {
+            "Sensor_Value": {
+              "description": "Amperage Measurement Value",
+              "label": "I",
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/AmperageData",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1003",
+                "modv:length": 1
+              }
+            }
+          }
+        },
+        "OperationalState": {
+          "sdfRef": "pg:#/sdfObject/operational.state",
+          "description": "Current Operational State",
+          "label": "Current operational State",
+          "sdfProperty": {
+            "currentMachineState": {
+              "sdfRef": "#sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1004",
+                "modv:length": 1
+              }
+            },
+            "machineStates": {
+              "items": { "sdfRef": "#sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState/sdfChoice" }
+            }
+          }
+        },
+        "RegulationState": {
+          "description": "Current Regulation State",
+          "label": "Regulation State",
+          "sdfProperty": {
+            "RegulationState": {
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/RegulationState",
+              "writable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1005",
+                "modv:length": 1
+              }
+            }
+          },
+          "sdfEvent": {
+            "OverCurrent": {
+              "description": "Over Current Event",
+              "sdfOutputData": {
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/RegulationState/sdfChoice/OverCurrent"
+              }
+            }
+          }
+        },
+        "OperationalSetting":{
+          "sdfRef": "pg:#/sdfObject/operational.state",
+          "description": "Current Operational Setting",
+          "label": "Current operational State",
+          "sdfProperty": {
+            "currentMachineState": {
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState",
+              "writable": true,
+              "readable": false,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": {
+                "op": "writeproperty",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1004",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            },
+            "machineStates": {
+              "items": "#sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState/sdfChoice"
+            }
+          },
+          "sdfAction": {
+            "Start": {
+              "sdfInputData": {
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState/sdfChoice/Run"              
+              },
+              "WotProtocolBinding": {
+                "op": "invokeaction",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1006",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            },
+            "Stop": {
+              "sdfInputData": {
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/OperationalState/sdfChoice/Stop"
+              },
+              "ProtocolBinding": {
+                "op": "invokeaction",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1006",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            }
+          }
+        },
+        "AddressSetting": {
+          "description": "Modbus Address Setting",
+          "label": "Modbus Address",
+          "sdfProperty": {
+            "ModbusAddress": {
+              "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ModbusUnitID",
+              "writable": true,
+              "DataSchema": {
+                "WidthInBits": 16
+              },
+              "WotProtocolBinding": [
+                {
+                  "op": "writeproperty",
+                  "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                  "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                  "modv:entity": "HoldingRegister",
+                  "modv:offset": "1008",
+                  "modv:length": 1,
+                  "modv:function": "6"
+                },
+                {
+                  "op": "readproperty",
+                  "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                  "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                  "modv:entity": "HoldingRegister",
+                  "modv:offset": "1008",
+                  "modv:length": 1,
+                  "modv:function": "3"
+                } 
+              ]
+            }
+          },
+          "sdfAction": {
+            "SetAddress": {
+              "sdfInputData": {
+                "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ModbusUnitID"
+              },
+              "WotProtocolBinding": {
+                "op": "invokeaction",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1008",
+                "modv:length": 1,
+                "modv:function": "6"
+              }
+            }
+          }
+        },
+        "HoldingRegisters": {
+          "description": "Holding Register Block for ReadMultiple",
+          "sdfProperty": {
+            "RegisterBlock": {
+              "type": "array",
+              "items": [
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/VoltageSetPoint/sdfProperty/Set_Point_Value",
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/AmperageSetPoint/sdfProperty/Set_Point_Value",
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/VoltageMeasurement/sdfProperty/Sensor_Value",
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/AmperageMeasurement/sdfProperty/Sensor_Value",
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/OperationalState/sdfProperty/currentMachineState",
+                "#/sdfThing/DCPowerSupply_LW3010E/sdfObject/RegulationState/sdfProperty/RegulationState"
+              ],
+              "WotProtocolBinding": {
+                "op": "readproperty",
+                "href": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisIPAddress/" },
+                "modv:unitID": { "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ThisUnitID" },
+                "modv:entity": "HoldingRegister",
+                "modv:offset": "1000",
+                "modv:length": 6,
+                "modv:function": "3"
+              }
+            }
+          }
+        }
+      },
+      "sdfData": {
+        "VoltageData": {
+          "type": "number",
+          "units": "V",
+          "minimum": 0,
+          "maximum": 3000,
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 30
+        },
+        "AmperageData": {
+          "type": "number",
+          "units": "A",
+          "minimum": 0,
+          "maximum": 1000,
+          "multipleOf": 1,
+          "scaleMinimum": 0,
+          "scaleMaximum": 10
+        },
+        "OperationalState": {
+          "sdfChoice": {
+            "Run": {
+              "label": "Run",
+              "const": 1 
+            },
+            "Stop": { 
+              "label": "Stop",
+              "const": 0 
+            }
+          }
+        },
+        "RegulationState": {
+          "sdfChoice": {
+            "ConstantCurrent": {
+              "label": "CC",
+              "const": 0 
+            },
+            "ConstantVoltage": {
+              "label": "CV",
+              "const": 1 
+            },
+            "Overcurrent": {
+              "label": "OC",
+              "const": 2 
+            }
+          }
+        },
+        "ModbusUnitID": {
+          "description": "Modbus RTU Unit ID",
+          "label": "Modbus Unit ID",
+          "type": "number",
+          "multipleOf": 1,
+          "minimum": 1,
+          "maximum": 255,
+          "default": 1
+        },
+        "ThisUnitID": {
+          "sdfRef": "#/sdfThing/DCPowerSupply_LW3010E/sdfData/ModbusUnitID",
+          "const": 1
+        },
+        "ThisIPAddress": {
+          "const": "modbus+tcp://71.202.145.92:502/"
+        }
+      }
+    }
+  }
+}
