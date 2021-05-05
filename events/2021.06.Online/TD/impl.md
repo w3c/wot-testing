@@ -3,6 +3,7 @@ Description of what an implementation is goes here, what categories there are, a
 
 TODO: copy initial version out of last year's implementation report.
 
+
 ## Producers
 Need at least 2.
 * node-wot
