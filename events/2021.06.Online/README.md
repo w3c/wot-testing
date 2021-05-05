@@ -28,6 +28,7 @@
         - Peer-to-Peer services (manual testing possible...)
         - Introduction services (manual testing... necessary?)
 * Describe testing plan
+    - Look at last year's CR transition request for format and previous version
 * Index testing tools
 * Index report generation tools
 * Organize outputs
