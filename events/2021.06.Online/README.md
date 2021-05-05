@@ -20,6 +20,11 @@
     - Discovery
     - Profiles
     - Architecture
+* Define what an implementation is
+    - Per deliverable
+    - Can use previous discussion (eg Princeton testfest) as a starting point
+    - Profiles
+         - Does a implementation (e.g. node-wot) always need to check that a TD satisfies the profile constraints?
 * Describe implementations
     - Per deliverable
     - In each source repo...
