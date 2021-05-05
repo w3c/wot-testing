@@ -9,7 +9,7 @@ To Do:
     - Discovery
     - Profiles
     - Architecture
-* Describe implementions
+* Describe implementations
 * Collect data for each implementation
     - Collecting TDs
     - Tests (eg output files) for discovery
