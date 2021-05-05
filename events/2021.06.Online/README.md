@@ -3,6 +3,7 @@
 To Do:
 * Link previous testfest
 * Link to webex, schedule, etc. logistics (e.g. in wiki)
+    - Wiki: https://www.w3.org/WoT/IG/wiki/F2F_meeting,_June_2021#Testfest
 * Organize by deliverable
     - Thing Description 1.1
     - Discovery
