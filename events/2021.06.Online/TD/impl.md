@@ -12,6 +12,7 @@ Need at least 2.
 ## Consumers
 Need at least 2.
 * node-wot
+* Node-RED
 * WebThings?
 
 ## Processors and Validators
