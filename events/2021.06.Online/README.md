@@ -21,6 +21,8 @@
     - Profiles
     - Architecture
 * Describe implementations
+    - Per deliverable
+    - In each source repo...
 * Collect data for each implementation
     - Collecting TDs
     - Tests (eg output files) for discovery
