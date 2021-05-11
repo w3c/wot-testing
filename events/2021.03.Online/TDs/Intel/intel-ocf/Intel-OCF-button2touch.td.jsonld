@@ -2,7 +2,7 @@
   "@context": [
     "https://www.w3.org/2019/wot/td/v1",
     {
-      "iot": "http://iotschema.org/"
+      "iot": "http://iotschema.org/",
       "g": "https://www.w3.org/2019/wot/td/geo/v1",
       "cap": "https://onedm.org/exploratory/cap/"
     }
@@ -30,9 +30,9 @@
      },
      "altitude": {
         "elevation": 238.049,
-        "elevationUnit": "m"
+        "elevationUnit": "m",
         "depth": -1.3,
-        "depthUnit": "ft"
+        "depthUnit": "ft",
         "accuracy": 2.5,
         "accuracyUnit": "cm"
      }
