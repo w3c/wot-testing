@@ -12,12 +12,11 @@ In all types of implementations, there can be Consumer (subject to change, it is
 
 How a TD can be found without relying on a TD directory.
 
-- Network level
-  - Core RD : 
-  - MDNS
-  - URL
-  - Direct method (QR Code or similar)
-  - DID (no implementations so far)
+- [Direct (QR Code or similar)](https://w3c.github.io/wot-discovery/#introduction-direct)
+- [Well-Known URIs](https://w3c.github.io/wot-discovery/#introduction-well-known)
+- [DNS-Based Service Discovery](https://w3c.github.io/wot-discovery/#introduction-dns-sd)
+- [CoRE Link Format and CoRE Resource Directory](https://w3c.github.io/wot-discovery/#introduction-core-rd)
+- [DID Documents (no implementations so far)](https://w3c.github.io/wot-discovery/#introduction-did)
 
 ### Exploration mechanisms
 
