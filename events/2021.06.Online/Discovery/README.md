@@ -4,9 +4,11 @@
 
 ## Types of implementations
 
-These are all the types of discovery implementations. Each implementation from the group would correspond to one or more of the listed types below
+These are all the types of discovery implementations. Each implementation from the group would correspond to one or more of the listed types below.
+Rather than testing all possible combinations of introduction and exploration, we will test them separately.
 
-In all types of implementations, there can be Consumer (subject to change, it is the entity that finds a TD) and Producer (subject to change, it is the entity that register/advertise a TD).
+In all types of implementations, there can be Consumer (subject to change, it is the entity that finds a TD) 
+and Producer (subject to change, it is the entity that register/advertise a TD).
 
 ### Introduction mechanism
 
@@ -30,6 +32,7 @@ Issues:
     - We don't need two different DNS-SD servers.
     - To do: explain this situation in the implementation report.
     - This is like testing two browsers with a single HTTP server (where HTTP is an IETF specification...)
+* "Direct" doesn't actually need testing since the "output" of the introduction phase (a URL) is provided directly
 
 ### Exploration mechanisms
 How a TD can be found by relying on a TD directory.
@@ -44,7 +47,8 @@ The following query types should be tested:
 
 Issues:
 * Only have one implementation that does SPARQL, another that does JSONPath/XPath...
-* Testing queries is complex; do we need a full test quite for JSONPath, for instance?  How much do we need to test this?
+* Testing queries is complex; do we need a full test suite for JSONPath, for instance?  How much do we need to test this?
+    - I think we should use a previously tested implementation of a query engine and just do enough testing to ensure it is properly integrated.
 * Implementations already have some test suites we can hopefully generalize.  Discuss in Discovery TF.
 * We probably DO need two different exploration server implementations for testing, *and* two "discoverer" implementations using them.
 
