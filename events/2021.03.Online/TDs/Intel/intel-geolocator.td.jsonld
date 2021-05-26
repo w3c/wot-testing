@@ -29,7 +29,7 @@
   "securityDefinitions": {
     "basic_sc": {
       "scheme": "basic",
-      "in": "header",
+      "in": "header"
     }
   },
   "security": ["basic_sc"],
@@ -43,15 +43,15 @@
       "properties": {
          "position": {
             "longitude": {
-                "type": number,
+                "type": "number",
                 "unit": "qudt:Angle"
             },
             "latitude": {
-                "type": number,
+                "type": "number",
                 "unit": "qudt:Angle"
             },
             "accuracy": {
-                "type": number
+                "type": "number"
             },
             "accuracyUnit": {
                 "type": "qudt:Length"
@@ -59,21 +59,21 @@
          },
          "altitude": {
             "elevation": {
-                "type": number,
+                "type": "number",
                 "unit": "qudt:Length"
             },
             "elevationUnit": {
                 "type": "qudt:Length"
             },
             "depth": {
-                "type": number,
+                "type": "number",
                 "unit": "qudt:Length"
             },
             "depthUnit": {
                 "type": "qudt:Length"
             },
             "accuracy": {
-                "type": number,
+                "type": "number",
                 "unit": "qudt:Length"
             },
             "accuracyUnit": {
@@ -82,22 +82,22 @@
          },
          "velocity": {
             "x": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Speed"
             },
             "y": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Speed"
             },
             "z": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Speed"
             },
             "velocityUnit": {
                 "type": "qudt:Speed"
             },
             "accuracy": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Speed"
             },
             "accuracyUnit": {
@@ -106,28 +106,28 @@
          },
          "acceleration": {
             "x": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Acceleration"
             },
             "y": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Acceleration"
             },
             "z": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Acceleration"
             },
             "accelerationUnit": {
                 "type": "qudt:Acceleration"
             },
             "accuracy": {
-                "type": number,
+                "type": "number",
                 "type": "qudt:Acceleration"
             },
             "accuracyUnit": {
                 "type": "qudt:Acceleration"
             }
-         },
+         }
       },
       "forms": [
         {
