@@ -45,7 +45,7 @@ jobs:
             if [[ $file == *.td.jsonld ]]; then 
               echo 'Validating' $file
               result=$(node thingweb-playground/packages/cli/index.js $file)
-              if [[ $result == *"failed"* ]]; then
+              if [[ $result == *"'failed'"* ]]; then
                 echo "$result"
                 exit 1
               else
