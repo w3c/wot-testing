@@ -1,0 +1,5 @@
+"Org",          "Name",                 "Active",   "Comment"
+"Hitachi",      "myRasPiLED",             "yes",    "in Plugfest VPN"
+"Siemens",      "Smart-Coffee-Machine",   "yes",    "http://plugfest.thingweb.io:8083/smart-coffee-machine"
+"Siemens",      "TestThing",              "yes",    "http://plugfest.thingweb.io:8083/testthing"
+"Siemens",      "Multilanguage Counter",  "yes",    "http://plugfest.thingweb.io:8083/counter"
