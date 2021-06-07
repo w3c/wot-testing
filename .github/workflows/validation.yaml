@@ -43,16 +43,18 @@ jobs:
           changed=$(git diff --name-only HEAD HEAD~1)
           for file in $changed; do
             if [[ $file == *.td.jsonld ]]; then 
-              echo 'Validating' $file
+              echo 'Validating' $file '...'
               result=$(node thingweb-playground/packages/cli/index.js $file)
               if [[ $result == *"'failed'"* ]]; then
                 echo "$result"
+                echo 'Validation failed ✗'
                 exit 1
               else
-                echo 'Passed!'
+                echo "$result"
+                echo 'Validation passed ✓'
               fi
             else
-              echo 'Skipping' $file
+              echo 'Skipped' $file
             fi
           done
 
