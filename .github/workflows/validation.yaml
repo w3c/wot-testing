@@ -1,0 +1,45 @@
+
+name: Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate-tds:
+    name: Validate TDs
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout wot-testing
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+                     
+      - name: Checkout thingweb-playground
+        uses: actions/checkout@v2
+        with:
+          repository: thingweb/thingweb-playground
+          path: thingweb-playground
+
+      - name: Setup Node.js                         
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15'       
+      
+      - name: Install dependencies
+        working-directory: thingweb-playground/packages/cli
+        run: npm install
+
+      - name: List changed files
+        run: git diff --name-only HEAD HEAD~1
+
+      - name: Run validation script on all new matching files
+        run: |
+          git diff --name-only HEAD HEAD~1 | \
+          grep ".*\.td.jsonld$" | \
+          xargs -i node thingweb-playground/packages/cli/index.js {}
+      
