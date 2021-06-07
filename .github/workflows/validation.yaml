@@ -34,12 +34,26 @@ jobs:
         working-directory: thingweb-playground/packages/cli
         run: npm install
 
-      - name: List changed files
-        run: git diff --name-only HEAD HEAD~1
-
       - name: Run validation script on all new matching files
+        # run: |
+        #   git diff --name-only HEAD HEAD~1 | \
+        #   grep ".*\.td.jsonld$" | \
+        #   xargs -i node thingweb-playground/packages/cli/index.js {}
         run: |
-          git diff --name-only HEAD HEAD~1 | \
-          grep ".*\.td.jsonld$" | \
-          xargs -i node thingweb-playground/packages/cli/index.js {}
+          changed=$(git diff --name-only HEAD HEAD~1)
+          for file in $changed; do
+            if [[ $file == *.td.jsonld ]]; then 
+              echo 'Validating' $file
+              result=$(node thingweb-playground/packages/cli/index.js $file)
+              if [[ $result == *"failed"* ]]; then
+                echo "$result"
+                exit 1
+              else
+                echo 'Passed!'
+              fi
+            else
+              echo 'Skipping' $file
+            fi
+          done
+
       
