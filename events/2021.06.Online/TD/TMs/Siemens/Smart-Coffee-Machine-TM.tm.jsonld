@@ -5,11 +5,25 @@
             "@language": "en"
         }
     ],
-    "@type" : "ThingModel",
+    "@type": "tm:ThingModel",
     "title": "Smart-Coffee-Machine Model - {{GLOBAL_TITLE}}",
     "description": "A smart coffee machine with a range of capabilities. {{GLOBAL_DESCRIPTION}}",
     "support": "git://github.com/eclipse/thingweb.node-wot.git",
-    "version" : {"model" : "1.0.0"},
+    "version": {
+        "model": "1.0.0"
+    },
+    "tm:required": [
+        "#/properties/allAvailableResources",
+        "#/properties/allAvailableResources",
+        "#/properties/availableResourceLevel",
+        "#/properties/possibleDrinks",
+        "#/properties/maintenanceNeeded",
+        "#/properties/schedules",
+        "#/properties/maintenanceNeeded",
+        "#/actions/makeDrink",
+        "#/actions/setSchedule",
+        "#/events/outOfResource"
+    ],
     "properties": {
         "allAvailableResources": {
             "type": "object",
@@ -41,7 +55,6 @@
             "type": "integer",
             "description": "The total number of served beverages.",
             "minimum": 0
-            
         },
         "maintenanceNeeded": {
             "type": "boolean",
@@ -96,9 +109,8 @@
                         ]
                     }
                 }
-            }            
-        },
-        "required" : ["allAvailableResources", "availableResourceLevel","possibleDrinks","servedCounter","maintenanceNeeded", "schedules","maintenanceNeeded"]
+            }
+        }
     },
     "actions": {
         "makeDrink": {
@@ -198,9 +210,7 @@
                     }
                 }
             }
-        },
-        "required" : ["makeDrink", "setSchedule"]
-
+        }
     },
     "events": {
         "outOfResource": {
@@ -208,7 +218,6 @@
             "data": {
                 "type": "string"
             }
-        },
-        "required" : ["outOfResource"]
+        }
     }
 }
