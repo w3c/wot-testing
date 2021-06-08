@@ -6,4 +6,4 @@
 "Intel",        "ocf",                    "no",     "older version of OCF",                                  "OCF bridge"
 "Intel",        "camera",                 "no",     "custom web service",                                    "intel-custom-nodejs"
 "Intel",        "speaker",                "no",     "custom web service",                                    "intel-custom-nodejs"
-"Intel,         "geolocation",            "no",     "template - not active service",                         "null"
+"Intel",         "geolocation",            "no",     "template - not active service",                         "null"
