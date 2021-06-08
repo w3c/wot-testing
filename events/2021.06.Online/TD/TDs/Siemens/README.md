@@ -4,6 +4,7 @@ We expose the following virtual things (with [node-wot](https://github.com/eclip
 * [Smart-Coffee-Machine](http://plugfest.thingweb.io:8083/smart-coffee-machine)
 * [TestThing](http://plugfest.thingweb.io:8083/testthing)
 * [Multilanguage Counter](http://plugfest.thingweb.io:8083/counter)
+* [Smart Charging with Web of Things](https://github.com/sebastiankb/wot-smart-charging)
 
 ## WebUIs
 
