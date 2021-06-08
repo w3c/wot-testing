@@ -1,5 +1,5 @@
 {
-    "title": "Hue Color Lamp 1",
+    "title": "Hue Color Lamp 1"
     "id": "urn:dev:ops:32473-HueLight-1",
     "description":"This is a Philips Hue Color Light Bulb that can be controlled remotely. This is on the left of the desk 1",
     "@context": [
