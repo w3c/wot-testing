@@ -168,7 +168,6 @@
     "security": [
         "basic_sc"
     ],
-    "id": "urn:uuid:2aec4e3f-d9b8-4100-a5fb-4ac527cd159e",
     "forms": [
         {
             "href": "http://example.it/DA00AW2N-2-control/all/properties",

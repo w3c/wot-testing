@@ -322,7 +322,6 @@
     "security": [
         "nosec_sc"
     ],
-    "id": "urn:uuid:cc77aab3-083f-4c81-a13c-c3dea3041357",
     "forms": [
         {
             "href": "http://example.it/DA00AW2N-2-measure/all/properties",

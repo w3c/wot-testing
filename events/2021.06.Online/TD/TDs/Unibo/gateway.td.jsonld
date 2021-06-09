@@ -64,8 +64,6 @@
     "security": [
         "nosec_sc"
     ],
-    "id": "urn:uuid:d1c252c1-2e5e-45c8-82f0-c5fafe12575a",
-    "forms": [],
     "securityDefinitions": {
         "nosec_sc": {
             "scheme": "nosec"

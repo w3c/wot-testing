@@ -96,7 +96,6 @@
     "security": [
         "basic_sc"
     ],
-    "id": "urn:uuid:e9589095-f6df-4124-b3d7-1fcfd163c73e",
     "forms": [
         {
             "href": "http://example.it/DA00AW2N-control-network/all/properties",
