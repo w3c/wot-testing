@@ -24,8 +24,26 @@
            - Intel (script), node-wot
            - TMs: Siemens
                - Second source of TMs? Volto? Oracle? SDF/Koster?
+  - Next steps: 
+      - update script to use latest assertion tester (McCool)
+          - https://github.com/w3c/wot-testing/blob/main/data/testing/tests/2019-05/update.sh
+          - refactored so... assertions package, CLI version
+          - [https://github.com/mmccool/wot-thing-description/tree/testing-test documentation]; also -h option
+     - copy CSV result files over to thing-description (McCool)
+          - https://github.com/mmccool/wot-thing-description/tree/testing-test
+     - update draft report in 
+          - https://github.com/w3c/wot-thing-description/pull/1155
+     - update manual.csv (Ege) 
+          - By June 11
+          - everyone updates manual assertions early next week...
+     - McCool update report for June 16 and June 18
+          - If by June 16 there is an update manual.csv (from Ege), McCool can edit the CSv files to remove the unneeded assertions
 * Discovery Testing
-    - Directory tests - Farshid documenting
+    - Directory tests 
+        - [https://github.com/farshidtz/wot-discovery-testing Farshid Discovery tests]
+        - Need to update to output just CSV files
+        - Need to output sub-tests
+        - Need to map tests to features/assertions
     - Self-describing - Intel, Siemens - network API test
     - Introductions
         - DNS-SD - service names, txt records
