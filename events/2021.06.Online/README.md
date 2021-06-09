@@ -13,18 +13,12 @@
 * [Thing Description](TD)
     
 ## To Do:
-* DONE: Link previous testfest 
-* DONE: Link to webex, schedule, etc. logistics (e.g. in wiki) 
-* DONE (directories created): Organize by deliverable
-    - Thing Description 1.1
-    - Discovery
-    - Profiles
-    - Architecture
 * Define what an implementation is
     - Per deliverable
     - Can use previous discussion (eg Princeton testfest) as a starting point
     - Profiles
          - Does a implementation (e.g. node-wot) always need to check that a TD satisfies the profile constraints?
+    - Discovery
 * Describe implementations
     - Per deliverable
     - In each source repo...
