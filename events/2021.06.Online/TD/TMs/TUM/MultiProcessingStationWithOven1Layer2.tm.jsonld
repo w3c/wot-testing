@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "MultiProcessingStationWithOven1Layer2",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "properties": {
+    "currentProductPosition": {
+      "description": "Current position of a product",
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    }
+  },
+  "actions": {
+    "startBaking": {
+      "description": "Starts baking the product for 10 seconds",
+      "input": {
+        "type": "number"
+      }
+    },
+    "startSawing": {
+      "description": "Starts sawing the product for 10 seconds and then sorts it",
+      "input": {
+        "type": "number"
+      }
+    },
+    "sortProduct": {
+      "description": "Sort the product from current position"
+    }
+  },
+  "events": {
+    "conveyorSensorObjectDetected": {
+      "description": "Conveyor sensor detected an object"
+    }
+  }
+}
