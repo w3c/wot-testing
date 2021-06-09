@@ -1,5 +1,6 @@
 "Org",          "Name",                 "Active",   "Comment",                                               "Implementation"
-"Hitachi",      "myRasPiLED",             "yes",    "in Plugfest VPN",                                       "hitachi-Node-RED"
+"Hitachi",      "myRasPiLED",             "no",     "in my local network",                                   "hitachi-Node-RED"
+"Hitachi",      "ktom5stack",             "no",     "in my local network",                                   "hitachi-cplusplus-m5stack"
 "Siemens",      "Smart-Coffee-Machine",   "yes",    "http://plugfest.thingweb.io:8083/smart-coffee-machine", "node-wot"
 "Siemens",      "TestThing",              "yes",    "http://plugfest.thingweb.io:8083/testthing",            "node-wot"
 "Siemens",      "Multilanguage Counter",  "yes",    "http://plugfest.thingweb.io:8083/counter",              "node-wot"
