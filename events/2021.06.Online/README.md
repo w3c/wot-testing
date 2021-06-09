@@ -11,6 +11,31 @@
 * [Profiles](Profiles)
 * [Discovery](Discovery)
 * [Thing Description](TD)
+
+## Actions/Comments
+* TD/TM Testing
+   - Known gaps: oauth, body, canonicalization, signing?
+       - OAuth2
+           - LinkSmart Directory - producer
+           - UPM's Directory - producer?
+           - node-wot (?) - producer/consumer
+           - Node-RED (?) - consumer (of directory)
+       - Canonicalization/signing (JWS)
+           - Intel (script), node-wot
+           - TMs: Siemens
+               - Second source of TMs? Volto? Oracle? SDF/Koster?
+* Discovery Testing
+    - Directory tests - Farshid documenting
+    - Self-describing - Intel, Siemens - network API test
+    - Introductions
+        - DNS-SD - service names, txt records
+            - Discoverer: Node-RED, node-wot, webthings-io
+            - Discoveree: linksmart directory, Node-RED
+        - DID - endpoints
+            - method: github?
+            - volunteers: Intel, Siemens?
+        - CoRE RD - endpoints
+            - volunteers: Cristiano, Philipp
     
 ## To Do:
 * Define what an implementation is
@@ -23,11 +48,6 @@
     - Per deliverable
     - In each source repo...
 * Collect data for each implementation
-    - Collecting TDs
-    - Tests (eg output files) for discovery
-        - Directory services
-        - Peer-to-Peer services (manual testing possible...)
-        - Introduction services (manual testing... necessary?)
 * Describe testing plan
     - Look at last year's CR transition request for format and previous version
 * Index testing tools
