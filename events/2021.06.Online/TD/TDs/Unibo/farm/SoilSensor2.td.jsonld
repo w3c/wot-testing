@@ -1,0 +1,126 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "title": "SoilSensor2",
+    "@type": "sosa:Sensor",
+    "description": "A soil sensor",
+    "links": [
+        {
+            "href": "http://arces143100.arces.unibo.it/assets/farm/soilsensor.obj",
+            "rel": "model"
+        }
+    ],
+    "securityDefinitions": {
+        "no_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "no_sc"
+    ],
+    "properties": {
+        "temperature": {
+            "description": "Soil Temperature",
+            "type": "number",
+            "unit": "Celsius",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/SoilSensor2/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/SoilSensor2/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false,
+            "observable": false
+        },
+        "moisture": {
+            "description": "Soil water content in %",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/SoilSensor2/properties/moisture",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/SoilSensor2/properties/moisture",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false,
+            "observable": false
+        }
+    },
+    "events": {
+        "tooDry": {
+            "description": "Informs if the soil is too try",
+            "data": {
+                "type": "number",
+                "unit": "Celsius"
+            },
+            "forms": [
+                {
+                    "href": "http://arces143100.arces.unibo.it:8080/SoilSensor2/events/tooDry",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent"
+                    ]
+                },
+                {
+                    "href": "ws://arces143100.arces.unibo.it:8080/SoilSensor2/events/tooDry",
+                    "contentType": "application/json",
+                    "op": "subscribeevent"
+                },
+                {
+                    "href": "coap://arces143100.arces.unibo.it:5683/SoilSensor2/events/tooDry",
+                    "contentType": "application/json",
+                    "op": "subscribeevent"
+                }
+            ]
+        }
+    },
+    "position": {
+        "x": 23.68010711669922,
+        "y": -18.3692684173584,
+        "z": 9.918664932250977
+    },
+    "id": "urn:uuid:2f5296db-d226-46d9-b2bd-c9c16c9508d7",
+    "forms": [
+        {
+            "href": "http://arces143100.arces.unibo.it:8080/SoilSensor2/all/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}
