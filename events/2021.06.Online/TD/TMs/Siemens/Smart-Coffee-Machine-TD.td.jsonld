@@ -9,7 +9,7 @@
     "description": "A smart coffee machine with a range of capabilities.\nA complementary tutorial is available at http://www.thingweb.io/smart-coffee-machine.html.",
     "support": "git://github.com/eclipse/thingweb.node-wot.git",
     "version": {"instance": "0.5.1", "model": "1.0.0"},
-    "links": [{"rel": "type", "href":"https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.03.Online/TMs/Siemens/Smart-Coffee-Machine-TM.jsonld","type": "application/jsonld" }],
+    "links": [{"rel": "type", "href":"https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.06.Online/TD/TMs/Siemens/Smart-Coffee-Machine-TM.tm.jsonld","type": "application/jsonld" }],
     "properties": {
         "allAvailableResources": {
             "type": "object",
