@@ -12,7 +12,7 @@
 "UNIBO",         "SoilSensor1",           "yes",    "A virtual soil sensor. see http://arces143100.arces.unibo.it/",        "impl-eclipse-node-wot"
 "UNIBO",         "SoilSensor2",           "yes",    "A virtual soil sensor. see http://arces143100.arces.unibo.it/",        "impl-eclipse-node-wot"
 "UNIBO",         "SoilSensor3",           "yes",    "A virtual soil sensor. see http://arces143100.arces.unibo.it/",        "impl-eclipse-node-wot"
-"UNIBO",         "SoilSensor4",           "yes",    "A virtual soil sensor. see http://arces143100.arces.unibo.it/",        "impl-eclipse-node-wot" 
+"UNIBO",         "SoilSensor4",           "yes",    "A virtual soil sensor. see http://arces143100.arces.unibo.it/",        "impl-eclipse-node-wot"
 "UNIBO",         "Sprinkler0",            "yes",    "A virtual sprinkler actuator. see http://arces143100.arces.unibo.it/", "impl-eclipse-node-wot" 
 "UNIBO",         "Sprinkler1",            "yes",    "A virtual sprinkler actuator. see http://arces143100.arces.unibo.it/", "impl-eclipse-node-wot" 
 "UNIBO",         "Sprinkler2",            "yes",    "A virtual sprinkler actuator. see http://arces143100.arces.unibo.it/", "impl-eclipse-node-wot" 
