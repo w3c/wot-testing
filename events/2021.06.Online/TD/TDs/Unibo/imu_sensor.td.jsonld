@@ -1,0 +1,340 @@
+{
+    "title": "DA00AW2N-2-measure",
+    "description": "IMU sensor",
+    "@type": [
+        "sosa:Sensor",
+        "Thing"
+    ],
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+        },
+        {
+            "ssn": "https://raw.githubusercontent.com/oeg-upm/ssn-resource-center/master/json-ld/ssnContextV2.json"
+        },
+        {
+            "qudt": "http://www.qudt.org/qudt/owl/1.0.0/quantity/"
+        },
+        {
+            "xsd": "http://www.w3.org/2001/XMLSchema"
+        },
+        {
+            "san": "https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "links": [
+        {
+            "href": "./DA00AW2N-2-control",
+            "rel": "san:controlledBy"
+        },
+        {
+            "href": "https://api.jsonbin.io/b/5f6afc2b7243cd7e8241dc6b",
+            "rel": "sosa:isHostedBy",
+            "type": "application/ld+json"
+        }
+    ],
+    "properties": {
+        "Acceleration": {
+            "ssn:forProperty": "qudt:Acceleration",
+            "type": "object",
+            "@type": "sosa:Observation",
+            "description": "Current acceleration reult",
+            "observable": false,
+            "readOnly": true,
+            "writeOnly": false,
+            "properties": {
+                "sosa:hasResult": {
+                    "type": "object",
+                    "@type": "sosa:Result",
+                    "properties": {
+                        "x": {
+                            "type": "number",
+                            "unit": "qudt:Gravity"
+                        },
+                        "y": {
+                            "type": "number",
+                            "unit": "qudt:Gravity"
+                        },
+                        "z": {
+                            "type": "number",
+                            "unit": "qudt:Gravity"
+                        }
+                    }
+                },
+                "sosa:ResultTime": {
+                    "type": "string",
+                    "@type": "xsd:DateTime"
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/Acceleration",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "AccelerationSamples": {
+            "ssn:forProperty": "qudt:Acceleration",
+            "type": "array",
+            "description": "Current acceleration result saples",
+            "observable": false,
+            "readOnly": true,
+            "writeOnly": false,
+            "items": {
+                "type": "object",
+                "@type": "sosa:Observation",
+                "properties": {
+                    "sosa:hasResult": {
+                        "type": "object",
+                        "@type": "sosa:Result",
+                        "properties": {
+                            "x": {
+                                "type": "number",
+                                "unit": "qudt:Gravity"
+                            },
+                            "y": {
+                                "type": "number",
+                                "unit": "qudt:Gravity"
+                            },
+                            "z": {
+                                "type": "number",
+                                "unit": "qudt:Gravity"
+                            }
+                        }
+                    },
+                    "sosa:ResultTime": {
+                        "type": "string",
+                        "@type": "xsd:DateTime"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/AccelerationSamples",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "Gyroscope": {
+            "ssn:forProperty": "qudt:Angle",
+            "type": "object",
+            "@type": "sosa:Observation",
+            "description": "Current gyroscope result",
+            "observable": false,
+            "readOnly": true,
+            "writeOnly": false,
+            "properties": {
+                "sosa:hasResult": {
+                    "type": "object",
+                    "@type": "sosa:Result",
+                    "properties": {
+                        "x": {
+                            "type": "number",
+                            "unit": "qudt:Angle"
+                        },
+                        "y": {
+                            "type": "number",
+                            "unit": "qudt:Angle"
+                        },
+                        "z": {
+                            "type": "number",
+                            "unit": "qudt:Angle"
+                        }
+                    }
+                },
+                "sosa:ResultTime": {
+                    "type": "string",
+                    "@type": "xsd:DateTime"
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/Gyroscope",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "GyroscopeSamples": {
+            "ssn:forProperty": "qudt:Angle",
+            "type": "array",
+            "description": "Current gyroscope result saples",
+            "observable": false,
+            "readOnly": true,
+            "writeOnly": false,
+            "items": {
+                "type": "object",
+                "@type": "sosa:Observation",
+                "properties": {
+                    "sosa:hasResult": {
+                        "type": "object",
+                        "@type": "sosa:Result",
+                        "properties": {
+                            "x": {
+                                "type": "number",
+                                "unit": "qudt:Angle"
+                            },
+                            "y": {
+                                "type": "number",
+                                "unit": "qudt:Angle"
+                            },
+                            "z": {
+                                "type": "number",
+                                "unit": "qudt:Angle"
+                            }
+                        }
+                    },
+                    "sosa:ResultTime": {
+                        "type": "string",
+                        "@type": "xsd:DateTime"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/GyroscopeSamples",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "GravityScale": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "description": "Get a gravivity scale used to output data samples",
+            "value": 2,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/GravityScale",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "GyroscopeScale": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "description": "Get a gyroscope scale used to output data samples",
+            "value": 125,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/GyroscopeScale",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "AccelerationThreshold": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "description": "Get a threshold for ThresholdReached event",
+            "value": 1000,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/AccelerationThreshold",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        },
+        "GyroscopeThreshold": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "description": "Get a threshold for ThresholdReached event",
+            "value": 1000,
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/properties/GyroscopeThreshold",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        }
+    },
+    "events": {
+        "AccelerationThresholdReached": {
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/events/AccelerationThresholdReached",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent"
+                    ]
+                }
+            ]
+        },
+        "GyroscopeThresholdReached": {
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-2-measure/events/GyroscopeThresholdReached",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "@id": "urn:dev:serial:DA00AW2N",
+    "@serialNumber": "DA00AW2N",
+    "@sensorAddress": "2",
+    "@sensorType": "measure",
+    "security": [
+        "nosec_sc"
+    ],
+    "forms": [
+        {
+            "href": "http://example.it/DA00AW2N-2-measure/all/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    }
+}

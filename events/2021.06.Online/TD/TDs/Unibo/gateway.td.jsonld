@@ -1,0 +1,72 @@
+{
+    "title": "DA00AW2N-measure-network",
+    "description": "Cluster Head test thing",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld"
+        },
+        {
+            "ssn": "https://raw.githubusercontent.com/oeg-upm/ssn-resource-center/master/json-ld/ssnContextV2.json"
+        },
+        {
+            "qudt": "http://www.qudt.org/qudt/owl/1.0.0/quantity/"
+        },
+        {
+            "xsd": "http://www.w3.org/2001/XMLSchema"
+        },
+        {
+            "san": "https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "links": [
+        {
+            "href": "https://api.jsonbin.io/b/5f6afc2b7243cd7e8241dc6b",
+            "rel": "sosa:isHostedBy",
+            "type": "application/ld+json"
+        }
+    ],
+    "properties": {
+        "MeasureSensors": {
+            "type": "array",
+            "description": "Sensors for measurement",
+            "observable": false,
+            "readOnly": true,
+            "writeOnly": false,
+            "items": {
+                "type": "object",
+                "@type": "sosa:Sensor",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://example.it/DA00AW2N-control-network/properties/MeasureSensors",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ]
+        }
+    },
+    "@id": "urn:dev:serial:DA00AW2N",
+    "@serialNumber": "DA00AW2N",
+    "@sensorType": "measure-network",
+    "@type": "Thing",
+    "security": [
+        "nosec_sc"
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    }
+}

@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "AutomatedHighBayWarehouseLayer2",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "properties": {
+    "currentProductPosition": {
+      "description": "Current position of a product",
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    }
+  },
+  "actions": {
+    "goHome": {
+      "description": "Sends the arm home"
+    },
+    "pickObjectAtPosition": {
+      "description": "Pick object at a specified warehouse position",
+      "input": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "column": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 3
+          }
+        }
+      }
+    },
+    "putObjectAtPosition": {
+      "description": "Put object at a specified warehouse position",
+      "input": {
+        "type": "object",
+        "properties": {
+          "row": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "column": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 3
+          }
+        }
+      }
+    },
+    "pickObjectFromConveyor": {
+      "description": "Pick object from a conveyor belt"
+    },
+    "putObjectOnConveyor": {
+      "description": "Put object on a conveyor belt"
+    },
+    "rollObjectForward": {
+      "description": "Start the conveyor until object reaches outside sensors"
+    },
+    "rollObjectBackward": {
+      "description": "Start the conveyor until object reaches outside sensors"
+    }
+  },
+  "events": {
+    "insideSensorObjectDetected": {
+      "description": "Inside sensor detected an object"
+    },
+    "outsideSensorObjectDetected": {
+      "description": "Outside sensor detected an object"
+    }
+  }
+}
