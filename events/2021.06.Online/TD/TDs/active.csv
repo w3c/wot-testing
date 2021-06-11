@@ -21,3 +21,5 @@
 "UNIBO",         "gateway_control",       "no",     "The gateway control interface"                                        "node-wot" 
 "UNIBO",         "imu_sensor",            "no",     "An example of an imu sensor annotated with sosa"                      "node-wot" 
 "UNIBO",         "imu_control",           "no",     "The imu sensor control interface"                                     "node-wot" 
+"Webthingsio",   "pressure",              "no",     "Virtual Barometric Pressure Sensor"                                   "webthings-gateway" 
+"Webthingsio",   "colorlight",            "no",     "Virtual On/Off Color Light"                                           "webthings-gateway" 
