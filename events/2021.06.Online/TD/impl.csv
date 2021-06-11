@@ -3,7 +3,7 @@
 "impl-intel-ocf",                   "Intel Corporation",     "OCF Metadata Translator",           "producer"
 "impl-intel-speak",                 "Intel Corporation",     "WebSpeak",                          "producer"
 "impl-intel-camera",                "Intel Corporation",     "Simple Web Camera",                 "producer"
-"impl-siemens-node-wot",            "Siemens AG",            "node-wot",                          "consumer producer"
+"impl-eclipse-node-wot",            "Eclipse Foundation",    "node-wot",                          "consumer producer"
 "impl-siemens-thingweb-directory",  "Siemens AG",            "Thingweb Directory",                "consumer producer"
 "impl-siemens-wot-fxui",            "Siemens AG",            "WoT-fxUI",                          "consumer"
 "impl-panasonic-authentication",    "Panasonic Corporation", "Authentication Server",             "component"
