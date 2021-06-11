@@ -28,7 +28,6 @@
             "type" : "string",
             "enum" : ["on", "off", "error"],
             "forms":[{"href": "coap://example.com/Status"}]
-        },
-        "required": ["Status"]
+        }
 	}
 }
