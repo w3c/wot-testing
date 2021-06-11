@@ -53,4 +53,4 @@
 "td-model-tmRef-2","null","not testable with Assertion Tester"
 "td-model-tmRef-overwrite","null","not testable with Assertion Tester"
 "td-security-in-query-over-uri","null","not testable with Assertion Tester"
-"td-security-no-secrets","null","not testable with Assertion Tester"
+"td-security-no-secrets","pass","not testable with Assertion Tester"
