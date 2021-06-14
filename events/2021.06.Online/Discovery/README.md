@@ -1,5 +1,7 @@
 # Discovery Testing
 
+## TO DO
+* Need implementation descriptions.  Following the format at https://github.com/w3c/wot-testing/blob/main/events/2021.06.Online/TD/templates/implementations/intel.html would be helpful.   A PR into Discovery/implementations/{linksmart,upmdir} should be done.
 
 
 ## Types of implementations
