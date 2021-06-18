@@ -61,7 +61,7 @@ shopt -s nullglob
 function merge() {
   Inputs=$1
   Output=$2
-  echo ">>>>> MERGE: ${Inputs[@]} into $Output"
+  echo ">>>>> MERGE: Inputs=${Inputs[@]} Output=$Output"
   (
     cd $ASCLI
     if [[ -f $Output ]]; then
@@ -88,7 +88,7 @@ function merge() {
 function process() {
   Input=$1
   Output=$2
-  echo ">>>>> PROCESS: $Input"
+  echo ">>>>> PROCESS: Input=$Input Output=$Output"
   (
     cd $ASCLI
     if [[ -f $Output ]]; then
@@ -109,16 +109,18 @@ function process() {
       echo "  node index.js $Input -a -s > $Output"
       node index.js $Input -a -s > $Output
     fi
-    Extras="${Input%%.*}.csv"
-    Temp="${Extras}.temp.csv"
+    # Extras="${Input%%.*}.csv"
+    Extras="$(dirname $Input)/$(basename $Input .td.jsonld).csv"
+    Temp="$(dirname $Output)/$(basename ${Extras}.temp.csv)"
     if [[ -f $Extras ]]; then
       # Merge results
       echo "  node index.js $Output $Extras -a -s > $Temp"
       node index.js $Output $Extras -a -s > $Temp
     else
       # Merge results even if no extras to sort and merge children
-      echo "  node index.js $Output -a -s > $Temp"
-      node index.js $Output -a -s > $Temp
+      # echo "  node index.js $Output -a -s > $Temp"
+      # node index.js $Output -a -s > $Temp
+      cp $Output $Temp
     fi
     echo "  mv $Temp $Output"
     mv $Temp $Output
@@ -165,8 +167,7 @@ for OrgDir in $INPUTS/* ; do
     for ImplPath in $AbsOrgDir/*.td.jsonld ; do
        if [[ -f $ImplPath ]]; then
           export ImplFile=$(basename $ImplPath)
-          # need to strip off *two* suffixes to get implementation name...
-          export Impl="${ImplFile%%.*}"
+          export Impl=$(basename $ImplFile .td.jsonld)
           echo ">>>>  Processing implementation $Org/$Impl"
           echo "       in $ImplPath"
           echo "mkdir -p $OUTPUTS/$Org"
@@ -191,7 +192,7 @@ for OrgDir in $INPUTS/* ; do
              if [[ -f $InstancePath ]]; then
                 export InstanceFile=$(basename $InstancePath)
                 # need to strip off *two* suffixes to get instance name...
-                export Instance="${InstanceFile%%.*}"
+                export Instance=$(basename $InstanceFile .td.jsonld)
                 echo ">>>>> Processing instance $Org/$Impl/$Instance"
                 echo "       in $InstancePath"
                 echo "process $InstancePath $AbsOutDir/$Instance.csv"
