@@ -57,15 +57,6 @@ process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-c
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-camera.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-camera.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp2.csv
-Error: Missing ID CSV header
-    at mergeResults (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:73:31)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:220:9
-    at new Promise (<anonymous>)
-    at resultMerger (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:219:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:256:13
-    at new Promise (<anonymous>)
-    at mergeReports (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:254:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:204:9
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv
   rm /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-camera.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-camera.csv.temp.csv
@@ -88,15 +79,6 @@ process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-i
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-inference.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-inference.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp2.csv
-Error: Missing ID CSV header
-    at mergeResults (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:73:31)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:220:9
-    at new Promise (<anonymous>)
-    at resultMerger (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:219:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:256:13
-    at new Promise (<anonymous>)
-    at mergeReports (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:254:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:204:9
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv
   rm /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-inference.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-inference.csv.temp.csv
@@ -110,15 +92,6 @@ process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-s
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-speak.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-speak.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp2.csv
-Error: Missing ID CSV header
-    at mergeResults (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:73:31)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:220:9
-    at new Promise (<anonymous>)
-    at resultMerger (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:219:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:256:13
-    at new Promise (<anonymous>)
-    at mergeReports (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:254:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:204:9
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv
   rm /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp1.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-speak.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-speak.csv.temp.csv
@@ -339,15 +312,6 @@ process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-o
 merge /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-ocf.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv
 >>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-ocf.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-button1touch.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-button2touch.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-buzzer0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-illuminance0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-illuminance2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0blue.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0green.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0red.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1red.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1relay.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2relay.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2side.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2top.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-rgbled1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle2.csv Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Intel/intel-ocf.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-button1touch.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-button2touch.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-buzzer0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-illuminance0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-illuminance2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0blue.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0green.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led0red.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1red.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led1relay.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2mosfet.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2relay.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2side.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-led2top.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-motion2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-rgbled1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-temperature2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf/Intel-OCF-toggle2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv.temp.csv
-Error: Missing ID CSV header
-    at mergeResults (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:73:31)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:220:9
-    at new Promise (<anonymous>)
-    at resultMerger (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:219:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:256:13
-    at new Promise (<anonymous>)
-    at mergeReports (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:254:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:204:9
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv
 <<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Intel/intel-ocf.csv
 <<<< Intel/intel-ocf processed
@@ -369,14 +333,6 @@ mkdir -p outputs/TDs/Siemens
 process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Siemens/ecar.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Siemens/ecar.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Siemens/ecar.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv
-/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65
-                const tdName = tdId.replace(/:/g, "_")
-                                    ^
-
-TypeError: Cannot read property 'replace' of undefined
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65:37
-    at Array.forEach (<anonymous>)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Siemens/ecar.csv
 <<<< Siemens/ecar processed
@@ -635,14 +591,6 @@ mkdir -p outputs/TDs/Unibo
 process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway_control.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway_control.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway_control.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv
-/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65
-                const tdName = tdId.replace(/:/g, "_")
-                                    ^
-
-TypeError: Cannot read property 'replace' of undefined
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65:37
-    at Array.forEach (<anonymous>)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway_control.csv
 <<<< Unibo/gateway_control processed
@@ -652,14 +600,6 @@ mkdir -p outputs/TDs/Unibo
 process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/gateway.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv
-/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65
-                const tdName = tdId.replace(/:/g, "_")
-                                    ^
-
-TypeError: Cannot read property 'replace' of undefined
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65:37
-    at Array.forEach (<anonymous>)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/gateway.csv
 <<<< Unibo/gateway processed
@@ -669,14 +609,6 @@ mkdir -p outputs/TDs/Unibo
 process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_control.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_control.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_control.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv
-/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65
-                const tdName = tdId.replace(/:/g, "_")
-                                    ^
-
-TypeError: Cannot read property 'replace' of undefined
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65:37
-    at Array.forEach (<anonymous>)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_control.csv
 <<<< Unibo/imu_control processed
@@ -686,14 +618,6 @@ mkdir -p outputs/TDs/Unibo
 process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_sensor.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv
 >>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_sensor.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/imu_sensor.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv
-/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65
-                const tdName = tdId.replace(/:/g, "_")
-                                    ^
-
-TypeError: Cannot read property 'replace' of undefined
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:65:37
-    at Array.forEach (<anonymous>)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
   mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/imu_sensor.csv
 <<<< Unibo/imu_sensor processed
@@ -775,15 +699,6 @@ process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Unibo/farm/Sp
 merge /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm.csv
 >>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor3.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor4.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler3.csv Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm.csv
   node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor3.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/SoilSensor4.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler0.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler1.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler2.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm/Sprinkler3.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm.csv
-Error: Missing ID CSV header
-    at mergeResults (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:73:31)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:220:9
-    at new Promise (<anonymous>)
-    at resultMerger (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/mergeResults.js:219:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:256:13
-    at new Promise (<anonymous>)
-    at mergeReports (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:254:12)
-    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/index.js:204:9
 <<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm.csv
 <<<< Unibo/farm processed
 <<< Unibo processed
