@@ -5,62 +5,26 @@ rm -r outputs/TDs/*
 >>> Create output directory for Hitachi
 mkdir -p outputs/TDs/Hitachi
 >>> Copy any manual assertions for Hitachi
-cp TDs/Hitachi/hitachi-acc-air.csv.temp.csv outputs/TDs/Hitachi/
-cp TDs/Hitachi/hitachi-led.csv.temp.csv outputs/TDs/Hitachi/
 >>> Create output directory for Intel
 mkdir -p outputs/TDs/Intel
 >>> Copy any manual assertions for Intel
 cp TDs/Intel/intel-camera.csv outputs/TDs/Intel/
-cp TDs/Intel/intel-camera.csv.temp.csv outputs/TDs/Intel/
-cp TDs/Intel/intel-geolocator.csv.temp.csv outputs/TDs/Intel/
 cp TDs/Intel/intel-inference.csv outputs/TDs/Intel/
-cp TDs/Intel/intel-inference.csv.temp.csv outputs/TDs/Intel/
 cp TDs/Intel/intel-ocf.csv outputs/TDs/Intel/
 cp TDs/Intel/intel-proxy.csv outputs/TDs/Intel/
 cp TDs/Intel/intel-speak.csv outputs/TDs/Intel/
-cp TDs/Intel/intel-speak.csv.temp.csv outputs/TDs/Intel/
 >>> Create output directory for Siemens
 mkdir -p outputs/TDs/Siemens
 >>> Copy any manual assertions for Siemens
-cp TDs/Siemens/counter.csv.temp.csv outputs/TDs/Siemens/
-cp TDs/Siemens/ecar.csv.temp.csv outputs/TDs/Siemens/
-cp TDs/Siemens/pv-system.csv.temp.csv outputs/TDs/Siemens/
-cp TDs/Siemens/smart-coffee-machine.csv.temp.csv outputs/TDs/Siemens/
-cp TDs/Siemens/testthing.csv.temp.csv outputs/TDs/Siemens/
 >>> Create output directory for TUM
 mkdir -p outputs/TDs/TUM
 >>> Copy any manual assertions for TUM
-cp TDs/TUM/ConveyorBelt1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/ConveyorBelt2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/Daylight.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/DimmerSwitch.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/DobotMagician.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/HueIndoorSensor1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/HueIndoorSensor2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/HueOutdoorSensor1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/InfraredSensor1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/InfraredSensor2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/lightTD1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/lightTD2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/PanTiltHat1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/PanTiltHat2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/RainbowHAT1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/RainbowHAT2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/ScrollPhat.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/SenseHat_1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/SenseHat_2.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/SenseHat_3.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/SenseHat_4.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/Uarm.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/UnicornPHat1.csv.temp.csv outputs/TDs/TUM/
-cp TDs/TUM/UnicornPHat2.csv.temp.csv outputs/TDs/TUM/
 >>> Create output directory for Unibo
 mkdir -p outputs/TDs/Unibo
 >>> Copy any manual assertions for Unibo
-cp TDs/Unibo/gateway_control.csv.temp.csv outputs/TDs/Unibo/
-cp TDs/Unibo/gateway.csv.temp.csv outputs/TDs/Unibo/
-cp TDs/Unibo/imu_control.csv.temp.csv outputs/TDs/Unibo/
-cp TDs/Unibo/imu_sensor.csv.temp.csv outputs/TDs/Unibo/
+>>> Create output directory for Webthingsio
+mkdir -p outputs/TDs/Webthingsio
+>>> Copy any manual assertions for Webthingsio
 << Done setup
 >> Processing
 >>> Processing organization Hitachi
@@ -823,4 +787,25 @@ Error: Missing ID CSV header
 <<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Unibo/farm.csv
 <<<< Unibo/farm processed
 <<< Unibo processed
+>>> Processing organization Webthingsio
+     in /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio
+>>>>  Processing implementation Webthingsio/colorlight
+       in /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/colorlight.td.jsonld
+mkdir -p outputs/TDs/Webthingsio
+process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/colorlight.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/colorlight.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/colorlight.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv
+  mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/colorlight.csv
+<<<< Webthingsio/colorlight processed
+>>>>  Processing implementation Webthingsio/pressure
+       in /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/pressure.td.jsonld
+mkdir -p outputs/TDs/Webthingsio
+process /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/pressure.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/pressure.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/TDs/Webthingsio/pressure.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv
+  mv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.06.Online/TD/outputs/TDs/Webthingsio/pressure.csv
+<<<< Webthingsio/pressure processed
+<<< Webthingsio processed
 << Done processing
