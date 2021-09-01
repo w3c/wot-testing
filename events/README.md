@@ -8,11 +8,14 @@ Plugfests and other testing event logistics and results.
     * [Wiki](https://www.w3.org/WoT/IG/wiki/F2F_meeting,_1-12_June_2020,_Online)
     * [Index](2020.06.Online/README.md)
 * __September 2020 Online Plugfest__:
-    * Sept 28 to Oct 2
+    * September 28 to October 2
     * [Index](2020.09.Online/README.md)
 * __March 2021 Online Plugfest__:
     * March 1 to March 5
     * [Index](2021.03.Online/README.md)
+* __September 2021 Online Plugfest__:
+    * September 27 to October 1
+    * [Index](2021.09.Online/README.md)
 
 ## Results
 See issue tracker for project statuses and outcomes.
