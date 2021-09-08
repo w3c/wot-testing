@@ -3,6 +3,7 @@
 ## Logistics 
 * Date: Sept 27-Oct 1
 * Time: 9am-10am (Eastern Time) daily sync meeting
+   - Revisit: this is not convenient in Japan, but...
 * Location: WebEx: for [Members](https://lists.w3.org/Archives/Member/member-wot-wg/2021Sep/0001.html) and for [IEs](https://lists.w3.org/Archives/Group/group-wot-ie/2021Sep/0000.html)
 * VPN: [Instructions](https://github.com/w3c/wot-testing/tree/main/tools/vpn)
 
