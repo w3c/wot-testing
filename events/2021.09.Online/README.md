@@ -3,7 +3,7 @@
 ## Logistics 
 * Date: Sept 27-Oct 1
 * Time: 9am-10am (Eastern Time) daily sync meeting
-* Location: WebEx TBD
+* Location: [WebEx](https://lists.w3.org/Archives/Member/member-wot-wg/2021Sep/0001.html)
 
 ## Activities
 
