@@ -9,7 +9,7 @@ for fixed IP addresses and for unfixed addresses allocated by DHCP.
 If you need fixed IP addresses,
 you must check the [IP address table](ip.csv) to reserve it in advance.
 The following information for the actual connection will be sent to you as needed.
-Please send your reqeust to the mailing list.
+Please send your request to the mailing list.
 Information needed to connect
 - User ID/password (if you have preferred user id name, please send it with the request)
 - Server IP address (needed for firewall configuration; if you are connecting through an ISP, try using a [service](https://www.get-myip.com/) to find the IP you are connecting from)
