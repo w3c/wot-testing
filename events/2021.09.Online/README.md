@@ -25,12 +25,29 @@
 * Generate test cases to fill gaps
 * Identify features that need manual assertions from implementors
 
+Logistics:
+* Testing requires a live service for TDD to poke at
+** Globally visible TDD service using LinkSmart is straightforward
+** Other TDD supports SPARQL
+* Also needs at least two Things that can provide peer-to-peer discovery
+* Various Introductions also useful, e.g. mDNS, DNS-SD
+** mDNS testing in turn needs VPN
+* Note RIoT supports .well-known and Core Link intros
+* Still need DID test case
+
 ## Plugfest
 
 ### RIoT Integration
-Participants: Blum, McCool
+Participants: Blum, Romann, McCool
 * Arduino implementation
 * Tutorial review and update
+
+Logistics:
+* RIoT is natively v6
+* Supports CoAP
+* Supports .well-known and CoreLink introduction mechanisms for discovery
+* VPN is currently only v4; to set up to use v6 needs some reconfiguration (at least)
+* Arduino may be able to use v4; separate implementation
 
 ### One Data Model
 Participants: Koster
@@ -53,21 +70,35 @@ Participants: TBD (via Matsuda), Koster
 Note: if we translate ALL the device descriptions, there are about 30 of them, and this will
 provide additional testing material and another implementation.  
 
+Logistics:
+* VPN is desirable/necessary for ECHONET developers
+* if ECHONET is on VPN, consumers also need access to it
+* Either need consumers on VPN or able to access via a proxy
+* Consumers: node-wot (volunteer needed), NodeRED (Toumura)
+
 ### Node-RED
 Participants: Toumura, McCool
 * Discovery integration (MDNS + TDD queries)
 * Semantic/keyword searches
 * Retail use case (Connexxus)
-* Possible overlap with ECHONET (Use Node-RED as a client, ECHONET Web API provides only servers)
+* Will be used to exercise ECHONET
+** Use Node-RED as a client
+** ECHONET Web API provides only servers
 
 ### Node-WoT
-Particpants: ?
+Particpants: Siemens (Sebastian)? Daniel? TUM (Ege)?
 * Discovery integration
 * Use as client for ECHONET above
+** In which case it needs to be on the VPN
 
-### Geospatial Data
+### Geospatial (Meta)Data
 Participants: McCool
 * Test encoding of geospatial data in TDs using extension
+** Semantic extension - ontology, etc.
+** Query extension to TDDs - collaborate with OGC, IEEE, SDW, etc.
+** Introduction mechanisms - Spatial DNS - IETF collab
+* SPARQL queries in TDD?
+** Prototype spatial search using brute-force filtering.
 
 ### Other Possible Projects
 
