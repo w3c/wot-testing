@@ -28,7 +28,7 @@
       - update script to use latest assertion tester (McCool)
           - https://github.com/w3c/wot-testing/blob/main/data/testing/tests/2019-05/update.sh
           - refactored so... assertions package, CLI version
-          - [https://github.com/mmccool/wot-thing-description/tree/testing-test documentation]; also -h option
+          - [documentation](https://github.com/mmccool/wot-thing-description/tree/testing-test ); also -h option
      - copy CSV result files over to thing-description (McCool)
           - https://github.com/mmccool/wot-thing-description/tree/testing-test
      - update draft report in 
