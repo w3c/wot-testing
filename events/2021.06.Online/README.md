@@ -17,7 +17,7 @@
    - Known gaps: oauth, body, canonicalization, signing?
        - OAuth2
            - LinkSmart Directory - producer
-           - UPM's Directory - producer?
+           - UPM's Directory - producer? 
            - node-wot (?) - producer/consumer
            - Node-RED (?) - consumer (of directory)
        - Canonicalization/signing (JWS)
@@ -40,7 +40,7 @@
           - If by June 16 there is an update manual.csv (from Ege), McCool can edit the CSv files to remove the unneeded assertions
 * Discovery Testing
     - Directory tests 
-        - [https://github.com/farshidtz/wot-discovery-testing Farshid Discovery tests]
+        - [Farshid Discovery tests https://github.com/farshidtz/wot-discovery-testing)
         - Need to update to output just CSV files
         - Need to output sub-tests
         - Need to map tests to features/assertions
