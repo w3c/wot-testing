@@ -2,7 +2,7 @@
 
 ## Participants
 * Van Cu PHAM (Japan Advanced Institute of Science and Technology, ECHONET Consortium)
-* Tomura
+* Toumura
 * Koster (T.B.C.)
 
 ## Things planned to be done
