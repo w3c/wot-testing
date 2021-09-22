@@ -121,3 +121,6 @@ Participants: McCool
 * Tool chain for canonicalization and signing
 * Extension for EJS
 * Generation of examples
+
+## Network configuration
+![Plugfest network](./plugfestnet.svg)
