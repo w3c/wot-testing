@@ -4,6 +4,7 @@
 * Van Cu PHAM (Japan Advanced Institute of Science and Technology, ECHONET Consortium)
 * Toumura
 * Koster (T.B.C.)
+* Scripting API TF (T.B.C.)
 
 ## Things planned to be done
 * Accessing ECHONET devices from one or more WoT consumers (e.g. Node-RED (Tomura), node-wot (need volunteer) )
