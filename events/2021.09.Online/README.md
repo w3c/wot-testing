@@ -58,27 +58,23 @@ Participants: Koster
 * Toolchains for converting from ODM/SDF models to TMs
 * May overlap with ECHONET integration
 
-### ECHONET/WoT Integration
-Participants: TBD (via Matsuda), Koster
-* TMs/ODM for ECHONET Device Descriptions
-    - See https://echonet.jp/web_api/ for JSON device descriptions
-    - These are very similar to TMs, and also include both JA and EN descriptions, so readable for EN readers
-* Generating TDs for ECHONET Lite Web APIs 
-    - Plan A: protocol binding and access devices via a transparent proxy
-    - Plan B: providing translated web APIs via a translation service ("translating proxy")
-        - not clear yet if this will be necessary, TBD
-        - e.g. to translate payloads so they can be described with TD data schemas
-* Registering ECHONET TDs with a WoT TD Directory service (e.g. LinkSmart)
-* Accessing ECHONET devices from one or more WoT consumers (e.g. node-wot or Node-RED)
+### ECHONET Lite Web API/WoT Integration
 
-Note: if we translate ALL the device descriptions, there are about 30 of them, and this will
-provide additional testing material and another implementation.  
+#### Participants
+* Van Cu PHAM (Japan Advanced Institute of Science and Technology, ECHONET Consortium)
+* Tomura
+* Koster (T.B.C.)
 
-Logistics:
-* VPN is desirable/necessary for ECHONET developers
-* if ECHONET is on VPN, consumers also need access to it
-* Either need consumers on VPN or able to access via a proxy
-* Consumers: node-wot (volunteer needed), NodeRED (Toumura)
+#### Things planned to be done
+* Accessing ECHONET devices from one or more WoT consumers (e.g. Node-RED (Tomura), node-wot (need volunteer) )
+  * In this PlugFest, we provide an intermediary that provides translated web APIs via a translation service ("translating proxy"). The intermediary translates payloads so that they can be described with TD data schemas. See https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects/ECHONET/20210917_Plugfest_ECHONETControllerUpdated.pdf
+
+* TMs/ODM for ECHONET Device Descriptions (T.B.C. by Koster)
+  * See https://echonet.jp/web_api/ for JSON device descriptions. These are very similar to TMs, and also include both JA and EN descriptions, so readable for EN readers
+Generating TDs for ECHONET Lite Web APIs.
+
+#### Logistics:
+* It is necessary to use the VPN to access the ECHONET Lite devices via the intermediary.
 
 ### Node-RED
 Participants: Toumura, McCool
