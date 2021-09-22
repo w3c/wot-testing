@@ -119,5 +119,12 @@ Participants: McCool
 * Extension for EJS
 * Generation of examples
 
+#### NHK
+Participants: Endo?
+* WoT device emulator (Android App)
+  * Generates web apis based on TD
+  * Behaves in a WebView web app
+
 ## Network configuration
 ![Plugfest network](./plugfestnet.svg)
+
