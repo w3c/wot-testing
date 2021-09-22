@@ -5,6 +5,7 @@
 * Time: 9am-10am (Eastern Time) daily sync meeting
 * Location: WebEx: for [Members](https://lists.w3.org/Archives/Member/member-wot-wg/2021Sep/0001.html) and for [IEs](https://lists.w3.org/Archives/Group/group-wot-ie/2021Sep/0000.html)
 * VPN: [Instructions](https://github.com/w3c/wot-testing/tree/main/tools/vpn)
+* [Project Descriptions](Projects/README.md)
 
 ## To Do
 * Do we keep using issues for projects and outcomes?
