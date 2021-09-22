@@ -29,5 +29,5 @@ setting up a SoftEther VPN Bridge or an OpenVPN client is better.
 - OpenVPN client (To Do)
 
 ## 3. VPN Server infomation
-- [SoftEther server information on the WG archive (Member-only)](https://lists.w3.org/Archives/Member/member-wot-wg/2020Jun/0056.html)
-- [SoftEther server information on the guests archive (Member-only)](https://lists.w3.org/Archives/Member/member-wot-guests/2020Jun/0015.html)
+- [SoftEther server information on the WG archive (Member-only)](https://lists.w3.org/Archives/Member/member-wot-wg/2021Sep/0006.html)
+- [SoftEther server information on the IG archive (Member-only)](https://lists.w3.org/Archives/Member/member-wot-ig/2021Sep/0006.html)
