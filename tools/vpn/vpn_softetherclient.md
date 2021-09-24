@@ -2,7 +2,7 @@
 
 NOTE: This instaruction asumes using linux on Raspberry Pi. `testuser/pftest` is an example for User ID and password.
 
-## 1. Download VPN bridge from SoftEther Download Center
+## 1. Download VPN client from SoftEther Download Center
 - go to https://www.softether-download.com/en.aspx?product=softether
 - Select Software -> SoftEther VPN (Freeware)
 - Select Component -> SoftEther VPN Client
