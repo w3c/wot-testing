@@ -177,7 +177,6 @@
                     "htv:methodName": "GET"
                 }
             ],
-            "value": 0,
             "title": "value",
             "description": "Measured illuminance value in LUX"
         }
@@ -191,10 +190,7 @@
             "href": "http://192.168.30.110:8081/illuminancesensor/all/properties",
             "contentType": "application/json",
             "op": [
-                "readallproperties",
-                "readmultipleproperties",
-                "writeallproperties",
-                "writemultipleproperties"
+                "readallproperties"
             ]
         }
     ],

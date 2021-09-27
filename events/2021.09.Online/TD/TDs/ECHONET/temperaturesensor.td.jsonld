@@ -190,10 +190,7 @@
             "href": "http://192.168.30.110:8081/temperaturesensor/all/properties",
             "contentType": "application/json",
             "op": [
-                "readallproperties",
-                "readmultipleproperties",
-                "writeallproperties",
-                "writemultipleproperties"
+                "readallproperties"
             ]
         }
     ],
