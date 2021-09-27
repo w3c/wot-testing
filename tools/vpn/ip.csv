@@ -1,7 +1,9 @@
 IP address, User,  Remark
-192.168.30.10-19, Fujitsu, WoT Proxy
+192.168.30.10-19, Fujitsu, WoT Proxy (tentative)
 192.168.30.20-29, Siemens, 
-192.168.30.30-39, Intel, 
+192.168.30.30, Intel, Web Speak Thing
+192.168.30.31, Intel, Camera Thing
+192.168.30.32-39, Intel, 
 192.168.30.40-49, Oracle, 
 192.168.30.50-59, Panasonic, 
 192.168.30.60-69, Hitachi, 
@@ -9,6 +11,7 @@ IP address, User,  Remark
 192.168.30.90-99, SmartThings, 
 192.168.30.100-109, Fraunhofer, Local LinkSmart Directory
 192.168.30.110-119, ECHONET,
+192.168.30.120-126, NHK,
 ,,
 192.168.30.127, Reserved, Gateway
 129.168.30.128-254, Reserved, assigned from DHCP server
