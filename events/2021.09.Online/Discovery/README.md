@@ -208,7 +208,7 @@ Siemens in cooperation with Logilab provides a Thing Description Directory endpo
                "htv:methodName":"POST",
                "response":{
                   "description":"Success response",
-                  "contentType":"application/json",
+                  "contentType":"application/sparql-results+json",
                   "htv:statusCodeValue":200
                },
                "additionalResponses":[
