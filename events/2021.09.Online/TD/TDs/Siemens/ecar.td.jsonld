@@ -13,7 +13,6 @@
             "type": "number",
             "description": "Current chargingStatus in % (0 ... 100%)",
             "readOnly": true,
-			"writeOnly": false,
             "minimum": 0,
             "maximum": 100,
             "unit": "%",
@@ -29,7 +28,6 @@
             "type": "string",
             "description": "Current car status (readyToCharge, charging, stopCharging)",
             "readOnly": true,
-			"writeOnly": false,
             "enum": [
                 "readyToCharge",
                 "charging",
@@ -47,8 +45,6 @@
     "actions": {
         "startCharging": {
             "description": "Starting to charge",
-			"safe": false,
-			"idempotent": false,
             "forms": [
                 {
                     "href": "/ecar/actions/startCharging",
@@ -59,8 +55,6 @@
         },
         "stopCharging": {
             "description": "Stopping to charge",
-			"safe": false,
-			"idempotent": false,
             "forms": [
                 {
                     "href": "/ecar/actions/stopCharging",
