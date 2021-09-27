@@ -9,7 +9,7 @@ IP address, User,  Remark
 192.168.30.90-99, SmartThings, 
 192.168.30.100-109, Fraunhofer, Local LinkSmart Directory
 192.168.30.110-119, ECHONET,
-192.168.30.120-129, NHK,
+192.168.30.120-126, NHK,
 ,,
 192.168.30.127, Reserved, Gateway
 129.168.30.128-254, Reserved, assigned from DHCP server
