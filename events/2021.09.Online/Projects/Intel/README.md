@@ -23,4 +23,7 @@
   * Static geolocation data in TDs
   * Dynamic geolocation data returned by Things
   * Simulated devices with node-wot
+* Updates to implementation reports
+  * Merged PR to TD report recently
+  * Need to do also for Discovery, Architecture, and Profiles
 
