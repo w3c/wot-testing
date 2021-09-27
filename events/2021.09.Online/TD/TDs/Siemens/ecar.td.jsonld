@@ -1,0 +1,67 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "Thing",
+    "security": ["nosec_sc"],
+    "securityDefinitions": {
+        "nosec_sc": {"scheme": "nosec"}
+    },
+    "title": "eCar",
+    "description": "eCarThing",
+    "base": "http://127.0.0.1:8080",
+    "properties": {
+        "soc": {
+            "type": "number",
+            "description": "Current chargingStatus in % (0 ... 100%)",
+            "readOnly": true,
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "%",
+            "forms": [
+                {
+                    "href": "/ecar/properties/soc",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        },
+        "status": {
+            "type": "string",
+            "description": "Current car status (readyToCharge, charging, stopCharging)",
+            "readOnly": true,
+            "enum": [
+                "readyToCharge",
+                "charging",
+                "stopCharging"
+            ],
+            "forms": [
+                {
+                    "href": "/ecar/properties/status",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        }
+    },
+    "actions": {
+        "startCharging": {
+            "description": "Starting to charge",
+            "forms": [
+                {
+                    "href": "/ecar/actions/startCharging",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                }
+            ]
+        },
+        "stopCharging": {
+            "description": "Stopping to charge",
+            "forms": [
+                {
+                    "href": "/ecar/actions/stopCharging",
+                    "contentType": "application/json",
+                    "op": ["invokeaction"]
+                }
+            ]
+        }
+    }
+}
