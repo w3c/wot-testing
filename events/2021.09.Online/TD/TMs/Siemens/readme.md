@@ -20,6 +20,8 @@ In the following a couple of Thing Model definitions are provided that uses the 
   * [TD instance from type My DistanceSensor](./MyDistanceSensor-Extends-VortoModel.td.jsonld)
   * Features used: required, extend, overwrite number type, title and description
 
+* Composition TMs 
+  * A Smart Fan TM consists of a Ventilation TM and LED TM 
 
 
 
