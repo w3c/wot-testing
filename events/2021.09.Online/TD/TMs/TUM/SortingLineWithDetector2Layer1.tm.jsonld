@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "SortingLineWithDetector2Layer1",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "properties": {
+    "conveyorSpeed": {
+      "description": "Speed of the conveyor belt",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks/s"
+    },
+    "conveyorState": {
+      "description": "Current state of the conveyor belt",
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string",
+      "enum": [
+        "stopped",
+        "working"
+      ]
+    },
+    "inletSensorPosition": {
+      "description": "Position of the inlet sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    },
+    "colorSensorPosition": {
+      "description": "Position of the color sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    },
+    "outletSensorPosition": {
+      "description": "Position of the outlet sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    },
+    "whiteEjectorPosition": {
+      "description": "Position of the white Ejector sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    },
+    "blueEjectorPosition": {
+      "description": "Position of the blue Ejector sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    },
+    "redEjectorPosition": {
+      "description": "Position of the red Ejector sensor",
+      "observable": false,
+      "readOnly": false,
+      "writeOnly": false,
+      "type": "number",
+      "unit": "planks"
+    }
+  },
+  "actions": {
+    "toggleConveyorBelt": {
+      "description": "Toggle the conveyor belt"
+    },
+    "sortWhite": {
+      "description": "Turn on the white ejector"
+    },
+    "sortBlue": {
+      "description": "Turn on the blue ejector"
+    },
+    "sortRed": {
+      "description": "Turn on the red ejector"
+    }
+  },
+  "events": {
+    "inletSensorObjectDetected": {
+      "description": "Inlet sensor detected an object"
+    },
+    "outletSensorObjectDetected": {
+      "description": "Outlet sensor detected an object"
+    },
+    "colorSensorObjectDetected": {
+      "description": "Color sensor detected an object and the color is output",
+      "data": {
+        "type": "string",
+        "enum": [
+          "white",
+          "blue",
+          "red",
+          "none"
+        ]
+      }
+    }
+  }
+}
