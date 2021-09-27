@@ -1,0 +1,86 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "VacuumGripperRobot1Layer1",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "properties": {
+    "currentPosition": {
+      "description": "Get a current robot position in cylindrical coordinates",
+      "type": "object",
+      "properties": {
+        "r": {
+          "description": "Extension length",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "unit": "%"
+        },
+        "theta": {
+          "description": "Rotational angle",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 310,
+          "unit": "degrees"
+        },
+        "z": {
+          "description": "Height",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "unit": "%"
+        },
+        "required": [
+          "r",
+          "theta",
+          "z"
+        ]
+      }
+    }
+  },
+  "actions": {
+    "goTo": {
+      "description": "Go to a position in cylindrical coordinates",
+      "input": {
+        "type": "object",
+        "properties": {
+          "r": {
+            "description": "Extension length",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "%"
+          },
+          "theta": {
+            "description": "Rotational angle",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 310,
+            "unit": "%"
+          },
+          "z": {
+            "description": "Height",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "%"
+          }
+        }
+      }
+    },
+    "toggleGrip": {
+      "description": "Toggle vacuum grip"
+    }
+  }
+}

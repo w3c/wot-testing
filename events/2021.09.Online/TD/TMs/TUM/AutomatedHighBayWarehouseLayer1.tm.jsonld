@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "AutomatedHighBayWarehouseLayer1",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "actions": {
+    "goTo": {
+      "description": "Go to a position in xy coordinates",
+      "input": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "%"
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "%"
+          }
+        }
+      }
+    },
+    "toggleCantilever": {
+      "description": "Toggle cantilever"
+    },
+    "conveyorBeltForward": {
+      "description": "Start conveyor belt to rotate forward"
+    },
+    "conveyorBeltBackward": {
+      "description": "Start conveyor belt to rotate backward"
+    },
+    "conveyorBeltStop": {
+      "description": "Stop conveyor belt"
+    }
+  },
+  "events": {
+    "insideSensorObjectDetected": {
+      "description": "Inside sensor detected an object"
+    },
+    "outsideSensorObjectDetected": {
+      "description": "Outside sensor detected an object"
+    }
+  }
+}
