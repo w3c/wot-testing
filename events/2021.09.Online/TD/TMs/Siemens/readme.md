@@ -21,7 +21,7 @@ In the following a couple of Thing Model definitions are provided that uses the 
   * Features used: required, extend, overwrite number type, title and description
 
 * Composition TMs 
-  * A [Smart Ventilator TM](./SmartVentilator.tm.jsonld) consists of a Ventilation TM and LED TM 
+  * A [Smart Ventilator TM](./SmartVentilator.tm.jsonld) consists of a [Ventilator TM](./Ventilator.tm.jsonld) and [LED TM](./LED.tm.jsonld) 
 
 
 
