@@ -18,3 +18,5 @@
 "TUM",          "ScrollPhat",             "yes",    "Interesting image input action",
 "Intel",        "Web Speak",             "no",      "Speech output",
 "Intel",        "Camera",             "no",      "Still camera",
+"Hitachi",      "myRasPiLED",           "yes",      "LED lamp with switch",
+"Hitachi",      "MyAccelerometer",      "yes",      "Accelerometer and CO2 sensor",
