@@ -42,7 +42,7 @@ jobs:
             # Check the file extension
             if [[ $file == $PATTERN ]]; then 
               echo 'Validating' $file '...'
-              result=$(node $VALIDATION_SCRIPT -d $file)
+              result=$(node $VALIDATION_SCRIPT -i $file -d)
               if [[ $result == *"'failed'"* ]]; then
                 echo "$result"
                 echo '::error::Validation failed ✗'

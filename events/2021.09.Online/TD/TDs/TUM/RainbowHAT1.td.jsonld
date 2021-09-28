@@ -1,0 +1,256 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "",
+    "actions": {
+        "clearDisplay": {
+            "description": "Clears the seven segment displays",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/actions/clearDisplay",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "clearLEDs": {
+            "description": "Turns off the 7 LEDs",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/actions/clearLEDs",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "makeRainbow": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/actions/makeRainbow",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "writeDisplay": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/actions/writeDisplay",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "A string from left to right on the seven segment display. Capitals look better",
+                "maxLength": 4,
+                "type": "string"
+            },
+            "safe": false
+        }
+    },
+    "description": "HAT with seven segment displays, temperature and pressure sensors, touch buttons and LEDs",
+    "events": {
+        "buttonA": {
+            "data": {
+                "type": "boolean"
+            },
+            "description": "Press (true) or release(false) of a button. An LED also lights up on the HAT",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/events/buttonA",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        },
+        "buttonB": {
+            "data": {
+                "type": "boolean"
+            },
+            "description": "Press (true) or release(false) of a button. An LED also lights up on the HAT",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/events/buttonB",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        },
+        "buttonC": {
+            "data": {
+                "type": "boolean"
+            },
+            "description": "Press (true) or release(false) of a button. An LED also lights up on the HAT",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/events/buttonC",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        }
+    },
+    "forms": [
+        {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/all/properties",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties",
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ],
+    "id": "urn:dev:ops:32473-rainbowhat-001",
+    "properties": {
+        "leds": {
+            "additionalProperties": {
+                "properties": {
+                    "brightness": {
+                        "maximum": 15,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "colour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "brightness",
+                    "colour"
+                ],
+                "type": "object"
+            },
+            "description": "7 LEDs with their RGB colors. 0 corresponds to the rightmost LED. They can be individually set",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/properties/leds",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "observable": false,
+            "propertyNames": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ],
+                "type": "string"
+            },
+            "readOnly": false,
+            "title": "LEDs",
+            "type": "object",
+            "writeOnly": false
+        },
+        "pressure": {
+            "description": "Pressure in hPa",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/properties/pressure",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/properties/pressure/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "title": "pressure",
+            "type": "number",
+            "unit": "hPa",
+            "writeOnly": false
+        },
+        "temperature": {
+            "description": "Temperature in Celcius",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/properties/temperature",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/RainbowHAT1/properties/temperature/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "title": "temperature",
+            "type": "number",
+            "unit": "C",
+            "writeOnly": false
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "title": "RainbowHAT1"
+}

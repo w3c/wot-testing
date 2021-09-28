@@ -1041,41 +1041,6 @@
       "description": "Ventilation function setting"
     }
   },
-  "actions": {
-    "beepBuzzer": {
-      "input": {},
-      "output": {
-        "type": "object",
-        "description": "Return true/false and a message",
-        "descriptions": {
-          "en": "Return true/false and a message",
-          "ja": "true/false とメッセージを返す"
-        },
-        "properties": {
-          "result": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
-      },
-      "forms": [
-        {
-          "href": "http://192.168.30.110:8081/homeairconditioner/actions/beepBuzzer",
-          "contentType": "application/json",
-          "op": [
-            "invokeaction"
-          ],
-          "htv:methodName": "POST"
-        }
-      ],
-      "idempotent": false,
-      "safe": false,
-      "title": "beepBuzzer",
-      "description": "Buzzer"
-    }
-  },
   "@type": "Thing",
   "security": [
     "nosec_sc"
@@ -1085,10 +1050,7 @@
       "href": "http://192.168.30.110:8081/homeairconditioner/all/properties",
       "contentType": "application/json",
       "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
+        "readallproperties"
       ]
     }
   ],
