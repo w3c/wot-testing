@@ -20,3 +20,7 @@
 "Intel",        "Camera",             "no",      "Still camera",
 "UNIBO",        "SoilSensor",           "yes",   "A virtual SoilSensor. 5 different instances",
 "UNIBO",        "Sprinkler",           "yes",   "A virtual Sprinkler. 4 different instances",
+"Hitachi",      "myRasPiLED",           "yes",      "LED lamp with switch",
+"Hitachi",      "MyAccelerometer",      "yes",      "Accelerometer and CO2 sensor",
+"NHK",          "SmartSpeakerEmulator", "yes",  "Audio playback, volume control, power status control",
+"NHK",          "SmartDisplayEmulator", "yes",  "Video and audio playback, volume and brightness control, power status control",
