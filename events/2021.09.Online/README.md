@@ -87,10 +87,13 @@ Participants: Toumura, McCool
 ** ECHONET Web API provides only servers
 
 ### Node-WoT
-Particpants: Siemens (Sebastian)? Daniel? TUM (Ege)?
+Particpants: Siemens (Sebastian)? Daniel? TUM (Ege)? Cristiano
 * Discovery integration
 * Use as client for ECHONET above
 ** In which case it needs to be on the VPN
+* Evaluate new action models
+** Multiple operations
+** Hypermedia approach
 
 ### Geospatial (Meta)Data
 Participants: McCool
@@ -107,7 +110,7 @@ Participants: McCool
 Participants: ?
 
 #### Web Things
-Participants: ?
+Participants: Cristiano
 * TD Testing
 
 #### LinkSmart
