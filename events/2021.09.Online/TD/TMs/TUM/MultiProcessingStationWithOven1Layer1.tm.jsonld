@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "MultiProcessingStationWithOven1Layer1",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "actions": {
+    "toggleConveyorBelt": {
+      "description": "Toggle the conveyor belt"
+    },
+    "toggleSaw": {
+      "description": "Toggle the saw"
+    },
+    "toggleOvenAlarm": {
+      "description": "Toggle the oven alarm light"
+    },
+    "toggleOvenDoor": {
+      "description": "Toggle the oven door"
+    },
+    "toggleOvenFeeder": {
+      "description": "Toggle the oven feeder"
+    },
+    "toggleGripper": {
+      "description": "Toggle the vacuum gripper"
+    },
+    "toggleGripperArm": {
+      "description": "Toggle the vacuum gripper arm"
+    },
+    "goToPos1GripperArm": {
+      "description": "Move gripper arm to position 1, which is next to the turn table"
+    },
+    "goToPos2GripperArm": {
+      "description": "Move gripper arm to position 2, which is next to the oven"
+    },
+    "toggleTurnTableFeeder": {
+      "description": "Toggle the turn table feeder"
+    },
+    "goToPos1TurnTable": {
+      "description": "Rotate the turn table to position 1, which is next to the gripper arm"
+    },
+    "goToPos2TurnTable": {
+      "description": "Rotate the turn table to position 2, which is next to the saw"
+    },
+    "goToPos3TurnTable": {
+      "description": "Rotate the turn table to position 3, which is next to the conveyor belt"
+    }
+  },
+  "events": {
+    "ovenSensorObjectDetected": {
+      "description": "Oven sensor detected an object"
+    },
+    "conveyorSensorObjectDetected": {
+      "description": "Conveyor sensor detected an object"
+    }
+  }
+}
