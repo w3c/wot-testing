@@ -25,6 +25,8 @@ In the following a couple of Thing Model definitions are provided that uses the 
   * Smart Manufacturing: Bottle filling line 
     * Top level [Bottle filling line TM](./BottleFillingLine.tm.jsonld)
     * Sub level [Bottle filling TM](./BottleFilling.tm.jsonld)
+    * Sub level [Bottle capping TM](./BottleCapping.tm.jsonld)
+    * Sub level [Sprayhead TM](./Sprayhead.tm.jsonld)
 
 ![image](https://user-images.githubusercontent.com/13832739/135072267-40e9bf1a-d034-4daf-ba35-2b370864349d.png)
 
