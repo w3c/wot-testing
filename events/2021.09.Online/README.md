@@ -101,6 +101,12 @@ Participants: McCool
 * SPARQL queries in TDD?
 ** Prototype spatial search using brute-force filtering.
 
+### NHK
+* WoT device emulator (Android App)
+  * Generates web apis based on TD
+  * Behaves in a WebView web app
+  * https://github.com/endouhhc/wot-testing/blob/nhkproject/events/2021.09.Online/Projects/NHK/README.md
+
 ### Other Possible Projects
 
 #### EdgeX
@@ -119,11 +125,6 @@ Participants: McCool
 * Extension for EJS
 * Generation of examples
 
-#### NHK
-Participants: Endo?
-* WoT device emulator (Android App)
-  * Generates web apis based on TD
-  * Behaves in a WebView web app
 
 ## Network configuration
 ![Plugfest network](./plugfestnet.svg)
