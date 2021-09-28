@@ -18,3 +18,5 @@
 "TUM",          "ScrollPhat",             "yes",    "Interesting image input action",
 "Intel",        "Web Speak",             "no",      "Speech output",
 "Intel",        "Camera",             "no",      "Still camera",
+"NHK",		"SmartSpeakerEmulator", "yes",	"Audio playback, volume control, power status control",
+"NHK",		"SmartDisplayEmulator", "yes",	"Video and audio playback, volume and brightness control, power status control",
