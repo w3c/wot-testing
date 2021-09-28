@@ -28,4 +28,7 @@
 "ECHONET",      "GeneralLighting",      "yes","A lighting device that supports the ECHONET Lite protocol",
 "ECHONET",      "IlluminanceSensor",    "yes","An illuminance sensor that supports the ECHONET Lite protocol",
 "ECHONET",      "TemperatureSensor",    "yes","A temperature sensor that supports the ECHONET Lite protocol",
+"Siemens",      "Smart-Coffee-Machine",   "yes",    "http://plugfest.thingweb.io:8083/smart-coffee-machine", "impl-eclipse-node-wot"
+"Siemens",      "TestThing",              "yes",    "http://plugfest.thingweb.io:8083/testthing",            "impl-eclipse-node-wot"
+"Siemens",      "Multilanguage Counter",  "yes",    "http://plugfest.thingweb.io:8083/counter",              "impl-eclipse-node-wot"
 
