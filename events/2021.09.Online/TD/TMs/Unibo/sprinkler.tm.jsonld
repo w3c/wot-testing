@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "sosa": "http://www.w3.org/ns/sosa/"
+        }
+    ],
+    "@type": [
+        "tm:ThingModel"
+    ],
+    
+    "title": "Sprinkler",
+    "securityDefinitions": {
+        "no_sec": {
+            "scheme": "nosec"
+        }
+    },
+    "links": [
+        {
+            "href": "http://arces143100.arces.unibo.it/assets/farm/sprinkler.obj",
+            "rel": "model"
+        }
+    ],
+    "security": "no_sec",
+    "actions": {
+        "startSprinkler": {
+            "description": "Run sprinkler for a set time; stops automatically",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "timeout": {
+                        "type": "number",
+                        "minimum": 1
+                    }
+                }
+            }
+        },
+        "stopSprinkler": {
+            "description": "stop sprinkler immediately",
+            "forms":[]
+        }
+    },
+    "properties": {
+        "status": {
+            "type": "string",
+            "enum": ["on","off"],
+            "readOnly": true
+        }
+    },
+    "events": {}
+}
