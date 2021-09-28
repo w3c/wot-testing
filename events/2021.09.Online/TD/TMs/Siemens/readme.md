@@ -22,11 +22,11 @@ In the following a couple of Thing Model definitions are provided that uses the 
 
 * Composition TMs 
   * A [Smart Ventilator TM](./SmartVentilator.tm.jsonld) consists of a [Ventilator TM](./Ventilator.tm.jsonld) and [LED TM](./LED.tm.jsonld)
-  * Smart Manufacturing: Bottle filling line:
+  * Smart Manufacturing: Bottle filling line 
 
 ![image](https://user-images.githubusercontent.com/13832739/135061268-5bf0f2cc-d0a2-4459-afd7-6e869d433835.png)
 
-
+  * Top level Thing Model Bottle filling line TM
 
 
 
