@@ -7,6 +7,10 @@
 * VPN: [Instructions](https://github.com/w3c/wot-testing/tree/main/tools/vpn)
 * [Project Descriptions](Projects/README.md)
 
+## Context
+Please use `https://www.w3.org/2019/wot/td/v1` as the context URL for TD 1.0 examples,
+and `https://www.w3.org/ns/td` for TD 1.1 examples.
+
 ## To Do
 * Do we keep using issues for projects and outcomes?
 * Is there a better way?
