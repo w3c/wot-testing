@@ -8,11 +8,13 @@
   ],
   "@type": ["Thing"],
   "title": "Inference upsq3.local-0",
-  "description": "A neural network inference service",
   "titles": {
+    "en": "Inference upsq3.local-0",
     "jp": "推論 upsq3.local-0"
   },
+  "description": "A neural network inference service",
   "descriptions": {
+    "en": "A neural network inference service",
     "jp": "ニューラルネットワーク推論サービス"
   },
   "support": "mailto:michael.mccool@intel.com",
@@ -30,6 +32,7 @@
       "@type": ["mccool:nosec"],
       "description": "No security",
       "descriptions": {
+        "en": "No security",
         "jp": "セキュリティなし"
       },
       "scheme": "nosec"
@@ -38,6 +41,7 @@
       "@type": ["mccool:basic"],
       "description": "Basic authentication",
       "descriptions": {
+        "en": "Basic authentication",
         "jp": "基本認証"
       },
       "scheme": "basic",
@@ -48,6 +52,7 @@
       "@type": ["mccool:digest"],
       "description": "Digest authentication",
       "descriptions": {
+        "en": "Digest authentication",
         "jp": "ダイジェスト認証"
       },
       "scheme": "digest",
@@ -61,11 +66,13 @@
   "actions": {
     "objid": {
       "title": "Object identification",
-      "description": "Detect, identify, and localize objects in an image",
       "titles": {
+        "en": "Object identification",
         "jp": "オブジェクト識別"
       },
+      "description": "Detect, identify, and localize objects in an image",
       "descriptions": {
+        "en": "Detect, identify, and localize objects in an image",
         "jp": "画像内のオブジェクトを検出、識別、および位置特定する"
       },
       "safe": true,
@@ -80,11 +87,13 @@
         "type": "array",
         "items": {
           "title": "Objects",
-          "description": "Array of identified object names, scores, and location",
           "titles": {
+             "en": "Objects",
              "jp": "オブジェクト配列"
           },
+          "description": "Array of identified object names, scores, and location",
           "descriptions": {
+             "en": "Array of identified object names, scores, and location",
              "jp": "識別されたオブジェクト名、スコア、および場所の配列"
           },
           "minItems": 0,
@@ -93,22 +102,26 @@
           "properties": {
             "class": {
               "title": "Class",
-              "description": "Class name of object identified",
               "titles": {
+                "en": "Class",
                 "jp": "クラス"
               },
+              "description": "Class name of object identified",
               "descriptions": {
+                "en": "Class name of object identified",
                 "jp": "識別されたオブジェクトのクラス名"
               },
               "type": "string"
             },
             "score": {
               "title": "Score",
-              "description": "Classification score from 0 to 1",
               "titles": {
+                "en": "Score",
                 "jp": "分類スコア"
               },
+              "description": "Classification score from 0 to 1",
               "descriptions": {
+                "en": "Classification score from 0 to 1",
                 "jp": "分類スコア0から1"
               },
               "type": "number",
@@ -119,21 +132,25 @@
              "oneOf": [{
               "type": "object",
               "title": "rectangular region",
-              "description": "Region described by upper-left corner and size",
               "titles": {
-                "jp": ""
+                "en": "rectangular region",
+                "jp": "長方形の領域"
               },
+              "description": "Region described by upper-left corner and size",
               "descriptions": {
-                "jp": ""
+                "en": "Region described by upper-left corner and size",
+                "jp": "左上隅とサイズで表される領域"
               },
               "properties": {
                 "xo": {
                   "title": "x origin (pixels)",
-                  "description": "Horizontal origin of ROI in pixels measured from the left",
                   "titles": {
+                    "en": "x origin (pixels)",
                     "jp": "x原点（ピクセル）"
                   },
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
                   "descriptions": {
+                    "en": "Horizontal origin of ROI in pixels measured from the left",
                     "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
                   },
                   "type": "integer",
@@ -141,11 +158,13 @@
                 },
                 "yo": {
                   "title": "y origin (pixels)",
-                  "description": "Vertical origin of region in pixels measured from the top",
                   "titles": {
+                    "en": "y origin (pixels)",
                     "jp": "y原点（ピクセル）"
                   },
+                  "description": "Vertical origin of region in pixels measured from the top",
                   "descriptions": {
+                    "en": "Vertical origin of region in pixels measured from the top",
                     "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
                   },
                   "type": "integer",
@@ -153,11 +172,13 @@
                   },
                   "x": {
                   "title": "width in pixels",
-                  "description": "Horizontal size of region in pixels",
                   "titles": {
+                    "en": "width in pixels",
                     "jp": "ピクセル単位の幅"
                   },
+                  "description": "Horizontal size of region in pixels",
                   "descriptions": {
+                    "en": "Horizontal size of region in pixels",
                     "jp": "ピクセル単位での領域の水平方向のサイズ"
                   },
                   "type": "integer",
@@ -165,11 +186,13 @@
                 },
                 "y": {
                   "title": "height in pixels",
-                  "description": "Vertical size of region in pixels",
                   "titles": {
+                    "en": "height in pixels",
                     "jp": "ピクセル単位の高さ"
                   },
+                  "description": "Vertical size of region in pixels",
                   "descriptions": {
+                    "en": "Vertical size of region in pixels",
                     "jp": "ピクセル単位での領域の垂直方向のサイズ"
                   },
                   "type": "integer",
@@ -181,21 +204,25 @@
             {
               "type": "object",
               "title": "circular region",
-              "description": "Region described by upper-left corner and size",
               "titles": {
-                "jp": ""
+                "en": "circular region",
+                "jp": "円形領域"
               },
+              "description": "Region described by upper-left corner and size",
               "descriptions": {
-                "jp": ""
+                "en": "Region described by upper-left corner and size",
+                "jp": "左上隅とサイズで表される領域"
               },
               "properties": {
                 "xo": {
                   "title": "x origin (pixels)",
-                  "description": "Horizontal origin of ROI in pixels measured from the left",
                   "titles": {
+                    "en": "x origin (pixels)",
                     "jp": "x原点（ピクセル）"
                   },
+                  "description": "Horizontal origin of ROI in pixels measured from the left",
                   "descriptions": {
+                    "en": "Horizontal origin of ROI in pixels measured from the left",
                     "jp": "左から測った領域の水平方向の原点（ピクセル単位）"
                   },
                   "type": "integer",
@@ -203,11 +230,13 @@
                 },
                 "yo": {
                   "title": "y origin (pixels)",
-                  "description": "Vertical origin of region in pixels measured from the top",
                   "titles": {
+                    "en": "y origin (pixels)",
                     "jp": "y原点（ピクセル）"
                   },
+                  "description": "Vertical origin of region in pixels measured from the top",
                   "descriptions": {
+                    "en": "Vertical origin of region in pixels measured from the top",
                     "jp": "上から測ったピクセル単位での領域の垂直方向の原点"
                   },
                   "type": "integer",
@@ -215,11 +244,13 @@
                   },
                 "r": {
                   "title": "radius in pixels",
-                  "description": "Radial size of circular region in pixels",
                   "titles": {
+                    "en": "radius in pixels",
                     "jp": "ピクセル単位の半径"
                   },
+                  "description": "Radial size of circular region in pixels",
                   "descriptions": {
+                    "en": "Radial size of circular region in pixels",
                     "jp": "円形領域の半径サイズ（ピクセル単位）"
                   },
                   "type": "integer",
@@ -230,11 +261,13 @@
             },{
               "type" : "null",
               "title": "no region",
-              "description": "Classification result only, no localization",
               "titles": {
+                "en": "no region",
                 "jp": "地域なし"
               },
+              "description": "Classification result only, no localization",
               "descriptions": {
+                "en": "Classification result only, no localization",
                 "jp": "分類結果のみ、ローカリゼーションなし"
               }
             }]}
