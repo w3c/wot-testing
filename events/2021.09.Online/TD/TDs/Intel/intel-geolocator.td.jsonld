@@ -132,7 +132,8 @@
       "forms": [
         {
           "href": "http://upsq3.local:9199/api/detect",
-          "contentType": "application/json"
+          "contentType": "application/json",
+          "op": ["readproperty"]
         }
       ]
     }
