@@ -108,7 +108,7 @@ Participants: McCool
 * WoT device emulator (Android App)
   * Generates web apis based on TD
   * Behaves in a WebView web app
-  * https://github.com/endouhhc/wot-testing/blob/nhkproject/events/2021.09.Online/Projects/NHK/README.md
+  * https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects/NHK/README.md
 
 ### Other Possible Projects
 
