@@ -1,0 +1,141 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1",
+               {
+                 "iot": "http://iotschema.org/",
+                 "g": "https://www.w3.org/2019/wot/td/geo/v1",
+                 "qudt": "http://www.qudt.org/qudt/owl/1.0.0/quantity/",
+                 "@language": "en"
+               }
+  ],
+  "@type": ["Thing"],
+  "title": "Geolocator",
+  "description": "A geolocation service",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {"instance":"0.1.0"},
+  "created": "2020-09-01T15:30:00Z",
+  "modified": "2020-09-01T23:29:00Z",
+  "links": [
+     {
+        "href": "https://github.com/mmccool/inference-service",
+        "rel": "repository",
+        "type": "application/vnd.github.v3+json"
+     },
+     {
+        "href": "./properties/position",
+        "rel": "g:geolocationOf"
+     }
+  ],
+  "id": "urn:uuid:6f6d4d0b-3d8b-58a1-a90b-7d05680553d7",
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "security": ["basic_sc"],
+  "properties": {
+    "location": {
+      "title": "Get current location",
+      "description": "Use sensor fusion to estimate position, altitude, velocity, and acceleration",
+      "observable": true,
+      "readOnly": true,
+      "type": "object",
+      "properties": {
+         "position": {
+            "longitude": {
+                "type": "number",
+                "unit": "qudt:Angle"
+            },
+            "latitude": {
+                "type": "number",
+                "unit": "qudt:Angle"
+            },
+            "accuracy": {
+                "type": "number"
+            },
+            "accuracyUnit": {
+                "type": "qudt:Length"
+            }
+         },
+         "altitude": {
+            "elevation": {
+                "type": "number",
+                "unit": "qudt:Length"
+            },
+            "elevationUnit": {
+                "type": "qudt:Length"
+            },
+            "depth": {
+                "type": "number",
+                "unit": "qudt:Length"
+            },
+            "depthUnit": {
+                "type": "qudt:Length"
+            },
+            "accuracy": {
+                "type": "number",
+                "unit": "qudt:Length"
+            },
+            "accuracyUnit": {
+                "type": "qudt:Length"
+            }
+         },
+         "velocity": {
+            "x": {
+                "type": "number",
+                "type": "qudt:Speed"
+            },
+            "y": {
+                "type": "number",
+                "type": "qudt:Speed"
+            },
+            "z": {
+                "type": "number",
+                "type": "qudt:Speed"
+            },
+            "velocityUnit": {
+                "type": "qudt:Speed"
+            },
+            "accuracy": {
+                "type": "number",
+                "type": "qudt:Speed"
+            },
+            "accuracyUnit": {
+                "type": "qudt:Speed"
+            }
+         },
+         "acceleration": {
+            "x": {
+                "type": "number",
+                "type": "qudt:Acceleration"
+            },
+            "y": {
+                "type": "number",
+                "type": "qudt:Acceleration"
+            },
+            "z": {
+                "type": "number",
+                "type": "qudt:Acceleration"
+            },
+            "accelerationUnit": {
+                "type": "qudt:Acceleration"
+            },
+            "accuracy": {
+                "type": "number",
+                "type": "qudt:Acceleration"
+            },
+            "accuracyUnit": {
+                "type": "qudt:Acceleration"
+            }
+         }
+      },
+      "forms": [
+        {
+          "href": "http://upsq3.local:9199/api/detect",
+          "contentType": "application/json",
+          "op": ["readproperty"]
+        }
+      ]
+    }
+  }
+}

@@ -12,6 +12,7 @@
     * May attempt streaming - to discuss
 * Other
     * OCF devices are obsolete; I may try setting them up, but...
+    * Can still use TDs for testing, but they need updating
 
 ## Access
 * Cloud proxy (https), password protected
@@ -19,7 +20,7 @@
 * May attempy setting up VLAN
 
 ## Projects
-* [Geolocation](geolocation.md) 
+* Geolocation 
   * Static geolocation data in TDs
   * Dynamic geolocation data returned by Things
   * Simulated devices with node-wot
