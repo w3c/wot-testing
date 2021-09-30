@@ -16,8 +16,12 @@
     "properties": {
         "power": {
             "title": "power",
-            "@type": "saref:OnOffState",
-            "type": "boolean",
+            "type": "object",
+            "properties": {
+               "status": {
+                  "type": "boolean"
+               }
+            },
             "forms": [{
                 "op": "readproperty",
                 "contentType": "application/json;charset=utf-8",
