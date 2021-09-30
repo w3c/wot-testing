@@ -17,10 +17,10 @@
         "power": {
             "title": "power",
             "@type": "saref:OnOffState",
-            "type": "string",
+            "type": "boolean",
             "forms": [{
               "op": "readproperty",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "href": "power"
             }]
         }
@@ -33,7 +33,7 @@
             "@type": "saref:ToggleCommand",
             "forms": [{
               "op": "invokeaction",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "href": "toggle"
             }]
         },
@@ -44,7 +44,7 @@
             "@type": "saref:Level control function",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "setvolume"
             }]
         },
@@ -54,7 +54,7 @@
             "title": "playAudio",
             "forms": [{
               "op": "invokeaction",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "href": "playaudio"
             }]
         },
@@ -64,7 +64,7 @@
             "title": "launchNewsApp",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "launchnewsapp"
             }]
         }
@@ -76,13 +76,13 @@
           "forms": [
             {
               "op": "subscribeevent",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "subprotocol": "longpoll",
               "href": "weatheralert"
             },
             {
               "op": "subscribeevent",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "href": "ws://Android.local:8888/weatheralert"
             }
           ]

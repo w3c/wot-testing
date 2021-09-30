@@ -17,10 +17,10 @@
         "power": {
             "title": "power",
             "@type": "saref:OnOffState",
-            "type": "string",
+            "type": "boolean",
             "forms": [{
                 "op": "readproperty",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
 	              "href": "power"
             }]
         },
@@ -29,7 +29,7 @@
             "type": "string",
             "forms": [{
                 "op": "readproperty",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
 	              "href": "content"
             }]
         }
@@ -42,7 +42,7 @@
             "@type": "saref:ToggleCommand",
             "forms": [{
               "op": "invokeaction",
-              "contentType": "application/json; charset = utf-8",
+              "contentType": "application/json;charset=utf-8",
               "href": "toggle"
             }]
         },
@@ -53,7 +53,7 @@
             "@type": "saref:Level control function",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "setvolume"
             }]
         },
@@ -64,7 +64,7 @@
             "@type": "saref:Level control function",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "setbright"
             }]
         },
@@ -74,7 +74,7 @@
             "title": "showText",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "showtext"
             }]
         },
@@ -85,7 +85,7 @@
             "type": "playVOD",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "playvideo"
             }],
             "input": {
@@ -113,7 +113,7 @@
             "type": "pauseVOD",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "pausevideo"
             }]
         },
@@ -124,7 +124,7 @@
             "type": "stopVOD",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "stopvideo"
             }]
         },
@@ -135,7 +135,7 @@
             "type": "presentationWebApp",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "presentationwebapp"
             }],
             "input": {
@@ -162,7 +162,7 @@
             "title": "launchNewsApp",
             "forms": [{
                 "op": "invokeaction",
-                "contentType": "application/json; charset = utf-8",
+                "contentType": "application/json;charset=utf-8",
                 "href": "launchnewsapp"
             }]
         }
@@ -174,13 +174,13 @@
         "forms": [
           {
           "op": "subscribeevent",
-          "contentType": "application/json; charset = utf-8",
+          "contentType": "application/json;charset=utf-8",
           "subprotocol": "longpoll",
           "href": "weatheralert"
         },
         {
           "op": "subscribeevent",
-          "contentType": "application/json; charset = utf-8",
+          "contentType": "application/json;charset=utf-8",
           "href": "ws://Android-2:8888/weatheralert"
         }
        ]
