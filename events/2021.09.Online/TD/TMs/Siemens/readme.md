@@ -22,6 +22,7 @@ In the following a couple of Thing Model definitions are provided that uses the 
 
 * Composition TMs 
   * A [Smart Ventilator TM](./SmartVentilator.tm.jsonld) consists of a [Ventilator TM](./Ventilator.tm.jsonld) and [LED TM](./LED.tm.jsonld)
+    * Generated TDs with relation types like collection, item, and type: [Smart Ventilator TD](./SmartVentilator.td.jsonld),  [Ventilator TD](./Ventilator.td.jsonld), and [LED TD](./LED.td.jsonld)
   * Smart Manufacturing: Bottle filling line 
     * Top level [Bottle filling line TM](./BottleFillingLine.tm.jsonld)
     * Sub level [Bottle filling TM](./BottleFilling.tm.jsonld)
