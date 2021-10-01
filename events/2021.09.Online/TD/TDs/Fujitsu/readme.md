@@ -64,7 +64,7 @@ can operate the local devices that cannot be accessed directroy from the cloud.
 
 <img src="fujitsu_fig2.png" width=40%>
 
-The TD of the sensor unit is here. To get the TD from the unit, do the folloging:
+The TD of the sensor unit is [here](./fjsensor.td.jsonld). To get the TD from the unit, do the folloging:
 
 ```
 curl http://192.168.0.18/.well-known/wot-thing-description
@@ -72,7 +72,7 @@ curl http://192.168.0.18/.well-known/wot-thing-description
 
 The sensor is invisible and cannot be connected from the VPN because it is on the local network. 
 So you can access the endpoint of this shadow device on the proxy instead of the real device. 
-The TD of the shadow device is here, which can be get from the proxy in the following way.  
+The TD of the shadow device is [here](./vfjsensor.td.jsonld), which can be get from the proxy in the following way.  
 
 ```
 curl http://192.168.30.134/Things/urn:com:fujitsu:sensor
@@ -108,7 +108,7 @@ The response includes the list of the shadow device IDs. This TD can be got from
 curl http://192.168.30.134/Things/urn:com:fujitsu:sensor
 ```
 
-The shadow device TD is here.
+The shadow device TD is [here](./vfjsensor.td.jsonld).
 
 ## Checked devices.
 
