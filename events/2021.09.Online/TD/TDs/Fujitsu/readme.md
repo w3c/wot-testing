@@ -5,6 +5,7 @@ Fujitsu offers two services:
 - Proxy server
 
 The folloing is the network configuration.
+
 <img src="fujitsu_network.png" width=50%>
 
 The proxy server is on the border between the VPN and Fujitsu local network and has 2 IP addresses for both of them.
@@ -61,7 +62,7 @@ can operate the local devices that cannot be accessed directroy from the cloud.
 
 ### sensor unit
 
-<img src="fujitsu_fig2.png" width=50%>
+<img src="fujitsu_fig2.png" width=40%>
 
 The TD of the sensor unit is here. To get the TD from the unit, do the folloging:
 
@@ -80,7 +81,7 @@ where "urn:com:fujitsu:sensor" is the device ID.
 
 ### proxy server
 
-<img src="fujitsu_fig3.png" width=50%>
+<img src="fujitsu_fig3.png" width=40%>
 
 Any device accessible from the proxy server can expose its endpoint to the proxy as a shadow device.
 In this case, register the TD of the device with the proxy as follows.
