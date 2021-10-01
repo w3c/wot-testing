@@ -7,6 +7,7 @@
             "in": "header"
         }
     },
+    "security": "basic_sc",
     "links": [
         {
             "rel": "collection",
