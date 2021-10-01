@@ -11,7 +11,7 @@ The folloing is the network configuration.
 The proxy server is on the border between the VPN and Fujitsu local network and has 2 IP addresses for both of them.
 On the other hand, the sensor unit is on the local network and cannot be accessed directly from the VPN. 
 In this setting, the shadow device of the sensor unit has been created on the proxy server, and then
-applications on the VPN can reach to the sensor unit indirectly through the endpoint that the shadow device opens.
+applications on the VPN can reach to the sensor unit indirectly through the endpoint that the shadow device exposes.
 
 <img src="fujitsu_fig1.png" width=50%>
 
@@ -45,7 +45,7 @@ the Thing Description can be retrieved from URL described in txt.
 
 The proxy server can be queried by the name "wot-proxy". The txt field indicates 
 the URLs for the interface to create a shadow device (register) and the other interface to get 
-the Thing Descriptions of the shadow devices already existed (retrive).
+the Thing Descriptions of the shadow devices already existed (retrieve).
 
 The sensor unit for this plugfest can search the proxy server in the initializaing, and request to create 
 its shadow on it. Therefore even the device invisible from the VPN can be operated via the proxy server.
@@ -88,7 +88,6 @@ In this case, register the TD of the device with the proxy as follows.
 
 ```
 curl -X POST -H 'content-type: application/json' -d @filenme http://192.168.30.134/Things
-
 ```
 where filenme is the TD file name like "fjsensor.td.jsonld".
 
@@ -120,7 +119,5 @@ and to be operated by the application on VPN.
 checked devices:
 
 Counter(Siemens) on the Internet,
-
 LED(Hitachi) and temperature sensor(ECHONET) on VPN,
-
-sensor unit(FUjitsu) on the local network.
+sensor unit(Fujitsu) on the local network.
