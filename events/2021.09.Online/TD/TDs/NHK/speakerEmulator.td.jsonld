@@ -12,7 +12,7 @@
       }
     },
     "security": ["nosec_sc"],
-    "base": "http://Android.local:8888/",
+    "base": "http://192.168.30.120:8888/",
     "properties": {
         "power": {
             "title": "power",
@@ -87,7 +87,7 @@
             {
               "op": "subscribeevent",
               "contentType": "application/json;charset=utf-8",
-              "href": "ws://Android.local:8888/weatheralert"
+              "href": "ws://192.168.30.120:8888/weatheralert"
             }
           ]
       }
