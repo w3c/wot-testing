@@ -22,15 +22,30 @@
     "properties": {
         "R": {
             "type": "number",
-            "description": "Red color"
+            "description": "Red color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/R"
+                }
+            ]
         },
         "G": {
             "type": "number",
-            "description": "Green color"
+            "description": "Green color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/G"
+                }
+            ]
         },
         "B": {
             "type": "number",
-            "description": "Blue color"
+            "description": "Blue color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/B"
+                }
+            ]
         }
     },
     "actions": {
