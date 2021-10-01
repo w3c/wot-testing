@@ -28,7 +28,7 @@
             }
         },
         "fadeOut": {
-            "title": "fadeIn",
+            "title": "fadeOut",
             "input": {
                 "type": "number",
                 "description": "fadeOut in ms"
