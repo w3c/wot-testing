@@ -1,5 +1,6 @@
 {
     "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:uuid:fc6dafae-b2df-4fa1-ac43-b6466d03bc37",
     "@type": "Thing",
     "security": ["nosec_sc"],
     "securityDefinitions": {
