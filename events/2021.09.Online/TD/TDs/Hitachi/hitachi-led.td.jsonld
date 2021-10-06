@@ -1,11 +1,12 @@
 {
   "@context": [
-    "http://www.w3.org/ns/td",
+    "https://www.w3.org/2019/wot/td/v1",
     { 
       "s": "http://schema.org",
       "iot": "http://iotschema.org"
     }
   ],
+  "@type": "Thing",
   "id": "urn:dev:mac:b827ebfffe4b6d0b",
   "s:longitude": "35.70352",
   "s:latitude": "139.4720174",

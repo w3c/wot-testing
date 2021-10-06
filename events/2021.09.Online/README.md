@@ -7,6 +7,10 @@
 * VPN: [Instructions](https://github.com/w3c/wot-testing/tree/main/tools/vpn)
 * [Project Descriptions](Projects/README.md)
 
+## Context
+Please use `https://www.w3.org/2019/wot/td/v1` as the context URL for TD 1.0 examples,
+and `https://www.w3.org/ns/td` for TD 1.1 examples.
+
 ## To Do
 * Do we keep using issues for projects and outcomes?
 * Is there a better way?
@@ -87,10 +91,13 @@ Participants: Toumura, McCool
 ** ECHONET Web API provides only servers
 
 ### Node-WoT
-Particpants: Siemens (Sebastian)? Daniel? TUM (Ege)?
+Particpants: Siemens (Sebastian)? Daniel? TUM (Ege)? Cristiano
 * Discovery integration
 * Use as client for ECHONET above
 ** In which case it needs to be on the VPN
+* Evaluate new action models
+** Multiple operations
+** Hypermedia approach
 
 ### Geospatial (Meta)Data
 Participants: McCool
@@ -101,13 +108,19 @@ Participants: McCool
 * SPARQL queries in TDD?
 ** Prototype spatial search using brute-force filtering.
 
+### NHK
+* WoT device emulator (Android App)
+  * Generates web apis based on TD
+  * Behaves in a WebView web app
+  * https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects/NHK/README.md
+
 ### Other Possible Projects
 
 #### EdgeX
 Participants: ?
 
 #### Web Things
-Participants: ?
+Participants: Cristiano
 * TD Testing
 
 #### LinkSmart
@@ -119,11 +132,6 @@ Participants: McCool
 * Extension for EJS
 * Generation of examples
 
-#### NHK
-Participants: Endo?
-* WoT device emulator (Android App)
-  * Generates web apis based on TD
-  * Behaves in a WebView web app
 
 ## Network configuration
 ![Plugfest network](./plugfestnet.svg)
