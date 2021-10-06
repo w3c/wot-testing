@@ -1,4 +1,4 @@
-# FUjitsu - Proxy server and Shadwos
+# FUjitsu - Proxy server and Shadows
 
 ## Participants
 
