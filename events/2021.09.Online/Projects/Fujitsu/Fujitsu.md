@@ -33,7 +33,7 @@ the Thing Descriptions of the shadow devices already existed (retrieve).
 The sensor unit for this plugfest can search the proxy server in the initializaing, and request to create 
 its shadow on it. Therefore even the device invisible from the VPN can be operated via the proxy server.
 
-## API
+## APIs
 - To get a list of registered shadows.
 ```
 curl http://192.168.30.134/Things
@@ -43,9 +43,9 @@ curl http://192.168.30.134/Things
 
 - To register a real device.
 ```
-curl -X POST -H 'content-type: application/json' -d @tdfile http://192.168.30.134/Things
+curl -X POST -H 'content-type: application/json' -d @fjsensor.td.jsonld http://192.168.30.134/Things
 ```
-where tdfile is the TD file name like "fjsensor.td.jsonld".
+where "fjsensor.td.jsonld" is the file name of the TD.
 
 
 - To delete a shadow device.
