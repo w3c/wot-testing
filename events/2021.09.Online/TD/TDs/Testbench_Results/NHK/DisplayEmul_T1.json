@@ -1,0 +1,799 @@
+{
+    "T1": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "23:27:21",
+            "writeInteraction": {
+                "payload": {
+                    "status": true
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "23:27:24",
+            "readInteraction": {
+                "response": {
+                    "status": true
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "content",
+            "passed": false,
+            "time": "23:27:24",
+            "writeInteraction": {
+                "payload": "elit",
+                "result": {}
+            }
+        },
+        {
+            "name": "content",
+            "passed": true,
+            "time": "23:27:24",
+            "readInteraction": {
+                "response": {},
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "23:27:25",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"toggle\":{\"safe\":true,\"idempotent\":false,\"title\":\"togglePowerStatus\",\"@type\":\"saref:ToggleCommand\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"toggle\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "setVolume",
+            "passed": true,
+            "time": "23:27:26",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"setVolume\":{\"safe\":true,\"idempotent\":false,\"title\":\"setVolume\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setvolume\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "setBright",
+            "passed": true,
+            "time": "23:27:27",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"setBright\":{\"safe\":true,\"idempotent\":false,\"title\":\"setBright\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setbright\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "showText",
+            "passed": true,
+            "time": "23:27:28",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"showText\":{\"safe\":true,\"idempotent\":false,\"title\":\"showText\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"showtext\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "playVideo",
+            "passed": true,
+            "time": "23:27:29",
+            "actionInteraction": {
+                "payload": {
+                    "description": "eiusmod veniam cupidatat",
+                    "url": "magna consectetur aliqua veniam",
+                    "identifier": "anim consequat eu non ad",
+                    "name": "in",
+                    "ut_b9": 99231543.3302995,
+                    "velit5": 16102651.35495226,
+                    "Duis5": -66838078.099131115
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "OP level invokeAction with payload Success"
+            }
+        },
+        {
+            "name": "pauseVideo",
+            "passed": true,
+            "time": "23:27:30",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"pauseVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"pauseVideo\",\"type\":\"pauseVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"pausevideo\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "stopVideo",
+            "passed": true,
+            "time": "23:27:31",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"stopVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"stopVideo\",\"type\":\"stopVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"stopvideo\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "presentationWebApp",
+            "passed": true,
+            "time": "23:27:32",
+            "actionInteraction": {
+                "payload": {
+                    "identifier": "et sed adipisicing",
+                    "description": "exercitation anim in ea laboris",
+                    "url": "Ut mollit",
+                    "name": "consectetur"
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "OP level invokeAction with payload Success"
+            }
+        },
+        {
+            "name": "launchNewsApp",
+            "passed": true,
+            "time": "23:27:33",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"launchNewsApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"launchNewsApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"launchnewsapp\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "weatherAlert",
+            "passed": true,
+            "time": "23:27:38",
+            "eventInteraction": {
+                "result": "OP level Event was successful"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "23:27:38",
+            "writeInteraction": {
+                "payload": {
+                    "status": false,
+                    "aliquipfe": false,
+                    "cupidatat_97": 4847286
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "content",
+            "passed": false,
+            "time": "23:27:38",
+            "writeInteraction": {
+                "payload": "adipisicing et elit minim",
+                "result": {}
+            }
+        },
+        {
+            "name": "playVideo",
+            "passed": true,
+            "time": "23:27:38",
+            "actionInteraction": {
+                "payload": {
+                    "est28e": 78055255.52087969,
+                    "minim_23": -86410144,
+                    "mollitf2": false,
+                    "sunt_5c": "Ut Lorem veniam",
+                    "elit_68b": true
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "Parameter level invokeAction Success"
+            }
+        },
+        {
+            "name": "presentationWebApp",
+            "passed": true,
+            "time": "23:27:39",
+            "actionInteraction": {
+                "payload": {
+                    "url": "Duis labore ipsum laborum dolor",
+                    "description": "sunt veniam",
+                    "proident_64": 86905023.80367598,
+                    "ullamco_7": true
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "Parameter level invokeAction Success"
+            }
+        }
+    ],
+    "T3": {
+        "power": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": {},
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "voluptate_4e8": -90829121.59464227,
+                        "Lorem_c": "ut",
+                        "reprehenderit2": "ut qui irure sunt",
+                        "veniam_78c": true,
+                        "in_f": -71880775
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "incididunt5": -14841048,
+                        "nulla9": "elit dolore",
+                        "do__": 69835397.59333283,
+                        "anim3a": true,
+                        "sint9d": -97964385
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "Lorem_8c": "ea ad mollit aute",
+                        "laboris_6e": "sit dolor",
+                        "qui_d": true,
+                        "commodo_5f": 82719545.27204448
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "amet__b8": "non sed exercitation"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "ipsumd": 5001453
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "velitb4f": -37254527
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "ea93": 20265228
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "in_1d6": "anim ea",
+                        "fugiat_7": -64792410.57347877,
+                        "ete": -68204251.00504237,
+                        "aliquipf2": false,
+                        "dolore6e": "nisi aute cupidatat"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "in_9_8": "cupidatat minim in laboris"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "fugiat2a": 79889798,
+                        "exercitation_b1": true
+                    },
+                    "result": {}
+                }
+            ]
+        },
+        "content": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": "",
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": "commodo id",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "cillum ad",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "adipisicing veniam quis dolore ullamco",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "proident",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "est culpa",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "quis amet consequat ullamco Lorem",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "minim commodo elit",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "esse Duis ea sit",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "velit Ut amet eu dolor",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "sunt dolor",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "quis pariatur proident elit",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "aute",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "dolor",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "qui dolore",
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": "ut ipsum",
+                    "result": {}
+                }
+            ]
+        },
+        "toggle": {},
+        "setVolume": {},
+        "setBright": {},
+        "showText": {},
+        "playVideo": {
+            "empty": [
+                {
+                    "passed": true,
+                    "payload": {},
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                }
+            ],
+            "random": [
+                {
+                    "passed": true,
+                    "payload": {
+                        "labore__": -18668088.094988093,
+                        "ut_b24": true
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "url": "est sed aliquip ea",
+                        "description": "nostrud",
+                        "name": "veniam Ut anim culpa nisi",
+                        "identifier": "in aliquip et adipisicing",
+                        "laborum1": 53266230.48506999,
+                        "id94b": "ad consequat exercitation quis enim",
+                        "sita": 46568836.26393399
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "name": "magna id",
+                        "identifier": "cillum tempor",
+                        "description": "nostrud tempor deserunt",
+                        "url": "cillum officia laborum ex in",
+                        "pariatur_14": "fugiat ex aute enim ea",
+                        "mollite6": true,
+                        "eiusmod6c": "aliquip ex velit"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "identifier": "mollit eiusmod",
+                        "url": "enim aliqua fugiat Ut occaecat",
+                        "name": "eiusmod tempor",
+                        "description": "do"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "identifier": "do pariatur consectetur",
+                        "voluptate_a_3": -2310799,
+                        "laborisf_3": 94779249.45833239,
+                        "in_e1": false
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "sed_288": -69023443.56399585,
+                        "reprehenderitc05": -45576156,
+                        "anim_49": -27818559,
+                        "nostrudb": "esse",
+                        "ut62": -50090469
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "reprehenderit_3a": "in officia voluptate"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "identifier": "ad ipsum",
+                        "name": "dolore do nostrud",
+                        "magna_290": 3987239,
+                        "ex_d74": -45531164.04362645,
+                        "amet2": "sint"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "description": "culpa fugiat dolore sunt voluptate",
+                        "name": "fugiat do et",
+                        "identifier": "eu",
+                        "url": "enim",
+                        "deserunt__c": -89986192,
+                        "in_839": -35475992.444922075
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "name": "sint veniam dolore magna Excepteur",
+                        "identifier": "dolore Lorem elit est aliquip",
+                        "description": "ex in",
+                        "url": "ea dolor sit non",
+                        "labore_f2f": "occaecat sed",
+                        "consectetur_1": true,
+                        "dolor__3": "dolor veniam",
+                        "velit_ab": "veniam"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                }
+            ]
+        },
+        "pauseVideo": {},
+        "stopVideo": {},
+        "presentationWebApp": {
+            "empty": [
+                {
+                    "passed": true,
+                    "payload": {},
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                }
+            ],
+            "random": [
+                {
+                    "passed": true,
+                    "payload": {
+                        "description": "non",
+                        "identifier": "culpa consectetur voluptate",
+                        "consectetur_b": 44537615.379769325,
+                        "est_5": "ut velit sunt do"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "url": "fugiat",
+                        "identifier": "irure elit",
+                        "name": "dolor commodo ex",
+                        "description": "veniam magna eu",
+                        "dolor6": true,
+                        "elit35": "aliqua nisi laboris adipisicing"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "name": "magna",
+                        "description": "enim ea in in et",
+                        "url": "ullamco pariatur fugiat",
+                        "identifier": "proident non"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "name": "proident",
+                        "url": "enim qui sit magna",
+                        "description": "enim ut proident",
+                        "commodo7": false,
+                        "anim6": -44905272.543695584,
+                        "consequata7": "ea deserunt amet cillum"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "commodo3e9": 50367007,
+                        "nulla6": -35986409,
+                        "minim_56": true,
+                        "ut59": -87249524,
+                        "animce": "in elit do qui",
+                        "consectetur_e73": -85876993.19125232
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "name": "minim",
+                        "description": "do dolor",
+                        "identifier": "ex elit",
+                        "url": "dolore nulla aute"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "url": "ut in",
+                        "officia91": true,
+                        "in_a8": 87664349,
+                        "laborum_64": 64570458.66893658,
+                        "nulla5d1": 80101261.9608958,
+                        "veniam_a0_": 38580373.39909276,
+                        "sinte2d": true
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "sed_8c": -70875898.90146217,
+                        "sunta": true
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "description": "officia et",
+                        "url": "ad consectetur sit velit cillum"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                },
+                {
+                    "passed": true,
+                    "payload": {
+                        "url": "magna elit labore officia sint",
+                        "description": "sint aute",
+                        "name": "aliqua eiusmod amet laborum",
+                        "identifier": "sunt"
+                    },
+                    "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                    "result": "Input level invokeAction Success"
+                }
+            ]
+        },
+        "launchNewsApp": {}
+    },
+    "T4": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "23:27:58",
+            "writeInteraction": {
+                "payload": {
+                    "status": false,
+                    "mollit_ddc": "ut",
+                    "voluptateb7": 4940979
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "23:27:59",
+            "readInteraction": {
+                "response": {
+                    "status": false
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "content",
+            "passed": false,
+            "time": "23:27:59",
+            "writeInteraction": {
+                "payload": "adipisicing aute consequat mollit",
+                "result": {}
+            }
+        },
+        {
+            "name": "content",
+            "passed": false,
+            "time": "23:28:00",
+            "readInteraction": {
+                "response": {},
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "toggle",
+            "passed": false,
+            "time": "23:28:01",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"toggle\":{\"safe\":true,\"idempotent\":false,\"title\":\"togglePowerStatus\",\"@type\":\"saref:ToggleCommand\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"toggle\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "setVolume",
+            "passed": false,
+            "time": "23:28:01",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"setVolume\":{\"safe\":true,\"idempotent\":false,\"title\":\"setVolume\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setvolume\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "setBright",
+            "passed": false,
+            "time": "23:28:02",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"setBright\":{\"safe\":true,\"idempotent\":false,\"title\":\"setBright\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setbright\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "showText",
+            "passed": false,
+            "time": "23:28:03",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"showText\":{\"safe\":true,\"idempotent\":false,\"title\":\"showText\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"showtext\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "playVideo",
+            "passed": false,
+            "time": "23:28:04",
+            "actionInteraction": {
+                "payload": {
+                    "identifier": "in sunt cupidatat Lorem",
+                    "url": "dolore reprehenderit amet",
+                    "name": "labore"
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"playVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"playVideo\",\"type\":\"playVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playvideo\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "Output level invokeAction with payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "pauseVideo",
+            "passed": false,
+            "time": "23:28:05",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"pauseVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"pauseVideo\",\"type\":\"pauseVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"pausevideo\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "stopVideo",
+            "passed": false,
+            "time": "23:28:06",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"stopVideo\":{\"safe\":true,\"idempotent\":false,\"title\":\"stopVideo\",\"type\":\"stopVOD\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"stopvideo\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "presentationWebApp",
+            "passed": false,
+            "time": "23:28:07",
+            "actionInteraction": {
+                "payload": {
+                    "url": "Ut",
+                    "ameta46": 61000511.1526525,
+                    "commodo_f5": 28380755.344562918,
+                    "in3": "Lorem Ut reprehenderit ipsum",
+                    "ullamco4ee": "esse eiusmod aliquip reprehenderit"
+                },
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"presentationWebApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"presentationWebApp\",\"type\":\"presentationWebApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"presentationwebapp\"}],\"input\":{\"type\":\"object\",\"properties\":{\"identifier\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"url\":{\"type\":\"string\"}}}}}}",
+                "result": "Output level invokeAction with payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "launchNewsApp",
+            "passed": false,
+            "time": "23:28:08",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.121:8888/\",\"actions\":{\"launchNewsApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"launchNewsApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"launchnewsapp\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        }
+    ]
+}

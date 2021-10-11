@@ -1,0 +1,282 @@
+{
+    "T1": [
+        {
+            "name": "faultStatus",
+            "passed": true,
+            "time": "22:42:23",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:42:24",
+            "writeInteraction": {
+                "payload": "adipisicing sunt Ut",
+                "result": "OP level writeProperty Success"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:42:25",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "manufacturer",
+            "passed": true,
+            "time": "22:42:26",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:42:27",
+            "writeInteraction": {
+                "payload": true,
+                "result": "OP level writeProperty Success"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:42:27",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "protocol",
+            "passed": true,
+            "time": "22:42:28",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "value",
+            "passed": true,
+            "time": "22:42:29",
+            "readInteraction": {
+                "result": "OP level readProperty Success"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:42:30",
+            "writeInteraction": {
+                "payload": "ex irure",
+                "result": "Parameter level writeProperty Success"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:42:30",
+            "writeInteraction": {
+                "payload": false,
+                "result": "Parameter level writeProperty Success"
+            }
+        }
+    ],
+    "T3": {
+        "faultStatus": {},
+        "installationLocation": {
+            "empty": [
+                {
+                    "passed": false,
+                    "time": "22:42:31",
+                    "payload": "",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "time": "22:42:33",
+                    "payload": "occaecat ut sunt Lorem laboris",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:34",
+                    "payload": "laborum proident Duis qui laboris",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:36",
+                    "payload": "nulla sit dolor consectetur",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:38",
+                    "payload": "sunt commodo",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:39",
+                    "payload": "officia laborum ea deserunt consequat",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:41",
+                    "payload": "consequat enim cupidatat",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:42",
+                    "payload": "commodo est",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:44",
+                    "payload": "Duis adipisicing incididunt exercitation Excepteur",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:45",
+                    "payload": "adipisicing mollit nostrud",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:47",
+                    "payload": "sint sit",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:49",
+                    "payload": "sint qui exercitation aliquip in",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:50",
+                    "payload": "sed ipsum in dolor mollit",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:52",
+                    "payload": "adipisicing consectetur Duis officia ad",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:53",
+                    "payload": "in",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:55",
+                    "payload": "anim do in sunt",
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                }
+            ]
+        },
+        "manufacturer": {},
+        "operationStatus": {
+            "special": [
+                {
+                    "passed": false,
+                    "time": "22:42:57",
+                    "payload": true,
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                },
+                {
+                    "passed": false,
+                    "time": "22:42:58",
+                    "payload": false,
+                    "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+                }
+            ]
+        },
+        "protocol": {},
+        "value": {}
+    },
+    "T4": [
+        {
+            "name": "faultStatus",
+            "passed": false,
+            "time": "22:43:00",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:43:01",
+            "writeInteraction": {
+                "payload": "amet laborum",
+                "result": "Output level writeProperty Success : No Output detected"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": false,
+            "time": "22:43:01",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "manufacturer",
+            "passed": false,
+            "time": "22:43:02",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:43:03",
+            "writeInteraction": {
+                "payload": false,
+                "result": "Output level writeProperty Success : No Output detected"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": false,
+            "time": "22:43:04",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "protocol",
+            "passed": false,
+            "time": "22:43:05",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "value",
+            "passed": false,
+            "time": "22:43:05",
+            "readInteraction": {
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        }
+    ]
+}
