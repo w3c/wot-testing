@@ -1,0 +1,61 @@
+{
+  "T1": [
+      {
+          "name": "accelerometer",
+          "passed": true,
+          "time": "22:52:15",
+          "readInteraction": {
+              "response": {
+                  "x": -0.020264,
+                  "y": 1.015137,
+                  "z": 0.05249
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "airquality",
+          "passed": true,
+          "time": "22:52:17",
+          "readInteraction": {
+              "response": {
+                  "tvoc": 9249,
+                  "eco2": 1987
+              },
+              "result": "OP level readProperty Success"
+          }
+      }
+  ],
+  "T2": [],
+  "T3": {
+      "accelerometer": {},
+      "airquality": {}
+  },
+  "T4": [
+      {
+          "name": "accelerometer",
+          "passed": true,
+          "time": "22:52:18",
+          "readInteraction": {
+              "response": {
+                  "x": -0.025391,
+                  "y": 1.014648,
+                  "z": 0.061035
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "airquality",
+          "passed": true,
+          "time": "22:52:20",
+          "readInteraction": {
+              "response": {
+                  "tvoc": 9365,
+                  "eco2": 1990
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      }
+  ]
+}

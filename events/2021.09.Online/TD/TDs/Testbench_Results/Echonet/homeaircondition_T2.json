@@ -1,0 +1,1077 @@
+{
+    "T1": [
+        {
+            "name": "airCleaningMethod",
+            "passed": true,
+            "time": "22:19:31",
+            "readInteraction": {
+                "response": {
+                    "clusterIon": "no",
+                    "electronic": "yes"
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "airFlowLevel",
+            "passed": true,
+            "time": "22:19:31",
+            "readInteraction": {
+                "response": "auto",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "airPurifierFunction",
+            "passed": false,
+            "time": "22:19:32",
+            "writeInteraction": {
+                "payload": {
+                    "modeOfClusterIon": "on",
+                    "autoOfElectronic": false,
+                    "levelOfElectronic": 6,
+                    "autoOfClusterIon": true,
+                    "modeOfElectronic": "on",
+                    "ipsumc": -84132841.25468929,
+                    "voluptate_f58": "Ut qui"
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "airPurifierFunction",
+            "passed": true,
+            "time": "22:19:32",
+            "readInteraction": {
+                "response": {
+                    "auto": "on",
+                    "level": 0,
+                    "mode": "off"
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "automaticSwingAirFlow",
+            "passed": true,
+            "time": "22:19:33",
+            "readInteraction": {
+                "response": "vertical",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "businessFacilityCode",
+            "passed": true,
+            "time": "22:19:34",
+            "readInteraction": {
+                "response": "00000F",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "currentConsumption",
+            "passed": true,
+            "time": "22:19:35",
+            "readInteraction": {
+                "response": 0.1,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "currentLimit",
+            "passed": true,
+            "time": "22:19:35",
+            "readInteraction": {
+                "response": 100,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "faultDescription",
+            "passed": true,
+            "time": "22:19:36",
+            "readInteraction": {
+                "response": "No fault",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "faultStatus",
+            "passed": true,
+            "time": "22:19:37",
+            "readInteraction": {
+                "response": false,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "hourMeter",
+            "passed": true,
+            "time": "22:19:38",
+            "readInteraction": {
+                "response": 283467841541,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "humidity",
+            "passed": true,
+            "time": "22:19:39",
+            "readInteraction": {
+                "response": 69,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:19:39",
+            "readInteraction": {
+                "response": "installationLocationNotSpecified",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "manufacturer",
+            "passed": true,
+            "time": "22:19:40",
+            "readInteraction": {
+                "response": {
+                    "code": "0x000017",
+                    "descriptions": {
+                        "en": "TOSHIBA CARRIER CORPORATION",
+                        "ja": "東芝キヤリア株式会社"
+                    }
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "manufacturerFaultCode",
+            "passed": true,
+            "time": "22:19:41",
+            "readInteraction": {
+                "response": "05-000017-0000000000",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "offTimerReservation",
+            "passed": false,
+            "time": "22:19:41",
+            "writeInteraction": {
+                "payload": {
+                    "magnaa87": 14291552.391916081,
+                    "voluptateda": "nulla aute pariatur sit",
+                    "aute8": -46565031
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "offTimerReservation",
+            "passed": true,
+            "time": "22:19:42",
+            "readInteraction": {
+                "response": "bothOff",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "onTimerReservation",
+            "passed": true,
+            "time": "22:19:43",
+            "readInteraction": {
+                "response": "timeOffRelativeTimeOff",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "operationMode",
+            "passed": true,
+            "time": "22:19:43",
+            "readInteraction": {
+                "response": "cooling",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:19:44",
+            "readInteraction": {
+                "response": true,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "outdoorTemperature",
+            "passed": true,
+            "time": "22:19:45",
+            "readInteraction": {
+                "response": 19,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "productCode",
+            "passed": true,
+            "time": "22:19:46",
+            "readInteraction": {
+                "response": "RAS-221PDR  ",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "productionDate",
+            "passed": true,
+            "time": "22:19:47",
+            "readInteraction": {
+                "response": "2009-03-13",
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "protocol",
+            "passed": true,
+            "time": "22:19:47",
+            "readInteraction": {
+                "response": {
+                    "type": "ECHONET_Lite v1.13",
+                    "version": "Rel.M"
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "relativeHumidityDehumidifying",
+            "passed": true,
+            "time": "22:19:48",
+            "readInteraction": {
+                "response": 50,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "roomTemperature",
+            "passed": true,
+            "time": "22:19:49",
+            "readInteraction": {
+                "response": 22,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "selfCleaningFunction",
+            "passed": false,
+            "time": "22:19:49",
+            "writeInteraction": {
+                "payload": {
+                    "levelOfOzone": 4,
+                    "autoOfOzone": true,
+                    "autoOfDrying": true,
+                    "modeOfDrying": "on",
+                    "levelOfDrying": 8
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "selfCleaningFunction",
+            "passed": true,
+            "time": "22:19:50",
+            "readInteraction": {
+                "response": {
+                    "auto": "on",
+                    "level": 0,
+                    "mode": "off"
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "targetTemperature",
+            "passed": true,
+            "time": "22:19:51",
+            "readInteraction": {
+                "response": 24,
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "ventilationFunction",
+            "passed": true,
+            "time": "22:19:51",
+            "readInteraction": {
+                "response": "off",
+                "result": "OP level readProperty Success"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "airPurifierFunction",
+            "passed": false,
+            "time": "22:19:52",
+            "writeInteraction": {
+                "payload": {
+                    "autoOfElectronic": true,
+                    "levelOfElectronic": 4,
+                    "autoOfClusterIon": true,
+                    "modeOfElectronic": "on"
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "offTimerReservation",
+            "passed": false,
+            "time": "22:19:52",
+            "writeInteraction": {
+                "payload": {
+                    "timeBased": false,
+                    "relatimeTimeBased": true
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "selfCleaningFunction",
+            "passed": false,
+            "time": "22:19:52",
+            "writeInteraction": {
+                "payload": {
+                    "ad___f": true
+                },
+                "result": {}
+            }
+        }
+    ],
+    "T3": {
+        "airCleaningMethod": {},
+        "airFlowLevel": {},
+        "airPurifierFunction": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": {},
+                    "result": {}
+                }
+            ],
+            "special": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfElectronic": 1,
+                        "levelOfClusterIon": 1
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfElectronic": 8,
+                        "levelOfClusterIon": 8
+                    },
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfElectronic": false,
+                        "levelOfClusterIon": 7,
+                        "aute1": false,
+                        "tempor_fc_": "eu fugiat"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfClusterIon": 3
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfClusterIon": 4,
+                        "mollitb81": "culpa"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfElectronic": false,
+                        "aute_c2": 99943204,
+                        "deserunt_87": true,
+                        "non_b99": -78185112.10779727,
+                        "quiea": -20301553.91738288,
+                        "incididunt7": 90194460.05737984,
+                        "et_6e": false,
+                        "commodo9": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "nostrud63f": -90742359,
+                        "voluptated4": "nulla amet aliqua reprehenderit in",
+                        "dolor4_": "proident cillum ullamco amet id",
+                        "ut_1": true,
+                        "nisi4eb": "ad sunt aliqua esse",
+                        "nisidcb": -74225273,
+                        "in2": "pariatur dolore Duis"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "modeOfElectronic": "on",
+                        "levelOfElectronic": 1,
+                        "levelOfClusterIon": 3,
+                        "autoOfClusterIon": false,
+                        "autoOfElectronic": false,
+                        "modeOfClusterIon": "on",
+                        "consectetur__b4": "Excepteur voluptate",
+                        "ullamco_50_": "minim dolore pariatur culpa"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfClusterIon": 3,
+                        "autoOfClusterIon": true,
+                        "modeOfClusterIon": "on",
+                        "minima": -4212129,
+                        "dolore97": -38935874,
+                        "inc": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfClusterIon": false,
+                        "modeOfElectronic": "on",
+                        "levelOfElectronic": 5,
+                        "qui_8": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfElectronic": true,
+                        "levelOfClusterIon": 1
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfClusterIon": true,
+                        "non7e": false,
+                        "mollit036": "esse dolore in ad ex",
+                        "consequat_af9": 44452518,
+                        "qui_1": 51936133,
+                        "do_e4": "cupidatat",
+                        "aliqua_80": true,
+                        "laborum__43": true,
+                        "voluptate634": 12503053.14537865
+                    },
+                    "result": {}
+                }
+            ]
+        },
+        "automaticSwingAirFlow": {},
+        "businessFacilityCode": {},
+        "currentConsumption": {},
+        "currentLimit": {},
+        "faultDescription": {},
+        "faultStatus": {},
+        "hourMeter": {},
+        "humidity": {},
+        "installationLocation": {},
+        "manufacturer": {},
+        "manufacturerFaultCode": {},
+        "offTimerReservation": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": {},
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "exercitation5": "voluptate",
+                        "deserunt_8": "Ut et mollit ad",
+                        "ullamco_3": -97286099
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "commodo_": -31780019.06503445,
+                        "quis11": -75257625
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "relatimeTimeBased": true,
+                        "timeBased": true,
+                        "Duis3_": "veniam ex",
+                        "eiusmod_c": true,
+                        "fugiat_11": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "relatimeTimeBased": false,
+                        "eiusmodb0": -40615554
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "qui_62b": 13494695,
+                        "Loremb8d": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "laborum_cf": true,
+                        "aliquip_73": -6647778.351478368
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "timeBased": false,
+                        "relatimeTimeBased": false,
+                        "nisi54c": 59096739.287326515
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "relatimeTimeBased": false,
+                        "timeBased": false
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "relatimeTimeBased": true,
+                        "timeBased": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "timeBased": false,
+                        "relatimeTimeBased": true
+                    },
+                    "result": {}
+                }
+            ]
+        },
+        "onTimerReservation": {},
+        "operationMode": {},
+        "operationStatus": {},
+        "outdoorTemperature": {},
+        "productCode": {},
+        "productionDate": {},
+        "protocol": {},
+        "relativeHumidityDehumidifying": {},
+        "roomTemperature": {},
+        "selfCleaningFunction": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": {},
+                    "result": {}
+                }
+            ],
+            "special": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfOzone": 1,
+                        "levelOfDrying": 1
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfOzone": 8,
+                        "levelOfDrying": 8
+                    },
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "modeOfDrying": "off",
+                        "autoOfOzone": true,
+                        "modeOfOzone": "on",
+                        "levelOfDrying": 8,
+                        "autoOfDrying": true,
+                        "levelOfOzone": 3
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfOzone": 5,
+                        "modeOfDrying": "on",
+                        "autoOfDrying": false,
+                        "modeOfOzone": "on",
+                        "autoOfOzone": false,
+                        "levelOfDrying": 3
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfDrying": 3,
+                        "dolor_f57": -17651626,
+                        "magna_0": "exercitation",
+                        "proident5": 5648909,
+                        "nisi2": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "autoOfOzone": false,
+                        "modeOfDrying": "on",
+                        "autoOfDrying": true,
+                        "Lorem_0": "fugiat ea et Lorem adipisicing"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfOzone": 6,
+                        "Uta0": true,
+                        "Utd": false,
+                        "voluptateb": 75311227,
+                        "consectetur_3b1": false,
+                        "adipisicing_0": 67147348
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfOzone": 8,
+                        "autoOfOzone": true,
+                        "autoOfDrying": true,
+                        "modeOfOzone": "off",
+                        "levelOfDrying": 2,
+                        "ut2e": false,
+                        "irure_f": false,
+                        "cupidatat0": false,
+                        "ex8f": 19637768.208819255,
+                        "culpa970": -3269200
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfDrying": 3,
+                        "autoOfDrying": true,
+                        "esse_00": "veniam laboris cillum sint sit",
+                        "est6fd": true,
+                        "anim_70": 76209593.7206209,
+                        "et61": -83042846.54080841,
+                        "ullamco__": 45011514,
+                        "reprehenderit_2b": true,
+                        "occaecata5": true,
+                        "idc0": 1963503.6528483033,
+                        "sint974": 92921886
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "levelOfDrying": 8,
+                        "levelOfOzone": 7,
+                        "eub": -31718333,
+                        "labore_3f1": -12383426.695149288,
+                        "cillum3_": "irure voluptate",
+                        "consecteturea_": false
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "modeOfDrying": "off",
+                        "levelOfOzone": 2,
+                        "autoOfDrying": false,
+                        "modeOfOzone": "on",
+                        "Excepteur_fb1": -35491307,
+                        "enim_c": "labore"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "Ut6": -90427677,
+                        "magna73": 77189204,
+                        "occaecat_bc": -78353550,
+                        "dolore38": -47847574,
+                        "do_ad": "Ut velit consectetur voluptate dolor",
+                        "ea_0": 55300468
+                    },
+                    "result": {}
+                }
+            ]
+        },
+        "targetTemperature": {},
+        "ventilationFunction": {}
+    },
+    "T4": [
+        {
+            "name": "airCleaningMethod",
+            "passed": true,
+            "time": "22:19:52",
+            "readInteraction": {
+                "response": {
+                    "clusterIon": "no",
+                    "electronic": "yes"
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "airFlowLevel",
+            "passed": true,
+            "time": "22:19:53",
+            "readInteraction": {
+                "response": "auto",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "airPurifierFunction",
+            "passed": false,
+            "time": "22:19:53",
+            "writeInteraction": {
+                "payload": {
+                    "modeOfElectronic": "off",
+                    "autoOfElectronic": true,
+                    "autoOfClusterIon": true,
+                    "levelOfClusterIon": 3,
+                    "levelOfElectronic": 1
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "airPurifierFunction",
+            "passed": true,
+            "time": "22:19:54",
+            "readInteraction": {
+                "response": {
+                    "auto": "on",
+                    "level": 0,
+                    "mode": "off"
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "automaticSwingAirFlow",
+            "passed": true,
+            "time": "22:19:55",
+            "readInteraction": {
+                "response": "vertical",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "businessFacilityCode",
+            "passed": true,
+            "time": "22:19:55",
+            "readInteraction": {
+                "response": "00000F",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "currentConsumption",
+            "passed": true,
+            "time": "22:19:56",
+            "readInteraction": {
+                "response": 0.1,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "currentLimit",
+            "passed": true,
+            "time": "22:19:57",
+            "readInteraction": {
+                "response": 100,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "faultDescription",
+            "passed": true,
+            "time": "22:19:58",
+            "readInteraction": {
+                "response": "No fault",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "faultStatus",
+            "passed": true,
+            "time": "22:19:59",
+            "readInteraction": {
+                "response": false,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "hourMeter",
+            "passed": false,
+            "time": "22:19:59",
+            "readInteraction": {
+                "response": 283467841541,
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "humidity",
+            "passed": true,
+            "time": "22:20:00",
+            "readInteraction": {
+                "response": 69,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "installationLocation",
+            "passed": true,
+            "time": "22:20:01",
+            "readInteraction": {
+                "response": "installationLocationNotSpecified",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "manufacturer",
+            "passed": true,
+            "time": "22:20:02",
+            "readInteraction": {
+                "response": {
+                    "code": "0x000017",
+                    "descriptions": {
+                        "en": "TOSHIBA CARRIER CORPORATION",
+                        "ja": "東芝キヤリア株式会社"
+                    }
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "manufacturerFaultCode",
+            "passed": true,
+            "time": "22:20:03",
+            "readInteraction": {
+                "response": "05-000017-0000000000",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "offTimerReservation",
+            "passed": false,
+            "time": "22:20:03",
+            "writeInteraction": {
+                "payload": {
+                    "ullamco5": "minim sunt Ut consectetur consequat"
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "offTimerReservation",
+            "passed": false,
+            "time": "22:20:03",
+            "readInteraction": {
+                "response": "bothOff",
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "onTimerReservation",
+            "passed": false,
+            "time": "22:20:04",
+            "readInteraction": {
+                "response": "timeOffRelativeTimeOff",
+                "result": "Output level readProperty Fail : Output received and invalid"
+            }
+        },
+        {
+            "name": "operationMode",
+            "passed": true,
+            "time": "22:20:05",
+            "readInteraction": {
+                "response": "cooling",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "operationStatus",
+            "passed": true,
+            "time": "22:20:06",
+            "readInteraction": {
+                "response": true,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "outdoorTemperature",
+            "passed": true,
+            "time": "22:20:07",
+            "readInteraction": {
+                "response": 19,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "productCode",
+            "passed": true,
+            "time": "22:20:07",
+            "readInteraction": {
+                "response": "RAS-221PDR  ",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "productionDate",
+            "passed": true,
+            "time": "22:20:08",
+            "readInteraction": {
+                "response": "2009-03-13",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "protocol",
+            "passed": true,
+            "time": "22:20:09",
+            "readInteraction": {
+                "response": {
+                    "type": "ECHONET_Lite v1.13",
+                    "version": "Rel.M"
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "relativeHumidityDehumidifying",
+            "passed": true,
+            "time": "22:20:10",
+            "readInteraction": {
+                "response": 50,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "roomTemperature",
+            "passed": true,
+            "time": "22:20:11",
+            "readInteraction": {
+                "response": 22,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "selfCleaningFunction",
+            "passed": false,
+            "time": "22:20:11",
+            "writeInteraction": {
+                "payload": {
+                    "levelOfOzone": 8,
+                    "autoOfOzone": true,
+                    "modeOfOzone": "off",
+                    "autoOfDrying": true,
+                    "levelOfDrying": 1,
+                    "modeOfDrying": "off",
+                    "ea6": "eu in magna irure qui",
+                    "officiabf": true
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "selfCleaningFunction",
+            "passed": true,
+            "time": "22:20:12",
+            "readInteraction": {
+                "response": {
+                    "auto": "on",
+                    "level": 0,
+                    "mode": "off"
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "targetTemperature",
+            "passed": true,
+            "time": "22:20:12",
+            "readInteraction": {
+                "response": 24,
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "ventilationFunction",
+            "passed": true,
+            "time": "22:20:13",
+            "readInteraction": {
+                "response": "off",
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        }
+    ]
+}
