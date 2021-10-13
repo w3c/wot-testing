@@ -28,6 +28,9 @@ mkdir -p outputs/TDs/README.md
 >>> Create output directory for Siemens
 mkdir -p outputs/TDs/Siemens
 >>> Copy any manual assertions for Siemens
+>>> Create output directory for Testbench_Results
+mkdir -p outputs/TDs/Testbench_Results
+>>> Copy any manual assertions for Testbench_Results
 >>> Create output directory for TUM
 mkdir -p outputs/TDs/TUM
 >>> Copy any manual assertions for TUM
@@ -769,14 +772,64 @@ node:internal/process/promises:246
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Siemens/testthing.csv
 <<<< Siemens/testthing processed
 <<< Siemens processed
+>>> Processing organization Testbench_Results
+     in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results
+>>>> Processing implementation Testbench_Results/Echonet
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results/Echonet
+mkdir -p outputs/TDs/Testbench_Results/Echonet
+merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Echonet.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Echonet.csv Output=
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Echonet.csv -a -s > 
+./update.sh: line 75: $Output: ambiguous redirect
+<<<<< MERGE output written to 
+<<<< Testbench_Results/Echonet processed
+>>>> Processing implementation Testbench_Results/Hitatchi
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results/Hitatchi
+mkdir -p outputs/TDs/Testbench_Results/Hitatchi
+merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Hitatchi.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Hitatchi.csv Output=
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Hitatchi.csv -a -s > 
+./update.sh: line 75: $Output: ambiguous redirect
+<<<<< MERGE output written to 
+<<<< Testbench_Results/Hitatchi processed
+>>>> Processing implementation Testbench_Results/NHK
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results/NHK
+mkdir -p outputs/TDs/Testbench_Results/NHK
+merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/NHK.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/NHK.csv Output=
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/NHK.csv -a -s > 
+./update.sh: line 75: $Output: ambiguous redirect
+<<<<< MERGE output written to 
+<<<< Testbench_Results/NHK processed
+>>>> Processing implementation Testbench_Results/Siemens
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results/Siemens
+mkdir -p outputs/TDs/Testbench_Results/Siemens
+merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Siemens.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Siemens.csv Output=
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Siemens.csv -a -s > 
+./update.sh: line 75: $Output: ambiguous redirect
+<<<<< MERGE output written to 
+<<<< Testbench_Results/Siemens processed
+>>>> Processing implementation Testbench_Results/Unibo
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/Testbench_Results/Unibo
+mkdir -p outputs/TDs/Testbench_Results/Unibo
+merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Unibo.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Unibo.csv Output=
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/Testbench_Results/Unibo.csv -a -s > 
+./update.sh: line 75: $Output: ambiguous redirect
+<<<<< MERGE output written to 
+<<<< Testbench_Results/Unibo processed
+<<< Testbench_Results processed
 >>> Processing organization TUM
      in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM
->>>>  Processing implementation TUM/ConveyorBelt1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv
+>>>> Processing implementation TUM/flask-based
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based
+mkdir -p outputs/TDs/TUM/flask-based
+>>>>> Processing instance TUM/flask-based/DobotMagician
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/DobotMagician.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/DobotMagician.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/DobotMagician.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/DobotMagician.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv
 node:internal/process/promises:246
           triggerUncaughtException(err, true /* fromPromise */);
           ^
@@ -784,15 +837,14 @@ node:internal/process/promises:246
 [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
   code: 'ERR_UNHANDLED_REJECTION'
 }
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt1.csv
-<<<< TUM/ConveyorBelt1 processed
->>>>  Processing implementation TUM/ConveyorBelt2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ConveyorBelt2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv
+<<<<< TUM/flask-based/DobotMagician processed
+>>>>> Processing instance TUM/flask-based/ScrollPhat
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/ScrollPhat.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/ScrollPhat.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/ScrollPhat.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/ScrollPhat.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv
 node:internal/process/promises:246
           triggerUncaughtException(err, true /* fromPromise */);
           ^
@@ -800,15 +852,14 @@ node:internal/process/promises:246
 [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
   code: 'ERR_UNHANDLED_REJECTION'
 }
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ConveyorBelt2.csv
-<<<< TUM/ConveyorBelt2 processed
->>>>  Processing implementation TUM/Daylight
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Daylight.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Daylight.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Daylight.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Daylight.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv
+<<<<< TUM/flask-based/ScrollPhat processed
+>>>>> Processing instance TUM/flask-based/Uarm
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/Uarm.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/Uarm.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/Uarm.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/flask-based/Uarm.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv
 node:internal/process/promises:246
           triggerUncaughtException(err, true /* fromPromise */);
           ^
@@ -816,345 +867,14 @@ node:internal/process/promises:246
 [UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
   code: 'ERR_UNHANDLED_REJECTION'
 }
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Daylight.csv
-<<<< TUM/Daylight processed
->>>>  Processing implementation TUM/DimmerSwitch
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DimmerSwitch.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DimmerSwitch.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DimmerSwitch.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DimmerSwitch.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DimmerSwitch.csv
-<<<< TUM/DimmerSwitch processed
->>>>  Processing implementation TUM/DobotMagician
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DobotMagician.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DobotMagician.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DobotMagician.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/DobotMagician.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/DobotMagician.csv
-<<<< TUM/DobotMagician processed
->>>>  Processing implementation TUM/HueIndoorSensor1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor1.csv
-<<<< TUM/HueIndoorSensor1 processed
->>>>  Processing implementation TUM/HueIndoorSensor2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueIndoorSensor2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueIndoorSensor2.csv
-<<<< TUM/HueIndoorSensor2 processed
->>>>  Processing implementation TUM/HueOutdoorSensor1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueOutdoorSensor1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueOutdoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueOutdoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/HueOutdoorSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/HueOutdoorSensor1.csv
-<<<< TUM/HueOutdoorSensor1 processed
->>>>  Processing implementation TUM/InfraredSensor1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor1.csv
-<<<< TUM/InfraredSensor1 processed
->>>>  Processing implementation TUM/InfraredSensor2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/InfraredSensor2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/InfraredSensor2.csv
-<<<< TUM/InfraredSensor2 processed
->>>>  Processing implementation TUM/lightTD1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD1.csv
-<<<< TUM/lightTD1 processed
->>>>  Processing implementation TUM/lightTD2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/lightTD2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/lightTD2.csv
-<<<< TUM/lightTD2 processed
->>>>  Processing implementation TUM/PanTiltHat1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat1.csv
-<<<< TUM/PanTiltHat1 processed
->>>>  Processing implementation TUM/PanTiltHat2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/PanTiltHat2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/PanTiltHat2.csv
-<<<< TUM/PanTiltHat2 processed
->>>>  Processing implementation TUM/RainbowHAT1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT1.csv
-<<<< TUM/RainbowHAT1 processed
->>>>  Processing implementation TUM/RainbowHAT2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/RainbowHAT2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/RainbowHAT2.csv
-<<<< TUM/RainbowHAT2 processed
->>>>  Processing implementation TUM/ScrollPhat
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ScrollPhat.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ScrollPhat.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ScrollPhat.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/ScrollPhat.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/ScrollPhat.csv
-<<<< TUM/ScrollPhat processed
->>>>  Processing implementation TUM/SenseHat_1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_1.csv
-<<<< TUM/SenseHat_1 processed
->>>>  Processing implementation TUM/SenseHat_2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_2.csv
-<<<< TUM/SenseHat_2 processed
->>>>  Processing implementation TUM/SenseHat_3
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_3.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_3.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_3.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_3.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_3.csv
-<<<< TUM/SenseHat_3 processed
->>>>  Processing implementation TUM/SenseHat_4
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_4.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_4.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_4.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/SenseHat_4.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/SenseHat_4.csv
-<<<< TUM/SenseHat_4 processed
->>>>  Processing implementation TUM/Uarm
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Uarm.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Uarm.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Uarm.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Uarm.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Uarm.csv
-<<<< TUM/Uarm processed
->>>>  Processing implementation TUM/UnicornPHat1
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat1.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat1.csv
-<<<< TUM/UnicornPHat1 processed
->>>>  Processing implementation TUM/UnicornPHat2
-       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat2.td.jsonld
-mkdir -p outputs/TDs/TUM
-process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv
-  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/UnicornPHat2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv
-node:internal/process/promises:246
-          triggerUncaughtException(err, true /* fromPromise */);
-          ^
-
-[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
-  code: 'ERR_UNHANDLED_REJECTION'
-}
-  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/UnicornPHat2.csv
-<<<< TUM/UnicornPHat2 processed
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv
+<<<<< TUM/flask-based/Uarm processed
+merge /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/ScrollPhat.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based/Uarm.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/flask-based.csv
+<<<< TUM/flask-based processed
 >>>> Processing implementation TUM/Images
       under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/Images
 mkdir -p outputs/TDs/TUM/Images
@@ -1164,6 +884,337 @@ merge  /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/Im
 ./update.sh: line 75: $Output: ambiguous redirect
 <<<<< MERGE output written to 
 <<<< TUM/Images processed
+>>>> Processing implementation TUM/node-wot-based
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based
+mkdir -p outputs/TDs/TUM/node-wot-based
+>>>>> Processing instance TUM/node-wot-based/ConveyorBelt1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv
+<<<<< TUM/node-wot-based/ConveyorBelt1 processed
+>>>>> Processing instance TUM/node-wot-based/ConveyorBelt2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/ConveyorBelt2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv
+<<<<< TUM/node-wot-based/ConveyorBelt2 processed
+>>>>> Processing instance TUM/node-wot-based/InfraredSensor1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv
+<<<<< TUM/node-wot-based/InfraredSensor1 processed
+>>>>> Processing instance TUM/node-wot-based/InfraredSensor2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/InfraredSensor2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv
+<<<<< TUM/node-wot-based/InfraredSensor2 processed
+>>>>> Processing instance TUM/node-wot-based/PanTiltHat1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv
+<<<<< TUM/node-wot-based/PanTiltHat1 processed
+>>>>> Processing instance TUM/node-wot-based/PanTiltHat2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/PanTiltHat2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv
+<<<<< TUM/node-wot-based/PanTiltHat2 processed
+>>>>> Processing instance TUM/node-wot-based/RainbowHAT1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv
+<<<<< TUM/node-wot-based/RainbowHAT1 processed
+>>>>> Processing instance TUM/node-wot-based/RainbowHAT2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/RainbowHAT2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv
+<<<<< TUM/node-wot-based/RainbowHAT2 processed
+>>>>> Processing instance TUM/node-wot-based/SenseHat_1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv
+<<<<< TUM/node-wot-based/SenseHat_1 processed
+>>>>> Processing instance TUM/node-wot-based/SenseHat_2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv
+<<<<< TUM/node-wot-based/SenseHat_2 processed
+>>>>> Processing instance TUM/node-wot-based/SenseHat_3
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_3.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_3.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_3.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_3.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv
+<<<<< TUM/node-wot-based/SenseHat_3 processed
+>>>>> Processing instance TUM/node-wot-based/SenseHat_4
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_4.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_4.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_4.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/SenseHat_4.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv
+<<<<< TUM/node-wot-based/SenseHat_4 processed
+>>>>> Processing instance TUM/node-wot-based/UnicornPHat1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv
+<<<<< TUM/node-wot-based/UnicornPHat1 processed
+>>>>> Processing instance TUM/node-wot-based/UnicornPHat2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/node-wot-based/UnicornPHat2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv
+<<<<< TUM/node-wot-based/UnicornPHat2 processed
+merge /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/ConveyorBelt2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/InfraredSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/PanTiltHat2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/RainbowHAT2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_3.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/SenseHat_4.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based/UnicornPHat2.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/node-wot-based.csv
+<<<< TUM/node-wot-based processed
+>>>> Processing implementation TUM/philips-hue
+      under /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue
+mkdir -p outputs/TDs/TUM/philips-hue
+>>>>> Processing instance TUM/philips-hue/Daylight
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/Daylight.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/Daylight.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/Daylight.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/Daylight.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv
+<<<<< TUM/philips-hue/Daylight processed
+>>>>> Processing instance TUM/philips-hue/DimmerSwitch
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/DimmerSwitch.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/DimmerSwitch.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/DimmerSwitch.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/DimmerSwitch.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv
+<<<<< TUM/philips-hue/DimmerSwitch processed
+>>>>> Processing instance TUM/philips-hue/HueIndoorSensor1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv
+<<<<< TUM/philips-hue/HueIndoorSensor1 processed
+>>>>> Processing instance TUM/philips-hue/HueIndoorSensor2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueIndoorSensor2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv
+<<<<< TUM/philips-hue/HueIndoorSensor2 processed
+>>>>> Processing instance TUM/philips-hue/HueOutdoorSensor1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueOutdoorSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueOutdoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueOutdoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/HueOutdoorSensor1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv
+<<<<< TUM/philips-hue/HueOutdoorSensor1 processed
+>>>>> Processing instance TUM/philips-hue/lightTD1
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD1.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD1.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD1.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD1.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv
+<<<<< TUM/philips-hue/lightTD1 processed
+>>>>> Processing instance TUM/philips-hue/lightTD2
+       in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD2.td.jsonld
+process /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD2.td.jsonld /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD2.td.jsonld Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/TUM/philips-hue/lightTD2.td.jsonld -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv
+node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "collectAssertionSchemas function problem: Error: ENOENT: no such file or directory, open '/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/cli/node_modules/@thing-description-playground/assertions/node_modules/@thing-description-playground/core/td-schema.json'".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+  mv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv.temp.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv
+<<<<< TUM/philips-hue/lightTD2 processed
+merge /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv Output=/home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue.csv
+  node index.js /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/DimmerSwitch.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueIndoorSensor2.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/HueOutdoorSensor1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD1.csv /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue/lightTD2.csv -a -s > /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/outputs/TDs/TUM/philips-hue.csv
+<<<< TUM/philips-hue processed
 <<< TUM processed
 >>> Processing organization UNIBO
      in /home/mmccool/Dev/wot-testing/events/2021.09.Online/TD/TDs/UNIBO
