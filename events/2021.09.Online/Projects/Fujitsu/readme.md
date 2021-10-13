@@ -1,4 +1,4 @@
-# FUjitsu - Proxy server and Shadows
+# Fujitsu - Proxy server and Shadows
 
 ## Participants
 
