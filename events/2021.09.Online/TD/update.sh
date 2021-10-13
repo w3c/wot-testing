@@ -66,13 +66,13 @@ function merge() {
     cd $ASCLI
     if [[ -f $Output ]]; then
       Temp="${Output}.temp.csv"
-      echo "  node index.js ${Inputs[@]} $Output -a -s > $Temp"
-      node index.js ${Inputs[@]} $Output -a -s > $Temp
+      echo "  node index.js ${Inputs[@]} $Output -a -s | grep -v "======" > $Temp"
+      node index.js ${Inputs[@]} $Output -a -s | grep -v "======" > $Temp
       echo "  mv $Temp $Output"
       mv $Temp $Output
     else
-      echo "  node index.js ${Inputs[@]} -a -s > $Output"
-      node index.js ${Inputs[@]} -a -s > $Output
+      echo "  node index.js ${Inputs[@]} -a -s | grep -v "======" > $Output"
+      node index.js ${Inputs[@]} -a -s | grep -v "======" > $Output
     fi
   )
   echo "<<<<< MERGE output written to $Output"
@@ -95,35 +95,30 @@ function process() {
       Temp1="${Output}.temp1.csv"
       Temp2="${Output}.temp2.csv"
       # Process test
-      echo "  node index.js $Input -a -s > $Temp1"
-      node index.js $Input -a -s > $Temp1
+      echo "  node index.js $Input -a -s | grep -v "======" > $Temp1"
+      node index.js $Input -a -s | grep -v "======" > $Temp1
       # Merge results
-      echo "  node index.js $Temp1 $Output -a -s > $Temp2"
-      node index.js $Temp1 $Output -a -s > $Temp2
+      echo "  node index.js $Temp1 $Output -a -s | grep -v "======" > $Temp2"
+      node index.js $Temp1 $Output -a -s | grep -v "======" > $Temp2
       echo "  mv $Temp2 $Output"
       mv $Temp2 $Output
       echo "  rm $Temp1"
       rm $Temp1
     else
       # Process test
-      echo "  node index.js $Input -a -s > $Output"
-      node index.js $Input -a -s > $Output
+      echo "  node index.js $Input -a -s | grep -v "======" > $Output"
+      node index.js $Input -a -s | grep -v "======" > $Output
     fi
     # Extras="${Input%%.*}.csv"
     Extras="$(dirname $Input)/$(basename $Input .td.jsonld).csv"
     Temp="$(dirname $Output)/$(basename ${Extras}.temp.csv)"
     if [[ -f $Extras ]]; then
-      # Merge results
-      echo "  node index.js $Output $Extras -a -s > $Temp"
-      node index.js $Output $Extras -a -s > $Temp
-    else
-      # Merge results even if no extras to sort and merge children
-      # echo "  node index.js $Output -a -s > $Temp"
-      # node index.js $Output -a -s > $Temp
-      cp $Output $Temp
+      # Merge extra results
+      echo "  node index.js $Output $Extras -a -s | grep -v "======" > $Temp"
+      node index.js $Output $Extras -a -s | grep -v "======" > $Temp
+      echo "  mv $Temp $Output"
+      mv $Temp $Output
     fi
-    echo "  mv $Temp $Output"
-    mv $Temp $Output
   )
   echo "<<<<< PROCESS output written to $Output"
   # touch $Output
