@@ -1,0 +1,514 @@
+{
+  "T1": [
+      {
+          "name": "brightness",
+          "passed": true,
+          "time": "22:33:38",
+          "readInteraction": {
+              "response": 100,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "brightnessLevelForMainLighting",
+          "passed": true,
+          "time": "22:33:39",
+          "readInteraction": {
+              "response": 100,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "brightnessLevelForNightLighting",
+          "passed": true,
+          "time": "22:33:40",
+          "readInteraction": {
+              "response": 100,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "brightnessLevelStep",
+          "passed": true,
+          "time": "22:33:40",
+          "readInteraction": {
+              "response": "20",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "brightnessLevelStepForMainLighting",
+          "passed": true,
+          "time": "22:33:41",
+          "readInteraction": {
+              "response": "20",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "brightnessLevelStepForNightLighting",
+          "passed": true,
+          "time": "22:33:42",
+          "readInteraction": {
+              "response": "daylightWhite",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "businessFacilityCode",
+          "passed": true,
+          "time": "22:33:43",
+          "readInteraction": {
+              "response": "000001",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "faultDescription",
+          "passed": true,
+          "time": "22:33:44",
+          "readInteraction": {
+              "response": "No fault",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "faultStatus",
+          "passed": true,
+          "time": "22:33:44",
+          "readInteraction": {
+              "response": false,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "installationLocation",
+          "passed": true,
+          "time": "22:33:45",
+          "readInteraction": {
+              "response": "installationLocationNotSpecified",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "instantaneousElectricPowerConsumption",
+          "passed": true,
+          "time": "22:33:46",
+          "readInteraction": {
+              "response": 2,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "lightColor",
+          "passed": true,
+          "time": "22:33:47",
+          "readInteraction": {
+              "response": "daylightWhite",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "lightColorLevelStep",
+          "passed": true,
+          "time": "22:33:48",
+          "readInteraction": {
+              "response": "12",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "lightColorLevelStepForMainLighting",
+          "passed": true,
+          "time": "22:33:48",
+          "readInteraction": {
+              "response": "12",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "manufacturer",
+          "passed": true,
+          "time": "22:33:49",
+          "readInteraction": {
+              "response": {
+                  "code": "0x00001B",
+                  "descriptions": {
+                      "en": "TOSHIBA LIGHTING & TECHNOLOGY CORPORATION",
+                      "ja": "東芝ライテック株式会社"
+                  }
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "manufacturerFaultCode",
+          "passed": true,
+          "time": "22:33:50",
+          "readInteraction": {
+              "response": "02-00001B-0000",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "maximumSettableLevelForNightLighting",
+          "passed": true,
+          "time": "22:33:51",
+          "readInteraction": {
+              "response": {
+                  "brightness": 6,
+                  "color": "notColor"
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "maximumSpecifiableLevel",
+          "passed": true,
+          "time": "22:33:52",
+          "readInteraction": {
+              "response": {
+                  "brightness": 20,
+                  "color": 21
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "operationMode",
+          "passed": true,
+          "time": "22:33:52",
+          "readInteraction": {
+              "response": "normal",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "operationStatus",
+          "passed": true,
+          "time": "22:33:53",
+          "readInteraction": {
+              "response": false,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "powerSaving",
+          "passed": true,
+          "time": "22:33:54",
+          "readInteraction": {
+              "response": false,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "productCode",
+          "passed": true,
+          "time": "22:33:55",
+          "readInteraction": {
+              "response": "LEDH-LT4    ",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "productionDate",
+          "passed": true,
+          "time": "22:33:56",
+          "readInteraction": {
+              "response": "2014-08-17",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "protocol",
+          "passed": true,
+          "time": "22:33:56",
+          "readInteraction": {
+              "response": {
+                  "type": "ECHONET_Lite v1.13",
+                  "version": "Rel.M"
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "serialNumber",
+          "passed": true,
+          "time": "22:33:57",
+          "readInteraction": {
+              "response": "000000000000000000000000",
+              "result": "OP level readProperty Success"
+          }
+      }
+  ],
+  "T2": [],
+  "T3": {
+      "brightness": {},
+      "brightnessLevelForMainLighting": {},
+      "brightnessLevelForNightLighting": {},
+      "brightnessLevelStep": {},
+      "brightnessLevelStepForMainLighting": {},
+      "brightnessLevelStepForNightLighting": {},
+      "businessFacilityCode": {},
+      "faultDescription": {},
+      "faultStatus": {},
+      "installationLocation": {},
+      "instantaneousElectricPowerConsumption": {},
+      "lightColor": {},
+      "lightColorLevelStep": {},
+      "lightColorLevelStepForMainLighting": {},
+      "manufacturer": {},
+      "manufacturerFaultCode": {},
+      "maximumSettableLevelForNightLighting": {},
+      "maximumSpecifiableLevel": {},
+      "operationMode": {},
+      "operationStatus": {},
+      "powerSaving": {},
+      "productCode": {},
+      "productionDate": {},
+      "protocol": {},
+      "serialNumber": {}
+  },
+  "T4": [
+      {
+          "name": "brightness",
+          "passed": true,
+          "time": "22:33:58",
+          "readInteraction": {
+              "response": 100,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "brightnessLevelForMainLighting",
+          "passed": true,
+          "time": "22:33:59",
+          "readInteraction": {
+              "response": 100,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "brightnessLevelForNightLighting",
+          "passed": true,
+          "time": "22:34:00",
+          "readInteraction": {
+              "response": 100,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "brightnessLevelStep",
+          "passed": true,
+          "time": "22:34:00",
+          "readInteraction": {
+              "response": "20",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "brightnessLevelStepForMainLighting",
+          "passed": true,
+          "time": "22:34:01",
+          "readInteraction": {
+              "response": "20",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "brightnessLevelStepForNightLighting",
+          "passed": true,
+          "time": "22:34:02",
+          "readInteraction": {
+              "response": "daylightWhite",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "businessFacilityCode",
+          "passed": true,
+          "time": "22:34:03",
+          "readInteraction": {
+              "response": "000001",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "faultDescription",
+          "passed": true,
+          "time": "22:34:03",
+          "readInteraction": {
+              "response": "No fault",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "faultStatus",
+          "passed": true,
+          "time": "22:34:04",
+          "readInteraction": {
+              "response": false,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "installationLocation",
+          "passed": true,
+          "time": "22:34:05",
+          "readInteraction": {
+              "response": "installationLocationNotSpecified",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "instantaneousElectricPowerConsumption",
+          "passed": true,
+          "time": "22:34:06",
+          "readInteraction": {
+              "response": 2,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "lightColor",
+          "passed": true,
+          "time": "22:34:07",
+          "readInteraction": {
+              "response": "daylightWhite",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "lightColorLevelStep",
+          "passed": true,
+          "time": "22:34:07",
+          "readInteraction": {
+              "response": "12",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "lightColorLevelStepForMainLighting",
+          "passed": true,
+          "time": "22:34:08",
+          "readInteraction": {
+              "response": "12",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "manufacturer",
+          "passed": true,
+          "time": "22:34:09",
+          "readInteraction": {
+              "response": {
+                  "code": "0x00001B",
+                  "descriptions": {
+                      "en": "TOSHIBA LIGHTING & TECHNOLOGY CORPORATION",
+                      "ja": "東芝ライテック株式会社"
+                  }
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "manufacturerFaultCode",
+          "passed": true,
+          "time": "22:34:10",
+          "readInteraction": {
+              "response": "02-00001B-0000",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "maximumSettableLevelForNightLighting",
+          "passed": true,
+          "time": "22:34:11",
+          "readInteraction": {
+              "response": {
+                  "brightness": 6,
+                  "color": "notColor"
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "maximumSpecifiableLevel",
+          "passed": true,
+          "time": "22:34:11",
+          "readInteraction": {
+              "response": {
+                  "brightness": 20,
+                  "color": 21
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "operationMode",
+          "passed": true,
+          "time": "22:34:12",
+          "readInteraction": {
+              "response": "normal",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "operationStatus",
+          "passed": true,
+          "time": "22:34:13",
+          "readInteraction": {
+              "response": false,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "powerSaving",
+          "passed": true,
+          "time": "22:34:14",
+          "readInteraction": {
+              "response": false,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "productCode",
+          "passed": true,
+          "time": "22:34:15",
+          "readInteraction": {
+              "response": "LEDH-LT4    ",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "productionDate",
+          "passed": true,
+          "time": "22:34:16",
+          "readInteraction": {
+              "response": "2014-08-17",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "protocol",
+          "passed": true,
+          "time": "22:34:16",
+          "readInteraction": {
+              "response": {
+                  "type": "ECHONET_Lite v1.13",
+                  "version": "Rel.M"
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "serialNumber",
+          "passed": true,
+          "time": "22:34:17",
+          "readInteraction": {
+              "response": "000000000000000000000000",
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      }
+  ]
+}
