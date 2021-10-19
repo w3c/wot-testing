@@ -1,0 +1,46 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1"],
+  "@type": "Thing",
+  "title":  "Fujitsu-sensor",
+  "id":     "urn:com:fujitsu:sensor",
+  "description":  "sensors with wifi interface",
+  "base":   "http://192.168.0.18/things",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+     }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "temperature": {
+      "@type":  "temperature",
+      "type": "number", 
+      "readonly": true,
+      "observable": false,
+      "forms": [{
+        "href": "properties/temperature",
+        "contentType": "application/json"
+      }]
+    },
+    "humidity": {
+      "@type":  "humidity",
+      "type": "number", 
+      "readonly": true,
+      "observable": false,
+      "forms": [{
+        "href": "properties/humidity",
+        "contentType": "application/json"
+      }]
+    },
+    "airpressure": {
+      "@type":  "airpressure",
+      "type": "number", 
+      "readonly": true,
+      "observable": false,
+      "forms": [{
+        "href": "properties/airpressure",
+        "contentType": "application/json"
+      }]
+    }
+  }
+}
