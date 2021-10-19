@@ -10,9 +10,6 @@ cp TDs/AllOrgs/intel-proxy.csv outputs/TDs/AllOrgs/
 >>> Create output directory for README.md
 mkdir -p outputs/TDs/README.md
 >>> Copy any manual assertions for README.md
->>> Create output directory for Siemens
-mkdir -p outputs/TDs/Siemens
->>> Copy any manual assertions for Siemens
 >>> Create output directory for TUM
 mkdir -p outputs/TDs/TUM
 >>> Copy any manual assertions for TUM
@@ -85,9 +82,37 @@ process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nod
   node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-led.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
 <<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
 <<<<< AllOrgs/eclipse-nodewot/hitachi-led processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-counter
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-counter processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-ecar
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-ecar processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-pv-system
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-pv-system processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-testthing
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-testthing processed
 merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
->>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
 <<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
 <<<< AllOrgs/eclipse-nodewot processed
 >>>> Processing implementation AllOrgs/fujitsu-sensor
@@ -376,49 +401,6 @@ merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-e
 <<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator.csv
 <<<< AllOrgs/nhk-emulator processed
 <<< AllOrgs processed
->>> Processing organization Siemens
-     in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens
->>>>  Processing implementation Siemens/counter
-       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/counter.td.jsonld
-mkdir -p outputs/TDs/Siemens
-process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/counter.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/counter.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/counter.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/counter.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/counter.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/counter.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/counter.csv
-<<<< Siemens/counter processed
->>>>  Processing implementation Siemens/ecar
-       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/ecar.td.jsonld
-mkdir -p outputs/TDs/Siemens
-process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/ecar.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/ecar.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/ecar.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/ecar.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/ecar.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/ecar.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/ecar.csv
-<<<< Siemens/ecar processed
->>>>  Processing implementation Siemens/pv-system
-       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/pv-system.td.jsonld
-mkdir -p outputs/TDs/Siemens
-process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/pv-system.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/pv-system.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/pv-system.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/pv-system.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/pv-system.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/pv-system.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/pv-system.csv
-<<<< Siemens/pv-system processed
->>>>  Processing implementation Siemens/smart-coffee-machine
-       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/smart-coffee-machine.td.jsonld
-mkdir -p outputs/TDs/Siemens
-process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/smart-coffee-machine.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/smart-coffee-machine.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/smart-coffee-machine.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/smart-coffee-machine.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/smart-coffee-machine.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/smart-coffee-machine.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/smart-coffee-machine.csv
-<<<< Siemens/smart-coffee-machine processed
->>>>  Processing implementation Siemens/testthing
-       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/testthing.td.jsonld
-mkdir -p outputs/TDs/Siemens
-process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/testthing.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/testthing.csv
->>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/testthing.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/testthing.csv
-  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/Siemens/testthing.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/testthing.csv
-<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/Siemens/testthing.csv
-<<<< Siemens/testthing processed
-<<< Siemens processed
 >>> Processing organization TUM
      in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/TUM
 >>>> Processing implementation TUM/flask-based
