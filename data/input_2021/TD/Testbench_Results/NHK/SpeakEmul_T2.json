@@ -1,0 +1,255 @@
+{
+    "T1": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "1:23:26",
+            "writeInteraction": {
+                "payload": {
+                    "status": true,
+                    "sit68": false
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "1:23:27",
+            "readInteraction": {
+                "response": {
+                    "status": true
+                },
+                "result": "OP level readProperty Success"
+            }
+        },
+        {
+            "name": "toggle",
+            "passed": true,
+            "time": "1:23:28",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"toggle\":{\"safe\":true,\"idempotent\":false,\"title\":\"togglePower\",\"@type\":\"saref:ToggleCommand\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"toggle\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "setVolume",
+            "passed": true,
+            "time": "1:23:29",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"setVolume\":{\"safe\":true,\"idempotent\":false,\"title\":\"setVolume\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setvolume\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "playAudio",
+            "passed": true,
+            "time": "1:23:30",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"playAudio\":{\"safe\":true,\"idempotent\":false,\"title\":\"playAudio\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playaudio\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "launchNewsApp",
+            "passed": true,
+            "time": "1:23:31",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"launchNewsApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"launchNewsApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"launchnewsapp\"}]}}}",
+                "result": "OP level invokeAction without payload Success"
+            }
+        },
+        {
+            "name": "weatherAlert",
+            "passed": true,
+            "time": "1:23:35",
+            "eventInteraction": {
+                "result": "OP level Event was successful"
+            }
+        }
+    ],
+    "T2": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "1:23:35",
+            "writeInteraction": {
+                "payload": {
+                    "status": false,
+                    "veniam__b": -84033463.4714559,
+                    "commodo_1c": -33392018,
+                    "irure_9": 87016571,
+                    "officia_a": false
+                },
+                "result": {}
+            }
+        }
+    ],
+    "T3": {
+        "power": {
+            "empty": [
+                {
+                    "passed": false,
+                    "payload": {},
+                    "result": {}
+                }
+            ],
+            "random": [
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "occaecat_0cb": -56641273
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "dolore46": -5185976.64149189,
+                        "adipisicing1": -4228367.032549858
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "anim_0": false,
+                        "sed_4": 16845961,
+                        "esse_5": false
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "tempor_74": false,
+                        "deserunt_79": -6706920.500214681
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": true,
+                        "sit_fb": 17572748.231234714,
+                        "ut_c": -69102653,
+                        "fugiat347": true,
+                        "aliqua__8": -1787143
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "sit_3d": 69017047,
+                        "officia_75a": true,
+                        "ex_152": "adipisicing incididunt id cupidatat dolor",
+                        "aute_89": -28983089.686255157
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "quis6__": "ut Lorem mollit in"
+                    },
+                    "result": {}
+                },
+                {
+                    "passed": false,
+                    "payload": {
+                        "status": false,
+                        "eiusmod_37": "elit amet sint"
+                    },
+                    "result": {}
+                }
+            ]
+        },
+        "toggle": {},
+        "setVolume": {},
+        "playAudio": {},
+        "launchNewsApp": {}
+    },
+    "T4": [
+        {
+            "name": "power",
+            "passed": false,
+            "time": "1:23:35",
+            "writeInteraction": {
+                "payload": {
+                    "status": true,
+                    "esse21": 83523847,
+                    "Ut_9": -6338607,
+                    "esse_4f": "qui tempor Excepteur",
+                    "eiusmod6b9": true
+                },
+                "result": {}
+            }
+        },
+        {
+            "name": "power",
+            "passed": true,
+            "time": "1:23:36",
+            "readInteraction": {
+                "response": {
+                    "status": false
+                },
+                "result": "Output level readProperty Success : Output received and valid"
+            }
+        },
+        {
+            "name": "toggle",
+            "passed": false,
+            "time": "1:23:37",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"toggle\":{\"safe\":true,\"idempotent\":false,\"title\":\"togglePower\",\"@type\":\"saref:ToggleCommand\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"toggle\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "setVolume",
+            "passed": false,
+            "time": "1:23:38",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"setVolume\":{\"safe\":true,\"idempotent\":false,\"title\":\"setVolume\",\"@type\":\"saref:Level control function\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"setvolume\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "playAudio",
+            "passed": false,
+            "time": "1:23:39",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"playAudio\":{\"safe\":true,\"idempotent\":false,\"title\":\"playAudio\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"playaudio\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        },
+        {
+            "name": "launchNewsApp",
+            "passed": false,
+            "time": "1:23:40",
+            "actionInteraction": {
+                "response": "{\"base\":\"http://192.168.30.120:8888/\",\"actions\":{\"launchNewsApp\":{\"safe\":true,\"idempotent\":false,\"title\":\"launchNewsApp\",\"forms\":[{\"op\":\"invokeaction\",\"contentType\":\"application/json;charset=utf-8\",\"href\":\"launchnewsapp\"}]}}}",
+                "result": "Output level invokeAction without payload Fail : No Output defined but Output received"
+            }
+        }
+    ]
+}
