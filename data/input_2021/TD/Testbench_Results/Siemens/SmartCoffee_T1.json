@@ -1,0 +1,923 @@
+{
+  "T1": [
+      {
+          "name": "allAvailableResources",
+          "passed": true,
+          "time": "11:55:02",
+          "readInteraction": {
+              "response": {
+                  "water": 94,
+                  "milk": 100,
+                  "chocolate": 100,
+                  "coffeeBeans": 94
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "allAvailableResources",
+          "passed": true,
+          "time": "11:55:02",
+          "readInteraction": {
+              "response": {
+                  "water": 94,
+                  "milk": 100,
+                  "chocolate": 100,
+                  "coffeeBeans": 94
+              },
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:55:03",
+          "writeInteraction": {
+              "payload": 45089304.41148934,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:55:03",
+          "readInteraction": {
+              "response": "Please specify id variable as uriVariables.",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:55:04",
+          "writeInteraction": {
+              "payload": -58235491.573300146,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:55:04",
+          "readInteraction": {
+              "response": "Please specify id variable as uriVariables.",
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "possibleDrinks",
+          "passed": true,
+          "time": "11:55:04",
+          "readInteraction": {
+              "response": [
+                  "espresso",
+                  "americano",
+                  "cappuccino",
+                  "latte",
+                  "hotChocolate",
+                  "hotWater"
+              ],
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "possibleDrinks",
+          "passed": true,
+          "time": "11:55:05",
+          "readInteraction": {
+              "response": [
+                  "espresso",
+                  "americano",
+                  "cappuccino",
+                  "latte",
+                  "hotChocolate",
+                  "hotWater"
+              ],
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:55:05",
+          "writeInteraction": {
+              "payload": 39773636,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:55:06",
+          "readInteraction": {
+              "response": 39773636,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:55:06",
+          "writeInteraction": {
+              "payload": 57582335,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:55:06",
+          "readInteraction": {
+              "response": 57582335,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:55:15",
+          "writeInteraction": {
+              "payload": false,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:55:15",
+          "readInteraction": {
+              "response": false,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:55:23",
+          "writeInteraction": {
+              "payload": true,
+              "result": "OP level writeProperty Success"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:55:23",
+          "readInteraction": {
+              "response": true,
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "schedules",
+          "passed": true,
+          "time": "11:55:24",
+          "readInteraction": {
+              "response": [],
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "schedules",
+          "passed": true,
+          "time": "11:55:24",
+          "readInteraction": {
+              "response": [],
+              "result": "OP level readProperty Success"
+          }
+      },
+      {
+          "name": "makeDrink",
+          "passed": true,
+          "time": "11:55:24",
+          "actionInteraction": {
+              "response": {
+                  "result": true,
+                  "message": "Your americano is in progress!"
+              },
+              "result": "OP level invokeAction without payload Success"
+          }
+      },
+      {
+          "name": "setSchedule",
+          "passed": true,
+          "time": "11:55:25",
+          "actionInteraction": {
+              "payload": {
+                  "time": "magna culpa",
+                  "mode": "everyFr",
+                  "size": "m",
+                  "quantity": 3,
+                  "drinkId": "nisi pariatur minim veniam"
+              },
+              "response": {
+                  "result": true,
+                  "message": "Your schedule has been set!"
+              },
+              "result": "OP level invokeAction with payload Success"
+          }
+      },
+      {
+          "name": "outOfResource",
+          "passed": true,
+          "time": "11:55:26",
+          "eventInteraction": {
+              "result": "OP level Event reached timeout"
+          }
+      }
+  ],
+  "T2": [
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:55:26",
+          "writeInteraction": {
+              "payload": 48694069.55222958,
+              "result": "Parameter level writeProperty Success"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:55:27",
+          "writeInteraction": {
+              "payload": 44400409,
+              "result": "Parameter level writeProperty Success"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:55:27",
+          "writeInteraction": {
+              "payload": true,
+              "result": "Parameter level writeProperty Success"
+          }
+      },
+      {
+          "name": "setSchedule",
+          "passed": true,
+          "time": "11:55:28",
+          "actionInteraction": {
+              "payload": {
+                  "time": "cillum sunt",
+                  "mode": "everySun",
+                  "drinkId": "velit occaecat in irure est",
+                  "size": "s",
+                  "quantity": 4
+              },
+              "response": {
+                  "result": true,
+                  "message": "Your schedule has been set!"
+              },
+              "result": "Parameter level invokeAction Success"
+          }
+      }
+  ],
+  "T3": {
+      "allAvailableResources": {},
+      "availableResourceLevel": {
+          "special": [
+              {
+                  "passed": false,
+                  "time": "11:55:28",
+                  "payload": 0,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              }
+          ],
+          "random": [
+              {
+                  "passed": false,
+                  "time": "11:55:29",
+                  "payload": 15784287.193224818,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:30",
+                  "payload": 45626759.516697705,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:31",
+                  "payload": -75565786.55921076,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:31",
+                  "payload": -99918421.61597013,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:32",
+                  "payload": 38479129.794350564,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:33",
+                  "payload": 27260496.071012154,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:34",
+                  "payload": -26649801.593518287,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:35",
+                  "payload": 22429022.53716737,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:36",
+                  "payload": -90367488.8413899,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:37",
+                  "payload": 19088388.28649269,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              }
+          ]
+      },
+      "possibleDrinks": {},
+      "servedCounter": {
+          "special": [
+              {
+                  "passed": false,
+                  "time": "11:55:38",
+                  "payload": 0,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              }
+          ],
+          "random": [
+              {
+                  "passed": false,
+                  "time": "11:55:38",
+                  "payload": 34572742,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:39",
+                  "payload": 99451080,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:40",
+                  "payload": 91839139,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:41",
+                  "payload": 39070373,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:42",
+                  "payload": 26272425,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:43",
+                  "payload": 49734847,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:44",
+                  "payload": 85857140,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:45",
+                  "payload": 50231017,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": false,
+                  "time": "11:55:45",
+                  "payload": 83415980,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": true,
+                  "time": "11:55:46",
+                  "payload": 65007197,
+                  "result": "Input level read/writeProperty Success : Read value the same as Write value"
+              }
+          ]
+      },
+      "maintenanceNeeded": {
+          "special": [
+              {
+                  "passed": false,
+                  "time": "11:55:47",
+                  "payload": true,
+                  "result": "Input level read/writeProperty Fail : Read value the same as Write value"
+              },
+              {
+                  "passed": true,
+                  "time": "11:55:55",
+                  "payload": false,
+                  "result": "Input level read/writeProperty Success : Read value the same as Write value"
+              }
+          ]
+      },
+      "schedules": {},
+      "makeDrink": {},
+      "setSchedule": {
+          "empty": [
+              {
+                  "passed": true,
+                  "payload": {},
+                  "response": {
+                      "result": false,
+                      "message": "Please provide all the required parameters: time and mode."
+                  },
+                  "result": "Input level invokeAction Success"
+              }
+          ],
+          "special": [
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "incididunt",
+                      "mode": "everyTh"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              }
+          ],
+          "random": [
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "consequat ad cupidatat",
+                      "mode": "everyday",
+                      "quantity": 3
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "do",
+                      "mode": "everyTh",
+                      "quantity": 5
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "Ut dolore",
+                      "mode": "everyMo",
+                      "quantity": 1
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "eu deserunt sint",
+                      "mode": "everyFr",
+                      "drinkId": "nostrud",
+                      "quantity": 3,
+                      "size": "l"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "Ut",
+                      "mode": "once",
+                      "size": "s",
+                      "drinkId": "in eiusmod in",
+                      "quantity": 5
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "ut commodo nulla aliquip in",
+                      "mode": "everySun",
+                      "size": "m",
+                      "quantity": 4,
+                      "drinkId": "irure velit anim sit et"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "veniam adipisicing nisi",
+                      "mode": "everyTh",
+                      "drinkId": "laboris",
+                      "quantity": 3,
+                      "size": "s"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "adipisicing aliqua",
+                      "mode": "everySun",
+                      "quantity": 2,
+                      "size": "l"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "in mollit eiusmod",
+                      "mode": "everyday",
+                      "size": "m",
+                      "quantity": 1,
+                      "drinkId": "consectetur id ut"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              },
+              {
+                  "passed": true,
+                  "payload": {
+                      "time": "do et",
+                      "mode": "once",
+                      "quantity": 1,
+                      "drinkId": "cillum enim dolore voluptate"
+                  },
+                  "response": {
+                      "result": true,
+                      "message": "Your schedule has been set!"
+                  },
+                  "result": "Input level invokeAction Success"
+              }
+          ]
+      }
+  },
+  "T4": [
+      {
+          "name": "allAvailableResources",
+          "passed": true,
+          "time": "11:56:01",
+          "readInteraction": {
+              "response": {
+                  "water": 92,
+                  "milk": 100,
+                  "chocolate": 100,
+                  "coffeeBeans": 92
+              },
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": true,
+          "time": "11:56:02",
+          "writeInteraction": {
+              "payload": -72492785.7885504,
+              "result": "Output level writeProperty Success : No Output detected"
+          }
+      },
+      {
+          "name": "availableResourceLevel",
+          "passed": false,
+          "time": "11:56:02",
+          "readInteraction": {
+              "response": "Please specify id variable as uriVariables.",
+              "result": "Output level readProperty Fail : Output received and invalid"
+          }
+      },
+      {
+          "name": "possibleDrinks",
+          "passed": true,
+          "time": "11:56:10",
+          "readInteraction": {
+              "response": [
+                  "espresso",
+                  "americano",
+                  "cappuccino",
+                  "latte",
+                  "hotChocolate",
+                  "hotWater"
+              ],
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:56:11",
+          "writeInteraction": {
+              "payload": 43127953,
+              "result": "Output level writeProperty Success : No Output detected"
+          }
+      },
+      {
+          "name": "servedCounter",
+          "passed": true,
+          "time": "11:56:11",
+          "readInteraction": {
+              "response": 43127953,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:56:19",
+          "writeInteraction": {
+              "payload": false,
+              "result": "Output level writeProperty Success : No Output detected"
+          }
+      },
+      {
+          "name": "maintenanceNeeded",
+          "passed": true,
+          "time": "11:56:19",
+          "readInteraction": {
+              "response": false,
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "schedules",
+          "passed": true,
+          "time": "11:56:20",
+          "readInteraction": {
+              "response": [
+                  {
+                      "time": "veniam ipsum in aliquip",
+                      "mode": "everyWe",
+                      "size": "l",
+                      "drinkId": "in Duis dolor",
+                      "quantity": 3
+                  },
+                  {
+                      "time": "magna culpa",
+                      "mode": "everyFr",
+                      "size": "m",
+                      "quantity": 3,
+                      "drinkId": "nisi pariatur minim veniam"
+                  },
+                  {
+                      "time": "velit enim aliqua",
+                      "mode": "everyday",
+                      "drinkId": "americano",
+                      "size": "m",
+                      "quantity": 1
+                  },
+                  {
+                      "time": "cillum sunt",
+                      "mode": "everySun",
+                      "drinkId": "velit occaecat in irure est",
+                      "size": "s",
+                      "quantity": 4
+                  },
+                  {
+                      "time": "incididunt",
+                      "mode": "everyTh",
+                      "drinkId": "americano",
+                      "size": "m",
+                      "quantity": 1
+                  },
+                  {
+                      "time": "incididunt",
+                      "mode": "everyTh",
+                      "drinkId": "americano",
+                      "size": "m",
+                      "quantity": 1
+                  },
+                  {
+                      "time": "consequat ad cupidatat",
+                      "mode": "everyday",
+                      "quantity": 3,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "consequat ad cupidatat",
+                      "mode": "everyday",
+                      "quantity": 3,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "do",
+                      "mode": "everyTh",
+                      "quantity": 5,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "do",
+                      "mode": "everyTh",
+                      "quantity": 5,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "Ut dolore",
+                      "mode": "everyMo",
+                      "quantity": 1,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "Ut dolore",
+                      "mode": "everyMo",
+                      "quantity": 1,
+                      "drinkId": "americano",
+                      "size": "m"
+                  },
+                  {
+                      "time": "eu deserunt sint",
+                      "mode": "everyFr",
+                      "drinkId": "nostrud",
+                      "quantity": 3,
+                      "size": "l"
+                  },
+                  {
+                      "time": "Ut",
+                      "mode": "once",
+                      "size": "s",
+                      "drinkId": "in eiusmod in",
+                      "quantity": 5
+                  },
+                  {
+                      "time": "eu deserunt sint",
+                      "mode": "everyFr",
+                      "drinkId": "nostrud",
+                      "quantity": 3,
+                      "size": "l"
+                  },
+                  {
+                      "time": "ut commodo nulla aliquip in",
+                      "mode": "everySun",
+                      "size": "m",
+                      "quantity": 4,
+                      "drinkId": "irure velit anim sit et"
+                  },
+                  {
+                      "time": "Ut",
+                      "mode": "once",
+                      "size": "s",
+                      "drinkId": "in eiusmod in",
+                      "quantity": 5
+                  },
+                  {
+                      "time": "veniam adipisicing nisi",
+                      "mode": "everyTh",
+                      "drinkId": "laboris",
+                      "quantity": 3,
+                      "size": "s"
+                  },
+                  {
+                      "time": "ut commodo nulla aliquip in",
+                      "mode": "everySun",
+                      "size": "m",
+                      "quantity": 4,
+                      "drinkId": "irure velit anim sit et"
+                  },
+                  {
+                      "time": "adipisicing aliqua",
+                      "mode": "everySun",
+                      "quantity": 2,
+                      "size": "l",
+                      "drinkId": "americano"
+                  },
+                  {
+                      "time": "veniam adipisicing nisi",
+                      "mode": "everyTh",
+                      "drinkId": "laboris",
+                      "quantity": 3,
+                      "size": "s"
+                  },
+                  {
+                      "time": "in mollit eiusmod",
+                      "mode": "everyday",
+                      "size": "m",
+                      "quantity": 1,
+                      "drinkId": "consectetur id ut"
+                  },
+                  {
+                      "time": "adipisicing aliqua",
+                      "mode": "everySun",
+                      "quantity": 2,
+                      "size": "l",
+                      "drinkId": "americano"
+                  },
+                  {
+                      "time": "do et",
+                      "mode": "once",
+                      "quantity": 1,
+                      "drinkId": "cillum enim dolore voluptate",
+                      "size": "m"
+                  },
+                  {
+                      "time": "in mollit eiusmod",
+                      "mode": "everyday",
+                      "size": "m",
+                      "quantity": 1,
+                      "drinkId": "consectetur id ut"
+                  },
+                  {
+                      "time": "do et",
+                      "mode": "once",
+                      "quantity": 1,
+                      "drinkId": "cillum enim dolore voluptate",
+                      "size": "m"
+                  }
+              ],
+              "result": "Output level readProperty Success : Output received and valid"
+          }
+      },
+      {
+          "name": "makeDrink",
+          "passed": true,
+          "time": "11:56:27",
+          "actionInteraction": {
+              "response": {
+                  "result": true,
+                  "message": "Your americano is in progress!"
+              },
+              "result": "Output level invokeAction without payload Success : Output received and valid"
+          }
+      },
+      {
+          "name": "setSchedule",
+          "passed": true,
+          "time": "11:56:28",
+          "actionInteraction": {
+              "payload": {
+                  "time": "elit",
+                  "mode": "everyWe",
+                  "drinkId": "et non ut nulla ea",
+                  "size": "m",
+                  "quantity": 3
+              },
+              "response": {
+                  "result": true,
+                  "message": "Your schedule has been set!"
+              },
+              "result": "Output level invokeAction with payload Success : Output received and valid"
+          }
+      }
+  ]
+}

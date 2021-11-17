@@ -4,3 +4,6 @@
 [submodule "events/2021.09.Online/TD/TMs/U Bremen"]
 	path = events/2021.09.Online/TD/TMs/U Bremen
 	url = https://github.com/JKRhb/onedm-playground-wot-tm.git
+[submodule "events/2021.09.Online/TD/TMs/U Bremen"]
+	path = data/input_2021/TD/TMs/U Bremen
+	url = https://github.com/JKRhb/onedm-playground-wot-tm.git

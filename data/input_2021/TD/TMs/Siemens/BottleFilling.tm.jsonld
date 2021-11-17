@@ -1,0 +1,20 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "saref": "https://w3id.org/saref#"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "title": "Bottle Filling TM",
+    "description": "Bottle filler for 4 bottles",
+    "properties": {
+        "operationCount": {
+            "@type": "saref:Measurement",
+            "readOnly": true,
+            "observable": true,
+            "description": "The amount of bottles processed",
+            "type": "number"
+        }
+    }
+}

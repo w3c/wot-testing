@@ -1,0 +1,650 @@
+>> Cleanup
+rm -r outputs/TDs/*
+<< Done cleanup
+>> Setup
+>>> Create output directory for AllOrgs
+mkdir -p outputs/TDs/AllOrgs
+>>> Copy any manual assertions for AllOrgs
+cp TDs/AllOrgs/intel-ocf.csv outputs/TDs/AllOrgs/
+cp TDs/AllOrgs/intel-proxy.csv outputs/TDs/AllOrgs/
+<< Done setup
+>> Processing
+>>> Processing organization AllOrgs
+     in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs
+>>>> Processing implementation AllOrgs/echonet-bridge
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge
+mkdir -p outputs/TDs/AllOrgs/echonet-bridge
+>>>>> Processing instance AllOrgs/echonet-bridge/echonet-generallighting
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-generallighting.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-generallighting.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-generallighting.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-generallighting.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv
+<<<<< AllOrgs/echonet-bridge/echonet-generallighting processed
+>>>>> Processing instance AllOrgs/echonet-bridge/echonet-homeairconditioner
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv
+/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/assertionTests.js:66
+        throw new Error("Invalid TD")
+              ^
+
+Error: Invalid TD
+    at validate (/home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/assertionTests.js:66:15)
+    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:69:39
+    at Array.forEach (<anonymous>)
+    at /home/mmccool/Dev/wot-testing/tools/thingweb-playground/packages/assertions/index.js:63:23
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv
+<<<<< AllOrgs/echonet-bridge/echonet-homeairconditioner processed
+>>>>> Processing instance AllOrgs/echonet-bridge/echonet-illuminancesensor
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv
+<<<<< AllOrgs/echonet-bridge/echonet-illuminancesensor processed
+>>>>> Processing instance AllOrgs/echonet-bridge/echonet-temperaturesensor
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv
+<<<<< AllOrgs/echonet-bridge/echonet-temperaturesensor processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-generallighting.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-homeairconditioner.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-illuminancesensor.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge/echonet-temperaturesensor.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/echonet-bridge.csv
+<<<< AllOrgs/echonet-bridge processed
+>>>> Processing implementation AllOrgs/eclipse-nodewot
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot
+mkdir -p outputs/TDs/AllOrgs/eclipse-nodewot
+>>>>> Processing instance AllOrgs/eclipse-nodewot/hitachi-acc-air
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv
+<<<<< AllOrgs/eclipse-nodewot/hitachi-acc-air processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/hitachi-led
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-led.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-led.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-led.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/hitachi-led.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv
+<<<<< AllOrgs/eclipse-nodewot/hitachi-led processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-counter
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-counter.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-counter processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-ecar
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-ecar processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-pv-system
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-pv-system processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/siemens-testthing
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv
+<<<<< AllOrgs/eclipse-nodewot/siemens-testthing processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-ConveyorBelt1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-ConveyorBelt1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-ConveyorBelt2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-ConveyorBelt2 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-InfraredSensor1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-InfraredSensor1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-InfraredSensor2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-InfraredSensor2 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-PanTiltHat1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-PanTiltHat1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-PanTiltHat2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-PanTiltHat2 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-RainbowHAT1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-RainbowHAT1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-RainbowHAT2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-RainbowHAT2 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-SenseHat_1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-SenseHat_1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-SenseHat_2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-SenseHat_2 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-SenseHat_3
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-SenseHat_3 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-SenseHat_4
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-SenseHat_4 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-UnicornPHat1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-UnicornPHat1 processed
+>>>>> Processing instance AllOrgs/eclipse-nodewot/tum-UnicornPHat2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv
+<<<<< AllOrgs/eclipse-nodewot/tum-UnicornPHat2 processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-acc-air.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/hitachi-led.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-counter.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-ecar.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-pv-system.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/siemens-testthing.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-ConveyorBelt2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-InfraredSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-PanTiltHat2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-RainbowHAT2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_3.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-SenseHat_4.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot/tum-UnicornPHat2.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/eclipse-nodewot.csv
+<<<< AllOrgs/eclipse-nodewot processed
+>>>> Processing implementation AllOrgs/fujitsu-sensor
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor
+mkdir -p outputs/TDs/AllOrgs/fujitsu-sensor
+>>>>> Processing instance AllOrgs/fujitsu-sensor/fujitsu-fjsensor
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv
+<<<<< AllOrgs/fujitsu-sensor/fujitsu-fjsensor processed
+>>>>> Processing instance AllOrgs/fujitsu-sensor/fujitsu-vfjsensor
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv
+<<<<< AllOrgs/fujitsu-sensor/fujitsu-vfjsensor processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-fjsensor.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor/fujitsu-vfjsensor.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/fujitsu-sensor.csv
+<<<< AllOrgs/fujitsu-sensor processed
+>>>> Processing implementation AllOrgs/intel-inactive
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive
+mkdir -p outputs/TDs/AllOrgs/intel-inactive
+>>>>> Processing instance AllOrgs/intel-inactive/intel-geolocator
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-geolocator.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-geolocator.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-geolocator.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-geolocator.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv
+<<<<< AllOrgs/intel-inactive/intel-geolocator processed
+>>>>> Processing instance AllOrgs/intel-inactive/intel-inference
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-inference.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-inference.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-inference.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-inference.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-inactive/intel-inference.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv.temp.csv
+  mv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv.temp.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv
+<<<<< AllOrgs/intel-inactive/intel-inference processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-geolocator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive/intel-inference.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-inactive.csv
+<<<< AllOrgs/intel-inactive processed
+>>>> Processing implementation AllOrgs/intel-nodejs
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs
+mkdir -p outputs/TDs/AllOrgs/intel-nodejs
+>>>>> Processing instance AllOrgs/intel-nodejs/intel-camera
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-camera.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-camera.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-camera.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-camera.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-camera.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv.temp.csv
+  mv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv.temp.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv
+<<<<< AllOrgs/intel-nodejs/intel-camera processed
+>>>>> Processing instance AllOrgs/intel-nodejs/intel-speak
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-speak.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-speak.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-speak.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-speak.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-nodejs/intel-speak.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv.temp.csv
+  mv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv.temp.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv
+<<<<< AllOrgs/intel-nodejs/intel-speak processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-camera.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs/intel-speak.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-nodejs.csv
+<<<< AllOrgs/intel-nodejs processed
+>>>> Processing implementation AllOrgs/intel-ocf
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf
+mkdir -p outputs/TDs/AllOrgs/intel-ocf
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-button1touch
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-button1touch processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-button2touch
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-button2touch processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-buzzer0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-buzzer0 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-illuminance0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-illuminance0 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-illuminance2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-illuminance2 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led0blue
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led0blue processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led0green
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led0green processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led0mosfet
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led0mosfet processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led0red
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led0red processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led1mosfet
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led1mosfet processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led1red
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led1red processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led1relay
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led1relay processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led2mosfet
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led2mosfet processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led2relay
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led2relay processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led2side
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led2side processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-led2top
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-led2top processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-motion0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-motion0 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-motion1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-motion1 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-motion2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-motion2 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-rgbled1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-rgbled1 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-temperature0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-temperature0 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-temperature1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-temperature1 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-temperature2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-temperature2 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-toggle0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-toggle0 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-toggle1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-toggle1 processed
+>>>>> Processing instance AllOrgs/intel-ocf/Intel-OCF-toggle2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv
+<<<<< AllOrgs/intel-ocf/Intel-OCF-toggle2 processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/intel-ocf.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button1touch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-button2touch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-buzzer0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-illuminance2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0blue.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0green.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led0red.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1red.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led1relay.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2mosfet.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2relay.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2side.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-led2top.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-motion2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-rgbled1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-temperature2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf/Intel-OCF-toggle2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv.temp.csv
+  mv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv.temp.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/intel-ocf.csv
+<<<< AllOrgs/intel-ocf processed
+>>>> Processing implementation AllOrgs/nhk-emulator
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator
+mkdir -p outputs/TDs/AllOrgs/nhk-emulator
+>>>>> Processing instance AllOrgs/nhk-emulator/nhk-displayEmulator
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv
+<<<<< AllOrgs/nhk-emulator/nhk-displayEmulator processed
+>>>>> Processing instance AllOrgs/nhk-emulator/nhk-speakerEmulator
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv
+<<<<< AllOrgs/nhk-emulator/nhk-speakerEmulator processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-displayEmulator.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator/nhk-speakerEmulator.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/nhk-emulator.csv
+<<<< AllOrgs/nhk-emulator processed
+>>>> Processing implementation AllOrgs/philips-hue
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue
+mkdir -p outputs/TDs/AllOrgs/philips-hue
+>>>>> Processing instance AllOrgs/philips-hue/Daylight
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/Daylight.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/Daylight.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/Daylight.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/Daylight.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv
+<<<<< AllOrgs/philips-hue/Daylight processed
+>>>>> Processing instance AllOrgs/philips-hue/DimmerSwitch
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/DimmerSwitch.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/DimmerSwitch.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/DimmerSwitch.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/DimmerSwitch.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv
+<<<<< AllOrgs/philips-hue/DimmerSwitch processed
+>>>>> Processing instance AllOrgs/philips-hue/HueIndoorSensor1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv
+<<<<< AllOrgs/philips-hue/HueIndoorSensor1 processed
+>>>>> Processing instance AllOrgs/philips-hue/HueIndoorSensor2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueIndoorSensor2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv
+<<<<< AllOrgs/philips-hue/HueIndoorSensor2 processed
+>>>>> Processing instance AllOrgs/philips-hue/HueOutdoorSensor1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv
+<<<<< AllOrgs/philips-hue/HueOutdoorSensor1 processed
+>>>>> Processing instance AllOrgs/philips-hue/lightTD1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv
+<<<<< AllOrgs/philips-hue/lightTD1 processed
+>>>>> Processing instance AllOrgs/philips-hue/lightTD2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/philips-hue/lightTD2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv
+<<<<< AllOrgs/philips-hue/lightTD2 processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/Daylight.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/DimmerSwitch.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueIndoorSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/HueOutdoorSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue/lightTD2.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/philips-hue.csv
+<<<< AllOrgs/philips-hue processed
+>>>> Processing implementation AllOrgs/tum-flask-based
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based
+mkdir -p outputs/TDs/AllOrgs/tum-flask-based
+>>>>> Processing instance AllOrgs/tum-flask-based/DobotMagician
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/DobotMagician.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/DobotMagician.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/DobotMagician.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/DobotMagician.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv
+<<<<< AllOrgs/tum-flask-based/DobotMagician processed
+>>>>> Processing instance AllOrgs/tum-flask-based/ScrollPhat
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/ScrollPhat.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/ScrollPhat.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/ScrollPhat.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/ScrollPhat.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv
+<<<<< AllOrgs/tum-flask-based/ScrollPhat processed
+>>>>> Processing instance AllOrgs/tum-flask-based/Uarm
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/Uarm.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/Uarm.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/Uarm.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/tum-flask-based/Uarm.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv
+<<<<< AllOrgs/tum-flask-based/Uarm processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/DobotMagician.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/ScrollPhat.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based/Uarm.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/tum-flask-based.csv
+<<<< AllOrgs/tum-flask-based processed
+>>>> Processing implementation AllOrgs/unibo-farm
+      under /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm
+mkdir -p outputs/TDs/AllOrgs/unibo-farm
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-SoilSensor0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-SoilSensor0 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-SoilSensor1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-SoilSensor1 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-SoilSensor2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-SoilSensor2 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-SoilSensor3
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-SoilSensor3 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-SoilSensor4
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-SoilSensor4 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-Sprinkler0
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-Sprinkler0 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-Sprinkler1
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-Sprinkler1 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-Sprinkler2
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-Sprinkler2 processed
+>>>>> Processing instance AllOrgs/unibo-farm/unibo-farm-Sprinkler3
+       in /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.td.jsonld
+process /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.td.jsonld /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv
+>>>>> PROCESS: Input=/home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.td.jsonld Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.td.jsonld -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv
+<<<<< PROCESS output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv
+<<<<< AllOrgs/unibo-farm/unibo-farm-Sprinkler3 processed
+merge /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm.csv
+>>>>> MERGE: Inputs=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv Output=/home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm.csv
+  node index.js /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor3.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-SoilSensor4.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler0.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler1.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler2.csv /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm/unibo-farm-Sprinkler3.csv -a -s | grep -v ====== > /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm.csv
+<<<<< MERGE output written to /home/mmccool/Dev/wot-testing/data/input_2021/TD/outputs/TDs/AllOrgs/unibo-farm.csv
+<<<< AllOrgs/unibo-farm processed
+<<< AllOrgs processed
+<< Done processing
