@@ -102,6 +102,9 @@ See: https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects
 #### Participants
 * Andrea Cimmino Arriaga - UPM
 #### Description and Purpose
+The Ontology Engineering Group at the Universidad Politécnica de Madrid (UPM) 
+implemented a Thing Description Directoryc called WoT Hive
+following the current WoT Discovery specification. 
 
 ### WoT Device Emulator 
 #### Participants
