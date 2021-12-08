@@ -92,40 +92,43 @@ See: https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects
 
 ### TM Composition 
 #### Participants
-Sebastian Kaebisch - Siemens
+* Sebastian Kaebisch - Siemens
+#### Description and Purpose
+* [A new feature to compose Thing Models](https://pr-preview.s3.amazonaws.com/w3c/wot-thing-description/pull/1207.html#thing-model-composition) has been introduced.
+*[Examples](https://github.com/w3c/wot-testing/tree/main/events/2021.09.Online/TD/TMs/Siemens) were created to gain experience with this modeling concept and to generate TD instances.  
+* During the vF2F Thing Description session, a short [presentation](https://github.com/w3c/wot/blob/main/PRESENTATIONS/2021-10-online-f2f/2021-10-07-WoT-F2F-TD-Kaebisch.pdf) was provided (slide 7). 
 
 ### UPM / WoT Hive TDD
 #### Participants
-Andrea Cimmino Arriaga - UPM
+* Andrea Cimmino Arriaga - UPM
+#### Description and Purpose
 
 ### WoT Device Emulator 
 #### Participants
-endouhhc
+* endouhhc
+#### Description and Purpose
 
 ### Testbench 
 #### Participants
-Ege Korkan - TUM
-
+* Ege Korkan - TUM
 #### Description and Purpose
  
 ### Hypermedia Action Protocol 
 #### Participants 
-relu91
-
+* relu91
 #### Description and Purpose
 * Propose mechanisms to use hypermedia to define action protocols
 
 ### Shadow Proxy 
 #### Participants
-Ryuichi Matsukura - Fujitsu 
-
+* Ryuichi Matsukura - Fujitsu 
 #### Description and Purpose
 * Proxy that also caches state
 * Allows clients to power down and go offline to save power
 
 ### SDF Conversion 
 #### Participants
-Michael Koster
+* Michael Koster
 
 #### Description and Purpose
 * Test tooling to convert IETF SDF models into TMs
