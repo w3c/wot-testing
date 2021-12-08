@@ -114,7 +114,10 @@ following the current WoT Discovery specification.
 ### Testbench 
 #### Participants
 * Ege Korkan - TUM
+* Marcus Wolf Schmidt
 #### Description and Purpose
+A newer version of the https://github.com/tum-esi/testbench is being developed.
+Tests with almost with all the Things have been carried out and reports generated.
  
 ### Hypermedia Action Protocol 
 #### Participants 
