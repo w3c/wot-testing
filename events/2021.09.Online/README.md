@@ -1,5 +1,5 @@
 # WoT Sept 2021 Plugfest/Testfest
-This event is over, a summary is available [here](summary.md).
+This event is over.  A summary is available [here](summary.md).
 
 ## Logistics 
 * Date: Sept 27-Oct 1
