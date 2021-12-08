@@ -3,7 +3,8 @@
 [![Stack Exchange questions](https://img.shields.io/stackexchange/stackoverflow/t/web-of-things?style=plastic)]( https://stackoverflow.com/questions/tagged/web-of-things)
 
 General information about the Web of Things can be found on https://www.w3.org/WoT/.
-  
+There is also a [WoT Plugfest/Testing wiki](https://www.w3.org/WoT/IG/wiki/PlugFest_WebConf) for a weekly web conference call.
+
 ---
 Repository for Web of Things (WoT) Testing purposes.
 
