@@ -38,7 +38,7 @@ Details of individual project definitions and results are available in the follo
   * These are very similar to TMs, and also include both Japanese and English descriptions, so are readable for English readers
 * Generation of TDs for ECHONET Lite Web APIs.
 
-### Node-RED
+### Node-RED integration (SPARQL query)
 
 #### Participants
 * Kunihiko Toumura - Hitachi
@@ -48,9 +48,9 @@ Details of individual project definitions and results are available in the follo
 * Test WoT Discovery integration 
   * MDNS introductions
   * TDD queries
-  * Semantic/keyword searches
+  * Semantic/keyword searches based on SPARQL
 * Retail use case (Connexxus)
-* Will be used to exercise ECHONET
+* Will also be used to exercise ECHONET
 * Use of Node-RED as a client
   * ECHONET Web API provides only servers
 
@@ -83,10 +83,61 @@ Participants:
   * Prototype spatial search using brute-force filtering.
 
 ### NHK
-* WoT device emulator (Android App)
-  * Generates web apis based on TD
+* WoT device emulator 
+  * Android App
+  * Generates web APIs based on a TD
   * Behaves in a WebView web app
-  * https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects/NHK/README.md
+ 
+See: https://github.com/w3c/wot-testing/blob/main/events/2021.09.Online/Projects/NHK/README.md
+
+### TM Composition 
+#### Participants
+Sebastian Kaebisch - Siemens
+
+### UPM / WoT Hive TDD
+#### Participants
+Andrea Cimmino Arriaga - UPM
+
+### WoT Device Emulator 
+#### Participants
+endouhhc
+
+### Testbench 
+#### Participants
+Ege Korkan - TUM
+
+#### Description and Purpose
+ 
+### Hypermedia Action Protocol 
+#### Participants 
+relu91
+
+#### Description and Purpose
+* Propose mechanisms to use hypermedia to define action protocols
+
+### Shadow Proxy 
+#### Participants
+Ryuichi Matsukura - Fujitsu 
+
+#### Description and Purpose
+* Proxy that also caches state
+* Allows clients to power down and go offline to save power
+
+### SDF Conversion 
+#### Participants
+Michael Koster
+
+#### Description and Purpose
+* Test tooling to convert IETF SDF models into TMs
+* Check for overlap of feature set between SDF and TMs
+
+### Logilab TDD 
+#### Participants
+* Sebastian Kaebisch - Siemens
+
+#### Description and Purpose
+* A partial implementation of a TDD for WoT Discovery providing a SPARQL endpoint
+* To test semantic queries and discovery integration
 
 ## Network configuration
 ![Plugfest network](./plugfestnet.svg)
