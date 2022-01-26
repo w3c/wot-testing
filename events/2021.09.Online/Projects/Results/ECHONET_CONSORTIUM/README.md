@@ -3,10 +3,10 @@
 ## Description
 
 * Devices
-    * LED light
-    * Air conditioner
-    * Temperature sensor
-    * Illuminance sensor
+  * LED light
+  * Air conditioner
+  * Temperature sensor
+  * Illuminance sensor
 * Accessing ECHONET devices from one or more WoT consumers
   * In this PlugFest, we provide an intermediary that provides translated web APIs via a translation service ("translating proxy"). The intermediary translates payloads so that they can be described with TD data schemas.
 
