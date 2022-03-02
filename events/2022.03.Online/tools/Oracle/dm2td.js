@@ -1,6 +1,6 @@
 // Author: Michael.Lagally@oracle.com
 // Created: 7.5.2018
-// Last modified: 27.9.2018
+// Last modified: 2.3.2022
 
 "use strict";
 
@@ -41,7 +41,7 @@ if (verbose) console.log(dm);
 if (verbose) console.log("-----");
 
 var td={};
-td['@context']=["https://www.w3.org/2019/wot/td/v1",
+td['@context']=["https://www.w3.org/2022/wot/td/v1.1",
                 { "@language" : "en" } ];
 td['@type'] = "Thing";
 td.title=dm.name;
