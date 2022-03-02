@@ -1,6 +1,9 @@
 # WoT March 2022 Plugfest/Testfest
 
-Tentatively scheduled for 14-18 March 2022.
+* Scheduled for 14-18 March 2022.
+* [Testfest meetings: 8am Eastern time](https://www.w3.org/groups/wg/wot/calendar)
+* [Plugfest meetings: 9am Eastern time](https://www.w3.org/groups/wg/wot/calendar)
+* [WebEx](https://lists.w3.org/Archives/Member/member-wot-ig/2022Mar/0002.html)
 
 ## Preparations for the Testfest
 
