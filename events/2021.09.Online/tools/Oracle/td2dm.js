@@ -4,6 +4,68 @@
 
 "use strict";
 
+function decodeProperties(p) {
+    console.log("decode: " + p + " " + p.type);
+    if (p.type == "object") {
+        for (var q in p.properties) {
+            if (verbose) console.log("***** object with #elements:"+td.properties[p].properties[q]);
+            var prop={};
+            prop.name=p+"_"+q;
+            var iac=p.properties[q];
+            prop.description=p.title+" "+q;         
+            if (!iac.type) 
+                iac.type = "object";
+            prop.type=iac.type.toUpperCase();
+            if (iac.minimum != iac.maximum) {
+                prop.range=iac.minimum+","+iac.maximum;
+            }
+            prop.writable=td.properties[p].writable;
+        }
+    }
+    else if (p.type == "array") {
+        if (verbose) console.log("***** array with #elements:"+p.items.length);
+        for (var i=0; i<p.items.length; i++) {
+            if (verbose) console.log(p);
+            var prop={};
+            prop.name=p+"_"+i;
+            var iac=p.items[i];
+            prop.description=p.title+" "+i;
+            prop.type=iac.type.toUpperCase();
+            if (iac.minimum != iac.maximum) {
+                prop.range=iac.minimum+","+iac.maximum;
+            }
+            prop.writable=td.properties[p].writable;
+        }
+    } else {
+        var prop={};
+        prop.name=p;
+        var iac=td.properties[p];
+        prop.description=iac.title;
+ 
+        if (iac.properties) {
+            if (iac.properties.type){
+                prop.type=iac.properties.type.toUpperCase();
+            } else {
+                prop.type=iac.type;
+            }
+            if (iac.properties.minimum != iac.properties.maximum) {
+                prop.range=iac.properties.minimum+","+iac.properties.maximum;
+            }
+        } else {
+            if (iac.type) {
+                if (iac.type == "array") {
+                    // TODO: complete ARRAY implementation
+                    prop.type="STRING";
+                } else {
+                    prop.type=iac.type.toUpperCase();
+                }
+            }
+        }
+        prop.writable=iac.writable;
+    }
+    return prop;
+}
+
 var fs = require("fs");
 var path = require("path");
 var baseDir = ".";
@@ -53,78 +115,10 @@ dm.events=[];
 
 for (var p in td.properties) {
     if (verbose) console.log(p);
-    if (td.properties[p].type == "object") {
-        for (var q in td.properties[p].properties) {
-            if (verbose) console.log("***** object with #elements:"+td.properties[p].properties[q]);
-            var prop={};
-            prop.name=p+"_"+q;
-            var iac=td.properties[p].properties[q];
-            prop.description=td.properties[p].title+" "+q;
-            
-            prop.type=iac.type.toUpperCase();
-            if (iac.minimum != iac.maximum) {
-                prop.range=iac.minimum+","+iac.maximum;
-            }
-            prop.writable=td.properties[p].writable;
-            dm.attributes.push(prop);
-        }
-    }
-    else if (td.properties[p].type == "array") {
-        if (verbose) console.log("***** array with #elements:"+td.properties[p].items.length);
-            for (var i=0; i<td.properties[p].items.length; i++) {
-            if (verbose) console.log(p);
-            var prop={};
-            prop.name=p+"_"+i;
-            var iac=td.properties[p].items[i];
-            if (td.properties[p].label) {
-                prop.description=td.properties[p].label+" "+i;
-            } else {
-                prop.description=td.properties[p].title+" "+i;
-            }
-            prop.type=iac.type.toUpperCase();
-            if (iac.minimum != iac.maximum) {
-                prop.range=iac.minimum+","+iac.maximum;
-            }
-            prop.writable=td.properties[p].writable;
-            dm.attributes.push(prop);
-        }
-    } else {
-        var prop={};
-        prop.name=p;
-        var iac=td.properties[p];
-        // handle Bundang and Lyon versions
-        if (iac.label) {
-            prop.description=iac.label;
-        } else {
-            prop.description=iac.title;
-        };
-        if (iac.properties) {
-            if (iac.properties.type){
-                prop.type=iac.properties.type.toUpperCase();
-            } else {
-                prop.type=iac.type;
-            }
-            if (iac.properties.minimum != iac.properties.maximum) {
-                prop.range=iac.properties.minimum+","+iac.properties.maximum;
-            }
-        } else {
-            if (iac.type) {
-                if (iac.type == "array") {
-                    // TODO: complete ARRAY implementation
-                    prop.type="STRING";
-                } else {
-                    prop.type=iac.type.toUpperCase();
-                }
-            }
-        }
-        prop.writable=iac.writable;
-        dm.attributes.push(prop);
-    }
-
-    if (verbose) console.log(prop);
+    dm.attributes.push(decodeProperties(p));
 }
 
-if (verbose) console.log("-----");
+if (verbose) console.log("--- done properties --");
 
 // TODO: Add parameter handling of actions
 for (var a in td.actions) {
@@ -156,3 +150,5 @@ for (var e in td.events) {
 if (verbose) console.log("-----");
 
 console.log(JSON.stringify(dm, null, "\t"));
+
+
