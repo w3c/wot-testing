@@ -9,8 +9,8 @@
 
 ### General
 
-*  Ask participants
-*  Merging of implementation reports
+*  Capture implementation descriptions
+   * [template](events/templates/impldesc.html)
 *  Setting up systems (Beginning of March):
    * VLAN
    * Install and run discovery implementations
