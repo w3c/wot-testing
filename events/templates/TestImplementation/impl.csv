@@ -1,0 +1,6 @@
+"Implementations",                  "Organization",          "Name",                              "Roles",               "Notes"
+"org-example-exposer_name",         "Example Org",           "Example Exposer",                   "exposer",             "A Thing with exposed affordances"
+"org-example-directory_name",       "Example Org",           "Example Directory",                 "directory",           "A Thing Description Directory"
+"org-example-consumer_name",        "Example Org",           "Example Consumer",                  "consumer",            "A TD Consumer"
+"org-example-discoverer_name",      "Example Org",           "Example Discoverer",                "discoverer",          "A client of WoT Discovery services"
+"org-example-component_name",       "Example Org",           "Example Component",                 "component",           "An example component (anything else)"
