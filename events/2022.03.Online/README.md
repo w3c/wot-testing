@@ -7,13 +7,25 @@
 
 ## Preparations for the Testfest
 
-### General
+### Participant TO DO
 
-*  Capture implementation descriptions
-   * [template](events/templates/impldesc.html)
-*  Setting up systems (Beginning of March):
-   * VLAN
-   * Install and run discovery implementations
+* Submit TDs and/or TMs
+* Submit CSV file for manual assertions
+   * For each deliverable, and Architecture
+   * See templates manual.csv under each deliverable
+* Submit implementation descriptions
+   * [HTML description template](events/templates/impldesc.html)
+   * [CSV categories template](events/templates/impldesc.html)
+* Bring implementations online
+   * Directories
+   * Things
+   * Using VLAN if necessary
+* Document active systems 
+   * Edit active.csv to indicate URLs, etc.
+
+### System Setup
+* VLAN
+* Install and run discovery implementations
 
 ### TD
 
