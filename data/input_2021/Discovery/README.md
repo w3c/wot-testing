@@ -5,6 +5,6 @@ Note that implementation descriptions should go into Architecture.
 TO DO:
 * List of assertions and template for CSV file (McCool)
 * Draft implementation report (McCool)
-* Organize results for different implementations and directory, self-description, and introductions.
+* Organize results for different implementations and discoverer, directory, self-description, and introduction categories.
    - A subdirectory per organization
    - Example needed
