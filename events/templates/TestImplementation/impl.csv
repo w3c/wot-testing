@@ -1,0 +1,5 @@
+"Implementations",                  "Organization",          "Name",                              "Roles",               "Notes"
+"org-example-exposer_name",         "Example Org",           "Example Exposer",                   "exposer",             "An example exposer (Thing)"
+"org-example-producer_name",        "Example Org",           "Example Producer",                  "producer",            "An example producer (Thing Description generator)"
+"org-example-consumer_name",        "Example Org",           "Example Consumer",                  "consumer",            "An example consumer (WoT Consumer)"
+"org-example-component_name",       "Example Org",           "Example Component",                 "component",           "An example component (anything else)"
