@@ -36,7 +36,7 @@ There are tools to test OpenAPI so if we converted TDs to OpenAPI we may be able
 General tools for testing authentication implementations might also be useful:
 OAuth2, password guessing.
 
-Can focus on finding weaknesses rather than full vulnernability.
+Can focus on finding weaknesses rather than full vulnerabilities.
 Should start with tools that are known to work on Things, e.g. WoT Testbench.
 
 ### Architecture 1.1
