@@ -1,9 +1,17 @@
 # WoT March 2022 Plugfest/Testfest
 
 * Scheduled for 14-18 March 2022.
-* [Testfest meetings: 8am Eastern M,T,Th,F; 9am Eastern W](https://www.w3.org/groups/wg/wot/calendar)
-* [Plugfest meetings: 9am Eastern M,T,Th,F; 10am Eastern W](https://www.w3.org/groups/wg/wot/calendar)
+* Testfest meetings: 
+   - [M,T,Th,F: 8am Eastern](https://www.w3.org/groups/wg/wot/calendar)
+   - [W: 9am Eastern](https://www.w3.org/groups/wg/wot/calendar)
+* Plugfest meetings: 
+   - [M,T,Th,F: 9am Eastern](https://www.w3.org/groups/wg/wot/calendar)
+   - [W: 10am Eastern](https://www.w3.org/groups/wg/wot/calendar)
 * [WebEx](https://lists.w3.org/Archives/Member/member-wot-ig/2022Mar/0002.html)
+   - Same webex for both calls
+* IRC
+   - [Testfest](https://irc.w3.org/?channels=wot-tf)
+   - [Plugfest](https://irc.w3.org/?channels=wot-pf)
 
 ## Preparations for the Testfest
 
