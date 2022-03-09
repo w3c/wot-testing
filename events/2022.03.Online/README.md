@@ -1,8 +1,8 @@
 # WoT March 2022 Plugfest/Testfest
 
 * Scheduled for 14-18 March 2022.
-* [Testfest meetings: 8am Eastern time](https://www.w3.org/groups/wg/wot/calendar)
-* [Plugfest meetings: 9am Eastern time](https://www.w3.org/groups/wg/wot/calendar)
+* [Testfest meetings: 8am Eastern M,T,Th,F; 9am Eastern W](https://www.w3.org/groups/wg/wot/calendar)
+* [Plugfest meetings: 9am Eastern M,T,Th,F; 10am Eastern W](https://www.w3.org/groups/wg/wot/calendar)
 * [WebEx](https://lists.w3.org/Archives/Member/member-wot-ig/2022Mar/0002.html)
 
 ## Preparations for the Testfest
@@ -10,6 +10,10 @@
 ### Participant TO DO
 
 * Submit TDs and/or TMs
+   * Put in a subdirectory named after each *implementation*, with `TDs` and `TMs` subdirectories for under that.
+   * If more than one organization contributes to an implementation (e.g. for node-wot), include the organization name in the filenames.
+   * Use the `.td.jsonld` suffix for TDs and `.tm.jsonld` suffix for TMs; this will automatically invoke a validator based on the TD 1.1 spec (which will block merging the PR if it fails)
+   * If you *must* submit a TD or TM that fails validation, use `.jsonld` or even better, `.tm-fail.jsonld` etc.
 * Submit CSV file for manual assertions
    * For each deliverable, and Architecture
    * See templates manual.csv under each deliverable
