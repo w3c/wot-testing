@@ -17,7 +17,7 @@ Plugfests and other testing event logistics and results.
 * __September 2021 Online Plugfest__:
   * September 27 to October 1
   * [Index](2021.09.Online/README.md)
-* __March 2021 Online Plugfest__:
+* __March 2022 Online Plugfest__:
   * March 14 to March 18
   * [Index](2022.03.Online/README.md)
 
