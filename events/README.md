@@ -26,19 +26,19 @@ Plugfests and other testing event logistics and results.
 Project results are found under the `Results` subdirectory of the event's `Projects` directory.
 
 ## How to Participate
-
-### __Testfest__
-
 Most devices and services for the Plugfests and Testfests should have TDs, and these
 should follow (and be validated against) the published WoT Thing Description
 recommendations.  Exceptions (for example, infrastructure services
 such as proxies and directories) should be well-documented.
 
+### __Testfest__
 For Things with TDs, please see the setup
-instructions for each Plugfest to see how to connect to the VPN (if used)
+instructions for each Testfest to see how to connect to the VPN (if used)
 and register your TDs.
 All TDs need to be validated, archived in Github, and (ideally) registered
 with a directory service.
+
+Please see the README for the specific Testfest for additional instructions.
 
 ### __Plugfest Projects__
 
