@@ -10,8 +10,8 @@
 * [WebEx](https://lists.w3.org/Archives/Member/member-wot-ig/2022Mar/0002.html)
    - Same webex for both calls
 * IRC
-   - [Testfest](https://irc.w3.org/?channels=wot-tf)
-   - [Plugfest](https://irc.w3.org/?channels=wot-pf)
+   - [Testfest: `#wot-tf`](https://irc.w3.org/?channels=wot-tf)
+   - [Plugfest: `#wot-pf`](https://irc.w3.org/?channels=wot-pf)
 
 ## Preparations for the Testfest
 
