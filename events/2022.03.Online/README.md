@@ -14,8 +14,8 @@
    * For each deliverable, and Architecture
    * See templates manual.csv under each deliverable
 * Submit implementation descriptions
-   * [HTML description template](events/templates/impldesc.html)
-   * [CSV categories template](events/templates/impldesc.html)
+   * [HTML description template](../templates/TestImplementation/impldesc.html)
+   * [CSV categories template](../templates/TestImplementation/impl.csv)
 * Bring implementations online
    * Directories
    * Things
