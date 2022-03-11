@@ -1,0 +1,59 @@
+{
+  "title": "PV-System",
+  "id": "urn:dev:wot:example:pv-system",
+  "description": "Solar power system",
+  "events": {
+    "status": {
+      "title": "Operating status",
+      "description": "Possible operating status (powerOn, powerOff, error)",
+      "data": {
+        "type": "string",
+        "enum": [
+          "powerOn",
+          "powerOff",
+          "error"
+        ]
+      },
+      "forms": [
+        {
+          "href": "mqtt://broker.hivemq.com:1883/PV-System/events/status",
+          "contentType": "application/json",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    },
+    "power": {
+      "title": "Current power",
+      "description": "Power in Watt",
+      "data": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 7500,
+        "unit": "W"
+      },
+      "forms": [
+        {
+          "href": "mqtt://broker.hivemq.com:1883/PV-System/events/power",
+          "contentType": "application/json",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    }
+  },
+  "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}
