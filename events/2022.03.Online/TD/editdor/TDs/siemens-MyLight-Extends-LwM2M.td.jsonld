@@ -1,0 +1,31 @@
+{
+    "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
+	"@type": "ThingModel",
+	"title": "MyLight Control Device",
+    "links" : [{
+        "rel": "type",
+        "href": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.06.Online/TD/TMs/Siemens/MyLight-Extends-LwM2M.tm.jsonld",
+        "type" : "application/jsonld"
+    }],
+	"securityDefinitions": {
+		"nosec_sc": {
+		  "scheme": "nosec"
+		}
+	},
+	"security": ["nosec_sc"],
+	"properties": {
+		"On_Off": {
+			"title": "OnOff",
+            "description": "On/off control. Boolean value where True is On and False is Off.",
+			"type": "boolean",
+            "forms":[{"href": "coap://example.com/onOff"}]
+		},
+        "Status" : {
+            "title" : "Current Lamp status",
+            "description" : "Shows status information (on, off, error)",
+            "type" : "string",
+            "enum" : ["on", "off", "error"],
+            "forms":[{"href": "coap://example.com/Status"}]
+        }
+	}
+}

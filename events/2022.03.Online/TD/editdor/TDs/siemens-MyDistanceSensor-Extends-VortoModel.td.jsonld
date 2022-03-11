@@ -1,0 +1,41 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"], 
+  "@type" : "Thing",
+  "title" : "My DistanceSensor",
+  "description": "DistanceSensor unit",
+    "links" :[{
+      "rel" : "type",
+      "href": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.06.Online/TD/TMs/Siemens/MyDistanceSensor-Extends-VortoModel.tm.jsonld",
+      "type": "application/jsonld"
+  }],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+   }
+  },
+  "security": ["nosec_sc"],
+  "properties": {
+    "distance.currentMeasured": {
+      "title": "currentMeasured",
+      "type": "integer",
+      "forms" : [{
+          "href": "mqtt://127.0.0.1:1883/DistanceSensor/currentMeasured"
+          }]
+    },
+    "distance.minMeasured": {
+      "title": "minMeasured",
+      "type": "integer",
+      "minumum" : 0,
+      "forms" : [{
+          "href": "mqtt://127.0.0.1:1883/DistanceSensor/currentMeasured"
+          }]
+    },
+    "distance.maxMeasured": {
+      "title": "maxMeasured",
+      "type": "integer",
+      "forms" : [{
+          "href": "mqtt://127.0.0.1:1883/DistanceSensor/currentMeasured"
+          }]
+    }
+  }
+}

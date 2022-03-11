@@ -1,0 +1,45 @@
+{
+    "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
+    "title": "Ventilator",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        }
+    },
+    "security": "basic_sc",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "./SmartVentilation.td.jsonld",
+            "type": "application/td+json"
+        },
+        {
+            "rel": "type",
+            "href": "./Ventilation.tm.jsonld",
+            "type": "application/tm+json"
+        }
+    ],
+    "security": "basic_sc",
+    "properties": {
+        "switch": {
+            "type": "boolean",
+            "description": "True=On; False=Off",
+            "forms": [
+                {
+                    "href": "http://127.0.13.212:4563/switch"
+                }
+            ]
+        },
+        "adjustRpm": {
+            "type": "number",
+            "minimum": 200,
+            "maximum": 1200,
+            "forms": [
+                {
+                    "href": "http://127.0.13.212:4563/adjustRpm"
+                }
+            ]
+        }
+    }
+}
