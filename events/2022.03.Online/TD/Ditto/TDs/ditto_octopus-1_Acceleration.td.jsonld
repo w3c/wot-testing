@@ -1,0 +1,277 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+    }
+  ],
+  "title": "Acceleration Sensor",
+  "@type": "Thing",
+  "id": "urn:org.eclipse.ditto:octopus-1/features/Acceleration",
+  "base": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:octopus-1/features/Acceleration",
+  "version": {
+    "model": "1.0.0",
+    "instance": "1.0.0"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:octopus-1",
+      "type": "application/td+json"
+    },
+    {
+      "rel": "type",
+      "href": "https://eclipse.github.io/ditto-examples/wot/models/sensors/acceleration-sensor-1.0.0.tm.jsonld",
+      "type": "application/tm+json"
+    }
+  ],
+  "security": "basic_sc",
+  "securityDefinitions": {
+    "basic_sc": {
+      "in": "header",
+      "scheme": "basic"
+    }
+  },
+  "support": "https://www.eclipse.org/ditto/",
+  "created": "2022-03-11T06:32:18.552910569Z",
+  "forms": [
+    {
+      "op": "readallproperties",
+      "href": "/properties{?channel,timeout}",
+      "htv:methodName": "GET",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "readmultipleproperties",
+      "href": "/properties{?fields,channel,timeout}",
+      "htv:methodName": "GET",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "writeallproperties",
+      "href": "/properties{?channel,timeout,response-required}",
+      "htv:methodName": "PUT",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "writemultipleproperties",
+      "href": "/properties{?channel,timeout,response-required}",
+      "htv:methodName": "PATCH",
+      "contentType": "application/merge-patch+json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": [
+        "observeallproperties",
+        "unobserveallproperties"
+      ],
+      "href": "/properties",
+      "htv:methodName": "GET",
+      "subprotocol": "sse",
+      "contentType": "text/event-stream",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": [
+        "subscribeallevents",
+        "unsubscribeallevents"
+      ],
+      "href": "/outbox/messages",
+      "htv:methodName": "GET",
+      "subprotocol": "sse",
+      "contentType": "text/event-stream",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    }
+  ],
+  "properties": {
+    "currentAcceleration": {
+      "@type": "om2:Acceleration",
+      "title": "Current acceleration",
+      "description": "The last or current measured acceleration in the three (X/Y/Z) dimensions measured in 'm/s²'.",
+      "type": "object",
+      "properties": {
+        "x": {
+          "title": "X dimension",
+          "type": "number",
+          "unit": "om2:metrePerSecond-TimeSquared"
+        },
+        "y": {
+          "title": "Y dimension",
+          "type": "number",
+          "unit": "om2:metrePerSecond-TimeSquared"
+        },
+        "z": {
+          "title": "Z dimension",
+          "type": "number",
+          "unit": "om2:metrePerSecond-TimeSquared"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "observable": true,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "/properties/currentAcceleration{?channel,timeout}",
+          "htv:methodName": "GET",
+          "contentType": "application/json",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        },
+        {
+          "op": "writeproperty",
+          "href": "/properties/currentAcceleration{?channel,timeout,response-required}",
+          "htv:methodName": "PUT",
+          "contentType": "application/json",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        },
+        {
+          "op": "writeproperty",
+          "href": "/properties/currentAcceleration{?channel,timeout,response-required}",
+          "htv:methodName": "PATCH",
+          "contentType": "application/merge-patch+json",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        },
+        {
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "href": "/properties/currentAcceleration",
+          "htv:methodName": "GET",
+          "subprotocol": "sse",
+          "contentType": "text/event-stream",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "uriVariables": {
+    "channel": {
+      "type": "string",
+      "title": "The Ditto channel to interact with.",
+      "description": "Defines to which channel to route the command: 'twin' (digital twin) or 'live' (the device).",
+      "enum": [
+        "twin",
+        "live"
+      ],
+      "default": "twin"
+    },
+    "timeout": {
+      "type": "integer",
+      "title": "The timeout to apply.",
+      "description": "Defines how long the backend should wait (in seconds) for completion of the request. A value of '0' applies fire and forget semantics for the command.",
+      "minimum": 0,
+      "maximum": 60,
+      "default": 60
+    },
+    "response-required": {
+      "type": "boolean",
+      "title": "If a response is required.",
+      "description": "Defines whether a response is required to the API call or not.",
+      "default": true
+    },
+    "fields": {
+      "type": "string",
+      "title": "Fields to select.",
+      "description": "Contains a comma-separated list of fields (e.g. property names) to be included in the returned JSON."
+    }
+  },
+  "schemaDefinitions": {
+    "dittoError": {
+      "type": "object",
+      "title": "Ditto error.",
+      "description": "Provides additional information about an occurred error and how to resolve it.",
+      "properties": {
+        "description": {
+          "type": "string",
+          "title": "Error description.",
+          "description": "Contains further information about the error e.g. a hint what caused the problem and how to solve it."
+        },
+        "error": {
+          "type": "string",
+          "title": "Error code identifier.",
+          "description": "The error code or identifier that uniquely identifies the error."
+        },
+        "message": {
+          "type": "string",
+          "title": "Error message.",
+          "description": "The human readable message that explains what went wrong during the execution of a command/message."
+        },
+        "href": {
+          "type": "string",
+          "title": "Error link.",
+          "description": "A link to further information about the error and how to fix it.",
+          "format": "uri"
+        },
+        "status": {
+          "type": "integer",
+          "title": "Status code.",
+          "description": "The status code of the error with HTTP status code semantics (e.g.: 4xx for user errors, 5xx for server errors).",
+          "minimum": 400,
+          "maximum": 599
+        }
+      },
+      "required": [
+        "status",
+        "error",
+        "message"
+      ]
+    }
+  }
+}
