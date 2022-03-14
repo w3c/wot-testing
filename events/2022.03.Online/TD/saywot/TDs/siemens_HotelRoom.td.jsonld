@@ -1,0 +1,239 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ], 
+  "@type": "Thing", 
+  "id": "urn:HotelRoom", 
+  "title": "simulated Hotel Room", 
+  "created": "2022-03-14T15:01:28.6134626+01:00", 
+  "modified": "2022-03-14T15:01:28.6140175+01:00", 
+  "base": "http://localhost:8080", 
+  "security": "nosec_sc", 
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }, 
+    "local_sc": {
+      "scheme": "nosec"
+    }
+  }, 
+  "properties": {
+    "goalTemperature": {
+      "@type": "xsd:double", 
+      "title": "Goal Temperature", 
+      "type": "number", 
+      "observable": true, 
+      "minimum": 16, 
+      "maximum": 28, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/goalTemperature", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:HotelRoom/goalTemperature", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "brightness": {
+      "@type": "xsd:integer", 
+      "title": "Light Brightness", 
+      "type": "integer", 
+      "observable": true, 
+      "minimum": 0, 
+      "maximum": 100, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/brightness", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:HotelRoom/brightness", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "color": {
+      "@type": "xsd:string", 
+      "title": "Light Color", 
+      "type": "string", 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/color", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:HotelRoom/color", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "roomnumber": {
+      "@type": "xsd:integer", 
+      "title": "Roomnumber", 
+      "type": "integer", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/roomnumber", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "smoke": {
+      "@type": "xsd:boolean", 
+      "title": "Smoke Detector", 
+      "type": "object", 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/smoke", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:HotelRoom/smoke", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "currentTemperature": {
+      "@type": "xsd:double", 
+      "title": "currentTemperature", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:HotelRoom/currentTemperature", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:HotelRoom", 
+          "contentType": "application/json"
+        }
+      ]
+    }
+  }, 
+  "events": {
+    "eventAlarms": {
+      "description": "Events (Alarms/Faults/Errors...) requiring human intervention.  A short lived thing with its own lifecycle and interactions", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent",
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3AHotelRoom"
+        }
+      ]
+    }, 
+    "cov": {
+      "description": "Any relevant change of a properties value .. after noise suppressions/smoothing", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3AHotelRoom"
+        }
+      ]
+    }, 
+    "monitor": {
+      "description": "Any updates on actions in progress", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3AHotelRoom"
+        }
+      ]
+    }
+  }, 
+  "forms": [
+    {
+      "op": "readallproperties", 
+      "htv:methodName": "GET", 
+      "href": "./.rtt", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "readmultipleproperties", 
+      "htv:methodName": "GET", 
+      "href": "./.rtt", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "writeallproperties", 
+      "htv:methodName": "PUT", 
+      "href": ".", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "writemultipleproperties", 
+      "htv:methodName": "PATCH", 
+      "href": ".", 
+      "contentType": "application/json"
+    }
+  ], 
+  "links": [
+    {"rel": "parent", "href": "/.things/rootThing", "target": "urn:rootThing"}
+  ]
+}
