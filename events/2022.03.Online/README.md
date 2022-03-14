@@ -34,7 +34,7 @@
    * Things
    * Using VLAN if necessary
 * Document active systems 
-   * Edit active.csv to indicate URLs, etc.
+   * Edit active.csv to indicate status, names, etc.
 
 ### System Setup
 * VLAN
