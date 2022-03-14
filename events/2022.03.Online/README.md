@@ -25,7 +25,7 @@
 * Submit CSV file for manual assertions
    * For each deliverable
    * See templates under each deliverable
-      * [TD manual assertion template - FIX syntax](TD/manual.csv)
+      * [TD manual assertion template](TD/manual.csv) - Change `null` to one of `pass`,`not-impl` or `fail` depending if your implementation has implemented it, not implemented it or is wrong-implementing this, respectively.
 * Submit implementation descriptions
    * [HTML description template](../templates/TestImplementation/impldesc.html)
    * [CSV categories template](../templates/TestImplementation/impl.csv)
