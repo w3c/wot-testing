@@ -1,5 +1,5 @@
 "Org",          "Name",               "on VLAN",   "on Internet",   "Link",                     "Comment",                "Thing Name (File basename)",       "Implementation ID"
 "Intel",        "Speak",              "no",        "no",            intel-nodejs/README.md,            "Speech output",   intel-nodejs-speak,                 intel-nodejs
 "Intel",        "Camera",             "no",        "no",            intel-nodejs/README.md,            "Still camera",    intel-nodejs-camera,                intel-nodejs
-"Oracle",        "Blue_Pump",             "no",        "yes",            Oracle/README.md,            "Pump",                  todo,                        "Oracle IOT Intellingent Apps Product"
-"Oracle",        "HVAC",             "no",        "yes",            Oracle/README.md,                  "HVAC",                todo,                          "Oracle IOT Intellingent Apps Product"
+"Oracle",        "Blue_Pump",         "no",        "yes",           Oracle/README.md,                  "Blue Pump",       oracle-blue-pump,                   oracle-iot-intelligent-apps
+"Oracle",        "HVAC",              "no",        "yes",           Oracle/README.md,                  "HVAC",            oracle-hvac,                        oracle-iot-intelligent-apps
