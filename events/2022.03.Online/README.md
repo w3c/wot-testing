@@ -24,7 +24,8 @@
    * If you *must* submit a TD or TM that fails validation, use `.jsonld` or even better, `.tm-fail.jsonld` etc.
 * Submit CSV file for manual assertions
    * For each deliverable
-   * See templates manual.csv under each deliverable
+   * See templates under each deliverable
+      * [TD](TD/template.csv)
       * [TD](TD/manual.csv)
 * Submit implementation descriptions
    * [HTML description template](../templates/TestImplementation/impldesc.html)
