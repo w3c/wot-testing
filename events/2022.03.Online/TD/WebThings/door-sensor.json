@@ -1,0 +1,64 @@
+{
+  "title": "Virtual Door Sensor",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+      "DoorSensor"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-13",
+  "properties": {
+      "open": {
+          "name": "open",
+          "value": false,
+          "title": "Open",
+          "type": "boolean",
+          "@type": "OpenProperty",
+          "readOnly": true,
+          "forms": [
+              {
+                  "href": "/things/virtual-things-13/properties/open"
+              }
+          ]
+      }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+      {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "/things/virtual-things-13"
+      },
+      {
+          "rel": "alternate",
+          "href": "ws://localhost:8080/things/virtual-things-13"
+      }
+  ],
+  "forms": [
+      {
+          "href": "/things/virtual-things-13/properties",
+          "op": "readallproperties"
+      }
+  ],
+  "layoutIndex": 8,
+  "selectedCapability": "DoorSensor",
+  "iconHref": null,
+  "group_id": null,
+  "id": "http://localhost:8080/things/virtual-things-13",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+      "oauth2_sc": {
+          "scheme": "oauth2",
+          "flow": "code",
+          "authorization": "http://localhost:8080/oauth/authorize",
+          "token": "http://localhost:8080/oauth/token",
+          "scopes": [
+              "/things/virtual-things-13:readwrite",
+              "/things/virtual-things-13",
+              "/things:readwrite",
+              "/things"
+          ]
+      }
+  },
+  "security": "oauth2_sc"
+}

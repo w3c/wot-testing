@@ -1,0 +1,81 @@
+{
+  "title": "Virtual On/Off Color Light",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+      "OnOffSwitch",
+      "Light",
+      "ColorControl"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-0",
+  "properties": {
+      "on": {
+          "name": "on",
+          "value": false,
+          "title": "On/Off",
+          "type": "boolean",
+          "@type": "OnOffProperty",
+          "forms": [
+              {
+                  "href": "/things/virtual-things-0/properties/on"
+              }
+          ]
+      },
+      "color": {
+          "name": "color",
+          "value": "#ffffff",
+          "title": "Color",
+          "type": "string",
+          "@type": "ColorProperty",
+          "readOnly": false,
+          "forms": [
+              {
+                  "href": "/things/virtual-things-0/properties/color"
+              }
+          ]
+      }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+      {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "/things/virtual-things-0"
+      },
+      {
+          "rel": "alternate",
+          "href": "ws://localhost:8080/things/virtual-things-0"
+      }
+  ],
+  "forms": [
+      {
+          "href": "/things/virtual-things-0/properties",
+          "op": [
+              "readallproperties",
+              "writemultipleproperties"
+          ]
+      }
+  ],
+  "layoutIndex": 0,
+  "selectedCapability": "Light",
+  "iconHref": null,
+  "group_id": null,
+  "id": "http://localhost:8080/things/virtual-things-0",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+      "oauth2_sc": {
+          "scheme": "oauth2",
+          "flow": "code",
+          "authorization": "http://localhost:8080/oauth/authorize",
+          "token": "http://localhost:8080/oauth/token",
+          "scopes": [
+              "/things/virtual-things-0:readwrite",
+              "/things/virtual-things-0",
+              "/things:readwrite",
+              "/things"
+          ]
+      }
+  },
+  "security": "oauth2_sc"
+}
