@@ -25,8 +25,7 @@
 * Submit CSV file for manual assertions
    * For each deliverable
    * See templates under each deliverable
-      * [TD](TD/template.csv)
-      * [TD](TD/manual.csv)
+      * [TD manual assertion template - FIX syntax](TD/manual.csv)
 * Submit implementation descriptions
    * [HTML description template](../templates/TestImplementation/impldesc.html)
    * [CSV categories template](../templates/TestImplementation/impl.csv)
