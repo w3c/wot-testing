@@ -1,2 +1,3 @@
-"Org",          "Name",               "on VLAN",   "on Internet",   "Link",                     "Comment",                "Thing Name (File basename)",     "Implementation ID", "Remarks"
-"Fraunhofer",   "LinkSmart",          "no",        "no",            none,                       "todo",                   linksmart,                        fraunhofer,
+"Org",          "Name",               "on VLAN",   "on Internet",   "Link",                               "Comment",                "Thing Name (File basename)",     "Implementation ID", "Remarks"
+"Fraunhofer",   "LinkSmart",          "no",        "no",            none,                                 "todo",                   linksmart,                        fraunhofer,
+"Siemens",      "LogilabTDD",         "no",        "yes",           https://siemens-wot.demo.logilab.fr/, "",                       logilabtdd,                       siemens-logilab,
