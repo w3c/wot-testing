@@ -17,6 +17,9 @@ This type of testing does not involve interaction with devices or services and i
 ### Architecture 1.1
 ### Profile 1.0
 ### Discovery 1.0
+* The only syntactic testing required is for the format of "enriched" data in TDs stored in TDDs, which can be
+  done with JSON Schema.  Testing will involve capturing enriched TDs from a TDD and validating it against a schema.
+  The "capturing" part itself is a form of behavioral test.
 
 ## Functional/Behavioral Testing
 
@@ -32,6 +35,10 @@ This type of testing **does** involve interaction with devices or services and i
 ### Architecture 1.1
 ### Profile 1.0
 ### Discovery 1.0
+* Testing tool available; example results: https://github.com/farshidtz/wot-discovery-testing/blob/main/directory/example/report.csv
+* Needs to be updated to current specification (Farshid)
+* Still needs tests for SPARQL (Andrea Cimmino)
+* Will be some manual assertions.
 
 ## Security Testing
 
