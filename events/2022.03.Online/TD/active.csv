@@ -3,3 +3,6 @@
 "Intel",        "Camera",             "no",        "no",            intel-nodejs/README.md,            "Still camera",    intel-nodejs-camera,                intel-nodejs
 "Oracle",        "Blue_Pump",             "no",        "yes",            Oracle/README.md,            "Pump",                  todo,                        "Oracle IOT Intellingent Apps Product"
 "Oracle",        "HVAC",             "no",        "yes",            Oracle/README.md,                  "HVAC",                todo,                          "Oracle IOT Intellingent Apps Product"
+"Siemens",      "Smart-Coffee-Machine",   "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/smart-coffee-machine",     todo,        "impl-eclipse-node-wot"
+"Siemens",      "TestThing",              "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/testthing",                todo,        "impl-eclipse-node-wot"
+"Siemens",      "Multilanguage Counter",  "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/counter",                  todo,        "impl-eclipse-node-wot"
