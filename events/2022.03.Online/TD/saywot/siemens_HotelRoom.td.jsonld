@@ -15,9 +15,6 @@
     }, 
     "local_sc": {
       "scheme": "nosec"
-    }, 
-    "cert_sc": {
-      "scheme": "cert"
     }
   }, 
   "properties": {
