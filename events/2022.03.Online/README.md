@@ -23,8 +23,9 @@
    * Use the `.td.jsonld` suffix for TDs and `.tm.jsonld` suffix for TMs; this will automatically invoke a validator based on the TD 1.1 spec (which will block merging the PR if it fails)
    * If you *must* submit a TD or TM that fails validation, use `.jsonld` or even better, `.tm-fail.jsonld` etc.
 * Submit CSV file for manual assertions
-   * For each deliverable, and Architecture
-   * See templates manual.csv under each deliverable
+   * For each deliverable
+   * See templates under each deliverable
+      * [TD manual assertion template](TD/manual.csv) - Change `null` to one of `pass`,`not-impl` or `fail` depending if your implementation has implemented it, not implemented it or is wrong-implementing this, respectively.
 * Submit implementation descriptions
    * [HTML description template](../templates/TestImplementation/impldesc.html)
    * [CSV categories template](../templates/TestImplementation/impl.csv)
@@ -33,7 +34,7 @@
    * Things
    * Using VLAN if necessary
 * Document active systems 
-   * Edit active.csv to indicate URLs, etc.
+   * Edit active.csv to indicate status, names, etc.
 
 ### System Setup
 * VLAN

@@ -1,10 +1,5 @@
 {
-	"@context": [
-		"https://www.w3.org/2022/wot/td/v1.1",
-		{
-			"@language": "en"
-		}
-	],
+	"@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
 	"@type": "Thing",
 	"title": "HVAC device model",
 	"description": "HVAC device model",

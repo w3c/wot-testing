@@ -41,8 +41,11 @@ if (verbose) console.log(dm);
 if (verbose) console.log("-----");
 
 var td={};
-td['@context']=["https://www.w3.org/2022/wot/td/v1.1",
-                { "@language" : "en" } ];
+// td['@context']=["https://www.w3.org/2022/wot/td/v1.1",
+//                { "@language" : "en" } ];
+
+td['@context']="https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"];
+
 td['@type'] = "Thing";
 td.title=dm.name;
 td.description=dm.description;
