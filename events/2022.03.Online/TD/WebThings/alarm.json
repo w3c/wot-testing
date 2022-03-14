@@ -1,0 +1,108 @@
+{
+  "title": "Virtual Alarm",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+      "Alarm"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-21",
+  "properties": {
+      "alarm": {
+          "name": "alarm",
+          "value": false,
+          "title": "Alarm",
+          "type": "boolean",
+          "@type": "AlarmProperty",
+          "readOnly": true,
+          "forms": [
+              {
+                  "href": "/things/virtual-things-21/properties/alarm"
+              }
+          ]
+      }
+  },
+  "actions": {
+      "trigger": {
+          "title": "Trigger",
+          "description": "Trigger alarm",
+          "forms": [
+              {
+                  "href": "/things/virtual-things-21/actions/trigger"
+              }
+          ]
+      },
+      "silence": {
+          "title": "Silence",
+          "description": "Silence alarm",
+          "forms": [
+              {
+                  "href": "/things/virtual-things-21/actions/silence"
+              }
+          ]
+      }
+  },
+  "events": {
+      "alarmEvent": {
+          "description": "An alarm event from a virtual thing",
+          "type": "string",
+          "@type": "AlarmEvent",
+          "readOnly": true,
+          "forms": [
+              {
+                  "href": "/things/virtual-things-21/events/alarmEvent",
+                  "subprotocol": "sse"
+              }
+          ]
+      }
+  },
+  "links": [
+      {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "/things/virtual-things-21"
+      },
+      {
+          "rel": "alternate",
+          "href": "ws://localhost:8080/things/virtual-things-21"
+      }
+  ],
+  "forms": [
+      {
+          "href": "/things/virtual-things-21/properties",
+          "op": "readallproperties"
+      },
+      {
+          "href": "/things/virtual-things-21/actions",
+          "op": "queryallactions"
+      },
+      {
+          "href": "/things/virtual-things-21/events",
+          "op": [
+              "subscribeallevents",
+              "unsubscribeallevents"
+          ],
+          "subprotocol": "sse"
+      }
+  ],
+  "layoutIndex": 14,
+  "selectedCapability": "Alarm",
+  "iconHref": null,
+  "group_id": null,
+  "id": "http://localhost:8080/things/virtual-things-21",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+      "oauth2_sc": {
+          "scheme": "oauth2",
+          "flow": "code",
+          "authorization": "http://localhost:8080/oauth/authorize",
+          "token": "http://localhost:8080/oauth/token",
+          "scopes": [
+              "/things/virtual-things-21:readwrite",
+              "/things/virtual-things-21",
+              "/things:readwrite",
+              "/things"
+          ]
+      }
+  },
+  "security": "oauth2_sc"
+}
