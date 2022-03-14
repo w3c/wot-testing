@@ -36,6 +36,12 @@ These will be updated periodically so if an access does not work,
 check that you have the latest version.
 
 ### Simple Web Camera
+A simple camera service that interfaces to V4L to capture still images from a USB camera.
+
+Implementation name: intel-nodejs-camera
+
+Standalone NodeJS implementation.  Not based on node-wot. Shares code with intel-nodejs-speak.
+
 An example image is given below.
 Note that "observe" generally needs client-side support.
 For example, 
@@ -98,6 +104,10 @@ These require the credentials corresponding to `wotbasicproxy`.
        
 ### Web Speak
 This is a simple speech synthesizer service based on `espeak`.
+
+Implementation name: intel-nodejs-speak
+
+Standalone NodeJS implementation.  Not based on node-wot. Shares code with intel-nodejs-camera.
 
 Summary of network API: 
 * POST a quoted English string to /api/say and it will speak it.
