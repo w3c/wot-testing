@@ -1,0 +1,2 @@
+"Org",          "Name",               "on VLAN",   "on Internet",   "Link",                     "Comment",                "Thing Name (File basename)",     "Implementation ID", "Remarks"
+"Fraunhofer",   "LinkSmart",          "no",        "no",            none,                       "todo",                   linksmart,                        fraunhofer,
