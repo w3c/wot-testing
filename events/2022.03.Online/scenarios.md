@@ -12,12 +12,30 @@
     - proposal for May event, demo
     - presentation deadline: April-ish
 * Devices
-    - Door Switch
-    - Temp Sensor
+    - Door Switch (sensor, ultimately battery powered)
+    - Temp Sensor (sensor, *maybe* battery powered)
     - RGB Light
 * Easy to do with M5Stack (ESP-based) 
     - HTTP for now -> TDs, intel-esp
     - Node-RED
+* First round (plugfest goals)
+    - VLAN nosec
+    - HTTP
+    - always powered
+    - M5Stack "emulators"
+    - Demo interfaces
+    - Node-RED integration and discovery
+* Second round
+    - PSK security
+    - MQTT on M5Stack
+    - battery-powered sleeping 
+    - Node-RED and PSK?
+    - Secure hub for access (using reverse proxy in the cloud, etc)
+* Third round
+    - Industrial devices
+    - Shelly door sensor, MQTT.  Security?
+    - https://store.ncd.io/product/iot-temperature-humidity-sensor/
+    - Philips Hue - RGB, HTTP
 
 ## Others
 
