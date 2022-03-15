@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "VacuumGripperRobot1Layer2",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "properties": {
+    "state": {
+      "description": "Current state of the arm, including the position and if it holds something",
+      "observable": false,
+      "readOnly": true,
+      "writeOnly": false,
+      "type": "string"
+    }
+  },
+  "actions": {
+    "pickObjectAtOven": {
+      "description": "Move arm to oven position and pick an object"
+    },
+    "dropObjectAtOven": {
+      "description": "Move arm to oven position and drop an object"
+    },
+    "pickObjectAtWarehouse": {
+      "description": "Move arm to warehouse position and pick an object"
+    },
+    "dropObjectAtWarehouse": {
+      "description": "Move arm to warehouse position and drop an object"
+    },
+    "pickObjectAtWhitePosition": {
+      "description": "Move arm to white position and pick an object"
+    },
+    "dropObjectAtWhitePosition": {
+      "description": "Move arm to white position and drop an object"
+    },
+    "pickObjectAtRedPosition": {
+      "description": "Move arm to red position and pick an object"
+    },
+    "dropObjectAtRedPosition": {
+      "description": "Move arm to red position and drop an object"
+    },
+    "pickObjectAtBluePosition": {
+      "description": "Move arm to blue position and pick an object"
+    },
+    "dropObjectAtBluePosition": {
+      "description": "Move arm to blue position and drop an object"
+    },
+    "pickObjectAtGivePosition": {
+      "description": "Move arm to exchange 'give' position and pick an object"
+    },
+    "dropObjectAtGivePosition": {
+      "description": "Move arm to exchange 'give' position and drop an object"
+    },
+    "pickObjectAtTakePosition": {
+      "description": "Move arm to exchange 'take' position and pick an object"
+    },
+    "dropObjectAtTakePosition": {
+      "description": "Move arm to exchange 'take' position and drop an object"
+    },
+    "goHome": {
+      "description": "Move arm its home position"
+    }
+  }
+}
