@@ -1,6 +1,7 @@
 # WoT March 2022 Plugfest/Testfest
 - [ ] Capture test results (put in [Results](Results/README.md))
 - [ ] Describe each implementation (put in [Architecture/ImplDesc](../Architecture/ImplDescs))
+- [ ] Capture name and activity status of each implementation in [active.csv](active.csv)
 - [ ] Create a CSV file, manual.csv, listing the assertions that can were asserted manually.
 
 The [template.csv](template.csv) file contains a list of all the current assertions in 
