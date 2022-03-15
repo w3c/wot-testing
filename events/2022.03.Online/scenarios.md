@@ -42,7 +42,9 @@
 
 ## Others
 
-* telemetry use cases:
+* telemetry use cases
+   - retail use case does include some that could be extended to deal
+     with industrial, battery powered, and mqtt constraints
 * TD for a cloud service
 * TD for an event listener thing (Consumer)
 * digital twins
