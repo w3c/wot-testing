@@ -6,3 +6,5 @@
 "Siemens",      "Multilanguage Counter",  "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/counter",                  siemens-counter,        "impl-eclipse-node-wot",
 "Oracle",        "Blue_Pump",         "no",        "yes",           Oracle/README.md,                  "Blue Pump",       oracle-blue-pump,                   oracle-iot-intelligent-apps,
 "Oracle",        "HVAC",              "no",        "yes",           Oracle/README.md,                  "HVAC",            oracle-hvac,                        oracle-iot-intelligent-apps,
+"Hitachi",      "MyAccelerometer",    "yes",       "no",            hitachi-esp-idf/TDs/README.md,     "Accelerometer",   hitachi-acc-air,                    hitachi-esp-idf,
+"Hitachi",      "myRasPiLED",         "yes",       "no",            hitachi-node-red/TDs/README.md,    "LED",             hitachi-led,                        hitachi-node-red,
