@@ -1,2 +1,6 @@
-Event-specific tools.
-General tools are in ~/tools (will links).
+## Event-specific tools
+
+In this folder you can find tools that are used in this specific event. For tools that can be used for any event, please have a look at:
+
+- https://github.com/w3c/wot-testing/tree/main/tools
+- With a specific focus on the testing plan for current publications: https://github.com/w3c/wot-testing/blob/main/plan/testing_2022.md
