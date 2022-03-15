@@ -1,0 +1,99 @@
+{
+    "@context": [
+      "https://www.w3.org/2019/wot/td/v1",
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "@language": "en"
+      }
+    ],
+    "actions": {
+      "calibrateDevice": {
+        "description": "Return to the start position, which is in the middle of the linear track.",
+        "forms": [
+          {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/DobotMagician/actions/calibrateDevice",
+            "op": "invokeaction"
+          }
+        ],
+        "idempotent": true,
+        "safe": false,
+        "synchronous": false,
+        "title": "Recalibrate the device and then return to the start position in the middle of the rail. This can be invoked if the device does not reach the pre-defined positons accuaretly"
+      },
+      "getCube": {
+        "description": "Get a cube from the warehouse queue and put it on the second conyevor belt, then pushes the queue. Response is sent as soon as the request is received.",
+        "forms": [
+          {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/DobotMagician/actions/getCube",
+            "op": "invokeaction"
+          }
+        ],
+        "idempotent": true,
+        "safe": false,
+        "synchronous": false,
+        "title": "Get cube from warehouse queue"
+      },
+      "returnCube": {
+        "description": "Return a cube from the first conveyor belt to the warehouse queue. Response is sent as soon as the request is received.",
+        "forms": [
+          {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/DobotMagician/actions/returnCube",
+            "op": "invokeaction"
+          }
+        ],
+        "idempotent": true,
+        "safe": false,
+        "synchronous": false,
+        "title": "Return cube to warehouse queue"
+      }
+    },
+    "description": "A robot arm that is responsible for getting cubes from the warehouse and retrieving them to the warehouse. The arm can only perform one 'actioninvoke' at a time and any further 'actioninvoke' requests up to a maximum of 3 are queued.",
+    "id": "de:tum:ei:esi:dobot",
+    "properties": {
+      "position": {
+        "description": "Get position of the robot arm's end effector relative to its home position. Returns an object containing the linear track positon 'l', as well as x, y, z positions and rotation of the end effector.",
+        "forms": [
+          {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/DobotMagician/properties/position",
+            "op": [
+              "readproperty"
+            ]
+          }
+        ],
+        "properties": {
+          "l": {
+            "maximum": 900,
+            "minimum": 0,
+            "type": "number"
+          },
+          "r": {
+            "type": "number"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "z": {
+            "type": "number"
+          }
+        },
+        "readOnly": true,
+        "title": "The position of the robot arm's end effector.",
+        "type": "object"
+      }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+      "basic_sc": {
+        "in": "header",
+        "scheme": "basic"
+      }
+    },
+    "title": "Warehouse Dobot"
+  }
