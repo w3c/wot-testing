@@ -1,0 +1,359 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "actions": {
+        "clear": {
+            "description": "clears all pixels.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/clear",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "safe": false,
+            "title": "Clear the entire screen."
+        },
+        "clearRect": {
+            "description": "Clear a specified rectangular area of the screen.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/clearRect",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {
+                "properties": {
+                    "height": {
+                        "default": 7,
+                        "description": "Height of the area. 7 by default",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "width": {
+                        "default": 17,
+                        "description": "Width of the area. 17 by default",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "x": {
+                        "default": 0,
+                        "description": "Offset x - distance of the area from the left of the screen. 0 by default",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "y": {
+                        "default": 0,
+                        "description": "Offset y - distance of the area from the left of the screen. 0 by default",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "x",
+                    "y"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Clear Screen Area"
+        },
+        "clock": {
+            "description": "shows current time on screen for 10 seconds",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/clock",
+                    "op": "invokeaction"
+                }
+            ],
+            "title": "Show Time"
+        },
+        "fill": {
+            "description": "Fill an area of the display.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/fill",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {
+                "properties": {
+                    "brightness": {
+                        "maximum": 1,
+                        "minimum": 0,
+                        "type": "number"
+                    },
+                    "height": {
+                        "default": 7,
+                        "description": "Height of the area. 7 by default",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "width": {
+                        "default": 17,
+                        "description": "Width of the area. 17 by default",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "x": {
+                        "default": 0,
+                        "description": "Offset x - distance of the area from the left of the screen. 0 by default",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "y": {
+                        "default": 0,
+                        "description": "Offset y - distance of the area from the left of the screen. 0 by default",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "brightness"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Fill the Screen"
+        },
+        "scroll": {
+            "description": "Scroll pHAT HD displays an 17x7 pixel window into the bufer, which starts at the left offset and wraps around. The x and y values are added to the internal scroll offset.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/scroll",
+                    "op": "invokeaction"
+                }
+            ],
+            "input": {
+                "properties": {
+                    "x": {
+                        "default": 1,
+                        "description": "Amount to scroll on x-axis. (default 1)",
+                        "type": "integer"
+                    },
+                    "y": {
+                        "default": 0,
+                        "description": "Amount to scroll on y-axis. (default 0)",
+                        "type": "integer"
+                    }
+                },
+                "type": "object"
+            },
+            "title": "Shift Image"
+        },
+        "sendImage": {
+            "description": "Takes a bmp image with size 17-7 pixels with bpp value of 8 as input, and displays it on the screen.",
+            "forms": [
+                {
+                    "contentType": "image/bmp",
+                    "description": "The payload is multipart/form-data which should be indicated in curl command with '--form' flag as in: curl --location --request POST 'http://<device ip>:8080/actions/sendImage' --form 'example.bmp=@'<directory of image>/example.bmp''",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/sendImage",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {},
+            "safe": false,
+            "title": "Upload Image"
+        },
+        "setPixel": {
+            "description": "Light a specific single pixel with a given brightness. x and y are 5 by default.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/setPixel",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {
+                "properties": {
+                    "brightness": {
+                        "maximum": 1,
+                        "minimum": 0,
+                        "type": "number"
+                    },
+                    "x": {
+                        "default": 5,
+                        "maximum": 16,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "y": {
+                        "default": 5,
+                        "maximum": 6,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "brightness"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Turn on Pixel"
+        },
+        "showPulse": {
+            "description": "shows a pulse graph on screen for 10 seconds",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/showPulse",
+                    "op": "invokeaction"
+                }
+            ],
+            "title": "Display Pulse"
+        },
+        "writeChar": {
+            "description": "Write a single char to the screen. Returns the x and y coordinates of the bottom left-most corner of the drawn character.Shows the char for 5 secs",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/writeChar",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {
+                "properties": {
+                    "brightness": {
+                        "maximum": 1,
+                        "minimum": 0,
+                        "type": "number"
+                    },
+                    "char": {
+                        "description": "Char to display- either an integer ordinal or a single letter",
+                        "maxLength": 1,
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "o_x": {
+                        "default": 5,
+                        "description": "Offset x - distance of the string from the left of the screen. By default its value is 5",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "o_y": {
+                        "default": 0,
+                        "description": "Offset x - distance of the string from the left of the screen. By default its value is 0",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "char",
+                    "brightness"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Display Character"
+        },
+        "writeString": {
+            "description": "Write a string to the screen. Calls draw_char for each character.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/actions/writeString",
+                    "op": "invokeaction"
+                }
+            ],
+            "idempotent": true,
+            "input": {
+                "properties": {
+                    "brightness": {
+                        "maximum": 1,
+                        "minimum": 0,
+                        "type": "number"
+                    },
+                    "string": {
+                        "description": "The string to display.",
+                        "maxLength": 50,
+                        "type": "string"
+                    },
+                    "time": {
+                        "default": 5,
+                        "description": "duration the string keep scrolling, it is 5 seconds by default. Adjust the duration according to the lenght of your string.",
+                        "maximum": 30,
+                        "minimum": 3,
+                        "type": "integer"
+                    },
+                    "x": {
+                        "description": "Offset x - distance of the string from the left of the screen",
+                        "maximum": 17,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "y": {
+                        "description": "Offset x - distance of the string from the left of the screen",
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "string",
+                    "x",
+                    "y",
+                    "brightness"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Display String"
+        }
+    },
+    "description": "A scroll-phat-hd that can be remotely controlled.",
+    "id": "de:tum:ei:esi:phat",
+    "properties": {
+        "displaySize": {
+            "description": "Get the size/shape of the display. Returns a tuple containing the width and height of the display",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/ScrollPHAT/properties/displaySize",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "items": {
+                "type": "integer"
+            },
+            "readOnly": true,
+            "title": "The Display Size",
+            "type": "array"
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "title": "ScrollPhat HD"
+}
