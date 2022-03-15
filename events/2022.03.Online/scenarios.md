@@ -35,7 +35,10 @@
     - Industrial devices
     - Shelly door sensor, MQTT.  Security?
     - https://store.ncd.io/product/iot-temperature-humidity-sensor/
-    - Philips Hue - RGB, HTTP
+    - Philips Hue - RGB, (Zigbee through hub to HTTP)
+
+## Home Assistant Integration
+* Add-on to expose TDs for Home Assistant entities via WoT Directory
 
 ## Others
 
