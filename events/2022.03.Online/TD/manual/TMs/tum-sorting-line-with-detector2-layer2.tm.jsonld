@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "@language": "en",
+      "cov": "http://www.example.org/coap-binding#"
+    }
+  ],
+  "@type" : "tm:ThingModel",
+  "title": "SortingLineWithDetector2Layer2",
+  "description": "",
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "actions": {
+    "startSorting": {
+      "description": "Toggle the conveyor belt",
+      "output": {
+        "type": "string",
+        "enum": [
+          "white",
+          "blue",
+          "red",
+          "none"
+        ]
+      }
+    }
+  }
+}
