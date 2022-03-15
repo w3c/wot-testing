@@ -7,6 +7,18 @@
     - ECHONET TDs might be candidates, but not in current event
     - But have then from Sept Plugfest last year... should ask if we can use them
 
+## Retail Test Case/Demo
+* Connexxus 
+    - proposal for May event, demo
+    - presentation deadline: April-ish
+* Devices
+    - Door Switch
+    - Temp Sensor
+    - RGB Light
+* Easy to do with M5Stack (ESP-based) 
+    - HTTP for now -> TDs, intel-esp
+    - Node-RED
+
 ## Others
 
 * telemetry use cases:
