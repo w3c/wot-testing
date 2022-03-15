@@ -13,6 +13,12 @@
    - [Testfest: `#wot-tf`](https://irc.w3.org/?channels=wot-tf)
    - [Plugfest: `#wot-pf`](https://irc.w3.org/?channels=wot-pf)
 
+## TO DO
+* Can we pull forward TDs etc. from previous plugfests/testfests?
+    - ECHONET and NHK, for example
+    - Should probably ask for permission...
+    - Then... can we modify them for certain things, e.g. profiles?
+
 ## Preparations for the Testfest
 
 ### Participant TO DO
