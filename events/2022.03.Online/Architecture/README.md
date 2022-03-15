@@ -6,7 +6,7 @@ implementation descriptions.
 
 * [template.csv](template.csv): list of assertions drawn from Architecture spec
 * [Results](Results): collection of assertion results, one per implementation
-* [ImplDesc](ImplDesc): collection of descriptions of all the implementations, as HTML
+* [ImplDescs](ImplDescs): collection of descriptions of all the implementations, as HTML
 
 TO DO:
 - [ ] Copy over template.csv
