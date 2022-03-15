@@ -6,3 +6,4 @@ can support multiple deliverables depending on its roles.
 See [templates](../../../../templates/TestImplementation) for both HTML and CSV files.
 
 * [Intel](intel.html)
+* [Hitachi](hitachi.html)
