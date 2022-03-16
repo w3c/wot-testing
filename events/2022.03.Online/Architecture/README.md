@@ -17,3 +17,4 @@ TO DO:
         - Exposer - exposes a network interface described by a TD (e.g. a Thing)
         - Producer - creates and makes a TD available (e.g. a tool like edi{TD}or)
         - Discoverer - client-side implementation of WoT Discovery (e.g. Hitachi's node-red prototype)
+        - TM Manipulator - implementations that manage TMs, offline or online 
