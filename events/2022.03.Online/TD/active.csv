@@ -1,6 +1,7 @@
 "Org",          "Name",               "on VLAN",   "on Internet",   "Link",                     "Comment",                "Thing Name (File basename)",       "Implementation ID", "Remarks"
 "Intel",        "Speak",              "no",        "no",            intel-nodejs/README.md,            "Speech output",   intel-nodejs-speak,                 intel-nodejs,
 "Intel",        "Camera",             "no",        "no",            intel-nodejs/README.md,            "Still camera",    intel-nodejs-camera,                intel-nodejs,
+"Intel",        "Proxy",              "no",        "no",            intel-proxy/README.md,             "Reverse proxy",   ,                                   intel-proxy,  "No TDs, all interactions in TDs for other Things"
 "Siemens",      "Smart-Coffee-Machine",   "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/smart-coffee-machine",     siemens-smart-coffee-machine,        "impl-eclipse-node-wot",
 "Siemens",      "TestThing",              "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/testthing",                siemens-testthing,        "impl-eclipse-node-wot",
 "Siemens",      "Multilanguage Counter",  "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/counter",                  siemens-counter,        "impl-eclipse-node-wot",

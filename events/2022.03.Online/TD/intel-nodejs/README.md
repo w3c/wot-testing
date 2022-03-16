@@ -5,10 +5,13 @@ Two services are provided:
 * A Simple Web Camera
 * A Simple Speech Synthesizer
 
-These both use HTTP on the LAN, and are also available via proxy with HTTPS.
+These both use HTTP on the LAN, and are also available via 
+[intel-proxy](../intel-proxy/README.md) with HTTPS.
+See the intel-proxy documentation for authentication information if you
+need to access these services over HTTPS.
 
 To Do:
-* Update passwords, etc. (below authentication link is old)
+* Update authentication in proxy
 * Update certificates in proxy so HTTPS works properly
 * Activate VLAN so services available via HTTP on VLAN
 * Set up for pen testing using a docker container
@@ -16,24 +19,6 @@ To Do:
 * Harden (remove known vulnerability)
 * Fix V4L interface for camera so brightness controls etc. work properly
 * Add additional M5Stack-based devices (switch, temp sense, RGB light) for retail demo
-
-### Authentication
-These services support end-to-end security via a cloud proxy.
-Use the credentials, linked below, 
-for "wotbasicproxy" or "wodigestproxy" based on whether you are using
-basic or digest authentication.
-Both services use the same credentials.
-
-* [Proxy Authentication Credentials](https://lists.w3.org/Archives/Member/member-wot-ig/2018May/0003.html)
-
-W3C WoT membership is required to access these credentials.
-Please do not repost them in a public forum
-(for example,
-do not check the keys into a public github repo as part of a test suite,
-post on a forum,
-share in a public messaging system, etc).
-These will be updated periodically so if an access does not work,
-check that you have the latest version.
 
 ### Simple Web Camera
 A simple camera service that interfaces to V4L to capture still images from a USB camera.
