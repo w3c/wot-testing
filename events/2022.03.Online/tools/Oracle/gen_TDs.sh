@@ -3,13 +3,13 @@
 IOTCS=oraclew3cwotplugfest-test.staging.iot.ocs.oraclecloud.com
 
 # Blue Pump
-node dm2td.js ../../TD/Oracle/DMs/Blue_Pump.json $IOTCS 0-AB 92270D3C-C086-4F08-AAAD-0B29870B1FEA > ../../TD/Oracle/TDs/Blue_Pump.td.jsonld
+node dm2td.js ../../TD/Oracle/DMs/Blue_Pump.json $IOTCS 0-AB 92270D3C-C086-4F08-AAAD-0B29870B1FEA > ../../TD/Oracle/TDs/oracle-blue-pump.td.jsonld
 
 # HVAC
-node dm2td.js ../../TD/Oracle/DMs/HVAC_device_model.json $IOTCS 0-AB A4F7AD5E-426D-47B6-BE16-414E47CEE9BE > ../../TD/Oracle/TDs/HVAC.td.jsonld
+node dm2td.js ../../TD/Oracle/DMs/HVAC_device_model.json $IOTCS 0-AB A4F7AD5E-426D-47B6-BE16-414E47CEE9BE > ../../TD/Oracle/TDs/oracle-hvac.td.jsonld
 
 # Truck
-# node dm2td.js ../../TDs/Oracle/DMs/ora_obd2_device_model.json $IOTCS 0-AB 1B70FB03-72AF-4BBA-A6D1-D5300A2F8552 > ../../TDs/Oracle/oracle-Truck_Shared.jsonld
+node dm2td.js ../../TD/Oracle/DMs/ora_obd2_device_model.json $IOTCS 0-AB 1B70FB03-72AF-4BBA-A6D1-D5300A2F8552 > ../../TD/Oracle/TDs/oracle-truck-td.jsonld
 
 # Festo
 # node dm2td.js ../../TDs/Oracle/DMs/Festo.json $IOTCS 0-AB 290A9892-8400-4FA7-9874-5FE4DB12DE81 > ../../TDs/Oracle/oracle-Festo_Shared.jsonld
