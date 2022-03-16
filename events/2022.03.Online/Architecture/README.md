@@ -14,7 +14,12 @@ TO DO:
 - [x] Add link to ImplDesc template
 - [ ] Use terminology consistent with Architecture's terminology section.
     * Unfortunately Exposer/Producer not yet defined per se - under discussion.
-    * For now suggest: 
+    * For now suggest 
+        - Consumer - see Arch
         - Exposer - exposes a network interface described by a TD (e.g. a Thing)
-        - Producer - creates and makes a TD available (e.g. a tool like edi{TD}or)
+        - Producer - creates and makes a TD available (e.g. a tool like edi{TD}or) (under discussion, might change, eg. to "Generator", but for now...)
         - Discoverer - client-side implementation of WoT Discovery (e.g. Hitachi's node-red prototype)
+        - *Intermediary - e.g. Proxy (but... do we even want these if they are not Consumers or Exposers?
+             - and if they are simply both Consumers and Exposers, can just list both...
+        - Tool - e.g. TM editor/generators, tools to convert formats, e.g. DM to TD script ("TD Producer")
+    * Can also have more than one in an implementation, e.g. "consumer exposer" instead of "servient"
