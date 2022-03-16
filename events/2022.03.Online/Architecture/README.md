@@ -19,7 +19,9 @@ TO DO:
         - Exposer - exposes a network interface described by a TD (e.g. a Thing)
         - Producer - creates and makes a TD available (e.g. a tool like edi{TD}or) (under discussion, might change, eg. to "Generator", but for now...)
         - Discoverer - client-side implementation of WoT Discovery (e.g. Hitachi's node-red prototype)
+        - TM Manipulator - implementations that manage TMs, offline or online 
         - *Intermediary - e.g. Proxy (but... do we even want these if they are not Consumers or Exposers?
              - and if they are simply both Consumers and Exposers, can just list both...
         - Tool - e.g. TM editor/generators, tools to convert formats, e.g. DM to TD script ("TD Producer")
     * Can also have more than one in an implementation, e.g. "consumer exposer" instead of "servient"
+
