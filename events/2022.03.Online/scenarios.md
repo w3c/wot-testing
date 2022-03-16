@@ -32,10 +32,35 @@
     - Node-RED and PSK?
     - Secure hub for access (using reverse proxy in the cloud, etc)
 * Third round
-    - Industrial devices
-    - Shelly door sensor, MQTT.  Security?
+    - Industrial/commercial devices
+        - More convincing of value prop than DIY devices
+    - Shelly Door/Window 2
+        - API docs: https://shelly-api-docs.shelly.cloud/
+        - Supports MQTT, CoAP, or HTTP
+            - HTTP API does have some webhooks for events; digest authentication (but no TLS, so)
+            - CoAP API has some extensions, header mods; call it "CoIoT"; protocol binding needed
+            - MQTT can be plain or over Web Socket
+        - Unfortunately no security support on any protocol
+            - Except for digest auth on HTTP, which is easy to break with a protocol sniffer
+        - Gen2 API (some Shelly devices, but not this one) 
+          do support setting PSK/CA bundle
+            - Gen 2 devices also use JSONRPC API
+            - Most of the available Gen2 devices are power monitors/switches
+        - MQTT brokers (e.g. Mosquitto) *do* support PSK security
+        - Sort of slow with MQTT
+            - default periodic update interval is 30s
+            - update interval is configurable (more frequent -> less battery)
+        - HTTP has a tendency to go to sleep, have to wake with button
+            - Mostly useful for setup, in fact some settings only available this way
+        - Anyhow, I've integrated this with MQTT and HA, in theory a WoT MQTT TD could be written to connect to it
     - https://store.ncd.io/product/iot-temperature-humidity-sensor/
-    - Philips Hue - RGB, (Zigbee through hub to HTTP)
+        - Expensive, but has fully documented MQTT API
+        - Supports security (PSK)
+    - Philips Hue - RGB
+        - Bulb itself is Zigbee
+        - Hub supports bridge to HTTP
+    - Shelly also has an RGB interface with a documented API
+        - But, Gen 1 like Door/Window 2, so no security
 
 ## Home Assistant Integration
 * Add-on to expose TDs for Home Assistant entities via WoT Directory
