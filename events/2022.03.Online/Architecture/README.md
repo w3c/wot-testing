@@ -7,10 +7,11 @@ implementation descriptions.
 * [template.csv](template.csv): list of assertions drawn from Architecture spec
 * [Results](Results): collection of assertion results, one per implementation
 * [ImplDescs](ImplDescs): collection of descriptions of all the implementations, as HTML
-
+    - [Template](https://github.com/w3c/wot-testing/blob/main/events/templates/TestImplementation/impldesc.html)
+    
 TO DO:
 - [ ] Copy over template.csv
-- [ ] Add link to ImplDesc template
+- [x] Add link to ImplDesc template
 - [ ] Use terminology consistent with Architecture's terminology section.
     * Unfortunately Exposer/Producer not yet defined per se - under discussion.
     * For now suggest: 
