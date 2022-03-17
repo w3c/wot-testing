@@ -11,3 +11,17 @@ For an overview of the current known compliance of WebThings with the W3C WoT Th
 ## TDs folder
 
 These TDs are edited by hand by @egekorkan to match the spec. The only modificaiton is the `@context` field
+
+## Live Instance
+
+A live instance of the gateway web interface can be accessed during the plugfest at https://plugfest.webthings.io. Please see the WoT Working Group members mailing list for a username and password.
+
+You can get a token for API access via OAuth2 by authenticating with the username and password, as per the security metadata in the Thing Descriptions, or by manually setting a `Bearer` token in an `Authorization` header. Please see the WoT Working Group members mailing list for an example token.
+
+Please note that you must add an `Accept` header with a value of `application/json` for API requests as shown in the example below, because the default response is an HTML representation.
+
+An example curl command is provided below (requires replacing [token] with a valid token).
+
+```
+curl --location --request GET 'https://plugfest.webthings.io/things/virtual-things-6/properties/on' --header 'Accept: application/json' --header 'Authorization: Bearer [token]'
+```
