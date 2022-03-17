@@ -12,3 +12,7 @@
 "Oracle",        "Truck",              "no",        "yes",          Oracle/README.md,                  "Truck",           oracle-truck,                       oracle-iot-intelligent-apps,
 "Hitachi",      "MyAccelerometer",    "yes",       "no",            hitachi-esp-idf/TDs/README.md,     "Accelerometer",   hitachi-acc-air,                    hitachi-esp-idf,
 "Hitachi",      "myRasPiLED",         "yes",       "no",            hitachi-node-red/TDs/README.md,    "LED",             hitachi-led,                        hitachi-node-red,
+"ECHONET",      "HomeAirconditioner", "no",        "no",            node-wot/TDs/echonet-README.md,    "A home airconditioner that supports the ECHONET Lite protocol",             echonet-homeairconditioner,                "impl-eclipse-node-wot",
+"ECHONET",      "GeneralLighting",    "no",        "no",            node-wot/TDs/echonet-README.md,    "A lighting device that supports the ECHONET Lite protocol",                 echonet-generallighting,                   "impl-eclipse-node-wot",
+"ECHONET",      "IlluminanceSensor",  "no",        "no",            node-wot/TDs/echonet-README.md,    "An illuminance sensor that supports the ECHONET Lite protocol",             echonet-illuminancesensor,                 "impl-eclipse-node-wot",
+"ECHONET",      "TemperatureSensor",  "no",        "no",            node-wot/TDs/echonet-README.md,    "A temperature sensor that supports the ECHONET Lite protocol",              echonet-temperaturesensor,                 "impl-eclipse-node-wot",
