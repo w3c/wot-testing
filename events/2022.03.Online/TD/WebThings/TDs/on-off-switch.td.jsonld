@@ -1,0 +1,66 @@
+{
+  "title": "Virtual On/Off Switch",
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+      "OnOffSwitch"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-3",
+  "properties": {
+      "on": {
+          "name": "on",
+          "value": false,
+          "title": "On/Off",
+          "type": "boolean",
+          "@type": "OnOffProperty",
+          "forms": [
+              {
+                  "href": "/things/virtual-things-3/properties/on"
+              }
+          ]
+      }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+      {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "/things/virtual-things-3"
+      },
+      {
+          "rel": "alternate",
+          "href": "ws://localhost:8080/things/virtual-things-3"
+      }
+  ],
+  "forms": [
+      {
+          "href": "/things/virtual-things-3/properties",
+          "op": [
+              "readallproperties",
+              "writemultipleproperties"
+          ]
+      }
+  ],
+  "layoutIndex": 3,
+  "selectedCapability": "OnOffSwitch",
+  "iconHref": null,
+  "group_id": null,
+  "id": "http://localhost:8080/things/virtual-things-3",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+      "oauth2_sc": {
+          "scheme": "oauth2",
+          "flow": "code",
+          "authorization": "http://localhost:8080/oauth/authorize",
+          "token": "http://localhost:8080/oauth/token",
+          "scopes": [
+              "/things/virtual-things-3:readwrite",
+              "/things/virtual-things-3",
+              "/things:readwrite",
+              "/things"
+          ]
+      }
+  },
+  "security": "oauth2_sc"
+}
