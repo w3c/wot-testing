@@ -10,8 +10,7 @@
 * [WebEx](https://lists.w3.org/Archives/Member/member-wot-ig/2022Mar/0002.html)
    - Same webex for both calls
 * IRC
-   - [Testfest: `#wot-tf`](https://irc.w3.org/?channels=wot-tf)
-   - [Plugfest: `#wot-pf`](https://irc.w3.org/?channels=wot-pf)
+   - [Testfest & Plugfest: `#wot-pf`](https://irc.w3.org/?channels=wot-pf)
 
 ## TO DO
 * Can we pull forward TDs etc. from previous plugfests/testfests?
