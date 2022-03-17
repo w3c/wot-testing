@@ -154,7 +154,7 @@
 					}
 				}
 			},
-			"output":{},
+			"output":{"type": "null"},
 			"forms": [
 				{
 					"href": "http://130.35.140.146:24042/actions/power",
@@ -166,8 +166,8 @@
 		"diagnose": {
 			"description": "Runs diagnostics, which results in a Diagnostics message being sent",
 			"title": "diagnose",
-			"input":{},
-			"output":{},
+			"input":{"type": "null"},
+			"output":{"type": "null"},
 			"forms": [
 				{
 					"href": "http://130.35.140.146:24042/actions/diagnose",
@@ -179,8 +179,8 @@
 		"resetFilter": {
 			"description": "Used to notify the pump that the filter has been replaced.",
 			"title": "resetFilter",
-			"input":{},
-			"output":{},
+			"input":{"type": "null"},
+			"output":{"type": "null"},
 			"forms": [
 				{
 					"href": "http://130.35.140.146:24042/actions/resetFilter",
