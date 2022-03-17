@@ -7,6 +7,7 @@
 "Siemens",      "Multilanguage Counter",  "no",        "yes",       node-wot/TDs/README.md,           "http://plugfest.thingweb.io:8083/counter",                  siemens-counter,        "impl-eclipse-node-wot",
 "Siemens",      "My Thing Profile",       "no",        "no",        node-wot/TDs/README.md,           "Uses internal dev profile",                  		       siemens-my-thing-profile,        "impl-eclipse-node-wot",
 "Oracle",        "Blue_Pump",         "no",        "yes",           Oracle/README.md,                  "Blue Pump",       oracle-blue-pump,                   oracle-iot-intelligent-apps,
+"Oracle",        "Blue_Pump 2",         "no",        "yes",           Oracle/README.md,                  "Blue Pump 2 - Profile compliant WebThing (properties + actions)",       oracle-blue-pump2-profile,                   Profile-POC,
 "Oracle",        "HVAC",              "no",        "yes",           Oracle/README.md,                  "HVAC",            oracle-hvac,                        oracle-iot-intelligent-apps,
 "Oracle",        "Truck",              "no",        "yes",          Oracle/README.md,                  "Truck",           oracle-truck,                       oracle-iot-intelligent-apps,
 "Hitachi",      "MyAccelerometer",    "yes",       "no",            hitachi-esp-idf/TDs/README.md,     "Accelerometer",   hitachi-acc-air,                    hitachi-esp-idf,
