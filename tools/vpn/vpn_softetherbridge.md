@@ -53,6 +53,8 @@ where
 ...
 Connection has been established with VPN Server "localhost" (port 443).
 
+VPN Server>ServerPasswordSet
+
 Please enter the password. To cancel press the Ctrl+D key.
 
 Password: *************          <--- Password for your bridge. not for vpn server
