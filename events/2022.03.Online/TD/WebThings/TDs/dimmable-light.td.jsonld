@@ -1,0 +1,82 @@
+{
+  "title": "Virtual Dimmable Light",
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+      "OnOffSwitch",
+      "Light"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-8",
+  "properties": {
+      "on": {
+          "name": "on",
+          "value": false,
+          "title": "On/Off",
+          "type": "boolean",
+          "@type": "OnOffProperty",
+          "forms": [
+              {
+                  "href": "/things/virtual-things-8/properties/on"
+              }
+          ]
+      },
+      "level": {
+          "name": "level",
+          "value": 0,
+          "title": "Brightness",
+          "type": "number",
+          "@type": "BrightnessProperty",
+          "unit": "percent",
+          "minimum": 0,
+          "maximum": 100,
+          "forms": [
+              {
+                  "href": "/things/virtual-things-8/properties/level"
+              }
+          ]
+      }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+      {
+          "rel": "alternate",
+          "type": "text/html",
+          "href": "/things/virtual-things-8"
+      },
+      {
+          "rel": "alternate",
+          "href": "ws://localhost:8080/things/virtual-things-8"
+      }
+  ],
+  "forms": [
+      {
+          "href": "/things/virtual-things-8/properties",
+          "op": [
+              "readallproperties",
+              "writemultipleproperties"
+          ]
+      }
+  ],
+  "layoutIndex": 25,
+  "selectedCapability": "Light",
+  "iconHref": null,
+  "group_id": null,
+  "id": "http://localhost:8080/things/virtual-things-8",
+  "base": "http://localhost:8080/",
+  "securityDefinitions": {
+      "oauth2_sc": {
+          "scheme": "oauth2",
+          "flow": "code",
+          "authorization": "http://localhost:8080/oauth/authorize",
+          "token": "http://localhost:8080/oauth/token",
+          "scopes": [
+              "/things/virtual-things-8:readwrite",
+              "/things/virtual-things-8",
+              "/things:readwrite",
+              "/things"
+          ]
+      }
+  },
+  "security": "oauth2_sc"
+}
