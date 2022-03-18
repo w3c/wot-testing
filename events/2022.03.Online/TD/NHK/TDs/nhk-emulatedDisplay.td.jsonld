@@ -1,6 +1,6 @@
 {
     "@context": [
-        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
         { "saref": "https://w3id.org/saref#" }
     ],
     "id": "urn:dev:ops:WoTDisp-0001",
@@ -12,7 +12,7 @@
     }
   },
   "security": ["nosec_sc"],
-  "base": "http://192.168.30.121:8888/",
+  "base": "http://emulateddisplay.local:8888/",
     "properties": {
         "power": {
             "title": "power",
@@ -185,7 +185,7 @@
         {
           "op": "subscribeevent",
           "contentType": "application/json;charset=utf-8",
-          "href": "ws://192.168.30.121:8888/weatheralert"
+          "href": "ws://emulateddisplay.local:8888/weatheralert"
         }
        ]
       }

@@ -2,7 +2,6 @@
   "@context": [
     "https://www.w3.org/2022/wot/td/v1.1",
     {
-      "iot": "http://iotschema.org/",
       "htv": "http://www.w3.org/2011/http#"
     }
   ],
@@ -80,7 +79,7 @@
         }
       },
       "forms" : [{
-        "href": "http://192.168.30.132:8887/antwapp/tvcontrol/status",
+        "href": "http://nhktv.local:8887/antwapp/tvcontrol/status",
         "contentType": "application/json",
         "htv:methodName": "GET",
         "op":"readproperty"
@@ -123,7 +122,7 @@
         }
       },
       "forms": [{
-        "href": "http://192.168.30.132:8887/antwapp/tvcontrol/channels?media=TD",
+        "href": "http://nhktv.local:8887/antwapp/tvcontrol/channels?media=TD",
         "contentType": "application/json",
         "htv:methodName": "GET",
         "op":"readproperty",
@@ -138,7 +137,7 @@
       "forms": [{
         "op": "invokeaction",
         "contentType": "application/json",
-        "href": "http://192.168.30.132:8887/antwapp/tvcontrol/hybridcast{?mode}",
+        "href": "http://nhktv.local:8887/antwapp/tvcontrol/hybridcast{?mode}",
         "htv:methodName": "POST"
       }],
       "input": {
@@ -208,16 +207,11 @@
         "ja": "メッセージが送出された．"
       },
       "data": {
-        "type": "object"
-      },
-      "properties": {
-        "value": {
-          "type": "number"
-        }
+        "type": "text"
       },
       "forms": [
         {
-          "href": "ws://192.168.30.132:8887/antwapp/websocket",
+          "href": "ws://nhktv.local:8887/antwapp/websocket",
           "op": "subscribeevent",
           "contentType": "application/json"
         }

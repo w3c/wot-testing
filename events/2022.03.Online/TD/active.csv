@@ -11,3 +11,6 @@
 "Oracle",        "Truck",              "no",        "yes",          Oracle/README.md,                  "Truck",           oracle-truck,                       oracle-iot-intelligent-apps,
 "Hitachi",      "MyAccelerometer",    "yes",       "no",            hitachi-esp-idf/TDs/README.md,     "Accelerometer",   hitachi-acc-air,                    hitachi-esp-idf,
 "Hitachi",      "myRasPiLED",         "yes",       "no",            hitachi-node-red/TDs/README.md,    "LED",             hitachi-led,                        hitachi-node-red,
+"NHK",          "HybridcastConnectReceiver", "no",  "no",           NHK/TDs/README.md,                  "TV",               nhk-tv,                            NHK,
+"NHK",          "MyDispThing",       "no",          "no",           NHK/TDs/README.md,                  "Smart Display",               nhk-emulatedDisplay,    NHK,
+"NHK",          "MySPThing",         "no",          "no",           NHK/TDs/README.md,                  "Smart Speaker",               nhk-emulatedSpeaker,    NHK,
