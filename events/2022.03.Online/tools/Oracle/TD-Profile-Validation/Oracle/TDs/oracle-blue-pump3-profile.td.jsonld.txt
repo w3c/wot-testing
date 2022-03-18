@@ -1,5 +1,0 @@
-{}: 'type' is a required property
-{}: 'type' is a required property
-{}: 'type' is a required property
-{}: 'type' is a required property
-{}: 'type' is a required property
