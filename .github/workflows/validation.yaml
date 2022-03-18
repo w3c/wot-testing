@@ -23,9 +23,12 @@ jobs:
         with:
           node-version: '15'       
       
-      - name: Install dependencies
-        working-directory: thingweb-playground/packages/cli
-        run: npm install
+      - name: Use lerna
+        run: npm install -g lerna
+      
+      - name: Bootstrap
+        working-directory: thingweb-playground
+        run: lerna bootstrap --no-ci
 
       - name: Run validation script on all new matching files
         env:
