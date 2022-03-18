@@ -182,80 +182,80 @@
 					"op": "invokeaction"
 				}
 			]
-		},
-		"events": {
-			"filterClogged": {
-				"title": "filterClogged",
-				"description": "Filter clogged alert",
-				"subscription": {
-					"type": "object",
-					"properties": {
-						"callbackURL": {
-							"type": "string",
-							"format": "uri",
-							"description": "Callback URL provided by subscriber for Webhook notifications.",
-							"writeOnly": true
-						},
-						"subscriptionID": {
-							"type": "string",
-							"description": "Unique subscription ID provided by WebThing.",
-							"readOnly": true
-						}
-					}
-				},
-				"cancellation": {
-					"type": "object",
-					"properties": {
-						"subscriptionID": {
-							"type": "string",
-							"description": "subscription ID to cancel subscription.",
-							"writeOnly": true
-						}
-					}
-				},
-				"data": {
-					"title": "filterClogged",
-					"type": "object",
-					"properties": {
-						"filterClogged": {
-							"type": "boolean"
-						},
-						"timestamp": {
-							"type": "string",
-							"format": "date-time"
-						}
-					}
-				},
-				"dataResponse": {
-					"title": "emergencyStop",
-					"type": "object",
-					"properties": {
-						"filterClogged": {
-							"type": "boolean"
-						},
-						"timestamp": {
-							"type": "string",
-							"format": "date-time"
-						}
-					}
-				},
-				"forms": [
-					{
-						"op": "subscribeevent",
-						"href": "http://130.35.140.146:24042/events/filterClogged",
-						"htv:methodName": "POST",
-						"subprotocol": "webhook",
-						"contentType": "application/json"
+		}
+	},
+	"events": {
+		"filterClogged": {
+			"title": "filterClogged",
+			"description": "Filter clogged alert",
+			"subscription": {
+				"type": "object",
+				"properties": {
+					"callbackURL": {
+						"type": "string",
+						"format": "uri",
+						"description": "Callback URL provided by subscriber for Webhook notifications.",
+						"writeOnly": true
 					},
-					{
-						"op": "unsubscribeevent",
-						"href": "http://130.35.140.146:24042/events/filterClogged",
-						"htv:methodName": "DELETE",
-						"subprotocol": "webhook",
-						"contentType": "application/json"
+					"subscriptionID": {
+						"type": "string",
+						"description": "Unique subscription ID provided by WebThing.",
+						"readOnly": true
 					}
-				]
-			}
+				}
+			},
+			"cancellation": {
+				"type": "object",
+				"properties": {
+					"subscriptionID": {
+						"type": "string",
+						"description": "subscription ID to cancel subscription.",
+						"writeOnly": true
+					}
+				}
+			},
+			"data": {
+				"title": "filterClogged",
+				"type": "object",
+				"properties": {
+					"filterClogged": {
+						"type": "boolean"
+					},
+					"timestamp": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			},
+			"dataResponse": {
+				"title": "emergencyStop",
+				"type": "object",
+				"properties": {
+					"filterClogged": {
+						"type": "boolean"
+					},
+					"timestamp": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			},
+			"forms": [
+				{
+					"op": "subscribeevent",
+					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"htv:methodName": "POST",
+					"subprotocol": "webhook",
+					"contentType": "application/json"
+				},
+				{
+					"op": "unsubscribeevent",
+					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"htv:methodName": "DELETE",
+					"subprotocol": "webhook",
+					"contentType": "application/json"
+				}
+			]
 		}
 	}
 }
