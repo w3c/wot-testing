@@ -207,7 +207,11 @@
         "ja": "メッセージが送出された．"
       },
       "data": {
-        "type": "object"
+        "properties": {
+          "value": {
+            "type": "object"
+          }
+        }
       },
       "forms": [
         {
