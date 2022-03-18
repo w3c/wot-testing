@@ -1,0 +1,60 @@
+{
+  "@type": "Thing",
+  "created": "2022-03-11T12:00:00+09:00",
+  "description": "sensors with wifi interface",
+  "title": "Fujitsu-sensor",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "version": "1.0.0",
+  "security": "nosec_sc",
+  "modified": "2022-03-18T18:34:54+09:00",
+  "id": "urn:com:fujitsu:sensor01",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "actions": {},
+  "properties": {
+    "airpressure": {
+      "observable": false,
+      "type": "number",
+      "readonly": true,
+      "@type": "airpressure",
+      "forms": [
+        {
+          "href": "properties/airpressure",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "temperature": {
+      "observable": false,
+      "type": "number",
+      "readonly": true,
+      "@type": "temperature",
+      "forms": [
+        {
+          "href": "properties/temperature",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "humidity": {
+      "observable": false,
+      "type": "number",
+      "readonly": true,
+      "@type": "humidity",
+      "forms": [
+        {
+          "href": "properties/humidity",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {},
+  "base": "http://192.168.30.130/Things/urn:com:fujitsu:sensor01"
+}
