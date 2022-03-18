@@ -334,7 +334,7 @@
             ]
         }
     ],
-    "id": "urn:uuid:aeb3ca28-9635-4b73-ac95-a21dffb6ec88",
+    "id":"urn:dev:ops:32473-sense-001",
     "properties": {
         "acceleration": {
             "description": "Get 3 Floats representing the acceleration intensity of each axis in Gs",
