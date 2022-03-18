@@ -14,3 +14,7 @@
 "NHK",          "HybridcastConnectReceiver", "no",  "no",           NHK/TDs/README.md,                  "TV",               nhk-tv,                            NHK,
 "NHK",          "MyDispThing",       "no",          "no",           NHK/TDs/README.md,                  "Smart Display",               nhk-emulatedDisplay,    NHK,
 "NHK",          "MySPThing",         "no",          "no",           NHK/TDs/README.md,                  "Smart Speaker",               nhk-emulatedSpeaker,    NHK,
+"ECHONET",      "HomeAirconditioner", "no",        "no",            node-wot/TDs/echonet-README.md,    "A home airconditioner that supports the ECHONET Lite protocol",             echonet-homeairconditioner,                "impl-eclipse-node-wot",
+"ECHONET",      "GeneralLighting",    "no",        "no",            node-wot/TDs/echonet-README.md,    "A lighting device that supports the ECHONET Lite protocol",                 echonet-generallighting,                   "impl-eclipse-node-wot",
+"ECHONET",      "IlluminanceSensor",  "no",        "no",            node-wot/TDs/echonet-README.md,    "An illuminance sensor that supports the ECHONET Lite protocol",             echonet-illuminancesensor,                 "impl-eclipse-node-wot",
+"ECHONET",      "TemperatureSensor",  "no",        "no",            node-wot/TDs/echonet-README.md,    "A temperature sensor that supports the ECHONET Lite protocol",              echonet-temperaturesensor,                 "impl-eclipse-node-wot",

@@ -5,9 +5,9 @@
 	],
 	"@type": "Thing",
 	"title": "Blue Pump 2",
-	"description": "Blue Pump 2 - Profile compliant WebThing (properties + actions)",
+	"description": "Blue Pump 2 - Profile compliant WebThing (properties + actions + events)",
 	"id": "urn:com:blue:pump:data",
-    "profile": "https://www.w3.org/2022/wot/profile/core/v1",
+	"profile": "https://www.w3.org/2022/wot/profile/core/v1",
 	"version": {
 		"instance": "1.0.0"
 	},
@@ -41,8 +41,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Maximum_Inlet_Pressure",
 					"contentType": "application/json",
-                    "op": "readproperty"
-                    
+					"op": "readproperty"
 				}
 			]
 		},
@@ -61,7 +60,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Return_Pressure_Min",
 					"contentType": "application/json",
-                    "op": "readproperty"
+					"op": "readproperty"
 				}
 			]
 		},
@@ -80,7 +79,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Return_Pressure_Max",
 					"contentType": "application/json",
-                    "op": "readproperty"
+					"op": "readproperty"
 				}
 			]
 		},
@@ -99,7 +98,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Cases_Pressure_Min",
 					"contentType": "application/json",
-                    "op": "readproperty"
+					"op": "readproperty"
 				}
 			]
 		},
@@ -118,7 +117,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Cases_Pressure_Max",
 					"contentType": "application/json",
-                    "op": "readproperty"
+					"op": "readproperty"
 				}
 			]
 		},
@@ -137,7 +136,7 @@
 				{
 					"href": "http://130.35.140.146:24042/properties/Cycle_Peak_Operation_Percent_Of_Minute",
 					"contentType": "application/json",
-                    "op": "readproperty"
+					"op": "readproperty"
 				}
 			]
 		}
@@ -181,6 +180,80 @@
 					"href": "http://130.35.140.146:24042/actions/resetFilter",
 					"contentType": "application/json",
 					"op": "invokeaction"
+				}
+			]
+		}
+	},
+	"events": {
+		"filterClogged": {
+			"title": "filterClogged",
+			"description": "Filter clogged alert",
+			"subscription": {
+				"type": "object",
+				"properties": {
+					"callbackURL": {
+						"type": "string",
+						"format": "uri",
+						"description": "Callback URL provided by subscriber for Webhook notifications.",
+						"writeOnly": true
+					},
+					"subscriptionID": {
+						"type": "string",
+						"description": "Unique subscription ID provided by WebThing.",
+						"readOnly": true
+					}
+				}
+			},
+			"cancellation": {
+				"type": "object",
+				"properties": {
+					"subscriptionID": {
+						"type": "string",
+						"description": "subscription ID to cancel subscription.",
+						"writeOnly": true
+					}
+				}
+			},
+			"data": {
+				"title": "filterClogged",
+				"type": "object",
+				"properties": {
+					"filterClogged": {
+						"type": "boolean"
+					},
+					"timestamp": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			},
+			"dataResponse": {
+				"title": "emergencyStop",
+				"type": "object",
+				"properties": {
+					"filterClogged": {
+						"type": "boolean"
+					},
+					"timestamp": {
+						"type": "string",
+						"format": "date-time"
+					}
+				}
+			},
+			"forms": [
+				{
+					"op": "subscribeevent",
+					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"htv:methodName": "POST",
+					"subprotocol": "webhook",
+					"contentType": "application/json"
+				},
+				{
+					"op": "unsubscribeevent",
+					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"htv:methodName": "DELETE",
+					"subprotocol": "webhook",
+					"contentType": "application/json"
 				}
 			]
 		}
