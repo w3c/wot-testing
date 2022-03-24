@@ -118,7 +118,7 @@ You may adjust DHCP setting for physical interfaces.
 
 Further information about local bridge is [here](https://www.softether.org/4-docs/1-manual/3._SoftEther_VPN_Server_Manual/3.6_Local_Bridges#3.6.11_Points_to_Note_when_Local_Bridging_in_Linux.2C_FreeBSD.2C_Solaris_or_Mac_OS_X).
 
-## Automatically starting at boot
+## 9. Automatically starting at boot
 The local VPN bridge software automatically saves its configuration in a file (`vpn_bridge.config`, owned by root) so
 you do not have to reconfigure it each time you run it.
 If you set it up to run in 
@@ -154,3 +154,59 @@ and `eth0` for your downstream network instead.  In addition the static route co
 in this service file but if the IP of the VPN server changes that part will have to be changed,
 and also your local gateway may have a different address than what I used.  In short, make sure to
 check and edit these elements.
+
+
+## 10. Setting up a Raspberry Pi as a Wi-Fi access point
+
+1. Install `hostapd`
+
+```sh
+% sudo apt update
+% sudo apt install hostapd
+% sudo systemctl stop hostapd
+```
+
+2. Setup Wi-Fi interface
+
+In `/etc/dhcpcd.conf`:
+```
+...
+interface wlan0
+    nohook wpa_supplicant
+    noipv4
+    noipv6
+...
+```
+
+3. Setup `hostapd`
+
+In `/etc/hostapd/hostapd.conf`:
+```
+contry_code=US
+interface=wlan0
+ssid=YOUR_FAVORITE_SSID
+hw_mode=g
+channel=3
+macaddr_acl=0
+auth_algs=1
+wpa=2
+wpa_key_mgmt=WPA-PSK
+rsn_pairwise=CCMP
+wpa_passphrase=YOUR_FABORITE_PASSWORD
+```
+Specify country codes, etc., appropriately for your environment. See https://w1.fi/hostapd/ .
+
+In `/etc/default/hostapd`:
+```
+...
+DAEMON_CONF="/etc/hostapd/hostapd.conf"
+...
+```
+
+4. Start `hostapd`
+
+```sh
+% sudo systemctl unmask hostapd
+% sudo systemctl enable hostapd
+% sudo systemctl start hostapd
+```
