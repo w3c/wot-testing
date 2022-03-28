@@ -74,7 +74,7 @@ Should start with tools that are known to work on WoT Things, e.g. WoT Testbench
 
 ### Discovery 1.0
 #### TD Directory Service
-Is a web service, should be tested as any other web service.
+Is a web service (and a Thing), should be security tested as any other web service or Thing.
 Will be testing the actual implementations.
 It also has a TD and is a Thing, so tools for generally testing Things should work.
 May want to write additional tests for JSONPath and SPARQL injection attacks.
