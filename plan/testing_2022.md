@@ -48,6 +48,8 @@ This can be reading properties in TDs or registering TDs for directories that ar
 invalid values in form of payloads/headers.
 This type of testing **does** involve interaction with devices or services and is **not** considered safe.
 
+A general discussion of security testing for WoT is given in the [WoT Security Testing Plan](https://w3c.github.io/wot-security-testing-plan/).
+
 ### TD 1.1
 Things that use HTTP can be targeted as if they were web services.
 Note that HTML is not generally returned so tools that test websites will not work, 
