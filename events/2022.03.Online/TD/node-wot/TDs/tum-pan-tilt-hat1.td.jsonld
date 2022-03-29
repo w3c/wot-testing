@@ -236,7 +236,7 @@
             ]
         }
     ],
-    "id": "esi:pantilt:2",
+    "id":"urn:dev:ops:32473-pantilt-001",
     "properties": {
         "panPosition": {
             "description": "The current position of the pan platform in degrees",

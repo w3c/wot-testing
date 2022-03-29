@@ -6,7 +6,7 @@
 	"@type": "Thing",
 	"title": "Blue Pump 2",
 	"description": "Blue Pump 2 - Profile compliant WebThing (properties + actions)",
-	"id": "urn:com:blue:pump:data",
+	"id": "urn:com:blue:pump:data3",
     "profile": "https://www.w3.org/2022/wot/profile/core/v1",
 	"version": {
 		"instance": "1.0.0"
