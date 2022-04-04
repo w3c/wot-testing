@@ -39,7 +39,7 @@ with a Thing (e.g. invoking actions) can have undesireable physical results.  It
 ### Discovery 1.0
 * [Testing tool available](https://github.com/farshidtz/wot-discovery-testing)
    * Directory testing example results: https://github.com/farshidtz/wot-discovery-testing/blob/main/directory/example/report.csv
-   * Also DNS-SD testing, but no results available
+   * Also DNS-SD testing, but no results available - setting it up is tricky
    * See README at above link
 * Needs to be updated to current specification (Farshid)
 * Still needs tests for SPARQL (Andrea Cimmino)
