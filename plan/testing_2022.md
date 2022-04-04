@@ -25,7 +25,8 @@ This type of testing does not involve interaction with devices or services and i
 
 This type of testing involves checking the behavior of a service or Thing in order to verify that it is working as intended.
 This can be reading properties in TDs or registering TDs for directories.
-This type of testing **does** involve interaction with devices or services and is **not** considered safe.
+This type of testing **does** involve interaction with devices or services and is **not** considered safe if interacting
+with a Thing can have physical results.
 
 ### TD 1.1
 
