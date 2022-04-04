@@ -35,7 +35,10 @@ This type of testing **does** involve interaction with devices or services and i
 ### Architecture 1.1
 ### Profile 1.0
 ### Discovery 1.0
-* Testing tool available; example results: https://github.com/farshidtz/wot-discovery-testing/blob/main/directory/example/report.csv
+* [Testing tool available](https://github.com/farshidtz/wot-discovery-testing)
+   * Directory testing example results: https://github.com/farshidtz/wot-discovery-testing/blob/main/directory/example/report.csv
+   * Also DNS-SD testing, but no results available
+   * See README at above link
 * Needs to be updated to current specification (Farshid)
 * Still needs tests for SPARQL (Andrea Cimmino)
 * Will be some manual assertions.
