@@ -24,9 +24,10 @@ This type of testing does not involve interaction with devices or services and i
 ## Functional/Behavioral Testing
 
 This type of testing involves checking the behavior of a service or Thing in order to verify that it is working as intended.
-This can be reading properties in TDs or registering TDs for directories.
+This can be reading properties in TDs, invoking actions in TDs, or registering TDs for directories.
 This type of testing **does** involve interaction with devices or services and is **not** considered safe if interacting
-with a Thing can have physical results.
+with a Thing (e.g. invoking actions) can have undesireable physical results.  It would be useful for Things to have a 
+"simulation" mode to allow safe testing without physical side-effects.
 
 ### TD 1.1
 
