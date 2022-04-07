@@ -16,6 +16,8 @@ The value of Status should be filled with one of the following values:
 
 Some assertions might be difficult to understand without the surrounding text. Thus, make sure to have the [TD specification](https://w3c.github.io/wot-thing-description/#) open and do text searches for two or three words of the assertion. DO NOT do a full text search since formatting might change what the text looks like when rendered. An alternative would be to open [index.html](https://github.com/w3c/wot-thing-description/blob/main/index.html) on GitHub and do searches for the assertion id.
 
+**Note:** If you have filled this file for the last implementation report, you can find a diff [here](https://htmlpreview.github.io/?https://github.com/w3c/wot-testing/blob/egekorkan-patch-1/events/2022.03.Online/TD/manual-diff.html) and your old files should be available at the same level as [this node-wot one](https://github.com/w3c/wot-testing/blob/main/events/testfest/2019-03-online/inputs/Siemens/siemens-node-wot.csv)
+
 ### How to quickly go through this file
 
 Depending on whether you have a Consumer or Thing implementation, you can skip a lot of the assertions. If you implementation does both, you should ideally fill everything. Here are items you can **skip** depending on your implementation type (note that line numbers can change over time):
