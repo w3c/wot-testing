@@ -1,36 +1,36 @@
 "ID","Status","Comment"
-"discoverer-any-order","skipped","not implemented"
-"discoverer-fetch-iteration","skipped","not implemented"
-"discoverer-fetch-links","skipped","not implemented"
-"discoverer-fetch-tdd","skipped","not implemented"
-"discoverer-may-multiple-intro","skipped","not implemented"
-"discoverer-merge-intros","skipped","not implemented"
-"discoverer-must-support-fetching","skipped","not implemented"
-"discoverer-must-support-intros","skipped","not implemented"
-"discoverer-td-identify","skipped","not implemented"
-"discoverer-termination","skipped","not implemented"
-"discoverer-track","skipped","not implemented"
-"exploration-directory-description-type","skipped","not implemented"
-"exploration-link-description-link","skipped","not implemented"
-"exploration-link-description-type","skipped","not implemented"
-"introduction-core-rd","skipped","not implemented"
-"introduction-core-rd-directory","skipped","not implemented"
-"introduction-core-rd-resource-type-directory","skipped","not implemented"
-"introduction-core-rd-resource-type-thing","skipped","not implemented"
-"introduction-did","skipped","not implemented"
-"introduction-did-service-endpoint","skipped","not implemented"
-"introduction-direct-directory-description","skipped","not implemented"
-"introduction-direct-thing-description","skipped","not implemented"
-"introduction-direct-url","skipped","not implemented"
-"introduction-dns-sd","skipped","not implemented"
-"introduction-dns-sd-service-name","skipped","not implemented"
-"introduction-dns-sd-service-name-directory","skipped","not implemented"
-"introduction-dns-sd-txt-record","skipped","not implemented"
-"introduction-well-known-path","skipped","not implemented"
-"introduction-well-known-thing-description","skipped","not implemented"
-"introduction-well-known-uri","skipped","not implemented"
-"self-http-access-control","skipped","not implemented"
-"self-http-alternate-content","skipped","not implemented"
+"discoverer-any-order","not-impl","not implemented"
+"discoverer-fetch-iteration","not-impl","not implemented"
+"discoverer-fetch-links","not-impl","not implemented"
+"discoverer-fetch-tdd","not-impl","not implemented"
+"discoverer-may-multiple-intro","not-impl","not implemented"
+"discoverer-merge-intros","not-impl","not implemented"
+"discoverer-must-support-fetching","not-impl","not implemented"
+"discoverer-must-support-intros","not-impl","not implemented"
+"discoverer-td-identify","not-impl","not implemented"
+"discoverer-termination","not-impl","not implemented"
+"discoverer-track","not-impl","not implemented"
+"exploration-directory-description-type","not-impl","not implemented"
+"exploration-link-description-link","not-impl","not implemented"
+"exploration-link-description-type","not-impl","not implemented"
+"introduction-core-rd","not-impl","not implemented"
+"introduction-core-rd-directory","not-impl","not implemented"
+"introduction-core-rd-resource-type-directory","not-impl","not implemented"
+"introduction-core-rd-resource-type-thing","not-impl","not implemented"
+"introduction-did","not-impl","not implemented"
+"introduction-did-service-endpoint","not-impl","not implemented"
+"introduction-direct-directory-description","not-impl","not implemented"
+"introduction-direct-thing-description","not-impl","not implemented"
+"introduction-direct-url","not-impl","not implemented"
+"introduction-dns-sd","not-impl","not implemented"
+"introduction-dns-sd-service-name","not-impl","not implemented"
+"introduction-dns-sd-service-name-directory","not-impl","not implemented"
+"introduction-dns-sd-txt-record","not-impl","not implemented"
+"introduction-well-known-path","not-impl","not implemented"
+"introduction-well-known-thing-description","not-impl","not implemented"
+"introduction-well-known-uri","not-impl","not implemented"
+"self-http-access-control","not-impl","not implemented"
+"self-http-alternate-content","pass","RDF serialization formats supported"
 "self-http-head","pass",
 "self-http-method","pass",
 "self-http-resp","pass",
@@ -39,19 +39,19 @@
 "tdd-http-head","pass",
 "tdd-http-missing-api-endpoint","pass",
 "tdd-https","pass",
-"tdd-notification","skipped","not implemented"
-"tdd-notification-data","skipped","not implemented"
-"tdd-notification-data-create-full","skipped","not implemented"
-"tdd-notification-data-delete-diff","skipped","not implemented"
-"tdd-notification-data-diff-unsupported","skipped","not implemented"
-"tdd-notification-data-td-id","skipped","not implemented"
-"tdd-notification-data-update-diff","skipped","not implemented"
-"tdd-notification-data-update-id","skipped","not implemented"
-"tdd-notification-event-id","skipped","not implemented"
-"tdd-notification-event-types","skipped","not implemented"
-"tdd-notification-filter-type","skipped","not implemented"
-"tdd-notification-sse","skipped","not implemented"
-"tdd-things-additional-representation","skipped","not implemented"
+"tdd-notification","not-impl","not implemented"
+"tdd-notification-data","not-impl","not implemented"
+"tdd-notification-data-create-full","not-impl","not implemented"
+"tdd-notification-data-delete-diff","not-impl","not implemented"
+"tdd-notification-data-diff-unsupported","not-impl","not implemented"
+"tdd-notification-data-td-id","not-impl","not implemented"
+"tdd-notification-data-update-diff","not-impl","not implemented"
+"tdd-notification-data-update-id","not-impl","not implemented"
+"tdd-notification-event-id","not-impl","not implemented"
+"tdd-notification-event-types","not-impl","not implemented"
+"tdd-notification-filter-type","not-impl","not implemented"
+"tdd-notification-sse","not-impl","not implemented"
+"tdd-things-additional-representation","pass","RDF serialization formats supported"
 "tdd-anonymous-td-identifier","pass",
 "tdd-anonymous-td-local-uuid","pass",
 "tdd-things-create-anonymous-contenttype","pass","Contenttype : application/td+json not mandatory"
@@ -74,12 +74,12 @@
 "tdd-things-list-pagination-header-nextlink-attr","pass",
 "tdd-things-list-pagination-header-nextlink-base","pass",
 "tdd-things-list-pagination-limit","pass",
-"tdd-things-list-pagination-order","skipped","not implemented"
-"tdd-things-list-pagination-order-default","skipped","not implemented"
-"tdd-things-list-pagination-order-nextlink","skipped","not implemented"
-"tdd-things-list-pagination-order-unsupported","fail",
+"tdd-things-list-pagination-order","not-impl","not implemented"
+"tdd-things-list-pagination-order-default","pass",
+"tdd-things-list-pagination-order-nextlink","not-impl","not implemented"
+"tdd-things-list-pagination-order-unsupported","pass",
 "tdd-things-list-resp","pass",
-"tdd-things-read-only-auth","skipped","not implemented"
+"tdd-things-read-only-auth","not-impl","not implemented"
 "tdd-things-retrieve","pass",
 "tdd-things-retrieve-resp","pass",
 "tdd-things-update","pass",
@@ -88,12 +88,12 @@
 "tdd-things-update-partial-contenttype","pass","Contenttype :application/merge-patch+json not mandatory"
 "tdd-things-update-partial-mergepatch","pass",
 "tdd-things-update-partial-partialtd","pass",
-"tdd-things-update-partial-resp","fail","Returns 201"
-"tdd-things-update-resp","fail","Returns 201"
-"tdd-registrationinfo-expiry-config","skipped","not implemented"
+"tdd-things-update-partial-resp","pass",
+"tdd-things-update-resp","pass",
+"tdd-registrationinfo-expiry-config","pass",
 "tdd-registrationinfo-expiry-purge","pass",
 "tdd-registrationinfo-vocab-created","pass",
-"tdd-registrationinfo-vocab-expires","fail","we handle ttl only"
+"tdd-registrationinfo-vocab-expires","pass",
 "tdd-registrationinfo-vocab-modified","pass",
 "tdd-registrationinfo-vocab-retrieved","pass",
 "tdd-registrationinfo-vocab-ttl","pass",
@@ -104,8 +104,8 @@
 "tdd-search-sparql-federation-version","pass",
 "tdd-search-sparql-method-get","pass",
 "tdd-search-sparql-method-post","pass",
-"tdd-search-sparql-resp-describe-construct","fail","wrong content-type"
-"tdd-search-sparql-resp-select-ask","fail","wrong content-type"
+"tdd-search-sparql-resp-describe-construct","pass",
+"tdd-search-sparql-resp-select-ask","pass",
 "tdd-search-sparql-version","pass",
 "tdd-validation-jsonschema","pass",
 "tdd-validation-response","pass",
