@@ -12,6 +12,9 @@
 * IRC
    - [Testfest & Plugfest: `#wot-pf`](https://irc.w3.org/?channels=wot-pf)
 
+## Process and Pipeline
+See [process.md](process.md).
+
 ## TO DO
 * Can we pull forward TDs etc. from previous plugfests/testfests?
     - ECHONET and NHK, for example
