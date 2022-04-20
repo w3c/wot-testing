@@ -1,4 +1,6 @@
 # Process for Updating Test Results
+To do:
+- clarify role of tools directory, wot-tools repo, location of test data for release, where documentation goes, etc.
 
 ## Automated Processes
 
