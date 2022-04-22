@@ -1,0 +1,196 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "base": "http://192.168.1.75:8123/api/",
+  "@type": "Thing",
+  "id": "urn:uuid:bbdb86aa-d32a-4698-8eeb-7a6248fdb4f6",
+  "title": "light.esp_rgbw_1_rgbw_strip",
+  "description": "esp_rgbw_1 RGBW Strip",
+  "securityDefinitions": {
+    "ha_sc": {
+      "scheme": "bearer"
+    }
+  },
+  "security": "ha_sc",
+  "created": "2022-04-22T16:55:09.478Z",
+  "properties": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "entity_id": "string",
+        "state": {
+          "type": "string",
+          "enum": [
+            "unavailable",
+            "on",
+            "off"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "effect_list": {
+              "type": "array",
+              "const": [
+                "Random",
+                "Custom Random",
+                "Custom Strobe",
+                "Pulse",
+                "Fast Pulse",
+                "Slow Pulse",
+                "Flicker",
+                "Custom Flicker",
+                "Rainbow",
+                "Custom Rainbow",
+                "Color Wipe",
+                "Custom Color Wipe",
+                "Scan",
+                "Custom Scan",
+                "Twinkle",
+                "Custom Addressable Twinkle",
+                "Random Twinkle",
+                "Custom Addressable Random Twinkle",
+                "Fireworks",
+                "Custom Fireworks",
+                "Addressable Flicker",
+                "Custom Addressable Flicker",
+                "Data Visualization",
+                "None"
+              ]
+            },
+            "supported_color_modes": {
+              "type": "array",
+              "const": [
+                "rgbw"
+              ]
+            },
+            "color_mode": {
+              "type": "string",
+              "const": "rgbw"
+            },
+            "brightness": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            "hs_color": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "rgb_color": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "rgbw_color": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "minItems": 4,
+              "maxItems": 4
+            },
+            "xy_color": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "effect": {
+              "type": "string",
+              "enum": [
+                "Random",
+                "Custom Random",
+                "Custom Strobe",
+                "Pulse",
+                "Fast Pulse",
+                "Slow Pulse",
+                "Flicker",
+                "Custom Flicker",
+                "Rainbow",
+                "Custom Rainbow",
+                "Color Wipe",
+                "Custom Color Wipe",
+                "Scan",
+                "Custom Scan",
+                "Twinkle",
+                "Custom Addressable Twinkle",
+                "Random Twinkle",
+                "Custom Addressable Random Twinkle",
+                "Fireworks",
+                "Custom Fireworks",
+                "Addressable Flicker",
+                "Custom Addressable Flicker",
+                "Data Visualization",
+                "None"
+              ]
+            },
+            "friendly_name": {
+              "type": "string"
+            },
+            "supported_features": {
+              "type": "integer"
+            }
+          }
+        },
+        "last_changed": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "parent_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "user_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "form": {
+        "href": "state/light.esp_rgbw_1_rgbw_strip"
+      }
+    }
+  }
+}

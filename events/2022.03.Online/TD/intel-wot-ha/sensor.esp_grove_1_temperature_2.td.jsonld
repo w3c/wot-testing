@@ -1,0 +1,89 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "base": "http://192.168.1.75:8123/api/",
+  "@type": "Thing",
+  "id": "urn:uuid:e8761e37-a1e2-44b3-b3d0-1efa6c236563",
+  "title": "sensor.esp_grove_1_temperature_2",
+  "description": "esp_grove_1 Temperature",
+  "securityDefinitions": {
+    "ha_sc": {
+      "scheme": "bearer"
+    }
+  },
+  "security": "ha_sc",
+  "created": "2022-04-22T16:55:09.478Z",
+  "properties": {
+    "states": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "state": {
+          "type": "number"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "state_class": {
+              "type": "string",
+              "const": "measurement"
+            },
+            "unit_of_measurement": {
+              "type": "string",
+              "const": "°C"
+            },
+            "device_class": {
+              "type": "string",
+              "const": "temperature"
+            },
+            "friendly_name": {
+              "type": "string"
+            }
+          }
+        },
+        "last_changed": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "parent_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "user_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "form": {
+        "href": "states/sensor.esp_grove_1_temperature_2"
+      }
+    }
+  }
+}

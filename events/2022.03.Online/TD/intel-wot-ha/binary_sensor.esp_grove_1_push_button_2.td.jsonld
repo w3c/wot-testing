@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "base": "http://192.168.1.75:8123/api/",
+  "@type": "Thing",
+  "id": "urn:uuid:19786f8b-36d8-43dc-b616-b35ec180f5c4",
+  "title": "binary_sensor.esp_grove_1_push_button_2",
+  "description": "esp_grove_1 Push Button",
+  "securityDefinitions": {
+    "ha_sc": {
+      "scheme": "bearer"
+    }
+  },
+  "security": "ha_sc",
+  "created": "2022-04-22T16:55:09.479Z",
+  "properties": {
+    "states": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "on",
+            "off"
+          ]
+        },
+        "attributes": {
+          "friendly_name": {
+            "type": "string"
+          }
+        },
+        "last_changed": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "xsd:datetime"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "parent_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "user_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "form": {
+        "href": "states/binary_sensor.esp_grove_1_push_button_2"
+      }
+    }
+  }
+}
