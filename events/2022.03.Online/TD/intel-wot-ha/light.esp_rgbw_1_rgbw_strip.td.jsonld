@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:735811d2-a50b-42bd-9945-3c005063ad7b",
+  "id": "urn:uuid:191e59a0-a64d-4873-870b-5417758da5b4",
   "title": "light.esp_rgbw_1_rgbw_strip",
   "description": "esp_rgbw_1 RGBW Strip",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:03:01.497Z",
+  "created": "2022-04-22T22:13:20.814Z",
   "properties": {
     "state": {
       "type": "object",
@@ -153,11 +153,11 @@
         },
         "last_changed": {
           "type": "string",
-          "format": "xsd:datetime"
+          "format": "date-time"
         },
         "last_updated": {
           "type": "string",
-          "format": "xsd:datetime"
+          "format": "date-time"
         },
         "context": {
           "type": "object",

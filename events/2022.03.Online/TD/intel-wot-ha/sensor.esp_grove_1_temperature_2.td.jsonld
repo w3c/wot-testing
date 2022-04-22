@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:a9dd57d3-5069-43ee-a6a0-a8bc1ae0d0c9",
+  "id": "urn:uuid:459e8d3b-4cfc-4cd2-85ee-625ff7453832",
   "title": "sensor.esp_grove_1_temperature_2",
   "description": "esp_grove_1 Temperature",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:03:01.498Z",
+  "created": "2022-04-22T22:13:20.814Z",
   "properties": {
     "states": {
       "type": "object",
@@ -46,11 +46,11 @@
         },
         "last_changed": {
           "type": "string",
-          "format": "xsd:datetime"
+          "format": "date-time"
         },
         "last_updated": {
           "type": "string",
-          "format": "xsd:datetime"
+          "format": "date-time"
         },
         "context": {
           "type": "object",
