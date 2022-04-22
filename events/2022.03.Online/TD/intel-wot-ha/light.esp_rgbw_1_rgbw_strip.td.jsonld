@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:5f2f7e2f-4c0f-4de6-89ae-7ebd46c01cdf",
+  "id": "urn:uuid:397c3b59-b22e-42df-86ae-5bd596c23aa5",
   "title": "light.esp_rgbw_1_rgbw_strip",
   "description": "esp_rgbw_1 RGBW Strip",
   "securityDefinitions": {
@@ -13,12 +13,14 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:40:09.073Z",
+  "created": "2022-04-22T22:47:11.365Z",
   "properties": {
     "state": {
       "type": "object",
       "properties": {
-        "entity_id": "string",
+        "entity_id": {
+          "type": "string"
+        },
         "state": {
           "type": "string",
           "enum": [
