@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:8667d3cf-db4e-4c5f-afc2-d0cfd33f268f",
+  "id": "urn:uuid:0abfef67-349d-42de-8ddf-2f5d742fc1cd",
   "title": "binary_sensor.esp_grove_1_push_button_2",
   "description": "esp_grove_1 Push Button",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:29:47.948Z",
+  "created": "2022-04-22T22:40:09.075Z",
   "properties": {
     "states": {
       "type": "object",
