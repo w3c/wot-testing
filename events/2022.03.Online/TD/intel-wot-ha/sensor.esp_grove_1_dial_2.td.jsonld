@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:d3b47a0e-fdf5-4ac0-b6c0-0a165071e68a",
+  "id": "urn:uuid:31b2f51d-639b-497a-aa0d-55ad08c95d68",
   "title": "sensor.esp_grove_1_dial_2",
   "description": "esp_grove_1 Dial",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T16:55:09.479Z",
+  "created": "2022-04-22T22:03:01.498Z",
   "properties": {
     "states": {
       "type": "object",
@@ -77,9 +77,11 @@
           }
         }
       },
-      "form": {
-        "href": "states/sensor.esp_grove_1_dial_2"
-      }
+      "forms": [
+        {
+          "href": "states/sensor.esp_grove_1_dial_2"
+        }
+      ]
     }
   }
 }
