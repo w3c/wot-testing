@@ -4,16 +4,16 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:9100a2a9-1b7f-4837-8772-ab28161e064a",
-  "title": "light.esp_rgbw_1_rgbw_strip",
-  "description": "esp_rgbw_1 RGBW Strip",
+  "id": "urn:uuid:6c8af2a3-ffc8-4dff-9730-79e270bfe160",
+  "title": "light.hue_color_lamp_1",
+  "description": "Hue color lamp 1",
   "securityDefinitions": {
     "ha_sc": {
       "scheme": "bearer"
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-26T00:52:01.609Z",
+  "created": "2022-04-26T00:52:01.610Z",
   "properties": {
     "state": {
       "type": "object",
@@ -32,44 +32,24 @@
         "attributes": {
           "type": "object",
           "properties": {
-            "effect_list": {
-              "type": "array",
-              "const": [
-                "Random",
-                "Custom Random",
-                "Custom Strobe",
-                "Pulse",
-                "Fast Pulse",
-                "Slow Pulse",
-                "Flicker",
-                "Custom Flicker",
-                "Rainbow",
-                "Custom Rainbow",
-                "Color Wipe",
-                "Custom Color Wipe",
-                "Scan",
-                "Custom Scan",
-                "Twinkle",
-                "Custom Addressable Twinkle",
-                "Random Twinkle",
-                "Custom Addressable Random Twinkle",
-                "Fireworks",
-                "Custom Fireworks",
-                "Addressable Flicker",
-                "Custom Addressable Flicker",
-                "Data Visualization",
-                "None"
-              ]
+            "min_mireds": {
+              "type": "integer"
+            },
+            "max_mireds": {
+              "type": "integer"
             },
             "supported_color_modes": {
               "type": "array",
-              "const": [
-                "rgbw"
-              ]
+              "items": {
+                "type": "string"
+              }
             },
             "color_mode": {
               "type": "string",
-              "const": "rgbw"
+              "enum": [
+                "color_temp",
+                "xy"
+              ]
             },
             "brightness": {
               "type": "integer",
@@ -79,9 +59,7 @@
             "hs_color": {
               "type": "array",
               "items": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 255
+                "type": "number"
               },
               "minItems": 2,
               "maxItems": 2
@@ -96,53 +74,24 @@
               "minItems": 3,
               "maxItems": 3
             },
-            "rgbw_color": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 255
-              },
-              "minItems": 4,
-              "maxItems": 4
-            },
             "xy_color": {
               "type": "array",
               "items": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 255
+                "type": "number"
               },
               "minItems": 2,
               "maxItems": 2
             },
-            "effect": {
+            "mode": {
               "type": "string",
               "enum": [
-                "Random",
-                "Custom Random",
-                "Custom Strobe",
-                "Pulse",
-                "Fast Pulse",
-                "Slow Pulse",
-                "Flicker",
-                "Custom Flicker",
-                "Rainbow",
-                "Custom Rainbow",
-                "Color Wipe",
-                "Custom Color Wipe",
-                "Scan",
-                "Custom Scan",
-                "Twinkle",
-                "Custom Addressable Twinkle",
-                "Random Twinkle",
-                "Custom Addressable Random Twinkle",
-                "Fireworks",
-                "Custom Fireworks",
-                "Addressable Flicker",
-                "Custom Addressable Flicker",
-                "Data Visualization",
-                "None"
+                "normal"
+              ]
+            },
+            "dynamics": {
+              "type": "string",
+              "enum": [
+                "none"
               ]
             },
             "friendly_name": {
@@ -192,7 +141,7 @@
       },
       "forms": [
         {
-          "href": "state/light.esp_rgbw_1_rgbw_strip"
+          "href": "state/light.hue_color_lamp_1"
         }
       ]
     }

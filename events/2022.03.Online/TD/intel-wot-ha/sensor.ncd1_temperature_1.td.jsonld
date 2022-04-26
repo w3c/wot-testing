@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:1ec8bbcf-6c47-48c6-9135-b3d0c356bc8c",
+  "id": "urn:uuid:d0d49af2-09fd-4b30-aed5-227e5140d0a8",
   "title": "sensor.ncd1_temperature_1",
   "description": "NCD1_Temperature_1",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:47:11.362Z",
+  "created": "2022-04-26T00:52:01.607Z",
   "properties": {
     "states": {
       "type": "object",

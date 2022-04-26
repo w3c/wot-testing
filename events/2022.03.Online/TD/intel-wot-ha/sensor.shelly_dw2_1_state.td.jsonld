@@ -4,7 +4,7 @@
   ],
   "base": "http://192.168.1.75:8123/api/",
   "@type": "Thing",
-  "id": "urn:uuid:d4b9fb67-dc40-4589-a029-f533b648e862",
+  "id": "urn:uuid:910eb90b-093e-44f3-b061-842fdfacc134",
   "title": "sensor.shelly_dw2_1_state",
   "description": "Shelly_DW2_1_State",
   "securityDefinitions": {
@@ -13,7 +13,7 @@
     }
   },
   "security": "ha_sc",
-  "created": "2022-04-22T22:47:11.367Z",
+  "created": "2022-04-26T00:52:01.611Z",
   "properties": {
     "states": {
       "type": "object",
