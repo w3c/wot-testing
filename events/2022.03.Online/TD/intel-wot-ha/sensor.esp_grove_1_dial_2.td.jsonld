@@ -1,0 +1,87 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "base": "http://192.168.1.75:8123/api/",
+  "@type": "Thing",
+  "id": "urn:uuid:17574d7b-5fb0-4f48-9f95-e07106f0baf5",
+  "title": "sensor.esp_grove_1_dial_2",
+  "description": "esp_grove_1 Dial",
+  "securityDefinitions": {
+    "ha_sc": {
+      "scheme": "bearer"
+    }
+  },
+  "security": "ha_sc",
+  "created": "2022-04-26T00:52:01.610Z",
+  "properties": {
+    "states": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "state": {
+          "type": "number"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "state_class": {
+              "type": "string",
+              "const": "measurement"
+            },
+            "unit_of_measurement": {
+              "type": "string",
+              "const": "%"
+            },
+            "friendly_name": {
+              "type": "string"
+            }
+          }
+        },
+        "last_changed": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "parent_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "user_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "states/sensor.esp_grove_1_dial_2"
+        }
+      ]
+    }
+  }
+}
