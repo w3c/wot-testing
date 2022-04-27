@@ -3,16 +3,16 @@
 PLAYGROUNDLOCATION=~/git/thingweb-playground/
 
 # Ditto
-# IMPLEMENTATION=Ditto
-# node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
-# node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
-# node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTATION-TM.csv Results/$IMPLEMENTATION-TD.csv -o Results/$IMPLEMENTATION
-# rm Results/$IMPLEMENTATION-TM.csv
-# rm Results/$IMPLEMENTATION-TD.csv
+IMPLEMENTATION=Ditto
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTATION-TM.csv Results/$IMPLEMENTATION-TD.csv -o Results/$IMPLEMENTATION
+rm Results/$IMPLEMENTATION-TM.csv
+rm Results/$IMPLEMENTATION-TD.csv
 
 # ECLASS
-# IMPLEMENTATION=ECLASS
-# node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+IMPLEMENTATION=ECLASS
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
 # EDITDOR
 # ERRORS
@@ -24,8 +24,8 @@ PLAYGROUNDLOCATION=~/git/thingweb-playground/
 # rm Results/$IMPLEMENTATION-TD.csv
 
 # # flask-tum
-# IMPLEMENTATION=flask-tum
-# node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+IMPLEMENTATION=flask-tum
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
 # Fujitsu
 IMPLEMENTATION=Fujitsu
