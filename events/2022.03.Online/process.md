@@ -21,11 +21,9 @@ To do:
 ### Assertion Tester for TD
 Run JSON Schema and point-checking scripts to automate testing for TDs.
 
-To do:
-- Set up to run automatically in wot-testing repo and update Results directory contents (Fady)
-
 ### How to
 
+#### Manually Running Playground scripts
 To test a single TD implementation, use the following command after installing playground:
 `node thingweb-playground/packages/cli/index.js -t TD -i myimplementation/TDs/ -o Results/myimplementation -a`
 
@@ -51,6 +49,10 @@ node ~/git/thingweb-playground/packages/cli/index.js -t TM -i Ditto/TMs/ -o Resu
 node ~/git/thingweb-playground/packages/cli/index.js -t TD -i Ditto/TDs/ -o Results/ditto1 -a -m Ditto/ditto.csv
 node ~/git/thingweb-playground/packages/cli/index.js --merge-only Results/ditto1.csv Results/ditto2.csv -o Results/ditto
 ```
+
+#### Batch testing
+
+The [bash script at the TD folder](./TD/batchValidation.sh) goes through all implementations. You need to change the variable `PLAYGROUNDLOCATION` to the install location of playground in your system.
 
 ## Manual Processes
 
