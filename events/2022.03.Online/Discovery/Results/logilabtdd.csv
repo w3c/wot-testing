@@ -69,7 +69,7 @@
 "tdd-things-list-method","pass",
 "tdd-things-list-only","pass",
 "tdd-things-list-pagination","pass",
-"tdd-things-list-pagination-header-canonicallink","fail","no etag"
+"tdd-things-list-pagination-header-canonicallink","pass",
 "tdd-things-list-pagination-header-nextlink","pass",
 "tdd-things-list-pagination-header-nextlink-attr","pass",
 "tdd-things-list-pagination-header-nextlink-base","pass",
