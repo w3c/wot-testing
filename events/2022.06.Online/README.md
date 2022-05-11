@@ -6,7 +6,7 @@ We also need to focus on gaps where features are at risk.
 
 ## Logistics
 * Date: 6-10 June 2022
-* Time Proposals: [doodle](link)
+* Time Proposals: [doodle](https://doodle.com/meeting/participate/id/bmZp0L3d)
    - 7am Eastern Daily
    - 8am Eastern Daily except Wed to avoid Main call, 9am Eastern Wed
    - 9am Eastern Daily
