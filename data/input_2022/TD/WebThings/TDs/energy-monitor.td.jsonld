@@ -1,0 +1,122 @@
+{
+    "title": "Virtual Energy Monitor",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "EnergyMonitor"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-22",
+    "properties": {
+        "instantaneousPower": {
+            "name": "instantaneousPower",
+            "value": 0,
+            "title": "Power",
+            "type": "number",
+            "@type": "InstantaneousPowerProperty",
+            "unit": "watt",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-22/properties/instantaneousPower"
+                }
+            ]
+        },
+        "instantaneousPowerFactor": {
+            "name": "instantaneousPowerFactor",
+            "value": 0,
+            "title": "Power Factor",
+            "type": "number",
+            "@type": "InstantaneousPowerFactorProperty",
+            "minimum": -1,
+            "maximum": 1,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-22/properties/instantaneousPowerFactor"
+                }
+            ]
+        },
+        "voltage": {
+            "name": "voltage",
+            "value": 0,
+            "title": "Voltage",
+            "type": "number",
+            "@type": "VoltageProperty",
+            "unit": "volt",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-22/properties/voltage"
+                }
+            ]
+        },
+        "current": {
+            "name": "current",
+            "value": 0,
+            "title": "Current",
+            "type": "number",
+            "@type": "CurrentProperty",
+            "unit": "ampere",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-22/properties/current"
+                }
+            ]
+        },
+        "frequency": {
+            "name": "frequency",
+            "value": 0,
+            "title": "Frequency",
+            "type": "number",
+            "@type": "FrequencyProperty",
+            "unit": "hertz",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-22/properties/frequency"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-22"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-22"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-22/properties",
+            "op": "readallproperties"
+        }
+    ],
+    "layoutIndex": 20,
+    "selectedCapability": "EnergyMonitor",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-22",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-22:readwrite",
+                "/things/virtual-things-22",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

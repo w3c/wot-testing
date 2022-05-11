@@ -1,0 +1,70 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "eclass": "ECLASS_PoC_TDTestFest_1AC.ttl"
+        }
+    ],
+    "title": "Siemens SENTRON PAC2200",
+    "base": "modbus+tcp://##addr##:502/##unitid##/",
+    "description": "The PAC2200 is a measuring device for measuring the basic electrical variables in low-voltage power distribution.",
+    "support": "https://support.industry.siemens.com/cs/document/109746835/pac2200-measuring-device-manual?dti=0&lc=en-DE", 
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "nosec_sc",
+    "@type": "eclass:IRDI_0173_1___ADVANCED_1_1_01_ADO048_010",
+    "eclass:aspect" : [{
+        "@type" : "IRDI_0173_1_01_ADN228_009",
+        "eclass:IRDI_0173_1_02_AAQ373_009" :         
+         {
+           "@type" : "eclass:IRDI_0173_1_01_ADN198_009",
+           "eclass:IRDI_0173_1_02_AAO677_002" : "Siemens",
+           "eclass:IRDI_0173_1_02_AAU731_001" : "7KM PAC Measuring Devices"
+         }
+    }],
+    "properties": {
+        "voltage-v-l1-n": {
+            "title": "Voltage V L1-N",
+            "@type": ["xsd:float", "eclass:IRDI_0173_1_07_AAL151_004"],
+            "eclass:IRDI_0173_1_02-AAB537_005" : 1,
+            "description" : "IRDI_0173_1_07_AAL151_004=Voltage indicator; IRDI_0173_1_02-AAB537_005=Input phase number",
+            "type": "number",
+            "unit": "V",
+            "forms": [
+                {
+                    "href": "/",
+                    "contentType": "application/octet-stream;byteSeq=BIG_ENDIAN;length=4",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "modbus:function": "readHoldingRegisters",
+                    "modbus:address": 40001,
+                    "modbus:quantity": 2
+                }
+            ]
+        },
+        "current-l1": {
+            "title": "Current L1",
+            "@type": ["xsd:float", "eclass:IRDI_0173_1_07_AAV182_001"],
+            "eclass:IRDI_0173_1_02-AAB537_005" : 1,
+            "description" : "IRDI_0173_1_07_AAV182_001=Alternating Current; IRDI_0173_1_02-AAB537_005=Input phase number",
+            "type": "number",
+            "unit": "A",
+            "forms": [
+                {
+                    "href": "/",
+                    "contentType": "application/octet-stream;byteSeq=BIG_ENDIAN;length=4",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "modbus:function": "readHoldingRegisters",
+                    "modbus:offset": 13,
+                    "modbus:quantity": 2
+                }
+            ]
+        }   
+    }
+}

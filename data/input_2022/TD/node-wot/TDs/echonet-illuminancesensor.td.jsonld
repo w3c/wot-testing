@@ -1,0 +1,203 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        },
+        {
+          "echonet": "https://echonet.jp/"
+        }
+    ],
+    "id": "echonet:illuminanceSensor:19216815000D01",
+    "title": "illuminanceSensor",
+    "description": "Illuminance sensor",
+    "properties": {
+        "faultStatus": {
+            "echonet:epc": "0x88",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "type": "boolean",
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/faultStatus",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/faultStatus/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "title": "faultStatus",
+            "description": "Fault status"
+        },
+        "installationLocation": {
+            "echonet:epc": "0x81",
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": true,
+            "type": "string",
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/installationLocation",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/installationLocation/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "title": "installationLocation",
+            "description": "Installation location"
+        },
+        "manufacturer": {
+            "echonet:epc": "0x8A",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "descriptions": {
+                    "type": "object",
+                    "properties": {
+                        "ja": {
+                            "type": "string"
+                        },
+                        "en": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/manufacturer",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ],
+            "title": "manufacturer",
+            "description": "Manufacturer"
+        },
+        "operationStatus": {
+            "echonet:epc": "0x80",
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": true,
+            "type": "boolean",
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/operationStatus",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/operationStatus/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "title": "operationStatus",
+            "description": "Operation status"
+        },
+        "protocol": {
+            "echonet:epc": "0x82",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/protocol",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ],
+            "title": "protocol",
+            "description": "Protocol version information"
+        },
+        "value": {
+            "echonet:epc": "0xE0",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false,
+            "type": "number",
+            "unit": "Lux",
+            "minimum": 0,
+            "maximum": 65535,
+            "forms": [
+                {
+                    "href": "http://192.168.30.110:8081/illuminancesensor/properties/value",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                }
+            ],
+            "title": "value",
+            "description": "Measured illuminance value in LUX"
+        }
+    },
+    "@type": "Thing",
+    "security": [
+        "nosec_sc"
+    ],
+    "forms": [
+        {
+            "href": "http://192.168.30.110:8081/illuminancesensor/all/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties"
+            ]
+        }
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    }
+}

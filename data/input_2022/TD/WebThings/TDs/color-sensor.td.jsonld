@@ -1,0 +1,64 @@
+{
+    "title": "Virtual Color Sensor",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "ColorSensor"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-26",
+    "properties": {
+        "color": {
+            "name": "color",
+            "value": "#ffffff",
+            "title": "Color",
+            "type": "string",
+            "@type": "ColorProperty",
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-26/properties/color"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-26"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-26"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-26/properties",
+            "op": "readallproperties"
+        }
+    ],
+    "layoutIndex": 24,
+    "selectedCapability": "ColorSensor",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-26",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-26:readwrite",
+                "/things/virtual-things-26",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

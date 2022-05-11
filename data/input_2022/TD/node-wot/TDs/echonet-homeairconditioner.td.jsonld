@@ -1,0 +1,1063 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+        "@language": "en"
+    },
+    {
+      "echonet": "https://echonet.jp/"
+    }
+  ],
+  "id": "echonet:homeAirConditioner:192168113013001",
+  "title": "homeAirConditioner",
+  "description": "Home air conditioner",
+  "properties": {
+    "airCleaningMethod": {
+      "echonet:epc": "0xC6",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "equippedElectronic": {
+          "descriptions": {
+            "ja": "電気集塵方式搭載情報",
+            "en": "Electronic dust collection"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非搭載",
+                "en": "Not equipped"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "搭載",
+                "en": "Equipped"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "equippedClusterIon": {
+          "descriptions": {
+            "ja": "クラスタイオン方式搭載情報",
+            "en": "Cluster ion"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非搭載",
+                "en": "Not equipped"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "搭載",
+                "en": "Equipped"
+              },
+              "edt": "0x01"
+            }
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/airCleaningMethod",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "airCleaningMethod",
+      "description": "Mounted air cleaning method"
+    },
+    "airFlowLevel": {
+      "echonet:epc": "0xA0",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8
+        },
+        {
+          "type": "string",
+          "enum": [
+            "auto"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "airFlowLevel",
+      "description": "Air flow rate setting"
+    },
+    "airPurifierFunction": {
+      "echonet:epc": "0xC7",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "levelOfElectronic": {
+          "descriptions": {
+            "ja": "電気集塵方式：制御レベル",
+            "en": "Electronic dust collection:Level"
+          },
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8,
+          "multipleOf": 1
+        },
+        "modeOfElectronic": {
+          "descriptions": {
+            "ja": "電気集塵方式：動作モード",
+            "en": "Electronic dust collection:Mode"
+          },
+          "type": "string",
+          "enum": [
+            "off",
+            "on"
+          ],
+          "values": [
+            {
+              "value": "off",
+              "descriptions": {
+                "ja": "OFF",
+                "en": "OFF"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": "on",
+              "descriptions": {
+                "ja": "ON",
+                "en": "ON"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "autoOfElectronic": {
+          "descriptions": {
+            "ja": "電気集塵方式：制御状態",
+            "en": "Electronic dust collection:Auto function"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非AUTO",
+                "en": "Non-automatic"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "AUTO",
+                "en": "Automatic"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "levelOfClusterIon": {
+          "descriptions": {
+            "ja": "クラスタイオン方式：制御レベル",
+            "en": "Cluster ion:Level"
+          },
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8,
+          "multipleOf": 1
+        },
+        "modeOfClusterIon": {
+          "descriptions": {
+            "ja": "クラスタイオン方式：動作モード",
+            "en": "Cluster ion:Mode"
+          },
+          "type": "string",
+          "enum": [
+            "off",
+            "on"
+          ],
+          "values": [
+            {
+              "value": "off",
+              "descriptions": {
+                "ja": "OFF",
+                "en": "OFF"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": "on",
+              "descriptions": {
+                "ja": "ON",
+                "en": "ON"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "autoOfClusterIon": {
+          "descriptions": {
+            "ja": "クラスタイオン方式：制御状態",
+            "en": "Cluster ion:Auto function"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非AUTO",
+                "en": "Non-automatic"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "AUTO",
+                "en": "Automatic"
+              },
+              "edt": "0x01"
+            }
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/airPurifierFunction",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "airPurifierFunction",
+      "description": "Air purifier function setting"
+    },
+    "automaticSwingAirFlow": {
+      "echonet:epc": "0xA3",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "off",
+        "vertical",
+        "holizontal",
+        "verticalAndHolizontal"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/automaticSwingAirFlow",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "automaticSwingAirFlow",
+      "description": "Automatic swing of air flow setting"
+    },
+    "businessFacilityCode": {
+      "echonet:epc": "0x8B",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "businessFacilityCode",
+      "description": "Business facility code"
+    },
+    "currentConsumption": {
+      "echonet:epc": "0xB9",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "A",
+      "minimum": 0,
+      "maximum": 6553.3,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/currentConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "currentConsumption",
+      "description": "Measured value of current consumption"
+    },
+    "currentLimit": {
+      "echonet:epc": "0x87",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/currentLimit",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "currentLimit",
+      "description": "Current limit setting"
+    },
+    "faultDescription": {
+      "echonet:epc": "0x89",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "faultDescription",
+      "description": "Fault description"
+    },
+    "faultStatus": {
+      "echonet:epc": "0x88",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "faultStatus",
+      "description": "Fault status"
+    },
+    "hourMeter": {
+      "echonet:epc": "0x9A",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "unit": {
+          "type": "string",
+          "enum": [
+            "second",
+            "minute",
+            "hour",
+            "day"
+          ],
+          "descriptions": {
+            "ja": "積算運転時間",
+            "en": "Cumulative operating time"
+          }
+        },
+        "time": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 4294967295,
+          "descriptions": {
+            "ja": "時間",
+            "en": "time"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/hourMeter",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "hourMeter",
+      "description": "Cumulative operating time"
+    },
+    "humidity": {
+      "echonet:epc": "0xBA",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "%",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unmeasurable"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "humidity",
+      "description": "Measured value of room relative humidity"
+    },
+    "installationLocation": {
+      "echonet:epc": "0x81",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "installationLocation",
+      "description": "Installation location"
+    },
+    "manufacturer": {
+      "echonet:epc": "0x8A",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "manufacturer",
+      "description": "Manufacturer"
+    },
+    "manufacturerFaultCode": {
+      "echonet:epc": "0x86",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "manufacturerFaultCode",
+      "description": "Manufacturer's fault code"
+    },
+    "offTimerReservation": {
+      "echonet:epc": "0x94",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "timeBased": {
+          "type": "boolean"
+        },
+        "relatimeTimeBased": {
+          "type": "boolean"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/offTimerReservation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "offTimerReservation",
+      "description": "OFF timer-based reservation setting"
+    },
+    "onTimerReservation": {
+      "echonet:epc": "0x90",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "timeBased": {
+          "type": "boolean"
+        },
+        "relatimeTimeBased": {
+          "type": "boolean"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/onTimerReservation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "onTimerReservation",
+      "description": "ON timer-based reservation setting"
+    },
+    "operationMode": {
+      "echonet:epc": "0xB0",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "enum": [
+        "auto",
+        "cooling",
+        "heating",
+        "dehumidification",
+        "circulation",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "operationMode",
+      "description": "Operation mode setting"
+    },
+    "operationStatus": {
+      "echonet:epc": "0x80",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "operationStatus",
+      "description": "Operation status"
+    },
+    "outdoorTemperature": {
+      "echonet:epc": "0xBE",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": -127,
+          "maximum": 125
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unmeasurable"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/outdoorTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "outdoorTemperature",
+      "description": "Measured outdoor air temperature"
+    },
+    "productCode": {
+      "echonet:epc": "0x8C",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "productCode",
+      "description": "Product code"
+    },
+    "productionDate": {
+      "echonet:epc": "0x8E",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "format": "date",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "productionDate",
+      "description": "Production date"
+    },
+    "protocol": {
+      "echonet:epc": "0x82",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "protocol",
+      "description": "Protocol version information"
+    },
+    "relativeHumidityDehumidifying": {
+      "echonet:epc": "0xB4",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "relativeHumidityDehumidifying",
+      "description": "Set value of relative humidity in dehumidifying mode"
+    },
+    "roomTemperature": {
+      "echonet:epc": "0xBB",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": -127,
+          "maximum": 125
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unmeasurable"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "roomTemperature",
+      "description": "Measured value of room temperature"
+    },
+    "selfCleaningFunction": {
+      "echonet:epc": "0xCB",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "levelOfOzone": {
+          "descriptions": {
+            "ja": "オゾン洗浄方式：制御レベル",
+            "en": "Ozone cleaning:Level"
+          },
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8,
+          "multipleOf": 1
+        },
+        "modeOfOzone": {
+          "descriptions": {
+            "ja": "オゾン洗浄方式：動作モード",
+            "en": "Ozone cleaning:Mode"
+          },
+          "type": "string",
+          "enum": [
+            "off",
+            "on"
+          ],
+          "values": [
+            {
+              "value": "off",
+              "descriptions": {
+                "ja": "OFF",
+                "en": "OFF"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": "on",
+              "descriptions": {
+                "ja": "ON",
+                "en": "ON"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "autoOfOzone": {
+          "descriptions": {
+            "ja": "オゾン洗浄方式：制御状態",
+            "en": "Ozone cleaning:Auto function"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非AUTO",
+                "en": "Non-automatic"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "AUTO",
+                "en": "Automatic"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "levelOfDrying": {
+          "descriptions": {
+            "ja": "乾燥方式：制御レベル",
+            "en": "Drying:Level"
+          },
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8,
+          "multipleOf": 1
+        },
+        "modeOfDrying": {
+          "descriptions": {
+            "ja": "乾燥方式：動作モード",
+            "en": "Drying:Mode"
+          },
+          "type": "string",
+          "enum": [
+            "off",
+            "on"
+          ],
+          "values": [
+            {
+              "value": "off",
+              "descriptions": {
+                "ja": "OFF",
+                "en": "OFF"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": "on",
+              "descriptions": {
+                "ja": "ON",
+                "en": "ON"
+              },
+              "edt": "0x01"
+            }
+          ]
+        },
+        "autoOfDrying": {
+          "descriptions": {
+            "ja": "乾燥方式：制御状態",
+            "en": "Drying:Auto function"
+          },
+          "type": "boolean",
+          "values": [
+            {
+              "value": false,
+              "descriptions": {
+                "ja": "非AUTO",
+                "en": "Non-automatic"
+              },
+              "edt": "0x00"
+            },
+            {
+              "value": true,
+              "descriptions": {
+                "ja": "AUTO",
+                "en": "Automatic"
+              },
+              "edt": "0x01"
+            }
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/selfCleaningFunction",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "selfCleaningFunction",
+      "description": "Self-cleaning function setting"
+    },
+    "targetTemperature": {
+      "echonet:epc": "0xB3",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": 0,
+          "maximum": 50
+        },
+        {
+          "type": "string",
+          "enum": [
+            "undefined"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "targetTemperature",
+      "description": "Set temperature value"
+    },
+    "ventilationFunction": {
+      "echonet:epc": "0xC0",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "onOutlet",
+        "off",
+        "onIntake",
+        "onOutletAndIntake"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/homeairconditioner/properties/ventilationFunction",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "ventilationFunction",
+      "description": "Ventilation function setting"
+    }
+  },
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "forms": [
+    {
+      "href": "http://192.168.30.110:8081/homeairconditioner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+    "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
+    "title": "LED Thing Model",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        }
+    },
+    "security": "basic_sc",
+    "links": [
+        {
+            "rel": "collection",
+            "href": "./SmartVentilation.td.jsonld",
+            "type": "application/td+json"
+        },
+        {
+            "rel": "type",
+            "href": "./LED.tm.jsonld",
+            "type": "application/tm+json"
+        }
+    ],
+    "properties": {
+        "R": {
+            "type": "number",
+            "description": "Red color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/R"
+                }
+            ]
+        },
+        "G": {
+            "type": "number",
+            "description": "Green color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/G"
+                }
+            ]
+        },
+        "B": {
+            "type": "number",
+            "description": "Blue color",
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/B"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "fadeIn": {
+            "title": "fadeIn",
+            "input": {
+                "type": "number",
+                "description": "fadeIn in ms"
+            },
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/fadeIn"
+                }
+            ]
+        },
+        "fadeOut": {
+            "title": "fadeOut",
+            "input": {
+                "type": "number",
+                "description": "fadeOut in ms"
+            },
+            "forms": [
+                {
+                    "href": "http://127.0.13.211:4563/fadeOut"
+                }
+            ]
+        }
+    }
+}

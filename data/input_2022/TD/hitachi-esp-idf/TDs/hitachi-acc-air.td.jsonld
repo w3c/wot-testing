@@ -1,0 +1,61 @@
+
+{
+    "@context": [
+      "https://www.w3.org/2019/wot/td/v1",
+      "https://www.w3.org/2022/wot/td/v1.1"
+    ],
+    "@type": "Thing",
+    "id": "urn:dev:ops:32473-WoTAccel-1234",
+    "title": "MyAccelerometer",
+    "securityDefinitions": {
+        "no_sc": {"scheme": "nosec"}
+    },
+    "base": "http://ktom5stack.local/",
+    "security": ["no_sc"],
+    "properties": {
+        "accelerometer" : {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "z": {
+                "type": "number"
+              }
+            },
+            "readOnly": true,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "/accel",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        },
+        "airquality" : {
+            "type": "object",
+            "properties": {
+              "tvoc": {
+                "type": "number"
+              },
+              "eco2": {
+                "type": "number"
+              }
+            },
+            "readOnly": true,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "href": "/air",
+                    "contentType": "application/json",
+                    "op": ["readproperty"]
+                }
+            ]
+        }
+    }
+}      
+  

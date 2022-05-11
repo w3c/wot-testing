@@ -1,0 +1,149 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "base": "http://192.168.1.75:8123/api/",
+  "@type": "Thing",
+  "id": "urn:uuid:6c8af2a3-ffc8-4dff-9730-79e270bfe160",
+  "title": "light.hue_color_lamp_1",
+  "description": "Hue color lamp 1",
+  "securityDefinitions": {
+    "ha_sc": {
+      "scheme": "bearer"
+    }
+  },
+  "security": "ha_sc",
+  "created": "2022-04-26T00:52:01.610Z",
+  "properties": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "entity_id": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "unavailable",
+            "on",
+            "off"
+          ]
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "min_mireds": {
+              "type": "integer"
+            },
+            "max_mireds": {
+              "type": "integer"
+            },
+            "supported_color_modes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "color_mode": {
+              "type": "string",
+              "enum": [
+                "color_temp",
+                "xy"
+              ]
+            },
+            "brightness": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            "hs_color": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "rgb_color": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "xy_color": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "mode": {
+              "type": "string",
+              "enum": [
+                "normal"
+              ]
+            },
+            "dynamics": {
+              "type": "string",
+              "enum": [
+                "none"
+              ]
+            },
+            "friendly_name": {
+              "type": "string"
+            },
+            "supported_features": {
+              "type": "integer"
+            }
+          }
+        },
+        "last_changed": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "parent_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "user_id": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "state/light.hue_color_lamp_1"
+        }
+      ]
+    }
+  }
+}

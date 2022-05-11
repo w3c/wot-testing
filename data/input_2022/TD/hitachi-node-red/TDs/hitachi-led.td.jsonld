@@ -1,0 +1,95 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    { 
+      "s": "http://schema.org",
+      "iot": "http://iotschema.org"
+    }
+  ],
+  "@type": "Thing",
+  "id": "urn:dev:mac:b827ebfffe4b6d0b",
+  "s:longitude": "35.70352",
+  "s:latitude": "139.4720174",
+  "s:elevation": "73.5",
+  "title": "myRasPiLED",
+  "titles": {
+    "en": "myRasPiLED",
+    "ja": "私のラズパイLED"
+  },
+  "description": "Simple LED Lamp using Node-RED",
+  "descriptions": {
+    "en": "Simple LED Lamp using Node-RED",
+    "ja": "Node-REDをつかったシンプルなLEDランプ"
+  },
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    },
+    "no_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "basic_sc"
+  ],
+  "properties": {
+    "led": {
+      "@type": [
+        "iot:SwitchStatus"
+      ],
+      "title": "LED status",
+      "titles": {
+        "en": "LED status",
+        "ja": "LEDの状態"
+      },
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://ktorpi.local:1880/led",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ],
+          "contentType": "application/json"
+        }
+      ]
+    }
+  },
+  "events": {
+    "toggled": {
+      "@type": [
+        "iot:PropertyChangeEvent"
+      ],
+      "title": "switch is toggled",
+      "titles": {
+        "en": "switch is toggled",
+        "ja": "スイッチがトグルされた"
+      },
+      "data": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "ws://ktorpi.local:1880/ws/toggled",
+          "op": "subscribeevent",
+          "contentType": "application/json",
+          "security": [
+            "no_sc"
+          ]
+        }
+      ]
+    }
+  }
+}
