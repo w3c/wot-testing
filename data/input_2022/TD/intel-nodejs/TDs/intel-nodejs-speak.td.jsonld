@@ -1,0 +1,116 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        {
+            "iot": "http://iotschema.org/",
+            "g": "https://portal.mmccool.net/geo/v1"
+        }
+    ],
+    "@type": [
+        "Thing"
+    ],
+    "title": "Intel-WebSpeak-sky",
+    "description": "A simple text to speech service",
+    "support": "mailto:michael.mccool@intel.com",
+    "version": {
+        "instance": "0.1.0"
+    },
+    "created": "2018-09-10T06:30:00Z",
+    "modified": "2021-09-29T22:26:00Z",
+    "links": [
+        {
+            "href": "https://github.com/mmccool/web-speak",
+            "rel": "repository",
+            "type": "application/vnd.github.v3+json"
+        },
+        {
+            "href": "#/g:geolocation",
+            "rel": "g:geolocationOf"
+        }
+    ],
+    "g:geolocation": {
+        "position": {
+            "longitude": 47.3814,
+            "latitude": -68.323,
+            "accuracy": 5,
+            "accuracyUnit": "m"
+        },
+        "altitude": {
+            "elevation": 238.049,
+            "elevationUnit": "m",
+            "depth": -1.3,
+            "depthUnit": "ft",
+            "accuracy": 2.5,
+            "accuracyUnit": "cm"
+        }
+    },
+    "id": "urn:uuid:ac04e086-abca-565f-a083-d1059c6fa868",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        },
+        "basic_sc": {
+            "scheme": "basic"
+        },
+        "digest_sc": {
+            "scheme": "digest"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "actions": {
+        "say": {
+            "input": {
+                "type": "string"
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "said": {
+                        "type": "string"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "http://sky.local:8085/api/say",
+                    "contentType": "application/json",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "https://portal.mmccool.net:8096/api/say",
+                    "contentType": "application/json",
+                    "op": "invokeaction",
+                    "security": [
+                        "basic_sc"
+                    ]
+                },
+                {
+                    "href": "https://portal.mmccool.net:8097/api/say",
+                    "contentType": "application/json",
+                    "op": "invokeaction",
+                    "security": [
+                        "digest_sc"
+                    ]
+                },
+                {
+                    "href": "https://tiktok.mmccool.org:8096/api/say",
+                    "contentType": "application/json",
+                    "op": "invokeaction",
+                    "security": [
+                        "basic_sc"
+                    ]
+                },
+                {
+                    "href": "https://tiktok.mmccool.org:8097/api/say",
+                    "contentType": "application/json",
+                    "op": "invokeaction",
+                    "security": [
+                        "digest_sc"
+                    ]
+                }
+            ]
+        }
+    }
+}

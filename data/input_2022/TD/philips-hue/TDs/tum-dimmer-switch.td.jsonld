@@ -1,0 +1,99 @@
+{
+  "title": "Hue Dimmer Switch",
+  "description": "A controller to switch off and on the lights or to dim them",
+  "id": "urn:dev:ops:32473-HueSwitch-1234",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "@language": "en"
+    }
+  ],
+  "security": [
+    "basic_sc"
+  ],
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/",
+  "properties": {
+    "switchInformation": {
+      "description": "Switch information",
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "object",
+          "description": "When the switch last pressed and what button was pressed and how it was pressed",
+          "properties": {
+            "buttonevent": {
+              "description": "*2 means short release, *3 means long release. 1* is the turn on button, 2* is the brighten button, 3* is the dim button, 4* is the turn off button",
+              "type": "integer",
+              "enum": [
+                1002,
+                1003,
+                2002,
+                2003,
+                3002,
+                3003,
+                4002,
+                4003
+              ]
+            },
+            "lastupdated": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "config": {
+          "type": "object",
+          "properties": {
+            "on": {
+              "type": "boolean"
+            },
+            "battery": {
+              "type": "integer",
+              "maximum": 100
+            },
+            "reachable": {
+              "type": "boolean"
+            }
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "const": "ZLLSwitch"
+        },
+        "modelid": {
+          "type": "string",
+          "const": "RWL021"
+        },
+        "manufacturername": {
+          "type": "string"
+        },
+        "swversion": {
+          "type": "string"
+        },
+        "uniqueid": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "sensors/7",
+          "contentType": "application/json",
+          "htv:methodName": "GET",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    }
+  }
+}

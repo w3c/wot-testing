@@ -1,0 +1,81 @@
+{
+    "title": "Virtual On/Off Color Light",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "OnOffSwitch",
+        "Light",
+        "ColorControl"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-0",
+    "properties": {
+        "on": {
+            "name": "on",
+            "value": false,
+            "title": "On/Off",
+            "type": "boolean",
+            "@type": "OnOffProperty",
+            "forms": [
+                {
+                    "href": "/things/virtual-things-0/properties/on"
+                }
+            ]
+        },
+        "color": {
+            "name": "color",
+            "value": "#ffffff",
+            "title": "Color",
+            "type": "string",
+            "@type": "ColorProperty",
+            "readOnly": false,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-0/properties/color"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-0"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-0"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-0/properties",
+            "op": [
+                "readallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ],
+    "layoutIndex": 1,
+    "selectedCapability": "Light",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-0",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-0:readwrite",
+                "/things/virtual-things-0",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

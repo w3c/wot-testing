@@ -1,0 +1,193 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        { "saref": "https://w3id.org/saref#" }
+    ],
+    "id": "urn:dev:ops:WoTDisp-0001",
+    "title": "MyDispThing",
+    "@type": "saref:Device",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": ["nosec_sc"],
+  "base": "http://emulateddisplay.local:8888/",
+    "properties": {
+        "power": {
+            "title": "power",
+            "type": "object",
+            "properties": {
+               "status": {
+                  "type": "boolean"
+               }
+            },
+            "forms": [{
+                "op": "readproperty",
+                "contentType": "application/json;charset=utf-8",
+	              "href": "power"
+            }]
+        },
+        "content": {
+            "title": "availableContent",
+            "type": "string",
+            "forms": [{
+                "op": "readproperty",
+                "contentType": "application/json;charset=utf-8",
+	              "href": "content"
+            }]
+        }
+    },
+    "actions": {
+        "toggle": {
+            "safe": true,
+            "idempotent": false,
+            "title": "togglePowerStatus",
+            "@type": "saref:ToggleCommand",
+            "forms": [{
+              "op": "invokeaction",
+              "contentType": "application/json;charset=utf-8",
+              "href": "toggle"
+            }]
+        },
+        "setVolume": {
+            "safe": true,
+            "idempotent": false,
+            "title": "setVolume",
+            "@type": "saref:Level control function",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "setvolume"
+            }]
+        },
+        "setBright": {
+            "safe": true,
+            "idempotent": false,
+            "title": "setBright",
+            "@type": "saref:Level control function",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "setbright"
+            }]
+        },
+        "showText": {
+            "safe": true,
+            "idempotent": false,
+            "title": "showText",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "showtext"
+            }]
+        },
+        "playVideo": {
+            "safe": true,
+            "idempotent": false,
+            "title": "playVideo",
+            "type": "playVOD",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "playvideo"
+            }],
+            "input": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "url" : {
+                        "type":"string"
+                    }
+                }
+            }
+        },
+        "pauseVideo": {
+            "safe": true,
+            "idempotent": false,
+            "title": "pauseVideo",
+            "type": "pauseVOD",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "pausevideo"
+            }]
+        },
+        "stopVideo": {
+            "safe": true,
+            "idempotent": false,
+            "title": "stopVideo",
+            "type": "stopVOD",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "stopvideo"
+            }]
+        },
+        "presentationWebApp": {
+            "safe": true,
+            "idempotent": false,
+            "title": "presentationWebApp",
+            "type": "presentationWebApp",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "presentationwebapp"
+            }],
+            "input": {
+                "type": "object",
+                "properties": {
+                    "identifier": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "url" : {
+                        "type":"string"
+                    }
+                }
+            }
+        },
+        "launchNewsApp": {
+            "safe": true,
+            "idempotent": false,
+            "title": "launchNewsApp",
+            "forms": [{
+                "op": "invokeaction",
+                "contentType": "application/json;charset=utf-8",
+                "href": "launchnewsapp"
+            }]
+        }
+    },
+    "events": {
+      "weatherAlert": {
+        "title": "weatherAlert",
+        "data": { "type": "object" },
+        "forms": [
+          {
+          "op": "subscribeevent",
+          "contentType": "application/json;charset=utf-8",
+          "subprotocol": "longpoll",
+          "href": "weatheralert"
+        },
+        {
+          "op": "subscribeevent",
+          "contentType": "application/json;charset=utf-8",
+          "href": "ws://emulateddisplay.local:8888/weatheralert"
+        }
+       ]
+      }
+    }
+}

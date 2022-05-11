@@ -1,0 +1,72 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "",
+    "id": "urn:dev:ops:32473-InfraredSensor-001",
+    "title": "InfraredSensor1",
+    "description": "Infrared sensor for the detection of objects",
+    "properties": {
+        "objectPresence": {
+            "title": "Read infrared sensor",
+            "description": "Reads the infrared sensor; 0: no object in front; 1: object in front.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": false,
+            "writeOnly": false,
+            "forms": [{
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/InfraredSensor1/properties/objectPresence",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/InfraredSensor1/properties/objectPresence/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        }
+    },
+    "events": {
+        "detectedObject": {
+            "title": "Object detected",
+            "description": "Detects the rising edge of the signal of the infrared sensor.",
+            "data": {
+                "type": "boolean"
+            },
+            "forms": [{
+                "href": "https://esiremotelab.esi.ei.tum.de:8081/InfraredSensor1/events/detectedObject",
+                "contentType": "application/json",
+                "subprotocol": "longpoll",
+                "op": [
+                    "subscribeevent"
+                ]
+            }]
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "forms": [{
+        "href": "https://esiremotelab.esi.ei.tum.de:8081/InfraredSensor1/all/properties",
+        "contentType": "application/json",
+        "op": [
+            "writeallproperties",
+            "writemultipleproperties"
+        ]
+    }]
+}

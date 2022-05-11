@@ -1,0 +1,66 @@
+{
+    "title": "Virtual Barometric Pressure Sensor",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "BarometricPressureSensor"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-29",
+    "properties": {
+        "pressure": {
+            "name": "pressure",
+            "value": 20,
+            "title": "Pressure",
+            "type": "number",
+            "@type": "BarometricPressureProperty",
+            "unit": "hectopascal",
+            "minimum": 0,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-29/properties/pressure"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-29"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-29"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-29/properties",
+            "op": "readallproperties"
+        }
+    ],
+    "layoutIndex": 27,
+    "selectedCapability": "BarometricPressureSensor",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-29",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-29:readwrite",
+                "/things/virtual-things-29",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

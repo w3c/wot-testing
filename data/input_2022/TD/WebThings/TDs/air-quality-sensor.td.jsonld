@@ -1,0 +1,81 @@
+{
+    "title": "Virtual Air Quality Sensor",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "AirQualitySensor"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-28",
+    "properties": {
+        "concentration": {
+            "name": "concentration",
+            "value": 20,
+            "title": "Gas Concentration",
+            "type": "number",
+            "@type": "ConcentrationProperty",
+            "unit": "ppm",
+            "minimum": 0,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-28/properties/concentration"
+                }
+            ]
+        },
+        "density": {
+            "name": "density",
+            "value": 20,
+            "title": "Particulate Density",
+            "type": "number",
+            "@type": "DensityProperty",
+            "unit": "micrograms per cubic metre",
+            "minimum": 0,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-28/properties/density"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-28"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-28"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-28/properties",
+            "op": "readallproperties"
+        }
+    ],
+    "layoutIndex": 26,
+    "selectedCapability": "AirQualitySensor",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-28",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-28:readwrite",
+                "/things/virtual-things-28",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

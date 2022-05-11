@@ -1,0 +1,67 @@
+{
+    "title": "Virtual Humidity Sensor",
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": [
+        "HumiditySensor"
+    ],
+    "description": "",
+    "href": "/things/virtual-things-27",
+    "properties": {
+        "humidity": {
+            "name": "humidity",
+            "value": 20,
+            "title": "Humidity",
+            "type": "number",
+            "@type": "HumidityProperty",
+            "unit": "percent",
+            "minimum": 0,
+            "maximum": 100,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "/things/virtual-things-27/properties/humidity"
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "links": [
+        {
+            "rel": "alternate",
+            "type": "text/html",
+            "href": "/things/virtual-things-27"
+        },
+        {
+            "rel": "alternate",
+            "href": "wss://plugfest.webthings.io/things/virtual-things-27"
+        }
+    ],
+    "forms": [
+        {
+            "href": "/things/virtual-things-27/properties",
+            "op": "readallproperties"
+        }
+    ],
+    "layoutIndex": 25,
+    "selectedCapability": "HumiditySensor",
+    "iconHref": null,
+    "group_id": null,
+    "id": "https://plugfest.webthings.io/things/virtual-things-27",
+    "base": "https://plugfest.webthings.io/",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "code",
+            "authorization": "https://plugfest.webthings.io/oauth/authorize",
+            "token": "https://plugfest.webthings.io/oauth/token",
+            "scopes": [
+                "/things/virtual-things-27:readwrite",
+                "/things/virtual-things-27",
+                "/things:readwrite",
+                "/things"
+            ]
+        }
+    },
+    "security": "oauth2_sc"
+}

@@ -1,0 +1,383 @@
+{
+  "title": "Hue Color Lamp 2",
+  "id": "urn:dev:ops:32473-HueLight-2",
+  "description": "This is a Philips Hue Color Light Bulb that can be controlled remotely. This is on the right of the desk 1",
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "@language": "en"
+    }
+  ],
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    }
+  },
+  "security": [
+    "basic_sc"
+  ],
+  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/lights/2/",
+  "properties": {
+    "lightInformation": {
+      "title": "State and Attributes Of Light",
+      "description": "Gets the attributes and state of a given light. There are more attributes that are not listed here and are not of importance.",
+      "type": "object",
+      "properties": {
+        "state": {
+          "title": "Light State",
+          "description": "Details the state of the light, see the state table below for more details.",
+          "readOnly": true,
+          "type": "object",
+          "properties": {
+            "on": {
+              "description": "On/Off state of the light. On=true, Off=false",
+              "type": "boolean"
+            },
+            "alert": {
+              "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop.",
+              "type": "string",
+              "enum": [
+                "none",
+                "select",
+                "lselect"
+              ]
+            },
+            "hue": {
+              "description": "The hue value to set light to.The hue value is a wrapping value between 0 and 65535. Both 0 and 65535 are red, 25500 is green and 46920 is blue.",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 65535
+            },
+            "bri": {
+              "description": "brightness level",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 254
+            },
+            "sat": {
+              "description": "Saturation of the light. 254 is the most saturated (colored) and 0 is the least saturated (white).",
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 254
+            },
+            "xy": {
+              "type": "array",
+              "description": "The x and y coordinates of a color in CIE color space.The first entry is the x coordinate and the second entry is the y coordinate. Both x and y must be between 0 and 1. If the specified coordinates are not in the CIE color space, the closest color to the coordinates will be chosen.",
+              "items": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "maxItems": 2,
+              "minItems": 2
+            },
+            "ct": {
+              "description": "The Mired color temperature of the light. 2012 connected lights are capable of 153 (6500K) to 500 (2000K).",
+              "type": "integer",
+              "minimum": 153,
+              "maximum": 500
+            },
+            "effect": {
+              "description": "The dynamic effect of the light. Currently “none” and “colorloop” are supported. Other values will generate an error of type 7.Setting the effect to colorloop will cycle through all hues using the current brightness and saturation settings.",
+              "type": "string",
+              "enum": [
+                "none",
+                "colorloop"
+              ]
+            },
+            "colormode": {
+              "type": "string",
+              "enum": [
+                "xy",
+                "ct"
+              ]
+            },
+            "reachable": {
+              "description": "Indicates if a light can be reached by the bridge",
+              "type": "boolean"
+            }
+          }
+        },
+        "type": {
+          "description": "A fixed name describing the type of light",
+          "type": "string"
+        },
+        "name": {
+          "description": "A unique, editable name given to the light",
+          "type": "string"
+        },
+        "modelid": {
+          "description": "The hardware model of the light.",
+          "type": "string"
+        },
+        "swversion": {
+          "description": "An identifier for the software version running on the light",
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "",
+          "htv:methodName": "GET",
+          "contentType": "application/json",
+          "op": "readproperty"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "setState": {
+      "title": "Set State",
+      "description": "Allows the user to turn the light on and off, modify the hue and effects",
+      "input": {
+        "type": "object",
+        "properties": {
+          "on": {
+            "description": "On/Off state of the light. On=true, Off=false",
+            "type": "boolean"
+          },
+          "bri": {
+            "description": "Brightness level. Values higher than 254 are taken as 254",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254
+          },
+          "alert": {
+            "description": "The alert effect, which is a temporary change to the bulb’s state.'l' of lselect stands for loop. Presence of lselect ignores transitiontime",
+            "type": "string",
+            "enum": [
+              "lselect",
+              "none",
+              "select"
+            ]
+          },
+          "transisiontime": {
+            "description": "The duration of the transition from the light’s current state to the new state.",
+            "type": "integer",
+            "unit": "100ms",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "bri_inc": {
+            "description": "Increments or decrements the value of the brightness.  bri_inc is ignored if the bri attribute is provided.",
+            "type": "integer",
+            "minimum": -254,
+            "maximum": 254
+          },
+          "hue": {
+            "description": "The hue value to set light to.The hue value is a wrapping value between 0 and 65535. Both 0 and 65535 are red, 25500 is green and 46920 is blue.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+          },
+          "sat": {
+            "description": "Saturation of the light. 254 is the most saturated (colored) and 0 is the least saturated (white).",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254
+          },
+          "xy": {
+            "type": "array",
+            "description": "The x and y coordinates of a color in CIE color space.The first entry is the x coordinate and the second entry is the y coordinate. Both x and y must be between 0 and 1. If the specified coordinates are not in the CIE color space, the closest color to the coordinates will be chosen.",
+            "items": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "maxItems": 2,
+            "minItems": 2
+          },
+          "ct": {
+            "description": "The Mired color temperature of the light. 2012 connected lights are capable of 153 (6500K) to 500 (2000K).",
+            "type": "integer",
+            "minimum": 153,
+            "maximum": 500
+          },
+          "effect": {
+            "description": "The dynamic effect of the light. Currently “none” and “colorloop” are supported. Other values will generate an error of type 7.Setting the effect to colorloop will cycle through all hues using the current brightness and saturation settings.",
+            "type": "string",
+            "enum": [
+              "none",
+              "colorloop"
+            ]
+          },
+          "sat_inc": {
+            "description": "Increments or decrements the value of the sat.  sat_inc is ignored if the sat attribute is provided. Any ongoing sat transition is stopped. Setting a value of 0 also stops any ongoing transition. The bridge will return the sat value after the increment is performed.",
+            "type": "integer",
+            "minimum": -254,
+            "maximum": 254
+          },
+          "hue_inc": {
+            "description": "Increments or decrements the value of the hue. hue_inc is ignored if the hue attribute is provided. Any ongoing color transition is stopped. Setting a value of 0 also stops any ongoing transition. The bridge will return the hue value after the increment is performed.Note if the resulting values are < 0 or > 65535 the result is wrapped. ",
+            "type": "integer",
+            "minimum": -65534,
+            "maximum": 65534
+          },
+          "ct_inc": {
+            "description": "Increments or decrements the value of the ct. ct_inc is ignored if the ct attribute is provided. Any ongoing color transition is stopped. Setting a value of 0 also stops any ongoing transition. The bridge will return the ct value after the increment is performed.",
+            "type": "integer",
+            "minimum": -65534,
+            "maximum": 65534
+          },
+          "xy_inc": {
+            "type": "array",
+            "description": "TIncrements or decrements the value of the xy.  xy_inc is ignored if the xy attribute is provided. Any ongoing color transition is stopped. Setting a value of 0 also stops any ongoing transition. Will stop at it’s gamut boundaries. The bridge will return the xy value after the increment is performed. Max value [0.5, 0.5].",
+            "items": {
+              "type": "number",
+              "minimum": -0.5,
+              "maximum": 0.5
+            },
+            "maxItems": 2,
+            "minItems": 2
+          }
+        }
+      },
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/on": {
+                      "description": "Current state of the light after operation",
+                      "type": "boolean"
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/bri": {
+                      "description": "Current brightness level",
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 254
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/alert": {
+                      "description": "Already provided alert value",
+                      "type": "string",
+                      "enum": [
+                        "lselect",
+                        "none",
+                        "select"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/transisiontime": {
+                      "description": "Already provided transitiontime",
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 65535
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/hue": {
+                      "description": "Current hue of the light after the operation",
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 65535
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/sat": {
+                      "description": "Current saturation of the light after the operation",
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 254
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/xy": {
+                      "description": "Current xy color of the light after the operation",
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": -1,
+                        "maximum": 1
+                      },
+                      "maxItems": 2,
+                      "minItems": 2
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/ct": {
+                      "description": "Current ct color of the light after the operation",
+                      "type": "integer",
+                      "minimum": 153,
+                      "maximum": 500
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/effect": {
+                      "description": "Current running effect on the light after the operation",
+                      "type": "string",
+                      "enum": [
+                        "none",
+                        "colorloop"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "/lights/1/state/ct": {
+                      "description": "Current running effect on the light after the operation",
+                      "type": "string",
+                      "enum": [
+                        "none",
+                        "colorloop"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "state",
+          "contentType": "application/json",
+          "htv:methodName": "PUT",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    }
+  }
+}

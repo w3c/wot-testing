@@ -1,0 +1,265 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ], 
+  "@type": "Thing", 
+  "id": "urn:node:opcua:VentilationSystem", 
+  "title": "simulated node OPCUA ventilation system", 
+  "created": "2022-03-14T15:01:28.6637772+01:00", 
+  "modified": "2022-03-14T15:01:28.6643715+01:00", 
+  "base": "http://localhost:8080", 
+  "security": "nosec_sc", 
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }, 
+    "local_sc": {
+      "scheme": "nosec"
+    }
+  }, 
+  "properties": {
+    "AirQuality_CO": {
+      "@type": "xsd:double", 
+      "title": "AirQuality sensor CO concentration measurement", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/AirQuality_CO", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "AirQuality_CO2": {
+      "@type": "xsd:double", 
+      "title": "AirQuality sensor CO2 concentration measurement", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/AirQuality_CO2", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "AirQuality_Particulate": {
+      "@type": "xsd:integer", 
+      "title": "AirQuality sensor PM10 concentration measurement", 
+      "type": "integer", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/AirQuality_Particulate", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "AirDuctSetTemperature": {
+      "@type": "xsd:double", 
+      "title": "AirQuality sensor PM10 measurement", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/AirDuctSetTemperature", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "CoolingUnitPower": {
+      "@type": "xsd:double", 
+      "title": "Cooling unit power", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/CoolingUnitPower", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "IncomingAirPumpSpeedSetting": {
+      "@type": "xsd:double", 
+      "title": "incoming air pump speed setting", 
+      "type": "number", 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/IncomingAirPumpSpeedSetting", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/IncomingAirPumpSpeedSetting", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "NetAirFlowRate": {
+      "@type": "xsd:double", 
+      "title": "net air flow rate into the system", 
+      "type": "number", 
+      "readOnly": true, 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/NetAirFlowRate", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }
+      ]
+    }, 
+    "OutgoingAirPumpSpeedSetting": {
+      "@type": "xsd:double", 
+      "title": "outgoing air pump speed setting", 
+      "type": "number", 
+      "observable": true, 
+      "forms": [
+        {
+          "op": "readproperty", 
+          "htv:methodName": "GET", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/OutgoingAirPumpSpeedSetting", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "observeproperty", 
+          "href": "ws://localhost:8080/.subscriptions/.ws?things=urn:node:opcua:VentilationSystem", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "writeproperty", 
+          "htv:methodName": "PUT", 
+          "href": "/.things/urn:node:opcua:VentilationSystem/OutgoingAirPumpSpeedSetting", 
+          "contentType": "application/json"
+        }
+      ]
+    }
+  }, 
+  "events": {
+    "eventAlarms": {
+      "description": "Events (Alarms/Faults/Errors...) requiring human intervention.  A short lived thing with its own lifecycle and interactions", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3Anode%3Aopcua%3AVentilationSystem"
+        }
+      ]
+    }, 
+    "cov": {
+      "description": "Any relevant change of a properties value .. after noise suppressions/smoothing", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3Anode%3Aopcua%3AVentilationSystem"
+        }
+      ]
+    }, 
+    "monitor": {
+      "description": "Any updates on actions in progress", 
+      "forms": [
+        {
+          "op": "subscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}", 
+          "contentType": "application/json"
+        }, 
+        {
+          "op": "unsubscribeevent", 
+          "href": "/.subscriptions/{subscriptionID}?removeThing=%2F.things%2Furn%3Anode%3Aopcua%3AVentilationSystem"
+        }
+      ]
+    }
+  }, 
+  "forms": [
+    {
+      "op": "readallproperties", 
+      "htv:methodName": "GET", 
+      "href": "./.rtt", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "readmultipleproperties", 
+      "htv:methodName": "GET", 
+      "href": "./.rtt", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "writeallproperties", 
+      "htv:methodName": "PUT", 
+      "href": ".", 
+      "contentType": "application/json"
+    }, 
+    {
+      "op": "writemultipleproperties", 
+      "htv:methodName": "PATCH", 
+      "href": ".", 
+      "contentType": "application/json"
+    }
+  ], 
+  "links": [
+    {"rel": "parent", "href": "/.things/rootThing", "target": "urn:rootThing"}
+  ]
+}

@@ -1,0 +1,292 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "actions": {
+        "goHome": {
+            "description": "Returns the pan and tilt to their home position which is at 0 and 0 degrees",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/goHome",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false,
+            "title": "Go Home"
+        },
+        "moveContinuously": {
+            "description": "Moves the tilt and pan platform with the speeds given in input until a stop action is invoked or limits are reached",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/moveContinuously",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "properties": {
+                    "panSpeed": {
+                        "description": "The speed at which the platform moves. Negative values for right and positive values for left",
+                        "maximum": 15,
+                        "minimum": -15,
+                        "type": "number",
+                        "unit": "angle per sec"
+                    },
+                    "tiltSpeed": {
+                        "description": "The speed at which the tilt platform moves. Negative values for moving up and positive values for moving down",
+                        "maximum": 15,
+                        "minimum": -15,
+                        "type": "number",
+                        "unit": "angle per sec"
+                    }
+                },
+                "required": [
+                    "panSpeed",
+                    "tiltSpeed"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Move Continuously"
+        },
+        "moveTo": {
+            "description": "Moves the tilt and pan platform to the angles given in input",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/moveTo",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "properties": {
+                    "panAngle": {
+                        "maximum": 90,
+                        "minimum": -90,
+                        "title": "Pan To",
+                        "type": "number",
+                        "unit": "degrees"
+                    },
+                    "tiltAngle": {
+                        "maximum": 80,
+                        "minimum": -80,
+                        "title": "Tilt To",
+                        "type": "number",
+                        "unit": "degrees"
+                    }
+                },
+                "required": [
+                    "panAngle",
+                    "tiltAngle"
+                ],
+                "type": "object"
+            },
+            "safe": false,
+            "title": "Move To"
+        },
+        "panContinuously": {
+            "description": "Moves the pan platform with speed given in input until a stop action is invoked or limits are reached",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/panContinuously",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "The speed at which the platform moves. Negative values for right and positive values for left",
+                "maximum": 15,
+                "minimum": -15,
+                "type": "number",
+                "unit": "angle per sec"
+            },
+            "safe": false,
+            "title": "Pan Continuously"
+        },
+        "panTo": {
+            "description": "Moves the pan platform to the angle specific in the input",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/panTo",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "maximum": 90,
+                "minimum": -90,
+                "type": "number",
+                "unit": "degrees"
+            },
+            "safe": false,
+            "title": "Pan To"
+        },
+        "scan": {
+            "description": "Scans left and right once, starting from the leftmost point. Tilt stays the same",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/scan",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false,
+            "title": "Scan"
+        },
+        "stopMovement": {
+            "description": "Stops any movement that was created with continuous movement calls",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/stopMovement",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false,
+            "title": "Stop Movement"
+        },
+        "tiltContinuously": {
+            "description": "Moves the tilt platform with speed given in input until a stop action is invoked or limits are reached",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/tiltContinuously",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "The speed at which the platform moves. Negative values for moving up and positive values for moving down",
+                "maximum": 15,
+                "minimum": -15,
+                "type": "number",
+                "unit": "angle per sec"
+            },
+            "safe": false,
+            "title": "Tilt Continuously"
+        },
+        "tiltTo": {
+            "description": "Moves the tilt platform to the angle specific in the input",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/actions/tiltTo",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "maximum": 80,
+                "minimum": -80,
+                "type": "number",
+                "unit": "degrees"
+            },
+            "safe": false,
+            "title": "Tilt To"
+        }
+    },
+    "description": "A Pan and Tilt platform on top of a Raspberry",
+    "forms": [
+        {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/all/properties",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ],
+    "id":"urn:dev:ops:32473-pantilt-001",
+    "properties": {
+        "panPosition": {
+            "description": "The current position of the pan platform in degrees",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/properties/panPosition",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "maximum": 90,
+            "minimum": -90,
+            "observable": false,
+            "readOnly": true,
+            "title": "Pan Position",
+            "type": "number",
+            "unit": "degrees",
+            "writeOnly": false
+        },
+        "tiltPosition": {
+            "description": "The current position of the tilt platform in degrees",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/PanTilt1/properties/tiltPosition",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "maximum": 80,
+            "minimum": -80,
+            "observable": false,
+            "readOnly": true,
+            "title": "Tilt Position",
+            "type": "number",
+            "unit": "degrees",
+            "writeOnly": false
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "title": "PanTilt1"
+}
