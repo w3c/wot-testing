@@ -85,3 +85,15 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # TinyIoT (TDD)
 IMPLEMENTATION=TinyIoT
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+
+## Older
+
+# Unibo Farm
+IMPLEMENTATION=unibo-farm
+IMPLEMENTATION_DIR=~/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/$IMPLEMENTATION
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION_DIR/ -o Results/$IMPLEMENTATION -a
+
+# ECHONET Bridge
+IMPLEMENTATION=echonet-bridge
+IMPLEMENTATION_DIR=~/Dev/wot-testing/data/input_2021/TD/TDs/AllOrgs/$IMPLEMENTATION
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION_DIR/ -o Results/$IMPLEMENTATION -a
