@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLAYGROUNDLOCATION=~/git/thingweb-playground/
+PLAYGROUNDLOCATION=~/Dev/thingweb-playground/
 
 # Ditto
 IMPLEMENTATION=Ditto
@@ -43,6 +43,10 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 IMPLEMENTATION=intel-nodejs
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
+# intel-wot-ha
+IMPLEMENTATION=intel-wot-ha
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+
 # intel-proxy
 # only a csv file?
 
@@ -76,4 +80,8 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 
 # Logilabs (TDD)
 IMPLEMENTATION=logilab
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+
+# TinyIoT (TDD)
+IMPLEMENTATION=TinyIoT
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
