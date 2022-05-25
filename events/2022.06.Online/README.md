@@ -1,7 +1,9 @@
 # Testfest
-To focus *completely* on testing and completing the Implementation Reports for *all* deliverables.
-Note that the Profile spec will still be "mutable" but we will still focus on testing assertions
-in an actual draft as opposed to proposing completely new items.
+To focus *completely* on testing and completing the Implementation Reports with a focus on Discovery and TD testing.
+
+Note that the Profile spec will still be "mutable".  While we might prototype some tests we will defer detailed testing of Profiles to another
+Testfest in mid-July (to be organized).
+
 We also need to focus on gaps where features are at risk.
 
 ## Logistics
