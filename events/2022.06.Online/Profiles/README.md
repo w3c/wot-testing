@@ -1,6 +1,11 @@
-# WoT March 2022 Plugfest/Testfest
+# WoT June 2022 Plugfest/Testfest
 
-* Have captured some TDs now that have "profile" members
-* But not all are fully compliant or use the features of the existing "Core Profile" spec, or use that URL
-* Have extracted template.csv from profile spec
-- [ ] Copy "template.csv" to "manual.csv" for now
+## HTTP Profile implementations:
+
+### 1. WoTWebThing:
+
+Demonstrator of a WoTWebThing implementation for a Pump, which implements the baseline and Webhook profile.
+
+Thing Description: [../TD/Oracle/TDs/WoTWebThing.td.jsonld]()
+
+Documentation: [../TD/Oracle/TDs/WoTWebThing.md](../TD/Oracle/TDs/WoTWebThing.md)
