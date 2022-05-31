@@ -9,3 +9,5 @@ Demonstrator of a WoTWebThing implementation for a Pump, which implements the ba
 Thing Description: [../TD/Oracle/TDs/WoTWebThing.td.jsonld]()
 
 Documentation: [../TD/Oracle/TDs/WoTWebThing.md](../TD/Oracle/TDs/WoTWebThing.md)
+
+The WoTWebThing is online.
