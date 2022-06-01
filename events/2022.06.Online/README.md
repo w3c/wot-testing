@@ -12,20 +12,26 @@ We also need to focus on gaps where features are at risk.
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday, and Friday
-* WebEx: TBD (Cisco WebEx - Kaz to organize)
-* Slack: TBD - same as before (Toumura to resend invites)
+* WebEx: see [W3C Calendar](https://www.w3.org/groups/wg/wot/calendar)
+* Slack: Toumura resent invites; see [email](https://lists.w3.org/Archives/Member/member-wot-ig/2022May/0009.html)
 * Hangouts: none
-* VLAN: yes
+* VLAN: Toumura has confirmed is up; see [email](https://lists.w3.org/Archives/Member/member-wot-ig/2022May/0009.html)
 * Other
    - Details to follow
 
-## TO DO
-- Copy 03.Online event for initial state (do May 25 in testing call)
-- Set up VLAN
-- (Re)organize directory structure
+## Preparation
+Fady and McCool to do offline in prep for first call:
 - Organize instructions in appropriate README.md files and index
+- Update template.csv for manual results
+- Update Implementation Report templates
+
+## During Event
+To be done during event:
 - Capture input data
 - Generate results
 - Generating manual.csv files
-- Update Implementation Report templates
-- Completing Implementation Descriptions and draft Testimonials
+- Completing Implementation Descriptions 
+
+## Other
+- Completing draft Testimonials
+
