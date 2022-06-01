@@ -15,3 +15,9 @@ Repository for Web of Things (WoT) Testing purposes.
   of reports.
 * [Systems](systems/README.md): Online test Things, systems, and examples.
 * [Data](data/README.md): Current information on implementations.
+
+## Previous Plugfest Project Results and Discussion
+Plugfest project descriptions, results, and discussions are kept in issues.  The following links
+reference the projects for current and past plugfests.  Note that issues for past plugfests are
+closed but are not deleted and can still be referenced.
+* [2022.03](https://github.com/w3c/wot-testing/labels/Plugfest%202022.03)
