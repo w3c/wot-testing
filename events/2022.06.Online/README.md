@@ -21,11 +21,12 @@ We also need to focus on gaps where features are at risk.
 
 ## Preparation
 Fady and McCool to do offline in prep for first call:
-- Organize instructions in appropriate README.md files and index
-- Update template.csv for manual results
-- Update Implementation Report templates
+- Organize instructions in appropriate README.md files and index (in email, copy here; example PR created)
+- Update Implementation Report templates and provide links and instructions (McCool)
 
-## During Event
+## Contributions
+TODO: More detailed intructions (McCool)
+
 To be done during event:
 - Capture input data
 - Generate results
