@@ -1,6 +1,8 @@
 #!/bin/bash
 
-PLAYGROUNDLOCATION=~/git/thingweb-playground/
+# Note: this needs to be updated for where you have installed thingweb-playground
+#PLAYGROUNDLOCATION=~/git/thingweb-playground/
+PLAYGROUNDLOCATION=~/Dev/thingweb-playground/
 
 # Ditto
 IMPLEMENTATION=Ditto

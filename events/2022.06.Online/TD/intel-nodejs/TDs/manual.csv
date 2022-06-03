@@ -1,76 +1,24 @@
 "ID","Status","Comment"
-"bindings-requirements-scheme","null",
-"bindings-server-accept","null",
-"client-data-schema","null",
-"client-data-schema-accept-extras","null",
-"client-data-schema-no-extras","null",
-"client-uri-template","null",
-"sec-body-name-json-pointer-creatable","null",
-"server-data-schema","null",
-"server-data-schema-extras","null",
-"server-uri-template","null",
-"td-context-default-language-direction-heuristic","null",
-"td-context-default-language-direction-independence","null",
-"td-context-default-language-direction-inference","null",
-"td-context-ns-multilanguage-text-direction-infer","null",
-"td-default-alg","null",
-"td-default-contentType","null",
-"td-default-format","null",
-"td-default-http-method","null",
-"td-default-http-method_get","null",
-"td-default-http-method_post","null",
-"td-default-http-method_put","null",
-"td-default-idempotent","null",
-"td-default-in-apikey","null",
-"td-default-in-basic","null",
-"td-default-in-bearer","null",
-"td-default-in-digest","null",
-"td-default-op-actions","null",
-"td-default-op-events","null",
-"td-default-op-properties","null",
-"td-default-qop","null",
-"td-default-readOnly","null",
-"td-default-safe","null",
-"td-default-success","null",
-"td-default-writeOnly","null",
-"td-expectedResponse-contentType","null",
-"td-expectedResponse-default-contentType","null",
-"td-form-protocolbindings","null",
-"td-format-validation-other-values","null",
-"td-json-open","null",
-"td-json-open_accept-byte-order","null",
-"td-json-open_no-byte-order","null",
-"td-ns-multilanguage-content-negotiation","null",
-"td-ns-multilanguage-content-negotiation-no-multi","null",
-"td-ns-multilanguage-content-negotiation-optional","null",
-"td-processor-serialization","null",
-"td-security-binding","null",
-"td-security-in-query-over-uri","null",
-"td-security-no-extras","null",
-"td-security-no-secrets","null",
-"td-vocabulary-defaults","null",
-"well-known-operation-types-only","null",
-"bindings-requirements-scheme","null",
-"bindings-server-accept","null",
-"client-data-schema","null",
-"client-data-schema-accept-extras","null",
-"client-data-schema-no-extras","null",
-"client-uri-template","null",
-"privacy-auth-users-only","null",
-"privacy-centralized-ids","null",
-"privacy-distributed-ids","null",
-"privacy-essential-metadata-only","null",
-"privacy-id-metadata","null",
-"privacy-mutable-identifiers","null",
-"privacy-td-pii","null",
-"privacy-temp-id-metadata","null",
-"sec-body-name-json-pointer","null",
+"bindings-requirements-scheme","null","Not checked yet"
+"bindings-server-accept","true",
+"client-data-schema-accept-extras","null","n/a; not a consumer"
+"client-data-schema-no-extras","null","n/a; not a consumer"
+"client-data-schema","null","n/a; not a consumer"
+"client-uri-template","null","n/a; not a consumer"
+"privacy-auth-users-only","null","no auth checking, internal"
+"privacy-centralized-ids","null","check"
+"privacy-distributed-ids","null","check"
+"privacy-essential-metadata-only","true",
+"privacy-id-metadata","null","check"
+"privacy-mutable-identifiers","null","check"
+"privacy-td-pii","null","not a personal device"
+"privacy-temp-id-metadata","null","not a directory/not a temp id"
 "sec-body-name-json-pointer-array","null",
-"sec-body-name-json-pointer-creatable","null",
-"sec-body-name-json-pointer-type","null",
-"sec-inj-no-intl-markup","null",
-"sec-inj-sanitize","null",
-"sec-vuln-auto","null",
+"sec-body-name-json-pointer-creatable","null","feature not used"
+"sec-body-name-json-pointer","null","feature not used"
+"sec-body-name-json-pointer-type","null","feature not used"
+"sec-inj-no-intl-markup","true",
+"sec-inj-sanitize","null","n/a"
 "security-context-secure-fetch","null",
 "security-jsonld-expansion","null",
 "security-mutual-auth-td","null",
@@ -80,76 +28,77 @@
 "security-server-auth-td","null",
 "security-static-context","null",
 "security-update-contexts","null",
-"server-data-schema","null",
-"server-data-schema-extras","null",
-"server-uri-template","null",
-"td-context-default-language-direction-heuristic","null",
+"sec-vuln-auto","null",
+"server-data-schema-extras","null","feature not used"
+"server-data-schema","true",
+"server-uri-template","true",
+"td-context-default-language-direction-heuristic","null","not in current editor's draft"
 "td-context-default-language-direction-independence","null",
-"td-context-default-language-direction-inference","null",
-"td-context-ns-multilanguage-text-direction-infer","null",
+"td-context-default-language-direction-inference","null","not in current editor's draft"
+"td-context-ns-multilanguage-text-direction-infer","null","not in current editor's draft"
 "td-context-ns-td10-namespace","null",
 "td-default-AdditionalResponseContentType","null",
-"td-default-alg","null",
-"td-default-contentType","null",
-"td-default-format","null",
-"td-default-http-method","null",
-"td-default-http-method_get","null",
-"td-default-http-method_post","null",
-"td-default-http-method_put","null",
-"td-default-idempotent","null",
-"td-default-in-apikey","null",
-"td-default-in-basic","null",
-"td-default-in-bearer","null",
-"td-default-in-digest","null",
-"td-default-observable","null",
-"td-default-op-actions","null",
-"td-default-op-events","null",
-"td-default-op-properties","null",
-"td-default-qop","null",
-"td-default-readOnly","null",
-"td-default-safe","null",
-"td-default-success","null",
-"td-default-writeOnly","null",
-"td-expectedResponse-contentType","null",
-"td-expectedResponse-default-contentType","null",
-"td-form-protocolbindings","null",
-"td-format-validation-other-values","null",
-"td-json-open_accept-byte-order","null",
-"td-json-open_no-byte-order","null",
-"td-ns-multilanguage-content-negotiation","null",
-"td-ns-multilanguage-content-negotiation-no-multi","null",
-"td-ns-multilanguage-content-negotiation-optional","null",
-"td-processor-serialization","null",
-"td-security-binding","null",
-"td-security-combo-deprecation","null",
-"td-security-extension","null",
-"td-security-in-query-over-uri","null",
-"td-security-in-uri-variable","null",
-"td-security-no-extras","null",
-"td-security-no-secrets","null",
-"td-security-uri-variables-distinct","null",
-"td-text-at-direction","null",
-"td-text-direction-first-strong","null",
-"td-text-direction-language-tag","null",
-"td-vocab-hreflang--Link","null",
-"td-vocab-uriVariables--Thing","null",
-"td-vocabulary-defaults","null",
-"tm-compose-instanceName","null",
-"tm-compose-name-collision","null",
-"tm-compose-submodel","null",
-"tm-overwrite-interaction","null",
-"tm-overwrite-types","null",
-"tm-placeholder-replacement","null",
-"tm-placeholder-retyping","null",
-"tm-placeholder-usecase","null",
-"tm-protocol-security-restriction","null",
-"tm-ref-recursive-extensions","null",
-"tm-tmRef-overwrite-possibility","null",
-"tm-tmRef-overwrite-process","null",
-"tm-tmRef-overwrite-semantic-meaning","null",
-"tm-tmRef-usecase","null",
-"tm-tmRef1","null",
-"tm-tmRef2","null",
-"tm-tmRequired-resolver","null",
-"tm-versioning","null",
-"well-known-operation-types-only","null",
+"td-default-alg","null","feature not used"
+"td-default-contentType","null","true"
+"td-default-format","null","feature not implemented"
+"td-default-http-method_get","true",
+"td-default-http-method","null","parent"
+"td-default-http-method_post","true",
+"td-default-http-method_put","null","feature not used"
+"td-default-idempotent","null","true"
+"td-default-in-apikey","null","feature not used"
+"td-default-in-basic","null","feature not used"
+"td-default-in-bearer","null","feature not used"
+"td-default-in-digest","null","feature not used"
+"td-default-observable","true",
+"td-default-op-actions","true",
+"td-default-op-events","null","feature not used"
+"td-default-op-properties","true",
+"td-default-qop","null","feature not used"
+"td-default-readOnly","true",
+"td-default-safe","true",
+"td-default-success","null","feature not used"
+"td-default-writeOnly","true",
+"td-expectedResponse-contentType","null","feature not used"
+"td-expectedResponse-default-contentType","null","feature not used"
+"td-format-validation-other-values","null","feature not used"
+"td-form-protocolbindings","null","feature not used"
+"td-json-open_accept-byte-order","null","not a consumer"
+"td-json-open_no-byte-order","true",
+"td-ns-multilanguage-content-negotiation-no-multi","null","feature not used"
+"td-ns-multilanguage-content-negotiation","null","feature not used"
+"td-ns-multilanguage-content-negotiation-optional","null","feature not used"
+"td-processor-serialization","null","not a processor"
+"td-security-binding","true","has nosec; other security schemes managed in proxy"
+"td-security-combo-deprecation","true",
+"td-security-extension","null","feature not used"
+"td-security-in-query-over-uri","null","feature not used"
+"td-security-in-uri-variable","null","feature not used"
+"td-security-no-extras","true",
+"td-security-no-secrets","true",
+"td-security-uri-variables-distinct","null","feature not used"
+"td-text-at-direction","null","feature not used"
+"td-text-direction-first-strong","null","not a consumer"
+"td-text-direction-language-tag","null","not a consumer"
+"td-vocab-hreflang--Link","null","feature not used"
+"td-vocabulary-defaults","true",
+"td-vocab-uriVariables--Thing","null","feature not used"
+"tm-compose-instanceName","null","feature not used"
+"tm-compose-name-collision","null","feature not used"
+"tm-compose-submodel","null","feature not used"
+"tm-overwrite-interaction","null","feature not used"
+"tm-overwrite-types","null","feature not used"
+"tm-placeholder-replacement","null","feature not used"
+"tm-placeholder-retyping","null","feature not used"
+"tm-placeholder-usecase","null","feature not used"
+"tm-protocol-security-restriction","null","feature not used"
+"tm-ref-recursive-extensions","null","feature not used"
+"tm-tmRef1","null","feature not used"
+"tm-tmRef2","null","feature not used"
+"tm-tmRef-overwrite-possibility","null","feature not used"
+"tm-tmRef-overwrite-process","null","feature not used"
+"tm-tmRef-overwrite-semantic-meaning","null","feature not used"
+"tm-tmRef-usecase","null","feature not used"
+"tm-tmRequired-resolver","null","feature not used"
+"tm-versioning","null","feature not used"
+"well-known-operation-types-only","true",
