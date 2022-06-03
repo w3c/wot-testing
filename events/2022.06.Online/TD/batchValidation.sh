@@ -26,8 +26,8 @@ echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
 
 # intel-proxy
-# JUST a manual.csv, no TDs, so just copy it over, 
-# ... but make sure to name after the implementation
+# JUST a manual.csv, no TDs, so just copy it over, already named after implementation
 IMPLEMENTATION=intel-proxy
 echo "$IMPLEMENTATION"
 cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
+
