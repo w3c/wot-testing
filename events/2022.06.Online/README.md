@@ -26,7 +26,7 @@ Fady and McCool to do offline in prep for first call:
 - Updating manual.csv files
 
 ## Contributions
-Example contribution: https://github.com/w3c/wot-testing/pull/312
+[Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
 
 To be done during event:
 - Capture input data
@@ -35,6 +35,8 @@ To be done during event:
     - Will be merged with old input data
 - Generate results
     - After merging with older input data
+- Updating Implementation Report Drafts
+    - [TD](https://github.com/w3c/wot-thing-description/pull/1522)
 - Completing Implementation Descriptions 
 
 ## Other
