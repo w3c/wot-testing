@@ -47,6 +47,9 @@ More detailed instructions can be found in the READMEs for each deliverable:
 - [TD](TD/README.md)
 - [Discovery](Discovery/README.md)
 
+Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.06`:
+- [Testfest 2022.06](https://github.com/w3c/wot-testing/labels/Testfest%202022.06)
+
 ## Other
 - Completing draft Testimonials
 
