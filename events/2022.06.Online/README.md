@@ -40,7 +40,7 @@ To be done during event:
     - After merging with older input data
 - Updating Implementation Report Drafts
     - [TD](https://github.com/w3c/wot-thing-description/pull/1522)
-    - [Discovery](link)
+    - [Discovery](https://github.com/w3c/wot-discovery/pull/331)
 - Completing Implementation Descriptions 
 
 More detailed instructions can be found in the READMEs for each deliverable:
