@@ -21,16 +21,34 @@ We also need to focus on gaps where features are at risk.
 
 ## Preparation
 Fady and McCool to do offline in prep for first call:
-- Organize instructions in appropriate README.md files and index
-- Update template.csv for manual results
-- Update Implementation Report templates
+- Organize instructions in appropriate README.md files and index (in email, copy here; example PR created)
+- Update Implementation Report templates and provide links and instructions (McCool)
+- Updating manual.csv files
 
-## During Event
+## Contributions
+[Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
+
 To be done during event:
 - Capture input data
+    - TDs and TMs for the TD deliverable
+- Updating manual.csv files for each Implementation
+    - Only new or replacement inputs need to be provided
+    - Will be merged with old input data
 - Generate results
-- Generating manual.csv files
+    - Discovery generates these directly
+    - TD generates these using batchValidation script, which will be run daily
+    - After merging with older input data
+- Updating Implementation Report Drafts
+    - [TD](https://github.com/w3c/wot-thing-description/pull/1522)
+    - [Discovery](https://github.com/w3c/wot-discovery/pull/331)
 - Completing Implementation Descriptions 
+
+More detailed instructions can be found in the READMEs for each deliverable:
+- [TD](TD/README.md)
+- [Discovery](Discovery/README.md)
+
+Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.06`:
+- [Testfest 2022.06](https://github.com/w3c/wot-testing/labels/Testfest%202022.06)
 
 ## Other
 - Completing draft Testimonials

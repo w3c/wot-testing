@@ -1,6 +1,8 @@
 #!/bin/bash
 
-PLAYGROUNDLOCATION=~/git/thingweb-playground/
+# Note: this needs to be updated for where you have installed thingweb-playground
+#PLAYGROUNDLOCATION=~/git/thingweb-playground/
+PLAYGROUNDLOCATION=~/Dev/thingweb-playground/
 
 # Ditto
 IMPLEMENTATION=Ditto
@@ -17,4 +19,15 @@ IMPLEMENTATION=Ditto
 # saywot
 # IMPLEMENTATION=saywot
 # node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+
+# intel-nodejs
+IMPLEMENTATION=intel-nodejs
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
+
+# intel-proxy
+# JUST a manual.csv, no TDs, so just copy it over, already named after implementation
+IMPLEMENTATION=intel-proxy
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
