@@ -30,14 +30,22 @@ Fady and McCool to do offline in prep for first call:
 
 To be done during event:
 - Capture input data
+    - TDs and TMs for the TD deliverable
 - Updating manual.csv files for each Implementation
     - Only new or replacement inputs need to be provided
     - Will be merged with old input data
 - Generate results
+    - Discovery generates these directly
+    - TD generates these using batchValidation script, which will be run daily
     - After merging with older input data
 - Updating Implementation Report Drafts
     - [TD](https://github.com/w3c/wot-thing-description/pull/1522)
+    - [Discovery](link)
 - Completing Implementation Descriptions 
+
+More detailed instructions can be found in the READMEs for each deliverable:
+- [TD](TD/README.md)
+- [Discovery](Discovery/README.md)
 
 ## Other
 - Completing draft Testimonials
