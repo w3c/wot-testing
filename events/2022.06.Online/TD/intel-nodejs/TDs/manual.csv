@@ -1,6 +1,6 @@
 "ID","Status","Comment"
 "bindings-requirements-scheme","null","Not checked yet"
-"bindings-server-accept","true",
+"bindings-server-accept","pass",
 "client-data-schema-accept-extras","null","n/a; not a consumer"
 "client-data-schema-no-extras","null","n/a; not a consumer"
 "client-data-schema","null","n/a; not a consumer"
@@ -8,7 +8,7 @@
 "privacy-auth-users-only","null","no auth checking, internal"
 "privacy-centralized-ids","null","check"
 "privacy-distributed-ids","null","check"
-"privacy-essential-metadata-only","true",
+"privacy-essential-metadata-only","pass",
 "privacy-id-metadata","null","check"
 "privacy-mutable-identifiers","null","check"
 "privacy-td-pii","null","not a personal device"
@@ -17,7 +17,7 @@
 "sec-body-name-json-pointer-creatable","null","feature not used"
 "sec-body-name-json-pointer","null","feature not used"
 "sec-body-name-json-pointer-type","null","feature not used"
-"sec-inj-no-intl-markup","true",
+"sec-inj-no-intl-markup","pass",
 "sec-inj-sanitize","null","n/a"
 "security-context-secure-fetch","null",
 "security-jsonld-expansion","null",
@@ -30,8 +30,8 @@
 "security-update-contexts","null",
 "sec-vuln-auto","null",
 "server-data-schema-extras","null","feature not used"
-"server-data-schema","true",
-"server-uri-template","true",
+"server-data-schema","pass",
+"server-uri-template","pass",
 "td-context-default-language-direction-heuristic","null","not in current editor's draft"
 "td-context-default-language-direction-independence","null",
 "td-context-default-language-direction-inference","null","not in current editor's draft"
@@ -39,49 +39,49 @@
 "td-context-ns-td10-namespace","null",
 "td-default-AdditionalResponseContentType","null",
 "td-default-alg","null","feature not used"
-"td-default-contentType","null","true"
+"td-default-contentType","null","pass"
 "td-default-format","null","feature not implemented"
-"td-default-http-method_get","true",
+"td-default-http-method_get","pass",
 "td-default-http-method","null","parent"
-"td-default-http-method_post","true",
+"td-default-http-method_post","pass",
 "td-default-http-method_put","null","feature not used"
-"td-default-idempotent","null","true"
+"td-default-idempotent","null","pass"
 "td-default-in-apikey","null","feature not used"
 "td-default-in-basic","null","feature not used"
 "td-default-in-bearer","null","feature not used"
 "td-default-in-digest","null","feature not used"
-"td-default-observable","true",
-"td-default-op-actions","true",
+"td-default-observable","pass",
+"td-default-op-actions","pass",
 "td-default-op-events","null","feature not used"
-"td-default-op-properties","true",
+"td-default-op-properties","pass",
 "td-default-qop","null","feature not used"
-"td-default-readOnly","true",
-"td-default-safe","true",
+"td-default-readOnly","pass",
+"td-default-safe","pass",
 "td-default-success","null","feature not used"
-"td-default-writeOnly","true",
+"td-default-writeOnly","pass",
 "td-expectedResponse-contentType","null","feature not used"
 "td-expectedResponse-default-contentType","null","feature not used"
 "td-format-validation-other-values","null","feature not used"
 "td-form-protocolbindings","null","feature not used"
 "td-json-open_accept-byte-order","null","not a consumer"
-"td-json-open_no-byte-order","true",
+"td-json-open_no-byte-order","pass",
 "td-ns-multilanguage-content-negotiation-no-multi","null","feature not used"
 "td-ns-multilanguage-content-negotiation","null","feature not used"
 "td-ns-multilanguage-content-negotiation-optional","null","feature not used"
 "td-processor-serialization","null","not a processor"
-"td-security-binding","true","has nosec; other security schemes managed in proxy"
-"td-security-combo-deprecation","true",
+"td-security-binding","pass","has nosec; other security schemes managed in proxy"
+"td-security-combo-deprecation","pass",
 "td-security-extension","null","feature not used"
 "td-security-in-query-over-uri","null","feature not used"
 "td-security-in-uri-variable","null","feature not used"
-"td-security-no-extras","true",
-"td-security-no-secrets","true",
+"td-security-no-extras","pass",
+"td-security-no-secrets","pass",
 "td-security-uri-variables-distinct","null","feature not used"
 "td-text-at-direction","null","feature not used"
 "td-text-direction-first-strong","null","not a consumer"
 "td-text-direction-language-tag","null","not a consumer"
 "td-vocab-hreflang--Link","null","feature not used"
-"td-vocabulary-defaults","true",
+"td-vocabulary-defaults","pass",
 "td-vocab-uriVariables--Thing","null","feature not used"
 "tm-compose-instanceName","null","feature not used"
 "tm-compose-name-collision","null","feature not used"
@@ -101,4 +101,4 @@
 "tm-tmRef-usecase","null","feature not used"
 "tm-tmRequired-resolver","null","feature not used"
 "tm-versioning","null","feature not used"
-"well-known-operation-types-only","true",
+"well-known-operation-types-only","pass",
