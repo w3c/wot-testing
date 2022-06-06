@@ -20,4 +20,5 @@ Repository for Web of Things (WoT) Testing purposes.
 Plugfest project descriptions, results, and discussions are kept in issues.  The following links
 reference the projects for current and past plugfests.  Note that issues for past plugfests are
 closed but are not deleted and can still be referenced.
-* [2022.03](https://github.com/w3c/wot-testing/labels/Plugfest%202022.03)
+* [2022.03 Plugfest](https://github.com/w3c/wot-testing/labels/Plugfest%202022.03)
+* [2022.06 Testfest](https://github.com/w3c/wot-testing/labels/Testfest%202022.06)
