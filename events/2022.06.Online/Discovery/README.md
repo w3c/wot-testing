@@ -1,4 +1,11 @@
 # WoT March 2022 Plugfest/Testfest
+
+## Prework
+- [ ] Update Implementation Report draft
+- [ ] Update template.csv
+- [ ] Update manual.csv 
+
+## Testfest
 - [ ] Capture test results (put in [Results](Results/README.md))
 - [ ] Describe each implementation (put in [Architecture/ImplDesc](../Architecture/ImplDescs))
 - [ ] Capture name and activity status of each implementation in [active.csv](active.csv)
