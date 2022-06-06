@@ -23,14 +23,18 @@ We also need to focus on gaps where features are at risk.
 Fady and McCool to do offline in prep for first call:
 - Organize instructions in appropriate README.md files and index (in email, copy here; example PR created)
 - Update Implementation Report templates and provide links and instructions (McCool)
+- Updating manual.csv files
 
 ## Contributions
-TODO: More detailed intructions (McCool)
+Example contribution: https://github.com/w3c/wot-testing/pull/312
 
 To be done during event:
 - Capture input data
+- Updating manual.csv files for each Implementation
+    - Only new or replacement inputs need to be provided
+    - Will be merged with old input data
 - Generate results
-- Generating manual.csv files
+    - After merging with older input data
 - Completing Implementation Descriptions 
 
 ## Other
