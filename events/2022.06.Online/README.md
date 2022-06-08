@@ -38,8 +38,10 @@ If you are participating in the testfest, please do the following:
   - For any discovery implementation, fill the `manual.csv` (https://github.com/w3c/wot-testing/blob/main/events/2022.06.Online/Discovery/manual.csv). It should be submitted like the automatic results above.
 
 - Contribution to TD specification
-  - Provide the TDs and TMs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results. You can see a contribution with both TD and TM at https://github.com/w3c/wot-testing/tree/main/events/2022.03.Online/TD/Ditto
+  - Provide the TDs and TMs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results. You can see a contribution with both TD and TM at https://github.com/w3c/wot-testing/tree/main/events/2022.03.Online/TD/Ditto.  NOTE: if your implementation is a pure consumer and does not have TDs, skip this step.
   - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.06.Online/TD/manual.csv) submit it. This file is needed for the manual results. This file should go in the folder of your implementation.
+  - Optional: update batchValidation.sh
+  - [Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
 
 - Contribution to Profiles specification
   - Provide the TDs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
@@ -53,24 +55,18 @@ More detailed instructions can be found in the READMEs for each deliverable:
 Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.06`:
 - [Testfest 2022.06](https://github.com/w3c/wot-testing/labels/Testfest%202022.06)
 
-### Old Instructions
+### Other Updates 
+After the input data has been updated as above, the following also needs to be done (by editors):
 
-[Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
-
-To be done during event:
-- Capture input data
-    - TDs and TMs for the TD deliverable
-- Updating manual.csv files for each Implementation
-    - Only new or replacement inputs need to be provided
-    - Will be merged with old input data
+- Merge new inputs from event into data/input_2022
 - Generate results
     - Discovery generates these directly
-    - TD generates these using batchValidation script, which will be run daily
-    - After merging with older input data
-- Updating Implementation Report Drafts
+    - TD generates these using batchValidation script (run manually)
+- Copy results over to appropriate delivery repo
+    - testing/inputs/results
+- Update Implementation Report Drafts
     - [TD](https://github.com/w3c/wot-thing-description/pull/1522)
     - [Discovery](https://github.com/w3c/wot-discovery/pull/331)
-- Completing Implementation Descriptions 
 
 
 
