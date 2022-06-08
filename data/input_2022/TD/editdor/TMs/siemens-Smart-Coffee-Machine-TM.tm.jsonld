@@ -1,7 +1,7 @@
 {
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
-		"https://www.w3.org/2022/wot/td/v1.1"
+		"https://www.w3.org/2022/wot/td/v1.1",
         {
             "@language": "en"
         }
@@ -37,8 +37,7 @@
             "description": "Current level of a particular resource. Requires resource id variable as uriVariables.\nThe property can also be overridden, which also requires resource id as uriVariables.",
             "uriVariables": {
                 "id": {
-                    "type": "string",
-                    "enum": "{{RESOURCES_SELECTION}}"
+                    "type": "string"
                 }
             }
         },
