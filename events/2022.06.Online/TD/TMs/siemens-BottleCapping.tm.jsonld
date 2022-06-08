@@ -1,0 +1,21 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+		"https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "saref": "https://w3id.org/saref#"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "title": "Bottle Capping TM",
+    "description": "Bottle Capper for 2 Bottle",
+    "properties": {
+        "operationCount": {
+            "@type": "saref:Measurement",
+            "readOnly": true,
+            "observable": true,
+            "description": "The amount of bottles processed",
+            "type": "number"
+        }
+    }
+}
