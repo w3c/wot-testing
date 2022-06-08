@@ -20,10 +20,8 @@ We also need to focus on gaps where features are at risk.
    - Details to follow
 
 ## Preparation
-Fady and McCool to do offline in prep for first call:
-- Organize instructions in appropriate README.md files and index (in email, copy here; example PR created)
-- Update Implementation Report templates and provide links and instructions (McCool)
-- Updating manual.csv files
+- Organize instructions in appropriate README.md files and index 
+- Update Implementation Report templates and provide links and instructions (McCool, Ege)
 
 ## Contributions
 [Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
