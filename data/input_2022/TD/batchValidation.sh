@@ -13,8 +13,11 @@ rm Results/$IMPLEMENTATION-TD.csv
 
 # ECLASS
 IMPLEMENTATION=ECLASS
-echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTATION-TM.csv Results/$IMPLEMENTATION-TD.csv -o Results/$IMPLEMENTATION
+rm Results/$IMPLEMENTATION-TM.csv
+rm Results/$IMPLEMENTATION-TD.csv
 
 # EDITDOR
 IMPLEMENTATION=editdor
@@ -57,6 +60,12 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # intel-proxy
 # only a csv file - manual results only
 IMPLEMENTATION=intel-proxy
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
+
+# Playground
+# only a csv file - manual results only
+IMPLEMENTATION=Playground
 echo "$IMPLEMENTATION"
 cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
