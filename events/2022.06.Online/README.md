@@ -34,7 +34,7 @@ If you are participating in the testfest, please do the following:
 - Contribution to Discovery specification
   - (if you have a directory) Provide the TDs of your TDD to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
   - (if you have a directory) Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.06.Online/TD/manual.csv) for the TD specification and submit it there. This file is needed for the manual results. This file should go in the folder of your implementation.
-  - (if you have a directory) Automatically test your implementation with https://github.com/farshidtz/wot-discovery-testing and submit the automatic results at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/Discovery. Example can be seen at `Inputs/intel-dir`.
+  - (if you have a directory) Automatically test your implementation with https://github.com/farshidtz/wot-discovery-testing and submit the automatic results at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/Discovery. 
   - For any discovery implementation, fill the `manual.csv` (https://github.com/w3c/wot-testing/blob/main/events/2022.06.Online/Discovery/manual.csv). It should be submitted like the automatic results above.
 
 - Contribution to TD specification
