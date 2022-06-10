@@ -1,0 +1,120 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "pg": "https://onedm.org/playground/",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "GenericOnOff",
+    "sdf:title": "Example Bluetooth mesh Generic OnOff Model",
+    "sdf:copyright": "Copyright 2020-2021 Bluetooth SIG, Inc. All rights reserved.",
+    "links": [
+        {
+            "href": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+            "rel": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-genericonoff.sdf.json",
+            "rel": "alternate"
+        }
+    ],
+    "version": {
+        "model": "2021-03-04"
+    },
+    "sdf:defaultNamespace": "pg",
+    "schemaDefinitions": {
+        "sdfObject~1GenericOnOff~1sdfData~1GenericOnOffData": {
+            "description": "the on/off state property",
+            "enum": [
+                {
+                    "sdf:choiceName": "Off"
+                },
+                {
+                    "sdf:choiceName": "On"
+                }
+            ]
+        },
+        "sdfObject~1GenericOnOff~1sdfData~1TransitionTimeSteps": {
+            "description": "Number of steps in the transition",
+            "type": "number",
+            "multipleOf": 1,
+            "minimum": 0,
+            "maximum": 63
+        },
+        "sdfObject~1GenericOnOff~1sdfData~1StepResolution": {
+            "description": "Step Resolution, time per step",
+            "enum": [
+                {
+                    "sdf:choiceName": "100 Milliseconds"
+                },
+                {
+                    "sdf:choiceName": "1 Second"
+                },
+                {
+                    "sdf:choiceName": "10 Seconds"
+                },
+                {
+                    "sdf:choiceName": "10 Minutes"
+                }
+            ]
+        },
+        "sdfObject~1GenericOnOff~1sdfData~1DelayData": {
+            "description": "delay in increments of 5mS",
+            "type": "number",
+            "unit": "s",
+            "multipleOf": 0.005,
+            "minimum": 0,
+            "maximum": 1.275
+        }
+    },
+    "actions": {
+        "OnOffGet": {
+            "description": "Get the status of the On/Off server",
+            "output": {
+                "type": "object",
+                "properties": {
+                    "PresentOnOff": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1GenericOnOffData"
+                    },
+                    "TargetOnOff": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1GenericOnOffData"
+                    },
+                    "RemainingTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1StepResolution"
+                    }
+                }
+            }
+        },
+        "OnOffSet": {
+            "description": "Set the On/Off server state with time and delay parameters",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "OnOff": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1GenericOnOffData"
+                    },
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1StepResolution"
+                    },
+                    "Delay": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1DelayData"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "OnOff": {
+            "tm:ref": "#/schemaDefinitions/sdfObject~1GenericOnOff~1sdfData~1GenericOnOffData",
+            "observable": true
+        }
+    }
+}

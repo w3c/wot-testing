@@ -1,0 +1,38 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "muscleoxygensaturation",
+    "tm:required": [
+        "/properties/muscleoxygensaturation"
+    ],
+    "sdf:title": "Muscle Oxygen Saturation",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-08-20"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage. The smo2 Property is a read-only value that is provided by the server.",
+    "properties": {
+        "muscleoxygensaturation": {
+            "description": "This Property describes the muscle oxygen saturation (SmO2), which is the percentage of hemoglobin that is saturated with oxygen in the capillaries of a muscle. The unit is percentage.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-muscleoxygensaturation.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

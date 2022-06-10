@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "colour.saturation",
+    "tm:required": [
+        "/properties/colourSaturation"
+    ],
+    "sdf:title": "Colour Saturation",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a Colour saturation value. The Property \"colourSaturation\" is an integer. A \"colourSaturation\" has a range of [0,100]. A \"colourSaturation\" value of 0 means producing black and white images. A \"colourSaturation\" value of 50 means producing device specific normal colour images. A \"colourSaturation\" value of 100 means producing device very full colour images.",
+    "properties": {
+        "colourSaturation": {
+            "description": "The colour saturation value.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-colour_saturation.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

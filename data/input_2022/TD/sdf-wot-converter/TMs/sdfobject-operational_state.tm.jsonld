@@ -1,0 +1,75 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "operational.state",
+    "sdf:title": "Operational State",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the operational and job states on a device. The states can be read or set, setting indicates a desired state. A device may reject an attempt to set a state that would result in adverse operational characteristics. The Property \"machineStates\" is an array of the possible operational states. The Property \"currentMachineState\" is the current state of operation of the device. The Property \"jobStates\" is an array of the possible job states. The Property \"currentJobState\" is the currently active jobState. The Property \"runningTime\" is the ISO8601 encoded elapsed time in the current operational state. The Property \"remainingTime\" is the ISO8601 encoded time till completion of the current operational state. The Property \"progressPercentage\" is the percentage completeness of the current jobState.",
+    "properties": {
+        "currentMachineState": {
+            "description": "The current state of operation of the device.",
+            "type": "string",
+            "observable": true
+        },
+        "currentJobState": {
+            "description": "THe currently active jobState.",
+            "type": "string",
+            "observable": true
+        },
+        "machineStates": {
+            "description": "The array of the possible operational states.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "runningTime": {
+            "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
+            "type": "string",
+            "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
+            "observable": true
+        },
+        "remainingTime": {
+            "description": "A string representing duration formatted as defined in ISO 8601. Allowable formats are: P[n]Y[n]M[n]DT[n]H[n]M[n]S, P[n]W, P[n]Y[n]-M[n]-DT[0-23]H[0-59]:M[0-59]:S, and P[n]W, P[n]Y[n]M[n]DT[0-23]H[0-59]M[0-59]S. P is mandatory, all other elements are optional, time elements must follow a T.",
+            "type": "string",
+            "pattern": "^(P(?!$)([0-9]+Y)?([0-9]+M)?([0-9]+W)?([0-9]+D)?((T(?=[0-9]+[HMS])([0-9]+H)?([0-9]+M)?([0-9]+S)?)?))$|^(P[0-9]+W)$|^(P[0-9]{4})-(1[0-2]|0[1-9])-(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9]):([0-5][0-9]):([0-5][0-9])$|^(P[0-9]{4})(1[0-2]|0[1-9])(3[0-1]|2[0-9]|1[0-9]|0[1-9])T(2[0-3]|1[0-9]|0[1-9])([0-5][0-9])([0-5][0-9])$",
+            "observable": true
+        },
+        "progressPercentage": {
+            "description": "The percentage completeness of the current jobState.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        },
+        "jobStates": {
+            "description": "The Array of the possible job states.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-operational_state.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

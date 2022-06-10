@@ -1,0 +1,44 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "selectablelevels",
+    "tm:required": [
+        "/properties/targetlevel"
+    ],
+    "sdf:title": "Selectable Levels",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource provides a set of device defined levels that can be selected for an operation. For example where a humidifier has a discrete set that model different humidity levels that can be set. The Property \"availablelevels\" is an array of the levels that can be selected, these can be a number or an integer (as subset of integer). The Property \"targetlevel\" is the level that has currently been selected and is written to in order to select a new level. When retrieved the targetlevel provides the actual value that has been selected.",
+    "properties": {
+        "targetlevel": {
+            "description": "The target level from the available selectable set",
+            "type": "number",
+            "observable": true
+        },
+        "availablelevels": {
+            "description": "The set of levels to select from.",
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-selectablelevels.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

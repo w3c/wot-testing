@@ -1,0 +1,82 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "printer.3d",
+    "tm:required": [
+        "/properties/3dprinttype",
+        "/properties/printsizex",
+        "/properties/printsizey",
+        "/properties/printsizez",
+        "/properties/wanconnected",
+        "/properties/memorysize"
+    ],
+    "sdf:title": "3D Printer",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the attributes associated with 3D Printer. The type of 3D printing technology is specified by an enumerated string value. The maximum sizes in mm are included for the x, y, and z dimensions. A designation of whether the device is capable of WAN connectivity is represented in a boolean. The memory capacity is captured in MB.",
+    "properties": {
+        "printsizey": {
+            "description": "This Property represents the maximum size of printing object in the direction of Y-axis. The unit is mm.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "memorysize": {
+            "description": "This Property represents the total memory size of the printer. The unit is MB(Mega Bytes)",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "3dprinttype": {
+            "description": "The type of 3D printing technology.",
+            "type": "string",
+            "enum": [
+                "Fused Filament Fabrication",
+                "Fused Deposition Modeling",
+                "Digital Light Processing",
+                "Powder Bed & inkjet head 3D Printing",
+                "Photopolymer Jetting Technology",
+                "Laminated Object Manufacturing",
+                "Stereolithography Apparatus",
+                "Selective Laser Sintering",
+                "Unknown"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "wanconnected": {
+            "description": "This Property indicates the connectivity capability of the 3D printer. If the value is false, the printer does not have network facility to Wide Area Network such as internet and GSM. If the value is true, the printer has network connectivity",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "printsizex": {
+            "description": "This Property represents the maximum size of printing object in the direction of X-axis. The unit is mm.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "printsizez": {
+            "description": "This Property represents the maximum size of printing object in the direction of Z-axis. The unit is mm.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-printer_3d.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

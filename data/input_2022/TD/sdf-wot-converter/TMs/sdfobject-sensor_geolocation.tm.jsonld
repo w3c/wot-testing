@@ -1,0 +1,79 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.geolocation",
+    "tm:required": [
+        "/properties/latitude",
+        "/properties/longitude",
+        "/properties/alt"
+    ],
+    "sdf:title": "Geolocation",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the properties associated with the current geolocation coordinate. Geolocation is a geolocation coordinate data. The Property \"latitude\" is a device's current Latitude coordinate (degrees). The Property \"longitude\" is a device's current Longitude coordinate (degrees). The Property \"alt\" is a device's current distance (metres) above or below 'local' sea-level. The Property \"accuracy\" is the accuracy level of the latitude and longitude coordinates (metres). The Property \"altitudeAccuracy\" is the accuracy level of the altitude coordinates (metres). The Property \"heading\" is a direction of travel of device (degree). The Property \"speed\" is a device's current velocity (metres per second).",
+    "properties": {
+        "longitude": {
+            "description": "The Device's Current Longitude coordinate (degrees).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "heading": {
+            "description": "The direction of travel of the Device (degree).",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 360,
+            "observable": true,
+            "readOnly": true
+        },
+        "latitude": {
+            "description": "The Device's Current Latitude coordinate (degrees).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "altitudeAccuracy": {
+            "description": "The accuracy level of the altitude coordinates (metres).",
+            "type": "number",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "alt": {
+            "description": "The current distance (metres) above or below 'local' sea-level.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "accuracy": {
+            "description": "The accuracy level of the latitude and longitude coordinates (metres).",
+            "type": "number",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "speed": {
+            "description": "The Device's current velocity (metres per second).",
+            "type": "number",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_geolocation.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

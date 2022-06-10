@@ -1,0 +1,42 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "clock",
+    "tm:required": [
+        "/properties/datetime"
+    ],
+    "sdf:title": "Clock",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-27"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the properties associated with clock and time. Clock is a time information. The Property \"datetime\" is using RFC3339 datetime format (e. g: \"2007-04-05T14:30Z\") (Time+Date+Timezone) The Property \"countdown\" is the desired total seconds for countdown.",
+    "properties": {
+        "countdown": {
+            "description": "The desired total seconds for countdown.",
+            "type": "number",
+            "minimum": 0,
+            "observable": true
+        },
+        "datetime": {
+            "description": "Rhe date time using RFC3339 datetime format (e.g: 2007-04-05T14:30:00Z, 2007-04-05T14:30:00+09:00).",
+            "type": "string",
+            "format": "date-time",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-clock.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

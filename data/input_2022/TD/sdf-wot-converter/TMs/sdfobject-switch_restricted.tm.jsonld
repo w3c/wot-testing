@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "switch.restricted",
+    "tm:required": [
+        "/properties/state"
+    ],
+    "sdf:title": "Restricted Switch",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "links": [
+        {
+            "href": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+            "rel": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-switch_restricted.sdf.json",
+            "rel": "alternate"
+        }
+    ],
+    "version": {
+        "model": "2019-11-19"
+    },
+    "description": "This Resource describes a switch(on/off) restricting UPDATE for 'on'. The Property \"state\" is a Boolean. A state of True means that the switch is turned on. A state of False means that the switch is turned off.",
+    "properties": {
+        "state": {
+            "description": "The status of the restricted switch.",
+            "type": "boolean",
+            "observable": true
+        }
+    }
+}

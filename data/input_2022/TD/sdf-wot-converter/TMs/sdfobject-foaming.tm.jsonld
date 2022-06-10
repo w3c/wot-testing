@@ -1,0 +1,52 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "foaming",
+    "tm:required": [
+        "/properties/foamstrength"
+    ],
+    "sdf:title": "Foaming",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the attributes associated with foaming. The Property \"foamstrength\" of the liquid is represented as an integer. The foam strength is an integer, the range of which may be enforced by the presence of the Property \"range\".",
+    "properties": {
+        "foamstrength": {
+            "description": "The desired foaminess of the liquid.",
+            "type": "integer",
+            "observable": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-foaming.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

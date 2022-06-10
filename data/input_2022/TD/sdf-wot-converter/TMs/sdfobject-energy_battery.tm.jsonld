@@ -1,0 +1,82 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "energy.battery",
+    "tm:required": [
+        "/properties/batterythreshold"
+    ],
+    "sdf:title": "Battery",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-06-18"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the attributes associated with a battery. The Property \"charge\" is an integer showing the current battery charge level as a percentage in the range 0 (fully discharged) to 100 (fully charged). The Property \"capacity\" represents the total capacity of battery in Amp Hours (Ah). The \"charging\" status and \"discharging\" status are represented by boolean values set to \"true\" indicating enabled and \"false\" indicating disabled. Low battery status is represented by a boolean value set to \"true\" indicating low charge level and \"false\" indicating otherwise, based upon the battery threshold represented as a percentage.",
+    "properties": {
+        "discharging": {
+            "description": "The status of discharging.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "lowbattery": {
+            "description": "The status of the low battery warning based upon the defined threshold.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "capacity": {
+            "description": "The total capacity in Amp-hours (Ah).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "batterythreshold": {
+            "description": "The threshold percentage for the low battery warning.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true
+        },
+        "charge": {
+            "description": "The current charge percentage.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        },
+        "charging": {
+            "description": "The status of charging.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "defect": {
+            "description": "Battery defect detected. True = defect, False = no defect",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "timestamp": {
+            "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-energy_battery.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

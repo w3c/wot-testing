@@ -1,0 +1,47 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "mode",
+    "tm:required": [
+        "/properties/modes"
+    ],
+    "sdf:title": "Mode",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the modes of operation that a Device can provide. The mode can be read or set. The Property \"supportedModes\" is an array of possible modes the device supports. The Property \"modes\" is an array of the currently active mode(s).",
+    "properties": {
+        "modes": {
+            "description": "Desired mode",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true
+        },
+        "supportedModes": {
+            "description": "The array of possible modes the device supports.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-mode.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

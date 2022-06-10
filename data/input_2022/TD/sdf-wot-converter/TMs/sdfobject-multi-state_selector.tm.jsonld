@@ -1,0 +1,62 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "oma": "https://onedm.org/ecosystem/oma",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "Multi-state_Selector",
+    "tm:required": [
+        "/properties/Multi-state_Input"
+    ],
+    "sdf:title": "OMA LwM2M Multi-state Selector (Object ID 3348)",
+    "sdf:copyright": "Copyright 2019 Open Mobile Alliance.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2022-02-21"
+    },
+    "sdf:defaultNamespace": "oma",
+    "title": "Multi-state Selector",
+    "description": "This IPSO object is used to represent the state of a Multi-state selector switch with a number of fixed positions.",
+    "properties": {
+        "Multi-state_Input": {
+            "title": "Multi-state Input",
+            "description": "The current state of a Multi-state input or selector.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "Application_Type": {
+            "title": "Application Type",
+            "description": "The application type of the sensor or actuator as a string depending on the use case.",
+            "type": "string",
+            "observable": true
+        },
+        "Timestamp": {
+            "title": "Timestamp",
+            "description": "The timestamp of when the measurement was performed.",
+            "type": "number",
+            "sdf:sdfType": "unix-time",
+            "observable": true,
+            "readOnly": true
+        },
+        "Fractional_Timestamp": {
+            "title": "Fractional Timestamp",
+            "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+            "type": "number",
+            "unit": "s",
+            "minimum": 0,
+            "maximum": 1,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-multi-state_selector.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

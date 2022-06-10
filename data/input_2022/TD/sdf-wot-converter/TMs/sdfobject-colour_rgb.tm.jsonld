@@ -1,0 +1,57 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "colour.rgb",
+    "tm:required": [
+        "/properties/rgbValue"
+    ],
+    "sdf:title": "Colour RGB",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource specifies the actual colour in the RGB space represented as an array of integers. Each colour value is described with a Red, Green, Blue component. These colour values are encoded as an array of integer values ([R,G,B]). The minimum and maximum colour value per component may be described by the Property \"range\". When \"range\" is omitted, then the \"range\" is [0,255].",
+    "properties": {
+        "rgbValue": {
+            "description": "The RGB value; the first item is the R, second the G, third the B.",
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-colour_rgb.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

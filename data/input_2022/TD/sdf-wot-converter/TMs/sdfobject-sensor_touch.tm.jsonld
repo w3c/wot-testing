@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.touch",
+    "tm:required": [
+        "/properties/value"
+    ],
+    "sdf:title": "Touch Sensor",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes whether a touch has been sensed or not. The Property \"value\" is a boolean. A value of 'true' means that touch has been sensed. A value of 'false' means that touch not been sensed.",
+    "properties": {
+        "value": {
+            "description": "The touch sensor, true = sensed, false = not sensed.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_touch.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

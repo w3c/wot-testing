@@ -1,0 +1,62 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "waterinfo",
+    "tm:required": [
+        "/properties/currentwatertype"
+    ],
+    "sdf:title": "Water Info",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-06-13"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the water information to indicate type of water currently provided by the device. The water type can be read or set. The Property \"supportedwatertypes\" is an array of the possible water types are defined by the enumeration [\"cold\", \"hot\", \"ambient\", \"ice\"]. The Property \"supportedadditivetypes\" is an array of the possible additive types for water. The additive types mean optional types that can be added to the specific water type according to Client's preference and are defined by the enumeration [\"none\", \"soda\", \"mineral\"]. If absent, the default value is \"none\". The Property \"currentwatertype\" is the currently desired water type. The Property \"currentadditivetypes\" is the currently desired additive type(s). For example, if \"cold\" is selected with the \"currentwatertype\", \"soda\" and \"mineral\" or both can be selected as \"currentadditivetypes\". Note that if \"hot\" is selected with the \"currentwatertype\", \"soda\" and \"mineral\" may be restricted for the \"currentadditivetypes\".",
+    "properties": {
+        "supportedwatertypes": {
+            "description": "The array of the possible water types.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "supportedadditivetypes": {
+            "description": "The array of the possible additive types.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "currentwatertype": {
+            "description": "Set the desired water type.",
+            "type": "string",
+            "observable": true
+        },
+        "currentadditivetypes": {
+            "description": "Set the desired additive type(s).",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string"
+            },
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-waterinfo.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

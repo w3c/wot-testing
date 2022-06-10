@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "energy.overload",
+    "tm:required": [
+        "/properties/value"
+    ],
+    "sdf:title": "Energy Overload/Circuit Breaker",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes whether an energy overload detector/circuit breaker is currently tripped. The Property \"value\" is a boolean. A value of 'true' means that energy overload has been tripped. A value of 'false' means that energy overload has not been tripped.",
+    "properties": {
+        "value": {
+            "description": "The energy overload indication,true = tripped, false = not tripped.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-energy_overload.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

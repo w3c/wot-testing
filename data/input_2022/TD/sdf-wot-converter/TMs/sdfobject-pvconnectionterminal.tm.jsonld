@@ -1,0 +1,77 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "pvconnectionterminal",
+    "tm:required": [
+        "/properties/ratedarrayvoltage",
+        "/properties/ratedarraycurrent",
+        "/properties/arrayvoltage",
+        "/properties/arraycurrent",
+        "/properties/timestamp"
+    ],
+    "sdf:title": "PV array system connection terminal (IEC 61850)",
+    "sdf:copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-06-13"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes functions for the control and monitoring of IEC 61850 based PV Array system connection terminal.",
+    "properties": {
+        "ratedarrayvoltage": {
+            "description": "Rated voltage of array (Nominal values of maximum power voltage * number of modules) (V)",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "ratedarraycurrent": {
+            "description": "Rated current of array (Nominal values of maximum power current * number of modules) (A), defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "arrayvoltage": {
+            "description": "Output voltage of array in volts (V).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "arraycurrent": {
+            "description": "Output current of array in Ampere (A).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "leakagecurrent": {
+            "description": "The leakage current in mA.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "insulationresistance": {
+            "description": "Insulation resistance of circuit breaker (M Ohm).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "timestamp": {
+            "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-pvconnectionterminal.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

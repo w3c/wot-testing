@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "switch.fault",
+    "tm:required": [
+        "/properties/state"
+    ],
+    "sdf:title": "Fault Interrupter Switch",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-11-14"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a fault interrupter switch (on/off/faulted). The Property \"state\" is an enum. A state of \"on\" means that the switch is on. A state of \"off\" means that the switch is off. A state of \"faulted\" means the switch is faulted, in such a state an UPDATE is not possible.",
+    "properties": {
+        "state": {
+            "description": "The status of the switch.",
+            "type": "string",
+            "enum": [
+                "on",
+                "off"
+            ],
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-switch_fault.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

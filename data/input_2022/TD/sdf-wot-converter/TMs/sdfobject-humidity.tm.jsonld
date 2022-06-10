@@ -1,0 +1,45 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "humidity",
+    "tm:required": [
+        "/properties/desiredHumidity"
+    ],
+    "sdf:title": "Humidity",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a sensed or desired humidity. The Property \"humidity\" is an integer describing the percentage measured relative humidity. The Property \"desiredHumidity\" is an integer showing the desired target relative humidity.",
+    "properties": {
+        "desiredHumidity": {
+            "description": "Desired value for Humidity",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true
+        },
+        "humidity": {
+            "description": "The current sensed value for humidity.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-humidity.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

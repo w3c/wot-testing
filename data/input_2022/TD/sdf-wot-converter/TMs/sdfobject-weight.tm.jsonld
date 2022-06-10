@@ -1,0 +1,73 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "weight",
+    "tm:required": [
+        "/properties/weight",
+        "/properties/units"
+    ],
+    "sdf:title": "Weight",
+    "sdf:copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the Properties associated with weight of an object. The unit is a single value that is one of kg, g, lb or oz. If the unit Property is missing the default is kilograms [kg]. The unit Property is a read-only value that is provided by the server. When range is omitted the default is 0 to +MAXFLOAT.",
+    "properties": {
+        "weight": {
+            "description": "Weight of an object",
+            "type": "number",
+            "minimum": 0.0,
+            "observable": true
+        },
+        "units": {
+            "description": "Weight unit",
+            "type": "string",
+            "default": "kg",
+            "enum": [
+                "kg",
+                "g",
+                "lb",
+                "oz"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-weight.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

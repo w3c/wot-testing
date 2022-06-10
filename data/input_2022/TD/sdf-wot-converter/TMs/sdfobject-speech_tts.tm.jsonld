@@ -1,0 +1,52 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "speech.tts",
+    "tm:required": [
+        "/properties/utterance"
+    ],
+    "sdf:title": "Speech Synthesis-TTS",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource may be created on the OCF Server that is capable of rendering speech by an OCF Client and allows the client to provide an SSML document with text to render or may be created on the OIC Server by some resident application. The audio rendered is at this stage local to the Server (i. e. not streamed). The utterance is an SSML document. The supportedLanguages is an array of the RFC5646 defined language tags that are supported. The supportedVoices is an SSML document fragment indicating the voices that are supported. Utterance in the example shall be a properly escaped (JSON rules) SSML document. An example: \"<?xml version=\"1. 0\" encoding=\"ISO-8859-1\"?> <speak version=\"1. 1\" xmlns=\"http://www. w3. org/2001/10/synthesis\" xmlns:xsi=\"http://www. w3. org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www. w3. org/2001/10/synthesis http://www. w3. org/TR/speech-synthesis11/synthesis. xsd\" xml:lang=\"en-US\"> The title of the movie is: \"Monty Pythons The Meaning of Life\" which is directed by Terry Jones. </speak\"",
+    "properties": {
+        "supportedLanguages": {
+            "description": "The array of supported language tags.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "supportedVoices": {
+            "description": "The SSML document fragment indicating supported voices.",
+            "type": "string",
+            "maxLength": 1024,
+            "observable": true,
+            "readOnly": true
+        },
+        "utterance": {
+            "description": "The SSML document including the speech body.",
+            "type": "string",
+            "maxLength": 1024,
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-speech_tts.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

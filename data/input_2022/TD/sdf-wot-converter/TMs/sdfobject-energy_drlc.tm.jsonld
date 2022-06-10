@@ -1,0 +1,64 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "energy.drlc",
+    "tm:required": [
+        "/properties/DRType"
+    ],
+    "sdf:title": "Demand Response Load Control (DRLC).",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-07-09"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes any to be applied or currently being applied DRLC signal. The Property \"DRType\" is the ApplianceLoadReductionType defined in Zigbee/HA Smart Energy Profile 2. 0. The Property \"start\" is a string containing an RFC3339 encoded start time. The Property \"duration\" value is in minutes. The Property \"Override\" indicates whether the consumer has overridden the request (true) or not (false). The Resource provides the current DRLC action that is being applied. A duration of 0 (zero) means that no DRLC is currently active.",
+    "properties": {
+        "start": {
+            "description": "The start time for the application of DR.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true
+        },
+        "duration": {
+            "description": "The duration of the to be applied DR type in minutes. A value of 0 means no applied DR.",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true
+        },
+        "override": {
+            "description": "Whether the consumer has overriden the application of DR.",
+            "type": "boolean",
+            "observable": true
+        },
+        "DRType": {
+            "description": "The to be applied demand-response type.",
+            "type": "integer",
+            "observable": true
+        },
+        "drlevel": {
+            "description": "Indicator of the strength of the DR response that is requested; 0-0%, 1-30%, 2-50%, 3-70%",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3,
+            "observable": true
+        },
+        "mandate": {
+            "description": "Whether overriding the DR request by the consumer is allowed",
+            "type": "boolean",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-energy_drlc.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "pulsatileoccurrence",
+    "tm:required": [
+        "/properties/occurrence"
+    ],
+    "sdf:title": "Pulsatile Occurrence for Pulse Oximeter",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-04"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the Properties associated with a Pulsatile Occurrence detected by a Pulse Oximeter. The occurrence Property is a read-only value that is provided by the server. When range (from \"oic. r. baseresource\") is omitted the default is 0 to +MAXFLOAT.",
+    "properties": {
+        "occurrence": {
+            "description": "This Property describes the Pulsatile Occurrence detected by a Pulse Oximeter. BEAT - Pulsatile occurrence has occurred. BEAT_MAX_INRUSH - Maximal inrush of the pulsatile wave has occurred. NOS - No pulsatile event occurred.",
+            "type": "string",
+            "default": "NOS",
+            "enum": [
+                "BEAT",
+                "BEAT_MAX_INRUSH",
+                "NOS"
+            ],
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-pulsatileoccurrence.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "openlevel",
+    "tm:required": [
+        "/properties/openLevel"
+    ],
+    "sdf:title": "Open Level",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes how open or ajar an entity such as a window, door, blind or shutter is. The Property \"openLevel\" can be read (acting as a sensor). The \"openLevel\" can also be set (acting as an actuator). The \"openLevel\" is device dependent across the range provided. When the Property \"range\" is omitted then 0 to 100 is assumed where 0 means closed, 100 means fully open. If a \"range\" is provided then the lower bound=closed, upper bound=open. If Property \"step\" is present then it represents the increment between possible values; if not provided 1 is assumed.",
+    "properties": {
+        "openLevel": {
+            "description": "How open or ajar the entity is.",
+            "type": "integer",
+            "observable": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-openlevel.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

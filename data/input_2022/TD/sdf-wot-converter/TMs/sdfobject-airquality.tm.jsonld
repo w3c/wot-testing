@@ -1,0 +1,80 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "airquality",
+    "tm:required": [
+        "/properties/contaminantvalue",
+        "/properties/contaminanttype",
+        "/properties/valuetype"
+    ],
+    "sdf:title": "Air Quality",
+    "sdf:copyright": "copyright 2016-2017, 2019, 2020 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2020-08-13"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a qualitative or measured contaminant that can be used to infer Air Quality. The Property \"valueType\" indicates a qualitative or measured reading within the contaminantvalue Property. The Property \"contaminantvalue\" can contain the actual sensed value with units per contaminant type. Qualitative is a representative value within the range provided where the minimum value is minimum contamination and maximum value is maximum contamination for the specific contaminant. The Property \"contaminantvalue\" contains the actual measured or qualitative level. The Property \"range\" contains the allowed range for the value that is being reported. If valueType is 'Measured' then the units for the contaminant types are as follows: Methanol (also known as Formaldehyde): CH2O (ug/m^3), Carbon Dioxide: CO2 (ppm), Carbon Monoxide: CO (ppm), Particulate Matter (less than 1 micron in diameter): PM1 (ug/m^3), Particulate Matter (less than 2. 5 microns in diameter): PM2. 5 (ug/m^3), Particulate Matter (less than 10 microns in diameter): PM10 (ug/m^3), Volatile Organic Compounds: VOC (ug/m^3), Ozone: 03 (ppm), Nitrogen dioxide: NO2 (ppm), Sulphur dioxide: SO2 (ppm)",
+    "properties": {
+        "contaminanttype": {
+            "description": "The contaminant being measured.",
+            "type": "string",
+            "enum": [
+                "CH2O",
+                "CO2",
+                "CO",
+                "PM1",
+                "PM2.5",
+                "PM10",
+                "VOC",
+                "Smoke",
+                "Odor",
+                "AirPollution",
+                "NO2",
+                "SO2",
+                "O3"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "valuetype": {
+            "description": "The property that indicates whether the provided value is qualitative or measured.",
+            "type": "string",
+            "enum": [
+                "Qualitative",
+                "Measured"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "contaminantvalue": {
+            "description": "The measured or qualitative value for the contaminant.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-airquality.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

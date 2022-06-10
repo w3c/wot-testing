@@ -1,0 +1,43 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.heart.zone",
+    "tm:required": [
+        "/properties/heartRateZone"
+    ],
+    "sdf:title": "Heart Rate Zone",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-28"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a measured heart rate by the current Zone using the Zoladz method. The Zoladz method defines Zones based on maximum heart rate; Zone 1 is the lowest, Zone 5 is the highest. The heartRateZone is an enumeration containing one of: \"Zone1\", \"Zone2\", \"Zone3\", \"Zone4\", and \"Zone5\".",
+    "properties": {
+        "heartRateZone": {
+            "description": "Current heart rate zone based on the Zoladz system.",
+            "type": "string",
+            "enum": [
+                "Zone1",
+                "Zone2",
+                "Zone3",
+                "Zone4",
+                "Zone5"
+            ],
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_heart_zone.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

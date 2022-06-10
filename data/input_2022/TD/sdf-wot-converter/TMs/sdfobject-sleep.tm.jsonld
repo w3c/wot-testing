@@ -1,0 +1,137 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sleep",
+    "tm:required": [
+        "/properties/awake",
+        "/properties/nrem1",
+        "/properties/nrem2",
+        "/properties/nrem3",
+        "/properties/rem"
+    ],
+    "sdf:title": "Sleep",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2018-07-12"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the Properties associated with Sleep. Sleep shows the time spent in each of the sleep stages (awake, nrem1, nrem2, nrem3, nrem4, rem, light sleep, deep sleep), along with a sleep score indicating the quality of sleep.",
+    "properties": {
+        "awake": {
+            "description": "Time spent in Awake stage (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "nrem1": {
+            "description": "Time spent in Non Rapid Eye Movement stage 1 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "nrem2": {
+            "description": "Time spent in Non Rapid Eye Movement stage 2 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "nrem3": {
+            "description": "Time spent in Non Rapid Eye Movement stage 3 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "nrem4": {
+            "description": "Time spent in Non Rapid Eye Movement stage 4 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "rem": {
+            "description": "Time spent in Rapid Eye Movement (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "lightsleep": {
+            "description": "Time spent in Light Sleep stage, consisting in NREM stages 1 and 2 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "deepsleep": {
+            "description": "Time spent in Deep Sleep stage, consisting in NREM stages 3 and 4 (in seconds)",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "sleepscore": {
+            "description": "Score computed from the time spent in each sleep stage, indicative of the quality of sleep",
+            "type": "number",
+            "minimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "range_phases": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step_phases": {
+            "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "range_score": {
+            "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step_score": {
+            "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sleep.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

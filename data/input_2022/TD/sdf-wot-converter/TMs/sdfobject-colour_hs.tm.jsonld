@@ -1,0 +1,59 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "colour.hs",
+    "tm:required": [
+        "/properties/hue",
+        "/properties/saturation"
+    ],
+    "sdf:title": "Colour Hue and Saturation",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the colour using hue-saturation conventions. The Property \"hue\" is the hue angle, it is a number value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). A Device that does not support fractional hue angles can provide integer values. If Property \"precision\" is provided it applies to the hue angle. The Property \"saturation\" is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property \"saturation\" can be converted to a percentage by saturation/maximumsaturation X 100; where maximumsaturation is 32767 if the Property itself is not present. The Property \"maximumsaturation\" is the upper bound on the saturation supported by the Device. If not present the maximum value for saturation is 32767. The Resource provides the colour using hue and saturation conventions.",
+    "properties": {
+        "hue": {
+            "description": "The hue angle as defined by the CIECAM02 model definition.",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 360.0,
+            "observable": true
+        },
+        "saturation": {
+            "description": "The saturation as defined by the CIECAM02 model definition.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 32767,
+            "observable": true
+        },
+        "maximumsaturation": {
+            "description": "The maximum supported value of \"saturation\" for this Device.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 32767,
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-colour_hs.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

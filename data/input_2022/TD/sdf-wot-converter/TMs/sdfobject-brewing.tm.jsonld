@@ -1,0 +1,50 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "brewing",
+    "tm:required": [
+        "/properties/amountrequested"
+    ],
+    "sdf:title": "Brewing",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the attributes associated with brewing. This resource is used for configuration only. The Operation of the Device is handled independently of this Resource. The amount requested is in ml. The strength of a brewed drink is an integer, the range of which may be enforced by the presence of a strengthrange Property.",
+    "properties": {
+        "strength": {
+            "description": "The strength of a brewed drink.",
+            "type": "integer",
+            "observable": true
+        },
+        "amountrequested": {
+            "description": "The amount requested in ml.",
+            "type": "integer",
+            "observable": true
+        },
+        "strengthrange": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-brewing.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

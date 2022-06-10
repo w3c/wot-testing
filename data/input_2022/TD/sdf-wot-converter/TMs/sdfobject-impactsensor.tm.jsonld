@@ -1,0 +1,58 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "impactsensor",
+    "tm:required": [
+        "/properties/impactstatus"
+    ],
+    "sdf:title": "Impact Sensor",
+    "sdf:copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-21"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource provides a status and properties of an impact sensor. Included is the current status (boolean), horizontal and vertical direction (in degrees) and impact level (g force).",
+    "properties": {
+        "impactstatus": {
+            "description": "The \"impactstatus\" Property indicates the impact as: \"true\" A physical impact is detected, \"false\" Normal status, an impact is not detected.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "impactlevel": {
+            "description": "The \"impactlevel\" Property provides the level of impact. The unit is in \"G\" (G-force).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "impactdirectionhorizontal": {
+            "description": "The \"impactdirectionhorizontal\" Property shows a horizontal direction where the impact comes from. The value is 0 to 360 degrees. 0 is the front of the sensor and clockwise increment.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 360,
+            "observable": true,
+            "readOnly": true
+        },
+        "impactdirectionvertical": {
+            "description": "The \"impactdirectionvertical\" Property shows a vertical direction where the impact comes from. The value is 0 to 360 degrees. 0 is the front of the sensor and upward increment.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 360,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-impactsensor.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}
