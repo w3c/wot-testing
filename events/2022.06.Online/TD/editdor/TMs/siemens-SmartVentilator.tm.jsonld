@@ -15,9 +15,15 @@
             "href": "./LED.tm.jsonld",
             "type": "application/tm+json",
             "instanceName": "led"
+          },
+          {
+            "rel": "icon",
+            "href": "https://cdn-icons-png.flaticon.com/512/3227/3227806.png",
+            "type": "image/png",
+            "sizes" : "512×512"
           }
         ],
         "properties" : {
-            "status" : {"type": "string", "enum": ["On", "Off", "Error"]}
+            "status" : {"type": "string", "pattern":"[On | Off | Error]"}
         }
       }
