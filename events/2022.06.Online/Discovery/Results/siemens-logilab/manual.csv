@@ -61,13 +61,16 @@
 "exploration-server-http-secure","pass",
 "tdd-http-missing-api-endpoint","pass",
 "tdd-https","pass",
-"tdd-notification","not-impl","not implemented"
 "tdd-notification-data-create-full","not-impl","not implemented"
 "tdd-notification-data-delete-diff","not-impl","not implemented"
 "tdd-notification-data-update-diff","not-impl","not implemented"
 "tdd-notification-data-update-id","not-impl","not implemented"
 "tdd-notification-filter-type","not-impl","not implemented"
 "tdd-registrationinfo-expiry-config","pass",
+"tdd-registrationinfo-expiry-purge","pass",
+"tdd-registrationinfo-vocab-expires","pass",
+"tdd-registrationinfo-vocab-retrieved","pass",
+"tdd-registrationinfo-vocab-ttl","pass",
 "tdd-search-large-tdds","pass",
 "tdd-search-sparql-error","pass",
 "tdd-search-sparql-federation-version","pass",
