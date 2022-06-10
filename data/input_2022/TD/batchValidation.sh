@@ -69,6 +69,12 @@ IMPLEMENTATION=intel-proxy
 echo "$IMPLEMENTATION"
 cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
+# dart_wot
+# only a csv file - manual results only
+IMPLEMENTATION=dart_wot
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
+
 # Playground
 # only a csv file - manual results only
 IMPLEMENTATION=Playground
