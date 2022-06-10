@@ -1,0 +1,674 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+        "@language": "en"
+    },
+    {
+      "echonet": "https://echonet.jp/"
+    }
+  ],
+  "id": "echonet:generalLighting:192168117029001",
+  "title": "generalLighting",
+  "description": "General lighting",
+  "properties": {
+    "brightness": {
+      "echonet:epc": "0xB0",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightness",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightness",
+      "description": "Illuminance level"
+    },
+    "brightnessLevelForMainLighting": {
+      "echonet:epc": "0xB7",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightnessLevelForMainLighting",
+      "description": "Brightness level setting for main lighting"
+    },
+    "brightnessLevelForNightLighting": {
+      "echonet:epc": "0xB9",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightnessLevelForNightLighting",
+      "description": "Brightness level setting for night lighting"
+    },
+    "brightnessLevelStep": {
+      "echonet:epc": "0xB2",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightnessLevelStep",
+      "description": "Brightness level step setting"
+    },
+    "brightnessLevelStepForMainLighting": {
+      "echonet:epc": "0xB8",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightnessLevelStepForMainLighting",
+      "description": "Brightness level step setting for main lighting"
+    },
+    "brightnessLevelStepForNightLighting": {
+      "echonet:epc": "0xBB",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/brightnessLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "brightnessLevelStepForNightLighting",
+      "description": "Light color setting for main lighting"
+    },
+    "businessFacilityCode": {
+      "echonet:epc": "0x8B",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "businessFacilityCode",
+      "description": "Business facility code"
+    },
+    "faultDescription": {
+      "echonet:epc": "0x89",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "faultDescription",
+      "description": "Fault description"
+    },
+    "faultStatus": {
+      "echonet:epc": "0x88",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "faultStatus",
+      "description": "Fault status"
+    },
+    "installationLocation": {
+      "echonet:epc": "0x81",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "installationLocation",
+      "description": "Installation location"
+    },
+    "instantaneousElectricPowerConsumption": {
+      "echonet:epc": "0x84",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "W",
+      "minimum": 0,
+      "maximum": 65533,
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "instantaneousElectricPowerConsumption",
+      "description": "Measured instantaneous power consumption"
+    },
+    "lightColor": {
+      "echonet:epc": "0xB1",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "lightColor",
+      "description": "Light color setting"
+    },
+    "lightColorLevelStep": {
+      "echonet:epc": "0xB3",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "lightColorLevelStep",
+      "description": "Light color step setting"
+    },
+    "lightColorLevelStepForMainLighting": {
+      "echonet:epc": "0xBC",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "lightColorLevelStepForMainLighting",
+      "description": "Light color level step setting for main lighting"
+    },
+    "manufacturer": {
+      "echonet:epc": "0x8A",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "manufacturer",
+      "description": "Manufacturer"
+    },
+    "manufacturerFaultCode": {
+      "echonet:epc": "0x86",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "manufacturerFaultCode",
+      "description": "Manufacturer's fault code"
+    },
+    "maximumSettableLevelForNightLighting": {
+      "echonet:epc": "0xB5",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "brightness": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notBrightness"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照度",
+            "en": "First byte: illuminance"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Second byte: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "maximumSettableLevelForNightLighting",
+      "description": "Maximum value of settable level for night lighting"
+    },
+    "maximumSpecifiableLevel": {
+      "echonet:epc": "0xB4",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "brightness": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notBrightness"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照度",
+            "en": "Byte 1: illuminance"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Byte 2: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "maximumSpecifiableLevel",
+      "description": "Maximum specifiable values"
+    },
+    "operationMode": {
+      "echonet:epc": "0xB6",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "auto",
+        "normal",
+        "night",
+        "color"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "operationMode",
+      "description": "Lighting mode setting"
+    },
+    "operationStatus": {
+      "echonet:epc": "0x80",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "title": "operationStatus",
+      "description": "Operation status"
+    },
+    "powerSaving": {
+      "echonet:epc": "0x8F",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "title": "powerSaving",
+      "description": "Power-saving operation setting"
+    },
+    "productCode": {
+      "echonet:epc": "0x8C",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "productCode",
+      "description": "Product code"
+    },
+    "productionDate": {
+      "echonet:epc": "0x8E",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "format": "date",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "productionDate",
+      "description": "Production date"
+    },
+    "protocol": {
+      "echonet:epc": "0x82",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "protocol",
+      "description": "Protocol version information"
+    },
+    "serialNumber": {
+      "echonet:epc": "0x8D",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.30.110:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "title": "serialNumber",
+      "description": "Serial number"
+    }
+  },
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "forms": [
+    {
+      "href": "http://192.168.30.110:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}

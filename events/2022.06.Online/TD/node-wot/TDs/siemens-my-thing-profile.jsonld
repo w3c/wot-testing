@@ -1,0 +1,15 @@
+{
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+	"profile": "https://www.siemens.com/2022/wot/profile/dev/v1",
+    "title": "MyThing",
+    "securityDefinitions": {
+        "basic_sc": {"scheme": "basic", "in": "header"}
+    },
+    "security": "basic_sc",
+    "properties": {
+        "status": {
+            "type": "string",
+            "forms": [{"href": "https://mything.example.com/status"}]
+        }
+    }
+}
