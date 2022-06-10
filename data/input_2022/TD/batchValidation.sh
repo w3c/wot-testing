@@ -13,8 +13,11 @@ rm Results/$IMPLEMENTATION-TD.csv
 
 # ECLASS
 IMPLEMENTATION=ECLASS
-echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTATION-TM.csv Results/$IMPLEMENTATION-TD.csv -o Results/$IMPLEMENTATION
+rm Results/$IMPLEMENTATION-TM.csv
+rm Results/$IMPLEMENTATION-TD.csv
 
 # EDITDOR
 IMPLEMENTATION=editdor
@@ -37,12 +40,18 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # hitachi-esp-idf
 IMPLEMENTATION=hitachi-esp-idf
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
 
 # hitachi-node-red
 IMPLEMENTATION=hitachi-node-red
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+
+# hitachi-nodegen
+# only a csv file - manual results only
+IMPLEMENTATION=hitachi-nodegen
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
 
 # intel-nodejs
 IMPLEMENTATION=intel-nodejs
@@ -60,6 +69,18 @@ IMPLEMENTATION=intel-proxy
 echo "$IMPLEMENTATION"
 cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
+# dart_wot
+# only a csv file - manual results only
+IMPLEMENTATION=dart_wot
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
+
+# Playground
+# only a csv file - manual results only
+IMPLEMENTATION=Playground
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
+
 # manual tms from TUM
 IMPLEMENTATION=manual-tms
 echo "$IMPLEMENTATION"
@@ -73,7 +94,7 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # node-wot
 IMPLEMENTATION=node-wot
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 # Oracle
 IMPLEMENTATION=Oracle
