@@ -16,8 +16,8 @@
             "description": "This resource represents a dimmer setting, which has an Integer value between 0 and 100 as a percentage.",
             "type": "integer",
             "unit": "/100",
-            "minimum": 0,
-            "maximum": 100
+            "exclusiveMinimum": -1,
+            "exclusiveMaximum": 101
         },
         "On_time": {
             "title": "On_time",
