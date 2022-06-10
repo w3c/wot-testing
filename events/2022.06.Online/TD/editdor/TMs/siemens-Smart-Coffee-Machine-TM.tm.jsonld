@@ -72,6 +72,7 @@
                 "properties": {
                     "drinkId": {
                         "type": "string",
+                        "minLength" : 5,
                         "description": "Defines what drink to make, drinkId is one of possibleDrinks property values, e.g. latte."
                     },
                     "size": {

@@ -12,8 +12,8 @@
         },
         "adjustRpm": {
             "type": "number",
-            "minimum": 200,
-            "maximum": 1200
+            "exclusiveMinimum": 199,
+            "exclusiveMaximum": 1201
         }
     }
 }

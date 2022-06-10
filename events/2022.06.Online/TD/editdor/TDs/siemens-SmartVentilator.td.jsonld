@@ -23,16 +23,18 @@
             "rel": "type",
             "href": "./SmartVentilator.tm.jsonld",
             "type": "application/tm+json"
+        },
+        {
+          "rel": "icon",
+          "href": "https://cdn-icons-png.flaticon.com/512/3227/3227806.png",
+          "type": "image/png",
+          "sizes" : "512x512"
         }
     ],
     "properties": {
         "status": {
             "type": "string",
-            "enum": [
-                "On",
-                "Off",
-                "Error"
-            ],
+            "pattern":"[On | Off | Error]",
             "forms": [
                 {
                     "href": "http://127.0.13.232:4563/status"
