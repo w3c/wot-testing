@@ -1,0 +1,213 @@
+Checking TMs...
+Checking Assertions...
+Failed Assertions: 1
+Not-Implemented Assertions: 9
+Not Tested Assertions: 41
+Passed Assertions: 22
+Total Assertions 73
+Failed Assertions: 0
+Not-Implemented Assertions: 156
+Not Tested Assertions: 41
+Passed Assertions: 187
+Total Assertions 384
+Failed Assertions: 1
+Not-Implemented Assertions: 160
+Not Tested Assertions: 41
+Passed Assertions: 191
+Total Assertions 393
+CANNOT HANDLE file in dir:  ECLASS/TDs/ECLASS_PoC_TDTestFest_1AC.ttl
+Failed Assertions: 0
+Not-Implemented Assertions: 259
+Not Tested Assertions: 63
+Passed Assertions: 63
+Total Assertions 385
+CANNOT HANDLE file in dir:  flask-tum/TDs/TUM-README.md
+Failed Assertions: 0
+Not-Implemented Assertions: 214
+Not Tested Assertions: 63
+Passed Assertions: 106
+Total Assertions 383
+Failed Assertions: 0
+Not-Implemented Assertions: 258
+Not Tested Assertions: 63
+Passed Assertions: 64
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 259
+Not Tested Assertions: 63
+Passed Assertions: 63
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 223
+Not Tested Assertions: 63
+Passed Assertions: 99
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 187
+Not Tested Assertions: 63
+Passed Assertions: 133
+Total Assertions 383
+Failed Assertions: 0
+Not-Implemented Assertions: 219
+Not Tested Assertions: 19
+Passed Assertions: 152
+Total Assertions 390
+Checking TMs...
+Checking Assertions...
+data/properties/currentPosition/properties/required must be object
+{
+  ID: Error: Invalid TM
+      at checkTMVocabulary (/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:295:15)
+      at validateTM (/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:76:25)
+      at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:173:39
+      at Array.forEach (<anonymous>)
+      at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:158:23,
+  Status: 'fail'
+}
+Failed Assertions: 0
+Not-Implemented Assertions: 191
+Not Tested Assertions: 63
+Passed Assertions: 129
+Total Assertions 383
+CANNOT HANDLE file in dir:  node-wot/TDs/README.md
+CANNOT HANDLE file in dir:  node-wot/TDs/TUM-README.md
+CANNOT HANDLE file in dir:  node-wot/TDs/echonet-README.md
+Failed Assertions: 0
+Not-Implemented Assertions: 127
+Not Tested Assertions: 63
+Passed Assertions: 193
+Total Assertions 383
+CANNOT HANDLE file in dir:  Oracle/TDs/README-profile.md
+Failed Assertions: 2
+Not-Implemented Assertions: 194
+Not Tested Assertions: 63
+Passed Assertions: 124
+Total Assertions 383
+CANNOT HANDLE file in dir:  philips-hue/TDs/TUM-README.md
+Failed Assertions: 0
+Not-Implemented Assertions: 197
+Not Tested Assertions: 63
+Passed Assertions: 123
+Total Assertions 383
+Failed Assertions: 0
+Not-Implemented Assertions: 241
+Not Tested Assertions: 9
+Passed Assertions: 141
+Total Assertions 391
+Failed Assertions: 0
+Not-Implemented Assertions: 194
+Not Tested Assertions: 63
+Passed Assertions: 126
+Total Assertions 383
+Failed Assertions: 2
+Not-Implemented Assertions: 244
+Not Tested Assertions: 63
+Passed Assertions: 76
+Total Assertions 385
+Failed Assertions: 4
+Not-Implemented Assertions: 209
+Not Tested Assertions: 63
+Passed Assertions: 109
+Total Assertions 385
+Checking TMs...
+Checking Assertions...
+Failed Assertions: 1
+Not-Implemented Assertions: 9
+Not Tested Assertions: 41
+Passed Assertions: 22
+Total Assertions 73
+Failed Assertions: 0
+Not-Implemented Assertions: 156
+Not Tested Assertions: 41
+Passed Assertions: 187
+Total Assertions 384
+Failed Assertions: 1
+Not-Implemented Assertions: 160
+Not Tested Assertions: 41
+Passed Assertions: 191
+Total Assertions 393
+CANNOT HANDLE file in dir:  ECLASS/TDs/ECLASS_PoC_TDTestFest_1AC.ttl
+Failed Assertions: 0
+Not-Implemented Assertions: 259
+Not Tested Assertions: 63
+Passed Assertions: 63
+Total Assertions 385
+CANNOT HANDLE file in dir:  flask-tum/TDs/TUM-README.md
+Failed Assertions: 0
+Not-Implemented Assertions: 214
+Not Tested Assertions: 63
+Passed Assertions: 106
+Total Assertions 383
+Failed Assertions: 0
+Not-Implemented Assertions: 258
+Not Tested Assertions: 63
+Passed Assertions: 64
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 259
+Not Tested Assertions: 63
+Passed Assertions: 63
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 223
+Not Tested Assertions: 63
+Passed Assertions: 99
+Total Assertions 385
+Failed Assertions: 0
+Not-Implemented Assertions: 187
+Not Tested Assertions: 63
+Passed Assertions: 133
+Total Assertions 383
+Failed Assertions: 0
+Not-Implemented Assertions: 219
+Not Tested Assertions: 19
+Passed Assertions: 152
+Total Assertions 390
+node:internal/fs/utils:344
+    throw err;
+    ^
+
+Error: ENOENT: no such file or directory, lstat 'intel-wot-ha/TDs/'
+    at Object.lstatSync (node:fs:1514:3)
+    at tdAssertionReport (/home/mmccool/Dev/thingweb-playground/packages/cli/index.js:178:17)
+    at Object.<anonymous> (/home/mmccool/Dev/thingweb-playground/packages/cli/index.js:96:9)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:79:12)
+    at node:internal/main/run_main_module:17:47 {
+  errno: -2,
+  syscall: 'lstat',
+  code: 'ENOENT',
+  path: 'intel-wot-ha/TDs/'
+}
+Checking TMs...
+Checking Assertions...
+data/properties/currentPosition/properties/required must be object
+{
+  ID: Error: Invalid TM
+      at checkTMVocabulary (/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:295:15)
+      at validateTM (/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:76:25)
+      at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:173:39
+      at Array.forEach (<anonymous>)
+      at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:158:23,
+  Status: 'fail'
+}
+/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:82
+        throw new Error("Invalid TM")
+              ^
+
+Error: Invalid TM
+    at validateTM (/home/mmccool/Dev/thingweb-playground/packages/assertions/assertionTests-tm.js:82:15)
+    at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:173:39
+    at Array.forEach (<anonymous>)
+    at /home/mmccool/Dev/thingweb-playground/packages/assertions/index.js:158:23
+Failed Assertions: 0
+Not-Implemented Assertions: 191
+Not Tested Assertions: 63
+Passed Assertions: 129
+Total Assertions 383
+CANNOT HANDLE file in dir:  node-wot/TDs/README.md
+CANNOT HANDLE file in dir:  node-wot/TDs/TUM-README.md
+CANNOT HANDLE file in dir:  node-wot/TDs/echonet-README.md
