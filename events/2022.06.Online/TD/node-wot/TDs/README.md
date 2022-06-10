@@ -1,5 +1,5 @@
 # node-wot Implementations
-March 2022 Online Plugfest/Testfest
+June 2022 Online Plugfest/Testfest
 
 ## Siemens
 We expose the following virtual *online* things (with [node-wot](https://github.com/eclipse/thingweb.node-wot/)):
