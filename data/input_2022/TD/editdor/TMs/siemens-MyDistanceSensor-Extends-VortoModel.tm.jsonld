@@ -4,7 +4,7 @@
   "title" : "My DistanceSensor",
   "description": "DistanceSensor unit",
   "links" :[{
-      "rel" : "tm:extend",
+      "rel" : "tm:extends",
       "href": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.03.Online/TMs/Vorto/DistanceSensor.json",
       "type": "application/json"
   }],
