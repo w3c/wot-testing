@@ -144,3 +144,8 @@ IMPLEMENTATION=echonet-bridge
 IMPLEMENTATION_DIR=../../input_2021/TD/TDs/AllOrgs/$IMPLEMENTATION
 echo "$IMPLEMENTATION in $IMPLEMENTATION_DIR"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION_DIR/ -o Results/$IMPLEMENTATION -a
+
+# sdf-wot-converter (TMs)
+IMPLEMENTATION=sdf-wot-converter
+echo "$IMPLEMENTATION in $IMPLEMENTATION_DIR"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
