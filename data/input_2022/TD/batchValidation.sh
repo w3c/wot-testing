@@ -116,6 +116,11 @@ IMPLEMENTATION=WebThings
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
+# oracle-wt
+IMPLEMENTATION=oracle-wt
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+
 # Logilabs (TDD)
 IMPLEMENTATION=logilab
 echo "$IMPLEMENTATION"

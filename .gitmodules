@@ -1,6 +1,3 @@
-[submodule "tools/thingweb-playground"]
-	path = tools/thingweb-playground
-	url = https://github.com/thingweb/thingweb-playground
 [submodule "events/2021.09.Online/TD/TMs/U Bremen"]
 	path = events/2021.09.Online/TD/TMs/U Bremen
 	url = https://github.com/JKRhb/onedm-playground-wot-tm.git
