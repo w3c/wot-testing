@@ -22,6 +22,7 @@
         "api_sc": {
             "scheme": "apikey",
             "in": "uri",
+            "name": "hueKey",
             "description": "The API key needed to access the Philips Hue Bridge",
             "descriptions": {
                 "en": "The API key needed to access the Philips Hue Bridge",
@@ -36,7 +37,7 @@
             ]
         }
     },
-    "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/sensors/",
+    "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/{hueKey}/sensors/",
     "description": "Hue Sensor for outdoor applications that can measure temperature, light level and presence of motion",
     "properties": {
         "lightInformation": {

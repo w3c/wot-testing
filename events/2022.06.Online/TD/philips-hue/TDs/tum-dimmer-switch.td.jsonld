@@ -23,10 +23,11 @@
     "api_sc": {
       "scheme": "apikey",
       "in": "uri",
+      "name": "hueKey",
       "description": "The API key needed to access the Philips Hue Bridge",
       "descriptions": {
-        "en": "The API key needed to access the Philips Hue Bridge",
-        "de":"Der API-Schlüssel, der für den Zugriff auf die Philips Hue Bridge benötigt wird"
+          "en": "The API key needed to access the Philips Hue Bridge",
+          "de": "Der API-Schlüssel, der für den Zugriff auf die Philips Hue Bridge benötigt wird"
       }
     },
     "combo_sc": {
@@ -37,7 +38,7 @@
       ]
     }
   },
-  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/",
+  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/{hueKey}/",
   "properties": {
     "switchInformation": {
       "description": "Switch information",
