@@ -2,5 +2,5 @@
 To focus on Profiles.
 
 # Logistics:
-* July 18-22
-* Tentative: same times as June testfest, except need to avoid UC call on July 19
+* July 25-29
+* Tentative: same times as June testfest
