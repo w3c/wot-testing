@@ -4,6 +4,11 @@ We also need to focus on gaps where features are at risk.
 Output will be final updates to at-risk item lists for CR Transition resolutions planned for Aug 3.
 Profiles should be stabilized enough for testing.
 
+Note: this will be a WoT IG event.  We can have contributors who are not WoT members but they have to be
+invited as IG guests.  However, this is only the case if they are contributing to the Implementation report,
+e.g. with an Implementation Description, targeting the CR candidate deliverables, etc.  Experimental
+implementations that do not contribute to the test results should be deferred to the next *plugfest*.
+
 # Logistics:
 * Date: 25-29 July 2022
 * Time: (tentative)
