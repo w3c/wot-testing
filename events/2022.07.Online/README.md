@@ -24,9 +24,10 @@ implementations that do not contribute to the test results should be deferred to
    - Details to follow
 
 ## Preparation
-- Organize instructions in appropriate README.md files and index 
+- Create directory stucture and template files (McCool to copy from 06.2022)
+- Organize instructions in appropriate README.md files and index (McCool/Fady)
 - Draft and review implementation descriptions (McCool)
-- Ensure manual.csv files are up to date 
+- Ensure manual.csv files are up to date (McCool to copy from 06.2022)
 
 ## Contributions
 
