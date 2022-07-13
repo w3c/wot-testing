@@ -1,4 +1,4 @@
-# July 2022 Plugfest/Testfest
+# July 2022 Testfest
 To focus *completely* on testing and completing the Implementation Reports.
 We also need to focus on gaps where features are at risk.
 Output will be final updates to at-risk item lists for CR Transition resolutions planned for Aug 3.
