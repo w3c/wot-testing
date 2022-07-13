@@ -11,7 +11,7 @@ implementations that do not contribute to the test results should be deferred to
 
 # Logistics:
 * Date: 25-29 July 2022
-* Time: (tentative)
+* Time: (tentative) - 1h 
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday, and Friday
