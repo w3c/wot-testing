@@ -1,4 +1,4 @@
-# Plugfest
+# August 2022 Plugfest
 This plugfest is to explore experimental implementations and to discuss application experience, with the 
 goal of driving application requirements for the next charter.
 
@@ -8,7 +8,7 @@ sent to the WoT Chairs.
 
 ## Logistics
 * Date: Aug 29-Sept 2
-* Time: 
+* Time: (tentative) - 1h
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday, and Friday
