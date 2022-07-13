@@ -1,17 +1,43 @@
 {
-    "@context": ["https://www.w3.org/2019/wot/td/v1", "https://www.w3.org/2022/wot/td/v1.1", {
-        "@language": "en"
-    }],
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
     "title": "Hue Indoor Sensor 2",
     "id": "urn:dev:ops:32473-HueIndoorSensor-2",
-    "security": "basic_sc",
+    "security": "combo_sc",
     "securityDefinitions": {
         "basic_sc": {
             "scheme": "basic",
-            "in":"header"
+            "in": "header",
+            "description": "A basic username and password security",
+            "descriptions": {
+                "en": "A basic username and password security",
+                "de": "Eine einfache Benutzername- und Passwortsicherheit"
+            }
+        },
+        "api_sc": {
+            "scheme": "apikey",
+            "in": "uri",
+            "name": "hueKey",
+            "description": "The API key needed to access the Philips Hue Bridge",
+            "descriptions": {
+                "en": "The API key needed to access the Philips Hue Bridge",
+                "de": "Der API-Schlüssel, der für den Zugriff auf die Philips Hue Bridge benötigt wird"
+            }
+        },
+        "combo_sc": {
+            "scheme": "combo",
+            "allOf": [
+                "basic_sc",
+                "api_sc"
+            ]
         }
     },
-    "base":"https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/sensors/",
+    "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/{hueKey}/sensors/",
     "description": "Hue Sensor for indoor applications that can measure temperature, light level and presence of motion",
     "properties": {
         "lightInformation": {
@@ -97,11 +123,15 @@
                     "type": "object"
                 }
             },
-            "forms": [{
-                "href": "16",
-                "contentType": "application/json",
-                "op": ["readproperty"]
-            }]
+            "forms": [
+                {
+                    "href": "16",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
         },
         "temperature": {
             "title": "Temperature",
@@ -118,7 +148,7 @@
                             "description": "Measured mperature in Celcius * 100"
                         },
                         "lastupdated": {
-                            "type":"string",
+                            "type": "string",
                             "format": "date-time",
                             "description": "Last update date of the sensor"
                         }
@@ -173,11 +203,15 @@
                     "type": "object"
                 }
             },
-            "forms": [{
-                "href": "17",
-                "contentType": "application/json",
-                "op": ["readproperty"]
-            }]
+            "forms": [
+                {
+                    "href": "17",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
         },
         "motion": {
             "title": "Motion",
@@ -194,7 +228,7 @@
                             "description": "Indicates if presence sensor is triggered"
                         },
                         "lastupdated": {
-                            "type":"string",
+                            "type": "string",
                             "format": "date-time",
                             "description": "Last update date of the sensor"
                         }
@@ -252,11 +286,15 @@
                     "type": "object"
                 }
             },
-            "forms": [{
-                "href": "15",
-                "contentType": "application/json",
-                "op": ["readproperty"]
-            }]
+            "forms": [
+                {
+                    "href": "15",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
         }
     }
 }
