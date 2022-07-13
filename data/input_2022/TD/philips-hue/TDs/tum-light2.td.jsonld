@@ -9,16 +9,36 @@
       "@language": "en"
     }
   ],
+  "security": "combo_sc",
   "securityDefinitions": {
     "basic_sc": {
       "scheme": "basic",
-      "in": "header"
+      "in": "header",
+      "description":"A basic username and password security",
+      "descriptions": {
+        "en": "A basic username and password security",
+        "de": "Eine einfache Benutzername- und Passwortsicherheit"
+      }
+    },
+    "api_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "hueKey",
+      "description": "The API key needed to access the Philips Hue Bridge",
+      "descriptions": {
+        "en": "The API key needed to access the Philips Hue Bridge",
+        "de":"Der API-Schlüssel, der für den Zugriff auf die Philips Hue Bridge benötigt wird"
+      }
+    },
+    "combo_sc": {
+      "scheme": "combo",
+      "allOf": [
+        "basic_sc",
+        "api_sc"
+      ]
     }
   },
-  "security": [
-    "basic_sc"
-  ],
-  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/lights/2/",
+  "base": "https://esiremotelab.esi.ei.tum.de:8081/LabLocal/api/{hueKey}/lights/2/",
   "properties": {
     "lightInformation": {
       "title": "State and Attributes Of Light",
