@@ -37,14 +37,14 @@ If you are participating in the testfest, please do the following:
   - Provide a testimonial from your company at https://github.com/w3c/wot-testing/tree/main/events/2022.07.Online/Architecture/Testimonials. You can find examples linked there.
 
 - Contribution to Discovery specification
-  - (if you have a directory) Provide the TDs of your TDD to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.07.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
-  - (if you have a directory) Fill in the TD [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.07.Online/TD/manual.csv) for the TD specification and submit it under the TD directory. This file is needed for the TD manual results, and is for the TD spec, not the WoT Discovery spec. This file should go in the folder of your implementation.
+  - (if you have a directory) Provide the TDs of your TDD to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.07.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results for the TD test result.
+  - (if you have a directory) Fill in the TD [manual.csv](https://github.com/w3c/wot-thing-description/blob/main/testing/manual.csv) for the Discovery specification and submit it under the TD directory. This file is needed for the TD manual results, and is for the TD spec, not the WoT Discovery spec. This file should go in the folder of your implementation.
   - (if you have a directory) Automatically test your implementation with https://github.com/farshidtz/wot-discovery-testing and submit the automatic results at https://github.com/w3c/wot-testing/tree/main/events/2022.07.Online/Discovery. 
-  - For any discovery implementation, fill the Discovery `manual.csv` (https://github.com/w3c/wot-testing/blob/main/events/2022.07.Online/Discovery/manual.csv). Note that this is for the WoT Discovery spec, not the TD spec.  It should be submitted like the automatic results above.
+  - For any discovery implementation, fill the Discovery `manual.csv` (https://github.com/w3c/wot-discovery/blob/main/testing/manual.csv). Note that this is for the WoT Discovery spec, not the TD spec.  It should be submitted like the automatic results above.
 
 - Contribution to TD specification
   - Provide the TDs and TMs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/events/2022.07.Online/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results. You can see a contribution with both TD and TM at https://github.com/w3c/wot-testing/tree/main/events/2022.06.Online/TD/Ditto.  NOTE: if your implementation is a pure consumer and does not have TDs, skip this step.
-  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.07.Online/TD/manual.csv) submit it. This file is needed for the manual results. This file should go in the folder of your implementation.
+  - Fill in the [manual.csv](https://github.com/w3c/wot-thing-description/blob/main/testing/manual.csv) submit it. This file is needed for the manual results. This file should go in the folder of your implementation.
   - Optional: update batchValidation.sh
   - [Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
 
