@@ -11,6 +11,7 @@ implementations that do not contribute to the test results should be deferred to
 
 # Important Note
 PRs for additional input should go into data/input_2022 not into this directory as in previous plugfests.
+**Links below have not been updated yet.**  If you try to use a link and it's broken... that's why.
 
 # Logistics:
 * Date: 25-29 July 2022
