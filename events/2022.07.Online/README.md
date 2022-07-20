@@ -9,6 +9,9 @@ invited as IG guests.  However, this is only the case if they are contributing t
 e.g. with an Implementation Description, targeting the CR candidate deliverables, etc.  Experimental
 implementations that do not contribute to the test results should be deferred to the next *plugfest*.
 
+# Important Note
+PRs for additional input should go into data/input_2022 not into this directory as in previous plugfests.
+
 # Logistics:
 * Date: 25-29 July 2022
 * Duration: 1h
@@ -24,7 +27,7 @@ implementations that do not contribute to the test results should be deferred to
    - Details to follow
 
 ## Preparation
-- Create directory stucture and template files (McCool to copy from 06.2022)
+- Update links below to point at data/input_2022 (McCool)
 - Organize instructions in appropriate README.md files and index (McCool/Fady)
 - Draft and review implementation descriptions (McCool)
 - Ensure manual.csv files are up to date (McCool to copy from 06.2022)
