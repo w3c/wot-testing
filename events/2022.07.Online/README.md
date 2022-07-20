@@ -9,9 +9,12 @@ invited as IG guests.  However, this is only the case if they are contributing t
 e.g. with an Implementation Description, targeting the CR candidate deliverables, etc.  Experimental
 implementations that do not contribute to the test results should be deferred to the next *plugfest*.
 
-# Important Note
-PRs for additional input should go into data/input_2022 not into this directory as in previous plugfests.
-**Links below have not been updated yet.**  If you try to use a link and it's broken... that's why.
+# Important Notes about Policy
+* PRs for additional input should go into data/input_2022 not into this directory as in previous plugfests.
+  **Links below have not been updated yet.**  If you try to use a link and it's broken... that's why.
+* The `{Deliverable}_manual.csv` in this directory is a snapshot taken at the start of the event and should be used for
+  input data and PRs generated during the event.  However, please refer to the respective repos to
+  find the most recent version.  
 
 # Logistics:
 * Date: 25-29 July 2022
