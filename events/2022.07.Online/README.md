@@ -20,7 +20,7 @@ PRs for additional input should go into data/input_2022 not into this directory 
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 9am Eastern/1pm UTC Wednesday (moved from 7am to avoid conflict with Profile)
    - 8am Eastern/12pm UTC Thursday, and Friday (moved from 10am Eastern - to confirm)
-* WebEx: TBD; when ready will be placed in [W3C Calendar](https://www.w3.org/groups/wg/wot/calendar)
+* WebEx: See [W3C Calendar](https://www.w3.org/groups/wg/wot/calendar)
 * Slack: Toumura has resent invites; see [email](https://lists.w3.org/Archives/Member/member-wot-ig/2022Jul/0001.html)
 * Hangouts: none
 * VLAN: Toumura has confirmed is up; see [email](https://lists.w3.org/Archives/Member/member-wot-ig/2022Jul/0001.html)
