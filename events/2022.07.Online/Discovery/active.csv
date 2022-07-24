@@ -1,0 +1,5 @@
+"Org","Name","on VLAN","on Internet","Link","Comment","Thing Name (File basename)","Implementation ID", "Remarks"
+"Fraunhofer","LinkSmart Thing Directory","no","no",https://github.com/linksmart/thing-directory,"todo",linksmart,fraunhofer,
+"Siemens","LogilabTDD","no","yes",https://siemens-wot.demo.logilab.fr/,"",logilabtdd,siemens-logilab,
+"Hitachi","Node-RED Discoverer","no","no",none,"",nrwotdisc,hitachi-nrwotdisc,
+"TinyIoT","Thing Directory","no","no",https://github.com/TinyIoT/thing-directory,,tinyiot,tinyiot-tdd,
