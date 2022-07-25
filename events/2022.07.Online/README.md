@@ -10,7 +10,7 @@ e.g. with an Implementation Description, targeting the CR candidate deliverables
 implementations that do not contribute to the test results should be deferred to the next *plugfest*.
 
 # Important Notes about Policy
-* PRs for additional input should go into data/input_2022 not into this directory as in previous plugfests.
+* PRs for additional input should go into `data/input_2022` not into this directory as in previous plugfests.
 * The `{Deliverable}_manual.csv` in this directory is a snapshot taken at the start of the event and should be used for
   input data and PRs generated during the event.  However, please refer to the respective repos to
   find the most recent version.  
@@ -18,10 +18,10 @@ implementations that do not contribute to the test results should be deferred to
 # Logistics:
 * Date: 25-29 July 2022
 * Duration: 1h
-* Time: (tentative; to be finalized July 20)
+* Time: 
    - 8am Eastern/12pm UTC Monday and Tuesday
-   - 9am Eastern/1pm UTC Wednesday (moved from 7am to avoid conflict with Profile)
-   - 8am Eastern/12pm UTC Thursday, and Friday (moved from 10am Eastern - to confirm)
+   - 9am Eastern/1pm UTC Wednesday 
+   - 8am Eastern/12pm UTC Thursday, and Friday 
 * WebEx: See [W3C Calendar](https://www.w3.org/groups/wg/wot/calendar)
 * Slack: Toumura has resent invites; see [email](https://lists.w3.org/Archives/Member/member-wot-ig/2022Jul/0001.html)
 * Hangouts: none
@@ -32,7 +32,6 @@ implementations that do not contribute to the test results should be deferred to
 ## Preparation
 - Organize instructions in appropriate README.md files and index (McCool/Fady)
 - Draft and review implementation descriptions (McCool)
-- Ensure manual.csv files are up to date (McCool to copy from 06.2022)
 
 ## Contributions
 If you are participating in the testfest, please do the following:
