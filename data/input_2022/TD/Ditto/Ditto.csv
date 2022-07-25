@@ -1,4 +1,4 @@
-﻿"ID","Status","Comment"
+"ID","Status","Comment"
 "bindings-requirements-scheme","pass",
 "bindings-server-accept","pass",
 "client-data-schema","null",
@@ -127,8 +127,6 @@
 "td-text-direction-first-strong","null",
 "td-text-direction-language-tag","null",
 "td-vocab-hreflang--Link","null",
-"td-vocab-synchronous--ActionAffordance","null",
-"td-vocab-uriVariables--Thing","pass",
 "td-vocabulary-defaults","null",
 "tm-compose-instanceName","pass",
 "tm-compose-name-collision","not-impl","Composing submodels in Ditto is not done via inlining them into one TD, but only by inlcuding links to the submodel TD instances."
