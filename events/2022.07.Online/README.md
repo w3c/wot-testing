@@ -14,7 +14,8 @@ implementations that do not contribute to the test results should be deferred to
 * The `{Deliverable}_manual.csv` in this directory is a snapshot taken at the start of the event and should be used for
   input data and PRs generated during the event.  However, please refer to the respective repos to
   find the most recent version. 
-* The manual.csv files need to be updated since the automatic testing now covers more cases.  Please see
+* The manual.csv files need to be updated since the automatic testing now covers more cases, and there
+  are also some new assertions to be considered.  Please see
   https://github.com/w3c/wot-testing/pull/363 for a diff showing the changes.
 
 # Logistics:
