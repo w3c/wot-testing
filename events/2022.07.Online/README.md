@@ -13,7 +13,9 @@ implementations that do not contribute to the test results should be deferred to
 * PRs for additional input should go into `data/input_2022` not into this directory as in previous plugfests.
 * The `{Deliverable}_manual.csv` in this directory is a snapshot taken at the start of the event and should be used for
   input data and PRs generated during the event.  However, please refer to the respective repos to
-  find the most recent version.  
+  find the most recent version. 
+* The manual.csv files need to be updated since the automatic testing now covers more cases.  Please see
+  https://github.com/w3c/wot-testing/pull/363 for a diff showing the changes.
 
 # Logistics:
 * Date: 25-29 July 2022
