@@ -1,0 +1,127 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "oma": "https://onedm.org/ecosystem/oma",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "Loudness",
+    "tm:required": [
+        "/properties/Sensor_Value"
+    ],
+    "sdf:title": "OMA LwM2M Loudness (Object ID 3324)",
+    "sdf:copyright": "Copyright 2019 Open Mobile Alliance.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2022-02-21"
+    },
+    "sdf:defaultNamespace": "oma",
+    "title": "Loudness",
+    "description": "This IPSO object should be used to report loudness or noise level measurements. It also provides resources for minimum and maximum measured values, as well as the minimum and maximum range that can be measured by the sensor. An example measurement unit is decibels.",
+    "actions": {
+        "Reset_Min_and_Max_Measured_Values": {
+            "title": "Reset Min and Max Measured Values",
+            "description": "Reset the Min and Max Measured Values to Current Value."
+        }
+    },
+    "properties": {
+        "Sensor_Value": {
+            "title": "Sensor Value",
+            "description": "Last or Current Measured Value from the Sensor.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "Sensor_Units": {
+            "title": "Sensor Units",
+            "description": "Measurement Units Definition.",
+            "type": "string",
+            "observable": true,
+            "readOnly": true
+        },
+        "Min_Measured_Value": {
+            "title": "Min Measured Value",
+            "description": "The minimum value measured by the sensor since power ON or reset.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "Max_Measured_Value": {
+            "title": "Max Measured Value",
+            "description": "The maximum value measured by the sensor since power ON or reset.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "Min_Range_Value": {
+            "title": "Min Range Value",
+            "description": "The minimum value that can be measured by the sensor.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "Max_Range_Value": {
+            "title": "Max Range Value",
+            "description": "The maximum value that can be measured by the sensor.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "Current_Calibration": {
+            "title": "Current Calibration",
+            "description": "Read or Write the current calibration coefficient.",
+            "type": "number",
+            "observable": true
+        },
+        "Application_Type": {
+            "title": "Application Type",
+            "description": "The application type of the sensor or actuator as a string depending on the use case.",
+            "type": "string",
+            "observable": true
+        },
+        "Timestamp": {
+            "title": "Timestamp",
+            "description": "The timestamp of when the measurement was performed.",
+            "type": "number",
+            "sdf:sdfType": "unix-time",
+            "observable": true,
+            "readOnly": true
+        },
+        "Fractional_Timestamp": {
+            "title": "Fractional Timestamp",
+            "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+            "type": "number",
+            "unit": "s",
+            "minimum": 0,
+            "maximum": 1,
+            "observable": true,
+            "readOnly": true
+        },
+        "Measurement_Quality_Indicator": {
+            "title": "Measurement Quality Indicator",
+            "description": "Measurement quality indicator reported by a smart sensor. 0: UNCHECKED No quality checks were done because they do not exist or can not be applied. 1: REJECTED WITH CERTAINTY The measured value is invalid. 2: REJECTED WITH PROBABILITY The measured value is likely invalid. 3: ACCEPTED BUT SUSPICIOUS The measured value is likely OK. 4: ACCEPTED The measured value is OK. 5-15: Reserved for future extensions. 16-23: Vendor specific measurement quality.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 23,
+            "observable": true,
+            "readOnly": true
+        },
+        "Measurement_Quality_Level": {
+            "title": "Measurement Quality Level",
+            "description": "Measurement quality level reported by a smart sensor. Quality level 100 means that the measurement has fully passed quality check algorithms. Smaller quality levels mean that quality has decreased and the measurement has only partially passed quality check algorithms. The smaller the quality level, the more caution should be used by the application when using the measurement. When the quality level is 0 it means that the measurement should certainly be rejected.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-loudness.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

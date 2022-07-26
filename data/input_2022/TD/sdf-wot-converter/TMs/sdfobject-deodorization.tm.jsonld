@@ -1,0 +1,50 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "deodorization",
+    "tm:required": [
+        "/properties/mode"
+    ],
+    "sdf:title": "Deodorization",
+    "sdf:copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-08-20"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a deodorization function, which can be supported by controlling on air filter. The Property \"mode\" is a mode of the deodorization function. The supported modes are defined by the enumeration [\"off\", \"on\", \"auto\"]. \"off\" means that the deodorization function is not enabled. \"on\" means that the deodorization function is active. \"auto\" means that the deodorization function is automatically controlled depending on sensed air condition in the device inside. The Property \"currentstate\" is the current state of the deodorization function. In the case of \"auto\" mode, if the sensed air condition is determined to be bad, the function will be \"on\". Then, \"mode\" value is \"auto\" and \"currentstate\" value is \"on\". If not, the function is remaining \"off\" state. Then, \"currentstate\" value is \"off\".",
+    "properties": {
+        "mode": {
+            "description": "The modes of the Deodorization function.",
+            "type": "string",
+            "enum": [
+                "off",
+                "on",
+                "auto"
+            ],
+            "observable": true
+        },
+        "currentstate": {
+            "description": "The current state of the Deodorization function.",
+            "type": "string",
+            "enum": [
+                "off",
+                "on"
+            ],
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-deodorization.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

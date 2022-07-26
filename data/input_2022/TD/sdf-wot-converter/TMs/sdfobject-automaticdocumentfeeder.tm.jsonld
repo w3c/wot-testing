@@ -1,0 +1,47 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "automaticdocumentfeeder",
+    "tm:required": [
+        "/properties/adfStates",
+        "/properties/currentAdfState"
+    ],
+    "sdf:title": "Automatic Document Feeder",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the state of an automatic document feeder, typically used with a scanner. The Property \"adfstates\" and \"currentAdfState\" are read only. The Property \"adfStates\" is an array of the possible operational states. The Property \"adfProcessing\" is the OK state, other states are errors or require 'user attention'. The currentAdfState is the current value of the ADF state on the device.",
+    "properties": {
+        "adfStates": {
+            "description": "The array of the possible adf states.",
+            "type": "array",
+            "sdf:uniqueItems": true,
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "currentAdfState": {
+            "description": "The current adf state.",
+            "type": "string",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-automaticdocumentfeeder.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

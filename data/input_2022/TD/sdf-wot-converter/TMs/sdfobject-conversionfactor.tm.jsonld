@@ -1,0 +1,43 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "conversionfactor",
+    "tm:required": [
+        "/properties/conversion"
+    ],
+    "sdf:title": "Conversion Factor",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-18"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes Properties associated with the energy associated with the consumption of different fuels (including natural gas) The conversion factor is a number used as part of the calculation to convert gas volume to gas energy. The value used for this calculation is generally defined by local regulations and the conversion factor resource is therefore configurable. Provides the conversion factor used/required as part of the calculation to convert from fuel volume (m3) to fuel energy (kWh).",
+    "properties": {
+        "conversion": {
+            "description": "Conversion factor to convert a volume of a fuel to energy consumption",
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "Accuracy granularity of the exposed value",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-conversionfactor.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "pg": "https://onedm.org/playground/",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "GenericLevel",
+    "sdf:title": "Example Bluetooth mesh Generic Level Model",
+    "sdf:copyright": "Copyright 2020-2021 Bluetooth SIG, Inc. All rights reserved.",
+    "links": [
+        {
+            "href": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+            "rel": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-genericlevel.sdf.json",
+            "rel": "alternate"
+        }
+    ],
+    "version": {
+        "model": "2021-03-05"
+    },
+    "sdf:defaultNamespace": "pg",
+    "schemaDefinitions": {
+        "sdfObject~1GenericLevel~1sdfData~1GenericLevelData": {
+            "description": "level state data",
+            "type": "integer",
+            "minimum": -32768,
+            "maximum": 32767
+        },
+        "sdfObject~1GenericLevel~1sdfData~1TransitionTimeSteps": {
+            "description": "Step count, the number of steps in the transition",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 63
+        },
+        "sdfObject~1GenericLevel~1sdfData~1StepResolution": {
+            "description": "Time per step",
+            "enum": [
+                {
+                    "sdf:choiceName": "100 Milliseconds",
+                    "default": 0
+                },
+                {
+                    "sdf:choiceName": "1 Second",
+                    "default": 1
+                },
+                {
+                    "sdf:choiceName": "10 Seconds",
+                    "default": 2
+                },
+                {
+                    "sdf:choiceName": "10 Minutes",
+                    "default": 3
+                }
+            ]
+        },
+        "sdfObject~1GenericLevel~1sdfData~1DelayData": {
+            "description": "delay in increments of 5mS",
+            "type": "integer",
+            "unit": "s",
+            "multipleOf": 0.005,
+            "minimum": 0,
+            "maximum": 1.275
+        }
+    },
+    "actions": {
+        "LevelGet": {
+            "description": "Get the status of the Level server",
+            "output": {
+                "type": "object",
+                "properties": {
+                    "PresentLevel": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1GenericLevelData"
+                    },
+                    "TargetLevel": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1GenericLevelData"
+                    },
+                    "RemainingTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1StepResolution"
+                    }
+                }
+            }
+        },
+        "LevelSet": {
+            "description": "Set the level server state with time and delay parameters",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "Level": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1GenericLevelData"
+                    },
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1StepResolution"
+                    },
+                    "Delay": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1DelayData"
+                    }
+                }
+            }
+        },
+        "DeltaSet": {
+            "description": "Set the level server state with time and delay parameters",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "DeltaLevel": {
+                        "type": "integer",
+                        "minimum": -65535,
+                        "maximum": 65535
+                    },
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1StepResolution"
+                    },
+                    "Delay": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1DelayData"
+                    }
+                }
+            }
+        },
+        "MoveSet": {
+            "description": "Set the level server state with time and delay parameters",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "Level": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1GenericLevelData"
+                    },
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1StepResolution"
+                    },
+                    "Delay": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1DelayData"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "Level": {
+            "tm:ref": "#/schemaDefinitions/sdfObject~1GenericLevel~1sdfData~1GenericLevelData",
+            "observable": true
+        }
+    }
+}

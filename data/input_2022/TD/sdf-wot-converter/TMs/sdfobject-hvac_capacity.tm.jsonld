@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "hvac.capacity",
+    "tm:required": [
+        "/properties/capacity"
+    ],
+    "sdf:title": "HVAC Capacity",
+    "sdf:copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-07-24"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the capacity (heating or cooling) of a HVAC system. \"capacity\" is a number in units of kW (kilowatts). To convert from kW to other units that may be commonly used in certain geographic locales the following conversions should be applied: - to convert to BTU/hr: BTU/hr = 3412. 142 * kW - to convert to ton: ton = kW/3. 5168525",
+    "properties": {
+        "capacity": {
+            "description": "The rated capacity for the Device.",
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-hvac_capacity.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

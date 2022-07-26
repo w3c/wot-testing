@@ -1,0 +1,82 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "circuitbreaker",
+    "tm:required": [
+        "/properties/status",
+        "/properties/ratedcurrent",
+        "/properties/ratedbreakingcurrent",
+        "/properties/ratedvoltage",
+        "/properties/timestamp"
+    ],
+    "sdf:title": "Circuit Breaker (IEC 61850)",
+    "sdf:copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-06-13"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",
+    "properties": {
+        "status": {
+            "description": "The circuit breaker status. The status can only be reset out of bounds.",
+            "type": "string",
+            "enum": [
+                "on",
+                "off",
+                "trip"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "ratedcurrent": {
+            "description": "The rated current in Ampere, defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "ratedbreakingcurrent": {
+            "description": "The rated breaking current in Ampere, defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "ratedvoltage": {
+            "description": "The rated voltage in Volts, defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "leakagecurrent": {
+            "description": "The leakage current in mA.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "insulationresistance": {
+            "description": "Insulation resistance of circuit breaker (M Ohm).",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "timestamp": {
+            "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Note that 1/100 time resolution should be used.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-circuitbreaker.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

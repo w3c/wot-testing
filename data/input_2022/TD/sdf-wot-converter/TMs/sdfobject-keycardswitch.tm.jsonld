@@ -1,0 +1,40 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "keycardswitch",
+    "tm:required": [
+        "/properties/stateofcard"
+    ],
+    "sdf:title": "KeyCard Switch",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-08-07"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the operation of a KeyCard style switch. It has one mandatory Property,\"stateofcard\", which is a string enum type. It has two enum values: \"validCardInserted\", \"validCardNotInserted\". \"validCardInserted\" means that a keycard was inserted and passed validation check. \"validCardNotInserted\" means that a keycard is not inserted or it was inserted but failed to pass validation check.",
+    "properties": {
+        "stateofcard": {
+            "description": "The status of the keycardswitch. \"validCardInserted\" means that a keycard was inserted and passed validation check. \"validCardNotInserted\" means that a keycard is not inserted or it was inserted but failed to pass validation check.",
+            "type": "string",
+            "enum": [
+                "validCardInserted",
+                "validCardNotInserted"
+            ],
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-keycardswitch.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

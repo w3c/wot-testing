@@ -1,0 +1,324 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "pg": "https://onedm.org/playground/#",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "Level",
+    "tm:required": [
+        "/properties/CurrentLevel",
+        "/actions/MoveToLevel",
+        "/actions/Move",
+        "/actions/Step",
+        "/actions/Stop",
+        "/actions/MoveToLevelwithOnOff",
+        "/actions/MovewithOnOff",
+        "/actions/StepwithOnOff",
+        "/actions/StopwithOnOff"
+    ],
+    "sdf:title": "Example SDF model for the ZCL Level cluster",
+    "sdf:copyright": "Copyright (c) 2019-2021, Zigbee Alliance All rights reserved.",
+    "links": [
+        {
+            "href": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+            "rel": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-level.sdf.json",
+            "rel": "alternate"
+        }
+    ],
+    "version": {
+        "model": "2021-03-05"
+    },
+    "sdf:defaultNamespace": "pg",
+    "title": "Level",
+    "schemaDefinitions": {
+        "sdfObject~1Level~1sdfData~1TransitionTimeData": {
+            "type": "number",
+            "unit": "s",
+            "multipleOf": 0.1,
+            "minimum": 0,
+            "maximum": 6553.5
+        },
+        "sdfObject~1Level~1sdfData~1MoveStepMode": {
+            "enum": [
+                {
+                    "sdf:choiceName": "Up"
+                },
+                {
+                    "sdf:choiceName": "Down"
+                }
+            ]
+        },
+        "sdfObject~1Level~1sdfData~1LevelData": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254
+        },
+        "sdfObject~1Level~1sdfData~1LevelOptions": {
+            "description": "implemented as a bitmap, modeled as an array with unique items",
+            "type": "array",
+            "sdf:uniqueItems": true,
+            "items": {
+                "enum": [
+                    {
+                        "sdf:choiceName": "ExecuteIfOff"
+                    },
+                    {
+                        "sdf:choiceName": "CoupleColorTempToLevel"
+                    }
+                ]
+            }
+        },
+        "sdfObject~1Level~1sdfData~1FrequencyData": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 65535
+        }
+    },
+    "actions": {
+        "MoveToLevel": {
+            "title": "MoveToLevel",
+            "input": {
+                "type": "object",
+                "required": [
+                    "Level",
+                    "TransitionTime"
+                ],
+                "properties": {
+                    "Level": {
+                        "title": "Level",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelData"
+                    },
+                    "TransitionTime": {
+                        "title": "TransitionTime",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData"
+                    },
+                    "OptionsMask": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    },
+                    "OptionsOverride": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    }
+                }
+            }
+        },
+        "Move": {
+            "title": "Move",
+            "input": {
+                "type": "object",
+                "required": [
+                    "MoveMode",
+                    "Rate"
+                ],
+                "properties": {
+                    "MoveMode": {
+                        "title": "MoveMode",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1MoveStepMode"
+                    },
+                    "Rate": {
+                        "title": "Rate",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "OptionsMask": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    },
+                    "OptionsOverride": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    }
+                }
+            }
+        },
+        "Step": {
+            "title": "Step",
+            "input": {
+                "type": "object",
+                "required": [
+                    "StepMode",
+                    "StepSize",
+                    "TransitionTime"
+                ],
+                "properties": {
+                    "StepMode": {
+                        "title": "Step mode",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1MoveStepMode"
+                    },
+                    "StepSize": {
+                        "title": "Step size",
+                        "type": "integer",
+                        "minimum": 0,
+                        "maximum": 255
+                    },
+                    "TransitionTime": {
+                        "title": "Step Transition Time",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData"
+                    },
+                    "OptionsMask": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    },
+                    "OptionsOverride": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    }
+                }
+            }
+        },
+        "Stop": {
+            "title": "Stop",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "OptionsMask": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    },
+                    "OptionsOverride": {
+                        "title": "OptionsMask",
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions"
+                    }
+                }
+            }
+        },
+        "MoveToLevelwithOnOff": {
+            "title": "MoveToLevelwithOnOff",
+            "tm:ref": "#/actions/MoveToLevel"
+        },
+        "MovewithOnOff": {
+            "title": "MovewithOnOff",
+            "tm:ref": "#/actions/Move"
+        },
+        "StepwithOnOff": {
+            "title": "StepwithOnOff",
+            "tm:ref": "#/actions/Step"
+        },
+        "StopwithOnOff": {
+            "title": "StopwithOnOff",
+            "tm:ref": "#/actions/Stop"
+        },
+        "MoveToClosestFrequency": {
+            "title": "MoveToClosestFrequency",
+            "input": {
+                "type": "object",
+                "required": [
+                    "Frequency"
+                ],
+                "properties": {
+                    "Frequency": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1FrequencyData"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "CurrentLevel": {
+            "title": "CurrentLevel",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelData",
+            "observable": true
+        },
+        "RemainingTime": {
+            "title": "RemainingTime",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData",
+            "default": 0,
+            "observable": true
+        },
+        "MinLevel": {
+            "title": "MinLevel",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelData",
+            "observable": true
+        },
+        "MaxLevel": {
+            "title": "MaxLevel",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelData",
+            "observable": true
+        },
+        "CurrentFrequency": {
+            "title": "CurrentFrequency",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1FrequencyData",
+            "observable": true
+        },
+        "MinFrequency": {
+            "title": "CurrentFrequency",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1FrequencyData",
+            "observable": true
+        },
+        "MaxFrequency": {
+            "title": "CurrentFrequency",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1FrequencyData",
+            "observable": true
+        },
+        "OnOffTransitionTime": {
+            "title": "OnOffTransitionTime",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData",
+            "default": 0,
+            "observable": true
+        },
+        "OnLevel": {
+            "title": "OnLevel",
+            "type": "integer",
+            "default": 255,
+            "minimum": 0,
+            "maximum": 255,
+            "observable": true
+        },
+        "OnTransitionTime": {
+            "title": "OnTransitionTime",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData",
+            "observable": true
+        },
+        "OffTransitionTime": {
+            "title": "OffTransitionTime",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1TransitionTimeData",
+            "observable": true
+        },
+        "DefaultMoveRate": {
+            "title": "DefaultMoveRate",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 254,
+            "observable": true
+        },
+        "Options": {
+            "title": "Options",
+            "tm:ref": "#/schemaDefinitions/sdfObject~1Level~1sdfData~1LevelOptions",
+            "default": [],
+            "observable": true
+        },
+        "StartUpCurrentLevel": {
+            "title": "StartUpCurrentLevel",
+            "enum": [
+                {
+                    "sdf:choiceName": "MinimumDeviceValuePermitted",
+                    "title": "MinimumDeviceValuePermitted",
+                    "type": "integer",
+                    "const": 0
+                },
+                {
+                    "sdf:choiceName": "PresetLevelValue",
+                    "title": "PresetLevelValue",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 254
+                },
+                {
+                    "sdf:choiceName": "SetToPreviousValue",
+                    "title": "SetToPreviousValue",
+                    "type": "integer",
+                    "const": 255
+                }
+            ],
+            "observable": true
+        }
+    }
+}

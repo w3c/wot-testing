@@ -1,0 +1,62 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "opaquedata",
+    "tm:required": [
+        "/properties/payload",
+        "/properties/encoding",
+        "/properties/system"
+    ],
+    "sdf:title": "Opaque Data",
+    "sdf:copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2018-12-12"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource defines opaque data that can be transfered between endpoints where the data itself is not interpretable by the OCF endpoints. The stringdata is a string of ASCII characters.",
+    "properties": {
+        "payload": {
+            "description": "This Property contains the opaque data.",
+            "type": "string",
+            "observable": true
+        },
+        "encoding": {
+            "description": "This Property describes the encoding of the payload, e.g. binary as base64, json, xml, utf-8.",
+            "type": "string",
+            "observable": true
+        },
+        "payloadtype": {
+            "description": "This Property describes the identification of the payload, e.g. what the payload is representing .",
+            "type": "string",
+            "observable": true
+        },
+        "size": {
+            "description": "The size in bytes of the decoded binary object.",
+            "type": "integer",
+            "observable": true
+        },
+        "hash": {
+            "description": "The hash code of the blob. If present, it is used to check the decoded content of the object data point for integrity. The algorithm used for generating the hash value is SHA-2 [15]. The data point contains the hash as a hex encoded value.",
+            "type": "string",
+            "observable": true
+        },
+        "system": {
+            "description": "The eco system that is using the payload.",
+            "type": "string",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-opaquedata.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

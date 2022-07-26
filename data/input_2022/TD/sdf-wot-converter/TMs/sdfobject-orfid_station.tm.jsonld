@@ -1,0 +1,47 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "orfid.station",
+    "tm:required": [
+        "/properties/event",
+        "/properties/actionrequest"
+    ],
+    "sdf:title": "Optical RFID Station",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "The Property \"process\" represents the stage of the product in the product line which has an optical RFID tag on its body. The Property \"event\" is represented by a Boolean value set to \"true\" and \"false\" alarming the issue when additional action is requested for the tagged product. The Property \"actionrequest\" represent necessary actions like the isolation of the product, to send the product back to other specific line to modify or fix the issue.",
+    "properties": {
+        "process": {
+            "description": "The process step that is being performed at this station.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "actionrequest": {
+            "description": "The action request identifier.",
+            "type": "integer",
+            "observable": true
+        },
+        "event": {
+            "description": "The Event indicator, when True, the action request should be applied to the product identified by the tagid.",
+            "type": "boolean",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-orfid_station.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

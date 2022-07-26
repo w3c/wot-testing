@@ -1,0 +1,41 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.magneticfielddirection",
+    "tm:required": [
+        "/properties/value"
+    ],
+    "sdf:title": "Magnetic Field Direction Sensor",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the direction of the Earth's magnetic field at the observer's current point in space. Typical use case includes measurement of compass readings on a personal device. The Property \"value\" is an array containing Hx, Hy, Hz (in that order) each of which are floats. Each of Hx, Hy and Hz are expressed in A/m (Amperes per metre).",
+    "properties": {
+        "value": {
+            "description": "The array containing Hx, Hy, Hz.",
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_magneticfielddirection.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

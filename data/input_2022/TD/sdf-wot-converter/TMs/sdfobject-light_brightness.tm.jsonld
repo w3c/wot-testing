@@ -1,0 +1,37 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "light.brightness",
+    "tm:required": [
+        "/properties/brightness"
+    ],
+    "sdf:title": "Brightness",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the brightness of a light or lamp. The Property \"brightness\" is an integer showing the current brightness level as a quantized representation in the range 0-100. A brightness of 0 is the minimum for the resource. A brightness of 100 is the maximum for the resource.",
+    "properties": {
+        "brightness": {
+            "description": "The Quantized representation in the range 0-100 of the current sensed or set value for Brightness.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-light_brightness.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

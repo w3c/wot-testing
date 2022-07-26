@@ -1,0 +1,60 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "consumable",
+    "tm:required": [
+        "/properties/typeofconsumable",
+        "/properties/remaining"
+    ],
+    "sdf:title": "Consumable",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource specifies a thing that can be consumed such as filter material, printer toner etc The Propert \"typeofconsumable\" is an enumeration defining the thing being consumed as defined by the Smart Home Device Specification The Property \"remaining\" is an integer capturing the percentatge remaining life The Property \"orderpercentage\" is an integer capturing the percentage life at which replacement or replenishment is recommended by the manufacturer The Property \"url\" is a string containing a URL at which further information may be obtained with respect to the consumable.",
+    "properties": {
+        "remaining": {
+            "description": "The percentage remaining lifespan.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        },
+        "typeofconsumable": {
+            "description": "The thing that is being consumed.",
+            "type": "string",
+            "observable": true,
+            "readOnly": true
+        },
+        "url": {
+            "description": "The URL at which additional ordering information may be found.",
+            "type": "string",
+            "format": "uri",
+            "observable": true,
+            "readOnly": true
+        },
+        "orderpercentage": {
+            "description": "The percentage at which re-ordering is recommended by the manufacturer.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-consumable.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

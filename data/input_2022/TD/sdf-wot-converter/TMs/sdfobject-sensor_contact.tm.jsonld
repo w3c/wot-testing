@@ -1,0 +1,36 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.contact",
+    "tm:required": [
+        "/properties/value"
+    ],
+    "sdf:title": "Contact Sensor",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes whether a contact sensor has been tripped or not. Typical use case is in Security Systems detecting window or door open. The Property \"value\" is a boolean. A value of 'true' means that contact has been broken (open). A value of 'false' means that contact is in place (closed).",
+    "properties": {
+        "value": {
+            "description": "The contact indication, true = broken (open), false = in place (closed).",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_contact.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

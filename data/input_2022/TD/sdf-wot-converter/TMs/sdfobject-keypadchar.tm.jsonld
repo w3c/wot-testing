@@ -1,0 +1,49 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "keypadchar",
+    "tm:required": [
+        "/properties/keyvalue"
+    ],
+    "sdf:title": "KeyPadChar",
+    "sdf:copyright": "copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2018-12-12"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a char (0-9,*,#) which is selected on a number keypad.",
+    "properties": {
+        "keyvalue": {
+            "description": "The value of the key pad char.",
+            "type": "string",
+            "enum": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "*",
+                "#"
+            ],
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-keypadchar.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

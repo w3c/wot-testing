@@ -1,0 +1,35 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "switch.binary",
+    "tm:required": [
+        "/properties/value"
+    ],
+    "sdf:title": "Binary Switch",
+    "sdf:copyright": "Copyright 2018-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes a binary switch (on/off). The Property \"value\" is a boolean. A value of 'true' means that the switch is on. A value of 'false' means that the switch is off.",
+    "properties": {
+        "value": {
+            "description": "The status of the switch.",
+            "type": "boolean",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-switch_binary.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

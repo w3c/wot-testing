@@ -1,0 +1,43 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "signalstrength",
+    "tm:required": [
+        "/properties/lqi",
+        "/properties/rssi"
+    ],
+    "sdf:title": "Signal Strength",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the strength of a signal by means of lqi and rssi. The Property \"lqi\" is a floating point number that represents Link Quality Indicator. The Property \"rssi\" is a floating point number that represents the received signal strength indicator.",
+    "properties": {
+        "lqi": {
+            "description": "The current value of Link Quality Indicator.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "rssi": {
+            "description": "The current value of Received Signal Strength Indicator.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-signalstrength.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

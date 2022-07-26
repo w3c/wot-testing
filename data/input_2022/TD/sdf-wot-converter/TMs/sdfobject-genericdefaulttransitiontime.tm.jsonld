@@ -1,0 +1,92 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "pg": "https://onedm.org/playground/",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "GenericDefaultTransitionTime",
+    "sdf:title": "Example Bluetooth mesh Generic Default Transition Time Model",
+    "sdf:copyright": "Copyright Bluetooth SIG, Inc. All rights reserved.",
+    "links": [
+        {
+            "href": "https://github.com/one-data-model/oneDM/blob/master/LICENSE",
+            "rel": "license"
+        },
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-genericdefaulttransitiontime.sdf.json",
+            "rel": "alternate"
+        }
+    ],
+    "version": {
+        "model": "2022-04-11"
+    },
+    "sdf:defaultNamespace": "pg",
+    "schemaDefinitions": {
+        "sdfObject~1GenericDefaultTransitionTime~1sdfData~1TransitionTimeSteps": {
+            "description": "Number of steps in the transition",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 63
+        },
+        "sdfObject~1GenericDefaultTransitionTime~1sdfData~1StepResolution": {
+            "description": "Step Resolution, time per step",
+            "enum": [
+                {
+                    "sdf:choiceName": "100 Milliseconds"
+                },
+                {
+                    "sdf:choiceName": "1 Second"
+                },
+                {
+                    "sdf:choiceName": "10 Seconds"
+                },
+                {
+                    "sdf:choiceName": "10 Minutes"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "DefaultTransitionTimeGet": {
+            "description": "Get the default transition time",
+            "output": {
+                "type": "object",
+                "properties": {
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1StepResolution"
+                    }
+                }
+            }
+        },
+        "DefaultTransitionTimeSet": {
+            "description": "Set the default transition time",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "TransitionTimeSteps": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1TransitionTimeSteps"
+                    },
+                    "StepResolution": {
+                        "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1StepResolution"
+                    }
+                }
+            }
+        }
+    },
+    "properties": {
+        "DefaultTransitionTimeSteps": {
+            "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1TransitionTimeSteps",
+            "observable": true
+        },
+        "DefaultStepResolution": {
+            "tm:ref": "#/schemaDefinitions/sdfObject~1GenericDefaultTransitionTime~1sdfData~1StepResolution",
+            "observable": true
+        }
+    }
+}

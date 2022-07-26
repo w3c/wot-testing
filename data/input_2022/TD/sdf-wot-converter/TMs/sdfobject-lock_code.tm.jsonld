@@ -1,0 +1,38 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "lock.code",
+    "tm:required": [
+        "/properties/lockCodeList"
+    ],
+    "sdf:title": "Lock Code",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "The Resource describing a lock code. The Property \"lockCodeList\" is an array of possible codes that may be associated with a lock. The codes are all presented as strings.",
+    "properties": {
+        "lockCodeList": {
+            "type": "array",
+            "items": {
+                "description": "The value for the lock code.",
+                "type": "string"
+            },
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-lock_code.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

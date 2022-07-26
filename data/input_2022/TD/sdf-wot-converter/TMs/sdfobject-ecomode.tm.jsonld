@@ -1,0 +1,63 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "ecomode",
+    "tm:required": [
+        "/properties/modes"
+    ],
+    "sdf:title": "Eco Mode",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource specifies the supported and currently active Eco Mode of a Device The Resource is a deriviative of the Mode Resource (oic. r. mode) with a restriction that the population of supportedmodes and modes Properties is restricted to the set of values: \"disabled\",\"enabled\",\"notsupported\". The adminforced Property indicates that the value has been set by another party (e. g. via some offboard Smart Energy interaction)",
+    "properties": {
+        "modes": {
+            "description": "The desired mode.",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "disabled",
+                    "enabled",
+                    "notsupported"
+                ]
+            },
+            "observable": true
+        },
+        "supportedModes": {
+            "description": "The array of possible modes the device supports.",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "disabled",
+                    "enabled",
+                    "notsupported"
+                ]
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "adminforced": {
+            "description": "The indicator that the current mode of operation has been forced by admin action.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-ecomode.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

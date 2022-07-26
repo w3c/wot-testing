@@ -1,0 +1,58 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "light.ramptime",
+    "tm:required": [
+        "/properties/rampTime"
+    ],
+    "sdf:title": "Ramp Time",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource that describes the ramp time of a dimming function. It specifies the actual speed of changing between 2 dimming values. The Property \"ramptime\" is specified in milliseconds [ms]. When range is omitted the maximum value is 100 ms. The ramp time of 0ms indicates the minimal delay possible by the implementation.",
+    "properties": {
+        "rampTime": {
+            "description": "The actual speed of changing between 2 dimming values.",
+            "type": "integer",
+            "observable": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as an integer. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "integer"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range when the range is an integer.  This is the increment for valid values across the range; so if range is 0..10 and step is 2 then valid values are 0,2,4,6,8,10.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-light_ramptime.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "movement.linear",
+    "tm:required": [
+        "/properties/movementSettings",
+        "/properties/movement"
+    ],
+    "sdf:title": "Movement",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource specifies linear movement. The Property \"movementSettings\" is an array of strings containing possible movement values (e. g. spin, stop, left, right). The Property \"movement\" is the currently selected movement value. The Property \"movementModifier\" is a modifier to the movement value (e. g. \"spin\", \"90\")",
+    "properties": {
+        "movementSettings": {
+            "description": "The array of possible movement values.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "movementModifier": {
+            "description": "The modifier to the movement value (e.g. spin-90, left-20), units are device dependent.",
+            "type": "string",
+            "observable": true
+        },
+        "movement": {
+            "description": "The current movement value.",
+            "type": "string",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-movement_linear.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "mediasource",
+    "tm:required": [
+        "/properties/sourceName",
+        "/properties/status"
+    ],
+    "sdf:title": "Media Source",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource defines a single media source that exists on a device. The source can be an input source or output source, this resource is agnostic of that. The Property \"sourceName\" specifies a pre-defined media input or output (e. g. \"HDMI\", \"DVI\"). The Property \"sourceNumber\" is a label to specify the instance (e. g. \"PC\", \"1\"). The Property \"sourceType\" is an enumeration defining whether the source is audio, video or both. The Property \"status\" is a boolean that determines if the specific source instance is selected or not. A status of true means that the source instance is selected. A status of false means that the source instance is not selected.",
+    "properties": {
+        "status": {
+            "description": "Specifies if the specific source instance is selected or not.",
+            "type": "boolean",
+            "observable": true
+        },
+        "sourceType": {
+            "description": "Specifies the type of the source.",
+            "type": "string",
+            "enum": [
+                "audioOnly",
+                "videoOnly",
+                "audioPlusVideo"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "sourceName": {
+            "description": "Specifies a pre-defined media input or output.",
+            "type": "string",
+            "observable": true
+        },
+        "sourceNumber": {
+            "description": "Label to specify the instance.",
+            "type": "string",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-mediasource.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

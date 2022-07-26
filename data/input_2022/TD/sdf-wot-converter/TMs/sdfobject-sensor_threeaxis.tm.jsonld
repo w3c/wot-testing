@@ -1,0 +1,41 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "sensor.threeaxis",
+    "tm:required": [
+        "/properties/orientation"
+    ],
+    "sdf:title": "Three Axis Sensor",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource provides a representation of the measurement from a three-axis sensor. The Property \"orientation\" is an array of numbers representing x-plane, y-plane and z-plane values. The unit of measurement for each pane is 'g'.",
+    "properties": {
+        "orientation": {
+            "description": "The array containing x-plane, y-plane and z-plane orientation in 'g'.",
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-sensor_threeaxis.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

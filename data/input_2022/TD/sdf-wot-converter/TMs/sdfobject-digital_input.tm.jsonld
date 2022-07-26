@@ -1,0 +1,103 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "oma": "https://onedm.org/ecosystem/oma",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "Digital_Input",
+    "tm:required": [
+        "/properties/Digital_Input_State"
+    ],
+    "sdf:title": "OMA LwM2M Digital Input (Object ID 3200)",
+    "sdf:copyright": "Copyright 2019 Open Mobile Alliance.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2022-02-21"
+    },
+    "sdf:defaultNamespace": "oma",
+    "title": "Digital Input",
+    "description": "Generic digital input for non-specific sensors",
+    "actions": {
+        "Digital_Input_Counter_Reset": {
+            "title": "Digital Input Counter Reset",
+            "description": "Reset the Counter value."
+        }
+    },
+    "properties": {
+        "Digital_Input_State": {
+            "title": "Digital Input State",
+            "description": "The current state of a digital input.",
+            "type": "boolean",
+            "observable": true,
+            "readOnly": true
+        },
+        "Digital_Input_Counter": {
+            "title": "Digital Input Counter",
+            "description": "The cumulative value of active state detected.",
+            "type": "integer",
+            "observable": true,
+            "readOnly": true
+        },
+        "Digital_Input_Polarity": {
+            "title": "Digital Input Polarity",
+            "description": "The polarity of the digital input as a Boolean (False = Normal, True = Reversed).",
+            "type": "boolean",
+            "observable": true
+        },
+        "Digital_Input_Debounce": {
+            "title": "Digital Input Debounce",
+            "description": "The debounce period in ms.",
+            "type": "integer",
+            "unit": "ms",
+            "observable": true
+        },
+        "Digital_Input_Edge_Selection": {
+            "title": "Digital Input Edge Selection",
+            "description": "The edge selection as an integer (1 = Falling edge, 2 = Rising edge, 3 = Both Rising and Falling edge).",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3,
+            "observable": true
+        },
+        "Application_Type": {
+            "title": "Application Type",
+            "description": "The application type of the sensor or actuator as a string depending on the use case.",
+            "type": "string",
+            "observable": true
+        },
+        "Sensor_Type": {
+            "title": "Sensor Type",
+            "description": "The type of the sensor (for instance PIR type).",
+            "type": "string",
+            "observable": true,
+            "readOnly": true
+        },
+        "Timestamp": {
+            "title": "Timestamp",
+            "description": "The timestamp of when the measurement was performed.",
+            "type": "number",
+            "sdf:sdfType": "unix-time",
+            "observable": true,
+            "readOnly": true
+        },
+        "Fractional_Timestamp": {
+            "title": "Fractional Timestamp",
+            "description": "Fractional part of the timestamp when sub-second precision is used (e.g., 0.23 for 230 ms).",
+            "type": "number",
+            "unit": "s",
+            "minimum": 0,
+            "maximum": 1,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-digital_input.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

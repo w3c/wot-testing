@@ -1,0 +1,39 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "lock.status",
+    "tm:required": [
+        "/properties/lockState"
+    ],
+    "sdf:title": "Lock",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "The Resource describing a lock. The Property \"lockState\" is a string. The value 'Locked' indicates that the door is Locked. The value 'Unlocked' indicates that the door is Unlocked.",
+    "properties": {
+        "lockState": {
+            "description": "The state of the lock.",
+            "type": "string",
+            "enum": [
+                "Locked",
+                "Unlocked"
+            ],
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-lock_status.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

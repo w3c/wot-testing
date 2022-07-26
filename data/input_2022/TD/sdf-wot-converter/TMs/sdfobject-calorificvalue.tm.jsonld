@@ -1,0 +1,43 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "calorificvalue",
+    "tm:required": [
+        "/properties/calorific"
+    ],
+    "sdf:title": "Calorific Value",
+    "sdf:copyright": "Copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-18"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes Properties associated with the energy associated with the consumption of different fuels (including natural gas) The calorific value is a number the calorific value is a measure of the available heat energy, used as part of the calculation to convert a volume of a fuel (e. g. m3) to an energy value (e. g. KWh).",
+    "properties": {
+        "precision": {
+            "description": "Accuracy granularity of the exposed value",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "calorific": {
+            "description": "Calorific value of fuel",
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-calorificvalue.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

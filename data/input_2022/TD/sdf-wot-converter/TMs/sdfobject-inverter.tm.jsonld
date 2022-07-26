@@ -1,0 +1,91 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "inverter",
+    "tm:required": [
+        "/properties/status",
+        "/properties/ratedpower",
+        "/properties/minvoltmppt",
+        "/properties/maxvoltmppt",
+        "/properties/inputvoltage",
+        "/properties/inputcurrent",
+        "/properties/outputpower",
+        "/properties/timestamp"
+    ],
+    "sdf:title": "Inverter (IEC 61850)",
+    "sdf:copyright": "copyright 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-06-13"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes functions for the control and monitoring of IEC 61850 based circuit breaker.",
+    "properties": {
+        "status": {
+            "description": "The inverter status. The status can only be reset out of bounds.",
+            "type": "string",
+            "enum": [
+                "on",
+                "off",
+                "trip"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "ratedpower": {
+            "description": "The rated power in kW, defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "minvoltmppt": {
+            "description": "Minimum voltage for MPPT (Maximum power point tracking) control method (V), defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "maxvoltmppt": {
+            "description": "Maximum voltage for MPPT (Maximum power point tracking) control method (V), defined at manufacturing time.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "inputvoltage": {
+            "description": "input voltage in Volts.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "inputcurrent": {
+            "description": "input current in Amperes.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "outputpower": {
+            "description": "output power in kW.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "timestamp": {
+            "description": "An RFC3339 formatted time indicating when the data was observed (e.g.: 2016-02-15T09:19Z, 1996-12-19T16:39:57-08:00). Resolution in 1/100 second.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-inverter.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

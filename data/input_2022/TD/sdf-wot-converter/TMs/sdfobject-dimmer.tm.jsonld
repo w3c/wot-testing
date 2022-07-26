@@ -1,0 +1,60 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "oma": "https://onedm.org/ecosystem/oma",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "Dimmer",
+    "tm:required": [
+        "/properties/Level"
+    ],
+    "sdf:title": "OMA LwM2M Dimmer (Object ID 3343)",
+    "sdf:copyright": "Copyright 2019 Open Mobile Alliance.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2022-02-21"
+    },
+    "sdf:defaultNamespace": "oma",
+    "title": "Dimmer",
+    "description": "This IPSO object should be used with a dimmer or level control to report the state of the control.",
+    "properties": {
+        "Level": {
+            "title": "Level",
+            "description": "Used to represent a level control such as audio volume.",
+            "type": "number",
+            "unit": "/100",
+            "minimum": 0,
+            "maximum": 100,
+            "observable": true
+        },
+        "On_time": {
+            "title": "On time",
+            "description": "The time in seconds that the device has been on. Writing a value of 0 resets the counter.",
+            "type": "integer",
+            "unit": "s",
+            "observable": true
+        },
+        "Off_Time": {
+            "title": "Off Time",
+            "description": "The time in seconds in the off state. Writing a value of 0 resets the counter.",
+            "type": "integer",
+            "unit": "s",
+            "observable": true
+        },
+        "Application_Type": {
+            "title": "Application Type",
+            "description": "The application type of the sensor or actuator as a string depending on the use case.",
+            "type": "string",
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-dimmer.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

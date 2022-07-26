@@ -1,0 +1,72 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "colour.chroma",
+    "tm:required": [
+        "/properties/hue",
+        "/properties/saturation",
+        "/properties/csc"
+    ],
+    "sdf:title": "Colour Chroma",
+    "sdf:copyright": "copyright 2016-2017, 2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-02-15"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the colour using chroma conventions. Properties are \"hue\", \"saturation\", \"csc\", and \"ct\". The Property \"hue\" is the hue angle, it is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property \"saturation\" is an integer value as defined by the CIECAM02 model definition (see reference [CIE CIE159:2004]). The Property \"maximumsaturation\" is the upper bound on the saturation supported by the Device. If not present the maximum value for \"saturation\" is 32767. The Property \"csc\" is the colour space coordinates in CIE colour space. The first item in the array is the X coordinate. The second item in the array is the Y coordinate. The Property \"nct\" is the Mired colour temperature. The Resource provides the colour using chroma conventions.",
+    "properties": {
+        "ct": {
+            "description": "The Mired colour temperature.",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true
+        },
+        "hue": {
+            "description": "The hue angle as defined by the CIECAM02 model definition.",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 360.0,
+            "observable": true
+        },
+        "saturation": {
+            "description": "The saturation as defined by the CIECAM02 model definition.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 32767,
+            "observable": true
+        },
+        "maximumsaturation": {
+            "description": "The maximum supported value of \"saturation\" for this Device.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 32767,
+            "observable": true,
+            "readOnly": true
+        },
+        "csc": {
+            "description": "The X and Y coordinates of the colour in CIE colour space",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+            },
+            "observable": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-colour_chroma.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

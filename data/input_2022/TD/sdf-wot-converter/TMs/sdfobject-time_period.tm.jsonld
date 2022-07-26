@@ -1,0 +1,81 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "time.period",
+    "tm:required": [
+        "/properties/startTime"
+    ],
+    "sdf:title": "Time Period",
+    "sdf:copyright": "copyright 2016-2017, 2019, 2020 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2020-02-04"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the time period over which any additionally provided information is derived or bounded. The Property \"startTime\" and \"stopTime\" are RFC3339 encoded strings. The Property \"startTime\" must be present. The interval is the interval of the time period in minutes, if present this value must be no less than 0 minute. The intervalsecond is the interval of the time period in seconds, if present this value must be numerical zero or greater. The repeat is the number of the time period's iteration, which means how many times to repeat the time period. The Property \"repeat\" accepts only negative one, numerical zero, and positive number. When this value is numerical zero, the time period will be repeated infinitely until a client makes it stop by inputting negative one for the value. The Property \"stoptime\" and \"interval\" are mutually exclusive; both Properties cannot be present in a Resource instance. The Property \"intervalsecond\" cannot be presented with the Property \"stopTime\". In case of both the Property \"interval\" and \"intervalsecond\" are presented together, the total time interval is the sum of \"interval\" and \"intervalsecond\". The Property \"triggertiming\" describes a specific time to execute an action. This property must have one of the values among \"startTime\", \"stopTime\", and \"totalInterval\". The totalInterval means the sum of the Property \"interval\" and \"intervalsecond\". If one of the properties does not exist, the value of the unexpressed property is taken as a numerical zero. The Property \"state\" describes a state of time interval. This property must have one of the values among \"preInterval\", \"inInterval\", and \"postInterval\". The Resource defines a time period for information retrieval, action or other behaviour.",
+    "properties": {
+        "interval": {
+            "description": "The time interval in minutes after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true
+        },
+        "intervalsecond": {
+            "description": "The time interval in seconds after the \"startTime\", if present the Property \"stopTime\" cannot be present.",
+            "type": "integer",
+            "minimum": 0,
+            "observable": true
+        },
+        "stopTime": {
+            "description": "The stop time for the time period, if present the Property \"interval\" or \"intervalsecond\" cannot be present.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true
+        },
+        "startTime": {
+            "description": "The start time for the time period.",
+            "type": "string",
+            "format": "date-time",
+            "observable": true
+        },
+        "repeat": {
+            "description": "The number of times to repeat the time period",
+            "type": "integer",
+            "minimum": -1,
+            "observable": true
+        },
+        "triggertiming": {
+            "description": "The desired timing to trigger an action execution",
+            "type": "string",
+            "enum": [
+                "startTime",
+                "stopTime",
+                "totalInterval"
+            ],
+            "observable": true
+        },
+        "state": {
+            "description": "The current state of the time interval",
+            "type": "string",
+            "enum": [
+                "preInterval",
+                "inInterval",
+                "postInterval"
+            ],
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-time_period.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}

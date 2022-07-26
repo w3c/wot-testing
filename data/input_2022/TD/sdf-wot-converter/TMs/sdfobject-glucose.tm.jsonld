@@ -1,0 +1,71 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "ocf": "https://onedm.org/ecosystem/ocf",
+            "sdf": "https://example.com/sdf"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "sdf:objectKey": "glucose",
+    "tm:required": [
+        "/properties/glucose"
+    ],
+    "sdf:title": "Glucose",
+    "sdf:copyright": "Copyright 2016-2019 Open Connectivity Foundation, Inc. All rights reserved.",
+    "sdf:license": "BSD-3-Clause",
+    "version": {
+        "model": "2019-03-22"
+    },
+    "sdf:defaultNamespace": "ocf",
+    "description": "This Resource describes the Properties associated with a person's glucose level. The unit is a single value that is one of mg/dL, mmol/L. If the unit Property is missing the default is milligrams per decilitre [mg/dL]. The glucose and unit Properties are read-only values that are provided by the Server. When range is omitted the default is 0 to +MAXFLOAT.",
+    "properties": {
+        "glucose": {
+            "description": "A measurement of glucose concentration in the blood",
+            "type": "number",
+            "minimum": 0.0,
+            "observable": true,
+            "readOnly": true
+        },
+        "units": {
+            "description": "Glucose unit",
+            "type": "string",
+            "default": "mg/dL",
+            "enum": [
+                "mg/dL",
+                "mmol/L"
+            ],
+            "observable": true,
+            "readOnly": true
+        },
+        "range": {
+            "description": "The valid range for the Property in the Resource as a number. The first value in the array is the minimum value, the second value in the array is the maximum value.",
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+                "type": "number"
+            },
+            "observable": true,
+            "readOnly": true
+        },
+        "step": {
+            "description": "Step value across the defined range an integer when the range is a number.  This is the increment for valid values across the range; so if range is 0.0..10.0 and step is 2.5 then valid values are 0.0,2.5,5.0,7.5,10.0.",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        },
+        "precision": {
+            "description": "When exposed the value in 'precision' provides a +/- tolerance against the Properties in the Resource. Thus if a Property is UPDATED to a value and that Property then RETRIEVED, the RETRIEVED value is valid if in the range of the set value +/- precision",
+            "type": "number",
+            "observable": true,
+            "readOnly": true
+        }
+    },
+    "links": [
+        {
+            "href": "https://raw.githubusercontent.com/one-data-model/playground/master/sdfObject/sdfobject-glucose.sdf.json",
+            "rel": "alternate"
+        }
+    ]
+}
