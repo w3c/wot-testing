@@ -3,7 +3,7 @@
     "https://www.w3.org/2022/wot/td/v1.1"
   ],
   "@type": "tm:ThingModel",
-  "title": "Colored Lamp",
+  "title": "Colored Lamp Optional",
   "version": {
     "model": "1.0.0"
   },
