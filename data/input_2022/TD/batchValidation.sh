@@ -13,8 +13,8 @@ rm Results/$IMPLEMENTATION-TD.csv
 
 # ECLASS
 IMPLEMENTATION=ECLASS
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION-TM -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION-TD -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTATION-TM.csv Results/$IMPLEMENTATION-TD.csv -o Results/$IMPLEMENTATION
 rm Results/$IMPLEMENTATION-TM.csv
 rm Results/$IMPLEMENTATION-TD.csv
@@ -131,6 +131,11 @@ IMPLEMENTATION=TinyIoT
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
+# sdf-wot-converter (TMs)
+IMPLEMENTATION=sdf-wot-converter
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
+
 ## Older
 
 # Unibo Farm
@@ -145,7 +150,3 @@ IMPLEMENTATION_DIR=../../input_2021/TD/TDs/AllOrgs/$IMPLEMENTATION
 echo "$IMPLEMENTATION in $IMPLEMENTATION_DIR"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION_DIR/ -o Results/$IMPLEMENTATION -a
 
-# sdf-wot-converter (TMs)
-IMPLEMENTATION=sdf-wot-converter
-echo "$IMPLEMENTATION in $IMPLEMENTATION_DIR"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a

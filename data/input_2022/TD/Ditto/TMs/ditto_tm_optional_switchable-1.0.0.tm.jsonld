@@ -6,7 +6,7 @@
     }
   ],
   "@type": "tm:ThingModel",
-  "title": "Switchable",
+  "title": "Switchable Optional",
   "version": {
     "model": "1.0.0"
   },

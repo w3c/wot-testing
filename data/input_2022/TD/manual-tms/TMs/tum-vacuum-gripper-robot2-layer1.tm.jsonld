@@ -41,13 +41,13 @@
           "minimum": 0,
           "maximum": 100,
           "unit": "%"
-        },
-        "required": [
-          "r",
-          "theta",
-          "z"
-        ]
-      }
+        }
+      },
+      "required": [
+        "r",
+        "theta",
+        "z"
+      ]
     }
   },
   "actions": {
