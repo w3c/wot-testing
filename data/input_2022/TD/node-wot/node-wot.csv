@@ -1,65 +1,107 @@
-ID,Status,Comment
-bindings-requirements-scheme,pass,Every form in a WoT Thing Description MUST follow the requirements of the Protocol Binding indicated by the URI scheme of its href member.
-bindings-server-accept,pass,Every form in a WoT Thing Description MUST accurately describe requests (including request headers
-client-data-schema,pass,A Thing acting as a Consumer when interacting with another target Thing described in a WoT Thing Description MUST generate data organized according to the data schemas given in the corresponding interactions.
-client-data-schema-accept-extras,pass,A Thing acting as a Consumer when interacting with another Thing MUST accept without error any additional data not described in the data schemas given in the Thing Description of the target Thing.
-client-data-schema-no-extras,fail,A Thing acting as a Consumer when interacting with another Thing MUST NOT generate data not described in the data schemas given in the Thing Description of that Thing.
-client-uri-template,pass,A Thing acting as a Consumer when interacting with another Thing MUST generate URIs according to the URI Templates
-iana-security-alter,null,For this reason
-iana-security-execution,null,Since WoT Thing Description is intended to be a pure data exchange format for Thing metadata
-iana-security-expansion,null,Consumers SHOULD treat any TD metadata with due skepticism.
-iana-security-remote,null,While implementations on resource-constrained devices are expected to perform raw JSON processing (as opposed to JSON-LD processing)
-sec-body-name-json-pointer-creatable,not-impl,When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema
-server-data-schema,pass,A WoT Thing Description MUST accurately describe the data returned and accepted by each interaction.
-server-data-schema-extras,pass,A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description.
-server-uri-template,pass,URI Templates
-td-context-default-language-direction-heuristic,null,If no language tag is given
-td-context-default-language-direction-independence,null,However
-td-context-default-language-direction-inference,null,Outside of MultiLanguage Maps
-td-context-ns-multilanguage-text-direction-infer,null,Inside of MultiLanguage Maps
-td-default-AdditionalResponseContentType,not-impl,The value associated with member contentType if not given MUST be assumed to have the default value value of the contentType of the Form element it belongs to.
-td-default-alg,null,The value associated with member alg if not given MUST be assumed to have the default value ES256.
-td-default-contentType,pass,The value associated with member contentType if not given MUST be assumed to have the default value application/json.
-td-default-format,null,The value associated with member format if not given MUST be assumed to have the default value jwt.
-td-default-format-pop,null,The value associated with member format if not given MUST be assumed to have the default value jwt.
-td-default-http-method,pass,When no method is indicated in a form representing an Protocol Binding based on HTTP
-td-default-http-method_get,pass,The value associated with member GET if not given MUST be assumed to have the default value Form with operation type readproperty.
-td-default-http-method_post,pass,The value associated with member POST if not given MUST be assumed to have the default value Form with operation type invokeaction.
-td-default-http-method_put,pass,The value associated with member PUT if not given MUST be assumed to have the default value Form with operation type writeproperty.
-td-default-idempotent,pass,The value associated with member idempotent if not given MUST be assumed to have the default value false.
-td-default-in-apikey,null,The value associated with member in if not given MUST be assumed to have the default value query.
-td-default-in-basic,pass,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-in-bearer,null,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-in-digest,null,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-observable,pass,The value associated with member observable if not given MUST be assumed to have the default value false.
-td-default-op-actions,pass,The value associated with member op if not given MUST be assumed to have the default value invokeaction.
-td-default-op-events,pass,The value associated with member op if not given MUST be assumed to have the default value subscribeevent.
-td-default-op-properties,pass,The value associated with member op if not given MUST be assumed to have the default value Array of string with the elements readproperty and writeproperty.
-td-default-qop,null,The value associated with member qop if not given MUST be assumed to have the default value auth.
-td-default-readOnly,pass,The value associated with member readOnly if not given MUST be assumed to have the default value false.
-td-default-safe,pass,The value associated with member safe if not given MUST be assumed to have the default value false.
-td-default-success,null,The value associated with member success if not given MUST be assumed to have the default value false.
-td-default-writeOnly,pass,The value associated with member writeOnly if not given MUST be assumed to have the default value false.
-td-expectedResponse-contentType,not-impl,If the content type of the expected response differs from the content type of the form
-td-expectedResponse-default-contentType,not-impl,If no response name-value pair is provided
-td-format-validation-other-values,null,When a value that is not found in the known set of values is assigned to format
-td-form-protocolbindings,pass,If required
-td-json-open,pass,TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
-td-json-open_accept-byte-order,pass,TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
-td-json-open_no-byte-order,pass,Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
-td-ns-multilanguage-content-negotiation,null,In cases where the default language has been negotiated
-td-ns-multilanguage-content-negotiation-no-multi,null,When the default language has been negotiated successfully
-td-ns-multilanguage-content-negotiation-optional,null,Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g.
-td-processor-serialization,pass,A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format
-td-security-binding,pass,If a Thing requires a specific access mechanism for an interaction
-td-security-in-query-over-uri,not-impl,The value uri SHOULD be specified for the name in in a security scheme only if query is not applicable.
-td-security-no-extras,pass,If a Thing does not require a specific access mechanism for an interaction
-td-security-no-secrets,pass,For all security schemes
-td-vocabulary-defaults,pass,When assignments in a TD are missing
-tm-overwrite-interaction,pass,A Thing Model SHOULD NOT overwrite the JSON names defined within the properties
-tm-overwrite-types,pass,Definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin extended definitions.
-tm-placeholder-retyping,pass,In the case a non string-based value of a JSON name-value pair should have a placeholder the value must be (temporary) typed as string. After replacing the placeholder
-tm-tmRef-2,null,Every time tm:ref is used
-tm-tmRef-overwrite,null,If it is intended to override an existing JSON name-value pair definition from tm:ref
-tm-tmRef-overwrite-semantic-meaning,null,Similar to tm:extends and to keep the semantic meaning
-well-known-operation-types-only,pass,operations types SHOULD NOT be arbitrarily set by servients.
+ID	Status	Comment
+bindings-requirements-scheme	pass	Every form in a WoT Thing Description MUST follow the requirements of the Protocol Binding indicated by the URI scheme of its href member.
+bindings-server-accept	pass	Every form in a WoT Thing Description MUST accurately describe requests (including request headers
+client-data-schema	pass	A Thing acting as a Consumer when interacting with another target Thing described in a WoT Thing Description MUST generate data organized according to the data schemas given in the corresponding interactions.
+client-data-schema-accept-extras	pass	A Thing acting as a Consumer when interacting with another Thing MUST accept without error any additional data not described in the data schemas given in the Thing Description of the target Thing.
+client-data-schema-no-extras	fail	A Thing acting as a Consumer when interacting with another Thing MUST NOT generate data not described in the data schemas given in the Thing Description of that Thing.
+client-uri-template	pass	A Thing acting as a Consumer when interacting with another Thing MUST generate URIs according to the URI Templates
+sec-body-name-json-pointer-creatable	not-impl	When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema
+server-data-schema	pass	A WoT Thing Description MUST accurately describe the data returned and accepted by each interaction.
+server-data-schema-extras	pass	A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description.
+server-uri-template	pass	URI Templates
+td-context-default-language-direction-independence	null	However
+td-default-alg	null	The value associated with member alg if not given MUST be assumed to have the default value ES256.
+td-default-contentType	pass	The value associated with member contentType if not given MUST be assumed to have the default value application/json.
+td-default-format	null	The value associated with member format if not given MUST be assumed to have the default value jwt.
+td-default-http-method	pass	When no method is indicated in a form representing an Protocol Binding based on HTTP
+td-default-http-method_get	pass	The value associated with member GET if not given MUST be assumed to have the default value Form with operation type readproperty.
+td-default-http-method_post	pass	The value associated with member POST if not given MUST be assumed to have the default value Form with operation type invokeaction.
+td-default-http-method_put	pass	The value associated with member PUT if not given MUST be assumed to have the default value Form with operation type writeproperty.
+td-default-idempotent	pass	The value associated with member idempotent if not given MUST be assumed to have the default value false.
+td-default-in-apikey	null	The value associated with member in if not given MUST be assumed to have the default value query.
+td-default-in-basic	pass	The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-in-bearer	null	The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-in-digest	null	The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-op-actions	pass	The value associated with member op if not given MUST be assumed to have the default value invokeaction.
+td-default-op-events	pass	The value associated with member op if not given MUST be assumed to have the default value subscribeevent.
+td-default-op-properties	pass	The value associated with member op if not given MUST be assumed to have the default value Array of string with the elements readproperty and writeproperty.
+td-default-qop	null	The value associated with member qop if not given MUST be assumed to have the default value auth.
+td-default-readOnly	pass	The value associated with member readOnly if not given MUST be assumed to have the default value false.
+td-default-safe	pass	The value associated with member safe if not given MUST be assumed to have the default value false.
+td-default-success	null	The value associated with member success if not given MUST be assumed to have the default value false.
+td-default-writeOnly	pass	The value associated with member writeOnly if not given MUST be assumed to have the default value false.
+td-expectedResponse-contentType	not-impl	If the content type of the expected response differs from the content type of the form
+td-expectedResponse-default-contentType	not-impl	If no response name-value pair is provided
+td-form-protocolbindings	pass	If required
+td-format-validation-other-values	null	When a value that is not found in the known set of values is assigned to format
+td-json-open	pass	TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
+td-json-open_accept-byte-order	pass	TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
+td-json-open_no-byte-order	pass	Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
+td-ns-multilanguage-content-negotiation	null	In cases where the default language has been negotiated
+td-ns-multilanguage-content-negotiation-no-multi	null	When the default language has been negotiated successfully
+td-ns-multilanguage-content-negotiation-optional	null	Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g.
+td-processor-serialization	pass	A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format
+td-security-binding	pass	If a Thing requires a specific access mechanism for an interaction
+td-security-in-query-over-uri	not-impl	The value uri SHOULD be specified for the name in in a security scheme only if query is not applicable.
+td-security-no-extras	pass	If a Thing does not require a specific access mechanism for an interaction
+td-security-no-secrets	pass	For all security schemes
+td-vocabulary-defaults	pass	When assignments in a TD are missing
+well-known-operation-types-only	pass	operations types SHOULD NOT be arbitrarily set by servients.
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+td-default-AdditionalResponseContentType	not-impl	The value associated with member contentType if not given MUST be assumed to have the default value value of the contentType of the Form element it belongs to.
+td-default-observable	pass	The value associated with member observable if not given MUST be assumed to have the default value false.
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+tm-overwrite-interaction	pass	A Thing Model SHOULD NOT overwrite the JSON names defined within the properties
+tm-overwrite-types	pass	Definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin extended definitions.
+NEW		
+tm-placeholder-retyping	pass	In the case a non string-based value of a JSON name-value pair should have a placeholder the value must be (temporary) typed as string. After replacing the placeholder
+NEW		
+NEW		
+NEW		
+NEW		
+NEW		
+tm-tmRef-overwrite-semantic-meaning	null	Similar to tm:extends and to keep the semantic meaning
+NEW		
+tm-tmRef2	null	Every time tm:ref is used
