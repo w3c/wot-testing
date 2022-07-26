@@ -1,0 +1,69 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "@type": "Thing",
+    "title": "OAuth",
+    "securityDefinitions": {
+        "oauth2_sc": {
+            "scheme": "oauth2",
+            "flow": "client",
+            "authorization": "https://example.com/authorization",
+            "token": "https://localhost:3000/token",
+            "scopes": [
+                "user",
+                "manger",
+                "admin"
+            ]
+        }
+    },
+    "security": [
+        "oauth2_sc"
+    ],
+    "actions": {
+        "adminAction": {
+            "description": "A simple action protected with oauth",
+            "idempotent": true,
+            "forms": [
+                {
+                    "href": "http://localhost:8080/oauth/actions/admin",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST",
+                    "scopes" :["admin"]
+                }
+            ]
+        },
+        "managerAction": {
+            "description": "A simple action protected with oauth",
+            "idempotent": true,
+            "forms": [
+                {
+                    "href": "http://localhost:8080/oauth/actions/manager",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST",
+                    "scopes" :["manager","admin"]
+                }
+            ]
+        },
+        "regularAction": {
+            "description": "A simple action protected with oauth",
+            "idempotent": true,
+            "forms": [
+                {
+                    "href": "http://localhost:8080/oauth/actions/regular",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST",
+                    "scopes" :["user","manager","admin"]
+                }
+            ]
+        }
+    },
+    "id": "urn:dev:wot:oauth:test"
+}

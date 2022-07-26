@@ -1,0 +1,214 @@
+{
+    "title": "Counter",
+    "titles": {
+        "en": "Counter",
+        "de": "Zähler",
+        "it": "Contatore"
+    },
+    "securityDefinitions": {
+        "no_sec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "no_sec",
+    "description": "counter example Thing",
+    "descriptions": {
+        "en": "Counter example Thing",
+        "de": "Zähler Beispiel Ding",
+        "it": "Contatore Esempio"
+    },
+    "support": "git://github.com/eclipse/thingweb.node-wot.git",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        }
+    ],
+    "uriVariables": {
+        "step": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 250
+        }
+    },
+    "properties": {
+        "count": {
+            "title": "Count",
+            "titles": {
+                "en": "Count",
+                "de": "Zählen",
+                "it": "Conteggio"
+            },
+            "type": "integer",
+            "description": "current counter value",
+            "descriptions": {
+                "en": "Current counter value",
+                "de": "Derzeitiger Zähler Stand",
+                "it": "Valore attuale del contatore"
+            },
+            "iot:Custom": "example annotation",
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "op": [
+                        "writeproperty",
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "href": "https://example.com/counter/count"
+                }
+            ]
+        },
+        "countAsImage": {
+            "description": "current counter value as SVG image",
+            "forms": [
+                {
+                    "href": "https://example.com/counter/count/display",
+                    "contentType": "image/svg+xml"
+                }
+            ],
+            "observable": false,
+            "readOnly": true,
+            "uriVariables": {
+                "fill": {
+                    "type": "string"
+                }
+            }
+        },
+        "redDotImage": {
+            "description": "Red dot image as PNG",
+            "forms": [
+                {
+                    "href": "https://example.com/counter/count/display/redDotImage",
+                    "contentType": "image/png"
+                }
+            ],
+            "observable": false,
+            "readOnly": true
+        },
+        "lastChange": {
+            "title": "Last change",
+            "titles": {
+                "en": "Last change",
+                "de": "Letzte Änderung",
+                "it": "Ultima modifica"
+            },
+            "type": "string",
+            "description": "last change of counter value",
+            "descriptions": {
+                "en": "Last change of counter value",
+                "de": "Letzte Änderung",
+                "it": "Ultima modifica del valore"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "op": [
+                        "writeproperty",
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "href": "https://example.com/counter/lastChange"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "increment": {
+            "title": "Increment",
+            "titles": {
+                "en": "Increment",
+                "de": "Zunahme",
+                "it": "Incrementa"
+            },
+            "description": "Incrementing counter value",
+            "descriptions": {
+                "en": "Incrementing counter value",
+                "de": "Zähler erhöhen",
+                "it": "incrementare valore"
+            },
+            "forms": [
+                {
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "href": "https://example.com/counter/increment"
+                }
+            ]
+        },
+        "decrement": {
+            "title": "Decrement",
+            "titles": {
+                "en": "Decrement",
+                "de": "Verringerung",
+                "it": "Decrementa"
+            },
+            "description": "Decrementing counter value",
+            "descriptions": {
+                "en": "Decrementing counter value",
+                "de": "Zähler verringern",
+                "it": "decrementare valore"
+            },
+            "forms": [
+                {
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "href": "https://example.com/counter/decrement"
+                }
+            ]
+        },
+        "reset": {
+            "title": "Reset",
+            "titles": {
+                "en": "Reset",
+                "de": "Zurücksetzen",
+                "it": "Ripristina"
+            },
+            "description": "Resetting counter value",
+            "descriptions": {
+                "en": "Resetting counter value",
+                "de": "Zähler resettieren",
+                "it": "resettare valore"
+            },
+            "forms": [
+                {
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "href": "https://example.com/counter/reset"
+                }
+            ]
+        }
+    },
+    "events": {
+        "change": {
+            "title": "Change",
+            "titles": {
+                "en": "Change",
+                "de": "Geändert",
+                "it": "Valore modificato"
+            },
+            "description": "change event",
+            "descriptions": {
+                "en": "change event",
+                "de": "Änderungsnachricht",
+                "it": "resettare valore"
+            },
+            "forms": [
+                {
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ],
+                    "href": "https://example.com/counter/change"
+                }
+            ]
+        }
+    }
+}
