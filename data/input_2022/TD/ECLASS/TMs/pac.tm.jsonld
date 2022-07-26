@@ -17,8 +17,8 @@
     },
     "security": "nosec_sc",
     "tm:required": [
-        "#/properties/voltage-v-l1-n",
-        "#/properties/current-l1"
+        "/properties/voltage-v-l1-n",
+        "/properties/current-l1"
     ],
     "version" : {"model" : "0.1" },
     "eclass:aspect": [
