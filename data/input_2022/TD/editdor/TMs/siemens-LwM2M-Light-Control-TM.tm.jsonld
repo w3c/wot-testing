@@ -3,7 +3,7 @@
     "@type": "tm:ThingModel",
     "title": "OMA LwM2M Light Control (Object ID 3311)",
     "tm:required": [
-        "#/properties/On_Off"
+        "/properties/On_Off"
     ],
     "properties": {
         "On_Off": {

@@ -3,9 +3,10 @@
 In the following a couple of Thing Model definitions are provided that uses the new features as defined in the latest [TD Spec](https://w3c.github.io/wot-thing-description/#thing-model) 
 
 ## Smart Coffee Machine 
-  * [TM](./TMs/siemens-Smart-Coffee-Machine-TM.tm.jsonld)
+  * [TM tm:required](./TMs/siemens-Smart-Coffee-Machine-TM.tm.jsonld)
+  * [TM tm:optional](./TMs/siemens-Smart-Coffee-Machine-TM-optional.tm.jsonld)
   * [TD](./TDs/siemens-Smart-Coffee-Machine-TD.td.jsonld)
-  * Features used: model (versioning), placeholder, required, type (in TD)
+  * Features used: model (versioning), placeholder, required, type (in TD), optional (experimental)
   
 ## OneDM - OMA LwM2M Light Control
   * [SDF](https://github.com/one-data-model/playground/blob/master/sdfObject/sdfobject-light_control.sdf.json)
