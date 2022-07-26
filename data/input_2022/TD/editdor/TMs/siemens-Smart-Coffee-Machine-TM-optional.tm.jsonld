@@ -13,15 +13,8 @@
     "version": {
         "model": "1.0.0"
     },
-    "tm:required": [
-        "/properties/allAvailableResources",
-        "/properties/availableResourceLevel",
-        "/properties/possibleDrinks",
-        "/properties/maintenanceNeeded",
-        "/properties/schedules",
-        "/properties/maintenanceNeeded",
-        "/actions/makeDrink",
-        "/actions/setSchedule"
+    "tm:optional": [
+        "/events/outOfResource"
     ],
     "properties": {
         "allAvailableResources": {

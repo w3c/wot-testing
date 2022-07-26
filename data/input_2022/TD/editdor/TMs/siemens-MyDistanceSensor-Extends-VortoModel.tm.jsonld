@@ -9,9 +9,9 @@
       "type": "application/json"
   }],
   "tm:required": [
-        "#/properties/distance.currentMeasured",
-        "#/properties/distance.minMeasured",
-        "#/properties/distance.maxMeasured"
+        "/properties/distance.currentMeasured",
+        "/properties/distance.minMeasured",
+        "/properties/distance.maxMeasured"
   ],
   "properties": {
     "distance.currentMeasured": {
