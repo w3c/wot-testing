@@ -1,65 +1,109 @@
-ID,Status,Comment,Description
-bindings-requirements-scheme,pass,not testable with Assertion Tester,Every form in a WoT Thing Description MUST follow the requirements of the Protocol Binding indicated by the URI scheme of its href member.
-bindings-server-accept,pass,not testable with Assertion Tester,Every form in a WoT Thing Description MUST accurately describe requests (including request headers, if present) accepted by the Thing in an interaction.
-client-data-schema,pass,not testable with Assertion Tester,A Thing acting as a Consumer when interacting with another target Thing described in a WoT Thing Description MUST generate data organized according to the data schemas given in the corresponding interactions.
-client-data-schema-accept-extras,pass,not testable with Assertion Tester,A Thing acting as a Consumer when interacting with another Thing MUST accept without error any additional data not described in the data schemas given in the Thing Description of the target Thing.
-client-data-schema-no-extras,fail,not testable with Assertion Tester,A Thing acting as a Consumer when interacting with another Thing MUST NOT generate data not described in the data schemas given in the Thing Description of that Thing.
-client-uri-template,pass,not testable with Assertion Tester,A Thing acting as a Consumer when interacting with another Thing MUST generate URIs according to the URI Templates, base URIs, and form href parameters given in the Thing Description of the target Thing.
-iana-security-alter,null,not testable with Assertion Tester,For this reason, Consumer again SHOULD vet and cache remote contexts before allowing the system to use it.
-iana-security-execution,null,not testable with Assertion Tester,Since WoT Thing Description is intended to be a pure data exchange format for Thing metadata, the serialization SHOULD NOT be passed through a code execution mechanism such as JavaScript's eval() function to be parsed.
-iana-security-expansion,null,not testable with Assertion Tester,Consumers SHOULD treat any TD metadata with due skepticism.
-iana-security-remote,null,not testable with Assertion Tester,While implementations on resource-constrained devices are expected to perform raw JSON processing (as opposed to JSON-LD processing), implementations in general SHOULD statically cache vetted versions of their supported context extensions and not to follow links to remote contexts.
-sec-body-name-json-pointer-creatable,not-impl,not testable with Assertion Tester,When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema, it MUST be possible to insert the indicated element at the location indicated by the pointer.
-server-data-schema,pass,not testable with Assertion Tester,A WoT Thing Description MUST accurately describe the data returned and accepted by each interaction.
-server-data-schema-extras,pass,not testable with Assertion Tester,A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description.
-server-uri-template,pass,not testable with Assertion Tester,URI Templates, base URIs, and href members in a WoT Thing Description MUST accurately describe the WoT Interface of the Thing.
-td-context-default-language-direction-heuristic,null,not testable with Assertion Tester,If no language tag is given, the base direction SHOULD be inferred through first-strong heuristics or detection algorithms such as the CLDR Likely Subtags.
-td-context-default-language-direction-independence,null,not testable with Assertion Tester,However, when interpreting human-readable text, each human-readable string value MUST be processed independently.
-td-context-default-language-direction-inference,null,not testable with Assertion Tester,Outside of MultiLanguage Maps, the base direction MAY be inferred from the language tag of the default language.
-td-context-ns-multilanguage-text-direction-infer,null,not testable with Assertion Tester,Inside of MultiLanguage Maps, the base direction of each value of the name-value pairs MAY be inferred from the language tag given in the corresponding name.
-td-default-AdditionalResponseContentType,not-impl,not testable with Assertion Tester,The value associated with member contentType if not given MUST be assumed to have the default value value of the contentType of the Form element it belongs to.
-td-default-alg,null,not testable with Assertion Tester,The value associated with member alg if not given MUST be assumed to have the default value ES256.
-td-default-contentType,pass,not testable with Assertion Tester,The value associated with member contentType if not given MUST be assumed to have the default value application/json.
-td-default-format,null,not testable with Assertion Tester,The value associated with member format if not given MUST be assumed to have the default value jwt.
-td-default-format-pop,null,not testable with Assertion Tester,The value associated with member format if not given MUST be assumed to have the default value jwt.
-td-default-http-method,pass,not testable with Assertion Tester,When no method is indicated in a form representing an Protocol Binding based on HTTP, a Default Value MUST be assumed as shown in the following table.
-td-default-http-method_get,pass,not testable with Assertion Tester,The value associated with member GET if not given MUST be assumed to have the default value Form with operation type readproperty.
-td-default-http-method_post,pass,not testable with Assertion Tester,The value associated with member POST if not given MUST be assumed to have the default value Form with operation type invokeaction.
-td-default-http-method_put,pass,not testable with Assertion Tester,The value associated with member PUT if not given MUST be assumed to have the default value Form with operation type writeproperty.
-td-default-idempotent,pass,not testable with Assertion Tester,The value associated with member idempotent if not given MUST be assumed to have the default value false.
-td-default-in-apikey,null,not testable with Assertion Tester,The value associated with member in if not given MUST be assumed to have the default value query.
-td-default-in-basic,pass,not testable with Assertion Tester,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-in-bearer,null,not testable with Assertion Tester,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-in-digest,null,not testable with Assertion Tester,The value associated with member in if not given MUST be assumed to have the default value header.
-td-default-observable,pass,not testable with Assertion Tester,The value associated with member observable if not given MUST be assumed to have the default value false.
-td-default-op-actions,pass,not testable with Assertion Tester,The value associated with member op if not given MUST be assumed to have the default value invokeaction.
-td-default-op-events,pass,not testable with Assertion Tester,The value associated with member op if not given MUST be assumed to have the default value subscribeevent.
-td-default-op-properties,pass,not testable with Assertion Tester,The value associated with member op if not given MUST be assumed to have the default value Array of string with the elements readproperty and writeproperty.
-td-default-qop,null,not testable with Assertion Tester,The value associated with member qop if not given MUST be assumed to have the default value auth.
-td-default-readOnly,pass,not testable with Assertion Tester,The value associated with member readOnly if not given MUST be assumed to have the default value false.
-td-default-safe,pass,not testable with Assertion Tester,The value associated with member safe if not given MUST be assumed to have the default value false.
-td-default-success,null,not testable with Assertion Tester,The value associated with member success if not given MUST be assumed to have the default value false.
-td-default-writeOnly,pass,not testable with Assertion Tester,The value associated with member writeOnly if not given MUST be assumed to have the default value false.
-td-expectedResponse-contentType,not-impl,not testable with Assertion Tester,If the content type of the expected response differs from the content type of the form, the Form instance MUST include a name-value pair with the name response.
-td-expectedResponse-default-contentType,not-impl,not testable with Assertion Tester,If no response name-value pair is provided, it MUST be assumed that the content type of the response is equal to the content type assigned to the Form instance.
-td-format-validation-other-values,null,not testable with Assertion Tester,When a value that is not found in the known set of values is assigned to format, such a validation SHOULD succeed.
-td-form-protocolbindings,pass,not testable with Assertion Tester,If required, form objects MAY be supplemented with protocol-specific Vocabulary Terms identified with a prefix.
-td-json-open,pass,not testable with Assertion Tester,TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
-td-json-open_accept-byte-order,pass,not testable with Assertion Tester,TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
-td-json-open_no-byte-order,pass,not testable with Assertion Tester,Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
-td-ns-multilanguage-content-negotiation,null,not testable with Assertion Tester,In cases where the default language has been negotiated, an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
-td-ns-multilanguage-content-negotiation-no-multi,null,not testable with Assertion Tester,When the default language has been negotiated successfully, TD documents SHOULD include the appropriate matching values for the members title and description in preference to MultiLanguage objects in titles and descriptions members.
-td-ns-multilanguage-content-negotiation-optional,null,not testable with Assertion Tester,Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g., because of resource constraints).
-td-processor-serialization,pass,not testable with Assertion Tester,A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format, according to the rules noted in and.
-td-security-binding,pass,not testable with Assertion Tester,If a Thing requires a specific access mechanism for an interaction, that mechanism MUST be specified in the security configuration of the Thing Description.
-td-security-in-query-over-uri,not-impl,not testable with Assertion Tester,The value uri SHOULD be specified for the name in in a security scheme only if query is not applicable.
-td-security-no-extras,pass,not testable with Assertion Tester,If a Thing does not require a specific access mechanism for an interaction, that mechanism MUST NOT be specified in the security configuration of the Thing Description.
-td-security-no-secrets,pass,not testable with Assertion Tester,For all security schemes, any private keys, passwords, or other sensitive information directly providing access should be shared and stored out-of-band and MUST NOT be stored in the TD.
-td-vocabulary-defaults,pass,not testable with Assertion Tester,When assignments in a TD are missing, a TD Processor MUST follow the Default Value assignments expressed in the table of.
-tm-overwrite-interaction,pass,not testable with Assertion Tester,A Thing Model SHOULD NOT overwrite the JSON names defined within the properties, actions, and/or events Map of the extended Thing Model.
-tm-overwrite-types,pass,not testable with Assertion Tester,Definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin extended definitions.
-tm-placeholder-retyping,pass,not testable with Assertion Tester,In the case a non string-based value of a JSON name-value pair should have a placeholder the value must be (temporary) typed as string. After replacing the placeholder, e.g. when creating a Thing Description instance, the original type can be applied with the corresponding replaced value.
-tm-tmRef-2,null,not testable with Assertion Tester,Every time tm:ref is used, the referenced pre-definition and its dependencies (e.g., by context extension) MUST be assumed at the new defined definition.
-tm-tmRef-overwrite,null,not testable with Assertion Tester,If it is intended to override an existing JSON name-value pair definition from tm:ref, the same JSON name MUST be used at the same level of the tm:ref declearation that provides a new value. This process MUST follow the JSON Merge Patch algorithm as defined in [RFC7396] where the content of the referenced definition is patched with the new provided JSON name-value pairs.
-tm-tmRef-overwrite-semantic-meaning,null,not testable with Assertion Tester,Similar to tm:extends and to keep the semantic meaning, definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin referenced definition.
-well-known-operation-types-only,pass,not testable with Assertion Tester,operations types SHOULD NOT be arbitrarily set by servients.
+ID,Status,Assertion
+bindings-requirements-scheme,pass,Every form in a WoT Thing Description MUST follow the requirements of the Protocol Binding indicated by the URI scheme of its href member.
+bindings-server-accept,pass,Every form in a WoT Thing Description MUST accurately describe requests (including request headers, if present) accepted by the Thing in an interaction.
+client-data-schema,pass,A Thing acting as a Consumer when interacting with another target Thing described in a WoT Thing Description MUST generate data organized according to the data schemas given in the corresponding interactions.
+client-data-schema-accept-extras,pass,A Thing acting as a Consumer when interacting with another Thing MUST accept without error any additional data not described in the data schemas given in the Thing Description of the target Thing.
+client-data-schema-no-extras,fail,A Thing acting as a Consumer when interacting with another Thing MUST NOT generate data not described in the data schemas given in the Thing Description of that Thing.
+client-uri-template,pass,A Thing acting as a Consumer when interacting with another Thing MUST generate URIs according to the URI Templates, base URIs, and form href parameters given in the Thing Description of the target Thing.
+sec-body-name-json-pointer-creatable,not-impl,When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema, it MUST be possible to insert the indicated element at the location indicated by the pointer.
+server-data-schema,pass,A WoT Thing Description MUST accurately describe the data returned and accepted by each interaction.
+server-data-schema-extras,pass,A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description.
+server-uri-template,pass,URI Templates, base URIs, and href members in a WoT Thing Description MUST accurately describe the WoT Interface of the Thing.
+td-context-default-language-direction-independence,null,However, when interpreting human-readable text, each human-readable string value MUST be processed independently.
+td-default-alg,null,The value associated with member alg if not given MUST be assumed to have the default value ES256.
+td-default-contentType,pass,The value associated with member contentType if not given MUST be assumed to have the default value application/json.
+td-default-format,null,The value associated with member format if not given MUST be assumed to have the default value jwt.
+td-default-http-method,pass,When no method is indicated in a form representing an Protocol Binding based on HTTP, a Default Value MUST be assumed as shown in the following table.
+td-default-http-method_get,pass,The value associated with member GET if not given MUST be assumed to have the default value  Form with operation type readproperty
+td-default-http-method_post,pass,The value associated with member POST if not given MUST be assumed to have the default value Form with operation type invokeaction.
+td-default-http-method_put,pass,The value associated with member PUT if not given MUST be assumed to have the default value Form with operation type writeproperty.
+td-default-idempotent,pass,The value associated with member idempotent if not given MUST be assumed to have the default value false.
+td-default-in-apikey,null,The value associated with member in if not given MUST be assumed to have the default value query.
+td-default-in-basic,pass,The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-in-bearer,null,The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-in-digest,null,The value associated with member in if not given MUST be assumed to have the default value header.
+td-default-op-actions,pass,The value associated with member op if not given MUST be assumed to have the default value invokeaction.
+td-default-op-events,pass,The value associated with member op if not given MUST be assumed to have the default value subscribeevent.
+td-default-op-properties,pass,The value associated with member op if not given MUST be assumed to have the default value Array of string with the elements readproperty and writeproperty.
+td-default-qop,null,The value associated with member qop if not given MUST be assumed to have the default value auth.
+td-default-readOnly,pass,The value associated with member readOnly if not given MUST be assumed to have the default value false.
+td-default-safe,pass,The value associated with member safe if not given MUST be assumed to have the default value false.
+td-default-success,null,.
+td-default-writeOnly,pass,The value associated with member writeOnly if not given MUST be assumed to have the default value false.
+td-expectedResponse-contentType,not-impl,If the content type of the expected response differs from the content type of the form, the Form instance MUST include a name-value pair with the name response.
+td-expectedResponse-default-contentType,not-impl,If no response name-value pair is provided, it MUST be assumed that the content type of the response is equal to the content type assigned to the Form instance.
+td-form-protocolbindings,pass,If required, form objects MAY be supplemented with protocol-specific Vocabulary Terms identified with a prefix.
+td-format-validation-other-values,null,When a value that is not found in the known set of values is assigned to format, such a validation SHOULD succeed.
+td-json-open,pass,TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
+td-json-open_accept-byte-order,pass,TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
+td-json-open_no-byte-order,pass,Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
+td-ns-multilanguage-content-negotiation,null,In cases where the default language has been negotiated, an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
+td-ns-multilanguage-content-negotiation-no-multi,null,When the default language has been negotiated successfully, TD documents SHOULD include the appropriate matching values for the members title and description in preference to MultiLanguage objects in titles and descriptions members.
+td-ns-multilanguage-content-negotiation-optional,null,Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g., because of resource constraints).
+td-processor-serialization,pass,A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format, according to the rules noted in and.
+td-security-binding,pass,If a Thing requires a specific access mechanism for an interaction, that mechanism MUST be specified in the security configuration of the Thing Description.
+td-security-in-query-over-uri,not-impl,The value uri SHOULD be specified for the name in in a security scheme only if query is not applicable.
+td-security-no-extras,pass,If a Thing does not require a specific access mechanism for an interaction, that mechanism MUST NOT be specified in the security configuration of the Thing Description.
+td-security-no-secrets,pass,For all security schemes, any private keys, passwords, or other sensitive information directly providing access should be shared and stored out-of-band and MUST NOT be stored in the TD.
+td-vocabulary-defaults,pass,When assignments in a TD are missing, a TD Processor MUST follow the Default Value assignments expressed in the table of.
+well-known-operation-types-only,pass,operations types SHOULD NOT be arbitrarily set by servients.
+privacy-auth-users-only,not-impl,Only authorized users SHOULD be provided access to the Thing Description for a Thing.
+privacy-centralized-ids,pass,TD identifiers SHOULD NOT be generated using a centralized authority.
+privacy-distributed-ids,not-impl,TD identifiers SHOULD be generated using a distributed mechanism such as UUIDs that provides a high probability of uniqueness.
+privacy-essential-metadata-only,not-impl,Only the amount of information needed for the level of authorization and the use case SHOULD be provided in a TD.
+privacy-id-metadata,pass,The value of the id of a TD SHOULD NOT contain metadata describing the Thing or from the TD itself.
+privacy-immutable-id-as-property,not-impl,Ideally, any required immutable identifiers SHOULD only be made available via affordances, such as a property, whose value can only be obtained after appropriate authentication and authorization, and managed separately from the TD identifier.
+privacy-mutable-id-ownership,not-impl,TD identifiers SHOULD be updated upon major changes in configuration or reinitialization.
+privacy-mutable-identifiers,not-impl,All identifiers used in a TD SHOULD be mutable, and in particular there should be a mechanism to update the id of a Thing when necessary.
+privacy-td-pii,not-impl,A Thing Description associated with a personal device SHOULD be treated as if it contained personally identifiable information, even if this information is not explicit.
+privacy-temp-id-metadata,not-impl,Any temporary ID generated to manage TDs, for example an ID for a database or directory service, SHOULD NOT contain metadata describing the Thing or from the TD itself.
+sec-body-name-json-pointer,not-impl,When used in the context of a body security information location, the value of name MUST be in the form of a JSON pointer [[!RFC6901]] relative to the root of the input DataSchema for each interaction it is used with.
+sec-body-name-json-pointer-array,not-impl,character to indicate a non-existent array element when it is necessary to insert an element after the last element of an existing array.
+sec-body-name-json-pointer-type,not-impl,.
+sec-inj-no-intl-markup,not-impl,HTML markup SHOULD NOT be used for internationalization purposes in TD strings.
+sec-inj-sanitize,not-impl,Strings sourced from TDs MUST either be sanitized using a carefully vetted HTML sanitizer that disables any markup or should be inserted into an HTML template using DOM node manipulation APIs that will escape any markup.
+sec-security-vocab-auto-in-no-name,not-impl,If a value of auto is set for the in field of a SecurityScheme, then the name field SHOULD NOT be set.
+sec-vuln-auto,not-impl,The auto security scheme MAY be used if vulnerability scanning is a concern.
+security-context-secure-fetch,not-impl,If it is necessary to fetch a context definition file, an implementation SHOULD first attempt to use HTTP over TLS even when only an HTTP URL is given.
+security-jsonld-expansion,not-impl,Consumers SHOULD set and enforce limits on memory usage to prevent buffer overflow and resource exhaustion during JSON-LD processing.
+security-mutual-auth-td,not-impl,Thing Descriptions SHOULD be obtained only through mutually authenticated secure channels.
+security-no-execution,pass,A WoT Thing Description JSON-LD serialization MUST NOT be passed through a code execution mechanism such as JavaScript's eval() function to be parsed.
+security-oauth-limits,not-impl,To limit the scope and duration of access to Things, tokens SHOULD be used to manage access.
+security-remote-context,not-impl,Constrained implementations SHOULD NOT follow links to remote contexts.
+security-server-auth-td,not-impl,In cases where the Consumer is associated with a person, e.g. browsers, TDs MAY be obtained through a channel where only the TD provider is authenticated.
+security-static-context,not-impl,Constrained implementations SHOULD use statically managed and vetted versions of their supported context extensions.
+security-update-contexts,not-impl,Supported context extensions on constrained implementations MAY be managed through secure software update mechanisms.
+td-context-ns-td10-namespacev10,pass,TD 1.1 consumers MUST accept TDs satisfying the W3C WoT Thing Description 1.0 [[wot-thing-description]] specification.
+td-default-AdditionalResponseContentType,not-impl,AdditionalExpectedResponse contentType value of the contentType of the Form element it belongs to.
+td-default-observable,pass,PropertyAffordance observable false
+td-security-combo-deprecation,not-impl,However, the use of an array with multiple elements to combine security schemes in a security element is now deprecated, instead a ComboSecurityScheme SHOULD be used.
+td-security-extension,not-impl,Additional security schemes MUST be Subclasses of the Class SecurityScheme.
+td-security-in-uri-variable,not-impl,The URIs provided in interactions where a security scheme using uri as the value for in MUST be a URI template including the defined variable.
+td-security-uri-variables-distinct,not-impl,The names of URI variables declared in a SecurityScheme MUST be distinct from all other URI variables declared in the TD.
+td-text-at-direction,null,Given that the Thing Description format is based on JSON-LD 1.1 [[?json-ld11]]
+td-text-direction-first-strong,null,When metadata such as @direction is not present, TD Consumers SHOULD use [=first-strong detection=] as a fallback.
+td-text-direction-language-tag,null,For the MultiLanguage Map, TD Consumers MAY infer the [=base direction=] from the language tag of the individual strings.
+thing-model-td-generation-processor-extends,TODO,If used
+thing-model-td-generation-processor-forms,TODO,Missing communication and/or security metadata details MUST be completed in the Thing Description instance based on Section and/or .
+thing-model-td-generation-processor-imports,TODO,Copy all definitions from the input Thing Model to the resulting Partial TD instance. If used, the extension and imports feature MUST be resolved and represented in the Partial TD instance according to .
+thing-model-td-generation-processor-placeholder,TODO,If used, all placeholders (see Section ) in the Thing Model MUST be replaced with a valid corresponding value in the Partial TD.
+thing-model-td-generation-processor-required,TODO,If the tm:required feature is used based on Section , the required interactions MUST be taken over to the Partial TD instance.
+thing-model-td-generation-processor-type,TODO,The tm:ThingModel value of the top-level @type MUST be removed in the Partial TD instance.
+tm-compose-instanceName,TODO,Optionally an instanceName MAY be provided to associate an individual name to the composed (sub-) Thing Model.
+tm-compose-name-collision,TODO,To avoid name collisions of the sub/child interaction names SHOULD rename the JSON name to the instanceName followed with '_' and the interaction name of the sub/child Thing Model.
+tm-compose-submodel,TODO,If it is desired to provide information that a Thing Model consists of one or more (sub-)Thing Models
+tm-context-requirement,TODO,Additionally, in order to identify it as a JSON-LD document, Thing Model definitions MUST use the keyword @context at top level with same rules as a Thing Description.
+tm-overwrite-interaction,pass,A Thing Model SHOULD NOT overwrite the JSON names defined within the properties, actions, and/or events Map of the extended Thing Model.
+tm-overwrite-types,pass,Definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin extended definitions.
+tm-placeholder-replacement,TODO,The placeholder labeling MUST be substituted with a concrete value (e.g., as JSON number, JSON string, JSON object, etc) when TD instance is created from the Thing Model.
+tm-placeholder-retyping,pass,If a non string-based value of a JSON name-value pair has a placeholder, the value MUST be (temporarily) typed as string.
+tm-placeholder-usecase,TODO,In a case where TD instance terms, but not their values, are known in advance, the placeholder labeling MAY be used in a Thing Model.
+tm-protocol-security-restriction,TODO,A Thing Model MAY NOT contain instance specific Protocol Binding and security information such as endpoint addresses.
+tm-ref-recursive-extensions,TODO,Recursive extensions leading to an infinite loop MUST NOT be defined.
+tm-tmRef-overwrite-possibility,TODO,If the intention is to override an existing JSON name-value pair definition from tm:ref, the same JSON name MUST be used at the same level of the tm:ref declaration that provides a new value.
+tm-tmRef-overwrite-process,TODO,The process to overwrite MUST follow the JSON Merge Patch algorithm as defined in [RFC7396] where the content of the referenced definition is patched with the new provided JSON name-value pairs.
+tm-tmRef-overwrite-semantic-meaning,null,Similar to tm:extends and to keep the semantic meaning, definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin referenced definition.
+tm-tmRef-usecase,TODO,For importing pieces of definitions of one or more existing Thing Models, the tm:ref term is introduced that provides the location of an existing (sub-)definition that SHOULD be reused.
+tm-tmRef2,null,Every time tm:ref is used, the referenced pre-definition and its dependencies (e.g., by context extension) MUST be assumed at the new defined definition.
+tm-tmRequired-resolver,TODO,The JSON Pointers of tm:required MUST resolve to an entire interaction affordance Map definition.
+tm-versioning,TODO,When the Thing Model definitions change over time, this SHOULD be reflected in the version container.
