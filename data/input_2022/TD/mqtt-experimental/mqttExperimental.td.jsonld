@@ -2,7 +2,7 @@
     "@context": ["https://www.w3.org/2022/wot/td/v1.1",
     { "@language" : "en" }],
     "id": "urn:uuid:c2b126b3-4ef2-40e9-9cad-f768608fdd0d",
-    "title": "EgeMyPublisher",
+    "title": "MQTT Experimental",
     "description": "A Thing demonstrating how to use observe and unobserve property. You can publish to testOneOf or to testMaxItems to trigger the events",
     "securityDefinitions": {
         "auto_sc": {
@@ -160,11 +160,11 @@
                     "contentType": "application/json",
                     "op": "queryaction",
                     "mqv:controlPacket":"mqv:subscribe",
-                    "additionalResponses":{
+                    "additionalResponses":[{
                         "success":true,
                         "contentType":"application/json",
                         "schema":"actionQueryOutput"
-                    }
+                    }]
                 },
                 {
                     "href": "mqtt://test.mosquitto.org",
@@ -172,11 +172,11 @@
                     "contentType": "application/json",
                     "op": "cancelaction",
                     "mqv:controlPacket":"mqv:publish",
-                    "additionalResponses":{
+                    "additionalResponses":[{
                         "success":true,
                         "contentType":"application/json",
                         "schema":"actionCancellation"
-                    }
+                    }]
                 }
             ]
         }
