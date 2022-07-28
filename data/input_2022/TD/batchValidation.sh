@@ -141,7 +141,12 @@ IMPLEMENTATION=mqtt-experimental
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
-## Older
+# Huawei
+IMPLEMENTATION=huawei
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+
+## Older (should be moved to node-wot)
 
 # Unibo Farm
 IMPLEMENTATION=unibo-farm
