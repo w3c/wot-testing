@@ -58,6 +58,7 @@
       "scheme": "auto"
     },
     "customtoken_sc": {
+      "@type": "c:CustomToken",
       "scheme": "bearer",
       "format": "c:CWT",
       "alg": "c:CAlg",

@@ -15,6 +15,7 @@
             "proxy": "http://136.243.47.220:3128/"
         },
         "useless": {
+            "@type": "ul:UselessWebToken",
             "scheme": "bearer",
             "format": "ul:UWT",
             "alg": "ul:AnyAlg"
