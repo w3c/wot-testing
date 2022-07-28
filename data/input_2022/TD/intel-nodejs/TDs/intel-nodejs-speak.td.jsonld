@@ -63,9 +63,13 @@
       "alg": "c:CAlg",
       "in": "header",
       "name": "Authorization"
+    },
+    "combo_sc": {
+      "scheme": "combo",
+      "oneOf": ["basic_sc", "digest_sc"]
     }
   },
-  "security": ["nosec_sc"],
+  "security": ["auto_sc"],
   "actions": {
     "say": {
       "input": {
@@ -89,37 +93,13 @@
           "href": "https://portal.mmccool.net:8096/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
-          "security": ["basic_sc"]
-        },
-        {
-          "href": "https://portal.mmccool.net:8096/api/say",
-          "contentType": "application/json",
-          "op":"invokeaction",
-          "security": ["auto_sc"]
-        },
-        {
-          "href": "https://portal.mmccool.net:8097/api/say",
-          "contentType": "application/json",
-          "op":"invokeaction",
-          "security": ["digest_sc"]
+          "security": ["combo_sc"]
         },
         {
           "href": "https://tiktok.mmccool.org:8096/api/say",
           "contentType": "application/json",
           "op":"invokeaction",
-          "security": ["basic_sc"]
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8096/api/say",
-          "contentType": "application/json",
-          "op":"invokeaction",
-          "security": ["auto_sc"]
-        },
-        {
-          "href": "https://tiktok.mmccool.org:8097/api/say",
-          "contentType": "application/json",
-          "op":"invokeaction",
-          "security": ["digest_sc"]
+          "security": ["combo_sc"]
         }
       ]
     }
