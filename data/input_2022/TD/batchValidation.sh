@@ -146,6 +146,11 @@ IMPLEMENTATION=huawei
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
+# VAIMEE
+IMPLEMENTATION=VAIMEE
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+
 ## Older (should be moved to node-wot)
 
 # Unibo Farm
