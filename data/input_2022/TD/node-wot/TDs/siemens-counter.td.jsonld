@@ -199,6 +199,11 @@
 		"de": "Zähler Beispiel Ding",
 		"it": "Contatore Esempio"
 	},
+	"links": [{
+		"href": "https://www.thingweb.io/img/favicon/favicon.png",
+		"sizes": "16x14",
+		"rel": "icon"
+	}],
 	"support": "git://github.com/eclipse/thingweb.node-wot.git",
 	"uriVariables": {
 		"step": {
