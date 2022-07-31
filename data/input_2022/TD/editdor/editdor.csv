@@ -86,7 +86,6 @@
 "tm-overwrite-interaction","pass",
 "tm-overwrite-types","pass",
 "tm-placeholder-replacement","pass",
-"tm-placeholder-retyping","pass",
 "tm-placeholder-usecase","pass",
 "tm-protocol-security-restriction","pass",
 "tm-ref-recursive-extensions","pass",
