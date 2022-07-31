@@ -66,7 +66,7 @@ td-vocabulary-defaults,pass
 tm-overwrite-interaction,not-impl
 tm-overwrite-types,not-impl
 tm-placeholder-retyping,not-impl
-tm-tmRef-2,not-impl
+tm-tmRef2,not-impl
 tm-tmRef-overwrite,not-impl
 tm-tmRef-overwrite-semantic-meaning,not-impl
 well-known-operation-types-only,pass

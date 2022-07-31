@@ -395,7 +395,7 @@
 "tm-overwrite-interaction","pass","not testable with Assertion Tester",
 "tm-overwrite-types","pass","not testable with Assertion Tester",
 "tm-placeholder-retyping","pass","not testable with Assertion Tester",
-"tm-tmRef-2","null","not testable with Assertion Tester",
+"tm-tmRef2","null","not testable with Assertion Tester",
 "tm-tmRef-overwrite","null","not testable with Assertion Tester",
 "tm-tmRef-overwrite-semantic-meaning","null","not testable with Assertion Tester",
 "well-known-operation-types-only","pass","not testable with Assertion Tester",
