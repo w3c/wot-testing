@@ -48,7 +48,6 @@ td-form-protocolbindings,pass
 td-json-open,pass
 td-json-open_accept-byte-order,pass
 td-json-open_no-byte-order,pass
-td-model-tmRef-2,null
 td-model-tmRef-overwrite,null
 td-ns-multilanguage-content-negotiation,not-impl
 td-ns-multilanguage-content-negotiation-no-multi,not-impl

@@ -343,7 +343,6 @@
 "td-default-alg-pop","null","not testable with Assertion Tester"
 "td-default-contentType","null","not testable with Assertion Tester"
 "td-default-format","null","not testable with Assertion Tester"
-
 "td-default-http-method","null","not testable with Assertion Tester"
 "td-default-http-method_get","null","not testable with Assertion Tester"
 "td-default-http-method_post","null","not testable with Assertion Tester"
