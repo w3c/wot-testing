@@ -21,7 +21,6 @@
 "td-default-contentType","pass","not testable with Assertion Tester"
 "td-default-flow","not-impl","not testable with Assertion Tester"
 "td-default-format","pass","not testable with Assertion Tester"
-"td-default-format-pop","not-impl","not testable with Assertion Tester"
 "td-default-idempotent","pass","not testable with Assertion Tester"
 "td-default-in-apikey","pass","not testable with Assertion Tester"
 "td-default-in-basic","pass","not testable with Assertion Tester"

@@ -18,7 +18,7 @@
 "td-default-contentType","pass",
 "td-default-flow","not-impl","not supported"
 "td-default-format","pass",
-"td-default-format-pop","not-impl","not supported"
+"","not-impl","not supported"
 "td-default-idempotent","not-impl","not supported"
 "td-default-in-apikey","not-impl","not supported"
 "td-default-in-basic","not-impl","not supported"

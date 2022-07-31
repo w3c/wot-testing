@@ -359,7 +359,6 @@
 "td-default-alg-pop","null","",
 "td-default-contentType","pass","",
 "td-default-format","pass","",
-"td-default-format-pop","null","",
 "td-default-http-method","pass","all children passed",
 "td-default-http-method_get","pass","",
 "td-default-http-method_post","pass","",

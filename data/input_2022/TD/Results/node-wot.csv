@@ -355,7 +355,7 @@
 "td-default-alg","null","not testable with Assertion Tester",
 "td-default-contentType","pass","not testable with Assertion Tester",
 "td-default-format","null","not testable with Assertion Tester",
-"td-default-format-pop","null","not testable with Assertion Tester",
+,
 "td-default-http-method","pass","all children passed",
 "td-default-http-method_get","pass","not testable with Assertion Tester",
 "td-default-http-method_post","pass","not testable with Assertion Tester",
