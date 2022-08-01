@@ -9,7 +9,11 @@
   "description": "Hue color lamp 1",
   "securityDefinitions": {
     "ha_sc": {
-      "scheme": "bearer"
+      "scheme": "bearer",
+      "in": "header",
+      "name": "Authorization",
+      "format": "jwt",
+      "alg": "ES256"
     }
   },
   "security": "ha_sc",
