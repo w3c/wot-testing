@@ -21,7 +21,10 @@
             "alg": "ul:AnyAlg"
         },
         "useful": {
-            "scheme": "digest"
+            "scheme": "digest",
+            "in": "header",
+            "name": "Authorization",
+            "qop": "auth"
         },
         "proxy_and_useful": {
             "scheme": "combo",
