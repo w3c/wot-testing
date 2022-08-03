@@ -1,33 +1,30 @@
 "ID","Status","Comment"
-"bindings-requirements-scheme","null","Not checked yet"
+"bindings-requirements-scheme","pass",""
 "bindings-server-accept","pass",
 "client-data-schema-accept-extras","null","n/a; not a consumer"
 "client-data-schema-no-extras","null","n/a; not a consumer"
 "client-data-schema","null","n/a; not a consumer"
 "client-uri-template","null","n/a; not a consumer"
-"privacy-auth-users-only","null","no auth checking, internal"
-"privacy-centralized-ids","null","check"
-"privacy-distributed-ids","null","check"
+"privacy-auth-users-only","null","no auth checking, done by proxy"
+"privacy-centralized-ids","pass",""
 "privacy-essential-metadata-only","pass",
-"privacy-id-metadata","null","check"
-"privacy-mutable-identifiers","null","check"
-"privacy-td-pii","null","not a personal device"
+"privacy-id-metadata","pass","check"
+"privacy-immutable-id-as-property","not-impl",""
+"privacy-mutable-identifiers","pass",""
 "privacy-temp-id-metadata","null","not a directory/not a temp id"
 "sec-body-name-json-pointer-array","null",
 "sec-body-name-json-pointer-creatable","null","feature not used"
 "sec-body-name-json-pointer","null","feature not used"
 "sec-body-name-json-pointer-type","null","feature not used"
 "sec-inj-no-intl-markup","pass",
-"sec-inj-sanitize","null","n/a"
-"security-context-secure-fetch","null",
-"security-jsonld-expansion","null",
-"security-mutual-auth-td","null",
-"security-no-execution","null",
+"security-context-secure-fetch","not-impl",
+"security-jsonld-expansion","not-impl",
+"security-mutual-auth-td","not-impl",
+"security-no-execution","null","not applicable, not a consumer"
 "security-oauth-limits","null",
 "security-remote-context","null",
-"security-server-auth-td","null",
-"security-static-context","null",
-"security-update-contexts","null",
+"security-server-auth-td","not-impl",
+"security-static-context","null","not applicable, not a consumer"
 "sec-vuln-auto","null",
 "server-data-schema-extras","null","feature not used"
 "server-data-schema","pass",
