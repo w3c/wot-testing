@@ -1,4 +1,4 @@
-# WoT March 2022 Plugfest/Testfest
+# WoT 2022 Implementation Results
 ## Architecture
 Collect data for Architecture.
 We will use the Architecture implementation report to centralize all
