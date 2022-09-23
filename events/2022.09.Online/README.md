@@ -5,6 +5,8 @@ The goal is to ensure that the current draft of the WoT Profile Specification ht
 and satisfies the requirements.
 A secondary goal is to identify feature coverage and at risk features for the Implementation Report.
 
+Tuesday and Wednesday will focus on validation of TDs for Profile compliance. The other 2 days will be focused on testing implementations. 
+
 Note: this is a WoT IG event.  We can have contributors who are not WoT members but they have to be
 invited as IG guests.  However, this is only the case if they are contributing to the Implementation report,
 e.g. with an Implementation Description, targeting the CR candidate deliverables, etc.  Experimental
@@ -21,9 +23,9 @@ Please create an issue for any gaps that you are working on during the Testfest,
 - [Testfest 2022.07](https://github.com/w3c/wot-testing/labels/Testfest%202022.09)
 
 ## Proposed Logistics
-* Date: Sept 26-Sept 30
+* Date: Sept 27-Sept 30
 * Time: (tentative) - 1h / day
-   - 8am Eastern/12pm UTC Monday and Tuesday
+   - 8am Eastern/12pm UTC Tuesday
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday, and Friday
 * WebEx: TBD
