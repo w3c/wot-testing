@@ -65,5 +65,5 @@
 "arch-security-consideration-use-hal","null",
 "arch-security-consideration-use-psk","null",
 "arch-td-linking","impl",
-"arch-td-mandatory","null", "Do not understand the assertion"
+"arch-td-mandatory","pass", "Do not understand the assertion"
 "arch-td-metadata","impl",
