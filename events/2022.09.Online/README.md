@@ -1,4 +1,4 @@
-# Sept 2022 Testfest + Plugfest
+# Oct 2022 Testfest + Plugfest - WoT Profile
 This combined testfest + plugfest is to evaluate implementations of the WoT Profile specification and to identify potential 
 out of the box interoperability problems.
 The goal is to ensure that the current draft of the WoT Profile Specification https://github.com/w3c/wot-profile is implementable
