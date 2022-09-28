@@ -25,9 +25,9 @@ Please create an issue for any gaps that you are working on during the Testfest,
 ## Proposed Logistics
 * Date: Oct 3 - Oct 6 
 * Time: (tentative) - 1h / day
-   - 8am Eastern/12pm UTC Tuesday
+   - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
-   - 10am Eastern/2pm UTC Thursday, and Friday
+   - 10am Eastern/2pm UTC Thursday and Friday
 * WebEx: TBD
 * Slack: TBD
 * Hangouts: none
