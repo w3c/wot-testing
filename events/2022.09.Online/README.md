@@ -13,7 +13,7 @@ e.g. with an Implementation Description, targeting the CR candidate deliverables
 implementations that do not contribute to the test results should be deferred to the next *plugfest*.
 
 ### Contribution to Profiles specification
-  - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profile. 
+  - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles. 
     You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
   - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
     and submit it there. This file is needed for the manual results. This file should go in the folder of your implementation.
