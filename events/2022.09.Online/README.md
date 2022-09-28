@@ -23,11 +23,13 @@ and satisfies the requirements.
 A secondary goal is to identify feature coverage and at risk features for the Profile Implementation Report.
 
 ### Contribution to Profiles specification
-  - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles. 
+  - Provide the TDs of Things of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles/Producers. 
     You need to group them under your implementation name, like `intel-nodejs/TDs`. 
   - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
-    and submit it in the Profiles directory under Results. This file is needed for the manual results. 
-    This file should go in the folder of your implementation.
+    and submit it in the Profiles directory under your implementation folder. Some of the assertions apply only for Consumers, some apply only for Producers.
+  - Provide implementation description of your consumer implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles/Consumers. You need to group them under your implementation name, like `intel-nodejs/TDs`. 
+  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
+  and submit it in the Profiles directory under under your implementation folder. Some of the assertions apply only for Consumers, some apply only for Producers.
 
 ## Participation
 This is a WoT IG event.  We can have contributors who are not WoT members but they have to be
