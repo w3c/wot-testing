@@ -15,15 +15,15 @@ implementations that do not contribute to the test results should be deferred to
 ### Contribution to Profiles specification
   - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profile. 
     You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
-  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.07.Online/Profile/manual.csv) for the Profile specification 
+  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
     and submit it there. This file is needed for the manual results. This file should go in the folder of your implementation.
   -
 ### Gaps and Issues
 Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.09`:
-- [Testfest 2022.07](https://github.com/w3c/wot-testing/labels/Testfest%202022.09)
+- [Testfest 2022.09](https://github.com/w3c/wot-testing/labels/Testfest%202022.09)
 
 ## Proposed Logistics
-* Date: Sept 27-Sept 30
+* Date: Oct 3 - Oct 6 
 * Time: (tentative) - 1h / day
    - 8am Eastern/12pm UTC Tuesday
    - 7am Eastern/11am UTC Wednesday
