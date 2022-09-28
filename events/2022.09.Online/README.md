@@ -23,7 +23,7 @@ Please create an issue for any gaps that you are working on during the Testfest,
 - [Testfest 2022.09](https://github.com/w3c/wot-testing/labels/Testfest%202022.09)
 
 ## Proposed Logistics
-* Date: Oct 3 - Oct 6 
+* Date: Oct 3 - Oct 7
 * Time: (tentative) - 1h / day
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
