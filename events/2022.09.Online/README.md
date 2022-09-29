@@ -52,8 +52,8 @@ Please create an issue for any gaps that you are working on during the Testfest,
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday and Friday
 * WebEx: TBD
-* Slack: TBD
+* Slack: see [email(IG)](https://lists.w3.org/Archives/Member/member-wot-ig/2022Jul/0001.html) or [email(WG)](https://lists.w3.org/Archives/Member/member-wot-wg/2022Jul/0002.html)
 * Hangouts: none
-* VLAN: TBD
+* VLAN: see [email(IG)](https://lists.w3.org/Archives/Member/member-wot-ig/2022Jul/0001.html) or [email(WG)](https://lists.w3.org/Archives/Member/member-wot-wg/2022Jul/0002.html)
 * Other
    - Details to follow
