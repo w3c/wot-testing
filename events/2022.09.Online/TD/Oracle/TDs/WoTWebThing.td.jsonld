@@ -4,14 +4,17 @@
 		"https://www.w3.org/2022/wot/td/v1.1"
 	],
 	"@type": "Thing",
-	"title": "Blue Pump 2",
-	"description": "Blue Pump 2 - Profile compliant WebThing (properties + actions + events)",
+	"title": "Blue Pump",
+	"description": "Blue Pump - Profile compliant WebThing (properties + actions + WebHook events)",
 	"id": "urn:com:blue:pump:data",
-	"profile": "https://www.w3.org/2022/wot/profile/core/v1",
+	"profile": [
+		"https://www.w3.org/2022/wot/profile/baseline/v1",
+		"https://www.w3.org/2022/wot/profile/http-webhook/v1"
+	],
 	"version": {
 		"instance": "1.0.0"
 	},
-	"base": "http://130.35.140.146:24042",
+	"base": "http://w3cwotprofile.ddns.net:42024",
 	"securityDefinitions": {
 		"basic_sc": {
 			"scheme": "basic",
@@ -22,7 +25,7 @@
 		"basic_sc"
 	],
 	"created": "2022-03-15T12:57:09.459Z",
-	"modified": "2022-03-16T19:01:09.459Z",
+	"modified": "2022-09-30T13:20:00.459Z",
 	"userLastModified": "Michael Lagally",
 	"support": "mailto:Michael.Lagally@oracle.com",
 	"properties": {
@@ -33,13 +36,12 @@
 			"title": "Cycle_Maximum_Inlet_Pressure",
 			"properties": {
 				"Cycle_Maximum_Inlet_Pressure": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Maximum_Inlet_Pressure",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Maximum_Inlet_Pressure",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -52,13 +54,12 @@
 			"title": "Cycle_Return_Pressure_Min",
 			"properties": {
 				"Cycle_Return_Pressure_Min": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Return_Pressure_Min",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Return_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -71,13 +72,12 @@
 			"title": "Cycle_Return_Pressure_Max",
 			"properties": {
 				"Cycle_Return_Pressure_Max": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Return_Pressure_Max",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Return_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -90,13 +90,12 @@
 			"title": "Cycle_Cases_Pressure_Min",
 			"properties": {
 				"Cycle_Cases_Pressure_Min": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Cases_Pressure_Min",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Cases_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -109,13 +108,12 @@
 			"title": "Cycle_Cases_Pressure_Max",
 			"properties": {
 				"Cycle_Cases_Pressure_Max": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Cases_Pressure_Max",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Cases_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -128,13 +126,12 @@
 			"title": "Cycle_Peak_Operation_Percent_Of_Minute",
 			"properties": {
 				"Cycle_Peak_Operation_Percent_Of_Minute": {
-					"type": "number",
-					"readOnly": true
+					"type": "number"
 				}
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/properties/Cycle_Peak_Operation_Percent_Of_Minute",
+					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Peak_Operation_Percent_Of_Minute",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -155,29 +152,29 @@
 			},
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/actions/power",
+					"href": "http://w3cwotprofile.ddns.net:42024/actions/power",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
 			]
 		},
 		"diagnose": {
-			"description": "Runs diagnostics, which results in a Diagnostics message being sent",
+			"description": "Runs diagnostics (async action)",
 			"title": "diagnose",
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/actions/diagnose",
+					"href": "http://w3cwotprofile.ddns.net:42024/actions/diagnose",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
 			]
 		},
 		"resetFilter": {
-			"description": "Used to notify the pump that the filter has been replaced.",
+			"description": "Used to notify the pump that the filter has been replaced. Responds with a 403 Forbidden",
 			"title": "resetFilter",
 			"forms": [
 				{
-					"href": "http://130.35.140.146:24042/actions/resetFilter",
+					"href": "http://w3cwotprofile.ddns.net:42024/actions/resetFilter",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
@@ -224,6 +221,9 @@
 					"timestamp": {
 						"type": "string",
 						"format": "date-time"
+					},
+					"seqNr": {
+						"type": "number"
 					}
 				}
 			},
@@ -243,14 +243,14 @@
 			"forms": [
 				{
 					"op": "subscribeevent",
-					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"href": "http://w3cwotprofile.ddns.net:42024/events/filterClogged",
 					"htv:methodName": "POST",
 					"subprotocol": "webhook",
 					"contentType": "application/json"
 				},
 				{
 					"op": "unsubscribeevent",
-					"href": "http://130.35.140.146:24042/events/filterClogged",
+					"href": "http://w3cwotprofile.ddns.net:42024/events/filterClogged",
 					"htv:methodName": "DELETE",
 					"subprotocol": "webhook",
 					"contentType": "application/json"
