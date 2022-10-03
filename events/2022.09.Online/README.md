@@ -5,7 +5,7 @@ that all normative assertions of the specification need to be verified.
 If an assertion cannot be verified by two implementations, it is "at risk".
 In this case, either the implementation(s) have to be improved, or the assertion needs to be adapted or removed.
 
-Testing does not need to be automated. 
+Testing, that is, verification of assertions, does not need to be automated. 
 If testing is not automatic implementers need to manually state
 that an assertion is satisfied by their implementation.  In the following this is done with CSV
 files.  In general, the "Status" entry for each assertion should be one of the following values:
