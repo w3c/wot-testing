@@ -8,7 +8,7 @@ In this case, either the implementation(s) have to be improved, or the assertion
 Testing does not need to be automated. 
 If testing is not automatic implementers need to manually state
 that an assertion is satisfied by their implementation.  In the following this is done with CSV
-files.  In general, the "Status" entry for each assertion should be on the of the following values:
+files.  In general, the "Status" entry for each assertion should be one of the following values:
 * "null" (no information, the default),
 * "pass" (assertion is satisfied), 
 * "not-impl" (feature associated with the assertion is not implemented, only for optional features) and 
