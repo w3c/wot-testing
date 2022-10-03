@@ -1,5 +1,19 @@
 # Oct 2022 Testfest + Plugfest 
 
+W3C testing requires demonstrating the implementability of a specification by more than one implementation. This implies
+that all normative assertions of the specification need to be verified. 
+If an assertion cannot be verified by two implementations, it is "at risk".
+In this case, either the implementation(s) have to be improved, or the assertion needs to be adapted or removed.
+
+Testing does not need to be automated. 
+If testing is not automatic implementers need to manually state
+that an assertion is satisfied by their implementation.  In the following this is done with CSV
+files.  In general, the "Status" entry for each assertion should be on the of the following values:
+* "null" (no information, the default),
+* "pass" (assertion is satisfied), 
+* "not-impl" (feature associated with the assertion is not implemented, only for optional features) and 
+* "fail" (assertion fails, i.e. a mandatory feature is not implemented, or a feature is implemented in a way that contradicts the assertion).
+
 ## Goals and Priorities
 * Complete Implementation Reports for TD 1.1, Discovery, and Architecture 1.1
    - Collect final test cases
@@ -38,10 +52,7 @@ The goal is to ensure that the current draft of the WoT Profile Specification ht
 and satisfies the requirements.
 A secondary goal is to identify feature coverage and at risk features for the Profile Implementation Report.
 
-W3C testing requires to demonstrate the implementability of a specification by more than one implementation. This implies
-that all normative assertions of the specification need to be verified. 
-If an assertion cannot be verified by two implementations, it is "at risk".
-In this case, either the implementation(s) have to be improved, or the assertion needs to be adapted or removed.
+
 
 ### Contribution to Profiles specification
   - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles. 
