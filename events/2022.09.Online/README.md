@@ -15,6 +15,22 @@
 Final test inputs need to be captured for these deliverables in order to proceed to CR in the near future.
 These have all reached CR draft status.
 
+### Contribution to TD 1.1 specification
+  - Provide the TDs and TMs of your implementation of the TD 1.1 specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/TD. 
+    You need to group them under your implementation name, like `intel-nodejs/TDs` or `intel-nodejs/TMs`. 
+  - Copy and fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/TD/manual.csv) for the TD 1.1 specification 
+    and submit it in the TD directory under your implementation. This file is needed for the manual results. 
+    This file should go in the folder of your implementation.
+    
+### Contribution to Architecture specification
+  - Copy and fill in the [template.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Architecture/template.csv) for the Architecture specification assertions
+    and submit it in the Architecture directory under Results. 
+    This file should go in a folder named after your implementation.
+    Use the same name as used under other specifications.
+
+### Contribution to Discovery specification
+  - Instructions To Do.
+  
 ## Profiles
 This combined testfest + plugfest should evaluate implementations of the WoT Profile specification and identify potential 
 out of the box interoperability problems.
@@ -25,7 +41,7 @@ A secondary goal is to identify feature coverage and at risk features for the Pr
 ### Contribution to Profiles specification
   - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles. 
     You need to group them under your implementation name, like `intel-nodejs/TDs`. 
-  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
+  - Copy and fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Profile/manual.csv) for the Profile specification 
     and submit it in the Profiles directory under Results. This file is needed for the manual results. 
     This file should go in the folder of your implementation.
 
