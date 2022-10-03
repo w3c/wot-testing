@@ -38,6 +38,11 @@ The goal is to ensure that the current draft of the WoT Profile Specification ht
 and satisfies the requirements.
 A secondary goal is to identify feature coverage and at risk features for the Profile Implementation Report.
 
+W3C testing requires to demonstrate the implementability of a specification by more than one implementation. This implies
+that all normative assertions of the specification need to be verified. 
+If an assertion cannot be verified by two implementations, it is "at risk".
+In this case, either the implementation(s) have to be improved, or the assertion needs to be adapted or removed.
+
 ### Contribution to Profiles specification
   - Provide the TDs of your implementation of the Profile specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/Profiles. 
     You need to group them under your implementation name, like `intel-nodejs/TDs`. 
