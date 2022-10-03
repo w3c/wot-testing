@@ -33,10 +33,7 @@
 				"$ref": "#/definitions/anyUri"
 			}
 		},
-			"resultValue": {
-			"value": "object"
-		}
-
+			"resultValue": "object"
 	},
 	"security": [
 		"basic_sc"
