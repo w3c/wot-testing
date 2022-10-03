@@ -258,7 +258,7 @@
 						},
 						{
 							"success": true,
-							"schema": "resultValue"
+							"schema": "actionStatus"
 						}
 					]
 				}
@@ -271,7 +271,17 @@
 				{
 					"href": "http://w3cwotprofile.ddns.net:24042/actions/resetFilter",
 					"contentType": "application/json",
-					"op": "invokeaction"
+					"op": "invokeaction",
+					"additionalResponses": [
+						{
+							"success": false,
+							"schema": "problemDetails"
+						},
+						{
+							"success": true,
+							"schema": "resultValue"
+						}
+					]
 				}
 			]
 		}
