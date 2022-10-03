@@ -23,7 +23,7 @@
 	},
 	"schemaDefinitions": {
 		"resultValue": {
-			"type": ["number", "string", "array", "object", "integer", "null", "boolean"]
+			"type": "object"
 		},
 		"problemDetails": {
 			"type": "string",
