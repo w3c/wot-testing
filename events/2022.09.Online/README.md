@@ -16,9 +16,9 @@ Final test inputs need to be captured for these deliverables in order to proceed
 These have all reached CR draft status.
 
 ### Contribution to TD 1.1 specification
-  - Provide the TDs and TMs of your implementation of the TD 1.1 specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09/TD. 
+  - Provide the TDs and TMs of your implementation of the TD 1.1 specification at https://github.com/w3c/wot-testing/tree/main/events/2022.09.Online/TD. 
     You need to group them under your implementation name, like `intel-nodejs/TDs` or `intel-nodejs/TMs`. 
-  - Copy and fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/TD/manual.csv) for the TD 1.1 specification 
+  - Copy and fill in the [manual.csv](https://github.com/w3c/wot-testing/tree/main/events/2022.09.Online/TD/manual.csv) for the TD 1.1 specification 
     and submit it in the TD directory under your implementation. This file is needed for the manual results. 
     This file should go in the folder of your implementation.
     
