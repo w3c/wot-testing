@@ -235,7 +235,7 @@
 		"power": {
 			"description": "Turns system ON or OFF",
 			"title": "power",
-            "synchronous": "true",
+            "synchronous": true,
 			"input": {
 				"type": "object",
 				"properties": {
@@ -265,7 +265,7 @@
 		"diagnose": {
 			"description": "Runs diagnostics (async action)",
 			"title": "diagnose",
-            "synchronous": "false",
+            "synchronous": false,
 			"forms": [
 				{
 					"href": "http://w3cwotprofile.ddns.net:24042/actions/diagnose",
