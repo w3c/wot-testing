@@ -22,6 +22,7 @@
 		}
 	},
 	"schemaDefinitions": {
+		"resultValue": ["number", "string", "array", "object", "integer", "null", "boolean"],
 		"problemDetails": {
 			"type": "string",
 			"title": "string",
@@ -30,8 +31,7 @@
 			"instance": {
 				"$ref": "#/definitions/anyUri"
 			}
-		},
-			"resultValue": "object"
+		}
 	},
 	"security": [
 		"basic_sc"
