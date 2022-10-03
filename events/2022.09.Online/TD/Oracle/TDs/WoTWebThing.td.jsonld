@@ -14,7 +14,7 @@
 	"version": {
 		"instance": "1.0.0"
 	},
-	"base": "http://w3cwotprofile.ddns.net:42024",
+	"base": "http://w3cwotprofile.ddns.net:24024",
 	"securityDefinitions": {
 		"basic_sc": {
 			"scheme": "basic",
@@ -41,7 +41,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Maximum_Inlet_Pressure",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Maximum_Inlet_Pressure",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -59,7 +59,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Return_Pressure_Min",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Return_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -77,7 +77,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Return_Pressure_Max",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Return_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -95,7 +95,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Cases_Pressure_Min",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Cases_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -113,7 +113,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Cases_Pressure_Max",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Cases_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -131,7 +131,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/properties/Cycle_Peak_Operation_Percent_Of_Minute",
+					"href": "http://w3cwotprofile.ddns.net:24024/properties/Cycle_Peak_Operation_Percent_Of_Minute",
 					"contentType": "application/json",
 					"op": "readproperty"
 				}
@@ -152,7 +152,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/actions/power",
+					"href": "http://w3cwotprofile.ddns.net:24024/actions/power",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
@@ -163,7 +163,7 @@
 			"title": "diagnose",
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/actions/diagnose",
+					"href": "http://w3cwotprofile.ddns.net:24024/actions/diagnose",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
@@ -174,7 +174,7 @@
 			"title": "resetFilter",
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:42024/actions/resetFilter",
+					"href": "http://w3cwotprofile.ddns.net:24024/actions/resetFilter",
 					"contentType": "application/json",
 					"op": "invokeaction"
 				}
@@ -243,14 +243,14 @@
 			"forms": [
 				{
 					"op": "subscribeevent",
-					"href": "http://w3cwotprofile.ddns.net:42024/events/filterClogged",
+					"href": "http://w3cwotprofile.ddns.net:24024/events/filterClogged",
 					"htv:methodName": "POST",
 					"subprotocol": "webhook",
 					"contentType": "application/json"
 				},
 				{
 					"op": "unsubscribeevent",
-					"href": "http://w3cwotprofile.ddns.net:42024/events/filterClogged",
+					"href": "http://w3cwotprofile.ddns.net:24024/events/filterClogged",
 					"htv:methodName": "DELETE",
 					"subprotocol": "webhook",
 					"contentType": "application/json"

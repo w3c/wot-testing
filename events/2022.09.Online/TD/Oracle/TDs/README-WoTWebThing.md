@@ -26,6 +26,7 @@ The *WoTWebThing* requires basic authentication in the HTTP authentication heade
 The following properties are defined:
 
 ```
+meaning
 Cycle_Peak_Operation_Percent_Of_Minute
 Cycle_Cases_Pressure_Max
 Cycle_Cases_Pressure_Min
@@ -35,21 +36,21 @@ Cycle_Maximum_Inlet_Pressure
 
 ### reading a single property
 ```
-% curl w3cwotprofile.ddns.net:42024/properties/meaning -u "w3cwotprofile:eliforp"
+% curl w3cwotprofile.ddns.net:24024/properties/meaning -u "w3cwotprofile:eliforp"
 {"meaning": 42}
 ```
 
 ### Setting a property
 
 ```
-% curl -X PUT w3cwotprofile.ddns.net:42024/properties/meaning -u "w3cwotprofile:eliforp" -d "{ value : \"41\" }"
+% curl -X PUT w3cwotprofile.ddns.net:24024/properties/meaning -u "w3cwotprofile:eliforp" -d "{ value : \"41\" }"
 ```
 
 
 ### reading all properties
 
 ```
-% curl w3cwotprofile.ddns.net:42024/properties -u "w3cwotprofile:eliforp" 
+% curl w3cwotprofile.ddns.net:24024/properties -u "w3cwotprofile:eliforp" 
 {
   "Cycle_Return_Pressure_Min": 1.3913971190868986,
   "Cycle_Maximum_Inlet_Pressure": 301.42182499556196,
@@ -69,12 +70,12 @@ The *diagnose* operation models an asynchronous operation. When invoked it retur
 
 ### Synchronous actions
 ```
-curl -v w3cwotprofile.ddns.net:42024/actions/power -u "w3cwotprofile:eliforp" -d "{value: true}"  
+curl -v w3cwotprofile.ddns.net:24024/actions/power -u "w3cwotprofile:eliforp" -d "{value: true}"  
 ```
 
 The following action *always* returns *forbidden* for testing purposes:
 ```
-curl -v w3cwotprofile.ddns.net:42024/actions/resetFilter -u "w3cwotprofile:eliforp" -d "{value: true}"   
+curl -v w3cwotprofile.ddns.net:24024/actions/resetFilter -u "w3cwotprofile:eliforp" -d "{value: true}"   
 -> forbidden
 ``` 
 
@@ -82,7 +83,7 @@ curl -v w3cwotprofile.ddns.net:42024/actions/resetFilter -u "w3cwotprofile:elifo
 
 To invoke an asynchronous action:
 ```
-curl -v -X POST w3cwotprofile.ddns.net:42024/actions/diagnose -u "w3cwotprofile:eliforp"
+curl -v -X POST w3cwotprofile.ddns.net:24024/actions/diagnose -u "w3cwotprofile:eliforp"
 ```
 
 Response is an ActionStatus object:
@@ -96,7 +97,7 @@ Response is an ActionStatus object:
 
 Querying the state of an asynchronous action:
 ```
-% curl -X GET w3cwotprofile.ddns.net:42024/actions/diagnose/40578eed-7b88-4fdb-9f72-90314f924d4a -u "w3cwotprofile:eliforp"
+% curl -X GET w3cwotprofile.ddns.net:24024/actions/diagnose/40578eed-7b88-4fdb-9f72-90314f924d4a -u "w3cwotprofile:eliforp"
 
 {
   "timeRequested": "2022-05-30T18:16:45.169514",
@@ -108,7 +109,7 @@ Querying the state of an asynchronous action:
 After the action has ended:
 
 ```
-% curl -X GET w3cwotprofile.ddns.net:42024/actions/diagnose/40578eed-7b88-4fdb-9f72-90314f924d4a -u "w3cwotprofile:eliforp"
+% curl -X GET w3cwotprofile.ddns.net:24024/actions/diagnose/40578eed-7b88-4fdb-9f72-90314f924d4a -u "w3cwotprofile:eliforp"
 
 {
   "timeEnded": "2022-05-30T18:17:37.297650",
@@ -122,16 +123,16 @@ After the action has ended:
 
 ### Event subscription:
 ```
-curl -v -X POST w3cwotprofile.ddns.net:42024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{callbackURL : \"http://130.35.140.146:223\" }"
+curl -v -X POST w3cwotprofile.ddns.net:24024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{callbackURL : \"http://130.35.140.146:223\" }"
 
 -> {"subscriptionID": 903305380}
 ```
 #### Unsubscribe using callbackURL 
 ```
-curl -v -X DELETE w3cwotprofile.ddns.net:42024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{callbackURL : \"http://130.35.140.146:223\" }"
+curl -v -X DELETE w3cwotprofile.ddns.net:24024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{callbackURL : \"http://130.35.140.146:223\" }"
 ```
 #### Unsubscribe using subscriptionId
 ```
-curl -v -X DELETE w3cwotprofile.ddns.net:42024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{"subscriptionID": \"904712663\"}" 
+curl -v -X DELETE w3cwotprofile.ddns.net:24024/events/filterClogged -u "w3cwotprofile:eliforp" -d "{"subscriptionID": \"904712663\"}" 
 
 ```
