@@ -11,8 +11,8 @@ that an assertion is satisfied by their implementation.  In the following this i
 files.  In general, the "Status" entry for each assertion should be one of the following values:
 * "null" (no information, the default),
 * "pass" (assertion is satisfied), 
-* "not-impl" (feature associated with the assertion is not implemented, only for optional features) and 
-* "fail" (assertion fails, i.e. a mandatory feature is not implemented, or a feature is implemented in a way that contradicts the assertion).
+* "not-impl" (feature associated with the assertion is not implemented; only used for unimplemented optional features) and 
+* "fail" (assertion is demonstrably false for the implementation, i.e. a mandatory feature is not implemented, or a feature is implemented in a way that contradicts the assertion).
 
 ## Goals and Priorities
 * Complete Implementation Reports for TD 1.1, Discovery, and Architecture 1.1
