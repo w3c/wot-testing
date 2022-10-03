@@ -22,7 +22,9 @@
 		}
 	},
 	"schemaDefinitions": {
-		"resultValue": ["number", "string", "array", "object", "integer", "null", "boolean"],
+		"resultValue": {
+			"type": ["number", "string", "array", "object", "integer", "null", "boolean"]
+		},
 		"problemDetails": {
 			"type": "string",
 			"title": "string",
