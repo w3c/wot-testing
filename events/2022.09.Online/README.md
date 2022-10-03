@@ -51,7 +51,9 @@ Please create an issue for any gaps that you are working on during the Testfest,
    - 8am Eastern/12pm UTC Monday and Tuesday
    - 7am Eastern/11am UTC Wednesday
    - 10am Eastern/2pm UTC Thursday and Friday
-* WebEx: TBD
+* WebEx:
+   - [Archive for Members](https://lists.w3.org/Archives/Member/member-wot-wg/2022Oct/0001.html)
+   - [Archive for IEs](https://lists.w3.org/Archives/Group/group-wot-ie/2022Oct/0001.html)
 * Slack: TBD
 * Hangouts: none
 * VLAN: TBD
