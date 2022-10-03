@@ -23,9 +23,7 @@
 	},
 	"schemaDefinitions": {
 		"problemDetails": {
-			"type": {
-				"$ref": "#/definitions/anyUri"
-			},
+			"type": "string",
 			"title": "string",
 			"status": "number",
 			"detail": "string",
