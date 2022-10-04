@@ -8,7 +8,7 @@
 	"description": "Blue Pump - Profile compliant WebThing (properties + actions + WebHook events)",
 	"id": "urn:com:blue:pump:data",
 	"profile": [
-		"https://www.w3.org/2022/wot/profile/baseline/v1",
+        "https://www.w3.org/2022/wot/profile/http-basic/v1",
 		"https://www.w3.org/2022/wot/profile/http-webhook/v1"
 	],
 	"version": {
