@@ -95,7 +95,7 @@
         "propertyConst": {
             "readOnly": true,
             "writeOnly": false,
-			"const": 123,
+            "const": 123,
             "forms": [
                 {
                     "href": "mqtt://iot.eclipse.org/propertyConst",
@@ -117,7 +117,7 @@
             "observable":true,
             "type":"string",
             "contentMediaType": "image/png",
-	        "contentEncoding": "base64",            
+	    "contentEncoding": "base64",            
             "forms": [
                 {
                     "href": "mqtt://test.mosquitto.org",
