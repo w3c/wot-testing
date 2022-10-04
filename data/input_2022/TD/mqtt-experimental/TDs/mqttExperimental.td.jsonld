@@ -92,13 +92,32 @@
                 }
             ]
         },
+        "propertyConst": {
+            "readOnly": true,
+            "writeOnly": false,
+            "const": 123,
+            "forms": [
+                {
+                    "href": "mqtt://iot.eclipse.org/propertyConst",
+                    "contentType": "application/json",
+                    "op": "observeproperty",
+                    "mqtt:commandCode": 8
+                },
+                {
+                    "href": "mqtt://iot.eclipse.org/propertyConst",
+                    "contentType": "application/json",
+                    "op": "unobserveproperty",
+                    "mqtt:methodCode": 10
+                }
+            ]
+        },
         "encodingTest": {
             "readOnly":true,
             "writeOnly": false,
             "observable":true,
             "type":"string",
             "contentMediaType": "image/png",
-	        "contentEncoding": "base64",            
+	    "contentEncoding": "base64",            
             "forms": [
                 {
                     "href": "mqtt://test.mosquitto.org",
