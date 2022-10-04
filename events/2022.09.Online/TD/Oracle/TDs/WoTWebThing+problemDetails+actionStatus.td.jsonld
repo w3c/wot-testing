@@ -36,7 +36,10 @@
 		},
         "actionStatus" : {
             "status": "string",
-            "output": ["number", "string", "array", "object", "integer", "null", "boolean"],
+            "output": {
+                "type": "string",
+                "enum" : ["number", "string", "array", "object", "integer", "null", "boolean"]
+             },
             "error": {
                 "$ref": "#/schemaDefinitions/problemDetails"
             },
