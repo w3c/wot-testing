@@ -35,7 +35,7 @@
 			}
 		},
         "actionStatus" : {
-            "status": "string",
+            "status": { "type": "string" },
             "output": {
                 "type": "string",
                 "enum" : ["number", "string", "array", "object", "integer", "null", "boolean"]
