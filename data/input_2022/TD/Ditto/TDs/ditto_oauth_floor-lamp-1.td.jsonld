@@ -9,7 +9,7 @@
   "title": "Floor Lamp",
   "description": "A smart floor lamp with 3 dimmable and color changing spots, smoke detection capability and power consumption awareness.",
   "@type": "Thing",
-  "id": "urn:org.eclipse.ditto:floor-lamp-1",
+  "id": "urn:org.eclipse.ditto:oauth-floor-lamp-1",
   "base": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:floor-lamp-1",
   "version": {
     "model": "1.0.0",

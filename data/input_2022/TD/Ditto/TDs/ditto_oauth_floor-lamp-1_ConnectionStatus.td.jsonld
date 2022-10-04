@@ -7,7 +7,7 @@
   ],
   "title": "Connection Status",
   "@type": "Thing",
-  "id": "urn:org.eclipse.ditto:floor-lamp-1/features/ConnectionStatus",
+  "id": "urn:org.eclipse.ditto:oauth-floor-lamp-1/features/ConnectionStatus",
   "base": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:floor-lamp-1/features/ConnectionStatus",
   "version": {
     "model": "1.0.0",
