@@ -92,6 +92,25 @@
                 }
             ]
         },
+        "propertyConst": {
+            "readOnly": true,
+            "writeOnly": false,
+			"const": 123,
+            "forms": [
+                {
+                    "href": "mqtt://iot.eclipse.org/propertyConst",
+                    "contentType": "application/json",
+                    "op": "observeproperty",
+                    "mqtt:commandCode": 8
+                },
+                {
+                    "href": "mqtt://iot.eclipse.org/propertyConst",
+                    "contentType": "application/json",
+                    "op": "unobserveproperty",
+                    "mqtt:methodCode": 10
+                }
+            ]
+        },
         "encodingTest": {
             "readOnly":true,
             "writeOnly": false,
