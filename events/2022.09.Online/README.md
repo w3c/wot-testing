@@ -39,7 +39,7 @@ These have all reached CR draft status.
 ### Contribution to Architecture specification
   - Copy and fill in the [template.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.09.Online/Architecture/template.csv) for the Architecture specification assertions
     and submit it in the Architecture directory under Results. 
-    This file should go in a folder named after your implementation.
+    This file should be named after your implementation, e.g. `intel-nodejs.csv`.
     Use the same name as used under other specifications.
 
 ### Contribution to Discovery specification

@@ -4,7 +4,7 @@
   ],
   "title": "Colored Lamp",
   "@type": "Thing",
-  "id": "urn:org.eclipse.ditto:floor-lamp-1/features/Status-LED",
+  "id": "urn:org.eclipse.ditto:oauth-floor-lamp-1/features/Status-LED",
   "base": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:floor-lamp-1/features/Status-LED",
   "version": {
     "model": "1.0.0",
