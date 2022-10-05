@@ -22,16 +22,23 @@
 		}
 	},
 	"schemaDefinitions": {
+        "anyUri": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^(https?|http?)://",
+            "minLength": 1,
+            "maxLength": 255
+        }
         "resultValue": {
             "type": "object"
         },
- 		"problemDetails": {
-			"type": "string",
+        "problemDetails": {
+            "type": "string",
 			"title": "string",
 			"status": "number",
 			"detail": "string",
 			"instance": {
-				"$ref": "#/definitions/anyUri"
+				"$ref": "/schemaDefinitions/anyUri"
 			}
 		},
         "actionStatus" : {
@@ -44,7 +51,7 @@
                 "$ref": "#/schemaDefinitions/problemDetails"
             },
             "href": {
-				"$ref": "#/definitions/anyUri"
+				"$ref": "/schemaDefinitions/anyUri"
 			}, 
             "timeRequested": {
                 "type": "string",
