@@ -48,7 +48,7 @@
                 "enum" : ["number", "string", "array", "object", "integer", "null", "boolean"]
              },
             "error": {
-                "$ref": "#/schemaDefinitions/problemDetails"
+                "$ref": "/schemaDefinitions/problemDetails"
             },
             "href": {
 				"$ref": "/schemaDefinitions/anyUri"
