@@ -30,6 +30,7 @@ meaning
 Cycle_Peak_Operation_Percent_Of_Minute
 Cycle_Cases_Pressure_Max
 Cycle_Cases_Pressure_Min
+Cycle_Return_Pressure_Min
 Cycle_Return_Pressure_Max
 Cycle_Maximum_Inlet_Pressure
 ```

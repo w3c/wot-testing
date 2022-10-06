@@ -289,7 +289,11 @@
 				{
 					"href": "http://w3cwotprofile.ddns.net:24042/actions/diagnose",
 					"contentType": "application/json",
-					"op": "invokeaction",
+					"op": [            
+						"invokeaction",
+						"queryaction",
+						"cancelaction"
+					],
 					"additionalResponses": [
 						{
 							"success": false,
