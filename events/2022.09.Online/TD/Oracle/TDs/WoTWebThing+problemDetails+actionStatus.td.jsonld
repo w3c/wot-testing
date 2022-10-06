@@ -40,6 +40,37 @@
 			"instance": {
 				"$ref": "/schemaDefinitions/anyUri"
 			}
+		},
+		"actionStatus": {
+			"status": {
+				"type": "string"
+			},
+			"output": {
+				"type": "string",
+				"enum": [
+					"number",
+					"string",
+					"array",
+					"object",
+					"integer",
+					"null",
+					"boolean"
+				]
+			},
+			"error": {
+				"$ref": "/schemaDefinitions/problemDetails"
+			},
+			"href": {
+				"$ref": "/schemaDefinitions/anyUri"
+			},
+			"timeRequested": {
+				"type": "string",
+				"format": "date-time"
+			},
+			"timeEnded": {
+				"type": "string",
+				"format": "date-time"
+			}
 		}
 	},
 	"security": [
@@ -223,6 +254,7 @@
 		"power": {
 			"description": "Turns system ON or OFF",
 			"title": "power",
+			"synchronous": true,
 			"input": {
 				"type": "object",
 				"properties": {
@@ -252,6 +284,7 @@
 		"diagnose": {
 			"description": "Runs diagnostics (async action)",
 			"title": "diagnose",
+			"synchronous": false,
 			"forms": [
 				{
 					"href": "http://w3cwotprofile.ddns.net:24042/actions/diagnose",
