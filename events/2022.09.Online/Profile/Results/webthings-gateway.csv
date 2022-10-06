@@ -1,0 +1,162 @@
+"ID","Status","Comment"
+"profile-abstract-1","not-impl","I propose removing this assertion from the abstract https://github.com/w3c/wot-profile/pull/297 "
+"profile-why-a-basic-profile-1-x","not-impl","I propose removing this assertion from the introduction https://github.com/w3c/wot-profile/pull/298"
+"profiling-mechanism-1","not-impl",
+"profiling-mechanism-2","not-impl",
+"profiling-mechanism-3","not-impl",
+"profiling-mechanism-4","not-impl",
+"common-constraints-units","pass",
+"common-constraints-units-metric","pass","The assertion does not specify a particular ontology, but WebThings uses the long form of SI units as a string."
+"common-constraints-date-format-1","null","Reference is broken, proposed fix in https://github.com/w3c/wot-profile/pull/287"
+"common-constraints-date-format-2","fail","Uses numerical offsets, compliant with RFC 3339. Proposed specification change in https://github.com/w3c/wot-profile/pull/287"
+"common-constraints-date-format-3","pass",
+"common-constraints-security-1","pass","Uses OAuth2SecurityScheme"
+"common-constraints-security-2","null","Not a Consumer"
+"common-constraints-security-3","not-impl",
+"common-constraints-security-4","pass","This does not allow for different security metadata for SSE endpoints, proposed specification fix in https://github.com/w3c/wot-profile/pull/293"
+"common-constraints-security-5","pass","This does not allow for different security metadata for SSE endpoints, proposed specification fix in https://github.com/w3c/wot-profile/pull/293"
+"common-constraints-discovery-1","pass",
+"common-constraints-links-1","not-impl","Not implementable. What does ""support"" mean? Propose removing this assertion in https://github.com/w3c/wot-profile/pull/289"
+"common-constraints-links-2","pass","Uses rel=alternate for HTML UI"
+"common-constraints-links-3","null","Not a Consumer"
+"common-constraints-links-media-types-1","not-impl","Not implementable. What does ""support"" mean? Propose removing this assertion in https://github.com/w3c/wot-profile/pull/289"
+"common-constraints-links-media-types-2","pass","Usings text/html for HTML UI"
+"common-constraints-links-media-types-3","null","Not a Consumer"
+"common-constraints-errors-1","pass",
+"common-constraints-errors-2","pass","Other response codes may also be used by the underlying HTTP implementation"
+"common-constraints-errors-3","pass",
+"common-constraints-errors-4","pass",
+"common-constraints-errors-5","pass","Other response codes may also be used by the underlying HTTP implementation"
+"common-constraints-errors-6","null","Not a Consumer"
+"common-constraints-errors-7","not-impl",
+"common-constraints-default-language","not-impl",
+"http-basic-profile-1","not-impl",
+"http-basic-profile-identifier-1","not-impl",
+"profile-5-2-thing-protocol-binding-1","not-impl","Partial implementation only"
+"http-basic-profile-protocol-binding-readproperty-1","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readproperty-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readproperty-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readproperty-6","pass",
+"http-basic-profile-protocol-binding-writeproperty-1","null","Not a Consumer"
+"http-basic-profile-protocol-binding-writeproperty-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-writeproperty-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-writeproperty-6","pass",
+"http-basic-profile-protocol-binding-readallproperties-1","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readallproperties-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readallproperties-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-readallproperties-5","pass",
+"http-basic-profile-protocol-binding-writemultipleproperties-1","null","Not a Consumer"
+"http-basic-profile-protocol-bindings-writemultipleproperties-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-writemultipleproperties-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-writemultipleproperties-6","pass",
+"http-basic-profile-protocol-binding-invokeaction-1","null","Not a Consumer"
+"http-basic-profile-protocol-binding-invokeaction-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-invokeaction-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-invokeaction-6","fail","Non-conformant response"
+"http-basic-profile-protocol-binding-invokeaction-8","fail","Always responds with 201 Created, but with non-conformant payload"
+"http-basic-profile-protocol-binding-invokeaction-9","not-impl","Always responds with a 201 Created response"
+"http-basic-profile-protocol-binding-invokeaction-10","pass",
+"http-basic-profile-protocol-binding-invokeaction-11a","null","Not a Consumer"
+"http-basic-profile-protocol-binding-invokeaction-11b","not-impl",
+"http-basic-profile-protocol-binding-invokeaction-12","null","Broken metadata, this should be multiple assertions"
+"http-basic-profile-protocol-binding-invokeaction-13","not-impl",
+"http-basic-profile-protocol-binding-invokeaction-15","fail","Non-conformant response, Location header not set"
+"http-basic-profile-protocol-binding-queryaction-1a","fail","Implemented, but queryaction operation not provided in Thing Description and can't get ActionStatus URL because of non-conformant payloads"
+"http-basic-profile-protocol-binding-queryaction-1b","not-impl",
+"http-basic-profile-protocol-binding-queryaction-2","fail","There is a href member containing the action status URL, but the payload is in a non-conformant format"
+"http-basic-profile-protocol-binding-queryaction-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-queryaction-5","fail","Implemented, but non-conformant payload format"
+"http-basic-profile-protocol-binding-queryaction-7a","fail","Implemented, but non-conformant payload format"
+"http-basic-profile-protocol-binding-queryaction-7b","not-impl",
+"http-basic-profile-protocol-binding-cancelaction-1a","null","Implemented, but can't get ActionStatus URL because of non-conformant payload format"
+"http-basic-profile-protocol-binding-cancelaction-1b","not-impl",
+"http-basic-profile-protocol-binding-cancelaction-2","null","Not a Consumer"
+"http-basic-profile-protocol-binding-cancelaction-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-cancelaction-5","pass","Implemented, but a Consumer can't get ActionStatus URL because of non-conformant payload format"
+"http-basic-profile-protocol-binding-queryallactions-1","null","Not a Consumer"
+"http-basic-profile-protocol-binding-queryallactions-3","null","Not a Consumer"
+"http-basic-profile-protocol-binding-queryallactions-4","null","Not a Consumer"
+"http-basic-profile-protocol-binding-queryallactions-6a","fail","Implemented, but non-conformant payload"
+"http-basic-profile-protocol-binding-queryallactions-6b","fail","Opposite order"
+"http-sse-profile-1","not-impl",
+"http-sse-profile-identifier-1","not-impl",
+"http-sse-profile-protocol-binding-1","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeproperty-2","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeproperty-3","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeproperty-4","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-5a","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-5b","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-5c","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-5d","not-impl",
+"http-sse-profile-protocol-binding-observeproperty-6a","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeproperty-6b","not-impl",
+"http-sse-profile-protocol-binding-unobserveproperty-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeallproperties-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeallproperties-2","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeallproperties-3","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeallproperties-4","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-5a","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-5b","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-5c","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-5d","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-5e","not-impl",
+"http-sse-profile-protocol-binding-observeallproperties-6a","null","Not a Consumer"
+"http-sse-profile-protocol-binding-observeallproperties-6b","not-impl",
+"http-sse-profile-protocol-binding-unobserveallproperties-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeevent-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeevent-3","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeevent-4","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeevent-5","pass",
+"http-sse-profile-protocol-binding-subscribeevent-6a","pass",
+"http-sse-profile-protocol-binding-subscribeevent-6b","pass",
+"http-sse-profile-protocol-binding-subscribeevent-6c","pass",
+"http-sse-profile-protocol-binding-subscribeevent-6d","pass",
+"http-sse-profile-protocol-binding-subscribeevent-6e","not-impl","It is a timestamp, but it's the number of milliseconds since the epoch"
+"http-sse-profile-protocol-binding-subscribeevent-7a","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeevent-7b","not-impl",
+"http-sse-profile-protocol-binding-unsubscribeevent-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeallevents-1","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeallevents-3b","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeallevents-4","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeallevents-3","pass",
+"http-sse-profile-protocol-binding-subscribeallevents-4a","pass",
+"http-sse-profile-protocol-binding-subscribeallevents-4b","pass",
+"http-sse-profile-protocol-binding-subscribeallevents-4c","pass",
+"http-sse-profile-protocol-binding-subscribeallevents-4d","pass",
+"http-sse-profile-protocol-binding-subscribeallevents-4e","not-impl","It is a timestamp, but it's the number of milliseconds since the epoch"
+"http-sse-profile-protocol-binding-subscribeallevents-5a","null","Not a Consumer"
+"http-sse-profile-protocol-binding-subscribeallevents-5b","not-impl",
+"http-sse-profile-protocol-binding-unsubscribeallevents-1","null","Not a Consumer"
+"http-webhook-profile-protocol-binding-general-1","not-impl",
+"http-webhook-profile-protocol-binding-general-2","not-impl",
+"http-webhook-profile-protocol-binding-general-3","not-impl",
+"http-webhook-profile-protocol-binding-events-1","not-impl",
+"http-webhook-profile-1","not-impl",
+"http-webhook-profile-message-format-1","not-impl",
+"http-webhook-profile-protocol-binding-1","not-impl",
+"http-basic-profile-protocol-binding-subscribeevent-1","not-impl","Incorrect assertion ID"
+"http-webhook-profile-protocol-binding-subscribeevent-3","not-impl",
+"http-webhook-profile-protocol-binding-subscribeevent-4","not-impl",
+"http-webhook-profile-protocol-binding-subscribeevent-5","not-impl",
+"http-webhook-profile-protocol-binding-subscribeevent-6","not-impl",
+"http-webhook-profile-protocol-binding-subscribeevent-4b","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-1","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-3","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-4","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-5","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-6","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-7","not-impl",
+"http-webhook-profile-protocol-binding-subscribeallevents-8","not-impl",
+"http-webhook-profile-protocol-binding-unsubscribeallevents-1","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-1","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-2","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-3","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-4","not-impl",
+"http-webhook-profile-protocol-binding--event-connections-5","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-6","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-7","not-impl",
+"http-webhook-profile-protocol-binding--event-connections-8","not-impl",
+"http-webhook-profile-protocol-binding-event-connections-9","not-impl",
+"privacy-considerations-1","null",
+"security-considerations-1","null",
