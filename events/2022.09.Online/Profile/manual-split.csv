@@ -1,4 +1,4 @@
-﻿Index","ID","Status","Comment","Assertion","Thing","Consumer"
+﻿"Index","ID","Status","Comment","Assertion","Thing","Consumer"
 0,"profile-abstract-1","null","not testable with Assertion Tester","A TD that is compliant to the HTTP Basic Profile MUST adhere to both the common constraints and the protocol binding.",true,false
 1,"profile-why-a-basic-profile-1-x","null","not testable with Assertion Tester","The HTTP Basic Profile contains additional normative requirements that MUST be satisfied by devices to be compliant to the profile.",true,true
 2,"profiling-mechanism-1","null","not testable with Assertion Tester","In order to conform with a profile, a Web Thing MUST conform with all the normative statements in the profile's specification.",true,false
