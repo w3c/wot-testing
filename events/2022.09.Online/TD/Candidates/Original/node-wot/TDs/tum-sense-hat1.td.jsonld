@@ -1,0 +1,620 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "actions": {
+        "clear": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/clear",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "flashMessage": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/flashMessage",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "The message to show where only one letter is displayed at a time. May include the scroll speed and text/background colours.",
+                "properties": {
+                    "backColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "speed": {
+                        "type": "number"
+                    },
+                    "textColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "textString": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "textString"
+                ],
+                "type": "object"
+            },
+            "safe": false
+        },
+        "flipH": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/flipH",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "flipV": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/flipV",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        },
+        "setPixel": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/setPixel",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "Set the pixel in the given (x,y) coordinates to a given RGB color.",
+                "properties": {
+                    "b": {
+                        "maximum": 255,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "g": {
+                        "maximum": 255,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "r": {
+                        "maximum": 255,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "x": {
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    },
+                    "y": {
+                        "maximum": 7,
+                        "minimum": 0,
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "x",
+                    "y",
+                    "r",
+                    "g",
+                    "b"
+                ],
+                "type": "object"
+            },
+            "safe": false
+        },
+        "showLetter": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/showLetter",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "The letter to show. May include text/background colours.",
+                "properties": {
+                    "backColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "letter": {
+                        "maxLength": 1,
+                        "type": "string"
+                    },
+                    "textColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "letter"
+                ],
+                "type": "object"
+            },
+            "safe": false
+        },
+        "showMessage": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/actions/showMessage",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "description": "The message to show. May include the scrolling speed and text/background colours.",
+                "properties": {
+                    "backColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "scrollSpeed": {
+                        "description": "seconds paused between letters.",
+                        "maximum": 1,
+                        "minimum": 0,
+                        "type": "number",
+                        "unit": "second"
+                    },
+                    "textColour": {
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    },
+                    "textString": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "textString",
+                    "scrollSpeed"
+                ],
+                "type": "object"
+            },
+            "safe": false
+        }
+    },
+    "description": "Raspberry Pi SenseHat",
+    "events": {
+        "joystickHold": {
+            "data": {
+                "enum": [
+                    "left",
+                    "right",
+                    "up",
+                    "down",
+                    "click"
+                ],
+                "type": "string"
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/events/joystickHold",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        },
+        "joystickPress": {
+            "data": {
+                "enum": [
+                    "left",
+                    "right",
+                    "up",
+                    "down",
+                    "click"
+                ],
+                "type": "string"
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/events/joystickPress",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        },
+        "joystickRelease": {
+            "data": {
+                "enum": [
+                    "left",
+                    "right",
+                    "up",
+                    "down",
+                    "click"
+                ],
+                "type": "string"
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/events/joystickRelease",
+                    "op": [
+                        "subscribeevent"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ]
+        }
+    },
+    "forms": [
+        {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/all/properties",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties",
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ],
+    "id":"urn:dev:ops:32473-sense-001",
+    "properties": {
+        "acceleration": {
+            "description": "Get 3 Floats representing the acceleration intensity of each axis in Gs",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/acceleration",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/acceleration/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "readOnly": true,
+            "type": "object",
+            "writeOnly": false
+        },
+        "compass": {
+            "description": "Get 3 Floats representing the magnetic intensity of the axis in microteslas.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/compass",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/compass/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "readOnly": true,
+            "type": "object",
+            "writeOnly": false
+        },
+        "displayRotation": {
+            "description": "The rotation of the display. 0 is with the HDMI port facing down.",
+            "enum": [
+                0,
+                90,
+                180,
+                270
+            ],
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/displayRotation",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "observable": false,
+            "readOnly": false,
+            "type": "integer",
+            "writeOnly": false
+        },
+        "eventHistory": {
+            "description": "An array containing the complete event history.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/eventHistory",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "items": {
+                "type": "string"
+            },
+            "observable": false,
+            "readOnly": true,
+            "type": "array",
+            "writeOnly": false
+        },
+        "gyro": {
+            "description": "Get 3 Floats representing the rotational intensity of each axis in rads/second.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/gyro",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/gyro/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "z": {
+                    "type": "number"
+                }
+            },
+            "readOnly": true,
+            "type": "object",
+            "writeOnly": false
+        },
+        "humidity": {
+            "description": "The percentage of relative humidity.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/humidity",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/humidity/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "type": "number",
+            "writeOnly": false
+        },
+        "lowLight": {
+            "description": "The LED Matrix low light mode.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/lowLight",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "observable": false,
+            "readOnly": false,
+            "type": "boolean",
+            "writeOnly": false
+        },
+        "pixels": {
+            "description": "An array containing the current colours of all LEDs.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/pixels",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "items": {
+                "items": {
+                    "maximum": 255,
+                    "minimum": 0,
+                    "type": "integer"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "type": "array"
+            },
+            "maxItems": 64,
+            "minItems": 64,
+            "observable": false,
+            "readOnly": false,
+            "type": "array",
+            "writeOnly": false
+        },
+        "pressure": {
+            "description": "The current pressure in Millibars.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/pressure",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/pressure/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "type": "number",
+            "writeOnly": false
+        },
+        "temperature": {
+            "description": "The current temperature in degrees Celsius.",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/temperature",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/SenseHat1/properties/temperature/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "type": "number",
+            "writeOnly": false
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "title": "SenseHat1"
+}

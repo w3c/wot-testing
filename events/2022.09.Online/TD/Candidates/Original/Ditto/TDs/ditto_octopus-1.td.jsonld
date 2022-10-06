@@ -1,0 +1,342 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "om2": "http://www.ontology-of-units-of-measure.org/resource/om-2/",
+      "time": "http://www.w3.org/2006/time#"
+    }
+  ],
+  "title": "Octopus Suite Edition",
+  "description": "The Octopus board Bosch IoT Suite edition.",
+  "@type": "Thing",
+  "id": "urn:org.eclipse.ditto:octopus-1",
+  "base": "https://ditto.eclipseprojects.io/api/2/things/org.eclipse.ditto:octopus-1",
+  "version": {
+    "model": "1.0.0",
+    "instance": "1.0.0"
+  },
+  "links": [
+    {
+      "rel": "type",
+      "href": "https://eclipse.github.io/ditto-examples/wot/models/octopus/octopus-suite-edition-1.0.0.tm.jsonld",
+      "type": "application/tm+json"
+    },
+    {
+      "type": "service-doc",
+      "href": "https://www.tindie.com/products/fablab/iot-octopus-badge-for-iot-evaluation/",
+      "description": "IoT Octopus board by Fab-Lab.eu"
+    },
+    {
+      "type": "service-doc",
+      "href": "https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/",
+      "description": "BME680 sensor covering Temperature, Humidity, BarometricPressure, GasResistance, Altitude"
+    },
+    {
+      "type": "service-doc",
+      "href": "https://www.bosch-sensortec.com/products/smart-sensors/bno055/",
+      "description": "BNO055 sensor covering AmbientTemperature, LinearAcceleration, Acceleration, Gravity, Gyrometer, Orientation, Magnetometer"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Temperature"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Humidity"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/BarometricPressure"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/GasResistance"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Altitude"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/AmbientTemperature"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/LinearAcceleration"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Acceleration"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Gravity"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Gyrometer"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Orientation"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/Magnetometer"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/LeftLED"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/RightLED"
+    },
+    {
+      "rel": "item",
+      "type": "application/td+json",
+      "href": "/features/ConnectionStatus"
+    }
+  ],
+  "security": "basic_sc",
+  "securityDefinitions": {
+    "basic_sc": {
+      "in": "header",
+      "scheme": "basic"
+    }
+  },
+  "support": "https://www.eclipse.org/ditto/",
+  "created": "2022-03-11T06:32:18.552910569Z",
+  "forms": [
+    {
+      "op": "readallproperties",
+      "href": "/attributes{?channel,timeout}",
+      "htv:methodName": "GET",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "readmultipleproperties",
+      "href": "/attributes{?fields,channel,timeout}",
+      "htv:methodName": "GET",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "writeallproperties",
+      "href": "/attributes{?channel,timeout,response-required}",
+      "htv:methodName": "PUT",
+      "contentType": "application/json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": "writemultipleproperties",
+      "href": "/attributes{?channel,timeout,response-required}",
+      "htv:methodName": "PATCH",
+      "contentType": "application/merge-patch+json",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": [
+        "observeallproperties",
+        "unobserveallproperties"
+      ],
+      "href": "/attributes",
+      "htv:methodName": "GET",
+      "subprotocol": "sse",
+      "contentType": "text/event-stream",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    },
+    {
+      "op": [
+        "subscribeallevents",
+        "unsubscribeallevents"
+      ],
+      "href": "/outbox/messages",
+      "htv:methodName": "GET",
+      "subprotocol": "sse",
+      "contentType": "text/event-stream",
+      "additionalResponses": [
+        {
+          "success": false,
+          "schema": "dittoError"
+        }
+      ]
+    }
+  ],
+  "properties": {
+    "manufacturer": {
+      "tile": "Manufacturer",
+      "type": "string",
+      "const": "Fab-Lab.eu",
+      "readOnly": true,
+      "observable": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "/attributes/manufacturer{?channel,timeout}",
+          "htv:methodName": "GET",
+          "contentType": "application/json",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        }
+      ]
+    },
+    "currentVoltage": {
+      "@type": "om2:ElectricPotential",
+      "title": "Current voltage",
+      "description": "The last or current measured voltage of the board in 'V'.",
+      "type": "number",
+      "unit": "om2:volt",
+      "minimum": 0,
+      "readOnly": true,
+      "observable": true,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "/attributes/currentVoltage{?channel,timeout}",
+          "htv:methodName": "GET",
+          "contentType": "application/json",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        },
+        {
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "href": "/attributes/currentVoltage",
+          "htv:methodName": "GET",
+          "subprotocol": "sse",
+          "contentType": "text/event-stream",
+          "additionalResponses": [
+            {
+              "success": false,
+              "schema": "dittoError"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "uriVariables": {
+    "channel": {
+      "type": "string",
+      "title": "The Ditto channel to interact with.",
+      "description": "Defines to which channel to route the command: 'twin' (digital twin) or 'live' (the device).",
+      "enum": [
+        "twin",
+        "live"
+      ],
+      "default": "twin"
+    },
+    "timeout": {
+      "type": "integer",
+      "title": "The timeout to apply.",
+      "description": "Defines how long the backend should wait (in seconds) for completion of the request. A value of '0' applies fire and forget semantics for the command.",
+      "minimum": 0,
+      "maximum": 60,
+      "default": 60
+    },
+    "response-required": {
+      "type": "boolean",
+      "title": "If a response is required.",
+      "description": "Defines whether a response is required to the API call or not.",
+      "default": true
+    },
+    "fields": {
+      "type": "string",
+      "title": "Fields to select.",
+      "description": "Contains a comma-separated list of fields (e.g. property names) to be included in the returned JSON."
+    }
+  },
+  "schemaDefinitions": {
+    "dittoError": {
+      "type": "object",
+      "title": "Ditto error.",
+      "description": "Provides additional information about an occurred error and how to resolve it.",
+      "properties": {
+        "description": {
+          "type": "string",
+          "title": "Error description.",
+          "description": "Contains further information about the error e.g. a hint what caused the problem and how to solve it."
+        },
+        "error": {
+          "type": "string",
+          "title": "Error code identifier.",
+          "description": "The error code or identifier that uniquely identifies the error."
+        },
+        "message": {
+          "type": "string",
+          "title": "Error message.",
+          "description": "The human readable message that explains what went wrong during the execution of a command/message."
+        },
+        "href": {
+          "type": "string",
+          "title": "Error link.",
+          "description": "A link to further information about the error and how to fix it.",
+          "format": "uri"
+        },
+        "status": {
+          "type": "integer",
+          "title": "Status code.",
+          "description": "The status code of the error with HTTP status code semantics (e.g.: 4xx for user errors, 5xx for server errors).",
+          "minimum": 400,
+          "maximum": 599
+        }
+      },
+      "required": [
+        "status",
+        "error",
+        "message"
+      ]
+    }
+  }
+}

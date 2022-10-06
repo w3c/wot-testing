@@ -1,0 +1,32 @@
+    {
+  "profile": [
+    "https://www.w3.org/2022/wot/profile/http-basic/v1"
+  ],
+        "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"],
+        "@type": "tm:ThingModel",
+        "title": "Smart Ventilator Thing Model",
+        "version" : { "model" : "1.0.0" },
+        "links": [
+          {
+            "rel": "tm:submodel",
+            "href": "./Ventilation.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "ventilation"
+          },
+          {
+            "rel": "tm:submodel",
+            "href": "./LED.tm.jsonld",
+            "type": "application/tm+json",
+            "instanceName": "led"
+          },
+          {
+            "rel": "icon",
+            "href": "https://cdn-icons-png.flaticon.com/512/3227/3227806.png",
+            "type": "image/png",
+            "sizes" : "512×512"
+          }
+        ],
+        "properties" : {
+            "status" : {"type": "string", "pattern":"[On | Off | Error]"}
+        }
+      }
