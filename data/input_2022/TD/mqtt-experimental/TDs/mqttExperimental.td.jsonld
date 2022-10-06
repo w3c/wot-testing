@@ -1,7 +1,7 @@
 {
     "@context": ["https://www.w3.org/2022/wot/td/v1.1",
       { "@language" : "en",
-        "@direction": "ltr
+        "@direction": "ltr"
       }
     ],
     "id": "urn:uuid:c2b126b3-4ef2-40e9-9cad-f768608fdd0d",
