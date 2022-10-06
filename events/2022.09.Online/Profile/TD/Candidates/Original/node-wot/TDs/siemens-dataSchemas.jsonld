@@ -1,0 +1,205 @@
+{
+	"@context": ["https://www.w3.org/2019/wot/td/v1", "https://www.w3.org/2022/wot/td/v1.1", {
+		"@language": "en"
+	}],
+	"@type": "Thing",
+	"title": "dataSchemas",
+	"securityDefinitions": {
+		"nosec_sc": {
+			"scheme": "nosec"
+		}
+	},
+	"security": ["nosec_sc"],
+	"properties": {
+		"multipleInteger5": {
+			"type": "integer",
+			"multipleOf": 5,
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/multipleInteger5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/multipleInteger5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/multipleInteger5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/multipleInteger5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"multipleNumber2_5": {
+			"type": "number",
+			"multipleOf": 2.5,
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/multipleNumber2_5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/multipleNumber2_5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/multipleNumber2_5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/multipleNumber2_5",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"restrictedInteger": {
+			"type": "integer",
+			"exclusiveMinimum": 0,
+			"exclusiveMaximum": 5,
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/restrictedInteger",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/restrictedInteger",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/restrictedInteger",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/restrictedInteger",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"restrictedNumber": {
+			"type": "number",
+			"exclusiveMinimum": 100,
+			"exclusiveMaximum": 1000,
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/restrictedNumber",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/restrictedNumber",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/restrictedNumber",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/restrictedNumber",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"restrictedString": {
+			"description": "String for ISO language code, 2 alphabetical characters, a dash, and 2 more alphabetical characters, like en-GB",
+			"type": "string",
+			"minLength": 2,
+			"maxLength": 5,
+			"pattern": "^[a-z]{2}-[A-Z]{2}",
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/restrictedString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/restrictedString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/restrictedString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/restrictedString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"defaultString": {
+			"description": "String with default value",
+			"type": "string",
+			"default": "Initial",
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/defaultString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/defaultString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/defaultString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/defaultString",
+				"contentType": "application/json",
+				"op": ["readproperty", "writeproperty"]
+			}],
+			"readOnly": false,
+			"writeOnly": false,
+			"observable": false
+		},
+		"imageAsBase64": {
+			"description": "Red dot PNG image in base64 string",
+			"type": "string",
+			"contentMediaType": "image/png",
+			"contentEncoding": "base64",
+			"observable": false,
+			"readOnly": true,
+			"forms": [{
+				"href": "http://192.168.178.24:8080/dataschemas/properties/imageAsBase64",
+				"contentType": "application/json",
+				"op": ["readproperty"],
+				"htv:methodName": "GET"
+			}, {
+				"href": "http://169.254.138.34:8080/dataschemas/properties/imageAsBase64",
+				"contentType": "application/json",
+				"op": ["readproperty"],
+				"htv:methodName": "GET"
+			}, {
+				"href": "coap://192.168.178.24:5683/dataschemas/properties/imageAsBase64",
+				"contentType": "application/json",
+				"op": ["readproperty"]
+			}, {
+				"href": "coap://169.254.138.34:5683/dataschemas/properties/imageAsBase64",
+				"contentType": "application/json",
+				"op": ["readproperty"]
+			}],
+			"writeOnly": false
+		}
+	},
+	"id": "urn:uuid:40134abe-acdc-4c2f-b5a6-b3b6b0d96f02",
+	"description": "dataSchemas example Thing",
+	"support": "https://github.com/eclipse/thingweb.node-wot/",
+	"forms": [{
+		"href": "http://192.168.178.24:8080/dataschemas/properties",
+		"contentType": "application/json",
+		"op": ["readallproperties", "readmultipleproperties", "writeallproperties", "writemultipleproperties"]
+	}, {
+		"href": "http://169.254.138.34:8080/dataschemas/properties",
+		"contentType": "application/json",
+		"op": ["readallproperties", "readmultipleproperties", "writeallproperties", "writemultipleproperties"]
+	}]
+}

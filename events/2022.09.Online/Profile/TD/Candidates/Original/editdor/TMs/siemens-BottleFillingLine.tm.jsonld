@@ -1,0 +1,44 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+		"https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "saref": "https://w3id.org/saref#"
+        }
+    ],
+    "@type": "tm:ThingModel",
+    "title": "Bottle filling line TM",
+    "links": [
+        {
+            "rel": "tm:submodel",
+            "href": "BottleFill.tm.jsonld",
+            "type": "application/tm+json"
+        },
+        {
+            "rel": "tm:submodel",
+            "href": "BottleCapping.tm.jsonld",
+            "type": "application/tm+json"
+        },
+        {
+            "rel": "tm:submodel",
+            "href": "Sprayhead.tm.jsonld",
+            "type": "application/tm+json"
+        }
+    ],
+    "properties": {
+        "operatingState": {
+            "@type": "saref:MultiLevelState",
+            "description": "The current state of the system, possible states are 'Wait','In Progress'",
+            "readOnly": true,
+            "observable": true,
+            "type": "string"
+        },
+        "productionCounter": {
+            "@type": "saref:Measurement",
+            "description": "The amount of bottles processed",
+            "readOnly": true,
+            "observable": true,
+            "type": "number"
+        }
+    }
+}

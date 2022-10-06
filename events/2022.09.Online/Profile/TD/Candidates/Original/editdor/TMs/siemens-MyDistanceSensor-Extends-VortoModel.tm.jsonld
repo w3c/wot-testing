@@ -1,0 +1,28 @@
+{
+  "@context": ["https://www.w3.org/2019/wot/td/v1","https://www.w3.org/2022/wot/td/v1.1"], 
+  "@type" : "tm:ThingModel",
+  "title" : "My DistanceSensor",
+  "description": "DistanceSensor unit",
+  "links" :[{
+      "rel" : "tm:extends",
+      "href": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2021.03.Online/TMs/Vorto/DistanceSensor.json",
+      "type": "application/json"
+  }],
+  "tm:required": [
+        "#/properties/distance.currentMeasured",
+        "#/properties/distance.minMeasured",
+        "#/properties/distance.maxMeasured"
+  ],
+  "properties": {
+    "distance.currentMeasured": {
+      "type": "integer"
+    },
+    "distance.minMeasured": {
+      "type": "integer",
+      "minumum" : 0
+    },
+    "distance.maxMeasured": {
+      "type": "integer"
+    }
+  }
+}

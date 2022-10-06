@@ -1,0 +1,119 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "",
+    "actions": {
+        "fillColor": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/UnicornPHAT1/actions/fillColor",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "oneOf": [
+                    {
+                        "description": "fully saturated one color as string",
+                        "enum": [
+                            "red",
+                            "green",
+                            "blue"
+                        ],
+                        "type": "string"
+                    },
+                    {
+                        "description": "[r,g,b] input",
+                        "items": {
+                            "maximum": 255,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        "maxItems": 3,
+                        "minItems": 3,
+                        "type": "array"
+                    }
+                ]
+            },
+            "safe": false
+        },
+        "fillRandom": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/UnicornPHAT1/actions/fillRandom",
+                    "htv:methodName": "POST",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "safe": false
+        }
+    },
+    "description": "LED matrix",
+    "forms": [
+        {
+            "contentType": "application/json",
+            "href": "https://esiremotelab.esi.ei.tum.de:8081/UnicornPHAT1/all/properties",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties",
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ],
+    "id": "urn:dev:ops:32473-UnicornpHAT-001",
+    "properties": {
+        "pixels": {
+            "description": "Array of pixels with their RGB colors",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/UnicornPHAT1/properties/pixels",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://esiremotelab.esi.ei.tum.de:8081/UnicornPHAT1/properties/pixels/observable",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "items": {
+                "type": "integer"
+            },
+            "maxItems": 32,
+            "minItems": 32,
+            "observable": true,
+            "readOnly": false,
+            "title": "pixels",
+            "type": "array",
+            "writeOnly": false
+        }
+    },
+    "security": "basic_sc",
+    "securityDefinitions": {
+        "basic_sc": {
+            "in": "header",
+            "scheme": "basic"
+        }
+    },
+    "title": "UnicornPHAT1"
+}
