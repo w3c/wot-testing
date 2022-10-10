@@ -1,4 +1,6 @@
 # WoT Discovery 2022 Test Data 
+Current manual.csv is [HERE](https://github.com/w3c/wot-discovery/blob/main/testing/manual.csv)
+
 - [ ] Capture test results (put in [Results](Results/README.md))
 - [ ] Describe each implementation (put in [Architecture/ImplDesc](../Architecture/ImplDescs))
 - [ ] Capture name and activity status of each implementation in [active.csv](active.csv)
