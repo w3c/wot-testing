@@ -30,7 +30,7 @@ rm Results/$IMPLEMENTATION-TD.csv
 # flask-tum
 IMPLEMENTATION=flask-tum
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
 
 # Fujitsu
 IMPLEMENTATION=Fujitsu
@@ -84,7 +84,7 @@ cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 # manual tms from TUM
 IMPLEMENTATION=manual-tms
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TMs/manual.csv
 
 # NHK
 IMPLEMENTATION=NHK
