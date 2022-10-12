@@ -1,4 +1,4 @@
-# WoT March 2022 Plugfest/Testfest
+# WoT 2022 Implementation Results
 ## Architecture
 Collect data for Architecture.
 We will use the Architecture implementation report to centralize all
@@ -11,19 +11,12 @@ implementation descriptions.
 * [Testimonials](Testimonials): per-organization testimonials, as HTML
     - [Template](https://github.com/w3c/wot-testing/blob/main/events/templates/TestImplementation/testimonial.html)
     
-TO DO:
-- [ ] Copy over template.csv
-- [x] Add link to ImplDesc template
-- [ ] Use terminology consistent with Architecture's terminology section.
-    * Unfortunately Exposer/Producer not yet defined per se - under discussion.
-    * For now suggest 
-        - Consumer - see Arch
-        - Exposer - exposes a network interface described by a TD (e.g. a Thing)
-        - Producer - creates and makes a TD available (e.g. a tool like edi{TD}or) (under discussion, might change, eg. to "Generator", but for now...)
-        - Discoverer - client-side implementation of WoT Discovery (e.g. Hitachi's node-red prototype)
-        - TM Manipulator - implementations that manage TMs, offline or online 
-        - *Intermediary - e.g. Proxy (but... do we even want these if they are not Consumers or Exposers?
-             - and if they are simply both Consumers and Exposers, can just list both...
-        - Tool - e.g. TM editor/generators, tools to convert formats, e.g. DM to TD script ("TD Producer")
-    * Can also have more than one in an implementation, e.g. "consumer exposer" instead of "servient"
-
+## Procedure
+The specific procedure is as follows:
+1. For each implementation, make a copy of the template.csv at https://github.com/w3c/wot-testing/blob/main/data/input_2022/Architecture/template.csv.
+2. Rename it to reflect each implementation, ideally using the same name as used elsewhere i.e. for TD inputs, for example “node-wot.csv”
+3. Fill in the entries with “pass”, “fail”, “not-impl” or “null”. 
+    - If you feel an assertion is implied by another specification that your implementation already satisfies then you can mark such assertions as “pass”. 
+    - If you do not *understand* an assertion mark it as “not-impl” and put “do not understand” in the comment field.  We can search for these later and see if the assertions themselves need revision. 
+    - Please do look at the spec itself to see if an assertion makes more sense in context. They sometimes do not stand alone very well.
+4. Make a PR with the new CSV file here: https://github.com/w3c/wot-testing/tree/main/data/input_2022/Architecture/Results

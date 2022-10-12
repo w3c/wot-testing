@@ -9,7 +9,11 @@
   "description": "esp_rgbw_1 RGBW Strip",
   "securityDefinitions": {
     "ha_sc": {
-      "scheme": "bearer"
+      "scheme": "bearer",
+      "in": "header",
+      "name": "Authorization",
+      "format": "jwt",
+      "alg": "ES256"
     }
   },
   "security": "ha_sc",

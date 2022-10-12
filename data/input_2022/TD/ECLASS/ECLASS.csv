@@ -137,7 +137,6 @@
 "tm-overwrite-interaction","null",
 "tm-overwrite-types","null",
 "tm-placeholder-replacement","pass",
-"tm-placeholder-retyping","pass",
 "tm-placeholder-usecase","pass",
 "tm-protocol-security-restriction","pass",
 "tm-ref-recursive-extensions","null",
