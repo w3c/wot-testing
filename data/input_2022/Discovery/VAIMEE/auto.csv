@@ -1,5 +1,5 @@
 ID,Status,Comment
-tdd-anonymous-td-identifier,fail,failed:TestCreateAnonymousThing/registration_info passed:TestListThings/anonymous_td_id
+tdd-anonymous-td-identifier,pass,passed:TestCreateAnonymousThing/registration_info passed:TestListThings/anonymous_td_id
 tdd-anonymous-td-local-uuid,pass,passed:TestCreateAnonymousThing/location_header
 tdd-http-error-response,fail,failed:TestCreateAnonymousThing/reject_invalid/response failed:TestCreateThing/reject_invalid/response failed:TestUpdateThing/reject_invalid/response failed:TestPatch/reject_invalid/response
 tdd-http-head,fail,failed:TestSPARQL/HEAD passed:TestRetrieveThing/HEAD passed:TestListThings/HEAD
