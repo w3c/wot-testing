@@ -96,7 +96,7 @@
 "tdd-things-list-pagination-order-utf-8","null",
 "tdd-things-list-pagination-orderable","null",
 "tdd-things-read-only-auth","pass",
-"tdd-things-representation-alternate-input","null",
+"tdd-things-representation-alternate-input","pass",
 "tdd-things-retrieve-resp-content-type","pass",
 "tdd-things-list-resp-content-type","pass",
 "tdd-validation-jsonschema","pass",
