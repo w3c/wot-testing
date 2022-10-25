@@ -81,8 +81,8 @@ IMPLEMENTATION=Playground
 echo "$IMPLEMENTATION"
 cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
-# manual tms from TUM
-IMPLEMENTATION=manual-tms
+# Fischertechnik Factory Simulator
+IMPLEMENTATION=fischertechnik-factory-simulator
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
 
