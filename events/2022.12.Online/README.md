@@ -28,8 +28,37 @@ indicted in the API specified TD of a Thing by a specific Consumer.
    - Collect final test cases and results (e.g. manual assertions)
    - Focus on resolving at-risk items
    - Capture/Update Implementation Descriptions
+   - Gather Testimonials - perhaps a separate document -> main call
+
 * WoT Profile
+
+   Determine participants - assign assertions to participants Who will provide results? 
+   Baseline validation can be done via TD compliance - all TD assertions must hold
+   
+   We need actual device implementations, not necessarily fully profile compliant
+   People need to provide test results as a csv file in the well known format (as before)
+
    - Define testing/assertion capture procedure
+   -- two kinds of entites that are used for tests: consumer / thing
+   -- Test the Profile contract
+   -- What to test manually / automatically?
+   -- Clarifying specification requirements, check feasibility and implementability of each assertion one by one
+   
+   - Generate TDs that have all operations
+   
+   - Testcases: Consumer-Thing
+   1. standalone test of consumer assertions:
+   -- support of all security schemes
+   -- behavior handling of async actions - can a consumer query the action status, handle id?
+   
+   2. standalone test of thing assertions:
+   -- Proper usage of problem details 
+   
+   3. test of Profile contracts
+   
    - Capture implementation descriptions, including which do which profiles
    - Capture testing/assertion results
    - Draft the implementation report
+
+   - Need to clarify the dependency of Profile assertions - Profile defines clarifications on other WoT specs, which are tested there.
+   - Profile tests should focus on additional clarifications of the profile only.
