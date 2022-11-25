@@ -30,7 +30,7 @@ td-default-readOnly,pass,The value associated with member readOnly if not given 
 td-default-safe,pass,The value associated with member safe if not given MUST be assumed to have the default value false.
 td-default-success,null,.
 td-default-writeOnly,pass,The value associated with member writeOnly if not given MUST be assumed to have the default value false.
-td-expectedResponse-contentType,not-impl,If the content type of the expected response differs from the content type of the form, the Form instance MUST include a name-value pair with the name response.
+td-expectedResponse-contentType,not-impl,If the content type of the expected response differs from the content type of the form the Form instance MUST include a name-value pair with the name response.
 td-expectedResponse-default-contentType,not-impl,If no response name-value pair is provided it MUST be assumed that the content type of the response is equal to the content type assigned to the Form instance.
 td-form-protocolbindings,pass,If required, form objects MAY be supplemented with protocol-specific Vocabulary Terms identified with a prefix.
 td-format-validation-other-values,null,When a value that is not found in the known set of values is assigned to format such a validation SHOULD succeed.
