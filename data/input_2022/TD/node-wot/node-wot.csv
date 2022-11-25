@@ -13,7 +13,7 @@ td-context-default-language-direction-independence,null,However when interpretin
 td-default-alg,null,The value associated with member alg if not given MUST be assumed to have the default value ES256.
 td-default-contentType,pass,The value associated with member contentType if not given MUST be assumed to have the default value application/json.
 td-default-format,null,The value associated with member format if not given MUST be assumed to have the default value jwt.
-td-default-http-method,pass,When no method is indicated in a form representing an Protocol Binding based on HTTP, a Default Value MUST be assumed as shown in the following table.
+td-default-http-method,pass,When no method is indicated in a form representing an Protocol Binding based on HTTP a Default Value MUST be assumed as shown in the following table.
 td-default-http-method_get,pass,The value associated with member GET if not given MUST be assumed to have the default value  Form with operation type readproperty
 td-default-http-method_post,pass,The value associated with member POST if not given MUST be assumed to have the default value Form with operation type invokeaction.
 td-default-http-method_put,pass,The value associated with member PUT if not given MUST be assumed to have the default value Form with operation type writeproperty.
