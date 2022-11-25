@@ -5,11 +5,11 @@ client-data-schema,pass,A Thing acting as a Consumer when interacting with anoth
 client-data-schema-accept-extras,pass,A Thing acting as a Consumer when interacting with another Thing MUST accept without error any additional data not described in the data schemas given in the Thing Description of the target Thing.
 client-data-schema-no-extras,fail,A Thing acting as a Consumer when interacting with another Thing MUST NOT generate data not described in the data schemas given in the Thing Description of that Thing.
 client-uri-template,pass,A Thing acting as a Consumer when interacting with another Thing MUST generate URIs according to the URI Templates base URIs and form href parameters given in the Thing Description of the target Thing.
-sec-body-name-json-pointer-creatable,not-impl,When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema, it MUST be possible to insert the indicated element at the location indicated by the pointer.
+sec-body-name-json-pointer-creatable,not-impl,When an element of a data schema indicated by a JSON pointer indicated in a body locator does not already exist in the indicated schema it MUST be possible to insert the indicated element at the location indicated by the pointer.
 server-data-schema,pass,A WoT Thing Description MUST accurately describe the data returned and accepted by each interaction.
 server-data-schema-extras,pass,A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description.
-server-uri-template,pass,URI Templates, base URIs, and href members in a WoT Thing Description MUST accurately describe the WoT Interface of the Thing.
-td-context-default-language-direction-independence,null,However, when interpreting human-readable text, each human-readable string value MUST be processed independently.
+server-uri-template,pass,URI Templates base URIs and href members in a WoT Thing Description MUST accurately describe the WoT Interface of the Thing.
+td-context-default-language-direction-independence,null,However when interpreting human-readable text each human-readable string value MUST be processed independently.
 td-default-alg,null,The value associated with member alg if not given MUST be assumed to have the default value ES256.
 td-default-contentType,pass,The value associated with member contentType if not given MUST be assumed to have the default value application/json.
 td-default-format,null,The value associated with member format if not given MUST be assumed to have the default value jwt.
@@ -31,13 +31,13 @@ td-default-safe,pass,The value associated with member safe if not given MUST be 
 td-default-success,null,.
 td-default-writeOnly,pass,The value associated with member writeOnly if not given MUST be assumed to have the default value false.
 td-expectedResponse-contentType,not-impl,If the content type of the expected response differs from the content type of the form, the Form instance MUST include a name-value pair with the name response.
-td-expectedResponse-default-contentType,not-impl,If no response name-value pair is provided, it MUST be assumed that the content type of the response is equal to the content type assigned to the Form instance.
+td-expectedResponse-default-contentType,not-impl,If no response name-value pair is provided it MUST be assumed that the content type of the response is equal to the content type assigned to the Form instance.
 td-form-protocolbindings,pass,If required, form objects MAY be supplemented with protocol-specific Vocabulary Terms identified with a prefix.
-td-format-validation-other-values,null,When a value that is not found in the known set of values is assigned to format, such a validation SHOULD succeed.
+td-format-validation-other-values,null,When a value that is not found in the known set of values is assigned to format such a validation SHOULD succeed.
 td-json-open,pass,TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
 td-json-open_accept-byte-order,pass,TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
 td-json-open_no-byte-order,pass,Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
-td-ns-multilanguage-content-negotiation,null,In cases where the default language has been negotiated, an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
+td-ns-multilanguage-content-negotiation,null,In cases where the default language has been negotiated an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
 td-ns-multilanguage-content-negotiation-no-multi,null,When the default language has been negotiated successfully, TD documents SHOULD include the appropriate matching values for the members title and description in preference to MultiLanguage objects in titles and descriptions members.
 td-ns-multilanguage-content-negotiation-optional,null,Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g., because of resource constraints).
 td-processor-serialization,pass,A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format, according to the rules noted in and.
@@ -52,7 +52,7 @@ privacy-centralized-ids,pass,TD identifiers SHOULD NOT be generated using a cent
 privacy-distributed-ids,not-impl,TD identifiers SHOULD be generated using a distributed mechanism such as UUIDs that provides a high probability of uniqueness.
 privacy-essential-metadata-only,not-impl,Only the amount of information needed for the level of authorization and the use case SHOULD be provided in a TD.
 privacy-id-metadata,pass,The value of the id of a TD SHOULD NOT contain metadata describing the Thing or from the TD itself.
-privacy-immutable-id-as-property,not-impl,Ideally, any required immutable identifiers SHOULD only be made available via affordances, such as a property, whose value can only be obtained after appropriate authentication and authorization, and managed separately from the TD identifier.
+privacy-immutable-id-as-property,not-impl,Ideally, any required immutable identifiers SHOULD only be made available via affordances, such as a property whose value can only be obtained after appropriate authentication and authorization, and managed separately from the TD identifier.
 privacy-mutable-id-ownership,not-impl,TD identifiers SHOULD be updated upon major changes in configuration or reinitialization.
 privacy-mutable-identifiers,not-impl,All identifiers used in a TD SHOULD be mutable, and in particular there should be a mechanism to update the id of a Thing when necessary.
 privacy-td-pii,not-impl,A Thing Description associated with a personal device SHOULD be treated as if it contained personally identifiable information, even if this information is not explicit.
