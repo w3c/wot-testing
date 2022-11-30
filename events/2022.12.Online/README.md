@@ -60,6 +60,9 @@ If you are participating in the testfest, please do the following:
 - Fill in the [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) for the Profile specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles/Results in a file named after your implementation.  For example, if your implementations is intel-nodejs, rename the manual.csv file to "intel-nodejs.csv" and do a PR against Profiles/Results/intel-nodejs.csv.
 - ALSO provide the TDs of your implementation in a directory named after your implementation (if you have any, e.g. for Things).  
 
+### Contribution to Architecture specification
+- Fill in the [manual.csv](https://github.com/w3c/wot-architecture/blob/main/testing/manual.csv) for the Architecture specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Architecture/Results in a file named after your implementation.  For example, if your implementations is intel-nodejs, rename the manual.csv file to "intel-nodejs.csv" and do a PR against Architecture/Results/intel-nodejs.csv.
+
 ### Gaps and Issues
 Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.12`:
 - [Testfest 2022.12](https://github.com/w3c/wot-testing/labels/Testfest%202022.12)
