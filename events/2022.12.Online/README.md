@@ -57,9 +57,8 @@ If you are participating in the testfest, please do the following:
 - [Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
 
 ### Contribution to Profiles specification
-  - Provide the TDs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/data/input_2022/TD . You need to group them under your implementation name, like `intel-nodejs/TDs`. These TDs will be used to generate the automatic results.
-  - Fill in the [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.07.Online/TD/manual.csv) for the TD specification and submit it there. This file is needed for the manual results. This file should go in the folder of your implementation.
-  - ALSO provide the TDs of your implementation at https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles. Group it under your implementation, mimicking the file structure of the TD.  In this directory also include your [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) results for Profiles.
+- Fill in the [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) for the Profile specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles under directory named after your implementation.
+- ALSO provide the TDs of your implementation in the same directory (if you have any, e.g. for Things), mimicking the file structure of the TD.  You may not have TDs if the implementation is a pure Consumer.
 
 ### Gaps and Issues
 Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.12`:
