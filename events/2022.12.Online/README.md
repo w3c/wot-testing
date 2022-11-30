@@ -19,9 +19,14 @@ multiple implementations.  This confirmation will be performed by testing all op
 indicted in the API specified TD of a Thing by a specific Consumer.
 
 ## Logistics
-* Date: Dec 12-16
-* Time: ?
-* WebEx: ?
+* Date: Dec 12-15
+* Time: 1h / day
+   - 8am Eastern Monday and Tuesday (on Monday, replaces Security call)
+   - 9am Eastern Wednesday (replaces Testing call)
+   - 10am Eastern Thursday
+* W3C Calendar: {mccool to add calender entry and link}
+* WebEx: {kaz to allocate webexes and add email link}
+* VPN: none (not needed to resolve remaining gaps)
 
 ## Goals and Priorities
 * Complete Implementation Reports for TD 1.1, Discovery, and Architecture 1.1
