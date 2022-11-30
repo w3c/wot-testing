@@ -62,8 +62,8 @@ If you are participating in the testfest, please do the following:
   - ALSO provide the TDs of your implementation at https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles. Group it under your implementation, mimicking the file structure of the TD.  In this directory also include your [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) results for Profiles.
 
 ### Gaps and Issues
-Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.07`:
-- [Testfest 2022.07](https://github.com/w3c/wot-testing/labels/Testfest%202022.07)
+Please create an issue for any gaps that you are working on during the Testfest, and label them with `Testfest 2022.12`:
+- [Testfest 2022.12](https://github.com/w3c/wot-testing/labels/Testfest%202022.12)
 
 ## Other
 * WoT Profile
