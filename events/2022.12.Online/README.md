@@ -28,10 +28,6 @@ indicted in the API specified TD of a Thing by a specific Consumer.
 * WebEx: [Member email link](https://lists.w3.org/Archives/Member/member-wot-wg/2022Dec/0002.html), [IE email link](https://lists.w3.org/Archives/Group/group-wot-ie/2022Dec/0002.html)
 * VPN: none (not needed to resolve remaining gaps)
 
-## Tools
-* CSV Change Log Generator
-   - The following may be useful to understand changes to CSV files: https://github.com/thingweb/thingweb-playground/tree/master/packages/assertions#csv-change-log-generation
-
 ## Goals and Priorities
 * Complete Implementation Reports for TD 1.1, Discovery, and Architecture 1.1
    - Collect final test cases and results (e.g. manual assertions)
@@ -77,7 +73,12 @@ Please create an issue for any gaps that you are working on during the Testfest,
 - [Testfest 2022.12](https://github.com/w3c/wot-testing/labels/Testfest%202022.12)
 
 ## Other
-* WoT Profile
+
+### Tools
+* CSV Change Log Generator
+   - The following may be useful to understand changes to CSV files: https://github.com/thingweb/thingweb-playground/tree/master/packages/assertions#csv-change-log-generation
+
+### WoT Profile Testing - Notes
 
    Determine participants - assign assertions to participants Who will provide results? 
    Baseline validation can be done via TD compliance - all TD assertions must hold
