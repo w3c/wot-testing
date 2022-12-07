@@ -25,7 +25,7 @@ indicted in the API specified TD of a Thing by a specific Consumer.
    - 9am Eastern Wednesday (replaces Testing call)
    - 10am Eastern Thursday
 * W3C Calendar: {mccool to add calender entry and link}
-* WebEx: {kaz to allocate webexes and add email link}
+* WebEx: [Member email link](https://lists.w3.org/Archives/Member/member-wot-wg/2022Dec/0002.html) [IE email link](https://lists.w3.org/Archives/Group/group-wot-ie/2022Dec/0002.html)
 * VPN: none (not needed to resolve remaining gaps)
 
 ## Goals and Priorities
