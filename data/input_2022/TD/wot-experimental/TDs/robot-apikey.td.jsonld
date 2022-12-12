@@ -22,7 +22,7 @@
         }
 	},
 	"security": [
-		"basic_sc"
+		"nosec"
 	],
 	"properties": {
 		"location": {
