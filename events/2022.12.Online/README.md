@@ -65,9 +65,9 @@ If you are participating in the testfest, please do the following:
 
 NOTE: actually running the script to update the results will be done when the implementation report is generated, it is not necessary to check in files under "Results".  Please do NOT check in ONLY files under Results as they will be overwritten by the script!
 
-### Contribution to Profiles specification
-- Fill in the [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) for the Profile specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles/Results in a file named after your implementation.  For example, if your implementations is intel-nodejs, rename the manual.csv file to "intel-nodejs.csv" and do a PR against Profiles/Results/intel-nodejs.csv.
-- ALSO provide the TDs of your implementation in a directory named after your implementation (if you have any, e.g. for Things) under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profiles/, and also consider contributing them to the TD results (i.e. contribute them in both places).
+### Contribution to Profile specification
+- Fill in the [manual.csv](https://github.com/w3c/wot-profile/blob/main/testing/manual.csv) for the Profile specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profile/Results in a file named after your implementation.  For example, if your implementations is intel-nodejs, rename the manual.csv file to "intel-nodejs.csv" and do a PR against Profile/Results/intel-nodejs.csv.
+- ALSO provide the TDs of your implementation in a directory named after your implementation (if you have any, e.g. for Things) under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Profile/, and also consider contributing them to the TD results (i.e. contribute them in both places).
 
 ### Contribution to Architecture specification
 - Fill in the [manual.csv](https://github.com/w3c/wot-architecture/blob/main/testing/manual.csv) for the Architecture specification and submit it under https://github.com/w3c/wot-testing/tree/main/data/input_2022/Architecture/Results in a file named after your implementation.  For example, if your implementations is intel-nodejs, rename the manual.csv file to "intel-nodejs.csv" and do a PR against Architecture/Results/intel-nodejs.csv.
