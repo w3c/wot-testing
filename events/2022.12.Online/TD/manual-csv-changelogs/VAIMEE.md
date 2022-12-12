@@ -1,7 +1,7 @@
 
 # CSV Changelog - 12/12/2022
 
-[Old CSV Path](../../../../data/input_2022/TD/VAIMEE/VAIMEE.csv)  
+[Old CSV Path](../../../../data/input_2022/TD/VAIMEE/manual.csv)  
 [New CSV Path](../../../../../thingweb-playground/packages/assertions/assertions-csv/manual.csv)
 
 

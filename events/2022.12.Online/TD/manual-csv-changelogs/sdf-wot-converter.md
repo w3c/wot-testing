@@ -1,7 +1,7 @@
 
 # CSV Changelog - 12/12/2022
 
-[Old CSV Path](../../../../data/input_2022/TD/sdf-wot-converter/sdf-wot-converter.csv)  
+[Old CSV Path](../../../../data/input_2022/TD/sdf-wot-converter/manual.csv)  
 [New CSV Path](../../../../../thingweb-playground/packages/assertions/assertions-csv/manual.csv)
 
 

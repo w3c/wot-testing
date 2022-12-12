@@ -1,7 +1,7 @@
 
 # CSV Changelog - 12/12/2022
 
-[Old CSV Path](../../../../data/input_2022/TD/intel-wot-ha/intel-wot-ha.csv)  
+[Old CSV Path](../../../../data/input_2022/TD/intel-wot-ha/manual.csv)  
 [New CSV Path](../../../../../thingweb-playground/packages/assertions/assertions-csv/manual.csv)
 
 

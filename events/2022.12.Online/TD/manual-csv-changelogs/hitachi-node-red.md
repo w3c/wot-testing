@@ -1,7 +1,7 @@
 
 # CSV Changelog - 12/12/2022
 
-[Old CSV Path](../../../../data/input_2022/TD/hitachi-node-red/hitachi-node-red.csv)  
+[Old CSV Path](../../../../data/input_2022/TD/hitachi-node-red/manual.csv)  
 [New CSV Path](../../../../../thingweb-playground/packages/assertions/assertions-csv/manual.csv)
 
 
