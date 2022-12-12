@@ -135,11 +135,6 @@ IMPLEMENTATION=sdf-wot-converter
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
 
-# MQTT Experimental
-IMPLEMENTATION=mqtt-experimental
-echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
-
 # Huawei
 IMPLEMENTATION=huawei
 echo "$IMPLEMENTATION"
@@ -149,6 +144,11 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 IMPLEMENTATION=VAIMEE
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+
+# WoT Experimental
+IMPLEMENTATION=wot-experimental
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 ## Older (should be moved to node-wot)
 
