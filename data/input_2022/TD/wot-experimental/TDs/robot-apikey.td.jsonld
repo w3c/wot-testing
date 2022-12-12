@@ -1,0 +1,164 @@
+{
+	"id": "urn:robot-with-apikey-body",
+	"@context": "https://www.w3.org/2022/wot/td/v1.1",
+	"title": "MyLampThing",
+	"description": "Valid TD copied from the spec's first example",
+	"securityDefinitions": {
+		"nosec_sc": { "scheme": "nosec" },
+        "apikey_body1": {
+            "scheme": "apikey",
+            "in": "body",
+            "name": "/keyLocation"
+        },
+		"apikey_body2": {
+            "scheme": "apikey",
+            "in": "body",
+            "name": "/keyLocationInvisible"
+        },
+		"apikey_body3": {
+            "scheme": "apikey",
+            "in": "body",
+            "name": "-"
+        }
+	},
+	"security": [
+		"nosec_sc"
+	],
+	"properties": {
+		"location": {
+			"type":"object",
+			"properties":{
+				"x":{
+					"type":"integer"
+				},
+				"y":{
+					"type":"integer"
+				},
+				"z":{
+					"type":"integer"
+				}
+			},
+			"readOnly": true,
+			"writeOnly": false,
+			"observable": false,
+			"forms": [
+				{
+					"href": "http://localhost:8080/properties/location",
+					"op": "readproperty",
+					"contentType": "application/json",
+					"security": "nosec_sc"
+				}
+			]
+		}
+	},
+	"actions": {
+		"moveTo1": {
+			"input":{
+				"type":"object",
+				"properties":{
+					"x":{
+						"type":"integer"
+					},
+					"y":{
+						"type":"integer"
+					},
+					"z":{
+						"type":"integer"
+					},
+					"keyLocation":{
+						"type":"string"
+					}
+				}
+			},
+			"safe": false,
+			"idempotent": false,
+			"forms": [
+				{
+					"href": "http://localhost:8080/actions/moveTo1",
+					"op": "invokeaction",
+					"contentType": "application/json",
+					"security": "apikey_body1"
+				}
+			]
+		},
+		"moveTo2": {
+			"input":{
+				"type":"object",
+				"properties":{
+					"x":{
+						"type":"integer"
+					},
+					"y":{
+						"type":"integer"
+					},
+					"z":{
+						"type":"integer"
+					}
+				}
+			},
+			"safe": false,
+			"idempotent": false,
+			"forms": [
+				{
+					"href": "http://localhost:8080/actions/moveTo1",
+					"op": "invokeaction",
+					"contentType": "application/json",
+					"security": "apikey_body2"
+				}
+			]
+		},
+		"moveInSequence": {
+			"description":"This allows sending multiple moves in sequence and how long to pause before next move",
+			"input":{
+				"type": "array",
+				"items": [
+				  {
+					"type": "object",
+					"properties": {
+					  "x": {
+						"type": "integer"
+					  },
+					  "y": {
+						"type": "integer"
+					  },
+					  "z": {
+						"type": "integer"
+					  },
+					  "pause": {
+						"description": "How long to pause before next move",
+						"type": "integer"
+					  }
+					}
+				  },
+				  {
+					"type": "object",
+					"properties": {
+					  "x": {
+						"type": "integer"
+					  },
+					  "y": {
+						"type": "integer"
+					  },
+					  "z": {
+						"type": "integer"
+					  }
+					}
+				  }
+				],
+				"additionalItems": {
+				  "type": "string"
+				}
+			  },
+			"safe": false,
+			"idempotent": false,
+			"forms": [
+				{
+					"href": "http://localhost:8080/actions/moveInSequence",
+					"op": "invokeaction",
+					"contentType": "application/json",
+					"security": "apikey_body3"
+				}
+			]
+		}
+	}
+}

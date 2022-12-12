@@ -1,0 +1,179 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    { "@language": "en" },
+    {
+      "htv": "http://www.w3.org/2011/http#"
+    }
+  ],
+  "@type": "Thing",
+  "profile": "https://www.w3.org/2022/wot/profile/http.basic/v1",
+  "title":  "Fujitsu LED bulb",
+  "titles": {
+    "en": "Fujitsu LED bulb",
+    "ja": "LED電球"
+  },
+  "id":     "urn:com:fujitsu:bulb01",
+  "description":  "RGB LED bulb with wifi interface",
+  "descriptions": {
+    "en": "RGB LED bulb with wifi interface",
+    "ja": "無線LAN制御可能なLED電球"
+  },
+  "version": {
+    "instance" : "1.0.0"
+  },
+  "created": "2022-03-11T12:00:00+09:00",
+  "base":   "http://192.168.0.18/things/",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+     }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "red": {
+      "@type":  "led",
+      "type": "boolean", 
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [{
+        "href": "properties/red",
+        "contentType": "application/json",
+        "op": ["readproperty", "writeproperty"]
+      }]
+    },
+    "yellow": {
+      "@type":  "led",
+      "type": "boolean", 
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [{
+        "href": "properties/yellow",
+        "contentType": "application/json",
+         "op": ["readproperty", "writeproperty"]
+      }]
+    },
+    "blue": {
+      "@type":  "led",
+      "type": "boolean", 
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [{
+        "href": "properties/blue",
+        "contentType": "application/json",
+        "op": ["readproperty", "writeproperty"]
+      }]
+    },
+    "level": {
+      "type": "integer",
+      "title": "Brightness",
+      "description": "the level of light from 0 to 100",
+      "unit": "percent",
+      "minimum": 0,
+      "maximum": 100,
+      "unit": "percent",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [{
+        "href": "properties/level",
+        "contentType": "application/json",
+        "op": ["readproperty", "writeproperty"]
+      }]
+    }
+  },
+  "actions": {
+    "reset": {
+      "type": "boolean",
+      "description": "reset RGB value to HIGH",
+      "safe": true,
+      "idempotent": false,
+      "synchronous": true,
+      "forms": [{
+        "href": "actions/reset",
+        "contentType": "application/json",
+        "op": "invokeaction"
+      }]
+    },
+    "fade": {
+      "title": "fade",
+      "description": "fade the bulb to a given level",
+      "descriptions": {
+        "en": "fade the bulb to a given level",
+        "ja": "指定された時間で照度を変化させる"
+      },
+      "safe": true,
+      "idempotent": false,
+      "synchronous": false,
+      "input": {
+        "type": "object",
+        "readOnly": false,
+        "writeOnly": false,
+        "properties": {
+          "level": {
+            "title": "Brightness",
+            "titles": {
+              "en": "Brightness",
+              "ja": "照度"
+            },
+            "type": "integer",
+            "readOnly": false,
+            "writeOnly": false,
+            "minimum": 0,
+            "maximum": 100,
+            "unit": "percent"
+          },
+           "duration": {
+            "title": "Duration",
+            "titles": {
+              "en": "Duration",
+              "ja": "経過時間"
+            },
+            "type": "integer",
+            "readOnly": false,
+            "writeOnly": false,
+            "minimum": 0,
+            "maximum": 3600000,
+            "unit": "milliseconds"
+          }
+        }
+      },
+      "forms": [{
+        "href": "actions/fade",
+        "contentType": "application/json",
+        "op": "invokeaction"
+      }]
+    }
+  },
+  "forms": [
+    {
+        "op": "readallproperties",
+        "contentType": "application/json",
+        "href": "properties"
+    },
+    {
+        "op": "readmultipleproperties",
+        "contentType": "application/json",
+        "href": "properties"
+    },
+    {
+        "op": "writeallproperties",
+        "contentType": "application/json",
+        "href": "properties"
+    },
+    {
+        "op": "writemultipleproperties",
+        "contentType": "application/json",
+        "href": "properties"
+    },
+    {
+        "op": "queryallactions",
+        "contentType": "application/json",
+        "href": "actions"
+    }
+  ]
+}

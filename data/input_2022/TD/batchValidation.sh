@@ -30,7 +30,7 @@ rm Results/$IMPLEMENTATION-TD.csv
 # flask-tum
 IMPLEMENTATION=flask-tum
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
 
 # Fujitsu
 IMPLEMENTATION=Fujitsu
@@ -55,8 +55,8 @@ cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
 
 # intel-nodejs
 IMPLEMENTATION=intel-nodejs
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
 
 # intel-wot-ha
 IMPLEMENTATION=intel-wot-ha
@@ -84,8 +84,7 @@ cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 # Fischertechnik Factory Simulator
 IMPLEMENTATION=fischertechnik-factory-simulator
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
-
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TMs/manual.csv
 # NHK
 IMPLEMENTATION=NHK
 echo "$IMPLEMENTATION"
@@ -124,7 +123,7 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # Logilabs (TDD)
 IMPLEMENTATION=siemens-logilab
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
 
 # TinyIoT (TDD)
 IMPLEMENTATION=TinyIoT
@@ -134,12 +133,7 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # sdf-wot-converter (TMs)
 IMPLEMENTATION=sdf-wot-converter
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a
-
-# MQTT Experimental
-IMPLEMENTATION=mqtt-experimental
-echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TM -i $IMPLEMENTATION/TMs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
 
 # Huawei
 IMPLEMENTATION=huawei
@@ -150,6 +144,11 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 IMPLEMENTATION=VAIMEE
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+
+# WoT Experimental
+IMPLEMENTATION=wot-experimental
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 ## Older (should be moved to node-wot)
 
