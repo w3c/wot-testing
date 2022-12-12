@@ -34,6 +34,10 @@ indicted in the API specified TD of a Thing by a specific Consumer.
    - Focus on resolving at-risk items
    - Capture/Update Implementation Descriptions
    - Gather Testimonials - perhaps a separate document -> main call
+ * Evaluate implementability of the Profile specification
+   - Constraints on Things
+   - Constraints on Consumers
+   - Interoperability constraints
 
 ## Contributions
 If you are participating in the testfest, please do the following:
