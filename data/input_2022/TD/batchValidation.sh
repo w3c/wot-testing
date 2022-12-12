@@ -40,28 +40,28 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # hitachi-esp-idf
 IMPLEMENTATION=hitachi-esp-idf
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 # hitachi-node-red
 IMPLEMENTATION=hitachi-node-red
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 # hitachi-nodegen
 # only a csv file - manual results only
 IMPLEMENTATION=hitachi-nodegen
 echo "$IMPLEMENTATION"
-cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
 # intel-nodejs
 IMPLEMENTATION=intel-nodejs
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 # intel-wot-ha
 IMPLEMENTATION=intel-wot-ha
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$PLAYGROUNDLOCATION.csv
 
 # intel-proxy
 # only a csv file - manual results only
@@ -73,7 +73,7 @@ cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 # only a csv file - manual results only
 IMPLEMENTATION=dart_wot
 echo "$IMPLEMENTATION"
-cp $IMPLEMENTATION/manual.csv Results/$IMPLEMENTATION.csv
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
 
 # Playground
 # only a csv file - manual results only
@@ -149,7 +149,7 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o 
 # VAIMEE
 IMPLEMENTATION=VAIMEE
 echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
 
 ## Older (should be moved to node-wot)
 
