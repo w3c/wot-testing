@@ -65,9 +65,8 @@ If you are participating in the testfest, please do the following:
 ### Contribution to TD specification
 - If it is a new implementation, create a folder with an appropriate name in https://github.com/w3c/wot-testing/tree/main/data/input_2022/TD.  Note that folders are for implementations, not organizations.  Relate implementations to organizations if necessary in the implementation description.
 - Provide the TDs and/or TMs of your implementation to the TD specification at https://github.com/w3c/wot-testing/tree/main/data/input_2022/TD . You need to group them in a folder under your implementation name. These TDs will be used to generate the automatic results. You can see a contribution with both TD and TM at https://github.com/w3c/wot-testing/tree/main/data/input_2022/TD/Ditto.  NOTE: if your implementation is a pure consumer and does not have TDs, skip this step.  Please use .td.jsonld for TDs and .tm.jsonld for TMs.
-- Fill in the [manual.csv](https://github.com/w3c/wot-thing-description/blob/main/testing/manual.csv) submit it. This file is needed for the manual results. This file should go in the folder of your implementation.
+- Fill in the [manual.csv](https://github.com/w3c/wot-thing-description/blob/main/testing/manual.csv) and submit it. This file is needed for the manual results. This file should go in the folder of your implementation and renamed with your implementation name, i.e. `myImplementation.csv` instead of `manual.csv`
 - Update batchValidation.sh to use your input data, if necessary.  Note: make sure the suffixes are correct and are picked up by the script.  Also make sure you include an argument for the manual.csv for your implementation if you have one.
-- [Example contribution: `intel-nodejs`](https://github.com/w3c/wot-testing/pull/312)
 
 NOTE: actually running the script to update the results will be done when the implementation report is generated, it is not necessary to check in files under "Results".  Please do NOT check in ONLY files under Results as they will be overwritten by the script!
 
