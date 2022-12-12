@@ -1,0 +1,120 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://www.w3.org/2022/wot/td/v1.1",
+    { "@language": "en" }
+  ],
+  "profile": [
+    "https:/wwww.w3.org/2022/wot/profile/http-basic/v1",
+    "https://www.w3.org/2022/wot/profile/http-sse/v1"
+  ],
+  "@type": "Thing",
+  "title": "Fujitsu sensor",
+  "titles": {
+    "en": "Fujitsu sensor",
+    "ja": "温湿度気圧センサ"
+  },
+  "id": "urn:com:fujitsu:sensor01",
+  "description": "sensors with wifi interface",
+  "descriptions": {
+    "en": "sensors with wifi interface",
+    "ja": "無線LANインタフェース温湿度気圧センサ"
+  },
+  "version": {
+    "instance" : "1.0.0"
+  },
+  "created": "2022-03-11T03:00:00Z",
+  "base": "http://192.168.1.174/things/",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "temperature": {
+      "@type": "temperature",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "unit": "degree celsius",
+      "forms": [
+        {
+          "href": "properties/temperature",
+          "contentType": "application/json",
+          "op": "readproperty"
+        },
+        {
+          "href": "properties/temperature",
+          "contentType": "text/event-stream",
+          "op": "observeproperty",
+          "subprotocol": "sse"
+        }
+      ]
+    },
+    "humidity": {
+      "@type": "humidity",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "minimum": 0,
+      "maximum": 100,
+      "unit": "percent",
+      "forms": [
+        {
+          "href": "properties/humidity",
+          "contentType": "application/json",
+          "op": "readproperty"
+        }
+      ]
+    },
+    "airpressure": {
+      "@type": "airpressure",
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "unit": "hectopascal",
+      "forms": [
+        {
+          "href": "properties/airpressure",
+          "contentType": "application/json",
+          "op": "readproperty"
+        }
+      ]
+    }
+  },
+  "events": {
+    "wbgt": {
+      "title": "Wet Bulb Globe Temperature",
+      "description": "a measure of the heat stress in direct sunlight",
+      "descriptions": {
+        "en": "a measure of the heat stress in direct sunlight",
+        "ja": "熱中症の危険度指数"
+      },
+      "data": {
+        "type": "integer",
+        "readOnly": true,
+        "writeOnly": false
+      },
+      "forms": [{
+        "href": "events/wbgt",
+        "contentType": "text/event-stream",
+        "op": [ 
+          "subscribeevent",
+          "unsubscribeevent"
+        ],
+        "subprotocol": "sse"
+      }]
+    }
+  },
+  "forms": [
+    {
+      "op": "readallproperties",
+      "contentType": "application/json",
+      "href": "properties"
+    }
+  ]
+}
