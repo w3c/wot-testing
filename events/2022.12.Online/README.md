@@ -40,6 +40,12 @@ indicted in the API specified TD of a Thing by a specific Consumer.
    - Interoperability constraints
 
 ## Contributions
+
+**NOTE:** When submitting CSV files, if you are editing the CSV file in a Spreadsheet Editor (e.g. Microsoft Excel, LibreOffice Calc), make sure to NOT save the file normally. 
+This removes the quotes from the individual cell strings. 
+Instead, go to the save as tab and look at editor settings and enable quote for texts cells so that all fields in the CSV are surrounded with quotes `"`.
+Some documentation for LibreOffice Calc is available [here](https://ask.libreoffice.org/t/keep-quotes-around-empty-cells-when-saving-a-csv/62735/9).
+
 If you are participating in the testfest, please do the following:
 
 ### Contribution to any specification
