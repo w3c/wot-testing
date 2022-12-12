@@ -22,7 +22,7 @@
         }
 	},
 	"security": [
-		"nosec"
+		"nosec_sc"
 	],
 	"properties": {
 		"location": {
@@ -46,7 +46,7 @@
 					"href": "http://localhost:8080/properties/location",
 					"op": "readproperty",
 					"contentType": "application/json",
-					"security": "nosec"
+					"security": "nosec_sc"
 				}
 			]
 		}
