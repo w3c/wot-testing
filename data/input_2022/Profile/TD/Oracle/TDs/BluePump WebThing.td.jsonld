@@ -14,7 +14,7 @@
 	"version": {
 		"instance": "1.0.0"
 	},
-	"base": "http://w3cwotprofile.ddns.net:24042",
+	"base": "http://w3cwotprofile.dynv6.net:24042",
 	"securityDefinitions": {
 		"basic_sc": {
 			"scheme": "basic",
@@ -93,7 +93,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Maximum_Inlet_Pressure",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Maximum_Inlet_Pressure",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -121,7 +121,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Return_Pressure_Min",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Return_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -149,7 +149,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Return_Pressure_Max",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Return_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -177,7 +177,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Cases_Pressure_Min",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Cases_Pressure_Min",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -205,7 +205,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Cases_Pressure_Max",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Cases_Pressure_Max",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -233,7 +233,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/properties/Cycle_Peak_Operation_Percent_Of_Minute",
+					"href": "http://w3cwotprofile.dynv6.net:24042/properties/Cycle_Peak_Operation_Percent_Of_Minute",
 					"contentType": "application/json",
 					"op": "readproperty",
 					"additionalResponses": [
@@ -265,7 +265,7 @@
 			},
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/actions/power",
+					"href": "http://w3cwotprofile.dynv6.net:24042/actions/power",
 					"contentType": "application/json",
 					"op": "invokeaction",
 					"additionalResponses": [
@@ -287,7 +287,7 @@
 			"synchronous": false,
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/actions/diagnose",
+					"href": "http://w3cwotprofile.dynv6.net:24042/actions/diagnose",
 					"contentType": "application/json",
 					"op": [            
 						"invokeaction",
@@ -312,7 +312,7 @@
 			"title": "resetFilter",
 			"forms": [
 				{
-					"href": "http://w3cwotprofile.ddns.net:24042/actions/resetFilter",
+					"href": "http://w3cwotprofile.dynv6.net:24042/actions/resetFilter",
 					"contentType": "application/json",
 					"op": "invokeaction",
 					"additionalResponses": [
@@ -391,14 +391,14 @@
 			"forms": [
 				{
 					"op": "subscribeevent",
-					"href": "http://w3cwotprofile.ddns.net:24042/events/filterClogged",
+					"href": "http://w3cwotprofile.dynv6.net:24042/events/filterClogged",
 					"htv:methodName": "POST",
 					"subprotocol": "webhook",
 					"contentType": "application/json"
 				},
 				{
 					"op": "unsubscribeevent",
-					"href": "http://w3cwotprofile.ddns.net:24042/events/filterClogged",
+					"href": "http://w3cwotprofile.dynv6.net:24042/events/filterClogged",
 					"htv:methodName": "DELETE",
 					"subprotocol": "webhook",
 					"contentType": "application/json"
