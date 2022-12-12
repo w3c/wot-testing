@@ -70,7 +70,7 @@
 "td-producer-mixed-direction","null", ,"TD producers SHOULD attempt to provide mixed direction strings in a way that can be displayed successfully by a naive user agent."
 "td-security-extension","null", ,"Additional security schemes MUST be Subclasses of the Class SecurityScheme."
 "td-text-direction-first-strong","pass", ,"When metadata such as @direction is not present, TD Consumers SHOULD use [=first-strong detection=] as a fallback."
-"td-text-direction-language-tag","not-impl", ,"For the MultiLanguage Map, TD Consumers MAY infer the [=base direction=] from the language tag of the individual strings."
+"td-text-direction-language-tag","pass", ,"For the MultiLanguage Map, TD Consumers MAY infer the [=base direction=] from the language tag of the individual strings."
 "thing-model-td-generation-processor-extends","null", ,"If used"
 "thing-model-td-generation-processor-forms","null", ,"Missing communication and/or security metadata details MUST be completed in the Thing Description instance based on Section and/or ."
 "thing-model-td-generation-processor-imports","null", ,"Copy all definitions from the input Thing Model to the resulting Partial TD instance. If used, the extension and imports feature MUST be resolved and represented in the Partial TD instance according to ."
