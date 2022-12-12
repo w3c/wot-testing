@@ -37,8 +37,8 @@ td-format-validation-other-values,null,When a value that is not found in the kno
 td-json-open,pass,TDs MUST be serialized according to the requirements defined in Section 8.1 of RFC8259 for open ecosystems.
 td-json-open_accept-byte-order,pass,TD Processors MAY ignore the presence of a byte order mark rather than treating it as an error.
 td-json-open_no-byte-order,pass,Implementations MUST NOT add a byte order mark (U+FEFF) to the beginning of a TD document.
-td-ns-multilanguage-content-negotiation,null,In cases where the default language has been negotiated, an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
-td-ns-multilanguage-content-negotiation-no-multi,null,When the default language has been negotiated successfully, TD documents SHOULD include the appropriate matching values for the members title and description in preference to MultiLanguage objects in titles and descriptions members.
+td-ns-multilanguage-content-negotiation,pass,In cases where the default language has been negotiated, an @language member MUST be present to indicate the result of the negotiation and the corresponding default language of the returned content.
+td-ns-multilanguage-content-negotiation-no-multi,pass,When the default language has been negotiated successfully, TD documents SHOULD include the appropriate matching values for the members title and description in preference to MultiLanguage objects in titles and descriptions members.
 td-ns-multilanguage-content-negotiation-optional,null,Note however that Things MAY choose to not support such dynamically-generated TDs nor to support language negotiation (e.g., because of resource constraints).
 td-processor-serialization,pass,A TD Processor MUST be able to serialize Thing Descriptions into the JSON format and/or deserialize Thing Descriptions from that format, according to the rules noted in and.
 td-security-binding,pass,If a Thing requires a specific access mechanism for an interaction, that mechanism MUST be specified in the security configuration of the Thing Description.
