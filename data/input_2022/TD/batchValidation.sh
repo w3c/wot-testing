@@ -37,6 +37,21 @@ IMPLEMENTATION=Fujitsu
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
 
+# fujitsu-ledbulb
+IMPLEMENTATION=fujitsu-ledbulb
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+
+# fujitsu-proxy
+IMPLEMENTATION=fujitsu-proxy
+echo "$IMPLEMENTATION"
+cp $IMPLEMENTATION/$IMPLEMENTATION.csv Results/$IMPLEMENTATION.csv
+
+# fujitsu-sensor
+IMPLEMENTATION=fujitsu-sensor
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/$IMPLEMENTATION.csv
+
 # hitachi-esp-idf
 IMPLEMENTATION=hitachi-esp-idf
 echo "$IMPLEMENTATION"
