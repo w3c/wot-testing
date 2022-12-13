@@ -32,11 +32,6 @@ IMPLEMENTATION=flask-tum
 echo "$IMPLEMENTATION"
 node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/TDs/manual.csv
 
-# Fujitsu
-IMPLEMENTATION=Fujitsu
-echo "$IMPLEMENTATION"
-node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a
-
 # fujitsu-ledbulb
 IMPLEMENTATION=fujitsu-ledbulb
 echo "$IMPLEMENTATION"
