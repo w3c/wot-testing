@@ -60,7 +60,7 @@
 "privacy-id-metadata","null",
 "privacy-mutable-identifiers","null",
 "privacy-td-pii","null",
-"privacy-temp-id-metadata","null",
+"privacy-temp-id-metadata","pass",
 "sec-body-name-json-pointer","null",
 "sec-body-name-json-pointer-array","null",
 "sec-body-name-json-pointer-creatable","null",
