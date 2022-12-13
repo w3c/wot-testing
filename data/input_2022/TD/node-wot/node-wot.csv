@@ -10,6 +10,7 @@
 "server-data-schema-extras", "pass", , "A Thing MAY return additional data from an interaction even when such data is not described in the data schemas given in its WoT Thing Description."
 "server-uri-template", "pass", , "URI Templates, base URIs, and href members in a WoT Thing Description MUST accurately describe the WoT Interface of the Thing."
 "td-context-default-language-direction-independence", "null", , "However, when interpreting human-readable text, each human-readable string value MUST be processed independently."
+"td-producer-mixed-direction","pass", , "TD producers SHOULD attempt to provide mixed direction strings in a way that can be displayed successfully by a naive user agent."
 "td-default-alg", "null", , "The value associated with member alg if not given MUST be assumed to have the default value ES256."
 "td-default-contentType", "pass", , "The value associated with member contentType if not given MUST be assumed to have the default value application/json."
 "td-default-format", "null", , "The value associated with member format if not given MUST be assumed to have the default value jwt."
