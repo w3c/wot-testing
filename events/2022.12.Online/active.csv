@@ -1,3 +1,5 @@
 "Org",                   "Name",                                         "TD Path", "Comment"
-"Eclipse",           "node-wot", data/input_2022/TD/node-wot/TDs/counter.td.jsonld, 
+"Siemens",           "node-wot Multilanguage Counter", "http://plugfest.thingweb.io:8083/counter", 
+"Siemens",           "node-wot Smart-Coffee-Machine",  "http://plugfest.thingweb.io:8083/smart-coffee-machine", 
+"Siemens",           "node-wot TestThing",             "http://plugfest.thingweb.io:8083/testthing", 
 "Oracle",   "BluePump WebThing", data/input_2022/Profile/TD/Oracle/TDs/BluePump%20WebThing.td.jsonld,
