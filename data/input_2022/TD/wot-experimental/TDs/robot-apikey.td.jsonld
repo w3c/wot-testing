@@ -25,7 +25,7 @@
     }
   },
   "security": [
-    "urlKey"
+    "apikey_url"
   ],
   "properties": {
     "location": {
