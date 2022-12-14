@@ -1,0 +1,30 @@
+name: Discovery coverage report
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'data/input_2022/Discovery/Results/*.csv'
+
+jobs:
+  discovery-coverage-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out wot-testing
+        uses: actions/checkout@v3
+
+      - name: Check out wot-discovery
+        uses: actions/checkout@v3
+        with:
+          repository: w3c/wot-discovery
+          path: wot-discovery
+
+      - name: Run assertion coverage check script
+        run: |
+          python3 data/input_2022/scripts/discovery-coverage.py > ./output.txt
+      
+      - name: Post comment to the PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} -F ./output.txt --repo ${{ github.repository }}
