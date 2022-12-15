@@ -1,0 +1,183 @@
+
+# CSV Changelog - 14/12/2022
+
+[Old CSV Path](../../../../data/input_2022/Discovery/wot-ha/wot-ha.csv)  
+[New CSV Path](../../../../../wot-discovery/testing/manual.csv)
+
+
+## ADDED
+
+- `discoverer-any-order` was added
+- `discoverer-fetch-iteration` was added
+- `discoverer-fetch-links` was added
+- `discoverer-fetch-tdd` was added
+- `discoverer-may-multiple-intro` was added
+- `discoverer-merge-intros` was added
+- `discoverer-must-support-fetching` was added
+- `discoverer-must-support-intros` was added
+- `discoverer-td-identify` was added
+- `discoverer-termination` was added
+- `discoverer-track` was added
+- `exploration-directory-description-type` was added
+- `exploration-link-description-link` was added
+- `exploration-link-description-type` was added
+- `exploration-secboot-401` was added
+- `exploration-secboot-auth` was added
+- `exploration-secboot-oauth2-flows` was added
+- `exploration-server-coap-alternate-content` was added
+- `exploration-server-coap-method` was added
+- `exploration-server-coap-resp` was added
+- `exploration-server-coap-size2` was added
+- `exploration-server-http-alternate-content` was added
+- `exploration-server-http-alternate-language` was added
+- `exploration-server-http-head` was added
+- `exploration-server-http-method` was added
+- `exploration-server-http-resp` was added
+- `exploration-server-http-resp-content-type` was added
+- `exploration-server-http-resp-json` was added
+- `introduction-core-rd` was added
+- `introduction-core-rd-directory` was added
+- `introduction-core-rd-resource-type-directory` was added
+- `introduction-core-rd-resource-type-thing` was added
+- `introduction-did` was added
+- `introduction-did-service-endpoint` was added
+- `introduction-direct-directory-description` was added
+- `introduction-direct-thing-description` was added
+- `introduction-direct-url` was added
+- `introduction-dns-sd` was added
+- `introduction-dns-sd-service-name` was added
+- `introduction-dns-sd-service-name-directory` was added
+- `introduction-dns-sd-service-name-directory-udp` was added
+- `introduction-dns-sd-service-name-udp` was added
+- `introduction-dns-sd-txt-record` was added
+- `introduction-well-known-path` was added
+- `introduction-well-known-thing-description` was added
+- `introduction-well-known-uri` was added
+- `priv-loc-anonymous-tds` was added
+- `priv-loc-disable-public-directories` was added
+- `priv-loc-explicit-care` was added
+- `priv-loc-explicit-strip` was added
+- `priv-loc-gen-ids` was added
+- `priv-loc-priv-dir-access` was added
+- `priv-query-anon` was added
+- `sec-self-proxy` was added
+- `sec-self-psk` was added
+- `sec-self-segment` was added
+- `sec-tdd-intro-if-multicast-required` was added
+- `sec-tdd-intro-limit-response-size` was added
+- `sec-tdd-intro-no-ext` was added
+- `sec-tdd-intro-no-multicast` was added
+- `sec-tdd-intro-no-observe` was added
+- `sec-tdd-intro-throttling` was added
+- `sec-tdd-limit-query-complexity` was added
+- `sec-tdd-query-watchdog` was added
+- `sec-tdd-throttle-queries` was added
+- `security-bootstrapping-endpoints` was added
+- `tdd-context-injection` was added
+- `tdd-http-alternate-language` was added
+- `tdd-http-error-response-lang` was added
+- `tdd-http-error-response-utf-8` was added
+- `tdd-http-representation-alternate-output` was added
+- `tdd-http-unsupported-feature` was added
+- `tdd-things-create-anonymous-id` was added
+- `tdd-things-list-pagination-order-utf-8` was added
+- `tdd-things-list-pagination-orderable` was added
+- `tdd-things-representation-alternate-input` was added
+- `tdd-things-retrieve-resp-content-type` was added
+- `tdd-things-list-resp-content-type` was added
+- `tdd-validation-response-lang` was added
+- `tdd-validation-response-utf-8` was added
+
+
+## REMOVED
+
+- `tdd-anonymous-td-identifier` was removed
+- `tdd-anonymous-td-local-uuid` was removed
+- `tdd-http-error-response` was removed
+- `tdd-http-head` was removed
+- `tdd-search-jsonpath` was removed
+- `tdd-search-jsonpath-method` was removed
+- `tdd-search-jsonpath-parameter` was removed
+- `tdd-search-jsonpath-response` was removed
+- `tdd-search-sparql` was removed
+- `tdd-search-sparql-federation` was removed
+- `tdd-search-sparql-method-get` was removed
+- `tdd-search-sparql-method-post` was removed
+- `tdd-search-sparql-resp-select-ask` was removed
+- `tdd-search-xpath` was removed
+- `tdd-search-xpath-method` was removed
+- `tdd-search-xpath-parameter` was removed
+- `tdd-search-xpath-response` was removed
+- `tdd-things-create-anonymous-contenttype` was removed
+- `tdd-things-create-anonymous-td` was removed
+- `tdd-things-create-anonymous-td-resp` was removed
+- `tdd-things-create-known-td` was removed
+- `tdd-things-create-known-td-resp` was removed
+- `tdd-things-create-known-vs-anonymous` was removed
+- `tdd-things-crud` was removed
+- `tdd-things-crudl` was removed
+- `tdd-things-default-representation` was removed
+- `tdd-things-list-method` was removed
+- `tdd-things-list-only` was removed
+- `tdd-things-list-resp` was removed
+- `tdd-validation-response` was removed
+- `tdd-validation-result` was removed
+- `tdd-validation-syntactic` was removed
+- `tdd-http-missing-api-endpoint` was removed
+- `tdd-https` was removed
+- `tdd-notification` was removed
+- `tdd-notification-data` was removed
+- `tdd-notification-data-create-full` was removed
+- `tdd-notification-data-delete-diff` was removed
+- `tdd-notification-data-diff-unsupported` was removed
+- `tdd-notification-data-td-id` was removed
+- `tdd-notification-data-update-diff` was removed
+- `tdd-notification-data-update-id` was removed
+- `tdd-notification-event-id` was removed
+- `tdd-notification-event-types` was removed
+- `tdd-notification-filter-type` was removed
+- `tdd-notification-sse` was removed
+- `tdd-registrationinfo-vocab-created` was removed
+- `tdd-registrationinfo-vocab-modified` was removed
+- `tdd-things-additional-representation` was removed
+- `tdd-things-delete` was removed
+- `tdd-things-delete-resp` was removed
+- `tdd-things-retrieve` was removed
+- `tdd-things-retrieve-resp` was removed
+- `tdd-things-update` was removed
+- `tdd-things-update-partial` was removed
+- `tdd-things-update-partial-contenttype` was removed
+- `tdd-things-update-partial-mergepatch` was removed
+- `tdd-things-update-partial-partialtd` was removed
+- `tdd-things-update-partial-resp` was removed
+- `tdd-things-update-resp` was removed
+
+
+## LINE-CHANGE
+
+- `tdd-registrationinfo-expiry-config` was moved from Line48 to 73
+- `tdd-registrationinfo-expiry-purge` was moved from Line49 to 74
+- `tdd-registrationinfo-vocab-expires` was moved from Line51 to 75
+- `tdd-registrationinfo-vocab-retrieved` was moved from Line53 to 76
+- `tdd-registrationinfo-vocab-ttl` was moved from Line54 to 77
+- `tdd-search-large-tdds` was moved from Line55 to 78
+- `tdd-search-sparql-error` was moved from Line56 to 79
+- `tdd-search-sparql-federation-version` was moved from Line57 to 80
+- `tdd-search-sparql-resp-describe-construct` was moved from Line58 to 81
+- `tdd-search-sparql-version` was moved from Line59 to 82
+- `tdd-things-create-known-contenttype` was moved from Line21 to 84
+- `tdd-things-update-contenttype` was moved from Line78 to 85
+- `tdd-things-list-pagination` was moved from Line63 to 86
+- `tdd-things-list-pagination-collection` was moved from Line64 to 87
+- `tdd-things-list-pagination-header-canonicallink` was moved from Line65 to 88
+- `tdd-things-list-pagination-header-nextlink` was moved from Line66 to 89
+- `tdd-things-list-pagination-header-nextlink-attr` was moved from Line67 to 90
+- `tdd-things-list-pagination-header-nextlink-base` was moved from Line68 to 91
+- `tdd-things-list-pagination-limit` was moved from Line69 to 92
+- `tdd-things-list-pagination-order` was moved from Line70 to 93
+- `tdd-things-list-pagination-order-default` was moved from Line71 to 94
+- `tdd-things-list-pagination-order-nextlink` was moved from Line72 to 95
+- `tdd-things-list-pagination-order-unsupported` was moved from Line73 to 96
+- `tdd-things-read-only-auth` was moved from Line74 to 99
+- `tdd-validation-jsonschema` was moved from Line85 to 103
+
