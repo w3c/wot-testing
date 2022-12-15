@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# These should be tuned based on your system
+PLAYGROUNDLOCATION=~/git/thingweb-playground/packages/assertions/
+NEWCSVPATH=../../../../../wot-architecture/testing/manual.csv
+EVENTPATH=../../../../data/input_2022/Architecture/Results
+# These are per implementation
+
+IMPLEMENTATION=dart_wot
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=ditto
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=fujitsu-proxy
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=hitachi-esp-idf
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=hitachi-node-red
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=hitachi-nodegen
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=intel-nodejs
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+ 
+IMPLEMENTATION=node-wot
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=playground
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=saywot
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
+
+IMPLEMENTATION=riot
+node $PLAYGROUNDLOCATION/generate-changelog.js $EVENTPATH/$IMPLEMENTATION.csv $NEWCSVPATH > $IMPLEMENTATION.md
