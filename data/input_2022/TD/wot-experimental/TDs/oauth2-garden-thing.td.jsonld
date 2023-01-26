@@ -160,7 +160,6 @@
         "oauth2_sc": {
             "scheme": "oauth2",
             "flow": "client",
-            "authorization": "https://dev-23486491.okta.com/oauth2/aus7cc6uibKmmp8GL5d7",
             "in": "header",
             "name": "authorization"
         }
