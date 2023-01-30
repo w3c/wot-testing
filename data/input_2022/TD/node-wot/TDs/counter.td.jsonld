@@ -11,7 +11,7 @@
         }
     },
     "security": "no_sec",
-    "description": "counter example Thing",
+    "description": "Counter example Thing",
     "descriptions": {
         "en": "Counter example Thing",
         "de": "Zähler Beispiel Ding",
@@ -41,7 +41,7 @@
                 "it": "Conteggio"
             },
             "type": "integer",
-            "description": "current counter value",
+            "description": "Current counter value",
             "descriptions": {
                 "en": "Current counter value",
                 "de": "Derzeitiger Zähler Stand",
@@ -63,7 +63,12 @@
             ]
         },
         "countAsImage": {
-            "description": "current counter value as SVG image",
+            "description": "Current counter value as SVG image",
+            "descriptions": {
+                "en": "Current counter value as SVG image",
+                "de": "Aktueller Zählerstand als SVG-Bild",
+                "it": "Valore attuale del contatore come immagine SVG"
+            },
             "forms": [
                 {
                     "href": "https://example.com/counter/count/display",
@@ -80,6 +85,11 @@
         },
         "redDotImage": {
             "description": "Red dot image as PNG",
+            "descriptions": {
+                "en": "Red dot image as PNG",
+                "de": "Rotes Punktbild als PNG",
+                "it": "Immagine punto rosso come PNG"
+            },
             "forms": [
                 {
                     "href": "https://example.com/counter/count/display/redDotImage",
@@ -97,7 +107,7 @@
                 "it": "Ultima modifica"
             },
             "type": "string",
-            "description": "last change of counter value",
+            "description": "Last change of counter value",
             "descriptions": {
                 "en": "Last change of counter value",
                 "de": "Letzte Änderung",
@@ -126,11 +136,11 @@
                 "de": "Zunahme",
                 "it": "Incrementa"
             },
-            "description": "Incrementing counter value",
+            "description": "Increment counter value",
             "descriptions": {
-                "en": "Incrementing counter value",
-                "de": "Zähler erhöhen",
-                "it": "incrementare valore"
+                "en": "Increment counter value",
+                "de": "Zählerwert erhöhen",
+                "it": "Incrementa il valore del contatore"
             },
             "forms": [
                 {
@@ -145,14 +155,14 @@
             "title": "Decrement",
             "titles": {
                 "en": "Decrement",
-                "de": "Verringerung",
+                "de": "Verringern",
                 "it": "Decrementa"
             },
             "description": "Decrementing counter value",
             "descriptions": {
                 "en": "Decrementing counter value",
-                "de": "Zähler verringern",
-                "it": "decrementare valore"
+                "de": "Zählerwer verringern",
+                "it": "Decrementare il valore del contatore"
             },
             "forms": [
                 {
@@ -173,8 +183,8 @@
             "description": "Resetting counter value",
             "descriptions": {
                 "en": "Resetting counter value",
-                "de": "Zähler resettieren",
-                "it": "resettare valore"
+                "de": "Zählerwert resettieren",
+                "it": "Resettare il valore del contatore"
             },
             "forms": [
                 {
@@ -188,17 +198,17 @@
     },
     "events": {
         "change": {
-            "title": "Change",
+            "title": "Changed",
             "titles": {
-                "en": "Change",
+                "en": "Changed",
                 "de": "Geändert",
                 "it": "Valore modificato"
             },
-            "description": "change event",
+            "description": "Change event",
             "descriptions": {
-                "en": "change event",
+                "en": "Change event",
                 "de": "Änderungsnachricht",
-                "it": "resettare valore"
+                "it": "Valore modificato"
             },
             "forms": [
                 {
