@@ -15,9 +15,9 @@
     "descriptions": {
         "en": "Counter example Thing",
         "de": "Zähler Beispiel Ding",
-        "it": "Contatore Esempio"
+        "it": "Contatore di esempio"
     },
-    "support": "git://github.com/eclipse/thingweb.node-wot.git",
+    "support": "https://github.com/eclipse/thingweb.node-wot/",
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
         "https://www.w3.org/2022/wot/td/v1.1",
@@ -37,14 +37,14 @@
             "title": "Count",
             "titles": {
                 "en": "Count",
-                "de": "Zählen",
-                "it": "Conteggio"
+                "de": "Zähler",
+                "it": "Valore"
             },
             "type": "integer",
             "description": "Current counter value",
             "descriptions": {
                 "en": "Current counter value",
-                "de": "Derzeitiger Zähler Stand",
+                "de": "Derzeitiger Zählerwert",
                 "it": "Valore attuale del contatore"
             },
             "iot:Custom": "example annotation",
@@ -66,7 +66,7 @@
             "description": "Current counter value as SVG image",
             "descriptions": {
                 "en": "Current counter value as SVG image",
-                "de": "Aktueller Zählerstand als SVG-Bild",
+                "de": "Aktueller Zählerwert als SVG-Bild",
                 "it": "Valore attuale del contatore come immagine SVG"
             },
             "forms": [
@@ -103,7 +103,7 @@
             "title": "Last change",
             "titles": {
                 "en": "Last change",
-                "de": "Letzte Änderung",
+                "de": "Letzte Zählerwertänderung",
                 "it": "Ultima modifica"
             },
             "type": "string",
@@ -133,7 +133,7 @@
             "title": "Increment",
             "titles": {
                 "en": "Increment",
-                "de": "Zunahme",
+                "de": "Erhöhen",
                 "it": "Incrementa"
             },
             "description": "Increment counter value",
@@ -178,12 +178,12 @@
             "titles": {
                 "en": "Reset",
                 "de": "Zurücksetzen",
-                "it": "Ripristina"
+                "it": "Reset"
             },
             "description": "Resetting counter value",
             "descriptions": {
                 "en": "Resetting counter value",
-                "de": "Zählerwert resettieren",
+                "de": "Zählerwert zurücksetzen",
                 "it": "Resettare il valore del contatore"
             },
             "forms": [
@@ -207,7 +207,7 @@
             "description": "Change event",
             "descriptions": {
                 "en": "Change event",
-                "de": "Änderungsnachricht",
+                "de": "Änderungsereignis",
                 "it": "Valore modificato"
             },
             "forms": [
