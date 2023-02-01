@@ -11,13 +11,13 @@
         }
     },
     "security": "no_sec",
-    "description": "counter example Thing",
+    "description": "Counter example Thing",
     "descriptions": {
         "en": "Counter example Thing",
         "de": "Zähler Beispiel Ding",
-        "it": "Contatore Esempio"
+        "it": "Contatore di esempio"
     },
-    "support": "git://github.com/eclipse/thingweb.node-wot.git",
+    "support": "https://github.com/eclipse/thingweb.node-wot/",
     "@context": [
         "https://www.w3.org/2019/wot/td/v1",
         "https://www.w3.org/2022/wot/td/v1.1",
@@ -37,14 +37,14 @@
             "title": "Count",
             "titles": {
                 "en": "Count",
-                "de": "Zählen",
-                "it": "Conteggio"
+                "de": "Zähler",
+                "it": "Valore"
             },
             "type": "integer",
-            "description": "current counter value",
+            "description": "Current counter value",
             "descriptions": {
                 "en": "Current counter value",
-                "de": "Derzeitiger Zähler Stand",
+                "de": "Derzeitiger Zählerwert",
                 "it": "Valore attuale del contatore"
             },
             "iot:Custom": "example annotation",
@@ -63,7 +63,12 @@
             ]
         },
         "countAsImage": {
-            "description": "current counter value as SVG image",
+            "description": "Current counter value as SVG image",
+            "descriptions": {
+                "en": "Current counter value as SVG image",
+                "de": "Aktueller Zählerwert als SVG-Bild",
+                "it": "Valore attuale del contatore come immagine SVG"
+            },
             "forms": [
                 {
                     "href": "https://example.com/counter/count/display",
@@ -80,6 +85,11 @@
         },
         "redDotImage": {
             "description": "Red dot image as PNG",
+            "descriptions": {
+                "en": "Red dot image as PNG",
+                "de": "Rotes Punktbild als PNG",
+                "it": "Immagine punto rosso come PNG"
+            },
             "forms": [
                 {
                     "href": "https://example.com/counter/count/display/redDotImage",
@@ -93,11 +103,11 @@
             "title": "Last change",
             "titles": {
                 "en": "Last change",
-                "de": "Letzte Änderung",
+                "de": "Letzte Zählerwertänderung",
                 "it": "Ultima modifica"
             },
             "type": "string",
-            "description": "last change of counter value",
+            "description": "Last change of counter value",
             "descriptions": {
                 "en": "Last change of counter value",
                 "de": "Letzte Änderung",
@@ -123,14 +133,14 @@
             "title": "Increment",
             "titles": {
                 "en": "Increment",
-                "de": "Zunahme",
+                "de": "Erhöhen",
                 "it": "Incrementa"
             },
-            "description": "Incrementing counter value",
+            "description": "Increment counter value",
             "descriptions": {
-                "en": "Incrementing counter value",
-                "de": "Zähler erhöhen",
-                "it": "incrementare valore"
+                "en": "Increment counter value",
+                "de": "Zählerwert erhöhen",
+                "it": "Incrementa il valore del contatore"
             },
             "forms": [
                 {
@@ -145,14 +155,14 @@
             "title": "Decrement",
             "titles": {
                 "en": "Decrement",
-                "de": "Verringerung",
+                "de": "Verringern",
                 "it": "Decrementa"
             },
             "description": "Decrementing counter value",
             "descriptions": {
                 "en": "Decrementing counter value",
-                "de": "Zähler verringern",
-                "it": "decrementare valore"
+                "de": "Zählerwer verringern",
+                "it": "Decrementare il valore del contatore"
             },
             "forms": [
                 {
@@ -168,13 +178,13 @@
             "titles": {
                 "en": "Reset",
                 "de": "Zurücksetzen",
-                "it": "Ripristina"
+                "it": "Reset"
             },
             "description": "Resetting counter value",
             "descriptions": {
                 "en": "Resetting counter value",
-                "de": "Zähler resettieren",
-                "it": "resettare valore"
+                "de": "Zählerwert zurücksetzen",
+                "it": "Resettare il valore del contatore"
             },
             "forms": [
                 {
@@ -188,17 +198,17 @@
     },
     "events": {
         "change": {
-            "title": "Change",
+            "title": "Changed",
             "titles": {
-                "en": "Change",
+                "en": "Changed",
                 "de": "Geändert",
                 "it": "Valore modificato"
             },
-            "description": "change event",
+            "description": "Change event",
             "descriptions": {
-                "en": "change event",
-                "de": "Änderungsnachricht",
-                "it": "resettare valore"
+                "en": "Change event",
+                "de": "Änderungsereignis",
+                "it": "Valore modificato"
             },
             "forms": [
                 {
