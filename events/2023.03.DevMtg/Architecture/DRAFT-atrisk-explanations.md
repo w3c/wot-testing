@@ -6,9 +6,10 @@ Needs to be aligned with template in the TD directory
 
 
 
-- [31: arch-security-consideration-communication-platform](https://w3c.github.io/wot-architecture#arch-security-consideration-communication-platform) : 
+## [arch-security-consideration-communication-platform](https://w3c.github.io/wot-architecture#arch-security-consideration-communication-platform) : 
 When generating TDs for an IoT ecosystem not covered by the WoT Binding Templates, 
 TD creators SHOULD ensure that all the security requirements of the IoT Platform are satisfied.
+
   - This should be a pass for Oracle, Ditto, Philips hue and pretty much any TD bound to a platform
   - 
  - [34: arch-security-consideration-avoid-direct](https://w3c.github.io/wot-architecture#arch-security-consideration-avoid-direct) 	The WoT Runtime SHOULD NOT directly expose native device interfaces to the script developers.
