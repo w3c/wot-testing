@@ -20,7 +20,7 @@ Explanations of the current list of at-risk features in the current TD 1.1 CR.
 ## security-remote-context
 ## privacy-immutable-id-as-property
 
-## template
+## [template](link-to-assertion)
 {quote of actual assertion}
 
 {basic explanation - including context}
