@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Note: if there is a problem with resolving TMs, a CLI flag may be needed to turn off a check, see
+# https://github.com/thingweb/thingweb-playground/blob/master/packages/cli/index.js#L45
+
 PLAYGROUNDLOCATION=~/Dev/thingweb-playground/
 
 # Ditto
