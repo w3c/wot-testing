@@ -118,3 +118,5 @@
 "tdd-validation-response","not-impl",
 "tdd-validation-result","not-impl",
 "tdd-validation-syntactic","not-impl",
+"sec-tdd-intro-no-multicast","pass",
+"sec-tdd-intro-no-observe","pass",
