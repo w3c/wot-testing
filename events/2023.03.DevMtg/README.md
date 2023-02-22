@@ -5,7 +5,7 @@
 
 ## Logistics 
 * Date: 
-   - EN: week of March 20 (probably move to week of March 27)
+   - EN: <strike>week of March 20</strike> week of March 27
    - JP: week of March 27
    - Doodle: TBD
 * Time: TBD
