@@ -27,6 +27,7 @@ we will need to prioritize.  Only 1h long!
    - TD Call as follows:
        - Global: Reuse second hour of TD slot: 3/29 15:00 UTC
        - Japanese: 3/30 11:00 JST
+   - Finalize date (in main call) and content (in testing call) and send announcements by March 22.
    - Arch Call TBD
 * Call Logistics: TBD
 
