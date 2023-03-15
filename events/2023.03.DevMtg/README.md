@@ -22,10 +22,13 @@ we will need to prioritize.  Only 1h long!
    - EN: <strike>week of March 20</strike> week of March 27
    - JP: week of March 27
    - [Doodle](https://doodle.com/meeting/participate/id/dGRmPm0b)
-* Time: TBD
-   - Constraints: Early in the week, but not early morning on Monday
-   - Doodle: link TBD - M-Th, 9-12 Eastern, Weeks of March 20 AND March 27, for both Testfest and DevMtg
-* Call: TBD
+* Time: Proposed
+   - Separate TD and Arch calls
+   - TD Call as follows:
+       - Global: Reuse second hour of TD slot: 3/29 15:00 UTC
+       - Japanese: 3/30 11:00 JST
+   - Arch Call TBD
+* Call Logistics: TBD
 
 ## At-Risk Assertion Reviews
 * [Architecture 1.1](link.md) - Lagally/McCool (see however https://github.com/w3c/wot-testing/pull/533)
