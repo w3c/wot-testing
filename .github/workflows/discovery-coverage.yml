@@ -8,8 +8,6 @@ on:
 
 jobs:
   discovery-coverage-report:
-    permissions:
-      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Check out wot-testing
@@ -23,10 +21,4 @@ jobs:
 
       - name: Run assertion coverage check script
         run: |
-          python3 data/input_2022/scripts/discovery-coverage.py > ./output.txt
-      
-      - name: Post comment to the PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pr comment ${{ github.event.pull_request.number }} -F ./output.txt --repo ${{ github.repository }}
+          python3 data/input_2022/scripts/discovery-coverage.py >> $GITHUB_STEP_SUMMARY
