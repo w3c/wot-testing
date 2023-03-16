@@ -9,7 +9,6 @@ on:
 jobs:
   discovery-coverage-report:
     permissions:
-      checks: write
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
