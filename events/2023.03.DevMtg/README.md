@@ -25,7 +25,7 @@ we will need to prioritize.  Only 1h long!
 * Time: Proposed
    - Separate TD and Arch calls
    - TD Call as follows:
-       - Global: Reuse second hour of TD slot: 3/29 15:00 UTC
+       - Global: Reuse second hour of TD slot: 3/29 15:00 UTC (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230329T150000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
        - Japanese: 3/30 11:00 JST
    - Finalize date (in main call) and content (in testing call) and send announcements by March 22.
    - Arch Call TBD
