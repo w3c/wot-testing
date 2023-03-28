@@ -18,18 +18,16 @@ SCOPE: it may not even be possible to cover all deliverables and assertions,
 we will need to prioritize.  Only 1h long!
 
 ## Logistics 
-* Date: 
-   - EN: <strike>week of March 20</strike> week of March 27
-   - JP: week of March 27
-   - [Doodle](https://doodle.com/meeting/participate/id/dGRmPm0b)
-* Time: Proposed
-   - Separate TD and Arch calls
-   - TD Call as follows:
-       - Global: Reuse second hour of TD slot: 3/29 15:00 UTC (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230329T150000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
-       - Japanese: 3/30 11:00 JST
-   - Finalize date (in main call) and content (in testing call) and send announcements by March 22.
-   - Arch Call TBD
-* Call Logistics: TBD
+Separate TD and Arch calls
+
+### TD Call
+* EN: Reuse second hour of TD slot: 3/29 15:00 UTC 
+   * 29 March 2023, 15:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230329T150000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
+   * Reuse TD WebEx
+* JP: 28 March 2023, 14:00 JST
+
+### Arch Call
+TBD
 
 ## At-Risk Assertion Reviews
 * [Architecture 1.1](link.md) - Lagally/McCool (see however https://github.com/w3c/wot-testing/pull/533)
