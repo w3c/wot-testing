@@ -8,6 +8,7 @@ To do: reorganize so instructions for TDs specifically go here.
 
 The [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.03.Online/TD/manual.csv) for the TD needs to be filled by each implementation that is implementing the TD standard.
 The value of Status should be filled with one of the following values:
+
 - `null`: This is the default value. It means that you do not know if your implementation implements this or not or it means that it is not applicable. Example: A pure Thing implementation should have this value for `client-data-schema`.
 - `pass`: Your implementation implements this assertion correctly. 
 - `fail`: Your implementation implements this assertion wrongly. Your consumer implementation assumes the value `application/pdf` when it does not see `contentType` in a form. Thus, it fails `td-default-contentType`.
@@ -23,6 +24,7 @@ Some assertions might be difficult to understand without the surrounding text. T
 Depending on whether you have a Consumer or Thing implementation, you can skip a lot of the assertions. If you implementation does both, you should ideally fill everything. Here are items you can **skip** depending on your implementation type (note that line numbers can change over time):
 
 For Consumer implementations:
+
 - Lines 1-2 with ids that start with `binding`
 - Lines 13-15 with ids that start with `server`
 - Lines 47-49 with ids that start with `td-json`
