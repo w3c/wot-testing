@@ -21,18 +21,38 @@ we will need to prioritize. Only 1h long!
 
 ## Logistics
 
-Separate TD and Arch calls
+Separate TD, Architecture, and Discovery calls.
+WoT WG members will already have access to the call logistics.
+Non-members, please see the instructions below for each event.
 
 ### TD Call
 
+- [Slides explaining TD At-Risk Items](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
 - EN: Reuse second hour of TD slot: 3/29 15:00 UTC
   - 29 March 2023, 15:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230329T150000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
   - Reuse TD WebEx
 - JP: 28 March 2023, 14:00 JST
 
-### Arch Call
+### Architecture Call
 
-TBD
+- [Slides explaining TD At-Risk Items]([link](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing))
+- EN: Reuse second hour of TD slot: 4/12 15:00 UTC (tentative)
+  - 12 April 2023, 15:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230412T150000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
+  - Reuse TD WebEx
+- JP: TBD
+
+Non-WoT members who wish to participate should send an request to 
+[team-wot@w3.org](mailto:team-wot@w3.org) by April 4.
+
+### Discovery
+
+- EN: Reuse Discovery slot: 4/17 14:00 UTC 
+  - 17 April 2023, 14:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230417T140000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
+  - Reuse Discovery WebEx
+- JP: TBD
+
+Non-WoT members who wish to participate should send an request to 
+[team-wot@w3.org](mailto:team-wot@w3.org) by April 4.
 
 ## At-Risk Assertion Reviews
 
