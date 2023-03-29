@@ -42,7 +42,7 @@ Non-members, please see the instructions below for each event.
 - JP: TBD
 
 Non-WoT members who wish to participate should send an request to 
-[ege.korkan@siemens.com](mailto:ege.korkan@siemens.com) by April 4.
+[team-wot@w3.org](mailto:team-wot@w3.org) by April 4.
 
 ### Discovery
 
@@ -52,7 +52,7 @@ Non-WoT members who wish to participate should send an request to
 - JP: TBD
 
 Non-WoT members who wish to participate should send an request to 
-[ege.korkan@siemens.com](mailto:ege.korkan@siemens.com) by April 4.
+[team-wot@w3.org](mailto:team-wot@w3.org) by April 4.
 
 ## At-Risk Assertion Reviews
 
