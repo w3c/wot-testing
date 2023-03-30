@@ -16,6 +16,9 @@ sec-body-name-json-pointer-creatable,not-impl
 server-data-schema,pass
 server-data-schema-extras,pass
 server-uri-template,pass
+security-static-context,pass
+security-remote-context,pass
+security-server-auth-td,pass
 td-context-default-language-direction-independence,not-impl
 td-default-AdditionalResponseContentType,pass
 td-default-alg,pass
