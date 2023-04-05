@@ -35,7 +35,7 @@ Non-members, please see the instructions below for each event.
 
 ### Architecture Call
 
-- [Slides explaining Architecture At-Risk Items]([link](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing))
+- [Slides explaining Architecture At-Risk Items](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing)
 - EN: Reuse Architecture slot: 4/13 10:00 UTC (tentative)
   - 13 April 2023, 10:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230413T100000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
   - Reuse Architecture WebEx
