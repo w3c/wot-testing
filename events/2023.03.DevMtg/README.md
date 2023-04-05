@@ -1,8 +1,8 @@
 # WoT At-Risk Assertion Resolution Meeting - March 2023
 
-- Summarize new work on deliverables
-- Review and explain at-risk items
-- Gather implementation experience and resolve at-risk items
+The main goal of this meeting is to gather implementation experience and resolve at-risk items.
+In order to accomplish this, we will summarize new work on deliverables
+and review and explain at-risk items.
 
 NOTE: this meeting is not about promoting WoT to newcomers, it is
 about gathering experience from existing implementers so we can retire
