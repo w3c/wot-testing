@@ -46,6 +46,7 @@ Non-WoT members who wish to participate should send an request to
 
 ### Discovery
 
+- [Slides explaining Discovery At-Risk Items](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
 - EN: Reuse Discovery slot: 4/17 14:00 UTC 
   - 17 April 2023, 14:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230417T140000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
   - Reuse Discovery WebEx
