@@ -192,7 +192,7 @@
 "td-title-description","pass","all children passed",
 "td-title-description_descriptions","pass","",
 "td-title-description_titles","pass","",
-"td-titles-descriptions","fail","root_description is not on the multilang object at the same level at Counter",
+"td-titles-descriptions","pass","",
 "td-uriVariables-dataschema","pass","",
 "td-uriVariables-names","pass","",
 "td-version","pass","",
