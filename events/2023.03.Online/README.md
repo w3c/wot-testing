@@ -13,6 +13,7 @@ and gather additional implementation experience for other deliverables.
 * Logistics: TBD
    - Will also include external attendees, e.g. from the Dev Meetings
    - Will set up a mailing list for external attendees and will email logistics and instructions
+       - To join this list, need a (free) [W3C account](https://www.w3.org/accounts/request), then email it to [team-wot@w3.org](mailto:team-wot@w3.org) to get added 
 
 ## Scope
 - Submissions of test results as CSV files in PRs on wot-testing under data/input_2022
