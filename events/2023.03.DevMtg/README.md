@@ -39,6 +39,7 @@ Non-members, please see the instructions below for each event.
 - EN: Reuse Architecture slot: 4/13 10:00 UTC (tentative)
   - 13 April 2023, 10:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230413T100000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
   - Reuse Architecture WebEx
+  - Calendar: https://www.w3.org/events/meetings/7e8cb7d2-3be4-46d2-96a5-4ae08da07125/20230413T060000
 - JP: TBD
 
 Non-WoT members who wish to participate should send an request to 
@@ -50,6 +51,7 @@ Non-WoT members who wish to participate should send an request to
 - EN: Reuse Discovery slot: 4/17 14:00 UTC 
   - 17 April 2023, 14:00 UTC - (see also [timeanddate](https://www.timeanddate.com/worldclock/converter.html?iso=20230417T140000&p1=137&p2=43&p3=tz_at&p4=1440&p5=136&p6=195&p7=101&p8=33&p9=236&p10=248))
   - Reuse Discovery WebEx
+  - Calendar: https://www.w3.org/events/meetings/42c02811-3117-4a03-aec4-9a5789dbc78c/20230417T100000
 - JP: TBD
 
 Non-WoT members who wish to participate should send an request to 
