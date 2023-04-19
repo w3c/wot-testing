@@ -6,7 +6,7 @@ To do: reorganize so instructions for TDs specifically go here.
 
 ## Guideline on how to fill manual.csv
 
-The [manual.csv](https://github.com/w3c/wot-testing/blob/main/events/2022.03.Online/TD/manual.csv) for the TD needs to be filled by each implementation that is implementing the TD standard.
+The [manual.csv](https://github.com/w3c/wot-thing-description/blob/main/testing/manual.csv) for the TD needs to be filled by each implementation that is implementing the TD standard.
 The value of Status should be filled with one of the following values:
 
 - `null`: This is the default value. It means that you do not know if your implementation implements this or not or it means that it is not applicable. Example: A pure Thing implementation should have this value for `client-data-schema`.
