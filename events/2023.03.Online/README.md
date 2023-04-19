@@ -7,10 +7,11 @@ and gather additional implementation experience for other deliverables.
 * Times: 
    - 3 days
    - 1h meeting a day
-   - Tuesday at 10am Eastern (after Use Cases call)
+   - Tuesday at 9am Eastern (Use Cases call)
    - Wed at 9am Eastern (Testing call)
-   - Thursday at 9am Eastern (after Architecture call)
-* Logistics: TBD
+   - Thursday at 8am Eastern (Architecture call)
+* Logistics: 
+   - Reuse Use Case, Testing, and Architecture call logistics
    - Will also include external attendees, e.g. from the Dev Meetings
    - Will set up a mailing list for external attendees and will email logistics and instructions
        - To join this list, need a (free) [W3C account](https://www.w3.org/accounts/request), then email it to [team-wot@w3.org](mailto:team-wot@w3.org) to get added 
