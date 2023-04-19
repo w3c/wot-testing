@@ -1,7 +1,7 @@
 # WoT March 2022 Plugfest/Testfest
-See [../README.md](../README.md)
-To do: reorganize so instructions for TDs specifically go here.
-* Results is for the output of automatic testing, and will also merge in manual results;
+See [../README.md](../README.md) for additional instructions e.g. for automatic testing, where files go, etc.
+* To do: reorganize so instructions for TDs specifically go here.
+* **NOTE:** The "Results" directory is for the output of automatic testing, and will also merge in manual results;
   don't do PRs against here since tools may delete things in this directory.
 
 ## Guideline on how to fill manual.csv
