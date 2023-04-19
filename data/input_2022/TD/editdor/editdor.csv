@@ -78,7 +78,7 @@
 "thing-model-td-generation-processor-placeholder","pass", ,"If used, all placeholders (see Section ) in the Thing Model MUST be replaced with a valid corresponding value in the Partial TD."
 "thing-model-td-generation-processor-required","fail", ,"All required interactions (not listed in tm:optional) MUST be taken over to the Partial TD instance."
 "thing-model-td-generation-processor-type","pass", ,"The tm:ThingModel value of the top-level @type MUST be removed in the Partial TD instance."
-"tm-derivation-validity","null","needs feedback from implementors","When a Thing Descriptions is instantiated by relying on a Thing Model, it SHOULD be valid according to that Thing Model."
+"tm-derivation-validity","pass","","When a Thing Descriptions is instantiated by relying on a Thing Model, it SHOULD be valid according to that Thing Model."
 "tm-overwrite-interaction","pass",,"A Thing Model SHOULD NOT overwrite the JSON names defined within the properties, actions, and/or events Map of the extended Thing Model."
 "tm-overwrite-types","pass", ,"Definitions SHOULD NOT be overwritten in such a way that possible instance values are no longer valid compared to the origin extended definitions."
 "tm-placeholder-replacement","pass", ,"The placeholder labeling MUST be substituted with a concrete value (e.g., as JSON number, JSON string, JSON object, etc) when TD instance is created from the Thing Model."
