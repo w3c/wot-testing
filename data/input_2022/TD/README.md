@@ -3,6 +3,16 @@ See [../README.md](../README.md) for additional instructions e.g. for automatic 
 * To do: reorganize so instructions for TDs specifically go here.
 * **NOTE:** The "Results" directory is for the output of automatic testing, and will also merge in manual results;
   don't do PRs against here since tools may delete things in this directory.
+  
+## Summary of Process:
+To submit results, make a PR that does the following:
+- Create directory for new implementation in data/input_2022/TD
+- Copy manual.csv to this directory, rename after your implementation, and fill in (see below for details)
+- If you have TDs for automatic testing, add a "TDs" directory and put them in there, using .td.jsonld suffixes
+- If you have TMs for automatic testing, add a "TMs" directory and put them in there, using .tm.jsonld suffixes
+- Update batchValidation.sh to add a section to refer to your implementation
+
+Note: you do not have to run the batchValidation.sh script yourself, McCool and Ege will do it as part of updating the results.
 
 ## Guideline on how to fill manual.csv
 
