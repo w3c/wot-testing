@@ -7,6 +7,8 @@ and these need to be resolved by early May to resolve them prior to our PR trans
 these documents.  **The Testfest should gather as much testing experience as possible to
 resolve at-risk items in these documents.**
 
+TODO: Pointers to Instructions.  Please see data/input_2022.
+
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
 * Date: <strike>Week of April 3</strike> Week of April 24
