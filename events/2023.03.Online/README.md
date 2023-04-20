@@ -24,8 +24,22 @@ List of priority assertions to resolve:
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve:
-* To Do.
+List of priority assertions to resolve (To do: refine, this is the complete list of currently at-risk assertions):
+* [td-producer-mixed-direction](https://w3c.github.io/wot-thing-description#td-producer-mixed-direction)
+* [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer)
+* [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable)
+* [sec-body-name-json-pointer-array](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-array)
+* [sec-body-name-json-pointer-type](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-type)
+* [td-security-uri-variables-distinct](https://w3c.github.io/wot-thing-description#td-security-uri-variables-distinct)
+* [td-security-oauth2-client-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow)
+* [td-security-oauth2-client-flow-no-auth](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow-no-auth)
+* [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow)
+* [tm-versioning-1](https://w3c.github.io/wot-thing-description#tm-versioning-1)
+* [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td)
+* [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch)
+* [security-oauth-limits](https://w3c.github.io/wot-thing-description#security-oauth-limits)
+* [security-remote-context](https://w3c.github.io/wot-thing-description#security-remote-context)
+* [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property)
 
 ### Discovery
 See [WoT Discovery Developer Meeting Presentation](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
