@@ -7,7 +7,49 @@ and these need to be resolved by early May to resolve them prior to our PR trans
 these documents.  **The Testfest should gather as much testing experience as possible to
 resolve at-risk items in these documents.**
 
-TODO: Pointers to Instructions.  Please see data/input_2022.
+For instructions on how to submit results, please see data/input_2022, under the individual
+directory for each deliverable.
+
+## Priorities
+Resolving the following assertions should be prioritized for each deliverable.
+
+### Architecture
+See the [WoT Architecture 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing)
+for explanations of each at-risk assertion and current status.
+
+List of priority assertions to resolve:
+* [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe)
+
+### Thing Description
+See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
+for explanations of each at-risk assertion and current status.
+
+List of priority assertions to resolve:
+* To Do.
+
+### Discovery
+See [WoT Discovery Developer Meeting Presentation](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
+for explanations of each at-risk assertion and current status.
+
+List of priority assertions to resolve (To do: refine; these are just the ones with at least one implementation):
+* [discoverer-fetch-tdd](https://w3c.github.io/wot-discovery#discoverer-fetch-tdd)
+* [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) 
+* [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) 
+* [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) 
+* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) 
+* [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
+* [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
+* [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
+* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) 
+* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) 
+* [exploration-server-coap-size2](https://w3c.github.io/wot-discovery#exploration-server-coap-size2) 
+* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) 
+* [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config)
+* [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) 
+* [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
+* [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) 
+* [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) 
+
 
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
