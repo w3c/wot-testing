@@ -24,7 +24,9 @@ List of priority assertions to resolve:
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve (To do: refine, this is the complete list of currently at-risk assertions):
+List of priority assertions to resolve.
+
+These are the assertions with at least one implementation:
 * [td-producer-mixed-direction](https://w3c.github.io/wot-thing-description#td-producer-mixed-direction)
 * [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer)
 * [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable)
@@ -45,25 +47,66 @@ List of priority assertions to resolve (To do: refine, this is the complete list
 See [WoT Discovery Developer Meeting Presentation](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve (To do: refine; these are just the ones with at least one implementation):
-* [discoverer-fetch-tdd](https://w3c.github.io/wot-discovery#discoverer-fetch-tdd)
-* [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) 
-* [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) 
-* [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) 
-* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) 
-* [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
+List of higher-priority assertions with at least one implementation:
+* [discoverer-fetch-tdd](https://w3c.github.io/wot-discovery#discoverer-fetch-tdd) - Intel
+* [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) - Intel
+* [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) - Intel
+* [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) - Intel
+* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) - Intel
 * [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
 * [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
-* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) 
-* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) 
-* [exploration-server-coap-size2](https://w3c.github.io/wot-discovery#exploration-server-coap-size2) 
-* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) 
-* [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config)
+* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel
+* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) - Intel
+* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) - Intel
+* [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
 * [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) 
 * [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
+
+The following also have one implementation but need CoAP:
+* [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
+* [exploration-server-coap-size2](https://w3c.github.io/wot-discovery#exploration-server-coap-size2) 
+
+These have one implementation but are in security considerations and can be converted into "guidelines", so are
+a lower priority.
 * [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) 
 * [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) 
 
+These have two but are also in security/privacy considerations and can be converted into "guidelines", so are also
+lower priority:
+* sec-tdd-throttle-queries
+* sec-tdd-limit-query-complexity
+* sec-tdd-intro-limit-response-size
+* sec-tdd-intro-throttling
+* sec-self-proxy
+* priv-loc-disable-public-directories
+* priv-loc-anonymous-tds
+* priv-loc-gen-ids
+* priv-loc-priv-dir-access
+* priv-loc-explicit-care
+* priv-loc-explicit-strip
+* priv-query-anon
+
+These are in support of internationalization, and were added based on wide review, so should be a relatively high
+priority.
+* tdd-http-error-response-lang - Intel, Logilab
+* tdd-http-alternate-language - Intel
+* tdd-validation-response-lang - Intel, Logilab
+
+Following are for ordering results.  Some of these are implied by tdd-things-list-pagination-order-utf-8 which is satisfied:
+* tdd-things-list-pagination-order - Logilab
+* tdd-things-list-pagination-orderable - Logilab
+* tdd-things-list-pagination-order-nextlink - Logilab
+
+This is for security bootstrapping, should also be implied by exploration-secboot-401 and exploration-secboot-auth that are satisfied:
+* security-bootstrapping-endpoints - Intel
+
+This is for security bootstrapping with OAuth, would be useful for onboarding:
+* exploration-secboot-oauth2-flows
+
+This is needed because if diff is ignored, result will be different than expected.
+However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
+Note that diff itself IS satisfied by other implementations already, so this is for those that do NOT implement it!
+* tdd-notification-data-diff-unsupported - Intel, Logilab
 
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
