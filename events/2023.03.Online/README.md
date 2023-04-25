@@ -12,6 +12,8 @@ directory for each deliverable.
 
 ## Priorities
 Resolving the following assertions should be prioritized for each deliverable.
+Note: these priorities were assigned by task forces and during the testing call.  If anyone in the WG disagrees with these
+priorities they should email team-wot@w3.org or attend the Testfest to ask for a revision (or submit a PR against this README).
 
 ### Architecture
 See the [WoT Architecture 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing)
@@ -24,22 +26,36 @@ List of priority assertions to resolve:
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve.
+List of priority assertions to resolve.   
 
-These are the assertions that need implementations:
-* [td-producer-mixed-direction](https://w3c.github.io/wot-thing-description#td-producer-mixed-direction)
-* [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer)
-* [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable)
-* [sec-body-name-json-pointer-array](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-array)
-* [sec-body-name-json-pointer-type](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-type)
-* [td-security-uri-variables-distinct](https://w3c.github.io/wot-thing-description#td-security-uri-variables-distinct)
-* [td-security-oauth2-client-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow)
-* [td-security-oauth2-client-flow-no-auth](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow-no-auth)
-* [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow)
-* [tm-versioning-1](https://w3c.github.io/wot-thing-description#tm-versioning-1)
+#### High Priority
+These are the high-priority assertions that need implementations:
+
+Internationalization:
+* [td-producer-mixed-direction](https://w3c.github.io/wot-thing-description#td-producer-mixed-direction) - Ege (node-wot, mqtt-experimental)
+
+Security features for modelling API keys in body:
+* [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer) - Intel
+* [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable) - Intel
+* [sec-body-name-json-pointer-array](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-array) - Intel
+* [sec-body-name-json-pointer-type](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-type) - Intel
+
+Security features for modelling API keys in URI:
+* [td-security-uri-variables-distinct](https://w3c.github.io/wot-thing-description#td-security-uri-variables-distinct) - Ege (playground), Intel
+
+OAuth implementations using client flow (important for non-human-in-the-loop use cases):
+* [td-security-oauth2-client-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow) - Ege
+* [td-security-oauth2-client-flow-no-auth](https://w3c.github.io/wot-thing-description#td-security-oauth2-client-flow-no-auth) - Ege
+* [security-oauth-limits](https://w3c.github.io/wot-thing-description#security-oauth-limits) - Ege to ping; should be easy, as implementations should already be using.
+
+Thing Models:
+* [tm-versioning-1](https://w3c.github.io/wot-thing-description#tm-versioning-1) (2) - Ege
+
+#### Lower Priority
+Less-used features, guidelines
+* [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) (2)
 * [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td)
 * [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch)
-* [security-oauth-limits](https://w3c.github.io/wot-thing-description#security-oauth-limits)
 * [security-remote-context](https://w3c.github.io/wot-thing-description#security-remote-context)
 * [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property)
 
