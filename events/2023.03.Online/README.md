@@ -69,14 +69,14 @@ List of higher-priority assertions with at least one implementation:
 * [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) - Intel
 * [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) - Intel
 * [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) - Intel
-* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) - Intel
+* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) - Intel, Krellian
 * [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
 * [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
-* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel
-* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) - Intel
-* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) - Intel
+* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel, Krellian
+* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) - Intel (Multiple implementations), Krellian?
+* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) - Intel, Krellian
 * [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
-* [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) 
+* [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) - Krellian
 * [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
