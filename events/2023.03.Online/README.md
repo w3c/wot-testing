@@ -26,7 +26,7 @@ for explanations of each at-risk assertion and current status.
 
 List of priority assertions to resolve.
 
-These are the assertions with at least one implementation:
+These are the assertions that need implementations:
 * [td-producer-mixed-direction](https://w3c.github.io/wot-thing-description#td-producer-mixed-direction)
 * [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer)
 * [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable)
