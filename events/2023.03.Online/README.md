@@ -19,7 +19,7 @@ priorities they should email team-wot@w3.org or attend the Testfest to ask for a
 See the [WoT Architecture 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/16Ow5rPjnojdl693pqkOhoc5bNCBIMOYZvJQC9wHZGsk/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve:
+List of assertions to resolve (low priority):
 * [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe)
 
 ### Thing Description
