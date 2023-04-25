@@ -70,6 +70,7 @@ List of higher-priority assertions with at least one implementation:
 * [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) - Intel
 * [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) - Intel
 * [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) - Intel, Krellian
+    - Resolved: https://github.com/w3c/wot-discovery/pull/474
 * [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
 * [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
 * [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel, Krellian
