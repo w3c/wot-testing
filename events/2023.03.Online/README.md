@@ -73,40 +73,40 @@ a lower priority.
 
 These have two but are also in security/privacy considerations and can be converted into "guidelines", so are also
 lower priority:
-* sec-tdd-throttle-queries
-* sec-tdd-limit-query-complexity
-* sec-tdd-intro-limit-response-size
-* sec-tdd-intro-throttling
-* sec-self-proxy
-* priv-loc-disable-public-directories
-* priv-loc-anonymous-tds
-* priv-loc-gen-ids
-* priv-loc-priv-dir-access
-* priv-loc-explicit-care
-* priv-loc-explicit-strip
-* priv-query-anon
+* [sec-tdd-throttle-queries](https://w3c.github.io/wot-discovery#sec-tdd-throttle-queries)
+* [sec-tdd-limit-query-complexity](https://w3c.github.io/wot-discovery#sec-tdd-limit-query-complexity)
+* [sec-tdd-intro-limit-response-size](https://w3c.github.io/wot-discovery#sec-tdd-intro-limit-response-size)
+* [sec-tdd-intro-throttling](https://w3c.github.io/wot-discovery#sec-tdd-intro-throttling)
+* [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy)
+* [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
+* [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds)
+* [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids)
+* [priv-loc-priv-dir-access](https://w3c.github.io/wot-discovery#priv-loc-priv-dir-access)
+* [priv-loc-explicit-care](https://w3c.github.io/wot-discovery#priv-loc-explicit-care)
+* [priv-loc-explicit-strip](https://w3c.github.io/wot-discovery#priv-loc-explicit-strip)
+* [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
-* tdd-http-error-response-lang - Intel, Logilab
-* tdd-http-alternate-language - Intel
-* tdd-validation-response-lang - Intel, Logilab
+* [tdd-http-error-response-lang](https://w3c.github.io/wot-discovery#tdd-http-error-response-lang) - Intel, Logilab
+* [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) - Intel
+* [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) - Intel, Logilab
 
 Following are for ordering results.  Some of these are implied by tdd-things-list-pagination-order-utf-8 which is satisfied:
-* tdd-things-list-pagination-order - Logilab
-* tdd-things-list-pagination-orderable - Logilab
-* tdd-things-list-pagination-order-nextlink - Logilab
+* [tdd-things-list-pagination-order](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order) - Logilab
+* [tdd-things-list-pagination-orderable](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-orderable) - Logilab
+* [tdd-things-list-pagination-order-nextlink](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-nextlink) - Logilab
 
 This is for security bootstrapping, should also be implied by exploration-secboot-401 and exploration-secboot-auth that are satisfied:
-* security-bootstrapping-endpoints - Intel
+* [security-bootstrapping-endpoints](https://w3c.github.io/wot-discovery#security-bootstrapping-endpoints) - Intel
 
 This is for security bootstrapping with OAuth, would be useful for onboarding:
-* exploration-secboot-oauth2-flows
+* [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows)
 
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
 Note that diff itself IS satisfied by other implementations already, so this is for those that do NOT implement it!
-* tdd-notification-data-diff-unsupported - Intel, Logilab
+* [tdd-notification-data-diff-unsupported](https://w3c.github.io/wot-discovery#tdd-notification-data-diff-unsupported) - Intel, Logilab
 
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
