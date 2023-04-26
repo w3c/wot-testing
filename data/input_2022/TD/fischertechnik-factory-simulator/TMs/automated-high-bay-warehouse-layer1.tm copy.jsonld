@@ -8,10 +8,10 @@
     }
   ],
   "@type" : "tm:ThingModel",
-  "title": "AutomatedHighBayWarehouseLayer1",
+  "title": "Automated High Bay Warehouse Layer 1",
   "description": "",
   "version": {
-    "model": "1.0.0"
+    "model": "1.0.1"
   },
   "security": "nosec_sc",
   "securityDefinitions": {
