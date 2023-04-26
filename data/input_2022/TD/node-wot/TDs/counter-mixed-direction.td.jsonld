@@ -1,0 +1,37 @@
+{
+    "title": "Counter",
+    "securityDefinitions": {
+        "no_sec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": "no_sec",
+    "description": "المِلَفّ الأول لل-Thing الخاص بي",
+    "support": "https://github.com/eclipse/thingweb.node-wot/",
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        }
+    ],
+    "properties": {
+        "count": {
+            "type": "integer",
+            "iot:Custom": "example annotation",
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "op": [
+                        "writeproperty",
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "href": "https://example.com/counter/count"
+                }
+            ]
+        }
+    }
+}
