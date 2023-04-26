@@ -74,7 +74,9 @@ List of higher-priority assertions with at least one implementation:
 * [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
 * [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
 * [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel, Krellian
+    - Resolved: https://github.com/w3c/wot-discovery/pull/474
 * [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) - Intel (Multiple implementations), Krellian?
+    - Resolved: https://github.com/w3c/wot-discovery/pull/474
 * [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) - Intel, Krellian
 * [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
 * [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) - Krellian
