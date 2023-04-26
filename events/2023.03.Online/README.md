@@ -69,17 +69,9 @@ List of higher-priority assertions with at least one implementation:
 * [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) - Intel
 * [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) - Intel
 * [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) - Intel
-* [introduction-direct-directory-description](https://w3c.github.io/wot-discovery#introduction-direct-directory-description) - Intel, Krellian
-    - Resolved: https://github.com/w3c/wot-discovery/pull/474
 * [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
 * [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
-* [exploration-secboot-401](https://w3c.github.io/wot-discovery#exploration-secboot-401) - Intel, Krellian
-    - Resolved: https://github.com/w3c/wot-discovery/pull/474
-* [exploration-secboot-auth](https://w3c.github.io/wot-discovery#exploration-secboot-auth) - Intel (Multiple implementations), Krellian?
-    - Resolved: https://github.com/w3c/wot-discovery/pull/474
-* [tdd-absolute-time](https://w3c.github.io/wot-discovery#tdd-absolute-time) - Intel, Krellian
 * [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
-* [tdd-http-representation-alternate-output](https://w3c.github.io/wot-discovery#tdd-http-representation-alternate-output) - Krellian
 * [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
@@ -97,9 +89,6 @@ Following are for ordering results.  Some of these are implied by tdd-things-lis
 The following also have one implementation but need CoAP:
 * [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
 * [exploration-server-coap-size2](https://w3c.github.io/wot-discovery#exploration-server-coap-size2) 
-
-This is for security bootstrapping, should also be implied by exploration-secboot-401 and exploration-secboot-auth that are satisfied:
-* [security-bootstrapping-endpoints](https://w3c.github.io/wot-discovery#security-bootstrapping-endpoints) - Intel
 
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
@@ -122,8 +111,6 @@ lower priority:
 * [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
 * [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds)
 * [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids)
-* [priv-loc-priv-dir-access](https://w3c.github.io/wot-discovery#priv-loc-priv-dir-access)
-* [priv-loc-explicit-care](https://w3c.github.io/wot-discovery#priv-loc-explicit-care)
 * [priv-loc-explicit-strip](https://w3c.github.io/wot-discovery#priv-loc-explicit-strip)
 * [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
 
