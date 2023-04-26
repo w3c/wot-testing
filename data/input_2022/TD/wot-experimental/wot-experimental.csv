@@ -59,7 +59,7 @@
 "security-jsonld-expansion","null", ,"Consumers SHOULD set and enforce limits on memory usage to prevent buffer overflow and resource exhaustion during JSON-LD processing."
 "security-mutual-auth-td","pass", ,"Thing Descriptions SHOULD be obtained only through mutually authenticated secure channels."
 "security-no-execution","pass", ,"A WoT Thing Description JSON-LD serialization MUST NOT be passed through a code execution mechanism such as JavaScript's eval() function to be parsed."
-"security-oauth-limits","null", ,"To limit the scope and duration of access to Things, tokens SHOULD be used to manage access."
+"security-oauth-limits","pass", ,"To limit the scope and duration of access to Things, tokens SHOULD be used to manage access."
 "security-remote-context","null", ,"Constrained implementations SHOULD NOT follow links to remote contexts."
 "security-server-auth-td","null", ,"In cases where the Consumer is associated with a person, e.g. browsers, TDs MAY be obtained through a channel where only the TD provider is authenticated."
 "security-static-context","null", ,"Constrained implementations SHOULD use vetted versions of their supported context extensions managed statically or as part of a secure update process."
