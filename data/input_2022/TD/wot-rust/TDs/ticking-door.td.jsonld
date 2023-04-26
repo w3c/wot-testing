@@ -1,0 +1,81 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+    "DoorSensor",
+    "Lock"
+  ],
+  "actions": {
+    "lock": {
+      "@type": "LockAction",
+      "description": "Lock the door, if possible",
+      "forms": [
+        {
+          "href": "/action/lock",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "safe": false,
+      "title": "Lock"
+    },
+    "unlock": {
+      "@type": "UnlockAction",
+      "description": "Unlock the door, if possible",
+      "forms": [
+        {
+          "href": "/action/unlock",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "safe": false,
+      "title": "Unlock"
+    }
+  },
+  "id": "urn:dev:ops:ticking-door-1234",
+  "properties": {
+    "locked": {
+      "@type": "LockedProperty",
+      "description": "Whether the door is locked",
+      "forms": [
+        {
+          "href": "/properties/locked",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "readOnly": true,
+      "title": "Locked",
+      "type": "boolean",
+      "writeOnly": false
+    },
+    "open": {
+      "@type": "OpenProperty",
+      "description": "Whether the door is open",
+      "forms": [
+        {
+          "href": "/properties/open",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "readOnly": true,
+      "title": "Open",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "Ticking Door"
+}

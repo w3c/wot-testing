@@ -1,0 +1,53 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+    "TemperatureSensor",
+    "HumiditySensor"
+  ],
+  "id": "urn:dev:ops:ticking-sensor-1234",
+  "properties": {
+    "humidity": {
+      "@type": "HumidityProperty",
+      "description": "The measured humidity",
+      "forms": [
+        {
+          "href": "/properties/humidity",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "maximum": 100,
+      "minimum": 0,
+      "readOnly": true,
+      "title": "Humidity",
+      "type": "number",
+      "unit": "percent",
+      "writeOnly": false
+    },
+    "temperature": {
+      "@type": "TemperatureProperty",
+      "description": "The measured temperature",
+      "forms": [
+        {
+          "href": "/properties/temperature",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "readOnly": true,
+      "title": "Temperature",
+      "type": "number",
+      "unit": "degree celsius",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "Ticking Sensor"
+}

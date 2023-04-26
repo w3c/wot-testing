@@ -1,0 +1,73 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "OnOffSwitch",
+  "actions": {
+    "fade": {
+      "@type": "FadeAction",
+      "forms": [
+        {
+          "href": "/actions/fade",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "input": {
+        "properties": {
+          "duration": {
+            "minimum": 0,
+            "readOnly": false,
+            "type": "integer",
+            "unit": "seconds",
+            "writeOnly": false
+          },
+          "level": {
+            "maximum": 100,
+            "minimum": 0,
+            "readOnly": false,
+            "type": "integer",
+            "unit": "percent",
+            "writeOnly": false
+          }
+        },
+        "readOnly": false,
+        "required": [
+          "level",
+          "duration"
+        ],
+        "type": "object",
+        "writeOnly": false
+      },
+      "safe": false,
+      "title": "Fade"
+    }
+  },
+  "id": "urn:dev:ops:on-off-1234",
+  "properties": {
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the switch is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "On-Off Switch"
+}
