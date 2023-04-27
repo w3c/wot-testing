@@ -1,0 +1,174 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+    "OnOffSwitch",
+    "Light"
+  ],
+  "actions": {
+    "fade": {
+      "description": "Fade the lamp to a given level",
+      "forms": [
+        {
+          "href": "/actions/fade",
+          "op": [
+            "invokeaction"
+          ]
+        },
+        {
+          "href": "/actions/fade/{action_id}",
+          "op": [
+            "queryaction",
+            "cancelaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "input": {
+        "properties": {
+          "brightness": {
+            "maximum": 100,
+            "minimum": 0,
+            "readOnly": false,
+            "type": "integer",
+            "unit": "percent",
+            "writeOnly": false
+          },
+          "duration": {
+            "minimum": 1,
+            "readOnly": false,
+            "type": "integer",
+            "unit": "milliseconds",
+            "writeOnly": false
+          }
+        },
+        "readOnly": false,
+        "required": [
+          "brightness",
+          "duration"
+        ],
+        "type": "object",
+        "writeOnly": false
+      },
+      "safe": false,
+      "title": "Fade",
+      "uriVariables": {
+        "action_id": {
+          "description": "Identifier of the ongoing action",
+          "readOnly": false,
+          "type": "string",
+          "writeOnly": false
+        }
+      }
+    }
+  },
+  "description": "A web connected lamp",
+  "events": {
+    "overheated": {
+      "data": {
+        "readOnly": false,
+        "type": "number",
+        "unit": "degree celsius",
+        "writeOnly": false
+      },
+      "description": "The lamp has exceeded its safe operating temperature",
+      "forms": [
+        {
+          "href": "/events/overheated",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "subprotocol": "sse"
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "contentType": "application/json",
+      "href": "/properties",
+      "op": [
+        "readallproperties"
+      ]
+    },
+    {
+      "href": "/properties/observe",
+      "op": [
+        "observeallproperties",
+        "unobserveallproperties"
+      ],
+      "subprotocol": "sse"
+    },
+    {
+      "contentType": "application/json",
+      "href": "/actions",
+      "op": [
+        "queryallactions"
+      ]
+    },
+    {
+      "href": "/events",
+      "op": [
+        "subscribeallevents",
+        "unsubscribeallevents"
+      ],
+      "subprotocol": "sse"
+    }
+  ],
+  "id": "urn:dev:ops:my-lamp-1234",
+  "properties": {
+    "brightness": {
+      "@type": "BrightnessProperty",
+      "description": "The level of light from 0-100",
+      "forms": [
+        {
+          "href": "/properties/brightness",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "/properties/brightness/observe",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "sse"
+        }
+      ],
+      "maximum": 100,
+      "minimum": 0,
+      "observable": true,
+      "readOnly": false,
+      "title": "Brightness",
+      "type": "integer",
+      "unit": "percent",
+      "writeOnly": false
+    },
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the lamp is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "My Lamp"
+}

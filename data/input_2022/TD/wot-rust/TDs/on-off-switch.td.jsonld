@@ -1,0 +1,31 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "OnOffSwitch",
+  "id": "urn:dev:ops:on-off-1234",
+  "properties": {
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the switch is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "On-Off Switch"
+}

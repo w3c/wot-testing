@@ -1,0 +1,49 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "OnOffSwitch",
+  "actions": {
+    "toggle": {
+      "@type": "ToggleAction",
+      "description": "Invert the on/off status",
+      "forms": [
+        {
+          "href": "/actions/toggle",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "safe": false,
+      "synchronous": true,
+      "title": "Toggle On/Off"
+    }
+  },
+  "id": "urn:dev:ops:on-off-1234",
+  "properties": {
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the switch is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "On-Off Switch"
+}

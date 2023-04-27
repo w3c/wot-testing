@@ -1,0 +1,96 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": [
+    "DoorSensor",
+    "Thermostat",
+    "OnOffSwitch"
+  ],
+  "description": "A web connected oven",
+  "forms": [
+    {
+      "contentType": "application/json",
+      "href": "/properties",
+      "op": [
+        "readallproperties"
+      ]
+    }
+  ],
+  "id": "urn:dev:ops:my-oven-1234",
+  "properties": {
+    "door": {
+      "@type": "OpenProperty",
+      "description": "Whether the door of the oven is open or closed",
+      "forms": [
+        {
+          "href": "/properties/door",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "readOnly": true,
+      "title": "Open door",
+      "type": "boolean",
+      "writeOnly": false
+    },
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the oven is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    },
+    "target_temperature": {
+      "@type": "TargetTemperatureProperty",
+      "description": "The target temperature",
+      "forms": [
+        {
+          "href": "/properties/target-temperature",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "Target temperature",
+      "type": "integer",
+      "unit": "degree celsius",
+      "writeOnly": false
+    },
+    "temperature": {
+      "@type": "TemperatureProperty",
+      "description": "The temperature",
+      "forms": [
+        {
+          "href": "/properties/temperature",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "readOnly": true,
+      "title": "Temperature",
+      "type": "integer",
+      "unit": "degree celsius",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "My Oven"
+}

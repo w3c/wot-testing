@@ -1,0 +1,120 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "OnOffSwitch",
+  "description": "A web connected sink",
+  "events": {
+    "leak": {
+      "description": "The sink is full and water is still flowing",
+      "forms": [
+        {
+          "href": "/events/leak",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "subprotocol": "sse"
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "contentType": "application/json",
+      "href": "/properties",
+      "op": [
+        "readallproperties"
+      ]
+    },
+    {
+      "href": "/events",
+      "op": [
+        "subscribeallevents",
+        "unsubscribeallevents"
+      ],
+      "subprotocol": "sse"
+    }
+  ],
+  "id": "urn:dev:ops:my-sink-1234",
+  "properties": {
+    "drain": {
+      "@type": "OnOffProperty",
+      "description": "Whether the drain is open (on) or closed (off)",
+      "forms": [
+        {
+          "href": "/properties/drain",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "Drain Open/Close",
+      "type": "boolean",
+      "writeOnly": false
+    },
+    "flow": {
+      "description": "The percentage of flow from 0-100",
+      "forms": [
+        {
+          "href": "/properties/flow",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "maximum": 100,
+      "minimum": 0,
+      "readOnly": false,
+      "title": "Flow",
+      "type": "integer",
+      "unit": "percent",
+      "writeOnly": false
+    },
+    "level": {
+      "description": "The level of the water expressed as percentage",
+      "forms": [
+        {
+          "href": "/properties/level",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "maximum": 100,
+      "minimum": 0,
+      "readOnly": true,
+      "title": "Level",
+      "type": "integer",
+      "unit": "percentage",
+      "writeOnly": false
+    },
+    "temperature": {
+      "description": "The temperature expressed in Celsius degrees",
+      "forms": [
+        {
+          "href": "/properties/temperature",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "maximum": 80,
+      "minimum": 10,
+      "readOnly": false,
+      "title": "Temperature",
+      "type": "integer",
+      "unit": "C°",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "My Sink"
+}

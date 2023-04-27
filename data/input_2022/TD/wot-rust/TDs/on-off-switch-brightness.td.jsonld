@@ -1,0 +1,50 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "@type": "OnOffSwitch",
+  "id": "urn:dev:ops:on-off-1234",
+  "properties": {
+    "brightness": {
+      "@type": "BrightnessProperty",
+      "forms": [
+        {
+          "href": "/properties/brightness",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "maximum": 100,
+      "minimum": 0,
+      "readOnly": false,
+      "title": "Brightness",
+      "type": "integer",
+      "unit": "percent",
+      "writeOnly": false
+    },
+    "on": {
+      "@type": "OnOffProperty",
+      "description": "Whether the switch is turned on",
+      "forms": [
+        {
+          "href": "/properties/on",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "title": "On/Off",
+      "type": "boolean",
+      "writeOnly": false
+    }
+  },
+  "security": "nosec_sc",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "On-Off Switch with Brightness"
+}
