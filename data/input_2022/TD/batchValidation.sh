@@ -167,6 +167,12 @@ node $PLAYGROUNDLOCATION/packages/cli/index.js --merge-only Results/$IMPLEMENTAT
 rm Results/$IMPLEMENTATION-TM.csv
 rm Results/$IMPLEMENTATION-TD.csv
 
+# wot-rust
+IMPLEMENTATION=wot-rust
+echo "$IMPLEMENTATION"
+node $PLAYGROUNDLOCATION/packages/cli/index.js -t TD -i $IMPLEMENTATION/TDs/ -o Results/$IMPLEMENTATION -a -m $IMPLEMENTATION/manual.csv
+
+
 ## Older (should be moved to node-wot)
 
 # Unibo Farm
