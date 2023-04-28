@@ -1,0 +1,114 @@
+{
+  "title": "Virtual Air Quality Sensor",
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    "https://webthings.io/schemas"
+  ],
+  "@type": [
+    "AirQualitySensor"
+  ],
+  "profile": [
+    "https://www.w3.org/2022/wot/profile/http-basic/v1",
+    "https://www.w3.org/2022/wot/profile/http-sse/v1"
+  ],
+  "description": "",
+  "href": "/things/virtual-things-28",
+  "properties": {
+    "concentration": {
+      "name": "concentration",
+      "value": 20,
+      "title": "Gas Concentration",
+      "type": "number",
+      "@type": "ConcentrationProperty",
+      "unit": "ppm",
+      "minimum": 0,
+      "readOnly": true,
+      "links": [],
+      "forms": [
+        {
+          "href": "/things/virtual-things-28/properties/concentration"
+        },
+        {
+          "href": "/things/virtual-things-28/properties/concentration",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "sse"
+        }
+      ]
+    },
+    "density": {
+      "name": "density",
+      "value": 20,
+      "title": "Particulate Density",
+      "type": "number",
+      "@type": "DensityProperty",
+      "unit": "micrograms per cubic metre",
+      "minimum": 0,
+      "readOnly": true,
+      "links": [],
+      "forms": [
+        {
+          "href": "/things/virtual-things-28/properties/density"
+        },
+        {
+          "href": "/things/virtual-things-28/properties/density",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "sse"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "events": {},
+  "links": [
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "href": "/things/virtual-things-28"
+    },
+    {
+      "rel": "alternate",
+      "href": "wss://plugfest.webthings.io/things/virtual-things-28"
+    }
+  ],
+  "forms": [
+    {
+      "href": "/things/virtual-things-28/properties",
+      "op": "readallproperties"
+    },
+    {
+      "href": "/things/virtual-things-28/properties",
+      "op": [
+        "observeallproperties",
+        "unobserveallproperties"
+      ],
+      "subprotocol": "sse"
+    }
+  ],
+  "layoutIndex": 26,
+  "selectedCapability": "AirQualitySensor",
+  "iconHref": null,
+  "group_id": null,
+  "id": "https://plugfest.webthings.io/things/virtual-things-28",
+  "base": "https://plugfest.webthings.io/",
+  "securityDefinitions": {
+    "oauth2_sc": {
+      "scheme": "oauth2",
+      "flow": "code",
+      "authorization": "https://plugfest.webthings.io/oauth/authorize",
+      "token": "https://plugfest.webthings.io/oauth/token",
+      "scopes": [
+        "/things/virtual-things-28:readwrite",
+        "/things/virtual-things-28",
+        "/things:readwrite",
+        "/things"
+      ]
+    }
+  },
+  "security": "oauth2_sc"
+}
