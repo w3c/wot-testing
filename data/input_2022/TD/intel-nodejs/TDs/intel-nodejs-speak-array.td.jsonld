@@ -1,0 +1,167 @@
+{
+  "@context": ["https://www.w3.org/2022/wot/td/v1.1",
+               {
+                   "iot": "http://iotschema.org/",
+                   "g": "https://portal.mmccool.net/geo/v1"
+               }
+  ],
+  "@type": ["Thing"],
+  "title": "Intel-WebSpeak-nu",
+  "description": "A simple text to speech service",
+  "support": "mailto:michael.mccool@intel.com",
+  "version": {"instance":"0.1.0"},
+  "created": "2018-09-10T06:30:00Z",
+  "modified": "2021-09-29T22:26:00Z",
+  "links": [
+    {
+        "href": "https://github.com/mmccool/web-speak",
+        "rel": "repository",
+        "type": "application/vnd.github.v3+json"
+    },
+    {
+         "href": "#/g:geolocation",
+         "rel": "g:geolocationOf"
+    }
+  ],
+  "g:geolocation": {
+     "position": {
+        "longitude": 47.3814,
+        "latitude": -68.323,
+        "accuracy": 5,
+        "accuracyUnit": "m"
+     },
+     "altitude": {
+        "elevation": 238.049,
+        "elevationUnit": "m",
+        "depth": -1.3,
+        "depthUnit": "ft",
+        "accuracy": 2.5,
+        "accuracyUnit": "cm"
+     }
+  },
+  "id": "urn:uuid:7956f0a0-6628-557b-80d5-cb3ab6fff27b",
+  "securityDefinitions": {
+    "nosec_sc": {"scheme":"nosec"},
+    "basic_sc": {"scheme":"basic"},
+    "digest_sc": {"scheme":"digest"},
+    "key_sc": {
+      "scheme": "apikey",
+      "in": "body",
+      "name": "/key"
+    },
+    "key_array_first_sc": {
+      "scheme": "apikey",
+      "in": "body",
+      "name": "/0"
+    },
+    "key_array_new_sc": {
+      "scheme": "apikey",
+      "in": "body",
+      "name": "/-"
+    }
+  },
+  "security": ["key_sc"],
+  "actions": {
+    "say": {
+      "input": {
+          "type": "object",
+          "properties": {
+              "say": {
+                  "type": "string"
+              }
+          }
+      }, 
+      "output": {
+          "type": "object",
+          "properties": {
+              "said": {
+                  "type": "string"
+              }
+          }
+      },
+      "forms": [
+        {
+          "href": "http://nu.local:8085/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction"
+        },
+        {
+          "href": "https://portal.mmccool.net:8096/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://portal.mmccool.net:8097/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["digest_sc"]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8096/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["basic_sc"]
+        },
+        {
+          "href": "https://tiktok.mmccool.org:8097/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction",
+          "security": ["digest_sc"]
+        }
+      ]
+    },
+    "say_array_key_first": {
+      "input": {
+          "type": "array",
+          "item": {
+              "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 2
+      }, 
+      "output": {
+          "type": "object",
+          "properties": {
+              "said": {
+                  "type": "string"
+              }
+          }
+      },
+      "forms": [
+        {
+          "security": ["key_array_first_sc"],
+          "href": "http://nu.local:8085/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction"
+        }
+      ]
+    },
+    "say_array_key_new": {
+      "input": {
+          "type": "array",
+          "item": {
+              "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 2
+      }, 
+      "output": {
+          "type": "object",
+          "properties": {
+              "said": {
+                  "type": "string"
+              }
+          }
+      },
+      "forms": [
+        {
+          "security": ["key_array_new_sc"],
+          "href": "http://nu.local:8085/api/say",
+          "contentType": "application/json",
+          "op":"invokeaction"
+        }
+      ]
+    }
+  }
+}
