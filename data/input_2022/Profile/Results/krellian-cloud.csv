@@ -1,0 +1,192 @@
+ID,Status,Comment
+profiling-mechanism-1,null,Not a Thing
+profiling-mechanism-2,null,Not a Thing
+profiling-mechanism-3,null,Not a Thing
+profiling-mechanism-4,null,Not a Thing
+profiling-mechanism-5,null,Requires more testing
+common-constraints-a11y-1,null,Not a Thing
+common-constraints-a11y-2,null,Not a Thing
+common-constraints-units,null,Not a Thing
+common-constraints-units-metric,null,Not a Thing
+common-constraints-date-format-1,null,Not a Thing
+common-constraints-security-1,null,Not a Thing
+common-constraints-security-2,fail,Currently only supports NoSecurityScheme and partial support for BearerSecurityScheme (it assumes that the Thing Description is also protected by Bearer authentication)
+common-constraints-security-3,null,Not a Thing
+common-constraints-security-4,null,Not a Thing
+common-constraints-security-basic-in,null,Not a Thing
+common-constraints-security-basic-name,null,Not a Thing
+common-constraints-security-basic-proxy,null,Not a Thing
+common-constraints-security-6,pass,Currently only supports the Bearer security scheme
+common-constraints-security-7,null,Not a Thing
+common-constraints-discovery-1,null,"Not a Thing, but can discover Things using a Direct introduction mechanism and retrieve them"
+common-constraints-links-1,null,Not a Thing
+common-constraints-links-2,null,Not a Thing
+common-constraints-links-3,null,Currently ignores all links
+common-constraints-links-media-types-1,null,Not a Thing
+common-constraints-links-media-types-2,null,Not a Thing
+common-constraints-links-media-types-4,fail,Currently ignores all links
+common-constraints-links-media-types-5,fail,Currently ignores all links
+common-constraints-links-media-types-6,fail,Currently ignores all links
+common-constraints-links-media-types-7,fail,Currently ignores all links
+common-constraints-links-media-types-8,fail,Currently ignores all links
+common-constraints-errors-1,null,Not a Thing
+common-constraints-errors-2,null,Not a Thing
+common-constraints-errors-3,null,Not a Thing
+common-constraints-errors-4,null,Not a Thing
+common-constraints-errors-5,null,Not a Thing
+common-constraints-errors-6,pass,
+common-constraints-errors-7,null,Not a Thing
+common-constraints-default-language,null,Not a Thing
+http-basic-profile-1,pass,
+http-basic-profile-identifier-1,null,Not a Thing
+profile-5-2-thing-protocol-binding-1,pass,Partial implementation
+http-basic-profile-protocol-binding-readproperty-1,null,
+http-basic-profile-protocol-binding-readproperty-3,null,
+http-basic-profile-protocol-binding-readproperty-4,null,
+http-basic-profile-protocol-binding-readproperty-6,null,Not a Thing
+http-basic-profile-protocol-binding-writeproperty-1,null,
+http-basic-profile-protocol-binding-writeproperty-3,null,
+http-basic-profile-protocol-binding-writeproperty-4,null,
+http-basic-profile-protocol-binding-writeproperty-6,null,Not a Thing
+http-basic-profile-protocol-binding-readallproperties-1,pass,
+http-basic-profile-protocol-binding-readallproperties-3,pass,
+http-basic-profile-protocol-binding-readallproperties-4,pass,
+http-basic-profile-protocol-binding-readallproperties-5,null,Not a Thing
+http-basic-profile-protocol-binding-writemultipleproperties-1,null,
+http-basic-profile-protocol-bindings-writemultipleproperties-3,null,
+http-basic-profile-protocol-binding-writemultipleproperties-4,null,
+http-basic-profile-protocol-binding-writemultipleproperties-6,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-1,null,
+http-basic-profile-protocol-binding-invokeaction-3,null,
+http-basic-profile-protocol-binding-invokeaction-4,null,
+http-basic-profile-protocol-binding-invokeaction-6,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-7,null,
+http-basic-profile-protocol-binding-invokeaction-8,null,
+http-basic-profile-protocol-binding-invokeaction-9,null,
+http-basic-profile-protocol-binding-invokeaction-10,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-11,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-12,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-13,null,
+http-basic-profile-protocol-binding-invokeaction-14,null,
+http-basic-profile-protocol-binding-invokeaction-15,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-20,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-21,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-22,null,Not a Thing
+http-basic-profile-protocol-binding-invokeaction-23,null,Not a Thing
+http-basic-profile-protocol-binding-queryaction-1a,null,Not a Thing
+http-basic-profile-protocol-binding-queryaction-1b,null,Not a Thing
+http-basic-profile-protocol-binding-queryaction-2,null,
+http-basic-profile-protocol-binding-queryaction-3,null,
+http-basic-profile-protocol-binding-queryaction-5,null,Not a Thing
+http-basic-profile-protocol-binding-queryaction-7a,null,Not a Thing
+http-basic-profile-protocol-binding-queryaction-7b,null,Not a Thing
+http-basic-profile-protocol-binding-cancelaction-1a,null,Not a Thing
+http-basic-profile-protocol-binding-cancelaction-1b,null,Not a Thing
+http-basic-profile-protocol-binding-cancelaction-2,null,
+http-basic-profile-protocol-binding-cancelaction-3,null,
+http-basic-profile-protocol-binding-cancelaction-5,null,Not a Thing
+http-basic-profile-protocol-binding-queryallactions-1,null,
+http-basic-profile-protocol-binding-queryallactions-3,null,
+http-basic-profile-protocol-binding-queryallactions-4,null,
+http-basic-profile-protocol-binding-queryallactions-6a,null,Not a Thing
+http-basic-profile-protocol-binding-queryallactions-6b,null,Not a Thing
+http-sse-profile-1,pass,
+http-sse-profile-identifier-1,null,Not a Thing
+http-sse-profile-protocol-binding-1,pass,Partial implementation
+http-sse-profile-protocol-binding-observeproperty-1,pass,
+http-sse-profile-protocol-binding-observeproperty-2,pass,
+http-sse-profile-protocol-binding-observeproperty-3,pass,
+http-sse-profile-protocol-binding-observeproperty-4,null,Not a Thing
+http-sse-profile-protocol-binding-observeproperty-5a,null,Not a Thing
+http-sse-profile-protocol-binding-observeproperty-5b,null,Not a Thing
+http-sse-profile-protocol-binding-observeproperty-5c,null,Not a Thing
+http-sse-profile-protocol-binding-observeproperty-5d,null,Not a Thing
+http-sse-profile-protocol-binding-observeproperty-6a,pass,
+http-sse-profile-protocol-binding-observeproperty-6b,null,Not a Thing
+http-sse-profile-protocol-binding-unobserveproperty-1,pass,
+http-sse-profile-protocol-binding-observeallproperties-1,null,
+http-sse-profile-protocol-binding-observeallproperties-2,null,
+http-sse-profile-protocol-binding-observeallproperties-3,null,
+http-sse-profile-protocol-binding-observeallproperties-4,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-5a,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-5b,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-5c,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-5d,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-5e,null,Not a Thing
+http-sse-profile-protocol-binding-observeallproperties-6a,null,
+http-sse-profile-protocol-binding-observeallproperties-6b,null,Not a Thing
+http-sse-profile-protocol-binding-unobserveallproperties-1,null,
+http-sse-profile-protocol-binding-subscribeevent-1,null,
+http-sse-profile-protocol-binding-subscribeevent-3,null,
+http-sse-profile-protocol-binding-subscribeevent-4,null,
+http-sse-profile-protocol-binding-subscribeevent-5,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-6a,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-6b,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-6c,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-6d,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-6e,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeevent-7a,null,
+http-sse-profile-protocol-binding-subscribeevent-7b,null,Not a Thing
+http-sse-profile-protocol-binding-unsubscribeevent-1,null,
+http-sse-profile-protocol-binding-subscribeallevents-1,null,
+http-sse-profile-protocol-binding-subscribeallevents-3b,null,
+http-sse-profile-protocol-binding-subscribeallevents-4,null,
+http-sse-profile-protocol-binding-subscribeallevents-3,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-4a,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-4b,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-4c,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-4d,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-4e,null,Not a Thing
+http-sse-profile-protocol-binding-subscribeallevents-5a,null,
+http-sse-profile-protocol-binding-subscribeallevents-5b,null,Not a Thing
+http-sse-profile-protocol-binding-unsubscribeallevents-1,null,
+http-webhook-profile-protocol-binding-general-1,null,
+http-webhook-profile-protocol-binding-general-3,null,
+http-webhook-profile-protocol-binding-events-1,null,
+http-webhook-profile-protocol-binding-events-2,null,
+http-webhook-profile-1,null,Not a Thing
+http-webhook-profile-notification-format-1,null,Not a Thing
+http-webhook-profile-protocol-binding-1,null,
+http-webhook-profile-protocol-binding-observeproperty-1,null,
+http-webhook-profile-protocol-binding-observeproperty-2,null,
+http-webhook-profile-protocol-binding-observeproperty-3,null,
+http-webhook-profile-protocol-binding-observeproperty-5,null,Not a Thing
+http-webhook-profile-protocol-binding-observeproperty-6,null,Not a Thing
+http-webhook-profile-protocol-binding-unobserveproperty-1,null,
+http-webhook-profile-protocol-binding-observeproperty-1,null,
+http-webhook-profile-protocol-binding-observeproperty-2,null,
+http-webhook-profile-protocol-binding-observeproperty-3,null,
+http-webhook-profile-protocol-binding-observeproperty-5,null,Not a Thing
+http-webhook-profile-protocol-binding-observeproperty-6,null,Not a Thing
+http-webhook-profile-protocol-binding-unobserveproperty-1,null,
+http-webhook-profile-protocol-binding-subscribeevent-5,null,Not a Thing
+http-webhook-profile-protocol-binding-observeallproperties-1,null,
+http-webhook-profile-protocol-binding-observeallproperties-2,null,
+http-webhook-profile-protocol-binding-observeallproperties-3,null,
+http-webhook-profile-protocol-binding-observeallproperties-4,null,Not a Thing
+http-webhook-profile-protocol-binding-observeallproperties-5,null,Not a Thing
+http-webhook-profile-protocol-binding-unobserveallproperties-1,null,
+http-basic-profile-protocol-binding-subscribeevent-1,null,
+http-webhook-profile-protocol-binding-subscribeevent-3,null,
+http-webhook-profile-protocol-binding-subscribeevent-4,null,
+http-webhook-profile-protocol-binding-subscribeevent-5,null,Not a Thing
+http-webhook-profile-protocol-binding-subscribeevent-6,null,Not a Thing
+http-webhook-profile-protocol-binding-unsubscribeevent-1,null,
+http-webhook-profile-protocol-binding-subscribeevent-5,null,Not a Thing
+http-webhook-profile-protocol-binding-subscribeallevents-1,null,
+http-webhook-profile-protocol-binding-subscribeallevents-3,null,
+http-webhook-profile-protocol-binding-subscribeallevents-4,null,
+http-webhook-profile-protocol-binding-subscribeallevents-5,null,Not a Thing
+http-webhook-profile-protocol-binding-subscribeallevents-6,null,Not a Thing
+http-webhook-profile-protocol-binding-unsubscribeallevents-1,null,
+http-webhook-profile-protocol-binding-subscribeevent-5,null,Not a Thing
+http-webhook-profile-protocol-binding-event-connections-1,null,Not a Thing
+http-webhook-profile-protocol-binding-event-connections-1a,null,Not a Thing
+http-webhook-profile-protocol-binding-event-connections-2,null,
+http-webhook-profile-protocol-binding-event-connections-3,null,Not a Thing
+http-webhook-profile-protocol-binding-event-connections-4,null,Not a Thing
+http-webhook-profile-protocol-binding--event-connections-8,null,
+http-webhook-profile-protocol-binding--event-connections-8a,null,
+http-webhook-profile-protocol-binding-event-connections-9,null,
+privacy-considerations-1,null,Requires more testing
+security-considerations-1,null,Requires more testing
