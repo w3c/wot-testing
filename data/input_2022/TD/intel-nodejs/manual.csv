@@ -12,10 +12,8 @@
 "privacy-immutable-id-as-property","not-impl",""
 "privacy-mutable-identifiers","pass",""
 "privacy-temp-id-metadata","null","not a directory/not a temp id"
-"sec-body-name-json-pointer-array","null",
-"sec-body-name-json-pointer-creatable","null","feature not used"
-"sec-body-name-json-pointer","null","feature not used"
-"sec-body-name-json-pointer-type","null","feature not used"
+"sec-body-name-json-pointer-creatable","pass",
+"sec-body-name-json-pointer-type","pass",
 "sec-inj-no-intl-markup","pass",
 "security-context-secure-fetch","not-impl",
 "security-jsonld-expansion","not-impl",
