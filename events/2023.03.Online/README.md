@@ -31,21 +31,14 @@ Additional assertions which however have problems and we will retire without att
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
 for explanations of each at-risk assertion and current status.
 
-List of priority assertions to resolve.   
+List of assertions to resolve.   
 
 #### High Priority
-These are the high-priority assertions that need implementations.
-The number before each is the number of implementations still needed to resolve them.
-
-Security features for modelling API keys in body:
-* (1) [sec-body-name-json-pointer](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer) - Intel
-* (1) [sec-body-name-json-pointer-creatable](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-creatable) - Intel
-* (1) [sec-body-name-json-pointer-array](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-array) - Intel
-* (1) [sec-body-name-json-pointer-type](https://w3c.github.io/wot-thing-description#sec-body-name-json-pointer-type) - Intel
+All high-priority assertions have been resolved.  See https://github.com/w3c/wot-thing-description/pull/1813
 
 #### Lower Priority
 Less-used features, guidelines
-* (2)  [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) (2)
+* (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) (2)
 * (1) [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td)
 * (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch)
 * (1) [security-remote-context](https://w3c.github.io/wot-thing-description#security-remote-context)
