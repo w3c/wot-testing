@@ -2,7 +2,7 @@
 "privacy-distributed-ids","not-impl","data/id must match pattern ""^(urn:uuid:)[a-f0-9]{8}-?[a-f0-9]{4}-?4[a-f0-9]{3}-?[89ab][a-f0-9]{3}-?[a-f0-9]{12}""",
 "privacy-id-metadata","pass","check",
 "sec-body-name-json-pointer","pass","",
-"sec-body-name-json-pointer-array","not-impl","",
+"sec-body-name-json-pointer-array","pass","",
 "sec-security-vocab-auto-in-no-name","pass","",
 "sec-vuln-auto","pass","",
 "td-action-arrays","pass","",
