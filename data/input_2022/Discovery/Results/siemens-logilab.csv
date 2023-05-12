@@ -80,7 +80,7 @@
 "tdd-notification-data","not-impl",
 "tdd-notification-data-create-full","not-impl",
 "tdd-notification-data-delete-diff","not-impl",
-"tdd-notification-data-diff-unsupported","/events endpoints are not implemented"
+"tdd-notification-data-diff-unsupported","not-impl","/events endpoints are not implemented"
 "tdd-notification-data-td-id","not-impl",
 "tdd-notification-data-update-diff","not-impl",
 "tdd-notification-data-update-id","not-impl",
