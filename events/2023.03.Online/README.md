@@ -96,10 +96,10 @@ lower priority:
 * (2) [sec-tdd-limit-query-complexity](https://w3c.github.io/wot-discovery#sec-tdd-limit-query-complexity)
 * (2) [sec-tdd-intro-limit-response-size](https://w3c.github.io/wot-discovery#sec-tdd-intro-limit-response-size)
 * (2) [sec-tdd-intro-throttling](https://w3c.github.io/wot-discovery#sec-tdd-intro-throttling)
-* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy)
+* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy) - Intel?
 * (2) [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
-* (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds)
-* (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids)
+* (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds) - Intel?
+* (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids) - Intel?
 * (2) [priv-loc-explicit-strip](https://w3c.github.io/wot-discovery#priv-loc-explicit-strip)
 * (2) [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
 
