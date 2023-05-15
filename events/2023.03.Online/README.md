@@ -55,7 +55,7 @@ The number before each assertion is the number of implementations still needed t
 #### High Priority
 List of higher-priority assertions with at least one implementation:
 * (1) [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
-* (1) [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
+* (1) [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) - Intel
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
