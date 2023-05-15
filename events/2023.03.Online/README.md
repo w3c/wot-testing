@@ -36,10 +36,12 @@ List of assertions to resolve.
 #### High Priority
 All high-priority assertions have been resolved.  See https://github.com/w3c/wot-thing-description/pull/1813
 
+#### Medium Priority
+* (1) [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td)
+
 #### Lower Priority
 Less-used features, guidelines
-* (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) (2)
-* (1) [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td)
+* (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow)
 * (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch)
 * (1) [security-remote-context](https://w3c.github.io/wot-thing-description#security-remote-context)
 * (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property)
