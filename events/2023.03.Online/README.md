@@ -54,30 +54,22 @@ The number before each assertion is the number of implementations still needed t
 
 #### High Priority
 List of higher-priority assertions with at least one implementation:
-* (1) [discoverer-fetch-tdd](https://w3c.github.io/wot-discovery#discoverer-fetch-tdd) - Intel
-* (1) [discoverer-fetch-links](https://w3c.github.io/wot-discovery#discoverer-fetch-links) - Intel
-* (1) [discoverer-fetch-iteration](https://w3c.github.io/wot-discovery#discoverer-fetch-iteration) - Intel
-* (1) [discoverer-track](https://w3c.github.io/wot-discovery#discoverer-track) - Intel
-* (1) [exploration-link-description-type](https://w3c.github.io/wot-discovery#exploration-link-description-type) 
-* (1) [exploration-link-description-link](https://w3c.github.io/wot-discovery#exploration-link-description-link) 
 * (1) [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
 * (1) [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) 
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
-* (1) [tdd-http-error-response-lang](https://w3c.github.io/wot-discovery#tdd-http-error-response-lang) - Intel, Logilab
 * (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) - Intel
-* (2) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) - Intel, Logilab
+* (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) - Intel
 
 Following are for ordering results.  Some of these are implied by tdd-things-list-pagination-order-utf-8 which is satisfied:
-* (2) [tdd-things-list-pagination-order](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order) - Logilab
-* (2) [tdd-things-list-pagination-orderable](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-orderable) - Logilab
-* (2) [tdd-things-list-pagination-order-nextlink](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-nextlink) - Logilab
+* (1) [tdd-things-list-pagination-order](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order) - Logilab
+* (1) [tdd-things-list-pagination-orderable](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-orderable) - Logilab
+* (1) [tdd-things-list-pagination-order-nextlink](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-nextlink) - Logilab
 
 #### Medium Priority
 The following also have one implementation but need CoAP:
 * (1) [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
-* (1) [exploration-server-coap-size2](https://w3c.github.io/wot-discovery#exploration-server-coap-size2) 
 
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
