@@ -21,7 +21,7 @@
 "security-mutual-auth-td","null",
 "security-no-execution","null",
 "security-oauth-limits","null",
-"security-remote-context","null",
+"security-remote-context","pass",
 "security-server-auth-td","null",
 "security-static-context","null",
 "sec-vuln-auto","null",
