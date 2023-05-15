@@ -1,0 +1,178 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        "https://w3c.github.io/wot-discovery/context/discovery-context.jsonld",
+        { "@language": "en" }
+    ],
+    "@type": [
+        "ThingDirectory"
+    ],
+    "title": "Basic Thing Description (TD) Directory (TDD)",
+    "titles": {
+        "en": "Basic W3C WoT Thing Description (TD) Directory (TDD)",
+        "jp": "W3C WoT Thing Description (TD) のディレクトリ (TDD)"
+    },
+    "version": {
+        "model": "1.0.0-beta.2",
+        "instance": "1.0.0"
+    },
+    "base": "http://ubuntu22-mccool-vm.local:8086",
+    "id": "urn:uuid:2780e3eb-08c5-52d2-8fb8-605d07e27bdc",
+    "security": "nosec_sc",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "properties": {
+        "things": {
+            "description": "Retrieve all W3C WoT Thing Descriptions",
+            "descriptions": {
+                "en": "Retrieve all W3C WoT Thing Descriptions",
+                "jp": "すべての W3C WoT Thing Descriptions を取得する"
+            },
+            "uriVariables": {
+                "offset": {
+                    "title": "Number of TDs to skip before the page",
+                    "titles": {
+                         "en": "Number of TDs to skip before the page",
+                         "jp": "ページの前にスキップする TD の数"
+                    },
+                    "type": "number",
+                    "default": 0
+                },
+                "limit": {
+                    "title": "Number of TDs in a page",
+                    "titles": {
+                         "en": "Number of TDs in a page",
+                         "jp": "ページ内の TD の数"
+                    },
+                    "type": "number"
+                },
+                "format": {
+                    "title": "Payload format",
+                    "titles": {
+                         "en": "Payload format",
+                         "jp": "ペイロード形式"
+                    },
+                    "type": "string",
+                    "enum": [
+                        "array",
+                        "collection"
+                    ],
+                    "default": "array"
+                },
+                "sort_by": {
+                    "title": "Comparator TD attribute for collection sorting",
+                    "titles": {
+                         "en": "Comparator TD attribute for collection sorting",
+                         "jp": "コレクションソート用のコンパレータ TD 属性"
+                    },
+                    "type": "string",
+                    "default": "id"
+                },
+                "sort_order": {
+                    "title": "Sorting order",
+                    "titles": {
+                         "en": "Sorting order",
+                         "jp": "並べ替え順序"
+                    },
+                    "type": "string",
+                    "enum": [
+                        "asc",
+                        "desc"
+                    ],
+                    "default": "asc"
+                }
+            },
+            "forms": [
+                {
+                    "href": "/things{?offset,limit,format,sort_by,sort_order}",
+                    "htv:methodName": "GET",
+                    "response": {
+                        "description": "Success response",
+                        "descriptions": {
+                            "en": "Success response",
+                            "jp": "成功の応答"
+                        },
+                        "htv:statusCodeValue": 200,
+                        "contentType": "application/ld+json",
+                        "htv:headers": [
+                            {
+                                "htv:fieldName": "Link"
+                            }
+                        ]
+                    },
+                    "additionalResponses": [
+                        {
+                            "description": "Invalid query arguments",
+                            "descriptions": {
+                                "en": "Invalid query arguments",
+                                "jp": "無効なクエリ引数"
+                            },
+                            "contentType": "application/problem+json",
+                            "htv:statusCodeValue": 400
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {
+        "retrieveThing": {
+            "description": "Retrieve a TD",
+            "descriptions": {
+                "en": "Retrieve a TD",
+                "jp": "TD を取得する"
+            },
+            "uriVariables": {
+                "id": {
+                    "@type": "ThingID",
+                    "title": "Thing Description ID",
+                    "titles": {
+                        "en": "Thing Description ID",
+                        "jp": "TD識別子"
+                    },
+                    "type": "string",
+                    "format": "iri-reference"
+                }
+            },
+            "output": {
+                "description": "The schema is implied by the content type",
+                "descriptions": {
+                    "en": "The schema is implied by the content type",
+                    "jp": "スキーマはコンテンツ タイプによって暗黙的に示されます"
+                },
+                "type": "object"
+            },
+            "safe": true,
+            "idempotent": true,
+            "forms": [
+                {
+                    "href": "/things/{id}",
+                    "htv:methodName": "GET",
+                    "response": {
+                        "description": "Success response",
+                        "descriptions": {
+                            "en": "Success response",
+                            "jp": "成功の応答"
+                        },
+                        "htv:statusCodeValue": 200,
+                        "contentType": "application/td+json"
+                    },
+                    "additionalResponses": [
+                        {
+                            "description": "TD with the given id not found",
+                            "descriptions": {
+                                "en": "TD with the given id not found",
+                                "jp": "指定された識別子の TD が見つかりません"
+                            },
+                            "contentType": "application/problem+json",
+                            "htv:statusCodeValue": 404
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

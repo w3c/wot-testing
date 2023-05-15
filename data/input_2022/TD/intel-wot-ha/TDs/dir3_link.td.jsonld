@@ -1,0 +1,20 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        "https://w3c.github.io/wot-discovery/context/discovery-context.jsonld"
+    ],
+    "@type": "ThingLink",
+    "id": "dir3:link",
+    "links": [{
+        "rel": "describedby",
+        "href": "http://localhost:8087/.well-known/wot",
+        "type": "application/td+json"
+    }],
+    "security": "nosec_sc",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "title": "Link to Dir3 TD"
+}
