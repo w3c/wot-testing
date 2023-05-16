@@ -53,17 +53,11 @@ The number before each assertion is the number of implementations still needed t
 #### High Priority
 List of higher-priority assertions with at least one implementation:
 * (1) [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
-* (1) [tdd-things-list-pagination-order-utf-8](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-utf-8) - Intel
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
 * (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) - Intel
 * (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) - Intel
-
-Following are for ordering results.  Some of these are implied by tdd-things-list-pagination-order-utf-8 which is satisfied:
-* (1) [tdd-things-list-pagination-order](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order) - Logilab
-* (1) [tdd-things-list-pagination-orderable](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-orderable) - Logilab
-* (1) [tdd-things-list-pagination-order-nextlink](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-nextlink) - Logilab
 
 #### Medium Priority
 This is needed because if diff is ignored, result will be different than expected.
