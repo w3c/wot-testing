@@ -192,7 +192,7 @@
 "td-title-description","pass","all children passed",
 "td-title-description_descriptions","pass","",
 "td-title-description_titles","pass","",
-"td-titles-descriptions","fail","root_title is not on the multilang object at the same level at Basic Thing Description (TD) Directory (TDD)",
+"td-titles-descriptions","pass","",
 "td-uriVariables-dataschema","pass","",
 "td-uriVariables-names","pass","",
 "td-version","pass","",

@@ -7,7 +7,7 @@
     "@type": [
         "ThingDirectory"
     ],
-    "title": "Basic Thing Description (TD) Directory (TDD)",
+    "title": "Basic W3C WoT Thing Description (TD) Directory (TDD)",
     "titles": {
         "en": "Basic W3C WoT Thing Description (TD) Directory (TDD)",
         "jp": "W3C WoT Thing Description (TD) のディレクトリ (TDD)"
