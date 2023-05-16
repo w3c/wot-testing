@@ -37,8 +37,6 @@ List of assertions to resolve.
 All high-priority assertions have been resolved.  See https://github.com/w3c/wot-thing-description/pull/1813
 
 #### Medium Priority
-* (1) [security-server-auth-td](https://w3c.github.io/wot-thing-description#security-server-auth-td) resolution pending
-* (1) [security-remote-context](https://w3c.github.io/wot-thing-description#security-remote-context) Intel - wot-ha already resolves - resolution pending
 * (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property) Intel to do
 
 #### Lower Priority
@@ -68,9 +66,6 @@ Following are for ordering results.  Some of these are implied by tdd-things-lis
 * (1) [tdd-things-list-pagination-order-nextlink](https://w3c.github.io/wot-discovery#tdd-things-list-pagination-order-nextlink) - Logilab
 
 #### Medium Priority
-The following also have one implementation but need CoAP:
-* (1) [introduction-dns-sd-service-name-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-udp) 
-
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
 Note that diff itself IS satisfied by other implementations already, so this is for those that do NOT implement it!
