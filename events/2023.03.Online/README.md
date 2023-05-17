@@ -21,11 +21,11 @@ for explanations of each at-risk assertion and current status.
 The number before each assertion is the number of implementations still needed to resolve them.
 
 List of assertions to resolve (low priority):
-* (1) [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe)
+* (1) [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe) McCool - downgrade
 
 Additional assertions which however have problems and we will retire without attempting to test:
-* (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	
-* (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3)
+* (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	McCool - reword/downgrade
+* (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3) McCool - downgrade
 
 ### Thing Description
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
