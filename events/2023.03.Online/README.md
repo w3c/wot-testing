@@ -32,10 +32,13 @@ List of assertions to resolve (low priority):
 Additional assertions which however have problems and we will retire without attempting to test:
 * (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	
     - It was problematic anyway; see https://github.com/w3c/wot-architecture/issues/900
-    - Resolution: downgrade and reword
+    - Resolution: downgrade (SHOULD -> should) and reword (preshared keys -> certificates), add extra informative text
     - PR: https://github.com/w3c/wot-architecture/pull/909
 * (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3) 
-    - Resolution: downgrade
+    - Was difficult to test due to lack of DTLS 1.3 libraries
+    - Rewording of other related assertions also needed to avoid misunderstandings
+    - Resolution: downgrade (SHOULD -> should)
+    - PR: https://github.com/w3c/wot-architecture/pull/910
 
 ### Thing Description
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
