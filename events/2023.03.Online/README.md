@@ -39,7 +39,6 @@ Additional assertions which however have problems and we will retire without att
     - PR: https://github.com/w3c/wot-architecture/pull/909
 * (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3) 
     - Was difficult to test due to lack of DTLS 1.3 libraries
-    - Rewording of other related assertions also needed to avoid misunderstandings
     - Resolution: downgrade (SHOULD -> should)
     - PR: https://github.com/w3c/wot-architecture/pull/910
 
