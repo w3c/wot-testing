@@ -27,7 +27,10 @@ for explanations of each at-risk assertion and current status.
 The number before each assertion is the number of implementations still needed to resolve them.
 
 List of assertions to resolve (low priority):
-* (1) [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe) McCool - downgrade
+* (1) [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe)
+    - Resolution: downgrade
+    - Also add some informative text explaining what a HAL is, how to implement it (some options), need for HW interlocks as well
+    - PR: https://github.com/w3c/wot-architecture/pull/911
 
 Additional assertions which however have problems and we will retire without attempting to test:
 * (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	
