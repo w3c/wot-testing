@@ -1,4 +1,10 @@
 # WoT Testfest
+**NOTE:** Testing is now closed for the charter ending in 2023 and for Discovery, TD 1.1, and Architecture 1.1.
+This file is now only being used to track resolution of the remaining at-risk items prior to PR transition,
+not to prioritize or track further testing.  Likewise data/input_2022 is closed except for bug-fixes and implementation
+descriptions.
+
+## OLD HEADER
 Purpose: Gather implementation experience for Profiles,
 and gather additional implementation experience for other deliverables.
 
@@ -24,8 +30,12 @@ List of assertions to resolve (low priority):
 * (1) [arch-security-consideration-hal-refuse-unsafe](https://w3c.github.io/wot-architecture#arch-security-consideration-hal-refuse-unsafe) McCool - downgrade
 
 Additional assertions which however have problems and we will retire without attempting to test:
-* (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	McCool - reword/downgrade
-* (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3) McCool - downgrade
+* (1) [arch-security-consideration-use-psk](https://w3c.github.io/wot-architecture#arch-security-consideration-use-psk)	
+    - It was problematic anyway; see https://github.com/w3c/wot-architecture/issues/900
+    - Resolution: downgrade and reword
+    - PR: https://github.com/w3c/wot-architecture/pull/909
+* (2) [arch-security-consideration-dtls-1-3](https://w3c.github.io/wot-architecture#arch-security-consideration-dtls-1-3) 
+    - Resolution: downgrade
 
 ### Thing Description
 See [WoT Thing Description 1.1 Developer Meeting Presentation](https://docs.google.com/presentation/d/1OZeLR0-qAw01R1UloTG25xQjc5LFuwvRP9o50QVo660/edit?usp=sharing)
