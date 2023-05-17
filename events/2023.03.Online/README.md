@@ -37,12 +37,12 @@ List of assertions to resolve.
 All high-priority assertions have been resolved.  See https://github.com/w3c/wot-thing-description/pull/1813
 
 #### Medium Priority
-* (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property) Intel to do
+* (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property) McCool - downgrade
 
 #### Lower Priority
 Less-used features, guidelines
-* (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow)
-* (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch)
+* (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) McCool - remove
+* (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch) McCool - downgrade (MUST -> must)
 
 ### Discovery
 See [WoT Discovery Developer Meeting Presentation](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
@@ -52,27 +52,27 @@ The number before each assertion is the number of implementations still needed t
 
 #### High Priority
 List of higher-priority assertions with at least one implementation:
-* (1) [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) - Intel
+* (1) [tdd-registrationinfo-expiry-config](https://w3c.github.io/wot-discovery#tdd-registrationinfo-expiry-config) McCool - remove/reword
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
-* (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) - Intel
-* (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) - Intel
+* (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) McCool - remove (redundant)
+* (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) McCool - remove (redundant)
 
 #### Medium Priority
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
 Note that diff itself IS satisfied by other implementations already, so this is for those that do NOT implement it!
-* (2) [tdd-notification-data-diff-unsupported](https://w3c.github.io/wot-discovery#tdd-notification-data-diff-unsupported) - Intel, Logilab
+* (2) [tdd-notification-data-diff-unsupported](https://w3c.github.io/wot-discovery#tdd-notification-data-diff-unsupported) McCool
 
 #### Lower Priority
 These have one implementation but are in security considerations and can be converted into "guidelines", so are
 a lower priority.
-* (1) [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) 
-* (1) [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) 
+* (1) [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) McCool - downgrade
+* (1) [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) McCool - downgrade
 
 These have two but are also in security/privacy considerations and can be converted into "guidelines", so are also
-lower priority:
+lower priority: McCool - downgrade
 * (2) [sec-tdd-throttle-queries](https://w3c.github.io/wot-discovery#sec-tdd-throttle-queries)
 * (2) [sec-tdd-limit-query-complexity](https://w3c.github.io/wot-discovery#sec-tdd-limit-query-complexity)
 * (2) [sec-tdd-intro-limit-response-size](https://w3c.github.io/wot-discovery#sec-tdd-intro-limit-response-size)
@@ -85,7 +85,7 @@ lower priority:
 * (2) [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
 
 This is for security bootstrapping with OAuth, would be useful for onboarding:
-* (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows)
+* (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows) McCool - remove
 
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
