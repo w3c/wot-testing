@@ -52,7 +52,9 @@ List of assertions to resolve.
 All high-priority assertions have been resolved.  See https://github.com/w3c/wot-thing-description/pull/1813
 
 #### Medium Priority
-* (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property) McCool - downgrade
+* (1) [privacy-immutable-id-as-property](https://w3c.github.io/wot-thing-description#privacy-immutable-id-as-property) 
+    - Resolution: downgrade (SHOULD -> should)
+    - PR: https://github.com/w3c/wot-thing-description/pull/1826
 
 #### Lower Priority
 Less-used features, guidelines
