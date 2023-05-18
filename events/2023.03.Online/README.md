@@ -59,7 +59,9 @@ All high-priority assertions have been resolved.  See https://github.com/w3c/wot
 #### Lower Priority
 Less-used features, guidelines
 * (2) [td-security-oauth2-device-flow](https://w3c.github.io/wot-thing-description#td-security-oauth2-device-flow) McCool - remove
-* (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch) McCool - downgrade (MUST -> must)
+* (2) [security-context-secure-fetch](https://w3c.github.io/wot-thing-description#security-context-secure-fetch) 
+    - Resolution: downgrade (SHOULD -> should)
+    - PR: https://github.com/w3c/wot-thing-description/pull/1827
 
 ### Discovery
 See [WoT Discovery Developer Meeting Presentation](https://docs.google.com/presentation/d/1HEI1uObGJdXEddWbg2vWFz_LjiCL44yHGac8EPUzGUs/edit?usp=sharing)
