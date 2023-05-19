@@ -112,7 +112,9 @@ lower priority: McCool - downgrade
 * (2) [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
 
 This is for security bootstrapping with OAuth, would be useful for onboarding:
-* (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows) McCool - remove
+* (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows) 
+    - Resolution: Remove, along with related discussion of using OAuth2 for security bootstrapping
+    - PR: https://github.com/w3c/wot-discovery/pull/485
 
 This one is IMPOSSIBLE to satisfy:
 * (-) [introduction-dns-sd-service-name-directory-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-directory-udp)
