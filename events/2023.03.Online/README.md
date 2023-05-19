@@ -122,10 +122,20 @@ lower priority: McCool - downgrade
     - Resolution: downgrade SHOULD -> should
     - PR: https://github.com/w3c/wot-discovery/pull/486
 * (2) [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
-* (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds) - Intel?
-* (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids) - Intel?
+    - Resolution: downgrade MAY -> may
+    - PR: https://github.com/w3c/wot-discovery/pull/487
+* (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/487
+* (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids)
+    - Resolution: downgrade MAY -> may
+    - PR: https://github.com/w3c/wot-discovery/pull/487
 * (2) [priv-loc-explicit-strip](https://w3c.github.io/wot-discovery#priv-loc-explicit-strip)
+    - Resolution: downgrade MAY -> may
+    - PR: https://github.com/w3c/wot-discovery/pull/487
 * (2) [priv-query-anon](https://w3c.github.io/wot-discovery#priv-query-anon)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/487
 
 This is for security bootstrapping with OAuth, would be useful for onboarding:
 * (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows) 
