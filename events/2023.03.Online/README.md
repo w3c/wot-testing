@@ -88,7 +88,9 @@ priority.
 This is needed because if diff is ignored, result will be different than expected.
 However, it should be very easy to implement (if an implementation does not support diff, it just has to say so).
 Note that diff itself IS satisfied by other implementations already, so this is for those that do NOT implement it!
-* (2) [tdd-notification-data-diff-unsupported](https://w3c.github.io/wot-discovery#tdd-notification-data-diff-unsupported) McCool
+* (2) [tdd-notification-data-diff-unsupported](https://w3c.github.io/wot-discovery#tdd-notification-data-diff-unsupported) 
+    - Resolution: downgrade, reword
+    - PR: https://github.com/w3c/wot-discovery/pull/484
 
 #### Lower Priority
 These have one implementation but are in security considerations and can be converted into "guidelines", so are
