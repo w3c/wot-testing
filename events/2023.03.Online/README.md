@@ -80,9 +80,11 @@ List of higher-priority assertions with at least one implementation:
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
 * (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) 
+    - Resolution: downgrade, reorganize; note is technically redundant (as assertion) but informative statements useful.
+    - PR: https://github.com/w3c/wot-discovery/pull/483 
 * (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) 
-    - Resolution: downgrade, reorganize; note are technically redundant (as assertions) but informative statements useful.
-    - PR: https://github.com/w3c/wot-discovery/pull/483 (apologies for single PR covering two items at once)
+    - Resolution: downgrade, reorganize; note is technically redundant (as assertion) but informative statements useful.
+    - PR: https://github.com/w3c/wot-discovery/pull/483 
 
 #### Medium Priority
 This is needed because if diff is ignored, result will be different than expected.
@@ -95,16 +97,30 @@ Note that diff itself IS satisfied by other implementations already, so this is 
 #### Lower Priority
 These have one implementation but are in security considerations and can be converted into "guidelines", so are
 a lower priority.
-* (1) [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) McCool - downgrade
-* (1) [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) McCool - downgrade
-* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy) - Intel?
+* (1) [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) 
+    - Resolution: downgrade SHOULD->should
+    - PR: https://github.com/w3c/wot-discovery/pull/486
+* (1) [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) 
+    - Resolution: downgrade SHOULD NOT -> should not
+    - PR: https://github.com/w3c/wot-discovery/pull/486
+* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy) 
+    - Resolution: downgrade MAY -> may
+    - PR: https://github.com/w3c/wot-discovery/pull/486
 
 These have two but are also in security/privacy considerations and can be converted into "guidelines", so are also
 lower priority: McCool - downgrade
 * (2) [sec-tdd-throttle-queries](https://w3c.github.io/wot-discovery#sec-tdd-throttle-queries)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/486
 * (2) [sec-tdd-limit-query-complexity](https://w3c.github.io/wot-discovery#sec-tdd-limit-query-complexity)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/486
 * (2) [sec-tdd-intro-limit-response-size](https://w3c.github.io/wot-discovery#sec-tdd-intro-limit-response-size)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/486
 * (2) [sec-tdd-intro-throttling](https://w3c.github.io/wot-discovery#sec-tdd-intro-throttling)
+    - Resolution: downgrade SHOULD -> should
+    - PR: https://github.com/w3c/wot-discovery/pull/486
 * (2) [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
 * (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds) - Intel?
 * (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids) - Intel?
