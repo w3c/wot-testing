@@ -97,6 +97,7 @@ These have one implementation but are in security considerations and can be conv
 a lower priority.
 * (1) [sec-tdd-query-watchdog](https://w3c.github.io/wot-discovery#sec-tdd-query-watchdog) McCool - downgrade
 * (1) [sec-tdd-intro-no-multicast](https://w3c.github.io/wot-discovery#sec-tdd-intro-no-multicast) McCool - downgrade
+* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy) - Intel?
 
 These have two but are also in security/privacy considerations and can be converted into "guidelines", so are also
 lower priority: McCool - downgrade
@@ -104,7 +105,6 @@ lower priority: McCool - downgrade
 * (2) [sec-tdd-limit-query-complexity](https://w3c.github.io/wot-discovery#sec-tdd-limit-query-complexity)
 * (2) [sec-tdd-intro-limit-response-size](https://w3c.github.io/wot-discovery#sec-tdd-intro-limit-response-size)
 * (2) [sec-tdd-intro-throttling](https://w3c.github.io/wot-discovery#sec-tdd-intro-throttling)
-* (1) [sec-self-proxy](https://w3c.github.io/wot-discovery#sec-self-proxy) - Intel?
 * (2) [priv-loc-disable-public-directories](https://w3c.github.io/wot-discovery#priv-loc-disable-public-directories)
 * (2) [priv-loc-anonymous-tds](https://w3c.github.io/wot-discovery#priv-loc-anonymous-tds) - Intel?
 * (2) [priv-loc-gen-ids](https://w3c.github.io/wot-discovery#priv-loc-gen-ids) - Intel?
