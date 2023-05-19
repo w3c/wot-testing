@@ -110,6 +110,11 @@ lower priority: McCool - downgrade
 This is for security bootstrapping with OAuth, would be useful for onboarding:
 * (2) [exploration-secboot-oauth2-flows](https://w3c.github.io/wot-discovery#exploration-secboot-oauth2-flows) McCool - remove
 
+This one is IMPOSSIBLE to satisfy:
+* (-) [introduction-dns-sd-service-name-directory-udp](https://w3c.github.io/wot-discovery#introduction-dns-sd-service-name-directory-udp)
+    - Resolution: reorganize, "reserved" informative statements, etc.
+    - PR: https://github.com/w3c/wot-discovery/pull/472
+
 ## Logistics:
 * These will be IG calls, using the #wot-pf IRC channel
 * Date: <strike>Week of April 3</strike> Week of April 24
