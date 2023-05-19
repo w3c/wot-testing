@@ -79,8 +79,10 @@ List of higher-priority assertions with at least one implementation:
 
 These are in support of internationalization, and were added based on wide review, so should be a relatively high
 priority.
-* (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) McCool - remove (redundant)
-* (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) McCool - remove (redundant)
+* (2) [tdd-http-alternate-language](https://w3c.github.io/wot-discovery#tdd-http-alternate-language) 
+* (1) [tdd-validation-response-lang](https://w3c.github.io/wot-discovery#tdd-validation-response-lang) 
+    - Resolution: downgrade, reorganize; note are technically redundant (as assertions) but informative statements useful.
+    - PR: https://github.com/w3c/wot-discovery/pull/483 (apologies for single PR covering two items at once)
 
 #### Medium Priority
 This is needed because if diff is ignored, result will be different than expected.
