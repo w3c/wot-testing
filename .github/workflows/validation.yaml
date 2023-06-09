@@ -24,7 +24,7 @@ jobs:
           node-version: '15'       
       
       - name: Use lerna
-        run: npm install -g lerna
+        run: npm install -g lerna@6.6.2
       
       - name: Bootstrap
         working-directory: thingweb-playground
