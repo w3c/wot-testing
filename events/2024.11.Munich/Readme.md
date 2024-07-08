@@ -1,6 +1,6 @@
 # WoT Week at Munich
 
-The logistics can be found at https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning .
+The logistics can be found at https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning.
 In this folder, technical information is found such as test plans of features.
 
 ## WIP - User Scenarios
@@ -21,9 +21,9 @@ Some ideas:
   * Multiple possible successful responses
   * Default behavior
 * Linking between TDs
-* Specifying multiple types (at types) to TDs: This is confusing to people. We need more guidance.
+* Specifying multiple `@type`s to TDs: This is confusing to people. We need more guidance.
 * Complex actions: Async and sync
-* Meta Operations (top-level form operations):Are they implemented correctly
+* Meta Operations (top-level form operations): Are they implemented correctly
 
 ### New Features
   
