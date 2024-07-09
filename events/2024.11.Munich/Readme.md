@@ -14,7 +14,9 @@ Some ideas:
 
 ## WIP - TD Topics
 
-### Making Sure
+### Existing Features
+
+We should make sure that the existing features that the implementers have questions about are specified correctly.
 
 * Additional Responses
   * Error Handling on the application level (Scripting API is connected here)
@@ -26,6 +28,8 @@ Some ideas:
 * Meta Operations (top-level form operations): Are they implemented correctly
 
 ### New Features
+
+We should experiment on the new features we are planning and collect implementation experience.
   
 * Initial connection
 * Data mapping
