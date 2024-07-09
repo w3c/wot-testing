@@ -36,5 +36,8 @@ We should experiment on the new features we are planning and collect implementat
 * "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD.
 * Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? Strongly relates to normative consumption above.
 * New meta operations
-* Top-level operation for observing changes to TD (needs further discussion)
 
+## WIP - Other Topics
+
+* Top-level operation for observing changes to TD (needs further discussion)
+* Discovery interface of Scripting API
