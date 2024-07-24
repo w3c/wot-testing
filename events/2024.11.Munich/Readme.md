@@ -54,6 +54,8 @@ We should experiment on the new features we are planning and collect implementat
 * Discovery interface of Scripting API
 
 ## WIP - Setups
+* Siemens: different hardware like Sentron PAC (energy meter), Industrial Edge, some actuators (tbd)
+* tbc 
 
 ### WoT WG/IG Setups
 
