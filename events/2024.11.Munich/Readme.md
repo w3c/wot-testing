@@ -55,7 +55,13 @@ We should experiment on the new features we are planning and collect implementat
 
 ## WIP - Setups
 * Siemens: different hardware like Sentron PAC (energy meter), Industrial Edge, some actuators (tbd)
-* tbc 
+* tbc
+
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
+| Siemens    |      Sentron PAC (energy meter)    | LAN                                                               |                    |    tbc |
+| Siemens    |      Industrial Edge               | LAN                                                               |                    | tbc |
+| ...    |     ...                                | ...                                                               |                    | tbc |
 
 ### WoT WG/IG Setups
 
