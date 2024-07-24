@@ -12,9 +12,12 @@ Different tests we do can be placed into context, e.g. smart cities.
 This way, once we present WoT to the visitors, they can relate better.
 Some ideas:
 
-* Smart City (maybe a topic which can be discussed with the NGSI-LD cooperation)
+* Smart City
+  * maybe a topic which can be discussed with the NGSI-LD cooperation)
 * WoT for Cloud Systems
+  * maybe Azure IoT from Microsoft and Oracle cloud (tbc)
 * Plug & Play in Industry Scenarios
+  * Siemens will show some use cases   
 
 ## WIP - TD Topics
 
