@@ -54,7 +54,7 @@ We should experiment on the new features we are planning and collect implementat
 * Top-level operation for observing changes to TD (needs further discussion)
 * Discovery interface of Scripting API
 
-## WIP - Setups
+## List of devices that will be available for the PlugFest
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|-------|
