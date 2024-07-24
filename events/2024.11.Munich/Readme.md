@@ -18,6 +18,7 @@ Some ideas:
   * maybe Azure IoT from Microsoft and Oracle cloud (tbc)
 * Plug & Play in Industry Scenarios
   * Siemens will show some use cases   
+* Retail (David)
 
 ## WIP - TD Topics
 
