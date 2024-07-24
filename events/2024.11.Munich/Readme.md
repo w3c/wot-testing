@@ -14,6 +14,7 @@ Some ideas:
 
 * Smart City
 * WoT for Cloud Systems
+* Plug & Play in Industry Scenarios
 
 ## WIP - TD Topics
 
@@ -39,6 +40,7 @@ We should experiment on the new features we are planning and collect implementat
 * "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized and its results will be used for the Interoperability Test Suite topic below.
 * Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? Strongly relates to normative consumption above.
 * New meta operations
+* OPC UA Binding
 
 ## WIP - Other Topics
 
