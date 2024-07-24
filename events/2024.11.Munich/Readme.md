@@ -27,8 +27,11 @@ We should make sure that the existing features that the implementers have questi
 
 * Additional Responses
   * Error Handling on the application level (Scripting API is connected here)
+    * would be good to have real world example  
   * Multiple possible successful responses
-  * Default behavior
+    * query-able actions?
+    * in Discovery API are examples where multiple responses are provided 
+  * Default behavior (is it a normal response or is it an additional one)
 * Linking between TDs
 * Specifying multiple `@type`s to TDs: This is confusing to people. We need more guidance.
 * Complex actions: Async and sync
