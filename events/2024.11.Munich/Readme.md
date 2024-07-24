@@ -17,7 +17,7 @@ Some ideas:
 * WoT for Cloud Systems
   * maybe Azure IoT from Microsoft and Oracle cloud (tbc)
 * Plug & Play in Industry Scenarios
-  * Siemens will show some use cases   
+  * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
 
 ## WIP - TD Topics
