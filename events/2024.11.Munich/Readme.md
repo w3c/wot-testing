@@ -56,10 +56,13 @@ We should experiment on the new features we are planning and collect implementat
 ## WIP - Setups
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
-|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| Siemens    |      Sentron PAC (energy meter)    | LAN                                                               |                    |    tbc |
-| Siemens    |      Industrial Edge               | LAN                                                               |                    | tbc |
-| ...    |     ...                                | ...                                                               |                    | tbc |
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------|-------|
+| Siemens    |      Sentron PAC (energy meter)    | LAN                                                               | Modbus             |   tbc |
+| Siemens    |      Industrial Edge               | LAN                                                               | OPC UA, HTTP       |   tbc |
+| ...        |     ...                            | ...                                                               |                    |   tbc |
+
+Note: We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, etc.)
+
 
 ### WoT WG/IG Setups
 
