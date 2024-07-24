@@ -13,7 +13,7 @@ This way, once we present WoT to the visitors, they can relate better.
 Some ideas:
 
 * Smart City
-  * maybe a topic which can be discussed with the NGSI-LD cooperation)
+  * maybe a topic which can be discussed with the NGSI-LD cooperation
 * WoT for Cloud Systems
   * maybe Azure IoT from Microsoft and Oracle cloud (tbc)
 * Plug & Play in Industry Scenarios
