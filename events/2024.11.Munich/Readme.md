@@ -1,4 +1,4 @@
-# WoT Week at Munich
+# WoT Week at Munich (DRAFT)
 
 The logistics can be found at https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning.
 In this folder, technical information is found, such as test plans for features.
@@ -12,7 +12,7 @@ Different tests we do can be placed into context, e.g. smart cities.
 This way, once we present WoT to the visitors, they can relate better.
 Some ideas:
 
-* Smart City
+* Smart City (maybe a topic which can be discussed with the NGSI-LD cooperation)
 * WoT for Cloud Systems
 * Plug & Play in Industry Scenarios
 
