@@ -62,7 +62,7 @@ We should experiment on the new features we are planning and collect implementat
 | Siemens    |      Industrial Edge               | LAN, connection to the Internet                                   | OPC UA, HTTP       |   tbc |
 | ...        |     ...                            | ...                                                               |                    |   tbc |
 
-Note: We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.)
+Note: We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.). Steakholders from related SDOs are welcome to contribute. 
 
 
 ### WoT WG/IG Setups
