@@ -19,6 +19,7 @@ Some ideas:
 * Plug & Play in Industry Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
+ * David will check with a company if they could join the PlugFest. The cash systems seems to use AMQP  
 
 ## WIP - TD Topics
 
