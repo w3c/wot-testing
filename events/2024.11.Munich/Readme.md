@@ -73,7 +73,7 @@ We should experiment on the new features we are planning and collect implementat
 Note: 
 * We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
 * Steakholders from related SDOs are welcome to contribute.
-* 
+* We need to clearify about participants that can only join remotly. Is there an open connection to the local PlugFest network?
 
 
 ### WoT WG/IG Setups
