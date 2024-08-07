@@ -75,6 +75,8 @@ Note:
 * Steakholders from related SDOs are welcome to contribute.
 * We need to clearify about participants that can only join remotly. Is there an open connection to the local PlugFest network?
 * Detail information of the Things can be provided specific subfolders of this github (e.g. folders by company name)
+* We need to clearify, if we need a VPN connection. W3C may provide one.
+* We should run a trial run 2 weeks before the PlugFest.
 
 
 ### WoT WG/IG Setups
