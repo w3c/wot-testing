@@ -59,18 +59,21 @@ We should experiment on the new features we are planning and collect implementat
 
 ## List of devices that will be available for the PlugFest
 
-| Company   | Things/Devices/System/Tools                      | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                                        |Contact|
-|-----------|--------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------|-------|
-| Siemens   |     Sentron PAC (energy meter)                   | LAN                                                               | Modbus                                          |   tbc |
-| Siemens   |     Industrial Edge                              | LAN, connection to the Internet                                   | OPC UA, HTTP                                    |   tbc |
-| TUM       |     Hololens                                     | Wifi                                                              | no sec should be used; QR code to TD is needed  |   tbc |
-| TUM       |     Robot arm                                    | is 2m high, 4m width; LAN/Wifi (no Internet); should be protoced  |                                                 |   tbc |
-| TUM       |     Philips Hue Lamp and Switch                  | LAN                                                               |                                                 |   tbc |
-| TUM       |     different remote devices (raspberry pi,etc)  | Internet                                                          |                                                 |   tbc |
-| TUM       |     simulated devices (robot arms)               | LAN/Wifi                                                          |                                                 |   tbc |
-| ...       |     ...                                          | ...                                                               |  ...                                            |   tbc |
+| Company   | Things/Devices/System/Tools                      | Remote | Virtual | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                                        |Contact|
+|-----------|-----------------------------------------------|-|-|-------------------------------------------------------------------|-------------------------------------------------|-------|
+| Siemens   |     Sentron PAC (energy meter)                | | | LAN                                                               | Modbus                                          |   tbc |
+| Siemens   |     Industrial Edge                           | | | LAN, connection to the Internet                                   | OPC UA, HTTP                                    |   tbc |
+| TUM       |     Hololens                                  | | | Wifi                                                              | no sec should be used; QR code to TD is needed  |   tbc |
+| TUM       |     Robot arm                                 | | | is 2m high, 4m width; LAN/Wifi (no Internet); should be protoced  |                                                 |   tbc |
+| TUM       |     Philips Hue Lamp and Switch               | | | LAN                                                               |                                                 |   tbc |
+| TUM       |     different remote devices (raspberry pi,etc)| | | Internet                                                          |                                                 |   tbc |
+| TUM       |     simulated devices (robot arms)             | | x | LAN/Wifi                                                          |                                                 |   tbc |
+| ...       |     ...                                        | | | ...                                                               |  ...                                            |   tbc |
 
-Note: We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.). Steakholders from related SDOs are welcome to contribute. 
+Note: 
+* We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
+* Steakholders from related SDOs are welcome to contribute.
+* 
 
 
 ### WoT WG/IG Setups
