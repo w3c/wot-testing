@@ -48,13 +48,14 @@ We should experiment on the new features we are planning and collect implementat
 * "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized and its results will be used for the Interoperability Test Suite topic below.
 * Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? Strongly relates to normative consumption above.
 * New meta operations
-* OPC UA Binding
+
 
 ## WIP - Other Topics
 
 * Top-level operation for observing changes to TD (needs further discussion)
 * Discovery interface of Scripting API
-* AMQP Binding 
+* AMQP Binding
+* OPC UA Binding 
 
 ## List of devices that will be available for the PlugFest
 
