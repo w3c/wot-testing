@@ -74,6 +74,7 @@ Note:
 * We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
 * Steakholders from related SDOs are welcome to contribute.
 * We need to clearify about participants that can only join remotly. Is there an open connection to the local PlugFest network?
+* Detail information of the Things can be provided specific subfolders of this github (e.g. folders by company name)
 
 
 ### WoT WG/IG Setups
