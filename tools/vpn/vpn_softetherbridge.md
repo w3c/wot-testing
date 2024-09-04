@@ -88,30 +88,87 @@ VPN Server/BRIDGE>CascadeOnline mybridge   <---
 ## 8. Note for Local Bridging
 If you need to connect the machines in VPN from the machine where `vpnbridge` is running,
 
-you should make a bridge,
-
-```
-% sudo apt install bridge-utils
-
-% sudo brctl addbr br0
-```
-
 create tap interface on step 6 in above,
 
 ```
 VPN Server>BridgeCreate BRIDGE /DEVICE:svpn /TAP:yes      <----
 ```
 
-then bridge the tap interface and physical interface (`eth0`) using:
+Install net-tools and bridged-utils to create a bridged interface.
+```
+% sudo apt install net-tools bridge-utils
+```
+
+Before creating the tap interface, check the physical interface ('eth0') MAC address by running.
+```
+% ifconfig
+```
+
+On the ifconfig output, you can find the MAC address under ether, as shown below.
+```
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+       ether 00:a0:98:79:42:65  txqueuelen 1000  (Ethernet)
+       ↑---------------------↑ -> This is Mac address
+```
+
+Then, modify netplan to create a bridged interface as shown,
+```
+% sudo nano /etc/netplan/50-cloud-init.yaml # Opening netplan condig file
+```
+Add bridged interface
+```
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: false <--- Make sure to change to false!!! Otherwise you cannot access your device over ether anymore.
+  bridges:
+    br0:
+      macaddress: 00:a0:98:79:42:65  <--- Change to physical MAC address from ifconig
+      interfaces: [ eth0 ]
+      dhcp4: true
+      parameters:
+        stp: true
+        forward-delay: 4
+```
+Now apply netplan
+```
+% sudo netplan apply
+```
+
+Then bridge the tap interface and bridge interface (`br0`) using:
+```
+% suo brctl addif br0 tap_svpn
+```
+
+In order to automatically bridge tap interface with bridged interface (`br0`) make shell script as shown,
+```
+% nano set-tap.sh
+```
+Copy those lines into set-tap.sh file.
+```
+#!/bin/bash
+
+# Make sure softether vpn server started
+while [ -z "$(ifconfig | grep tap_svpn)" ]; do
+    sleep 5
+done
+
+sleep 2
+brctl addif br0 tap_svpn
+```
+Save this file, and run below command to make executable
+```
+% chmod +x set-tap.sh
+```
+
+And add to crontab with "@reboot" flag, so it run automatically on the boot, as shown example below
+```
+% sudo crontab -e
+```
 
 ```
-% sudo brctl addif br0 tap_svpn
-
-% sudo brctl addif br0 eth0
-
-% sudo ip link set br0 up
-
-% sudo dhclient br0
+@reboot /root/set-tap.sh <--- Change this with the actual file location on the system
 ```
 
 You may adjust DHCP setting for physical interfaces.
