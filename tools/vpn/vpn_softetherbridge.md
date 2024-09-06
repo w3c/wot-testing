@@ -14,7 +14,7 @@ create a service and a configuration file.
 - Select Platform -> Linux
 - Select CPU -> ARM EABI (32bit)
 - Download newest file
-- As of this writing, newest file is
+- As of this writing, newest files are
   - [SoftEther VPN Stable Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases)
   - [SoftEther VPN Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN/releases)
   - [v4.41-9782 ARM-64bit](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnbridge-v4.41-9782-beta-2022.11.17-linux-arm64-64bit.tar.gz)
