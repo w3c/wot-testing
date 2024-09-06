@@ -213,7 +213,7 @@ then setting up an `init.d` service file.  However the instructions for the serv
 quite right for the Raspberry Pi which does not have `chkconfig`.
 Instead you have to
 manually set the dependencies in the service file (see here for an appropriate
-[init.d/vpnbridge service file](vpnbridge)) and then use the following to
+[`init.d/vpnbridge` service file](vpnbridge)) and then use the following to
 make it executable and register it:
 
 ```
