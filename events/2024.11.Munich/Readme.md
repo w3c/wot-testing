@@ -7,18 +7,27 @@ The main goal of this plugfest is to test the feasibility of existing and new fe
 As a secondary goal, these tests will be put into user scenarios that are understandable by visitors.
 Stakeholders from related SDOs are welcome to contribute.
 
-## List of devices that will be available for the PlugFest
+## List of Things that will be available for the PlugFest
 
-| Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                        |Contact|
-|--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-------------------------------------------------|-------|
-| Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | LAN                                                                | Modbus                                          |   tbc |
-| Siemens      | Industrial Edge                               |  x       |        |         | LAN, connection to the Internet                                    | OPC UA, HTTP                                    |   tbc |
-| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed  |   tbc |
-| TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protoced      |                                                 |   tbc |
-| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                 |   tbc |
-| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                 |   tbc |
-| TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                 |   tbc |
-| ...          |     ...                                       |          |        |         | ...                                                                |  ...                                            |   tbc |
+| Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
+|--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | LAN                                                                | Modbus                                              |   tbc |
+| Siemens      | Industrial Edge                               |  x       |        |         | LAN, connection to the Internet                                    | OPC UA, HTTP                                        |   tbc |
+| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
+| TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protoced      |                                                     |   tbc |
+| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                     |   tbc |
+| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   tbc |
+| TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   tbc |
+| Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
+| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
+
+## List of Consumers that will be available for the PlugFest
+
+| Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
+|--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
 
@@ -39,10 +48,12 @@ Some ideas:
   * maybe a topic that can be discussed with the NGSI-LD cooperation
 * WoT for Cloud Systems
   * maybe Azure IoT from Microsoft and Oracle Cloud (TBC)
-* Plug & Play in Industry Scenarios
+* Plug & Play in Industrial Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
-  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP  
+  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP
+  * Maybe relevant for McCool's devices
+* Smart Home (McCool)
 
 ## WIP - TD Topics
 
