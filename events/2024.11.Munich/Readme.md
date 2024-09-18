@@ -5,50 +5,72 @@ In this folder, technical information is found, such as test plans for features.
 
 The main goal of this plugfest is to test the feasibility of existing and new features of WoT standards.
 As a secondary goal, these tests will be put into user scenarios that are understandable by visitors.
+Stakeholders from related SDOs are welcome to contribute.
+
+## List of devices that will be available for the PlugFest
+
+| Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                        |Contact|
+|--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-------------------------------------------------|-------|
+| Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | LAN                                                                | Modbus                                          |   tbc |
+| Siemens      | Industrial Edge                               |  x       |        |         | LAN, connection to the Internet                                    | OPC UA, HTTP                                    |   tbc |
+| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed  |   tbc |
+| TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protoced      |                                                 |   tbc |
+| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                 |   tbc |
+| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                 |   tbc |
+| TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                 |   tbc |
+| ...          |     ...                                       |          |        |         | ...                                                                |  ...                                            |   tbc |
+
+Notes: 
+
+* We must clarify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
+* We need to clarify which participants can only join remotely. Is there an open connection to the local PlugFest network?
+* Detail information about the Things can be provided in specific subfolders of this GitHub (e.g. folders by company name)
+* We need to clarify if we need a VPN connection. W3C may provide one.
+* We should run a trial run two weeks before the PlugFest.
 
 ## WIP - User Scenarios
 
-Different tests we do can be placed into context, e.g. smart cities. 
-This way, once we present WoT to the visitors, they can relate better.
+Different tests we do can be placed into context, e.g., smart cities. 
+This way, they can relate better once we present WoT to the visitors.
+
 Some ideas:
 
 * Smart City
-  * maybe a topic which can be discussed with the NGSI-LD cooperation
+  * maybe a topic that can be discussed with the NGSI-LD cooperation
 * WoT for Cloud Systems
-  * maybe Azure IoT from Microsoft and Oracle cloud (tbc)
+  * maybe Azure IoT from Microsoft and Oracle Cloud (TBC)
 * Plug & Play in Industry Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
-  * David will check with a company if they could join the PlugFest. The cash systems seems to use AMQP  
+  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP  
 
 ## WIP - TD Topics
 
 ### Existing Features
 
-We should make sure that the existing features that the implementers have questions about are specified correctly. All these points are prioritized over new features.
+We should ensure that the existing features the implementers have questions about are correctly specified. All these points are prioritized over new features.
 
 * Additional Responses
   * Error Handling on the application level (Scripting API is connected here)
-    * would be good to have real world example  
+    * it would be good to have a real-world example  
   * Multiple possible successful responses
     * query-able actions?
     * in Discovery API are examples where multiple responses are provided 
   * Default behavior (is it a normal response or is it an additional one)
 * Linking between TDs
-* Specifying multiple `@type`s to TDs: This is confusing to people. We need more guidance.
+* Specifying multiple `@type`s to TDs: This confuses people. We need more guidance.
 * Complex actions: Async and sync
-* Meta Operations (top-level form operations): Are they implemented correctly. This will be prioritized and idenfied gaps can be addressed as new meta operations.
+* Meta Operations (top-level form operations): Are they implemented correctly? This will be prioritized and identified gaps could be addressed as new meta operations.
 
 ### New Features
 
-We should experiment on the new features we are planning and collect implementation experience.
+We should experiment with the new features we are planning and collect implementation experience.
   
 * Initial connection
 * [Data Mapping:](https://github.com/w3c/wot/blob/main/planning/ThingDescription/td-next-work-items/usability-and-design.md#data-schema-mapping) This topic will be prioritized. It also related to additional responses existing feature mentioned above.
-* "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized and its results will be used for the Interoperability Test Suite topic below.
-* Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? Strongly relates to normative consumption above.
+* "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized, and its results will be used for the Interoperability Test Suite topic below.
+* Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? This strongly relates to the normative consumption above.
 * New meta operations
-
 
 ## WIP - Other Topics
 
@@ -56,32 +78,3 @@ We should experiment on the new features we are planning and collect implementat
 * Discovery interface of Scripting API
 * AMQP Binding
 * OPC UA Binding 
-
-## List of devices that will be available for the PlugFest
-
-| Company   | Things/Devices/System/Tools                      | Remote | Virtual | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                                        |Contact|
-|-----------|-----------------------------------------------|-|-|-------------------------------------------------------------------|-------------------------------------------------|-------|
-| Siemens   |     Sentron PAC (energy meter)                | | | LAN                                                               | Modbus                                          |   tbc |
-| Siemens   |     Industrial Edge                           | | | LAN, connection to the Internet                                   | OPC UA, HTTP                                    |   tbc |
-| TUM       |     Hololens                                  | | | Wifi                                                              | no sec should be used; QR code to TD is needed  |   tbc |
-| TUM       |     Robot arm                                 | | | is 2m high, 4m width; LAN/Wifi (no Internet); should be protoced  |                                                 |   tbc |
-| TUM       |     Philips Hue Lamp and Switch               | | | LAN                                                               |                                                 |   tbc |
-| TUM       |     different remote devices (raspberry pi,etc)| x | | Internet                                                          |                                                 |   tbc |
-| TUM       |     simulated devices (robot arms)             | | x | LAN/Wifi                                                          |                                                 |   tbc |
-| ...       |     ...                                        | | | ...                                                               |  ...                                            |   tbc |
-
-Note: 
-* We need to clearify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
-* Steakholders from related SDOs are welcome to contribute.
-* We need to clearify about participants that can only join remotly. Is there an open connection to the local PlugFest network?
-* Detail information of the Things can be provided specific subfolders of this github (e.g. folders by company name)
-* We need to clearify, if we need a VPN connection. W3C may provide one.
-* We should run a trial run 2 weeks before the PlugFest.
-
-
-### WoT WG/IG Setups
-
-### External Setups
-
-If you want to showcase your use cases, you can do so. You can join the Plugfest activity (Monday and Tuesday) to test your setup together with others.
-
