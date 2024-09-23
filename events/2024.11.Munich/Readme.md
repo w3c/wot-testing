@@ -19,8 +19,10 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   tbc |
 | TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   tbc |
 | Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
-| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   @mmccool |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   David Ezell |
+| CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
+| CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
