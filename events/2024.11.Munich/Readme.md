@@ -21,12 +21,15 @@ Stakeholders from related SDOs are welcome to contribute.
 | Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
 | Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
 | ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | LAN                                                                | Working on participant's laptop                     | https://github.com/jeremylemee |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
+| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | ...                                                                |  ...                                                | https://github.com/jeremylemee |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
