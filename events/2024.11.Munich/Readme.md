@@ -13,7 +13,6 @@ Stakeholders from related SDOs are welcome to contribute.
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
 | Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | LAN                                                                | Modbus                                              |   tbc |
 | Siemens      | Industrial Edge                               |  x       |        |         | LAN, connection to the Internet                                    | OPC UA, HTTP                                        |   tbc |
-| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
 | TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protoced      |                                                     |   tbc |
 | TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                     |   tbc |
 | TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   tbc |
@@ -27,6 +26,7 @@ Stakeholders from related SDOs are welcome to contribute.
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
