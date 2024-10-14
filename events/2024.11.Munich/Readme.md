@@ -20,13 +20,15 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   tbc |
 | Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
 | Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   Michael Robins and Denis Ioan |
+| Ignite Retail| IP Camera                                     |  x       |        |         |                                                                    |                                                     |   Josh Thomas |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| IgniteRetail | Command Center                                | x        | x      |         |                                                                    | Can be deployed locally or cloud                    | Josh Thomas |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
@@ -51,8 +53,11 @@ Some ideas:
 * Plug & Play in Industrial Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
-  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP
-  * Maybe relevant for McCool's devices
+  * Correlation of cash depositing on the safe with IP camera detecting the same
+  * Showing cash depositing events in a dashboard
+  * Refrigerator Temperature monitoring (Ignite Retail and McCool)
+  * People counting with different sensors or cameras (Ignite Retail as Consumer, Thing?)
+  * Energy Consumption Monitoring (Siemens Energy Meter, Siemens? Gateway, Ignite Retail Consumer)
 * Smart Home (McCool)
 
 ## WIP - TD Topics
