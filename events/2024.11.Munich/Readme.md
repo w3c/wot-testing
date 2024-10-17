@@ -13,21 +13,32 @@ Stakeholders from related SDOs are welcome to contribute.
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
 | Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | LAN                                                                | Modbus                                              |   tbc |
 | Siemens      | Industrial Edge                               |  x       |        |         | LAN, connection to the Internet                                    | OPC UA, HTTP                                        |   tbc |
-| Siemens      | KNX IoT Devices                               |  x       |        |         |                                                                    | Thread Border Router, Temperature, Humidity and CO2 Sensor, Radiator Valve Actuator, Room Controller Unit |   tbc |
-| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
-| TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protoced      |                                                     |   tbc |
-| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                     |   tbc |
-| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   tbc |
-| TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   tbc |
-| Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
-| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| Siemens      | Thread Border Router                          |  x       |        |         |                                                                    | KNX IoT supported                                   | @mkovatsc |
+| Siemens      | Temperature, Humidity and CO2 Sensor          |  x       |        |         |                                                                    | KNX IoT supported                                   | @mkovatsc | 
+| Siemens      | Radiator Valve Actuator                       |  x       |        |         |                                                                    | KNX IoT supported                                   | @mkovatsc |
+| Siemens      | Room Controller Unit                          |  x       |        |         |                                                                    | KNX IoT supported                                   | @mkovatsc |
+| Siemens      | Microscope (Openflexure)                      |  x       |        |         | LAN                                                                |                                                     |   @egekorkan |
+| TU Munich    | Robot arm                                     |  x       |        |         | 2m high, 4m width; LAN/Wifi (no Internet); should be protected     |                                                     |   @FadySalama |
+| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | LAN                                                                |                                                     |   @FadySalama |
+| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   @FadySalama |
+| TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   @FadySalama |
+| Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   @lu-zero |
+| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   @mmccool |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   Michael Robins and Denis Ioan |
+| Ignite Retail| IP Camera                                     |  x       |        |         |                                                                    |                                                     |   Josh Thomas |
+| Uni St. Gallen |  YggDrasil                                  |          |        | x       | LAN                                                                | Working on participant's laptop                     | https://github.com/jeremylemee |
+| CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
+| CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| IgniteRetail | Command Center                                | x        | x      |         |                                                                    | Can be deployed locally or cloud                    | Josh Thomas |
+| TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
+| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
+| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | ...                                                                |  ...                                                | https://github.com/jeremylemee |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
@@ -52,8 +63,11 @@ Some ideas:
 * Plug & Play in Industrial Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
-  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP
-  * Maybe relevant for McCool's devices
+  * Correlation of cash depositing on the safe with IP camera detecting the same
+  * Showing cash depositing events in a dashboard
+  * Refrigerator Temperature monitoring (Ignite Retail and McCool)
+  * People counting with different sensors or cameras (Ignite Retail as Consumer, Thing?)
+  * Energy Consumption Monitoring (Siemens Energy Meter, Siemens? Gateway, Ignite Retail Consumer)
 * Smart Home (McCool)
 
 ## WIP - TD Topics
