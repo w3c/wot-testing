@@ -20,8 +20,9 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | Internet                                                           |                                                     |   tbc |
 | TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   tbc |
 | Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   tbc |
-| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   @mmccool |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   David Ezell |
+| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   tbc |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| Uni St. Gallen |  YggDrasil                                  |          |        | x       | LAN                                                                | Working on participant's laptop                     | https://github.com/jeremylemee |
 | CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
 | CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
@@ -30,6 +31,8 @@ Stakeholders from related SDOs are welcome to contribute.
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
+| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | ...                                                                |  ...                                                | https://github.com/jeremylemee |
 | ...          |     ...                                       |          |        |         | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
