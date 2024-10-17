@@ -20,7 +20,8 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Simulated devices (robot arms)                |          |        | x       | LAN/Wifi                                                           |                                                     |   @FadySalama |
 | Luminem      | Simulated devices (TBC)                       |  x       |        | x       | Laptop to run them locally                                         |                                                     |   @lu-zero |
 | Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       |                                                                    | Some services can be run locally by someone else    |   @mmccool |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   tbc |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         |                                                                    | Each time someone deposits cash, it emits an event  |   Michael Robins and Denis Ioan |
+| Ignite Retail| IP Camera                                     |  x       |        |         |                                                                    |                                                     |   Josh Thomas |
 | Uni St. Gallen |  YggDrasil                                  |          |        | x       | LAN                                                                | Working on participant's laptop                     | https://github.com/jeremylemee |
 | CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
 | CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         | LAN                                                                |                                                     |   @VigneshVSV |
@@ -30,6 +31,7 @@ Stakeholders from related SDOs are welcome to contribute.
 
 | Organization | Application                                   | Physical | Remote | Virtual | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
+| IgniteRetail | Command Center                                | x        | x      |         |                                                                    | Can be deployed locally or cloud                    | Josh Thomas |
 | TU Munich    | Hololens                                      |  x       |        |         | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
 | UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | ...                                                                |  ...                                                | https://github.com/jeremylemee |
@@ -57,8 +59,11 @@ Some ideas:
 * Plug & Play in Industrial Scenarios
   * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
 * Retail (David)
-  * David will check with a company to see if they can join the PlugFest. The cash systems seem to use AMQP
-  * Maybe relevant for McCool's devices
+  * Correlation of cash depositing on the safe with IP camera detecting the same
+  * Showing cash depositing events in a dashboard
+  * Refrigerator Temperature monitoring (Ignite Retail and McCool)
+  * People counting with different sensors or cameras (Ignite Retail as Consumer, Thing?)
+  * Energy Consumption Monitoring (Siemens Energy Meter, Siemens? Gateway, Ignite Retail Consumer)
 * Smart Home (McCool)
 
 ## WIP - TD Topics
