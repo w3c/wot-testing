@@ -3,8 +3,12 @@
 NOTE: These instructions assume you are using linux on Raspberry Pi.
 `testuser/pftest` is a sample User ID and password in the instruction.
 This setup is NOT a persistent service; if you reboot, you will have to
-reconfigure it.  TODO: separate static and per-boot parts of instructions;
-create a service and a configuration file.
+reconfigure it.  
+
+TODO:
+
+- separate static and per-boot parts of instructions
+- create a service and a configuration file.
 
 ## 1. Download VPN Bridge from SoftEther Download Center
 
@@ -12,13 +16,14 @@ create a service and a configuration file.
 - Select Software -> SoftEther VPN (Freeware)
 - Select Component -> SoftEther VPN Bridge
 - Select Platform -> Linux
-- Select CPU -> ARM EABI (32bit)
+- Select CPU -> ARM EABI (32bit) or ARM 64bit (64bit)
 - Download newest file
 - As of this writing, newest files are
+  - [Stable v4.41-9782 ARM-64bit](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnbridge-v4.41-9782-beta-2022.11.17-linux-arm64-64bit.tar.gz)
+  - [Stable v4.41-9782 ARM-32bit](https://www.softether-download.com/files/softether/v4.43-9799-beta-2023.08.31-tree/Linux/SoftEther_VPN_Bridge/32bit_-_ARM_EABI/softether-vpnbridge-v4.43-9799-beta-2023.08.31-linux-arm_eabi-32bit.tar.gz)
+- Alternatively, it can download form github
   - [SoftEther VPN Stable Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases)
-  - [SoftEther VPN Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN/releases)
-  - [v4.41-9782 ARM-64bit](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnbridge-v4.41-9782-beta-2022.11.17-linux-arm64-64bit.tar.gz)
-  - [v4.41-9782 ARM-32bit](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnbridge-v4.41-9782-beta-2022.11.17-linux-arm-32bit.tar.gz)
+  - [SoftEther VPN Dev Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN/releases)
 
 ## 2. Extract Downloaded Archive File
 
@@ -73,6 +78,8 @@ Confirm input: **************    <--- again
 
 ## 6. Connect Virtual Hub `BRIDGE` with Physical Interface (e.g. `eth0`)
 
+If you are planning to use the tap interface (local bridging), skip this step. Please see section 8 for the local bridge.
+
 ```
 VPN Server>BridgeDeviceList      <----
 BridgeDeviceList command - Get List of Network Adapters Usable as Local Bridge
@@ -99,33 +106,35 @@ VPN Server/BRIDGE>CascadeOnline mybridge   <---
 
 If you need to connect the machines in VPN from the machine where `vpnbridge` is running,
 
-create tap interface on step 6 in above,
+Create tap interafce, so it can communicate with local network,
 
 ```
 VPN Server>BridgeCreate BRIDGE /DEVICE:svpn /TAP:yes      <----
 ```
 
-Install net-tools and bridged-utils to create a bridged interface.
+Install `bridged-utils` to create a bridged interface,
 
 ```
-% sudo apt install net-tools bridge-utils
+% sudo apt install bridge-utils
 ```
 
-Before creating the tap interface, check the physical interface ('eth0') MAC address by running.
+Before creating a bridge interface, get physical interface's MAC address by running,
 
 ```
-% ifconfig
+% ip link
 ```
 
-On the ifconfig output, you can find the MAC address under ether, as shown below.
+On the `ip link` output, you can find the MAC, as shown below.
 
 ```
-eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-       ether 00:a0:98:79:42:65  txqueuelen 1000  (Ethernet)
-       ↑---------------------↑ -> This is Mac address
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UP mode DEFAULT group default qlen 1000
+    link/ether 00:a0:98:79:42:65 brd ff:ff:ff:ff:ff:ff
+    ↑--------------------------↑ -> This is Mac address
 ```
 
-Then, modify netplan to create a bridged interface as shown,
+Physical interface names may vary.  Use a interface name of dedicated network adapter for bridging.
+
+To create bridged interface, we need to modify the netplan, to modify `netplan`,
 
 ```
 % sudo nano /etc/netplan/50-cloud-init.yaml # Opening netplan condig file
@@ -138,7 +147,7 @@ network:
   version: 2
   ethernets:
     eth0:
-      dhcp4: false <--- Make sure to change to false!!! Otherwise you cannot access your device over ether anymore.
+      dhcp4: false <--- Make sure to change to false!!! Otherwise you cannot access your device over ethernet anymore.
   bridges:
     br0:
       macaddress: 00:a0:98:79:42:65  <--- Change to physical MAC address from ifconig
@@ -149,52 +158,17 @@ network:
         forward-delay: 4
 ```
 
-Now apply netplan
+Now apply `netplan` to activate bridged interface (`br0`),
 
 ```
 % sudo netplan apply
 ```
 
-Then bridge the tap interface and bridge interface (`br0`) using:
+Now, we can link tap interface from SoftEther VPN to bridged interface (`br0`)
+that we created,
 
 ```
-% suo brctl addif br0 tap_svpn
-```
-
-In order to automatically bridge tap interface with bridged interface (`br0`) make shell script as shown,
-
-```
-% nano set-tap.sh
-```
-
-Copy those lines into set-tap.sh file.
-
-```
-#!/bin/bash
-
-# Make sure softether vpn server started
-while [ -z "$(ifconfig | grep tap_svpn)" ]; do
-    sleep 5
-done
-
-sleep 2
-brctl addif br0 tap_svpn
-```
-
-Save this file, and run below command to make executable
-
-```
-% chmod +x set-tap.sh
-```
-
-And add to crontab with "@reboot" flag, so it run automatically on the boot, as shown example below
-
-```
-% sudo crontab -e
-```
-
-```
-@reboot /root/set-tap.sh <--- Change this with the actual file location on the system
+% sudo brctl addif br0 svpn
 ```
 
 You may adjust DHCP setting for physical interfaces.
@@ -213,7 +187,7 @@ then setting up an `init.d` service file.  However the instructions for the serv
 quite right for the Raspberry Pi which does not have `chkconfig`.
 Instead you have to
 manually set the dependencies in the service file (see here for an appropriate
-[`init.d/vpnbridge` service file](vpnbridge)) and then use the following to
+[init.d/vpnbridge service file](vpnbridge)) and then use the following to
 make it executable and register it:
 
 ```
@@ -224,7 +198,7 @@ make it executable and register it:
 As a secondary problem,
 if you want to use a bridge interface (see `br0` above) then you have to make the
 `br0` interface persistent.  This is a bit tricky since `br0` depends on the
-`tap_svpn` interface which
+`svpn` interface which
 is actually dynamically created by `vpnbridge` when it starts.
 One way around this is to add the
 bridge creation to `/etc/network/interfaces`, but the Raspberry Pi makes this complicated by autogenerating
