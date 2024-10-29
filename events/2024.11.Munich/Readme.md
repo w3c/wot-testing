@@ -39,7 +39,7 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
 | UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                |  ...                                                | https://github.com/jeremylemee |
-| Invited Experts | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                               |  ...                                                | @JKRhb |
+| Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                               |  ...                                                | @JKRhb |
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                |   tbc |
 
 Notes: 
