@@ -41,7 +41,9 @@ Stakeholders from related SDOs are welcome to contribute.
 | UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
 | Hitachi      |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      |       |
+| Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                              | Table 4                                                | @JKRhb |
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
+
 
 Notes: 
 
