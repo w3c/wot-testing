@@ -100,6 +100,10 @@ We should experiment with the new features we are planning and collect implement
 * Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? This strongly relates to the normative consumption above.
 * New meta operations
 
+## WIP - Discovery/Registry Topics
+* tbc
+
+
 ## WIP - Other Topics
 
 * Top-level operation for observing changes to TD (needs further discussion)
