@@ -9,38 +9,41 @@ Stakeholders from related SDOs are welcome to contribute.
 
 ## List of Things that will be available for the PlugFest
 
-| Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
-|--------------|-----------------------------------------------|----------|--------|---------|--------------------|--------------------------------------------------------------------|-----------------------------------------------------|-------|
-| Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | Modbus             | LAN                                                                |                                                     |   tbc |
-| Siemens      | Industrial Edge                               |  x       |        |         | OPC UA, HTTP       | LAN, connection to the Internet                                    |                                                     |   tbc |
-| Siemens      | Microscope (Openflexure)                      |  x       |        |         | HTTP               | LAN                                                                |                                                     | @egekorkan |
-| Siemens      | Thread Border Router                          |  x       |        |         | KNX IoT            |                                                                    |                                                     | @mkovatsc |
-| Siemens      | Temperature, Humidity and CO2 Sensor          |  x       |        |         | KNX IoT            |                                                                    |                                                     | @mkovatsc |
-| Siemens      | Radiator Valve Actuator                       |  x       |        |         | KNX IoT            |                                                                    |                                                     | @mkovatsc |
-| Siemens      | Room Controller Unit                          |  x       |        |         | KNX IoT            |                                                                    |                                                     | @mkovatsc |
-| TU Munich    | Robot arm                                     |  x       |        |         | HTTP               | 2m high, 4m width; LAN/Wifi (no Internet); should be protected     |                                                     |   @FadySalama |
-| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | HTTP               | LAN                                                                |                                                     |   @FadySalama |
-| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | HTTPS              | Internet                                                           |                                                     |   @FadySalama |
-| TU Munich    | Simulated devices (robot arms)                |          |        | x       | HTTP but flexible  | LAN/Wifi                                                           |                                                     |   @FadySalama |
-| Luminem      | Simulated devices (TBC)                       |  x       |        | x       | HTTP               | Laptop to run them locally                                         |                                                     |   @lu-zero |
-| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       | HTTP(s)            |                                                                    | Some services can be run locally by someone else    |   @mmccool |
-| ArmorSafe    | Cache System 7000                             |  x       |        |         | HTTP               |                                                                    | Each time someone deposits cash, it emits an event  |   Michael Robins and Denis Ioan |
-| Ignite Retail| IP Camera                                     |  x       |        |         |                    |                                                                    |                                                     |   Josh Thomas |
-| Uni St. Gallen |  YggDrasil                                  |          |        | x       | HTTP               | LAN                                                                | Working on participant's laptop                     | https://github.com/jeremylemee |
-| CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         |                    | LAN                                                                |                                                     |   @VigneshVSV |
-| CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         |                    | LAN                                                                |                                                     |   @VigneshVSV |
-| ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                |   tbc |
+| Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
+|--------------|-----------------------------------------------|----------|--------|---------|--------------------|--------------------------------------------------------------------|--------------------------------------------------------------|-------|
+| Siemens      | Sentron PAC (energy meter)                    |  x       |        |         | Modbus             | LAN                                                                | Table 1                                                      |   tbc |
+| Siemens      | Industrial Edge                               |  x       |        |         | OPC UA, HTTP       | LAN, connection to the Internet                                    | Table 1                                                      |   tbc |
+| Siemens      | Microscope (Openflexure)                      |  x       |        |         | HTTP               | LAN                                                                | Table 1                                                      | @egekorkan |
+| Siemens      | Thread Border Router                          |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc |
+| Siemens      | Temperature, Humidity and CO2 Sensor          |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc |
+| Siemens      | Radiator Valve Actuator                       |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc |
+| Siemens      | Room Controller Unit                          |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc |
+| TU Munich    | Robot arm                                     |  x       |        |         | HTTP               | 2m high, 4m width; LAN/Wifi (no Internet); should be protected     | has own table                                                      |   @FadySalama |
+| TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | HTTP               | LAN                                                                | Table 2                                                      |@FadySalama |
+| TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | HTTPS              | Internet                                                           | Table 2                                                      |@FadySalama |
+| TU Munich    | Simulated devices (robot arms)                |          |        | x       | HTTP but flexible  | LAN/Wifi                                                           | Table 2                                                      |@FadySalama |
+| Luminem      | Simulated devices (TBC)                       |  x       |        | x       | HTTP               | Laptop to run them locally                                         |                                                              | @lu-zero |
+| Intel        | Services (AI, Speech Recog.)                  |  x       | x      | x       | HTTP(s)            |                                                                    | Table 3; Some services can be run locally by someone else    | @mmccool |
+| ArmorSafe    | Cache System 7000                             |  x       |        |         | HTTP               |                                                                    | Table 3; Each time someone deposits cash, it emits an event  |   Michael Robins and Denis Ioan |
+| Ignite Retail| IP Camera                                     |  x       |        |         |                    |                                                                    | Table 3                                                      |   Josh Thomas |
+| Uni St. Gallen |  YggDrasil                                  |          |        | x       | HTTP               | LAN                                                                | Table 4; Working on participant's laptop                     | https://github.com/jeremylemee |
+| CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         |                    | LAN                                                                | Table 5                                                      |   @VigneshVSV |
+| CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         |                    | LAN                                                                | Table 5                                                      |   @VigneshVSV |
+| Hitachi      | Small sensor  device                          |  x       |        |         | HTTP, ZeroMQ       | LAN                                                                | Table 6                                                      |     |
+| ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
 
-| Organization | Application                                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                            |Contact|
-|--------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|-----------------------------------------------------|-------|
-| IgniteRetail | Command Center                                | x        | x      |         |                    |                                                                    | Can be deployed locally or cloud                    | Josh Thomas |
-| TU Munich    | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | no sec should be used; QR code to TD is needed      |   tbc |
-| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    |  Multi agent system platform (only software)        | https://github.com/RemCollier |
-| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                |  ...                                                | https://github.com/jeremylemee |
-| Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                               |  ...                                                | @JKRhb |
-| ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                |   tbc |
+| Organization | Application                                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
+|--------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|---------------------------------------------------------------|-------|
+| IgniteRetail | Command Center                                | x        | x      |         |                    |                                                                    | Table 3; Can be deployed locally or cloud                    | Josh Thomas |
+| TU Munich    | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | Table 2; no sec should be used; QR code to TD is needed      |   tbc |
+| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
+| Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
+| Hitachi      |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      |       |
+| Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                              | Table 4                                                | @JKRhb |
+| ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
+
 
 Notes: 
 
@@ -98,6 +101,10 @@ We should experiment with the new features we are planning and collect implement
 * "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized, and its results will be used for the Interoperability Test Suite topic below.
 * Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? This strongly relates to the normative consumption above.
 * New meta operations
+
+## WIP - Discovery/Registry Topics
+* tbc
+
 
 ## WIP - Other Topics
 
