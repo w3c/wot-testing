@@ -29,6 +29,7 @@ Stakeholders from related SDOs are welcome to contribute.
 | Uni St. Gallen |  YggDrasil                                  |          |        | x       | HTTP               | LAN                                                                | Table 4; Working on participant's laptop                     | https://github.com/jeremylemee |
 | CALA Munich  | Oscilloscope (Picoscope brand)                |  x       |        |         |                    | LAN                                                                | Table 5                                                      |   @VigneshVSV |
 | CALA Munich  | Ethernet Camera (IDS GmbH brand)              |  x       |        |         |                    | LAN                                                                | Table 5                                                      |   @VigneshVSV |
+| Hitachi      | Small sensor  device                          |  x       |        |         | HTTP, ZeroMQ       | LAN                                                                | Table 6                                                      |     |
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
 ## List of Consumers that will be available for the PlugFest
@@ -39,6 +40,7 @@ Stakeholders from related SDOs are welcome to contribute.
 | TU Munich    | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | Table 2; no sec should be used; QR code to TD is needed      |   tbc |
 | UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
+| Hitachi      |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      |       |
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
 Notes: 
