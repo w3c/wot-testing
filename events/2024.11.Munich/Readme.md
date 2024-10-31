@@ -42,9 +42,9 @@ Stakeholders from related SDOs are welcome to contribute.
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
 | Hitachi      |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      |       |
 | Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                              | Table 4                                                | @JKRhb |
-| Microsoft    |  OPC Publisher   | x        |        |  X      | OPC UA   | LAN or Wifi                                                              | Table 4                                                |        |
-| OPC Foundation  | UA Edge Translator   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 4                                                |        |
-| Erich Barnstedt  | UA Cloud Publisher   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 4                                                |        |
+| Microsoft    |  OPC Publisher   | x        |        |  X      | OPC UA   | LAN or Wifi                                                              | Table 7                                                |        |
+| OPC Foundation  | UA Edge Translator   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 7                                                |        |
+| Erich Barnstedt  | UA Cloud Publisher   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 7                                                |        |
 
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
