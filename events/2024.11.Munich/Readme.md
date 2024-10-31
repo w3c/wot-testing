@@ -38,10 +38,14 @@ Stakeholders from related SDOs are welcome to contribute.
 |--------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|---------------------------------------------------------------|-------|
 | IgniteRetail | Command Center                                | x        | x      |         |                    |                                                                    | Table 3; Can be deployed locally or cloud                    | Josh Thomas |
 | TU Munich    | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | Table 2; no sec should be used; QR code to TD is needed      |   tbc |
-| UC Dublins   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
+| UC Dublin   | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
 | Uni St. Gallen |  YggDrasil                                  |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
 | Hitachi      |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      |       |
 | Eclipse Thingweb | Cross-platform app (using `dart_wot`)      | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                              | Table 4                                                | @JKRhb |
+| Microsoft    |  OPC Publisher   | x        |        |  X      | OPC UA   | LAN or Wifi                                                              | Table 4                                                |        |
+| OPC Foundation  | UA Edge Translator   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 4                                                |        |
+| Erich Barnstedt  | UA Cloud Publisher   | x        |        |  X      | OPC UA   | LAN     or Wifi                                                          | Table 4                                                |        |
+
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
 
