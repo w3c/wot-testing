@@ -1,0 +1,3884 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    "https://iot.mozilla.org/schemas/"
+  ],
+  "@type": [
+    "org.openflexure.microscope"
+  ],
+  "id": "OpenFlexureMicroscopeopenflexure:microscope:9cd38bce-9d27-4f00-8a2a-52d48b96a9fc:96da96db-bf8c-4d98-8fc0-34120158c7e3",
+  "title": "OpenFlexure Microscope openflexure:microscope:9cd38bce-9d27-4f00-8a2a-52d48b96a9fc",
+  "description": "Test LabThing-based API for OpenFlexure Microscope",
+  "properties": {
+    "org.openflexure.zipbuilder/get": {
+      "title": "ZipListAPIView",
+      "description": "List all the zip files currently available for download. ",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.zipbuilder/get",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ],
+      "properties": {
+        "data_size": {
+          "type": "number",
+          "format": "decimal"
+        },
+        "id": {
+          "type": "string"
+        },
+        "links": {
+          "type": "object"
+        },
+        "zip_size": {
+          "type": "number",
+          "format": "decimal"
+        }
+      },
+      "type": "object"
+    },
+    "org.openflexure.autostorage/get_locations_view": {
+      "title": "GetLocationsView",
+      "description": "",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autostorage/list-locations",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "org.openflexure.autostorage/preferred_location_view": {
+      "title": "PreferredLocationView",
+      "description": "",
+      "readOnly": false,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autostorage/location",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ],
+      "type": "string",
+      "example": "Default"
+    },
+    "org.openflexure.camera_stage_mapping/get_calibration": {
+      "title": "GetCalibrationFile",
+      "description": "",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/get_calibration",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "CaptureList": {
+      "title": "CaptureList",
+      "description": "",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/captures",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ],
+      "properties": {
+        "annotations": {
+          "type": "object"
+        },
+        "dataset": {
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "path": {
+          "type": "string",
+          "description": "Path of file on microscope device"
+        },
+        "format": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "links": {
+          "type": "object"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "time": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "type": "object"
+    },
+    "SettingsProperty": {
+      "title": "SettingsProperty",
+      "description": "",
+      "readOnly": false,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/settings",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/settings",
+          "contentType": "application/json",
+          "htv:methodName": "PUT"
+        }
+      ]
+    },
+    "StateProperty": {
+      "title": "StateProperty",
+      "description": "",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/state",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "ConfigurationProperty": {
+      "title": "ConfigurationProperty",
+      "description": "",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/configuration",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "StageTypeProperty": {
+      "title": "StageTypeProperty",
+      "description": "The translation stage geometry",
+      "readOnly": false,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/stage/type",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        },
+        {
+          "op": "writeproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/stage/type",
+          "contentType": "application/json",
+          "htv:methodName": "PUT"
+        }
+      ],
+      "type": "string",
+      "example": "SangaStage",
+      "enum": [
+        "SangaStage",
+        "SangaDeltaStage"
+      ],
+      "enumNames": []
+    },
+    "LSTImageProperty": {
+      "title": "LSTImageProperty",
+      "description": "Gets the lens-shading table as an image",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/instrument/camera/lst",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "MjpegStream": {
+      "title": "MjpegStream",
+      "description": "Real-time MJPEG stream from the microscope camera ",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/streams/mjpeg",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "SnapshotStream": {
+      "title": "SnapshotStream",
+      "description": "Single JPEG snapshot from the camera stream ",
+      "readOnly": true,
+      "writeOnly": false,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://192.168.1.128:5000/api/v2/streams/snapshot",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "org.openflexure.autofocus/autofocus": {
+      "title": "autofocus",
+      "description": "Manage actions for autofocus.  This `View` class will return a list of `Action` objects representing each time autofocus has been run in response to a `GET` request, and will start a new `Action` in response to a `POST` request. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/autofocus",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "dz": {
+            "type": "array",
+            "description": "An ascending list of relative z positions",
+            "example": [
+              -300,
+              -200,
+              -100,
+              0,
+              100,
+              200,
+              300
+            ],
+            "items": {
+              "type": "number",
+              "format": "integer"
+            }
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "dz": {
+                "type": "array",
+                "description": "An ascending list of relative z positions",
+                "example": [
+                  -300,
+                  -200,
+                  -100,
+                  0,
+                  100,
+                  200,
+                  300
+                ],
+                "items": {
+                  "type": "number",
+                  "format": "integer"
+                }
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.autofocus/fast_autofocus": {
+      "title": "fast_autofocus",
+      "description": "Manage actions for fast_autofocus.  This `View` class will return a list of `Action` objects representing each time fast_autofocus has been run in response to a `GET` request, and will start a new `Action` in response to a `POST` request. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/fast_autofocus",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "dz": {
+            "type": "number",
+            "format": "integer",
+            "description": "Total Z range to search over (in stage steps)",
+            "example": 2000
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "dz": {
+                "type": "number",
+                "format": "integer",
+                "description": "Total Z range to search over (in stage steps)",
+                "example": 2000
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.autofocus/fast_up_down_up_autofocus": {
+      "title": "fast_up_down_up_autofocus",
+      "description": "Manage actions for fast_up_down_up_autofocus.  This `View` class will return a list of `Action` objects representing each time fast_up_down_up_autofocus has been run in response to a `GET` request, and will start a new `Action` in response to a `POST` request. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/fast_up_down_up_autofocus",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "backlash": {
+            "type": "number",
+            "format": "integer",
+            "description": "Distance to undershoot, before correction move.",
+            "minimum": 0
+          },
+          "dz": {
+            "type": "number",
+            "format": "integer",
+            "description": "Total Z range to search over (in stage steps)",
+            "example": 2000
+          },
+          "initial_move_up": {
+            "type": "boolean",
+            "description": "Set to False to disable the initial move upwards"
+          },
+          "target_z": {
+            "type": "number",
+            "format": "integer",
+            "description": "Target finishing position, relative to the focus.",
+            "example": -100
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "backlash": {
+                "type": "number",
+                "format": "integer",
+                "description": "Distance to undershoot, before correction move.",
+                "minimum": 0
+              },
+              "dz": {
+                "type": "number",
+                "format": "integer",
+                "description": "Total Z range to search over (in stage steps)",
+                "example": 2000
+              },
+              "initial_move_up": {
+                "type": "boolean",
+                "description": "Set to False to disable the initial move upwards"
+              },
+              "target_z": {
+                "type": "number",
+                "format": "integer",
+                "description": "Target finishing position, relative to the focus.",
+                "example": -100
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.autofocus/measure_settling_time": {
+      "title": "measure_settling_time",
+      "description": "Manage actions for measure_settling_time.  This `View` class will return a list of `Action` objects representing each time measure_settling_time has been run in response to a `GET` request, and will start a new `Action` in response to a `POST` request. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/measure_settling_time",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "delay": {
+            "type": "number",
+            "format": "integer",
+            "description": "How long to measure sharpness for after the move, in seconds",
+            "example": 5
+          },
+          "dz": {
+            "type": "number",
+            "format": "integer",
+            "description": "Total Z range to move down, then up (in stage steps)",
+            "example": 500
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "delay": {
+                "type": "number",
+                "format": "integer",
+                "description": "How long to measure sharpness for after the move, in seconds",
+                "example": 5
+              },
+              "dz": {
+                "type": "number",
+                "format": "integer",
+                "description": "Total Z range to move down, then up (in stage steps)",
+                "example": 500
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.autofocus/move_and_measure": {
+      "title": "move_and_measure",
+      "description": "Manage actions for move_and_measure.  This `View` class will return a list of `Action` objects representing each time move_and_measure has been run in response to a `GET` request, and will start a new `Action` in response to a `POST` request. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/move_and_measure",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "required": [
+          "dz"
+        ],
+        "properties": {
+          "dz": {
+            "type": "number",
+            "format": "integer",
+            "description": "The relative Z move to make"
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "required": [
+              "dz"
+            ],
+            "properties": {
+              "dz": {
+                "type": "number",
+                "format": "integer",
+                "description": "The relative Z move to make"
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.scan/tile": {
+      "title": "TileScanAPI",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.scan/tile",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "annotations": {
+            "type": "object",
+            "example": {
+              "Client": "SwaggerUI"
+            }
+          },
+          "autofocus_dz": {
+            "type": "number",
+            "format": "integer"
+          },
+          "bayer": {
+            "type": "boolean",
+            "description": "Include raw bayer data in capture"
+          },
+          "detect_empty_fields_and_skip_autofocus": {
+            "type": "boolean"
+          },
+          "fast_autofocus": {
+            "type": "boolean"
+          },
+          "filename": {
+            "type": "string",
+            "example": "MyFileName"
+          },
+          "grid": {
+            "type": "array",
+            "example": [
+              3,
+              3,
+              3
+            ],
+            "items": {
+              "type": "number",
+              "format": "integer",
+              "minimum": 1
+            }
+          },
+          "namemode": {
+            "type": "string",
+            "example": "coordinates"
+          },
+          "resize": {
+            "required": [
+              "height",
+              "width"
+            ],
+            "properties": {
+              "height": {
+                "type": "number",
+                "format": "integer",
+                "example": 480
+              },
+              "width": {
+                "type": "number",
+                "format": "integer",
+                "example": 640
+              }
+            },
+            "type": "object"
+          },
+          "stride_size": {
+            "type": "array",
+            "example": [
+              2000,
+              1500,
+              100
+            ],
+            "items": {
+              "type": "number",
+              "format": "integer"
+            }
+          },
+          "style": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "example": [
+              "docs"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "temporary": {
+            "type": "boolean",
+            "description": "Delete capture on shutdown"
+          },
+          "use_video_port": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "annotations": {
+                "type": "object",
+                "example": {
+                  "Client": "SwaggerUI"
+                }
+              },
+              "autofocus_dz": {
+                "type": "number",
+                "format": "integer"
+              },
+              "bayer": {
+                "type": "boolean",
+                "description": "Include raw bayer data in capture"
+              },
+              "detect_empty_fields_and_skip_autofocus": {
+                "type": "boolean"
+              },
+              "fast_autofocus": {
+                "type": "boolean"
+              },
+              "filename": {
+                "type": "string",
+                "example": "MyFileName"
+              },
+              "grid": {
+                "type": "array",
+                "example": [
+                  3,
+                  3,
+                  3
+                ],
+                "items": {
+                  "type": "number",
+                  "format": "integer",
+                  "minimum": 1
+                }
+              },
+              "namemode": {
+                "type": "string",
+                "example": "coordinates"
+              },
+              "resize": {
+                "required": [
+                  "height",
+                  "width"
+                ],
+                "properties": {
+                  "height": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 480
+                  },
+                  "width": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 640
+                  }
+                },
+                "type": "object"
+              },
+              "stride_size": {
+                "type": "array",
+                "example": [
+                  2000,
+                  1500,
+                  100
+                ],
+                "items": {
+                  "type": "number",
+                  "format": "integer"
+                }
+              },
+              "style": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "example": [
+                  "docs"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "temporary": {
+                "type": "boolean",
+                "description": "Delete capture on shutdown"
+              },
+              "use_video_port": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.zipbuilder/build": {
+      "title": "ZipBuilderAPIView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.zipbuilder/build",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "output": {
+        "required": [
+          "input"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/recalibrate": {
+      "title": "RecalibrateView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/recalibrate",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/flatten_lens_shading_table": {
+      "title": "FlattenLSTView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/flatten_lens_shading_table",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/delete_lens_shading_table": {
+      "title": "DeleteLSTView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/delete_lens_shading_table",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/get_raw_channel_percentiles": {
+      "title": "GetRawChannelPercentilesView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/get_raw_channel_percentiles",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "percentile": {
+            "type": "number",
+            "format": "float",
+            "description": "A float between 0 and 100 setting the centile to calculate",
+            "example": 99.9
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "percentile": {
+                "type": "number",
+                "format": "float",
+                "description": "A float between 0 and 100 setting the centile to calculate",
+                "example": 99.9
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "integer"
+            }
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/auto_exposure_from_raw": {
+      "title": "AutoExposureFromRawView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_exposure_from_raw",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "max_iterations": {
+            "type": "number",
+            "format": "integer",
+            "description": "The number of adjustments to the camera's settings to make before giving up."
+          },
+          "percentile": {
+            "type": "number",
+            "format": "float",
+            "example": 99.9,
+            "description": "A float between 0 and 100 setting the centile to use to measure the white point of the image.  A value of 99.9 allows 0.1% of the pixels to be erroneously bright - this helps stability in low light."
+          },
+          "target_white_level": {
+            "type": "number",
+            "format": "integer",
+            "example": 700,
+            "description": "The pixel value (10-bit format) that we aim for when adjusting shutter/gain."
+          },
+          "tolerance": {
+            "type": "number",
+            "format": "float",
+            "example": 0.05,
+            "description": "We stop adjusting when we get within this fraction of the target value.  It is a number between 0 and 1, usually 0.01--0.1."
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "max_iterations": {
+                "type": "number",
+                "format": "integer",
+                "description": "The number of adjustments to the camera's settings to make before giving up."
+              },
+              "percentile": {
+                "type": "number",
+                "format": "float",
+                "example": 99.9,
+                "description": "A float between 0 and 100 setting the centile to use to measure the white point of the image.  A value of 99.9 allows 0.1% of the pixels to be erroneously bright - this helps stability in low light."
+              },
+              "target_white_level": {
+                "type": "number",
+                "format": "integer",
+                "example": 700,
+                "description": "The pixel value (10-bit format) that we aim for when adjusting shutter/gain."
+              },
+              "tolerance": {
+                "type": "number",
+                "format": "float",
+                "example": 0.05,
+                "description": "We stop adjusting when we get within this fraction of the target value.  It is a number between 0 and 1, usually 0.01--0.1."
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/auto_white_balance_from_raw": {
+      "title": "AutoWhiteBalanceFromRawView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_white_balance_from_raw",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "percentile": {
+            "type": "number",
+            "format": "float",
+            "example": 99.9,
+            "description": "A float between 0 and 100 setting the centile to use to measure the white point of the image.  A value of 99.9 allows 0.1% of the pixels to be erroneously bright - this helps stability in low light."
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "percentile": {
+                "type": "number",
+                "format": "float",
+                "example": 99.9,
+                "description": "A float between 0 and 100 setting the centile to use to measure the white point of the image.  A value of 99.9 allows 0.1% of the pixels to be erroneously bright - this helps stability in low light."
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.calibration.picamera/auto_lens_shading_table": {
+      "title": "AutoLensShadingTableView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_lens_shading_table",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.camera_stage_mapping/calibrate_1d": {
+      "title": "Calibrate1DView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_1d",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "required": [
+          "direction"
+        ],
+        "properties": {
+          "direction": {
+            "type": "array",
+            "example": [
+              1,
+              0,
+              0
+            ],
+            "items": {
+              "type": "number",
+              "format": "float"
+            }
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "required": [
+              "direction"
+            ],
+            "properties": {
+              "direction": {
+                "type": "array",
+                "example": [
+                  1,
+                  0,
+                  0
+                ],
+                "items": {
+                  "type": "number",
+                  "format": "float"
+                }
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.camera_stage_mapping/calibrate_xy": {
+      "title": "CalibrateXYView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_xy",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.camera_stage_mapping/move_in_image_coordinates": {
+      "title": "MoveInImageCoordinatesView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/move_in_image_coordinates",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "required": [
+          "x",
+          "y"
+        ],
+        "properties": {
+          "x": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in X",
+            "example": 100
+          },
+          "y": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in Y",
+            "example": 100
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in X",
+                "example": 100
+              },
+              "y": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in Y",
+                "example": 100
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.camera_stage_mapping/closed_loop_move_in_image_coordinates_view": {
+      "title": "ClosedLoopMoveInImageCoordinatesView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/closed_loop_move_in_image_coordinates",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "required": [
+          "x",
+          "y"
+        ],
+        "properties": {
+          "x": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in X",
+            "example": 100
+          },
+          "y": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in Y",
+            "example": 100
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in X",
+                "example": 100
+              },
+              "y": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in Y",
+                "example": 100
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "org.openflexure.camera_stage_mapping/test_closed_loop_spiral_scan": {
+      "title": "TestClosedLoopSpiralScanView",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/test_closed_loop_spiral_scan",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "required": [
+          "N",
+          "x_step",
+          "y_step"
+        ],
+        "properties": {
+          "N": {
+            "type": "number",
+            "format": "integer",
+            "description": "The number of rings in the spiral scan",
+            "example": 100
+          },
+          "x_step": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in X",
+            "example": 100
+          },
+          "y_step": {
+            "type": "number",
+            "format": "float",
+            "description": "The number of pixels to move in Y",
+            "example": 100
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "required": [
+              "N",
+              "x_step",
+              "y_step"
+            ],
+            "properties": {
+              "N": {
+                "type": "number",
+                "format": "integer",
+                "description": "The number of rings in the spiral scan",
+                "example": 100
+              },
+              "x_step": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in X",
+                "example": 100
+              },
+              "y_step": {
+                "type": "number",
+                "format": "float",
+                "description": "The number of pixels to move in Y",
+                "example": 100
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "CaptureAPI": {
+      "title": "CaptureAPI",
+      "description": "Create a new image capture. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/camera/capture/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "annotations": {
+            "type": "object",
+            "example": {
+              "Client": "SwaggerUI"
+            }
+          },
+          "bayer": {
+            "type": "boolean",
+            "description": "Include raw bayer data in capture"
+          },
+          "filename": {
+            "type": "string",
+            "example": "MyFileName"
+          },
+          "resize": {
+            "required": [
+              "height",
+              "width"
+            ],
+            "properties": {
+              "height": {
+                "type": "number",
+                "format": "integer",
+                "example": 480
+              },
+              "width": {
+                "type": "number",
+                "format": "integer",
+                "example": 640
+              }
+            },
+            "type": "object"
+          },
+          "tags": {
+            "type": "array",
+            "example": [
+              "docs"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "temporary": {
+            "type": "boolean",
+            "description": "Delete capture on shutdown"
+          },
+          "use_video_port": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "annotations": {
+                "type": "object",
+                "example": {
+                  "Client": "SwaggerUI"
+                }
+              },
+              "bayer": {
+                "type": "boolean",
+                "description": "Include raw bayer data in capture"
+              },
+              "filename": {
+                "type": "string",
+                "example": "MyFileName"
+              },
+              "resize": {
+                "required": [
+                  "height",
+                  "width"
+                ],
+                "properties": {
+                  "height": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 480
+                  },
+                  "width": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 640
+                  }
+                },
+                "type": "object"
+              },
+              "tags": {
+                "type": "array",
+                "example": [
+                  "docs"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "temporary": {
+                "type": "boolean",
+                "description": "Delete capture on shutdown"
+              },
+              "use_video_port": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "properties": {
+              "annotations": {
+                "type": "object"
+              },
+              "dataset": {
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "path": {
+                "type": "string",
+                "description": "Path of file on microscope device"
+              },
+              "format": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string"
+              },
+              "links": {
+                "type": "object"
+              },
+              "name": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "time": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "type": "object"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "RAMCaptureAPI": {
+      "title": "RAMCaptureAPI",
+      "description": "Take a non-persistent image capture.",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/camera/ram-capture/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "bayer": {
+            "type": "boolean",
+            "description": "Include raw bayer data in capture"
+          },
+          "resize": {
+            "required": [
+              "height",
+              "width"
+            ],
+            "properties": {
+              "height": {
+                "type": "number",
+                "format": "integer",
+                "example": 480
+              },
+              "width": {
+                "type": "number",
+                "format": "integer",
+                "example": 640
+              }
+            },
+            "type": "object"
+          },
+          "use_video_port": {
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "bayer": {
+                "type": "boolean",
+                "description": "Include raw bayer data in capture"
+              },
+              "resize": {
+                "required": [
+                  "height",
+                  "width"
+                ],
+                "properties": {
+                  "height": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 480
+                  },
+                  "width": {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 640
+                  }
+                },
+                "type": "object"
+              },
+              "use_video_port": {
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "GPUPreviewStartAPI": {
+      "title": "GPUPreviewStartAPI",
+      "description": "Start the onboard GPU preview. Optional \"window\" parameter can be passed to control the position and size of the preview window, in the format ``[x, y, width, height]``. ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/camera/preview/start",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "window": {
+            "type": "array",
+            "example": [
+              0,
+              0,
+              640,
+              480
+            ],
+            "items": {
+              "type": "number",
+              "format": "integer"
+            }
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "window": {
+                "type": "array",
+                "example": [
+                  0,
+                  0,
+                  640,
+                  480
+                ],
+                "items": {
+                  "type": "number",
+                  "format": "integer"
+                }
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "GPUPreviewStopAPI": {
+      "title": "GPUPreviewStopAPI",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/camera/preview/stop",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "MoveStageAPI": {
+      "title": "MoveStageAPI",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/stage/move/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "input": {
+        "properties": {
+          "absolute": {
+            "type": "boolean",
+            "description": "Move to an absolute position",
+            "example": false
+          },
+          "x": {
+            "oneOf": [
+              {
+                "type": "number",
+                "format": "integer",
+                "example": 100
+              },
+              {
+                "type": "null",
+                "format": "integer",
+                "example": 100
+              }
+            ]
+          },
+          "y": {
+            "oneOf": [
+              {
+                "type": "number",
+                "format": "integer",
+                "example": 100
+              },
+              {
+                "type": "null",
+                "format": "integer",
+                "example": 100
+              }
+            ]
+          },
+          "z": {
+            "oneOf": [
+              {
+                "type": "number",
+                "format": "integer",
+                "example": 20
+              },
+              {
+                "type": "null",
+                "format": "integer",
+                "example": 20
+              }
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "properties": {
+              "absolute": {
+                "type": "boolean",
+                "description": "Move to an absolute position",
+                "example": false
+              },
+              "x": {
+                "oneOf": [
+                  {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 100
+                  },
+                  {
+                    "type": "null",
+                    "format": "integer",
+                    "example": 100
+                  }
+                ]
+              },
+              "y": {
+                "oneOf": [
+                  {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 100
+                  },
+                  {
+                    "type": "null",
+                    "format": "integer",
+                    "example": 100
+                  }
+                ]
+              },
+              "z": {
+                "oneOf": [
+                  {
+                    "type": "number",
+                    "format": "integer",
+                    "example": 20
+                  },
+                  {
+                    "type": "null",
+                    "format": "integer",
+                    "example": 20
+                  }
+                ]
+              }
+            },
+            "type": "object"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "ZeroStageAPI": {
+      "title": "ZeroStageAPI",
+      "description": "",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/stage/zero/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "ShutdownAPI": {
+      "title": "ShutdownAPI",
+      "description": "Attempt to shutdown the device ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/system/shutdown/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "RebootAPI": {
+      "title": "RebootAPI",
+      "description": "Attempt to reboot the device ",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://192.168.1.128:5000/api/v2/actions/system/reboot/",
+          "contentType": "application/json",
+          "htv:methodName": "POST"
+        }
+      ],
+      "output": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "timeCompleted": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "timeRequested": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "running",
+              "completed",
+              "cancelled",
+              "error"
+            ],
+            "enumNames": []
+          },
+          "action": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "input": {
+            "type": "string"
+          },
+          "links": {
+            "type": "object"
+          },
+          "log": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "created": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "filename": {
+                  "type": "string"
+                },
+                "levelname": {
+                  "type": "string"
+                },
+                "levelno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "lineno": {
+                  "type": "number",
+                  "format": "integer"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number",
+            "format": "integer"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "events": {
+    "logging": {
+      "title": "LoggingEventView",
+      "description": "List of latest logging events from the session",
+      "forms": [
+        {
+          "op": "subscribeevent",
+          "href": "http://192.168.1.128:5000/api/v2/events/logging",
+          "contentType": "application/json",
+          "htv:methodName": "GET"
+        }
+      ],
+      "data": {
+        "properties": {
+          "created": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "levelname": {
+            "type": "string"
+          },
+          "levelno": {
+            "type": "number",
+            "format": "integer"
+          },
+          "lineno": {
+            "type": "number",
+            "format": "integer"
+          },
+          "message": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    }
+  },
+  "links": [
+    {
+      "rel": "docs",
+      "href": "http://192.168.1.128:5000/api/v2/docs/swagger-ui"
+    },
+    {
+      "rel": "extensions",
+      "href": "http://192.168.1.128:5000/api/v2/extensions"
+    },
+    {
+      "rel": "actions",
+      "href": "http://192.168.1.128:5000/api/v2/actions"
+    },
+    {
+      "rel": "captures",
+      "href": "http://192.168.1.128:5000/api/v2/captures"
+    },
+    {
+      "rel": "instrumentSettings",
+      "href": "http://192.168.1.128:5000/api/v2/instrument/settings"
+    },
+    {
+      "rel": "instrumentState",
+      "href": "http://192.168.1.128:5000/api/v2/instrument/state"
+    },
+    {
+      "rel": "instrumentConfiguration",
+      "href": "http://192.168.1.128:5000/api/v2/instrument/configuration"
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc"
+}
