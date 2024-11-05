@@ -8,7 +8,6 @@ reconfigure it.
 TODO:
 
 - separate static and per-boot parts of instructions
-- create a service and a configuration file.
 
 ## 1. Download VPN Bridge from SoftEther Download Center
 
@@ -17,11 +16,12 @@ TODO:
 - Select Component -> SoftEther VPN Bridge
 - Select Platform -> Linux
 - Select CPU -> ARM EABI (32bit) or ARM 64bit (64bit)
+  - Select based on your OS version
 - Download newest file
-- As of this writing, newest files are
+- As of this writing, newest files are as follow:
   - [Stable v4.41-9782 ARM-64bit](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.41-9782-beta/softether-vpnbridge-v4.41-9782-beta-2022.11.17-linux-arm64-64bit.tar.gz)
   - [Stable v4.41-9782 ARM-32bit](https://www.softether-download.com/files/softether/v4.43-9799-beta-2023.08.31-tree/Linux/SoftEther_VPN_Bridge/32bit_-_ARM_EABI/softether-vpnbridge-v4.43-9799-beta-2023.08.31-linux-arm_eabi-32bit.tar.gz)
-- Alternatively, it can download form github
+- Alternatively, it can be downloaded from GitHub via the following links:
   - [SoftEther VPN Stable Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases)
   - [SoftEther VPN Dev Release Page](https://github.com/SoftEtherVPN/SoftEtherVPN/releases)
 
@@ -104,15 +104,15 @@ VPN Server/BRIDGE>CascadeOnline mybridge   <---
 
 ## 8. Note for Local Bridging
 
-If you need to connect the machines in VPN from the machine where `vpnbridge` is running,
+If you need to connect the machines in VPN from the machine where `vpnbridge` is running, perform the actions described below.
 
-Create tap interafce, so it can communicate with local network,
+Create tap interface, so it can communicate with local network:
 
 ```
 VPN Server>BridgeCreate BRIDGE /DEVICE:svpn /TAP:yes      <----
 ```
 
-Install `bridged-utils` to create a bridged interface,
+To create the bridged interface, install `bridged-utils`.
 
 ```
 % sudo apt install bridge-utils
@@ -124,7 +124,7 @@ Before creating a bridge interface, get physical interface's MAC address by runn
 % ip link
 ```
 
-On the `ip link` output, you can find the MAC, as shown below.
+On the `ip link` output, you can find the Media Access Control (MAC) address, as shown below.
 
 ```
 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UP mode DEFAULT group default qlen 1000
@@ -132,9 +132,9 @@ On the `ip link` output, you can find the MAC, as shown below.
     ↑--------------------------↑ -> This is Mac address
 ```
 
-Physical interface names may vary.  Use a interface name of dedicated network adapter for bridging.
+Physical interface names may vary.  Use the interface name of a dedicated network adapter for bridging.
 
-To create bridged interface, we need to modify the netplan, to modify `netplan`,
+To create a bridged interface, we need to modify the `netplan`, as described below.
 
 ```
 % sudo nano /etc/netplan/50-cloud-init.yaml # Opening netplan condig file
@@ -147,10 +147,10 @@ network:
   version: 2
   ethernets:
     eth0:
-      dhcp4: false <--- Make sure to change to false!!! Otherwise you cannot access your device over ethernet anymore.
+      dhcp4: false <--- Make sure to change to false!!! Otherwise, you will no longer be able to access your device over Ethernet.  
+
   bridges:
-    br0:
-      macaddress: 00:a0:98:79:42:65  <--- Change to physical MAC address from ifconig
+      macaddress: 00:a0:98:79:42:65  <--- Change to physical MAC address from "ip link"
       interfaces: [ eth0 ]
       dhcp4: true
       parameters:
@@ -164,8 +164,11 @@ Now apply `netplan` to activate bridged interface (`br0`),
 % sudo netplan apply
 ```
 
-Now, we can link tap interface from SoftEther VPN to bridged interface (`br0`)
+Now, we can link the tap interface from the SoftEther VPN to the bridged interface (`br0`)  
+
 that we created,
+
+Now, we can link the tap interface from the SoftEther VPN to the bridged interface (`br0`)
 
 ```
 % sudo brctl addif br0 svpn
