@@ -7,9 +7,9 @@ by updating this markdown file and making a pull request.
 | IP Address | Description |
 | --- | --- |
 |192.168.30.1       | Gateway         |
-|192.168.30.2-9     | Reserved        |
+|192.168.30.2-9     | Reserved for administrative purpose        |
 |192.168.30.10      | free            |
 | ...               | ...             |
 |192.168.30.127     | free                  |
 |192.168.30.128-250 | allocated by DHCP     |
-|192.168.30.251-255 | Reserved        | 
+|192.168.30.251-255 | Reserved for administrative purpose        | 
