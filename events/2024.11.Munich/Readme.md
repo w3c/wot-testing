@@ -7,11 +7,28 @@ The main goal of this plugfest is to test the feasibility of existing and new fe
 As a secondary goal, these tests will be put into user scenarios that are understandable by visitors.
 Stakeholders from related SDOs are welcome to contribute.
 
+## Provided Infrastructure
+
+Hardware:
+
+* 3 times 8-Port Switches
+* 2 times 24-Port Switches
+* Router and WiFi Access Point
+* 2 times 20m Ethernet Cables
+
+Network:
+
+* If you are **not** in the Plugfest network, you need to join Siemens Guest network by asking for a Siemens employee to be your contact person. Please give the email of Siemens employee you know in the login page. If you need to make a video conference with someone, please use this option to not strain the plugfest network.
+* All devices that join the Plugfest network can connect to the public internet as a client.
+* Use the VPN instructions provided at https://lists.w3.org/Archives/Group/group-wot-plugfest/ to become part of the VPN.
+* To be configured: All devices that join the Plugfest network will be part of the VPN setup.
+
 ## What you should bring with you 
-* extension cable and multiple socket outlet
-* if needed, power travel adapter
-* LAN cable
-* if possible, WiFi bridge or small wlan router with Wifi to LAN option
+
+* Extension cable and multiple socket outlet
+* If needed, power travel adapter
+* Ethernet cable
+* If possible, WiFi extender or small WLAN router with WiFi to LAN option
 
 
 ## List of Things that will be available for the PlugFest
