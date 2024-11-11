@@ -1,14 +1,13 @@
 {
   "@context": [
-    "https://www.w3.org/2019/wot/td/v1",
-    "https://iot.mozilla.org/schemas/"
+    "https://www.w3.org/2019/wot/td/v1"
   ],
   "@type": [
     "org.openflexure.microscope"
   ],
   "id": "OpenFlexureMicroscopeopenflexure:microscope:9cd38bce-9d27-4f00-8a2a-52d48b96a9fc:96da96db-bf8c-4d98-8fc0-34120158c7e3",
   "title": "OpenFlexure Microscope openflexure:microscope:9cd38bce-9d27-4f00-8a2a-52d48b96a9fc",
-  "description": "Test LabThing-based API for OpenFlexure Microscope",
+  "description": "LabThing-based API for OpenFlexure Microscope",
   "properties": {
     "org.openflexure.zipbuilder/get": {
       "title": "ZipListAPIView",
