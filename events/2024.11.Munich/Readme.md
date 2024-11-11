@@ -8,7 +8,7 @@ As a secondary goal, these tests will be put into user scenarios that are unders
 Stakeholders from related SDOs are welcome to contribute.
 
 ## What you should bring with you 
-* extension cable
+* extension cable and multiple socket outlet
 * if needed, power travel adapter
 * LAN cable
 * if possible, WiFi bridge or small wlan router with Wifi to LAN option
