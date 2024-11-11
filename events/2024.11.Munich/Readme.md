@@ -7,6 +7,13 @@ The main goal of this plugfest is to test the feasibility of existing and new fe
 As a secondary goal, these tests will be put into user scenarios that are understandable by visitors.
 Stakeholders from related SDOs are welcome to contribute.
 
+## What you should bring with you 
+* extension cable
+* if needed, power travel adapter
+* LAN cable
+* if possible, WiFi bridge or small wlan router with Wifi to LAN option
+
+
 ## List of Things that will be available for the PlugFest
 
 | Organization | Things/Devices/System/Tools                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
