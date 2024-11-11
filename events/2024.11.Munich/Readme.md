@@ -53,7 +53,7 @@ Stakeholders from related SDOs are welcome to contribute.
 | CALA Munich      | WoT GUI Application (using node-wot)          | x       |        |          | HTTP (possibly add others) | LAN                                                        | Table 5                                                      |   @VigneshVSV |
 | Archeion         | Asset Tracking Platform(using node-wot)       | x       |        |          | HTTP (possibly add others) | LAN                                                        | NEED Table                                                   |   @relu91 |
 | Christian Paul   | WoT Wrench                                    | x       |        |          | HTTP (experimental WS and SSE) | LAN                                                        | Table 5                                                  |   @Jaller94 |
-| Siemens          | sayWoT! Gateway on a Raspberry Pi             | x       |        |          | HTTP north, many southbound | LAN                                                       | NEED Table                                                   |   @Jaller94 |
+| Siemens          | sayWoT! Gateway on a Siemens IoT2020          | x       |        |          | HTTP north, many southbound | LAN                                                       | NEED Table                                                   |   @Jaller94 |
 | ...              |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc |
 
 
