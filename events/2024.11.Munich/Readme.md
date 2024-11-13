@@ -95,6 +95,8 @@ Notes:
 Different tests we do can be placed into context, e.g., smart cities. 
 This way, they can relate better once we present WoT to the visitors.
 
+Note: Please create PRs with your own folder at https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich/Scenarios
+
 Some ideas:
 
 * Smart City
