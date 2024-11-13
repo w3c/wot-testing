@@ -71,7 +71,7 @@ Network:
 | TU Munich        | Hololens                                      |  x       |        |         | HTTP               | Wifi                                                               | Table 2; no sec should be used; QR code to TD is needed      | Fady Salama |
 | UC Dublin        | ASTRA/MAMS Platform                           |  X       |        |         |                    |                                                                    | Table 4; Multi agent system platform (only software)         | https://github.com/RemCollier |
 | Uni St. Gallen   |  YggDrasil                                    |          |        |  X      | HTTP               | ...                                                                | Table 5;                                                     | https://github.com/jeremylemee |
-| Hitachi          |  tbc                                          |  x       |        |         | tbc                |                                                                    | Table 6                                                      | Kunihiko Toumura |
+| Hitachi          | Discoverer Application                        |  x       |        |         | tbc                |                                                                    | Table 6                                                      | Kunihiko Toumura |
 | Eclipse Thingweb | Cross-platform app (using `dart_wot`)         | x        |        |  X      | HTTP, CoAP, MQTT   | WiFi                                                               | Table 4                                                      | @JKRhb |
 | Microsoft        | OPC Publisher                                 | x        |        |  X      | OPC UA             | LAN or Wifi                                                        | Table 7                                                      | @barnstee |
 | OPC Foundation   | UA Edge Translator                            | x        |        |  X      | OPC UA             | LAN     or Wifi                                                    | Table 7                                                      | @barnstee |
@@ -98,7 +98,7 @@ This way, they can relate better once we present WoT to the visitors.
 Some ideas:
 
 * Smart City
-  * maybe a topic that can be discussed with the NGSI-LD cooperation
+  * 
 * WoT for Cloud Systems
   * maybe Azure IoT from Microsoft and Oracle Cloud (TBC)
 * Plug & Play in Industrial Scenarios
@@ -110,6 +110,25 @@ Some ideas:
   * People counting with different sensors or cameras (Ignite Retail as Consumer, Thing?)
   * Energy Consumption Monitoring (Siemens Energy Meter, Siemens? Gateway, Ignite Retail Consumer)
 * Smart Home (McCool)
+  * Voice control of different devices like Hue and sayWoT! bridged devices (KNX IoT devices)
+
+* Technical Purposes
+  * Siemens KNX IoT Devices: Testing interoperability and good understanding of their TDs from Consumers.
+  * Hitachi Sensor: Testing ZeroMQ Binding
+  * OpenFlexure Microscope: Long running actions
+  * Siemens S7: OPC UA Binding demonstrations
+  * Siemens Sentron PAC: Modbus Binding
+  * Siemens TargetV device: MQTT Binding
+  * Siemens sayWoT! Servient: Testing binding interoperability (MQTT, Modbus, OPC UA, S7, CoAP and more)
+  * TUM Big Robot Arm: Showing it working with Hololens and digital twin inside the hololens
+  * TUM Hue Devices: Showing rules/mashups with other devices
+  * TUM Hololens: Checking visual interactions with devices (that use HTTP). Maybe there will be the option to build mashups and check them working.
+  * TUM Small Robot Arm and Conveyor Belt: Test different mashup scenarios
+  * Armorsafe: Checking interoperability with IgniteRetail Control center
+  * Luminem Devices: Checking if the software stack works on more constrained devices (ESP32, banana pi)
+  * Hitachi: Testing the discovery implementation
+  * Thingweb dart_wot: Identifying shortcomings and testing in real life with others
+  * McCool: AI Service integration
 
 ## WIP - TD Topics
 
