@@ -20,6 +20,7 @@ Network:
 
 * If you are **not** in the Plugfest network, you need to join Siemens Guest network by asking for a Siemens employee to be your contact person. Please give the email of Siemens employee you know in the login page. If you need to make a video conference with someone, please use this option to not strain the plugfest network.
 * All devices that join the Plugfest network can connect to the public internet as a client.
+* All devices in the Plugfest network can act as a server in the local network.
 * Use the VPN instructions provided at https://lists.w3.org/Archives/Group/group-wot-plugfest/ to become part of the VPN.
 * To be configured: All devices that join the Plugfest network will be part of the VPN setup.
 
