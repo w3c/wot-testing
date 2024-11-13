@@ -1,4 +1,4 @@
-# WoT Week at Munich (DRAFT)
+# WoT Week at Munich
 
 The logistics can be found at https://www.w3.org/WoT/IG/wiki/Wiki_for_WoT_Week_2024_planning.
 In this folder, technical information is found, such as test plans for features.
