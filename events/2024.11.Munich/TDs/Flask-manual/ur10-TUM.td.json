@@ -1,0 +1,647 @@
+{
+ "@context": "https://www.w3.org/2019/wot/td/v1",
+ "@type": "UR-10 Robot Arm",
+ "actions": {
+  "goHome": {
+   "description": "Go to the home position",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/goHome",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "safe": false,
+   "title": "Go Home"
+  },
+  "setJointDegrees": {
+   "description": "Turn the robot arm joints to a specific degree",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/setJointDegrees",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": true,
+   "input": {
+    "oneOf": [
+     {
+      "properties": {
+       "base": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       "elbow": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       "shoulder": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       "wrist1": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       "wrist2": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       "wrist3": {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       }
+      },
+      "type": "object"
+     },
+     {
+      "items": [
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       },
+       {
+        "maximum": 360,
+        "minimum": -360,
+        "type": "number"
+       }
+      ],
+      "maxItems": 6,
+      "minItems": 6,
+      "type": "array"
+     }
+    ]
+   },
+   "safe": false,
+   "title": "Set the joint positions "
+  },
+  "turnBase": {
+   "description": "Turn the robot arm Base joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnBase",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "base": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "base"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Base"
+  },
+  "turnElbow": {
+   "description": "Turn the robot arm elbow joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnElbow",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "elbow": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "elbow"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Elbow"
+  },
+  "turnShoulder": {
+   "description": "Turn the robot arm shoulder joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnShoulder",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "shoulder": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "shoulder"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Shoulder"
+  },
+  "turnWrist1": {
+   "description": "Turn the robot arm Wrist1 joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnWrist1",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "wrist1": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "wrist1"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Wrist1"
+  },
+  "turnWrist2": {
+   "description": "Turn the robot arm Wrist2 joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnWrist2",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "wrist2": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "wrist2"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Wrist2"
+  },
+  "turnWrist3": {
+   "description": "Turn the robot arm Wrist3 joint a certain amount within borders",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "actions/turnWrist3",
+     "htv:methodName": "POST",
+     "op": "invokeaction"
+    }
+   ],
+   "idempotent": false,
+   "input": {
+    "properties": {
+     "wrist3": {
+      "maximum": 360,
+      "minimum": -360,
+      "type": "number"
+     }
+    },
+    "required": [
+     "wrist3"
+    ],
+    "type": "object"
+   },
+   "safe": false,
+   "title": "Turn Wrist3"
+  }
+ },
+ "base": "http://172.16.1.219/ur10/",
+ "goTo": {
+  "description": "Move to position in cartesian coordinates with the assigned speed and acceleration, default values are .... ",
+  "idempotent": true,
+  "input": {
+   "properties": {
+    "a": {
+     "maximum": 1.0,
+     "minimum": 0.1,
+     "type": "number"
+    },
+    "s": {
+     "maximum": 1.0,
+     "minimum": 0.1,
+     "type": "number"
+    },
+    "x": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    },
+    "y": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    },
+    "z": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    }
+   },
+   "type": "object"
+  },
+  "safe": false,
+  "title": "Go to position"
+ },
+ "gripClose": {
+  "description": "Closes the grip",
+  "idempotent": true,
+  "safe": false,
+  "title": "Close Grip"
+ },
+ "gripCloseLight": {
+  "description": "Closes the grip with 25 Newton of force",
+  "idempotent": true,
+  "safe": false,
+  "title": "Close Grip"
+ },
+ "gripOpen": {
+  "description": "Opens the grip",
+  "idempotent": true,
+  "safe": false,
+  "title": "Open Grip"
+ },
+ "id": "de:tum:ei:esi:ur10",
+ "links": [
+  {
+   "href": "http://127.0.0.1:5000/files/urdf.zip",
+   "rel": "urdfFile"
+  }
+ ],
+ "properties": {
+  "currentCoordinates": {
+   "description": "Gives back the current location in cartesian coordinates",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/currentCoordinates",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "properties": {
+    "x": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    },
+    "y": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    },
+    "z": {
+     "maximum": 1300,
+     "minimum": -1300,
+     "type": "integer"
+    }
+   },
+   "readOnly": true,
+   "required": [
+    "x",
+    "y",
+    "z"
+   ],
+   "title": "Current Cartesian Coordinates",
+   "type": "object"
+  },
+  "currentJointDegrees": {
+   "description": "Gives back the current degree values for joints",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/currentJointDegrees",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "properties": {
+    "base": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    },
+    "elbow": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    },
+    "shoulder": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    },
+    "wrist1": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    },
+    "wrist2": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    },
+    "wrist3": {
+     "maximum": 360,
+     "minimum": -360,
+     "type": "number"
+    }
+   },
+   "readOnly": true,
+   "required": [
+    "base",
+    "shoulder",
+    "elbow",
+    "wrist1",
+    "wrist2",
+    "wrist3"
+   ],
+   "title": "Current Joint Position",
+   "type": "object"
+  },
+  "homePosition": {
+   "description": "Home position on x-y-z space and joint degrees values",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/homePosition",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "properties": {
+    "base": {
+     "type": "number"
+    },
+    "elbow": {
+     "type": "number"
+    },
+    "shoulder": {
+     "type": "number"
+    },
+    "wrist1": {
+     "type": "number"
+    },
+    "wrist2": {
+     "type": "number"
+    },
+    "wrist3": {
+     "type": "number"
+    },
+    "x": {
+     "type": "integer"
+    },
+    "y": {
+     "type": "integer"
+    },
+    "z": {
+     "type": "integer"
+    }
+   },
+   "readOnly": true,
+   "required": [
+    "x",
+    "y",
+    "z"
+   ],
+   "title": "Home position",
+   "type": "object"
+  },
+  "moveAcceleration": {
+   "description": "Its value sets the moving acceleration of all UR-10 robot arm joints, default value is 0.5 but can be changed",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/moveAcceleration",
+     "htv:methodName": "GET",
+     "op": "readproperty"
+    },
+    {
+     "contentType": "application/json",
+     "href": "properties/moveAcceleration",
+     "htv:methodName": "PUT",
+     "op": "writeproperty"
+    }
+   ],
+   "maximum": 1.0,
+   "minimum": 0.1,
+   "readOnly": false,
+   "title": "Acceleration",
+   "type": "number",
+   "writeOnly": false
+  },
+  "moveSpeed": {
+   "description": "Its value sets the moving speed of all UR-10 robot arm joints, default value is 0.5 but can be changed",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/moveSpeed",
+     "htv:methodName": "GET",
+     "op": "readproperty"
+    },
+    {
+     "contentType": "application/json",
+     "href": "properties/moveSpeed",
+     "htv:methodName": "PUT",
+     "op": "writeproperty"
+    }
+   ],
+   "maximum": 1.0,
+   "minimum": 0.1,
+   "readOnly": false,
+   "title": "Speed",
+   "type": "number",
+   "writeOnly": false
+  },
+  "offset": {
+   "description": "Offset of the robot base from the QR code position, using Unity's coordinate frame",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/offset",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "properties": {
+    "position": {
+     "properties": {
+      "x": {
+       "description": "X-axis offset in meters",
+       "type": "number"
+      },
+      "y": {
+       "description": "Y-axis offset in meters",
+       "type": "number"
+      },
+      "z": {
+       "description": "Z-axis offset in meters",
+       "type": "number"
+      }
+     },
+     "type": "object"
+    },
+    "rotation": {
+     "properties": {
+      "rx": {
+       "description": "Rotation offset around X-axis in degrees",
+       "type": "number"
+      },
+      "ry": {
+       "description": "Rotation offset around Y-axis in degrees",
+       "type": "number"
+      },
+      "rz": {
+       "description": "Rotation offset around Z-axis in degrees",
+       "type": "number"
+      }
+     },
+     "type": "object"
+    }
+   },
+   "readOnly": true,
+   "title": "Robot Base Offset using Unity's (Hololens) coordinate frame",
+   "type": "object"
+  },
+  "urdfFile": {
+   "description": "URL to download the URDF file for the robot",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/urdfFile",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "readOnly": true,
+   "title": "URDF File",
+   "type": "string"
+  },
+  "worldCoordinates": {
+   "description": "Current TCP location in the world coordinate system (relative to QR code)",
+   "forms": [
+    {
+     "contentType": "application/json",
+     "href": "properties/worldCoordinates",
+     "op": [
+      "readproperty"
+     ]
+    }
+   ],
+   "properties": {
+    "rx": {
+     "description": "Rotation around X-axis in degrees",
+     "type": "number"
+    },
+    "ry": {
+     "description": "Rotation around Y-axis in degrees",
+     "type": "number"
+    },
+    "rz": {
+     "description": "Rotation around Z-axis in degrees",
+     "type": "number"
+    },
+    "x": {
+     "description": "X coordinate in millimeters",
+     "type": "number"
+    },
+    "y": {
+     "description": "Y coordinate in millimeters",
+     "type": "number"
+    },
+    "z": {
+     "description": "Z coordinate in millimeters",
+     "type": "number"
+    }
+   },
+   "readOnly": true,
+   "required": [
+    "x",
+    "y",
+    "z",
+    "rx",
+    "ry",
+    "rz"
+   ],
+   "title": "World Coordinates",
+   "type": "object"
+  }
+ },
+ "security": [
+  "nosec_sc"
+ ],
+ "securityDefinitions": {
+  "nosec_sc": {
+   "scheme": "nosec"
+  }
+ },
+ "title": "Ur-10"
+}
