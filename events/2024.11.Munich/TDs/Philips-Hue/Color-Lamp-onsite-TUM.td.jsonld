@@ -1,6 +1,6 @@
 {
     "@context": "https://www.w3.org/2022/wot/td/v1.1",
-    "id": "5dc4b482-e6e4-4f0b-9783-f85a1432c845",
+    "id": "urn:dev:ops:32473-HueLight-2",
     "@type": "Thing",
     "title": "Philips Hue Lamp",
     "description": "A Philips Hue lamp that can be controlled via the Hue Bridge",
