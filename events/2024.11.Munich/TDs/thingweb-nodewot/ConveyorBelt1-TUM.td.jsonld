@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "",
+  "actions": {
+    "startBeltBackward": {
+      "description": "This action starts moving the conveyor belt backward",
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "https://remotelab.esi.cit.tum.de:8081/ConveyorBelt1/actions/startBeltBackward",
+          "htv:methodName": "POST",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "output": {
+        "const": "Conveyor belt started backwards"
+      },
+      "safe": false,
+      "synchronous": true,
+      "title": "Start conveyor belt"
+    },
+    "startBeltForward": {
+      "description": "This action starts moving the conveyor belt forward",
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "https://remotelab.esi.cit.tum.de:8081/ConveyorBelt1/actions/startBeltForward",
+          "htv:methodName": "POST",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "output": {
+        "const": "Conveyor belt started forwards"
+      },
+      "safe": false,
+      "synchronous": true,
+      "title": "Start conveyor belt"
+    },
+    "stopBelt": {
+      "description": "This action stops moving the conveyor belt",
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "https://remotelab.esi.cit.tum.de:8081/ConveyorBelt1/actions/stopBelt",
+          "htv:methodName": "POST",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "output": {
+        "const": "Conveyor belt stopped"
+      },
+      "safe": false,
+      "synchronous": false,
+      "title": "Stop conveyor belt"
+    }
+  },
+  "description": "Conveyor Belt with a Stepper Motor on a RPi",
+  "forms": [
+    {
+      "contentType": "application/json",
+      "href": "https://remotelab.esi.cit.tum.de:8081/ConveyorBelt1/all/properties",
+      "op": [
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "id": "urn:dev:ops:32473-ConveyorBelt-001",
+  "properties": {
+    "speed": {
+      "description": "Speed of the conveyor belt",
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "https://remotelab.esi.cit.tum.de:8081/ConveyorBelt1/properties/speed",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "maximum": 100,
+      "minimum": 1,
+      "observable": false,
+      "readOnly": false,
+      "title": "Speed",
+      "type": "integer",
+      "unit": "%",
+      "writeOnly": false
+    }
+  },
+  "security": "basic_sc",
+  "securityDefinitions": {
+    "basic_sc": {
+      "in": "header",
+      "scheme": "basic"
+    }
+  },
+  "title": "ConveyorBelt1"
+}

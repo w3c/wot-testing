@@ -1,0 +1,263 @@
+{
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "id": "urn:dev:ops:32473-HueLight-2",
+    "@type": "Thing",
+    "title": "Philips Hue Lamp",
+    "description": "A Philips Hue lamp that can be controlled via the Hue Bridge",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "apikey",
+            "in": "header",
+            "name": "hue-application-key"
+        }
+    },
+    "security": "basic_sc",
+    "base": "https://192.168.1.101/clip/v2/resource/light/5dc4b482-e6e4-4f0b-9783-f85a1432c845",
+    "properties": {
+        "lightInformation": {
+            "title": "State and Attributes of the Light",
+            "description": "The current state and attributes of the light. There are more attributes that are not listed here and are not of importance.",
+            "type": "object",
+            "properties": {
+                "data": {
+                    "title": "An Array that holds the object of the information",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "The ID of the light",
+                                "type": "string"
+                            },
+                            "id_v1": {
+                                "description": "The ID of the light in version 1",
+                                "type": "string"
+                            },
+                            "on": {
+                                "description": "On/Off state of the light. On=true, Off=false",
+                                "type": "boolean"
+                            },
+                            "dimming": {
+                                "description": "The brightness of the light",
+                                "type": "object",
+                                "properties": {
+                                    "brightness": {
+                                        "description": "The brightness of the light. 0 is the minimum brightness and 100 is the maximum brightness",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 100
+                                    },
+                                    "min_dim_level": {
+                                        "description": "The unit of the brightness",
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "color": {
+                                "description": "The color of the light",
+                                "type": "object",
+                                "properties": {
+                                    "xy": {
+                                        "description": "The x and y coordinates of the color in the CIE color space",
+                                        "type": "object",
+                                        "properties": {
+                                            "x": {
+                                                "description": "The x coordinate of the color in the CIE color space",
+                                                "type": "number"
+                                            },
+                                            "y": {
+                                                "description": "The y coordinate of the color in the CIE color space",
+                                                "type": "number"
+                                            }
+                                        }
+                                    },
+                                    "gamut": {
+                                        "description": "The color gamut of the light",
+                                        "type": "object",
+                                        "properties": {
+                                            "red": {
+                                                "description": "The red color gamut of the light",
+                                                "type": "object",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "The x coordinate of the red color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    },
+                                                    "y": {
+                                                        "description": "The y coordinate of the red color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            },
+                                            "green": {
+                                                "description": "The green color gamut of the light",
+                                                "type": "object",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "The x coordinate of the green color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    },
+                                                    "y": {
+                                                        "description": "The y coordinate of the green color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            },
+                                            "blue": {
+                                                "description": "The blue color gamut of the light",
+                                                "type": "object",
+                                                "properties": {
+                                                    "x": {
+                                                        "description": "The x coordinate of the blue color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    },
+                                                    "y": {
+                                                        "description": "The y coordinate of the blue color gamut in the CIE color space",
+                                                        "type": "number"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "gamut_type": {
+                                        "description": "The type of the color gamut",
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "dynamics": {
+                                "description": "The dynamics of the light",
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "description": "The status of the dynamics",
+                                        "type": "string",
+                                        "enum": [
+                                            "none",
+                                            "dynamic_palette"
+                                        ]
+                                    },
+                                    "speed": {
+                                        "description": "The speed of the dynamics",
+                                        "type": "number"
+                                    },
+                                    "speed_valid": {
+                                        "description": "The validity of the speed",
+                                        "type": "boolean"
+                                    }
+
+                                }
+                            },
+                            "type": {
+                                "description": "The type of the device",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "",
+                    "contentType": "application/json",
+                    "htv:methodName": "GET",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {
+        "setState": {
+            "title": "Set the state of the light",
+            "description": "Set the state of the light. The state can be On/Off, brightness, color, and dynamics.",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "on": {
+                        "description": "On/Off state of the light. On=true, Off=false",
+                        "type": "object",
+                        "properties": {
+                            "on": {
+                                "description": "On/Off state of the light. On=true, Off=false", 
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "dimming": {
+                        "description": "The brightness of the light",
+                        "type": "object",
+                        "properties": {
+                            "brightness": {
+                                "description": "The brightness of the light. 0 is the minimum brightness and 100 is the maximum brightness",
+                                "type": "number",
+                                "minimum": 0,
+                                "maximum": 100
+                            }
+                        }
+                    },
+                    "color": {
+                        "description": "The color of the light",
+                        "type": "object",
+                        "properties": {
+                            "xy": {
+                                "description": "The x and y coordinates of the color in the CIE color space",
+                                "type": "object",
+                                "properties": {
+                                    "x": {
+                                        "description": "The x coordinate of the color in the CIE color space",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1
+                                    },
+                                    "y": {
+                                        "description": "The y coordinate of the color in the CIE color space",
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rid": {
+                                    "description": "The ID of the resource",
+                                    "type": "string"
+                                },
+                                "rtype": {
+                                    "description": "The type of the resource",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "errors": {
+                        "type": "array"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "",
+                    "contentType": "application/json",
+                    "htv:methodName": "PUT",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ]
+        }
+    },
+    "events": {}
+}
