@@ -44,6 +44,7 @@ Network:
 | Siemens      | Radiator Valve Actuator                       |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc | |
 | Siemens      | Room Controller Unit                          |  x       |        |         | KNX IoT            |                                                                    | Table 1                                                      | @mkovatsc | |
 | Siemens      | S7-1500 connected with conveyor belt and lamp |  x       |        |         | OPC UA             | LAN                                                                | Table 1                                                      | @sebastiankb | |
+| Siemens      | Temperature, Humidity, and CO2 Sensor (Dev. version) |  x       |        |   | HTTP               | WiFi                                                               | Table NEED                                                   | Haoyu Ren, Darko Anicic, @mahdanoura| |
 | TU Munich    | Robot arm                                     |  x       |        |         | HTTP               | 2m high, 4m width; LAN/Wifi (no Internet); should be protected     | has own table                                                | @FadySalama | |
 | TU Munich    | Philips Hue Lamp and Switch                   |  x       |        |         | HTTP               | LAN                                                                | Table 2                                                      | @FadySalama | |
 | TU Munich    | Diff. rem. devices (raspberry pi,etc)         |          | x      |         | HTTPS              | Internet                                                           | Table 2                                                      | @FadySalama | |
@@ -79,8 +80,8 @@ Network:
 | CALA Munich      | WoT GUI Application (using node-wot)          | x       |        |          | HTTP (possibly add others) | LAN                                                        | Table 5                                                      | @VigneshVSV |
 | Archeion         | Asset Tracking Platform(using node-wot)       | x       |        |          | HTTP (possibly add others) | LAN                                                        | Table 8                                                      | @relu91 |
 | Christian Paul   | WoT Wrench                                    | x       |        |          | HTTP (experimental WS and SSE) | LAN                                                        | Table 5                                                  | @Jaller94 |
+| Siemens          | sayWoT! Gateway on a Siemens IoT2020          | x       |        |          | HTTP north, many southbound | LAN                                                       | NEED Table                                                   | Mahda Noura |
 | ...              |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         | tbc |
-
 
 Notes: 
 
