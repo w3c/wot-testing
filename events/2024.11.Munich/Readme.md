@@ -24,13 +24,26 @@ Network:
 * Use the VPN instructions provided at https://lists.w3.org/Archives/Group/group-wot-plugfest/ to become part of the VPN.
 * To be configured: All devices that join the Plugfest network will be part of the VPN setup.
 
-## What you should bring with you 
+## Instructions
+
+### Checklist and Tasks
+
+To better prepare for the plugfest, please help us by doing the following:
+
+* Provide brief information about the Things or Consumer applications you will bring to the plugfest in this readme, in the table below.
+* Provide your TDs under the `TDs` folder. Group them by implementation, i.e., if `ACME Corporation` has used node-wot to build a device, please put TDs under the `thingweb-nodewot` folder. Of course, if your implementation's WoT stack is built in-house, you can use your company's name as a folder. Make sure to validate your TDs beforehand. You can use a tool like Thingweb Playground at <https://playground.thingweb.io/>.
+  * Use the' Documentation' folder to provide additional information about your Thing or Consumer application.
+  * Please link to your TD from this Readme's table.
+* Provide a markdown file in a new folder under the `Scenarios` folder for the scenarios you plan to test, ideally with others. You can find an example at <https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich/Scenarios/VoiceControl>
+* Prepare a poster (instructions coming soon)
+* Prepare the presentation you will make on Wednesday. You can use the template at <https://github.com/w3c/wot/blob/main/PRESENTATIONS/2024-11-wot-week/2024-11-27-WoT-Conference-Presentation.pptx>
+
+### What you should bring with you 
 
 * Extension cable and multiple socket outlet
 * If needed, power travel adapter
 * Ethernet cable
 * If possible, WiFi extender or small WLAN router with WiFi to LAN option
-
 
 ## List of Things that will be available for the PlugFest
 
@@ -88,88 +101,3 @@ Network:
 Notes: 
 
 * We must clarify which devices are used for which scenarios and context (e.g., OPC UA, Cloud, ECHONET, Smart City, Conexxus etc.).
-* We need to clarify which participants can only join remotely. Is there an open connection to the local PlugFest network?
-* Detail information about the Things can be provided in specific subfolders of this GitHub (e.g. folders by company name)
-* We need to clarify if we need a VPN connection. W3C may provide one.
-* We should run a trial run two weeks before the PlugFest.
-
-## WIP - User Scenarios
-
-Different tests we do can be placed into context, e.g., smart cities. 
-This way, they can relate better once we present WoT to the visitors.
-
-Note: Please create PRs with your own folder at https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich/Scenarios
-
-Some ideas:
-
-* Smart City
-  * 
-* WoT for Cloud Systems
-  * maybe Azure IoT from Microsoft and Oracle Cloud (TBC)
-* Plug & Play in Industrial Scenarios
-  * includes semantics usage in domain models (e.g., Brick, OPC UA, etc)   
-* Retail (David)
-  * Correlation of cash depositing on the safe with IP camera detecting the same
-  * Showing cash depositing events in a dashboard
-  * Refrigerator Temperature monitoring (Ignite Retail and McCool)
-  * People counting with different sensors or cameras (Ignite Retail as Consumer, Thing?)
-  * Energy Consumption Monitoring (Siemens Energy Meter, Siemens? Gateway, Ignite Retail Consumer)
-* Smart Home (McCool)
-  * Voice control of different devices like Hue and sayWoT! bridged devices (KNX IoT devices)
-
-* Technical Purposes
-  * Siemens KNX IoT Devices: Testing interoperability and good understanding of their TDs from Consumers.
-  * Hitachi Sensor: Testing ZeroMQ Binding
-  * OpenFlexure Microscope: Long running actions
-  * Siemens S7: OPC UA Binding demonstrations
-  * Siemens Sentron PAC: Modbus Binding
-  * Siemens TargetV device: MQTT Binding
-  * Siemens sayWoT! Servient: Testing binding interoperability (MQTT, Modbus, OPC UA, S7, CoAP and more)
-  * TUM Big Robot Arm: Showing it working with Hololens and digital twin inside the hololens
-  * TUM Hue Devices: Showing rules/mashups with other devices
-  * TUM Hololens: Checking visual interactions with devices (that use HTTP). Maybe there will be the option to build mashups and check them working.
-  * TUM Small Robot Arm and Conveyor Belt: Test different mashup scenarios
-  * Armorsafe: Checking interoperability with IgniteRetail Control center
-  * Luminem Devices: Checking if the software stack works on more constrained devices (ESP32, banana pi)
-  * Hitachi: Testing the discovery implementation
-  * Thingweb dart_wot: Identifying shortcomings and testing in real life with others
-  * McCool: AI Service integration
-
-## WIP - TD Topics
-
-### Existing Features
-
-We should ensure that the existing features the implementers have questions about are correctly specified. All these points are prioritized over new features.
-
-* Additional Responses
-  * Error Handling on the application level (Scripting API is connected here)
-    * it would be good to have a real-world example  
-  * Multiple possible successful responses
-    * query-able actions?
-    * in Discovery API are examples where multiple responses are provided 
-  * Default behavior (is it a normal response or is it an additional one)
-* Linking between TDs
-* Specifying multiple `@type`s to TDs: This confuses people. We need more guidance.
-* Complex actions: Async and sync
-* Meta Operations (top-level form operations): Are they implemented correctly? This will be prioritized and identified gaps could be addressed as new meta operations.
-
-### New Features
-
-We should experiment with the new features we are planning and collect implementation experience.
-  
-* Initial connection
-* [Data Mapping:](https://github.com/w3c/wot/blob/main/planning/ThingDescription/td-next-work-items/usability-and-design.md#data-schema-mapping) This topic will be prioritized. It also related to additional responses existing feature mentioned above.
-* "Normative" Consumer Behavior: Degradation, Expected behavior. Writing what a Consumer is expected to do for a TD. This will be prioritized, and its results will be used for the Interoperability Test Suite topic below.
-* Interoperability Test Suite: Given a TD, can a Consumer application fully interact with it? This strongly relates to the normative consumption above.
-* New meta operations
-
-## WIP - Discovery/Registry Topics
-* tbc
-
-
-## WIP - Other Topics
-
-* Top-level operation for observing changes to TD (needs further discussion)
-* Discovery interface of Scripting API
-* AMQP Binding
-* OPC UA Binding 
