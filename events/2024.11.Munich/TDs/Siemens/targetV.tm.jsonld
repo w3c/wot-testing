@@ -3,7 +3,7 @@
         "https://www.w3.org/2022/wot/td/v1.1",
         {
         "brick": "https://brickschema.org/schema/1.0.3/BrickFrame#",
-        "mcep": "http://mcep/shared"
+        "mcep": "https://w3id.org/tinyml-schema/cep-rule-schema#"
           }
     ],
   "id": "urn:node:targetV",
