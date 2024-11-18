@@ -1,0 +1,155 @@
+{
+  "@context": "https://www.w3.org/2019/wot/td/v1",
+  "id": "urn:dev:wot:CacheSYSTEM-2400-1234",
+  "@type": "Thing",
+  "title": "CacheSYSTEM 2400 Cash Deposit Device",
+  "description": "A Web of Things implementation of ArmorSafe CacheSYSTEM 2400 cash-handling device.",
+  "securityDefinitions": {
+    "oauth2_sc": {
+      "scheme": "oauth2",
+      "flow": "client_credentials",
+      "token": "http://localhost:8080/token",
+      "scopes": [
+        "deposit",
+        "status"
+      ]
+    }
+  },
+  "security": [
+    "oauth2_sc"
+  ],
+  "properties": {
+    "status": {
+      "type": "object",
+      "description": "The current status of the device, including its name and model.",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "properties": {
+        "vendor": {
+          "type": "string",
+          "description": "Device vendor.",
+          "readOnly": true,
+          "writeOnly": false,
+          "observable": false
+        },
+        "model": {
+          "type": "string",
+          "description": "The model of the device.",
+          "readOnly": true,
+          "writeOnly": false,
+          "observable": false
+        },
+        "currentStatus": {
+          "type": "string",
+          "description": "The operational status of the device (e.g., online, offline, maintenance)",
+          "readOnly": true,
+          "writeOnly": false,
+          "observable": false
+        },
+        "userPresence": {
+          "type": "boolean",
+          "description": "True if there is a user currently using the device",
+          "readOnly": true,
+          "writeOnly": false,
+          "observable": false
+        },
+        "errorsList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": false
+          },
+          "description": "A queue of messages related to the device's errors or warnings.",
+          "readOnly": true,
+          "writeOnly": false,
+          "observable": false
+        }
+      },
+      "forms": [
+        {
+          "href": "http://localhost:8080/status",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "systemReboot": {
+      "description": "Reboot the cash deposit device.",
+      "safe": false,
+      "idempotent": false,
+      "forms": [
+        {
+          "href": "http://localhost:8080/systemReboot",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    }
+  },
+  "events": {
+    "systemEvent": {
+      "@type": "object",
+      "properties": {
+        "EventType": {
+          "type": "string",
+          "description": "Type of the event."
+        },
+        "Severity": {
+          "type": "integer",
+          "description": "Severity level of the event (0 = info, 1 = warning, 2 = error).",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "DateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time when the event occurred."
+        },
+        "ByUser": {
+          "type": "string",
+          "description": "User who triggered the event."
+        },
+        "ForUser": {
+          "type": "string",
+          "description": "User for whom the event is relevant."
+        },
+        "Value": {
+          "type": "number",
+          "description": "Associated value of the event."
+        },
+        "Currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3,
+          "description": "Currency in 3-letter ISO format."
+        },
+        "Information": {
+          "type": "string",
+          "description": "Additional information about the event."
+        }
+      },
+      "description": "An event signaling various system-related events with additional context.",
+      "forms": [
+        {
+          "href": "http://localhost:8080/systemEvent",
+          "contentType": "application/json",
+          "op": [
+            "subscribeevent"
+          ]
+        }
+      ]
+    }
+  }
+}
