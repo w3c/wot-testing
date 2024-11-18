@@ -1,17 +1,17 @@
-# Energy Management Scenario
+# Efficient Energy Management in Buildings Scenario
 
 ## Involved Devices and Applications
 
-- Philips Hue
+- Siemens TargetV device with temperature, humidity and CO2 sensor (MQTT)
 - KNX IoT Device with Thermostat
-- Siemens TargetV device (MQTT)
+- Philips Hue simulating the status of a thermostat
 - sayWoT! Gateway
-- Event Processing Engine: It can create new events in the device
+- Event Processing Engine on the device
+- TinyML Engine on the device
 - Consumer apps should be provided by others
 
 ## Mashup Explanation
-
-TBC
+Update thermostat functionality dynamically at runtime by loading/unloading rules via Event Processing Engine and predicting person presence via TinyML Engine to save energy.
 
 ## Results
 
