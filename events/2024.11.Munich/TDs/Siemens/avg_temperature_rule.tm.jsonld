@@ -1,0 +1,75 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "brick": "https://brickschema.org/schema/1.0.3/BrickFrame#",
+            "mcep": "http://mcep/shared"
+        }
+    ],
+    "id": "urn:mcep:rule:averageTemperature",
+    "@type": [
+        "tm:ThingModel",
+        "mcep:ThingFunction"
+    ],
+    "properties": {
+        "averageTemperature": {
+            "title": "Virtual function that calculates the average temperature",
+            "mcep:rule": "avg_temp[_,_](Y) :- aggr {temp[_,_](X), *, Y := avg(X)} [count 3]",
+            "mcep:operates_on": "temperature",
+            "mcep:deployable": [
+                "mcep:Device",
+                "brick:Thermostat"
+            ],
+            "type": "number",
+            "readOnly": true,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "/avg_temp",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "averageTemperatureStart": {
+            "@type": "mcep:start",
+            "title": "Start average temperature rule on the device",
+            "description": "Activate deployed rule on device",
+            "type": "string",
+            "readOnly": false,
+            "writeOnly": true,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "/topic/input_rule",
+                    "op": [
+                        "unobserveproperty",
+                        "observeproperty",
+                        "writeproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "averageTemperatureStop": {
+        "@type": "mcep:stop",
+        "title": "Stop average temperature rule from the device",
+        "description": "Stops deployed rule on device",
+        "readOnly": false,
+        "writeOnly": true,
+        "type": "string",
+        "observable": true,
+        "forms": [
+            {
+                "href": "/topic/input_rule",
+                "op": [
+                    "unobserveproperty",
+                    "observeproperty",
+                    "writeproperty"
+                ]
+            }
+        ]
+    }
+}
