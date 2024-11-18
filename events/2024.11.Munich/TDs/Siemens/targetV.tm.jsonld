@@ -1,0 +1,91 @@
+{
+  "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+        "brick": "https://brickschema.org/schema/1.0.3/BrickFrame#",
+        "mcep": "http://mcep/shared"
+          }
+    ],
+  "id": "urn:node:targetV",
+  "title": "Siemens TargetV device",
+  "version" : {"model": "1.0.0"},
+  "@type": [
+    "tm:ThingModel",
+    "mcep:Device",
+    "brick:Thermostat"
+  ],
+  "base": "{{MQTT_IoT_DEMO_BROKER_ADDRESS}}:{{MQTT_BROKER_PORT}}",
+  "description": "Siemens TargetV device that integrates CO2, temperature, and humidity, and occupancy sensors",
+  "securityDefinitions": {
+        "nosec_sc": {
+          "scheme": "nosec"
+        }
+    },
+  "security": "nosec_sc",
+  "properties": {
+    "co2": {
+      "title": "Reads the CO2 value from the sensor connected to the TargetV device",
+      "@type": "brick:co2",
+      "type": "string",
+      "writeOnly":false,
+      "observable":true,
+       "forms": [
+        {
+          "href": "/co2",
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ]
+        }
+      ]
+    },
+    "temperature": {
+      "title": "Reads the temperature value from the sensor connected to a TargetV device",
+      "@type": "brick:temperature",
+      "type": "string",
+      "writeOnly":false,
+      "observable":true,
+       "forms": [
+        {
+          "href": "/temperature",
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ]
+        }
+      ]
+    },
+    "humidity": {
+      "title": "Reads the humidity value from the sensor connected to a TargetV device",
+      "@type": "brick:humidity",
+      "type": "string",
+      "writeOnly":false,
+      "observable":true,
+       "forms": [
+        {
+          "href": "/humidity",
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ]
+        }
+      ]
+    },
+    "occupancy": {
+      "title": "Reads the occupancy value from the sensor connected to a TargetV device",
+      "@type": "brick:occupancy",
+      "type": "string",
+      "writeOnly":false,
+      "observable":true,
+       "forms": [
+        {
+          "href": "/occupancy",
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ]
+        }
+      ]
+    }
+  }
+}
