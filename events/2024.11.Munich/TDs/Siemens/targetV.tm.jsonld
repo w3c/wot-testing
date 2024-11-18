@@ -11,6 +11,7 @@
   "version" : {"model": "1.0.0"},
   "@type": [
     "tm:ThingModel",
+    "mcep:Device",
     "brick:Thermostat"
   ],
   "base": "{{MQTT_IoT_DEMO_BROKER_ADDRESS}}:{{MQTT_BROKER_PORT}}",
@@ -24,6 +25,7 @@
   "properties": {
     "co2": {
       "title": "Reads the CO2 value from the sensor connected to the TargetV device",
+      "@type": "brick:co2",
       "type": "string",
       "writeOnly":false,
       "observable":true,
@@ -39,6 +41,7 @@
     },
     "temperature": {
       "title": "Reads the temperature value from the sensor connected to a TargetV device",
+      "@type": "brick:temperature",
       "type": "string",
       "writeOnly":false,
       "observable":true,
@@ -54,6 +57,7 @@
     },
     "humidity": {
       "title": "Reads the humidity value from the sensor connected to a TargetV device",
+      "@type": "brick:humidity",
       "type": "string",
       "writeOnly":false,
       "observable":true,
@@ -69,6 +73,7 @@
     },
     "occupancy": {
       "title": "Reads the occupancy value from the sensor connected to a TargetV device",
+      "@type": "brick:occupancy",
       "type": "string",
       "writeOnly":false,
       "observable":true,
