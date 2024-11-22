@@ -1,4 +1,6 @@
 # AI Services
+Provided remotely by Intel.
+See [Documentation](../Documentation/Intel/README.md).
 
 ## Ollama LLM Server
 This is running an LLM interference engine that can run a number of different
