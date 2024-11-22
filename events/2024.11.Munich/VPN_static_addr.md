@@ -9,6 +9,7 @@ by updating this markdown file and making a pull request.
 |192.168.30.1       | Gateway         |
 |192.168.30.2-9     | Reserved for administrative purpose        |
 |192.168.30.10      | ECHONET Consortium |
+|192.168.30.11      | AI Services (McCool/Intel) |
 | ...               | ...             |
 |192.168.30.127     | free                  |
 |192.168.30.128-250 | allocated by DHCP     |
