@@ -1,0 +1,493 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "qudt": "http://qudt.org/schemas/qudt/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    }
+  ],
+  "id": "urn:uuid:568927e8-8b7d-42b7-a0c3-79972761b31f",
+  "title": "Ollama LLM Service",
+  "description": "REST API for Ollama service providing LLM interferencing.  Can also support multimodal LLMs and LLMs with tool support.  TD describes `generate` and `chat` endpoints only.",
+  "base": "http://192.168.30.11:11434/api",
+  "@type": [
+    "Thing",
+    "LLMService"
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "actions": {
+    "generate": {
+      "title": "Generate a completion",
+      "description": "Generate a response for a given prompt with a provided model. This is a streaming endpoint, so there will be a series of responses. Streaming can be disabled using `\"stream\": false`. The final response object will include statistics and additional data from the request.",
+      "synchronous": true,
+      "safe": true,
+      "idempotent": true,
+      "input": {
+        "type": "object",
+        "required": [
+          "model",
+          "prompt"
+        ],
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The model name.  Model names follow a `model:tag` format, where model can have an optional namespace such as `example/model`. Some examples are `orca-mini:3b-q4_1` and `llama3:70b`. The tag is optional and, if not provided, will default to latest. The tag is used to identify a specific version."
+          },
+          "prompt": {
+            "type": "string",
+            "description": "The prompt to generate a response for.  If an empty prompt is provided, the model will only be loaded into memory."
+          },
+          "suffix": {
+            "type": "string",
+            "description": "The text after the model response."
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "A single base64-encoded image."
+            },
+            "description": "A list of base64-encoded images, for multimodal models such as `llava`."
+          },
+          "format": {
+            "type": "string",
+            "description": "The format to return a response in. Currently the only accepted value is `json`. When format is set to json, the output will always be a well-formed JSON object.  It is important to instruct the model to use JSON in the prompt, e.g. using 'Respond using JSON', otherwise the model may generate a large amount of whitespace."
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "num_keep": {
+                "type": "integer"
+              },
+              "seed": {
+                "type": "integer",
+                "description": "Set to get reproducible outputs"
+              },
+              "num_predict": {
+                "type": "integer"
+              },
+              "top_k": {
+                "type": "integer"
+              },
+              "top_p": {
+                "type": "number"
+              },
+              "min_p": {
+                "type": "number"
+              },
+              "tfs_z": {
+                "type": "number"
+              },
+              "typical_p": {
+                "type": "number"
+              },
+              "repeat_last_n": {
+                "type": "integer"
+              },
+              "temperature": {
+                "type": "number"
+              },
+              "repeat_penalty": {
+                "type": "number"
+              },
+              "presence_penalty": {
+                "type": "number"
+              },
+              "frequency_penalty": {
+                "type": "number"
+              },
+              "mirostat": {
+                "type": "integer"
+              },
+              "mirostat_tau": {
+                "type": "number"
+              },
+              "mirostat_eta": {
+                "type": "number"
+              },
+              "penalize_newline": {
+                "type": "boolean"
+              },
+              "stop": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "numa": {
+                "type": "boolean"
+              },
+              "num_ctx": {
+                "type": "integer"
+              },
+              "num_batch": {
+                "type": "integer"
+              },
+              "num_gpu": {
+                "type": "integer"
+              },
+              "main_gpu": {
+                "type": "integer"
+              },
+              "low_vram": {
+                "type": "boolean"
+              },
+              "vocab_only": {
+                "type": "boolean"
+              },
+              "use_mmap": {
+                "type": "boolean"
+              },
+              "use_mlock": {
+                "type": "boolean"
+              },
+              "num_thread": {
+                "type": "integer"
+              }
+            },
+            "description": "Additional model parameters listed in the documentation for the Modelfile such as temperature."
+          },
+          "system": {
+            "type": "string",
+            "description": "System message to use. Overrides what is defined in the Modelfile."
+          },
+          "template": {
+            "type": "string",
+            "description": "The prompt template to use.  Overrides what is defined in the Modelfile."
+          },
+          "context": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "The context parameter returned from a previous request to `generate`. This can be used to keep a short conversational memory."
+          },
+          "stream": {
+            "type": "boolean",
+            "description": "If `false` the response will be returned as a single response object, rather than a stream of objects.  NOTE: Currently TDs have no way to indicate that a response is streaming.  Therefore this should always be `false` (note that the default for ollama is `true`!)"
+          },
+          "raw": {
+            "type": "boolean",
+            "description": "If true no formatting will be applied to the prompt. You may choose to use the raw parameter if you are specifying a full templated prompt in your request to the API.  Also note that raw mode will not return a context."
+          },
+          "keep_alive": {
+            "type": "integer",
+            "unit": "qudt:MIN",
+            "description": "Controls how long the model will stay loaded into memory following the request (default: 5m).  If an empty prompt is provided and the keep_alive parameter is set to 0, a model will be unloaded from memory."
+          }
+        }
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The model name, as used in the invocation of this action."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "iso-datetime"
+          },
+          "response": {
+            "type": "string",
+            "description": "Empty if the response was streamed, if not streamed, this will contain the full response."
+          },
+          "done": {
+            "type": "boolean"
+          },
+          "context": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "An encoding of the conversation used in this response, this can be sent in the next request to keep a conversational memory."
+          },
+          "total_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent generating the response, in nanoseconds."
+          },
+          "load_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent in nanoseconds loading the model."
+          },
+          "prompt_eval_count": {
+            "type": "integer",
+            "description": "Number of tokens in the prompt."
+          },
+          "prompt_eval_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent in nanoseconds evaluating the prompt."
+          },
+          "eval_count": {
+            "type": "integer",
+            "description": "Number of tokens in the response."
+          },
+          "eval_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time in nanoseconds spent generating the response."
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/generate",
+          "op": "invokeaction",
+          "contentType": "application/json"
+        }
+      ]
+    },
+    "chat": {
+      "title": "Generate a chat completion",
+      "description": "Generate the next message in a chat with a provided model. This is a streaming endpoint, so there will be a series of responses. Streaming can be disabled using `\"stream\": false`. The final response object will include statistics and additional data from the request.",
+      "synchronous": true,
+      "safe": true,
+      "idempotent": true,
+      "input": {
+        "type": "object",
+        "required": [
+          "model"
+        ],
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The model name.  Model names follow a `model:tag` format, where model can have an optional namespace such as `example/model`. Some examples are `orca-mini:3b-q4_1` and `llama3:70b`. The tag is optional and, if not provided, will default to latest. The tag is used to identify a specific version."
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "role",
+                "content"
+              ],
+              "properties": {
+                "role": {
+                  "type": "string",
+                  "description": "The role of the message, one of `system`, `user`, `assistant`, or `tool`."
+                },
+                "content": {
+                  "type": "string",
+                  "description": "The content of the message."
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "A single base64-encoded image."
+                  },
+                  "description": "A list of base64-encoded images, for multimodal models such as `llava`."
+                },
+                "tool_calls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "A list of tools the model wants to use."
+                }
+              }
+            },
+            "description": "The messages of the chat, this can be used to keep a chat memory."
+          },
+          "tools": {
+            "description": "Tools for the model to use if supported. Requires `stream` to be set to `false`."
+          },
+          "format": {
+            "type": "string",
+            "description": "The format to return a response in. Currently the only accepted value is `json`. When format is set to json, the output will always be a well-formed JSON object.  It is important to instruct the model to use JSON in the prompt, e.g. using 'Respond using JSON', otherwise the model may generate a large amount of whitespace."
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "num_keep": {
+                "type": "integer"
+              },
+              "seed": {
+                "type": "integer",
+                "description": "Set to get reproducible outputs"
+              },
+              "num_predict": {
+                "type": "integer"
+              },
+              "top_k": {
+                "type": "integer"
+              },
+              "top_p": {
+                "type": "number"
+              },
+              "min_p": {
+                "type": "number"
+              },
+              "tfs_z": {
+                "type": "number"
+              },
+              "typical_p": {
+                "type": "number"
+              },
+              "repeat_last_n": {
+                "type": "integer"
+              },
+              "temperature": {
+                "type": "number"
+              },
+              "repeat_penalty": {
+                "type": "number"
+              },
+              "presence_penalty": {
+                "type": "number"
+              },
+              "frequency_penalty": {
+                "type": "number"
+              },
+              "mirostat": {
+                "type": "integer"
+              },
+              "mirostat_tau": {
+                "type": "number"
+              },
+              "mirostat_eta": {
+                "type": "number"
+              },
+              "penalize_newline": {
+                "type": "boolean"
+              },
+              "stop": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "numa": {
+                "type": "boolean"
+              },
+              "num_ctx": {
+                "type": "integer"
+              },
+              "num_batch": {
+                "type": "integer"
+              },
+              "num_gpu": {
+                "type": "integer"
+              },
+              "main_gpu": {
+                "type": "integer"
+              },
+              "low_vram": {
+                "type": "boolean"
+              },
+              "vocab_only": {
+                "type": "boolean"
+              },
+              "use_mmap": {
+                "type": "boolean"
+              },
+              "use_mlock": {
+                "type": "boolean"
+              },
+              "num_thread": {
+                "type": "integer"
+              }
+            },
+            "description": "Additional model parameters listed in the documentation for the Modelfile such as temperature."
+          },
+          "stream": {
+            "type": "boolean",
+            "description": "If `false` the response will be returned as a single response object, rather than a stream of objects.  NOTE: Currently TDs have no way to indicate that a response is streaming.  Therefore this should always be `false` (note that the default for ollama is `true`!)"
+          },
+          "keep_alive": {
+            "type": "integer",
+            "unit": "minute",
+            "description": "Controls how long the model will stay loaded into memory following the request (default: 5m).  If an empty prompt is provided and the keep_alive parameter is set to 0, a model will be unloaded from memory."
+          }
+        }
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The model name, as used in the invocation of this action."
+          },
+          "message": {
+            "type": "object",
+            "properties": {
+              "role": {
+                "type": "string",
+                "description": "The role of the message, one of `system`, `user`, `assistant`, or `tool`."
+              },
+              "content": {
+                "type": "string",
+                "description": "The content of the message."
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "description": "A single base64-encoded image."
+                },
+                "description": "A list of base64-encoded images, for multimodal models such as `llava`."
+              },
+              "tool_calls": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "A list of tools the model wants to use."
+              }
+            }
+          },
+          "created_at": {
+            "type": "string",
+            "format": "xsd:dateTime"
+          },
+          "done": {
+            "type": "boolean"
+          },
+          "total_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent generating the response, in nanoseconds."
+          },
+          "load_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent in nanoseconds loading the model."
+          },
+          "prompt_eval_count": {
+            "type": "integer",
+            "description": "Number of tokens in the prompt."
+          },
+          "prompt_eval_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time spent in nanoseconds evaluating the prompt."
+          },
+          "eval_count": {
+            "type": "integer",
+            "description": "Number of tokens in the response."
+          },
+          "eval_duration": {
+            "type": "integer",
+            "unit": "ns",
+            "description": "Time in nanoseconds spent generating the response."
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/chat",
+          "op": "invokeaction",
+          "contentType": "application/json"
+        }
+      ]
+    }
+  }
+}
