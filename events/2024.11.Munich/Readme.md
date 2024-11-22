@@ -77,6 +77,7 @@ To better prepare for the plugfest, please help us by doing the following:
 | Archeion     | Some RPis with Sensors                        |  x       |        |         | HTTP               | LAN                                                                | Table 8                                                      | Cristiano Aguzzi | |
 | Christian Paul | Small devices like e-paper display, sensors |  x       |        |         | HTTP               | LAN                                                                | Table 8                                                      | @Jaller94 | |
 | Christian Paul | Godot (game engine) Things                  |          |        | x       | WS, HTTP           | LAN                                                                | Table 8                                                      | @Jaller94 |
+| ECHONET Consortium | Air Conditioner  | x | x |  | HTTP           | VPN                                                                |                                                      | PHAM, Van Cu |
 | ...          |     ...                                       |          |        |         |                    | ...                                                                |  ...                                                         |   tbc | |
 
 ## List of Consumers that will be available for the PlugFest
