@@ -1,0 +1,225 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Tilt Switch",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "count": {
+            "title": "count",
+            "titles": {
+                "en": "Count",
+                "de": "Zaehler",
+                "it": "Contatore"
+            },
+            "type": "integer",
+            "description": "Tilts counter",
+            "descriptions": {
+                "en": "Tilts counter",
+                "de": "Tilts zaehler",
+                "it": "Contatore di urti"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/count/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/count",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/count/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Tilt%20Switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        },
+        "timestamps": {
+            "title": "timestamps",
+            "titles": {
+                "en": "Tilt events timestamps",
+                "de": "Tilt Ereignis Zeitstempel",
+                "it": "Timestamp degli eventi di inclinazione"
+            },
+            "type": "array",
+            "description": "Array containing the timestamps of tilt events",
+            "descriptions": {
+                "en": "Array containing the timestamps of tilt events",
+                "de": "Array mit den Zeitstempeln der Neigungsereignisse",
+                "it": "Array contenente i timestamp degli eventi di inclinazione"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/timestamps/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/timestamps",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/properties/timestamps/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Tilt%20Switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "tiltDetected": {
+            "title": "Tilt Detected",
+            "titles": {
+                "en": "Tilt Detected",
+                "de": "Tilt registriert",
+                "it": "Registrata inclinazione"
+            },
+            "description": "Tilt event",
+            "descriptions": {
+                "en": "An event emitted when a tilt is detected by the sensor.",
+                "de": "Ein Ereignis, das ausgelöst wird, wenn der Sensor eine Erschütterung erkennt",
+                "it": "Evento emesso quando un'inclinazione viene rilevata dal sensore."
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/events/tiltDetected",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9000/tilt-switch/events/tiltDetected",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Tilt%20Switch/events/tiltDetected",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:c870d53a-9f2a-48b8-958a-94f7abddbe9d",
+    "titles": {
+        "en": "Tilt Switch",
+        "de": "Tilt schalter",
+        "it": "Tilt Switch"
+    },
+    "description": "Tilt Switch Thing",
+    "descriptions": {
+        "en": "Tilt Switch Thing",
+        "de": "Tilt schalter Thing",
+        "it": "Thing Tilt Switch"
+    },
+    "forms": [
+        {
+            "href": "http://192.168.1.53:9000/tilt-switch/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://192.168.1.53:9000/tilt-switch/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

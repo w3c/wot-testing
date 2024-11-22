@@ -1,0 +1,225 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Tap Switch",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "count": {
+            "title": "count",
+            "titles": {
+                "en": "Count",
+                "de": "Zaehler",
+                "it": "Contatore"
+            },
+            "type": "integer",
+            "description": "Taps counter",
+            "descriptions": {
+                "en": "Taps counter",
+                "de": "Tapp zaehler",
+                "it": "Contatore di tocchi"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/count/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/count",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/count/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1883/Tap%20Switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        },
+        "timestamps": {
+            "title": "timestamps",
+            "titles": {
+                "en": "Tap events timestamps",
+                "de": "Tap Ereignis Zeitstempel",
+                "it": "Timestamp degli eventi di tocco"
+            },
+            "type": "array",
+            "description": "Array containing the timestamps of tap events",
+            "descriptions": {
+                "en": "Array containing the timestamps of tap events",
+                "de": "Array mit den Zeitstempeln der Tapp-Ereignisse",
+                "it": "Array contenente i timestamp degli eventi di tocco"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/timestamps/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/timestamps",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/properties/timestamps/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1883/Tap%20Switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "tapDetected": {
+            "title": "Tap Detected",
+            "titles": {
+                "en": "Tap Detected",
+                "de": "Tapp registriert",
+                "it": "Tocco rilevato"
+            },
+            "description": "Tap event",
+            "descriptions": {
+                "en": "An event emitted when a tap is detected by the sensor.",
+                "de": "Ein Ereignis, das ausgelöst wird, wenn der Sensor eine Erschütterung erkennt",
+                "it": "Evento emesso quando un tocco viene rilevato dal sensore."
+            },
+            "forms": [
+                {
+                    "href": "http://localhost:9000/tap-switch/events/tapDetected",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://localhost:9000/tap-switch/events/tapDetected",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1883/Tap%20Switch/events/tapDetected",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:fd983f0b-a769-47e6-8290-af9799c7be9e",
+    "titles": {
+        "en": "Tap Switch",
+        "de": "Tapp schalter",
+        "it": "Tap Switch"
+    },
+    "description": "Tap Switch Thing",
+    "descriptions": {
+        "en": "Tap Switch Thing",
+        "de": "Tapp schalter Thing",
+        "it": "Thing Tap Switch"
+    },
+    "forms": [
+        {
+            "href": "http://localhost:9000/tap-switch/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://localhost:9000/tap-switch/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

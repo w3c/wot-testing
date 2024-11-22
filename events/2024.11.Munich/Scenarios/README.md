@@ -40,3 +40,4 @@ Some ideas:
   * Hitachi: Testing the discovery implementation
   * Thingweb dart_wot: Identifying shortcomings and testing in real life with others
   * McCool: AI Service integration
+  * Archeion: Verify data collection for different Web Things (interoperability)

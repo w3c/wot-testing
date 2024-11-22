@@ -1,0 +1,225 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Motion Sensor",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "count": {
+            "title": "count",
+            "titles": {
+                "en": "Count",
+                "de": "Zaehler",
+                "it": "Contatore"
+            },
+            "type": "integer",
+            "description": "Motions counter",
+            "descriptions": {
+                "en": "Motions counter",
+                "de": "Motions zaehler",
+                "it": "Contatore dei movimenti"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/count/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/count",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/count/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1883/Motion%20Sensor/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        },
+        "timestamps": {
+            "title": "timestamps",
+            "titles": {
+                "en": "Motion events timestamps",
+                "de": "Motion Ereignis Zeitstempel",
+                "it": "Timestamp degli eventi di movimento"
+            },
+            "type": "array",
+            "description": "Array containing the timestamps of motion events",
+            "descriptions": {
+                "en": "Array containing the timestamps of motion events",
+                "de": "Array mit den Zeitstempeln der Bewegungsereignisse",
+                "it": "Array contenente i timestamp degli eventi di movimento"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/timestamps/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/timestamps",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/properties/timestamps/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1883/Motion%20Sensor/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "motionDetected": {
+            "title": "Motion Detected",
+            "titles": {
+                "en": "Motion Detected",
+                "de": "Motion registriert",
+                "it": "Registrato movimento"
+            },
+            "description": "Motion event",
+            "descriptions": {
+                "en": "An event emitted when a motion is detected by the sensor.",
+                "de": "Ein Ereignis, das ausgelocht wird, wenn der Sensor eine Bewegung erkennt",
+                "it": "Evento emesso quando un movimento viene rilevata dal sensore."
+            },
+            "forms": [
+                {
+                    "href": "http://localhost:9000/motion-sensor/events/motionDetected",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://localhost:9000/motion-sensor/events/motionDetected",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1883/Motion%20Sensor/events/motionDetected",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:664049d0-5fd0-44bd-9012-9eab0fc01797",
+    "titles": {
+        "en": "Motion Sensor",
+        "de": "Motion Sensor",
+        "it": "Sensore di movimento"
+    },
+    "description": "Motion Sensor Thing",
+    "descriptions": {
+        "en": "Motion Sensor Thing",
+        "de": "Motion Sensor Thing",
+        "it": "Thing Sensore di movimento"
+    },
+    "forms": [
+        {
+            "href": "http://localhost:9000/motion-sensor/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://localhost:9000/motion-sensor/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}
