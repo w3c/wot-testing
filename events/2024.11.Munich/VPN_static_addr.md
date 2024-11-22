@@ -15,6 +15,6 @@ by updating this markdown file and making a pull request.
 |192.168.30.128-250 | allocated by DHCP     |
 |192.168.30.251-255 | Reserved for administrative purpose        | 
 
-Note: I *wanted* to set up the above IP address for AI services but could not 
+Note from McCool: I *wanted* to set up the above IP address for AI services but could not 
 get it to work.  For now I am using DHCP and have been assigned the IP address
 192.168.30.138 - hopefully it will stick.
