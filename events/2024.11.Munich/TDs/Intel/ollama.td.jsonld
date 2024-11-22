@@ -9,7 +9,7 @@
   "id": "urn:uuid:568927e8-8b7d-42b7-a0c3-79972761b31f",
   "title": "Ollama LLM Service",
   "description": "REST API for Ollama service providing LLM interferencing.  Can also support multimodal LLMs and LLMs with tool support.  TD describes `generate` and `chat` endpoints only.",
-  "base": "http://192.168.30.11:11434/api",
+  "base": "http://192.168.30.138:11434/api",
   "@type": [
     "Thing",
     "LLMService"
