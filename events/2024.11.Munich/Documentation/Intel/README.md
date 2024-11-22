@@ -58,7 +58,7 @@ See the [full model library](https://ollama.com/library) and let me know if you 
 
 Use the following to test access from the VPN (static IP will be used for this service):
 ```sh
-curl http://192.168.30.11:11434/api/generate -d '{"model": "llama3.2", "prompt": "Why is the sky blue?", "stream": false}'
+curl http://192.168.30.138:11434/api/generate -d '{"model": "llama3.2", "prompt": "Why is the sky blue?", "stream": false}'
 ```
 This static IP is on the VPN.  You may have to replace the above IP with the appropriate values if you
 are using a "bridge".   If there is a need I can see about making the above service available
