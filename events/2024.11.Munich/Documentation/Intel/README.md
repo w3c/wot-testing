@@ -45,7 +45,11 @@ Recommended models (these all support tools):
      than the basic llama3.2 model (11B parameters).  Images need to be
      [encoded in base 64](https://stackabuse.com/bytes/converting-images-and-image-urls-to-base64-in-node-js/).
    - llama3.2-vision:90b - A larger, more powerful version of the above.  If you need both
-     planning and image understanding.  90B parameters.  Largest model feasible to run on this machine.
+     planning and image understanding.  Slow and big (90B parameters).  Largest model feasible to run on this machine.
+
+Larger models may also take a significant time to "load" upon first use (reading 55GB into memory takes time,
+even though I have a RAID drive...).
+
 If you want you can try some of the other models mentioned in the ollama documentation.
 I've downloaded most of the interesting ones listed under the [model library examples](https://github.com/ollama/ollama/tree/main?tab=readme-ov-file#model-library) in the documentation.
 However, I will only be testing tools and image understanding with the above models.
