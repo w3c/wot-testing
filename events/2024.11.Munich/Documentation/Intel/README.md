@@ -33,19 +33,20 @@ As noted above, please do not use the llama3.1:405b model,
 my machine "only" has 128GB of DRAM and consumer-class GPUs with limited VRAM.
 
 Recommended models (these all support tools):
-   - llama3.1:70b - Relatively slow (a few minutes for a paragraph), but
+   - `llama3.1:70b` - Relatively slow (a few minutes for a paragraph), but
      a better choice if you want "reasoning", e.g. for the planning part
      of an agent.
-   - llama3.1 - For general commands.  Does have tool support.  Fast (7B parameters).
-   - llama3.2 - For general commands; an improved, smaller version of the above.  Has tool
+   - `llama3.1` - For general commands.  Does have tool support.  Fast (7B parameters).
+   - `llama3.2` - For general commands; an improved, smaller version of the above.  Has tool
      support.  Fast and small (3B parameters).
-   - llama3.2:1b - Even smaller version of the above with 1B parameters.  Very fast.
+   - `llama3.2:1b` - Even smaller version of the above with 1B parameters.  Very fast.
      Suitable for simple commands.
-   - llama3.2-vision - For general commands and image understanding.  Fast, but larger
+   - `llama3.2-vision` - For general commands and image understanding.  Fast, but larger
      than the basic llama3.2 model (11B parameters).  Images need to be
      [encoded in base 64](https://stackabuse.com/bytes/converting-images-and-image-urls-to-base64-in-node-js/).
-   - llama3.2-vision:90b - A larger, more powerful version of the above.  If you need both
+   - `llama3.2-vision:90b` - A larger, more powerful version of the above.  If you need both
      planning and image understanding.  Slow and big (90B parameters).  Largest model feasible to run on this machine.
+     Don't use unless you actually plan to use the vision features.
 
 Larger models may also take a significant time to "load" upon first use (reading 55GB into memory takes time,
 even though I have a RAID drive...).
