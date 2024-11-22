@@ -29,20 +29,27 @@ The "tools" only work with the "chat" interface and with `"stream": false`.
 During the plugfest I plan to explore tools to read and invoke Things described by
 other TDs, interface with TDDs, etc.  Stay tuned.
 
-As noted above, please do not use the largest llama3.1:405b model,
-my machine "only" has 128GB of RAM and consumer-class GPUs.
+As noted above, please do not use the llama3.1:405b model,
+my machine "only" has 128GB of DRAM and consumer-class GPUs with limited VRAM.
 
 Recommended models (these all support tools):
    - llama3.1:70b - Relatively slow (a few minutes for a paragraph), but
      a better choice if you want "reasoning", e.g. for the planning part
      of an agent.
-   - llama3.1 - For general commands.  Does have tool support.  Fast (7b parameters).
-   - llama3.2 - For general commands; an improved version of the above.  Has both tool
-     support and image understanding.  Fast (7b parameters).  Images need to be
+   - llama3.1 - For general commands.  Does have tool support.  Fast (7B parameters).
+   - llama3.2 - For general commands; an improved, smaller version of the above.  Has tool
+     support.  Fast and small (3B parameters).
+   - llama3.2:1b - Even smaller version of the above with 1B parameters.  Very fast.
+     Suitable for simple commands.
+   - llama3.2-vision - For general commands and image understanding.  Fast, but larger
+     than the basic llama3.2 model (11B parameters).  Images need to be
      [encoded in base 64](https://stackabuse.com/bytes/converting-images-and-image-urls-to-base64-in-node-js/).
+   - llama3.2-vision:90b - A larger, more powerful version of the above.  If you need both
+     planning and image understanding.  90B parameters.  Largest model feasible to run on this machine.
 If you want you can try some of the other models mentioned in the ollama documentation.
-I've downloaded most of the interesting ones already, e.g. phi3-mini, etc.  However, I
-will only be testing tools etc. with the above models.
+I've downloaded most of the interesting ones listed under the [model library examples](https://github.com/ollama/ollama/tree/main?tab=readme-ov-file#model-library) in the documentation.
+However, I will only be testing tools and image understanding with the above models.
+See the [full model library](https://ollama.com/library) and let me know if you want to try a specific model.
 
 Use the following to test access from the VPN (static IP will be used for this service):
 ```sh
