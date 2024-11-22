@@ -37,7 +37,7 @@ Recommended models (these all support tools):
      a better choice if you want "reasoning", e.g. for the planning part
      of an agent.
    - llama3.1 - For general commands.  Does have tool support.  Fast (7b parameters).
-   - llama3.2 - For general commands; and improved version of the above.  Has both tool
+   - llama3.2 - For general commands; an improved version of the above.  Has both tool
      support and image understanding.  Fast (7b parameters).  Images need to be
      [encoded in base 64](https://stackabuse.com/bytes/converting-images-and-image-urls-to-base64-in-node-js/).
 If you want you can try some of the other models mentioned in the ollama documentation.
