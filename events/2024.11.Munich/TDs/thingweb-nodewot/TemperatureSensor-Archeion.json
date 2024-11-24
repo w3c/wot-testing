@@ -1,0 +1,163 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Temperature Sensor",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "temperature": {
+            "title": "Temperature",
+            "titles": {
+                "en": "Temperature",
+                "de": "Temperatur",
+                "it": "Temperatura"
+            },
+            "type": "number",
+            "description": "Current temperature value",
+            "descriptions": {
+                "en": "Current temperature value",
+                "de": "Aktuelle Temperatur",
+                "it": "Valore attuale della temperatura"
+            },
+            "observable": true,
+            "readOnly": true,
+            "unit": "°C",
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/properties/temperature/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/properties/temperature",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/properties/temperature/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1885/Temperature%20Sensor/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "temperaturePeak": {
+            "title": "Temperature peak",
+            "titles": {
+                "en": "Temperature peak",
+                "de": "Temperaturspitze",
+                "it": "Picco di temperatura"
+            },
+            "description": "Temperature peak event",
+            "descriptions": {
+                "en": "Temperature peak event",
+                "de": "Temperaturspitzeereignis",
+                "it": "Evento di picco di temperatura"
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/events/temperaturePeak",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9003/temperature-sensor/events/temperaturePeak",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1885/Temperature%20Sensor/events/temperaturePeak",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:96d761bc-f644-4ce6-a8c7-e94f7d5b611d",
+    "titles": {
+        "en": "Temperature Sensor",
+        "de": "Temperatur Sensor",
+        "it": "Sensore di temperatura"
+    },
+    "description": "Temperature Thing",
+    "descriptions": {
+        "en": "Temperature Thing",
+        "de": "Temperatur Thing",
+        "it": "Sensore di temperatura"
+    },
+    "forms": [
+        {
+            "href": "http://192.168.1.53:9003/temperature-sensor/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://192.168.1.53:9003/temperature-sensor/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

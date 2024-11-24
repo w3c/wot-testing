@@ -1,0 +1,270 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Temperature and Humidity Sensor",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "temperature": {
+            "title": "Temperature",
+            "titles": {
+                "en": "Temperature",
+                "de": "Temperatur",
+                "it": "Temperatura"
+            },
+            "type": "number",
+            "description": "Current temperature value",
+            "descriptions": {
+                "en": "Current temperature value",
+                "de": "Aktuelle Temperatur",
+                "it": "Valore attuale della temperatura"
+            },
+            "observable": true,
+            "readOnly": true,
+            "unit": "°C",
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/temperature/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/temperature",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/temperature/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1884/Temperature%20and%20Humidity%20Sensor/properties/temperature",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        },
+        "humidity": {
+            "title": "Humidity",
+            "titles": {
+                "en": "Humidity",
+                "de": "Feuchtigkeit",
+                "it": "Umidità"
+            },
+            "type": "number",
+            "description": "Current humidity value",
+            "descriptions": {
+                "en": "Current humidity value",
+                "de": "Aktuelle Feuchtigkeitswert",
+                "it": "Valore attuale dell'umidità"
+            },
+            "observable": true,
+            "readOnly": true,
+            "unit": "%",
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/humidity",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/humidity/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/humidity",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties/humidity/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1884/Temperature%20and%20Humidity%20Sensor/properties/humidity",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "temperaturePeak": {
+            "title": "Temperature peak",
+            "titles": {
+                "en": "Temperature peak",
+                "de": "Temperaturspitze",
+                "it": "Picco di temperatura"
+            },
+            "description": "Temperature peak event",
+            "descriptions": {
+                "en": "Temperature peak event",
+                "de": "Temperaturspitzeereignis",
+                "it": "Evento di picco di temperatura"
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/events/temperaturePeak",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/events/temperaturePeak",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1884/Temperature%20and%20Humidity%20Sensor/events/temperaturePeak",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "humidityPeak": {
+            "title": "Humidity peak",
+            "titles": {
+                "en": "Humidity peak",
+                "de": "Feuchtigkeitsspitze",
+                "it": "Picco di umidità"
+            },
+            "description": "Humidity peak event",
+            "descriptions": {
+                "en": "Humidity peak event",
+                "de": "Feuchtigkeitsspitzeereignis",
+                "it": "Evento di picco di umidità"
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/events/humidityPeak",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/events/humidityPeak",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1884/Temperature%20and%20Humidity%20Sensor/events/humidityPeak",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:adb58b78-6378-4bd0-9d5f-557548f1bc63",
+    "titles": {
+        "en": "Temperature and Humidity Sensor",
+        "de": "Temperatur- und Feuchtigkeitssensor",
+        "it": "Sensore di temperatura e umidità"
+    },
+    "description": "Temperature and Humidity Thing",
+    "descriptions": {
+        "en": "Temperature and Humidity Thing",
+        "de": "Temperatur- und Feuchtigkeitsthing",
+        "it": "Sensore di temperatura e umidità"
+    },
+    "forms": [
+        {
+            "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://192.168.1.53:9002/temperature-and-humidity-sensor/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

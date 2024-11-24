@@ -1,0 +1,163 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Light Intensity Sensor",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "lightIntensity": {
+            "title": "Light Intensity",
+            "titles": {
+                "en": "Light Intensity",
+                "de": "Lichtintensit",
+                "it": "Intensit  luminosa"
+            },
+            "type": "number",
+            "description": "Current light intensity",
+            "descriptions": {
+                "en": "Current light intensity",
+                "de": "Aktuelle Lichtintensit",
+                "it": "Valore attuale dell'intensitá luminosa"
+            },
+            "observable": true,
+            "readOnly": true,
+            "unit": "%",
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/properties/lightIntensity",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/properties/lightIntensity/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/properties/lightIntensity",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/properties/lightIntensity/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://localhost:1886/Light%20Intensity%20Sensor/properties/lightIntensity",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "lightIntensityPeak": {
+            "title": "Light Intensity peak",
+            "titles": {
+                "en": "Light Intensity peak",
+                "de": "Lichtintensit spitze",
+                "it": "Picco di intensit  luminosa"
+            },
+            "description": "Light Intensity peak event",
+            "descriptions": {
+                "en": "Light Intensity peak event",
+                "de": "Lichtintensit spitzeereignis",
+                "it": "Evento di picco di intensit  luminosa"
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/events/lightIntensityPeak",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9004/light-intensity-sensor/events/lightIntensityPeak",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://localhost:1886/Light%20Intensity%20Sensor/events/lightIntensityPeak",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:4f7a21d9-37ac-4c5a-acb2-d41c28ac3169",
+    "titles": {
+        "en": "Light Intensity Sensor",
+        "de": "Lichtintensit tsensor",
+        "it": "Sensore di intensitá luminosa"
+    },
+    "description": "Light Intensity Thing",
+    "descriptions": {
+        "en": "Light Intensity Thing",
+        "de": "Lichtintensit sensor Thing",
+        "it": "Sensore di intensitá luminosa"
+    },
+    "forms": [
+        {
+            "href": "http://192.168.1.53:9004/light-intensity-sensor/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://192.168.1.53:9004/light-intensity-sensor/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

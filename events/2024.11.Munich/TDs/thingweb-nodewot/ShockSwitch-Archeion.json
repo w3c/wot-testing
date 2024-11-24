@@ -1,0 +1,225 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "iot": "http://example.org/iot"
+        },
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Shock Switch",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "count": {
+            "title": "count",
+            "titles": {
+                "en": "Count",
+                "de": "Zaehler",
+                "it": "Contatore"
+            },
+            "type": "integer",
+            "description": "Shocks counter",
+            "descriptions": {
+                "en": "Shocks counter",
+                "de": "Schockszaehler",
+                "it": "Contatore di urti"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/count/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/count",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/count/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Shock%20Switch/properties/count",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        },
+        "timestamps": {
+            "title": "timestamps",
+            "titles": {
+                "en": "Shock events timestamps",
+                "de": "Schocks Ereignis Zeitstempel",
+                "it": "Timestamp degli eventi di urto"
+            },
+            "type": "array",
+            "description": "Array containing the timestamps of shock events",
+            "descriptions": {
+                "en": "Array containing the timestamps of shock events",
+                "de": "Array mit den Zeitstempeln der Schockereignisse",
+                "it": "Array contenente i timestamp degli eventi di urto"
+            },
+            "observable": true,
+            "readOnly": true,
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/timestamps/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/timestamps",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/properties/timestamps/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Shock%20Switch/properties/timestamps",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "observeproperty",
+                        "unobserveproperty"
+                    ]
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "events": {
+        "shockDetected": {
+            "title": "Shock Detected",
+            "titles": {
+                "en": "Shock Detected",
+                "de": "Schock registriert",
+                "it": "Registrato urto"
+            },
+            "description": "Shock event",
+            "descriptions": {
+                "en": "An event emitted when a shock is detected by the sensor.",
+                "de": "Ein Ereignis, das ausgelöst wird, wenn der Sensor eine Erschütterung erkennt",
+                "it": "Evento emesso quando un urto viene rilevato dal sensore."
+            },
+            "forms": [
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/events/shockDetected",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "http://192.168.1.53:9000/shock-switch/events/shockDetected",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "mqtt://192.168.1.53:1883/Shock%20Switch/events/shockDetected",
+                    "contentType": "application/json",
+                    "mqv:qos": "2",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:a83ee921-c6a5-4ac2-8796-96c1d0ea2d69",
+    "titles": {
+        "en": "Shock Switch",
+        "de": "Schockschalter",
+        "it": "Shock Switch"
+    },
+    "description": "Shock Switch Thing",
+    "descriptions": {
+        "en": "Shock Switch Thing",
+        "de": "Schockschalterthing",
+        "it": "Thing Shock Switch"
+    },
+    "forms": [
+        {
+            "href": "http://192.168.1.53:9000/shock-switch/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "http://192.168.1.53:9000/shock-switch/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}
