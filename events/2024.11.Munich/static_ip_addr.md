@@ -1,4 +1,16 @@
-# IP address allocation table for Plugfest VPN
+# Static IP Addresses in Plugfest
+
+## Local Router
+
+All IPs start with `192.168.120`. Static IPs are assigned starting at `.20`, whereas dynamic ones are assigned starting at `.100` and should be kept for 4 days. Do not edit the table below on your own. Only @egekorkan has the rights to change the addresses in the router itself.
+
+- TUM Robot: 192.168.120.20
+- TUM Conveyor Belt: 192.168.120.21
+- TUM Hue Bridge: 192.168.120.22
+- TUM Uarm: 192.168.120.23
+- TUM Tower PC: 192.168.120.24
+
+## Plugfest VPN
 
 In plugfest VPN network, the DHCP server dynamically allocates IP addresses between 192.168.30.128 to 250.  
 If you would like to use statically allocated IP addresses, please secure your addresses
