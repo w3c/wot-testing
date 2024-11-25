@@ -3,7 +3,7 @@ Provided remotely by Intel.
 See [TDs](../../TDs/Intel/README.md).
 
 ## Ollama LLM Server
-This is running an LLM interference engine that can run a number of different
+This is running an LLM inference engine that can run a number of different
 models.  See [https://github.com/ollama/ollama](https://github.com/ollama/ollama).  The service is 
 running on a largish desktop machine with 128GB of DRAM and dual Intel Arc Alchemist 770 cards with
 16GB of VRAM each.  Ollama is smart enough to partition larger models to run partially
@@ -67,3 +67,23 @@ on the internet directly (through an ssh tunnel with access controls, etc).
 This service is NOT self-describing, e.g. `.well-known/wot` will not return the TD.
 Here I am using a WoT TD to describe an existing service that was not designed with
 knowledge of WoT.
+
+## Piper Text-to-Speech
+This is running the [Piper](https://github.com/rhasspy/piper) text to speech system with the simple web interface
+given in [src/python_run/piper/http_server.py](https://github.com/rhasspy/piper/blob/master/src/python_run/piper/http_server.py).
+This simply takes raw text as input (not even in JSON, just "text/plain") and returns data that can be interpreted as a WAV
+file.  For example, you can invoke it from the command line with
+```sh
+curl -X POST -H 'Content-Type: text/plain' --data 'This is a test.' -o test.wav '192.168.30.138:5050'
+```
+On Linux, you can then play the audio file with `aplay test.wav` for example (assuming you have set up default
+audio devices, etc).  You can also use a GET interface, which encodes the inputs into the URL instead of in the body of a
+POST request as above:
+```sh
+curl -G --data-urlencode 'text=This is a test.' -o test.wav '192.168.30.138:5050'
+```
+
+NOTE 1: the above IP is the one given my server from DHCP and might change.  In particular, if I get static IP
+assignment working I will change it to 192.168.30.11.
+
+NOTE 2: Not yet working over the VPN for some unknown reason.
