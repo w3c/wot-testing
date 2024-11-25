@@ -1,0 +1,58 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "id": "urn:uuid:b3cfff58-3a82-4602-962e-0f56e1954b1a",
+  "title": "Piper TTS Service",
+  "description": "REST API for Piper service providing text-to-speed.  Takes text as input, returns audio encoded as WAV data.",
+  "base": "http://192.168.30.138:5050",
+  "@type": [
+    "Thing",
+    "TTSService"
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "get": {
+      "title": "Get text to speech",
+      "description": "Take the text given (in the URL, using GET method) and convert to speech (encoded in WAV data).  Suitable for short texts.",
+      "synchronous": true,
+      "safe": true,
+      "idempotent": true,
+      "uriVariables": {
+        "text": {
+          "type": "string",
+          "description": "URL-encoded text"
+        }
+      },
+      "forms": [
+        {
+          "href": "/{?text}",
+          "op": "readproperty",
+          "contentType": "audio/wav"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "convert": {
+      "title": "Convert text to speech",
+      "description": "Take the text given (in the BODY, using POST method) and convert to speech (encoded in WAV data).  Suitable for longer texts.",
+      "synchronous": true,
+      "safe": true,
+      "idempotent": true,
+      "forms": [
+        {
+          "href": "/",
+          "op": "invokeaction",
+          "contentType": "text/plain",
+          "response": {
+            "contentType": "audio/wav"
+          }
+        }
+      ]
+    }
+  }
+}
