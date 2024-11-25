@@ -17,7 +17,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.zipbuilder/get",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.zipbuilder/get",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -48,7 +48,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autostorage/list-locations",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autostorage/list-locations",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -62,7 +62,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autostorage/location",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autostorage/location",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -78,7 +78,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/get_calibration",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/get_calibration",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -92,7 +92,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/captures",
+          "href": "http://192.168.120.30:5000/api/v2/captures",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -152,13 +152,13 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/settings",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/settings",
           "contentType": "application/json",
           "htv:methodName": "GET"
         },
         {
           "op": "writeproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/settings",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/settings",
           "contentType": "application/json",
           "htv:methodName": "PUT"
         }
@@ -172,7 +172,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/state",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/state",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -186,7 +186,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/configuration",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/configuration",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -200,13 +200,13 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/stage/type",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/stage/type",
           "contentType": "application/json",
           "htv:methodName": "GET"
         },
         {
           "op": "writeproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/stage/type",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/stage/type",
           "contentType": "application/json",
           "htv:methodName": "PUT"
         }
@@ -227,7 +227,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/instrument/camera/lst",
+          "href": "http://192.168.120.30:5000/api/v2/instrument/camera/lst",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -241,7 +241,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/streams/mjpeg",
+          "href": "http://192.168.120.30:5000/api/v2/streams/mjpeg",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -255,7 +255,7 @@
       "forms": [
         {
           "op": "readproperty",
-          "href": "http://192.168.1.128:5000/api/v2/streams/snapshot",
+          "href": "http://192.168.120.30:5000/api/v2/streams/snapshot",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -271,7 +271,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/autofocus",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autofocus/autofocus",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -407,7 +407,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/fast_autofocus",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autofocus/fast_autofocus",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -521,7 +521,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/fast_up_down_up_autofocus",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autofocus/fast_up_down_up_autofocus",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -667,7 +667,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/measure_settling_time",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autofocus/measure_settling_time",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -793,7 +793,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.autofocus/move_and_measure",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.autofocus/move_and_measure",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -911,7 +911,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.scan/tile",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.scan/tile",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1195,7 +1195,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.zipbuilder/build",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.zipbuilder/build",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1302,7 +1302,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/recalibrate",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/recalibrate",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1397,7 +1397,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/flatten_lens_shading_table",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/flatten_lens_shading_table",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1492,7 +1492,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/delete_lens_shading_table",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/delete_lens_shading_table",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1587,7 +1587,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/get_raw_channel_percentiles",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/get_raw_channel_percentiles",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1705,7 +1705,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_exposure_from_raw",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_exposure_from_raw",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1853,7 +1853,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_white_balance_from_raw",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_white_balance_from_raw",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -1967,7 +1967,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_lens_shading_table",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.calibration.picamera/auto_lens_shading_table",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2062,7 +2062,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_1d",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_1d",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2194,7 +2194,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_xy",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/calibrate_xy",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2289,7 +2289,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/move_in_image_coordinates",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/move_in_image_coordinates",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2423,7 +2423,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/closed_loop_move_in_image_coordinates",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/closed_loop_move_in_image_coordinates",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2557,7 +2557,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/test_closed_loop_spiral_scan",
+          "href": "http://192.168.120.30:5000/api/v2/extensions/org.openflexure.camera-stage-mapping/test_closed_loop_spiral_scan",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2705,7 +2705,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/camera/capture/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/camera/capture/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -2950,7 +2950,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/camera/ram-capture/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/camera/ram-capture/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3104,7 +3104,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/camera/preview/start",
+          "href": "http://192.168.120.30:5000/api/v2/actions/camera/preview/start",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3232,7 +3232,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/camera/preview/stop",
+          "href": "http://192.168.120.30:5000/api/v2/actions/camera/preview/stop",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3327,7 +3327,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/stage/move/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/stage/move/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3523,7 +3523,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/stage/zero/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/stage/zero/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3618,7 +3618,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/system/shutdown/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/system/shutdown/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3713,7 +3713,7 @@
       "forms": [
         {
           "op": "invokeaction",
-          "href": "http://192.168.1.128:5000/api/v2/actions/system/reboot/",
+          "href": "http://192.168.120.30:5000/api/v2/actions/system/reboot/",
           "contentType": "application/json",
           "htv:methodName": "POST"
         }
@@ -3808,7 +3808,7 @@
       "forms": [
         {
           "op": "subscribeevent",
-          "href": "http://192.168.1.128:5000/api/v2/events/logging",
+          "href": "http://192.168.120.30:5000/api/v2/events/logging",
           "contentType": "application/json",
           "htv:methodName": "GET"
         }
@@ -3847,31 +3847,31 @@
   "links": [
     {
       "rel": "docs",
-      "href": "http://192.168.1.128:5000/api/v2/docs/swagger-ui"
+      "href": "http://192.168.120.30:5000/api/v2/docs/swagger-ui"
     },
     {
       "rel": "extensions",
-      "href": "http://192.168.1.128:5000/api/v2/extensions"
+      "href": "http://192.168.120.30:5000/api/v2/extensions"
     },
     {
       "rel": "actions",
-      "href": "http://192.168.1.128:5000/api/v2/actions"
+      "href": "http://192.168.120.30:5000/api/v2/actions"
     },
     {
       "rel": "captures",
-      "href": "http://192.168.1.128:5000/api/v2/captures"
+      "href": "http://192.168.120.30:5000/api/v2/captures"
     },
     {
       "rel": "instrumentSettings",
-      "href": "http://192.168.1.128:5000/api/v2/instrument/settings"
+      "href": "http://192.168.120.30:5000/api/v2/instrument/settings"
     },
     {
       "rel": "instrumentState",
-      "href": "http://192.168.1.128:5000/api/v2/instrument/state"
+      "href": "http://192.168.120.30:5000/api/v2/instrument/state"
     },
     {
       "rel": "instrumentConfiguration",
-      "href": "http://192.168.1.128:5000/api/v2/instrument/configuration"
+      "href": "http://192.168.120.30:5000/api/v2/instrument/configuration"
     }
   ],
   "securityDefinitions": {
