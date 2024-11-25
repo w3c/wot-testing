@@ -1,1 +1,4 @@
-API Key for onsite hue devices from TU Munich: KXAMA9HEQKMVsl5Z0MRQCEmNvcqBnzcDVjhWnmob
+API Key for onsite hue devices from TU Munich
+
+"name": "hue-application-key",
+"value": "KXAMA9HEQKMVsl5Z0MRQCEmNvcqBnzcDVjhWnmob"
