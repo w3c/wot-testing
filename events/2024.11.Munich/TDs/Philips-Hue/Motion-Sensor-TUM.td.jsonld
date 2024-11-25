@@ -1,0 +1,107 @@
+{
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "id": "urn:dev:ops:32473-HueMotion-2",
+    "@type": "Thing",
+    "title": "Philips Hue Motion Sensor",
+    "description": "A Philips Hue motion sensor",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "apikey",
+            "in": "header",
+            "name": "hue-application-key"
+        }
+    },
+    "security": "basic_sc",
+    "base": "https://192.168.120.22/",
+    "properties": {
+        "state": {
+            "type": "object",
+            "description": "The state of the on button (I)",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "readOnly": true,
+                    "description": "A list of errors that have occurred"
+                },
+                "data": {
+                    "type": "array",
+                    "readOnly": true,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "The ID of the motion sensor",
+                                "type": "string",
+                                "readOnly": true,
+                                "writeOnly": false
+                            },
+                            "id_v1": {
+                                "description": "The ID of the motion sensor in version 1",
+                                "type": "string",
+                                "readOnly": true,
+                                "writeOnly": false
+                            },
+                            "enabled": {
+                                "type": "boolean",
+                                "description": "If the motion sensor is enabled or not"
+                            },
+                            "motion": {
+                                "type": "object",
+                                "properties": {
+                                    "motion": {
+                                        "type": "boolean"
+                                    },
+                                    "motion_valid": {
+                                        "type": "boolean"
+                                    },
+                                    "motion_report": {
+                                        "type": "object",
+                                        "properties": {
+                                            "changed": {
+                                                "type": "string"
+                                            },
+                                            "motion": {
+                                                "type": "boolean"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "sensitivity": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "set",
+                                            "changing"
+                                        ]
+                                    },
+                                    "sensitivity": {
+                                        "type": "number",
+                                        "description": "Sensitivity of the sensor. Value in the range 0 to sensitivity_max."
+                                    },
+                                    "sensitivity_max": {
+                                        "type": "number"
+                                    }
+                                }
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "/clip/v2/resource/motion/c104416d-965a-4d60-92fa-06bd7396d764",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    }
+}
