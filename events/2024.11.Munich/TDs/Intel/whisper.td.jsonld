@@ -1,0 +1,43 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "id": "urn:uuid:79d19958-b176-4cb2-bf5f-c90a2bd5ddab",
+  "title": "Whisper ASR Service",
+  "description": "REST API for Whisper service providing speech-to-text.  Takes audio encoded as WAV data as input, returns text.",
+  "base": "http://192.168.30.138:5052",
+  "@type": [
+    "Thing",
+    "ASRService"
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "actions": {
+    "transcribe": {
+      "title": "Convert text to speech",
+      "description": "Take the speech given (in the BODY, using POST method, as WAV data, encoded using multipart form data upload) and convert to text.",
+      "safe": true,
+      "idempotent": true,
+      "output": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "/v1/audio/transcriptions",
+          "op": "invokeaction",
+          "contentType": "multipart/form-data; boundary=------------------------bcc8fd5c7a0f93ea",
+          "response": {
+            "contentType": "application/json"
+          }
+        }
+      ]
+    }
+  }
+}
