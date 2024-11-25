@@ -1,0 +1,73 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Special property types",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "color": {
+            "@type": "ColorProperty",
+            "title": "Color",
+            "type": "string",
+            "readOnly": false,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/test-property-types/special/properties/color",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        },
+        "kahoot": {
+            "@type": "Kahoot",
+            "title": "Kahoot choice",
+            "type": "string",
+            "enum": [
+                "",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/test-property-types/special/properties/kahoot",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {}
+}

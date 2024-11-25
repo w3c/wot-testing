@@ -1,0 +1,84 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Pairs for NeoBoard",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {},
+    "actions": {
+        "get-pairs-game": {
+            "title": "Generate a random game of Pairs",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "difficulty": {
+                        "type": "string",
+                        "enum": [
+                            "easy",
+                            "medium"
+                        ]
+                    },
+                    "locale": {
+                        "type": "string",
+                        "enum": [
+                            "de",
+                            "en"
+                        ]
+                    },
+                    "symbols": {
+                        "type": "string",
+                        "enum": [
+                            "🚴,🚗,🍻,🥨,⚽,🎄,🐺,🐗,🐿,🦔,🦢,🍄,🐞,🚟,🏐,🍞,🥒",
+                            "🧋,🐉,🐅,☀️,🫖,🍚,🍲,🏝️,⛰️,🚄,🍤,💰,🧧,🌏,🧨,🥟,🏸,🍍",
+                            "🍎,🍐,🍊,🍋,🍌,🍉,🍇,🍓,🫐,🍈,🍒,🍑,🥭,🍍,🥥,🥝,🍅,🍆,🥑,🥦,🫛,🥬,🥒,🌶,🫑,🌽,🥕,🫒,🧄,🧅,🫚,🥔,🍠,🫘",
+                            "🐢,🐦,🦦,🐧,🦋,🐈,🐞,🦈,🦚,🐇,🦆,🦅,🦉,🦇,🐺,🐗,🐴",
+                            "🎃,🍬,👻,🧟,🦇,🕷️,⚰️,🪦,💀,🧛,🐈‍⬛,😱,🧌,🔦,🔇,📺,🏚",
+                            "🎄,🎁,🎅,❄️,🍗,🍲,🦌,☃️,👼,🌟,✨,🐃,🫏,🍷,🧣,🧤,🕯"
+                        ]
+                    }
+                }
+            },
+            "safe": false,
+            "idempotent": false,
+            "synchronous": true,
+            "output": {
+                "type": "object",
+                "properties": {
+                    "content": {
+                        "type": "string"
+                    },
+                    "contentType": {
+                        "type": "string"
+                    },
+                    "filename": {
+                        "type": "string"
+                    }
+                }
+            },
+            "forms": [
+                {
+                    "href": "https://wot.chrpaul.de/neoboard-pairs/1/actions/get-pairs-game",
+                    "op": "invokeaction"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ]
+        }
+    },
+    "events": {}
+}

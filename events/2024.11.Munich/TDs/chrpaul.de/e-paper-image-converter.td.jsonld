@@ -1,0 +1,138 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Image 1",
+    "description": "",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "image": {
+            "title": "Input image",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "contentMediaType": "image/png",
+                    "contentEncoding": "base64"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/image",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/image/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "800x480-7-colors": {
+            "title": "E-Paper preview (800x480, 7 colors)",
+            "readOnly": true,
+            "oneOf": [
+                {
+                    "type": "string",
+                    "contentMediaType": "image/png",
+                    "contentEncoding": "base64"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/800x480-7-colors",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/800x480-7-colors/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "800x480-7-colors-epaper": {
+            "title": "E-Paper data (800x480, 7 colors)",
+            "readOnly": true,
+            "oneOf": [
+                {
+                    "type": "string",
+                    "contentMediaType": "application/octet-stream",
+                    "contentEncoding": "base64"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/800x480-7-colors-epaper",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/image-storage/1/properties/800x480-7-colors-epaper/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {}
+}
