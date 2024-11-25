@@ -12,12 +12,13 @@
         }
     },
     "security": "basic_sc",
-    "base": "https://192.168.1.101/clip/v2/resource/light/5dc4b482-e6e4-4f0b-9783-f85a1432c845",
+    "base": "https://192.168.120.22/",
     "properties": {
         "lightInformation": {
             "title": "State and Attributes of the Light",
             "description": "The current state and attributes of the light. There are more attributes that are not listed here and are not of importance.",
             "type": "object",
+            "readOnly": true,
             "properties": {
                 "data": {
                     "title": "An Array that holds the object of the information",
@@ -27,15 +28,21 @@
                         "properties": {
                             "id": {
                                 "description": "The ID of the light",
-                                "type": "string"
+                                "type": "string",
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "id_v1": {
                                 "description": "The ID of the light in version 1",
-                                "type": "string"
+                                "type": "string",
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "on": {
                                 "description": "On/Off state of the light. On=true, Off=false",
-                                "type": "boolean"
+                                "type": "boolean",
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "dimming": {
                                 "description": "The brightness of the light",
@@ -45,13 +52,19 @@
                                         "description": "The brightness of the light. 0 is the minimum brightness and 100 is the maximum brightness",
                                         "type": "number",
                                         "minimum": 0,
-                                        "maximum": 100
+                                        "maximum": 100,
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "min_dim_level": {
                                         "description": "The unit of the brightness",
-                                        "type": "number"
+                                        "type": "number",
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     }
-                                }
+                                },
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "color": {
                                 "description": "The color of the light",
@@ -63,13 +76,19 @@
                                         "properties": {
                                             "x": {
                                                 "description": "The x coordinate of the color in the CIE color space",
-                                                "type": "number"
+                                                "type": "number",
+                                                "readOnly": false,
+                                                "writeOnly": false
                                             },
                                             "y": {
                                                 "description": "The y coordinate of the color in the CIE color space",
-                                                "type": "number"
+                                                "type": "number",
+                                                "readOnly": false,
+                                                "writeOnly": false
                                             }
-                                        }
+                                        },
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "gamut": {
                                         "description": "The color gamut of the light",
@@ -81,13 +100,19 @@
                                                 "properties": {
                                                     "x": {
                                                         "description": "The x coordinate of the red color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     },
                                                     "y": {
                                                         "description": "The y coordinate of the red color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     }
-                                                }
+                                                },
+                                                "readOnly": false,
+                                                "writeOnly": false
                                             },
                                             "green": {
                                                 "description": "The green color gamut of the light",
@@ -95,13 +120,19 @@
                                                 "properties": {
                                                     "x": {
                                                         "description": "The x coordinate of the green color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     },
                                                     "y": {
                                                         "description": "The y coordinate of the green color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     }
-                                                }
+                                                },
+                                                "readOnly": false,
+                                                "writeOnly": false
                                             },
                                             "blue": {
                                                 "description": "The blue color gamut of the light",
@@ -109,21 +140,33 @@
                                                 "properties": {
                                                     "x": {
                                                         "description": "The x coordinate of the blue color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     },
                                                     "y": {
                                                         "description": "The y coordinate of the blue color gamut in the CIE color space",
-                                                        "type": "number"
+                                                        "type": "number",
+                                                        "readOnly": false,
+                                                        "writeOnly": false
                                                     }
-                                                }
+                                                },
+                                                "readOnly": false,
+                                                "writeOnly": false
                                             }
-                                        }
+                                        },
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "gamut_type": {
                                         "description": "The type of the color gamut",
-                                        "type": "string"
+                                        "type": "string",
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     }
-                                }
+                                },
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "dynamics": {
                                 "description": "The dynamics of the light",
@@ -135,37 +178,55 @@
                                         "enum": [
                                             "none",
                                             "dynamic_palette"
-                                        ]
+                                        ],
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "speed": {
                                         "description": "The speed of the dynamics",
-                                        "type": "number"
+                                        "type": "number",
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "speed_valid": {
                                         "description": "The validity of the speed",
-                                        "type": "boolean"
+                                        "type": "boolean",
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     }
-
-                                }
+                                },
+                                "readOnly": false,
+                                "writeOnly": false
                             },
                             "type": {
                                 "description": "The type of the device",
-                                "type": "string"
+                                "type": "string",
+                                "readOnly": false,
+                                "writeOnly": false
                             }
-                        }
-                    }
+                        },
+                        "readOnly": false,
+                        "writeOnly": false
+                    },
+                    "readOnly": false,
+                    "writeOnly": false
+                },
+                "errors": {
+                    "type": "array"
                 }
             },
             "forms": [
                 {
-                    "href": "",
-                    "contentType": "application/json",
+                    "href": "/clip/v2/resource/light/5dc4b482-e6e4-4f0b-9783-f85a1432c845",
                     "htv:methodName": "GET",
                     "op": [
                         "readproperty"
-                    ]
+                    ],
+                    "contentType": "application/json"
                 }
-            ]
+            ],
+            "observable": false,
+            "writeOnly": false
         }
     },
     "actions": {
@@ -180,10 +241,14 @@
                         "type": "object",
                         "properties": {
                             "on": {
-                                "description": "On/Off state of the light. On=true, Off=false", 
-                                "type": "boolean"
+                                "description": "On/Off state of the light. On=true, Off=false",
+                                "type": "boolean",
+                                "readOnly": false,
+                                "writeOnly": false
                             }
-                        }
+                        },
+                        "readOnly": false,
+                        "writeOnly": false
                     },
                     "dimming": {
                         "description": "The brightness of the light",
@@ -193,9 +258,13 @@
                                 "description": "The brightness of the light. 0 is the minimum brightness and 100 is the maximum brightness",
                                 "type": "number",
                                 "minimum": 0,
-                                "maximum": 100
+                                "maximum": 100,
+                                "readOnly": false,
+                                "writeOnly": false
                             }
-                        }
+                        },
+                        "readOnly": false,
+                        "writeOnly": false
                     },
                     "color": {
                         "description": "The color of the light",
@@ -209,19 +278,29 @@
                                         "description": "The x coordinate of the color in the CIE color space",
                                         "type": "number",
                                         "minimum": 0,
-                                        "maximum": 1
+                                        "maximum": 1,
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     },
                                     "y": {
                                         "description": "The y coordinate of the color in the CIE color space",
                                         "type": "number",
                                         "minimum": 0,
-                                        "maximum": 1
+                                        "maximum": 1,
+                                        "readOnly": false,
+                                        "writeOnly": false
                                     }
-                                }
+                                },
+                                "readOnly": false,
+                                "writeOnly": false
                             }
-                        }
+                        },
+                        "readOnly": false,
+                        "writeOnly": false
                     }
-                }
+                },
+                "readOnly": false,
+                "writeOnly": false
             },
             "output": {
                 "type": "object",
@@ -233,30 +312,44 @@
                             "properties": {
                                 "rid": {
                                     "description": "The ID of the resource",
-                                    "type": "string"
+                                    "type": "string",
+                                    "readOnly": false,
+                                    "writeOnly": false
                                 },
                                 "rtype": {
                                     "description": "The type of the resource",
-                                    "type": "string"
+                                    "type": "string",
+                                    "readOnly": false,
+                                    "writeOnly": false
                                 }
-                            }
-                        }
+                            },
+                            "readOnly": false,
+                            "writeOnly": false
+                        },
+                        "readOnly": false,
+                        "writeOnly": false
                     },
                     "errors": {
-                        "type": "array"
+                        "type": "array",
+                        "readOnly": false,
+                        "writeOnly": false
                     }
-                }
+                },
+                "readOnly": false,
+                "writeOnly": false
             },
             "forms": [
                 {
-                    "href": "",
-                    "contentType": "application/json",
+                    "href": "/",
                     "htv:methodName": "PUT",
                     "op": [
                         "invokeaction"
-                    ]
+                    ],
+                    "contentType": "application/json"
                 }
-            ]
+            ],
+            "safe": false,
+            "idempotent": false
         }
     },
     "events": {}
