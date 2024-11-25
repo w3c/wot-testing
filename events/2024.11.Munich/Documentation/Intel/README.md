@@ -88,4 +88,18 @@ curl -G --data-urlencode 'text=This is a test.' -o test.wav '192.168.30.138:5050
 NOTE 1: the above IP is the one given my server from DHCP and might change.  In particular, if I get static IP
 assignment working I will change it to 192.168.30.11.
 
-NOTE 2: Not yet working over the VPN for some unknown reason.
+NOTE 2: Not yet working over the VPN for some unknown reason.  But the network was generally misbehaving
+when I was trying to test it.
+
+NOTE 3: The above simple web service does not set the correct ContentType for the response, using
+`text/html` (the default) when it is in fact returning binary data.  The following line in the original
+code,
+```python
+    return wav_io.getvalue()
+```
+should be changed to 
+```python
+    return wav_io.getvalue(), 200, {'Content-Type': 'audio/wav'}
+```
+to fix this.  With this change the input URL (which can even embed the text to be converted) can be used
+directly in a web browser to play the audio.  The TD corresponds to this modified server.
