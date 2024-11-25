@@ -102,4 +102,7 @@ should be changed to
     return wav_io.getvalue(), 200, {'Content-Type': 'audio/wav'}
 ```
 to fix this.  With this change the input URL (which can even embed the text to be converted) can be used
-directly in a web browser to play the audio.  The TD corresponds to this modified server.
+directly in a web browser to play the audio.  The TD corresponds to this modified server.  For instance,
+try clicking on the following link...
+
+[http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!](http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!)
