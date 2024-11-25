@@ -1,98 +1,388 @@
 {
-  "title": "Hue Dimmer Switch",
-  "description": "A controller to switch off and on the lights or to dim them",
-  "id": "urn:dev:ops:32473-HueSwitch-1234",
-  "@context": [
-    "https://www.w3.org/2019/wot/td/v1",
-    {
-      "@language": "en"
-    }
-  ],
-  "security": [
-    "basic_sc"
-  ],
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "id": "urn:dev:ops:32473-HueButton-2",
+  "@type": "Thing",
+  "title": "Philips Hue Button",
+  "description": "A Philips Button with four labeled buttons.",
   "securityDefinitions": {
-    "basic_sc": {
-      "scheme": "basic",
-      "in": "header"
-    }
+      "basic_sc": {
+          "scheme": "apikey",
+          "in": "header",
+          "name": "hue-application-key"
+      }
   },
-  "base": "https://remotelab.esi.cit.tum.de:8081/LabLocal/api/17AvYQeLM2T8Z3r0e3BiEvb9Qdwt36yU2BudTxrn/",
-  "properties": {
-    "switchInformation": {
-      "description": "Switch information",
-      "type": "object",
-      "properties": {
-        "state": {
-          "type": "object",
-          "description": "When the switch last pressed and what button was pressed and how it was pressed",
-          "properties": {
-            "buttonevent": {
-              "description": "*2 means short release, *3 means long release. 1* is the turn on button, 2* is the brighten button, 3* is the dim button, 4* is the turn off button",
-              "type": "integer",
-              "enum": [
-                1002,
-                1003,
-                2002,
-                2003,
-                3002,
-                3003,
-                4002,
-                4003
-              ]
-            },
-            "lastupdated": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "config": {
-          "type": "object",
-          "properties": {
-            "on": {
-              "type": "boolean"
-            },
-            "battery": {
-              "type": "integer",
-              "maximum": 100
-            },
-            "reachable": {
-              "type": "boolean"
-            }
-          }
-        },
-        "name": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string",
-          "const": "ZLLSwitch"
-        },
-        "modelid": {
-          "type": "string",
-          "const": "RWL021"
-        },
-        "manufacturername": {
-          "type": "string"
-        },
-        "swversion": {
-          "type": "string"
-        },
-        "uniqueid": {
-          "type": "string"
-        }
-      },
-      "forms": [
-        {
-          "href": "sensors/7",
-          "contentType": "application/json",
-          "htv:methodName": "GET",
-          "op": [
-            "readproperty"
-          ]
-        }
-      ]
+  "security": "basic_sc",
+  "links": [
+    {
+        "rel": "self",
+        "href": "http://192.168.120.25:8080/tds/button.td.json"
     }
+  ],
+  "base": "https://192.168.120.22/",
+  "properties": {
+      "on": {
+          "type": "object",
+          "description": "The state of the on button (I)",
+          "properties": {
+              "errors": {
+                  "type": "array",
+                  "readOnly": true,
+                  "description": "A list of errors that have occurred"
+              },
+              "data": {
+                  "type": "array",
+                  "readOnly": true,
+                  "items": {
+                      "type": "object",
+                      "properties": {
+                          "type": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Type of the supported resources"
+                          },
+                          "id": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Unique identifier of the resource"
+                          },
+                          "id_v1": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Clip v1 resource identifier"
+                          },
+                          "button": {
+                              "type": "object",
+                              "properties": {
+                                  "last_event": {
+                                      "type": "string",
+                                      "enum": [
+                                          "initial_press",
+                                          "repeat",
+                                          "short_release",
+                                          "long_release",
+                                          "double_short_release",
+                                          "long_press"
+                                      ]
+                                  },
+                                  "button_report": {
+                                      "type": "object",
+                                      "properties": {
+                                          "updated": {
+                                              "type": "string",
+                                              "format": "date-time",
+                                              "readOnly": true,
+                                              "description": "The time the button was last updated"
+                                          },
+                                          "event": {
+                                              "type": "string",
+                                              "enum": [
+                                                  "initial_press",
+                                                  "repeat",
+                                                  "short_release",
+                                                  "long_release",
+                                                  "double_short_release",
+                                                  "long_press"
+                                              ]
+                                          }
+                                      }
+                                  },
+                                  "repeat_inteval": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "description": "Duration of a light transition or timed effects in ms."
+                                  },
+                                  "event_values": {
+                                      "type": "array",
+                                      "description": "list of all button events that this device supports"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "forms": [
+              {
+                  "href": "/clip/v2/resource/button/0ca4f93b-f3fc-4086-b0a7-031d0d4dc359",
+                  "contentType": "application/json",
+                  "op": [
+                      "readproperty"
+                  ]
+              }
+          ]
+      },
+      "brighter": {
+          "type": "object",
+          "description": "The state of the brighter button ",
+          "properties": {
+              "errors": {
+                  "type": "array",
+                  "readOnly": true,
+                  "description": "A list of errors that have occurred"
+              },
+              "data": {
+                  "type": "array",
+                  "readOnly": true,
+                  "items": {
+                      "type": "object",
+                      "properties": {
+                          "type": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Type of the supported resources"
+                          },
+                          "id": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Unique identifier of the resource"
+                          },
+                          "id_v1": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Clip v1 resource identifier"
+                          },
+                          "button": {
+                              "type": "object",
+                              "properties": {
+                                  "last_event": {
+                                      "type": "string",
+                                      "enum": [
+                                          "initial_press",
+                                          "repeat",
+                                          "short_release",
+                                          "long_release",
+                                          "double_short_release",
+                                          "long_press"
+                                      ]
+                                  },
+                                  "button_report": {
+                                      "type": "object",
+                                      "properties": {
+                                          "updated": {
+                                              "type": "string",
+                                              "format": "date-time",
+                                              "readOnly": true,
+                                              "description": "The time the button was last updated"
+                                          },
+                                          "event": {
+                                              "type": "string",
+                                              "enum": [
+                                                  "initial_press",
+                                                  "repeat",
+                                                  "short_release",
+                                                  "long_release",
+                                                  "double_short_release",
+                                                  "long_press"
+                                              ]
+                                          }
+                                      }
+                                  },
+                                  "repeat_inteval": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "description": "Duration of a light transition or timed effects in ms."
+                                  },
+                                  "event_values": {
+                                      "type": "array",
+                                      "description": "list of all button events that this device supports"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "forms": [
+              {
+                  "href": "/clip/v2/resource/button/014ece4d-9b00-43fc-ba0a-8c263c9ab91d",
+                  "contentType": "application/json",
+                  "op": [
+                      "readproperty"
+                  ]
+              }
+          ]
+      },
+      "darker": {
+          "type": "object",
+          "description": "The state of the darler button.",
+          "properties": {
+              "errors": {
+                  "type": "array",
+                  "readOnly": true,
+                  "description": "A list of errors that have occurred"
+              },
+              "data": {
+                  "type": "array",
+                  "readOnly": true,
+                  "items": {
+                      "type": "object",
+                      "properties": {
+                          "type": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Type of the supported resources"
+                          },
+                          "id": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Unique identifier of the resource"
+                          },
+                          "id_v1": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Clip v1 resource identifier"
+                          },
+                          "button": {
+                              "type": "object",
+                              "properties": {
+                                  "last_event": {
+                                      "type": "string",
+                                      "enum": [
+                                          "initial_press",
+                                          "repeat",
+                                          "short_release",
+                                          "long_release",
+                                          "double_short_release",
+                                          "long_press"
+                                      ]
+                                  },
+                                  "button_report": {
+                                      "type": "object",
+                                      "properties": {
+                                          "updated": {
+                                              "type": "string",
+                                              "format": "date-time",
+                                              "readOnly": true,
+                                              "description": "The time the button was last updated"
+                                          },
+                                          "event": {
+                                              "type": "string",
+                                              "enum": [
+                                                  "initial_press",
+                                                  "repeat",
+                                                  "short_release",
+                                                  "long_release",
+                                                  "double_short_release",
+                                                  "long_press"
+                                              ]
+                                          }
+                                      }
+                                  },
+                                  "repeat_inteval": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "description": "Duration of a light transition or timed effects in ms."
+                                  },
+                                  "event_values": {
+                                      "type": "array",
+                                      "description": "list of all button events that this device supports"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "forms": [
+              {
+                  "href": "/clip/v2/resource/button/7e203fcb-23d6-4b29-b547-142d0484659e",
+                  "contentType": "application/json",
+                  "op": [
+                      "readproperty"
+                  ]
+              }
+          ]
+      },
+      "off": {
+          "type": "object",
+          "description": "The state of the on button (I)",
+          "properties": {
+              "errors": {
+                  "type": "array",
+                  "readOnly": true,
+                  "description": "A list of errors that have occurred"
+              },
+              "data": {
+                  "type": "array",
+                  "readOnly": true,
+                  "items": {
+                      "type": "object",
+                      "properties": {
+                          "type": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Type of the supported resources"
+                          },
+                          "id": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Unique identifier of the resource"
+                          },
+                          "id_v1": {
+                              "type": "string",
+                              "readOnly": true,
+                              "description": "Clip v1 resource identifier"
+                          },
+                          "button": {
+                              "type": "object",
+                              "properties": {
+                                  "last_event": {
+                                      "type": "string",
+                                      "enum": [
+                                          "initial_press",
+                                          "repeat",
+                                          "short_release",
+                                          "long_release",
+                                          "double_short_release",
+                                          "long_press"
+                                      ]
+                                  },
+                                  "button_report": {
+                                      "type": "object",
+                                      "properties": {
+                                          "updated": {
+                                              "type": "string",
+                                              "format": "date-time",
+                                              "readOnly": true,
+                                              "description": "The time the button was last updated"
+                                          },
+                                          "event": {
+                                              "type": "string",
+                                              "enum": [
+                                                  "initial_press",
+                                                  "repeat",
+                                                  "short_release",
+                                                  "long_release",
+                                                  "double_short_release",
+                                                  "long_press"
+                                              ]
+                                          }
+                                      }
+                                  },
+                                  "repeat_inteval": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "description": "Duration of a light transition or timed effects in ms."
+                                  },
+                                  "event_values": {
+                                      "type": "array",
+                                      "description": "list of all button events that this device supports"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          },
+          "forms": [
+              {
+                  "href": "/clip/v2/resource/button/57c690ce-320a-481e-92ad-fb12f1fdc9aa",
+                  "contentType": "application/json",
+                  "op": [
+                      "readproperty"
+                  ]
+              }
+          ]
+      }
   }
 }
