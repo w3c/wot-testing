@@ -106,3 +106,18 @@ directly in a web browser to play the audio.  The TD corresponds to this modifie
 try clicking on the following link...
 
 [http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!](http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!)
+
+## Whisper ASR Server
+An instance of the [faster-whisper-server](https://github.com/fedirz/faster-whisper-server) is run on port 5052.
+This provides transcription of audio uploaded from a WAV file, however note the input ContentType is 
+multipart/form so you can't just blast the binary data in the body of a POST.  Here is a curl command to exercise it
+(you can generate a suitable test file with the Piper service, above):
+```sh
+curl http://localhost:5052/v1/audio/transcriptions -F "file=@test.wav" -F "language=en" 
+```
+You can leave off the language tag but it is faster with it (otherwise it has to do language identification first).
+Other langauges may also work, e.g. "de", but I have not tested.  It is using the `Systran/faster-whisper-small` model.
+
+Output is JSON.  
+
+NOTE 1: There may be other things in the JSON as well but for now the TD only includes the "text" field.
