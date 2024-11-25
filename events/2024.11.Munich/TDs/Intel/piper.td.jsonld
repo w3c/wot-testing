@@ -2,7 +2,7 @@
   "@context": "https://www.w3.org/2022/wot/td/v1.1",
   "id": "urn:uuid:b3cfff58-3a82-4602-962e-0f56e1954b1a",
   "title": "Piper TTS Service",
-  "description": "REST API for Piper service providing text-to-speed.  Takes text as input, returns audio encoded as WAV data.",
+  "description": "REST API for Piper service providing text-to-speech.  Takes text as input, returns audio encoded as WAV data.",
   "base": "http://192.168.30.138:5050",
   "@type": [
     "Thing",
