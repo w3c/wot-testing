@@ -71,13 +71,15 @@ knowledge of WoT.
 ## Piper Text-to-Speech
 This is running the [Piper](https://github.com/rhasspy/piper) text to speech system with the simple web interface
 given in [src/python_run/piper/http_server.py](https://github.com/rhasspy/piper/blob/master/src/python_run/piper/http_server.py).
-This simply takes raw text as input (not even in JSON, just "text/plain") and returns data that can be interpreted as a WAV
+The POST API endpoint for this simply takes raw text as input (not even in JSON, just "text/plain") and returns data that can be interpreted as a WAV
 file.  For example, you can invoke it from the command line with
 ```sh
 curl -X POST -H 'Content-Type: text/plain' --data 'This is a test.' -o test.wav '192.168.30.138:5050'
 ```
 On Linux, you can then play the audio file with `aplay test.wav` for example (assuming you have set up default
-audio devices, etc).  You can also use a GET interface, which encodes the inputs into the URL instead of in the body of a
+audio devices, etc).
+
+You can also use a GET interface, which encodes the inputs into the URL instead of in the body of a
 POST request as above:
 ```sh
 curl -G --data-urlencode 'text=This is a test.' -o test.wav '192.168.30.138:5050'
