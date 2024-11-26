@@ -15,8 +15,8 @@ Some gaps in the TD specification noted while trying to model these services:
 2. **Multipart forms.**  The API for the Whisper service has a form with (at least) two parts,
    a WAV file (uploaded in binary form) and a language identifier.  Like URI template variables,
    these are named arguments ("file" and "lang").  The "lang" parameter is optional but omitting it
-   still requires a multipart form.  There is no way in TDs to state the contentTypes of the
-   individual parts of the form (that I could see).
+   still requires a [multipart form](https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4).
+   There is no way in TDs to state the contentTypes of the individual parts of the form (that I could see).
 
 Of these, 1 is not immediately critical as a non-streaming API is also avaialable and more 
 suitable for many IoT use-cases anyway.  However, streaming JSON objects may be useful in other
