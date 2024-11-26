@@ -1,0 +1,244 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en",
+            "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        }
+    ],
+    "@type": "Thing",
+    "geo:lat": "22.62560",
+    "geo:long": "120.32321",
+    "title": "The Affiliated Senior High School of NKNU (Kaixuan 2nd Rd.)",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "available_spaces": {
+            "title": "Available bikes",
+            "description": "The total amount of bikes ready to be rented",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_spaces",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_spaces/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "available_yb1": {
+            "title": "Available YouBike 1.0 bikes",
+            "description": "The amount of YouBike 1.0 bikes ready to be rented",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_yb1",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_yb1/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "available_yb2": {
+            "title": "Available YouBike 2.0 bikes",
+            "description": "The amount of YouBike 2.0 bikes ready to be rented",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_yb2",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_yb2/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "available_eyb": {
+            "title": "Available E-YouBike 2.0 bikes",
+            "description": "The amount of electronic YouBike 2.0 bikes ready to be rented",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_eyb",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/available_eyb/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "empty_spaces": {
+            "title": "Empty spaces",
+            "description": "The amount of parking spots to return a bike",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/empty_spaces",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/empty_spaces/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "forbidden_spaces": {
+            "title": "Forbidden spaces",
+            "description": "The amount of parking spots which one isn't allowed to park on",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/forbidden_spaces",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/forbidden_spaces/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "parking_spaces": {
+            "title": "Parking spaces",
+            "description": "The total amount of parking spots",
+            "type": "integer",
+            "readOnly": true,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/parking_spaces",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/youbikes/501202057/properties/parking_spaces/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "forms": [
+        {
+            "href": "https://wot.chrpaul.de/youbikes/501202057/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties"
+            ]
+        }
+    ]
+}

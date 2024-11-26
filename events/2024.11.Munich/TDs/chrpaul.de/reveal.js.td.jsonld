@@ -1,0 +1,215 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "Slideshow",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "indexh": {
+            "title": "Horizontal Slide",
+            "type": "integer",
+            "minimum": 0,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexh",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexh/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "indexv": {
+            "title": "Vertical Slide",
+            "type": "integer",
+            "minimum": 0,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexv",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexv/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "indexf": {
+            "title": "Fragment",
+            "type": "integer",
+            "minimum": 0,
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexf",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/indexf/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "paused": {
+            "title": "Paused",
+            "type": "boolean",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/paused",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/paused/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "overview": {
+            "title": "Overview",
+            "type": "boolean",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/overview",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/overview/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "darkMode": {
+            "title": "Dark mode",
+            "type": "boolean",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/darkMode",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/reveal.js/1/properties/darkMode/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "forms": [
+        {
+            "href": "https://wot.chrpaul.de/reveal.js/1/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "@context": [
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "CO₂ Monitor",
+    "description": "",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "co2": {
+            "title": "CO₂ in ppm",
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/co2",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/co2/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "temperature": {
+            "title": "Temperature in °C",
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/temperature",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/temperature/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        },
+        "humidity": {
+            "title": "Humidity",
+            "type": "number",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/humidity",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "contentType": "application/json",
+                    "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties/humidity/sse",
+                    "op": [
+                        "observeproperty"
+                    ],
+                    "subprotocol": "sse"
+                },
+                {
+                    "href": "wss://wot.chrpaul.de/",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ]
+                }
+            ]
+        }
+    },
+    "actions": {},
+    "events": {},
+    "forms": [
+        {
+            "href": "https://wot.chrpaul.de/co2-monitors/plugfest/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}
