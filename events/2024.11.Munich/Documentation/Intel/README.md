@@ -127,9 +127,10 @@ directly in a web browser to play the audio.  The TD corresponds to this modifie
 try clicking on the following link...
 
 NOTE 4: Piper does not understand markdown, but the LLM may generate it.  Things like lists, emphasis, will not work.
-There are other ways to get speech emphasis but unfortunately the markdown notation for it is not understood. Also, 
-special character escapes (e.g. \n) will be spoken as "slash en", not interpreted.  If you want better
-speech output it would be good to strip such markup.
+There are other ways to get speech emphasis but unfortunately the markdown notation for it is not understood. Also,
+special character escapes (e.g. \n) will be spoken as "backslash en", not interpreted.  If you want better
+speech output it would be good to strip markdown and interpret escapes.  There are libraries for this, e.g.
+[strip-markdown/](https://pypi.org/project/strip-markdown/).
 
 NOTE 5: This service is not self-describing.
 
