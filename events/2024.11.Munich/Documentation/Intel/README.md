@@ -145,7 +145,7 @@ multipart/form so you can't just blast the binary data in the body of a POST.  H
 curl http://192.168.30.138:5052/v1/audio/transcriptions -F "file=@test.wav" -F "language=en" 
 ```
 You can leave off the language tag but it is faster with it (otherwise it has to do language identification first).
-Other langauges may also work, e.g. "de", but I have not tested.  It is using the `Systran/faster-whisper-small` model.
+Other languages may also work, e.g. "de", but I have not tested them.  It is using the `Systran/faster-whisper-small` model.
 
 Output is JSON.  
 
