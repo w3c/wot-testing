@@ -2,6 +2,27 @@
 Provided remotely by Intel.
 See [TDs](../../TDs/Intel/README.md).
 
+## Gaps
+Some gaps in the TD specification noted while trying to model these services:
+1. **Streaming JSON responses.** It is apparently a standard thing to have multiple JSON objects
+   in a streaming response, separated by newlines.  In the LLM API, there are two complicating
+   factors:
+      1. The behaviour of the response might be streaming or not depending on a field in the
+         request.  So we would need a way to make the data model conditional on some value in the
+         request.
+      2. The termination condition of the stream is given by a value in the stream objects,
+         in this case a "done" flag.
+2. **Multipart forms.**  The API for the Whisper service has a form with (at least) two parts,
+   a WAV file (uploaded in binary form) and a language identifier.  Like URI template variables,
+   these are named arguments ("file" and "lang").  The "lang" parameter is optional but omitting it
+   still requires a multipart form.  There is no way in TDs to state the contentTypes of the
+   individual parts of the form (that I could see).
+
+Of these, 1 is not immediately critical as a non-streaming API is also avaialable and more 
+suitable for many IoT use-cases anyway.  However, streaming JSON objects may be useful in other
+IoT use-cases, e.g. real-time sensor updates.  2. However is a problem as the TD currently does
+not provide enough information on how to use the API.
+
 ## Ollama LLM Server
 This is running an LLM inference engine that can run a number of different
 models.  See [https://github.com/ollama/ollama](https://github.com/ollama/ollama).  The service is 
@@ -105,6 +126,13 @@ to fix this.  With this change the input URL (which can even embed the text to b
 directly in a web browser to play the audio.  The TD corresponds to this modified server.  For instance,
 try clicking on the following link...
 
+NOTE 4: Piper does not understand markdown, but the LLM may generate it.  Things like lists, emphasis, will not work.
+There are other ways to get speech emphasis but unfortunately the markdown notation for it is not understood. Also, 
+special character escapes (e.g. \n) will be spoken as "slash en", not interpreted.  If you want better
+speech output it would be good to strip such markup.
+
+NOTE 5: This service is not self-describing.
+
 [http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!](http://192.168.30.138:5050/?text=Welcome+to+the+W3C+plugfest!)
 
 ## Whisper ASR Server
@@ -121,3 +149,5 @@ Other langauges may also work, e.g. "de", but I have not tested.  It is using th
 Output is JSON.  
 
 NOTE 1: There may be other things in the JSON as well but for now the TD only includes the "text" field.
+
+NOTE 2: This service is not self-describing.
