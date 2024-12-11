@@ -4,6 +4,21 @@ Some features of the WoT standards will be tested in the plugfest. Below you can
 
 ## TD Topics
 
+### Outcomes
+
+- Multi-part input (https://github.com/w3c/wot-thing-description/issues/1464) and Data streaming seems to be a new use case. Issue that McCool rebirthed with many answer in the last week: https://github.com/w3c/wot-thing-description/issues/1044. Same is brought up in Roman Binkert's slides.
+- Sleepy devices and non-confirmable: https://github.com/w3c/wot-thing-description/issues/2059 and https://github.com/w3c/wot-binding-templates/issues/389
+  - Daniel: At the beginning of TF, there was a demand to describe "old" data that the sensor measured some time ago. Ege: MQTT with retain has the same issue
+- (from Connexxus?) How to deal with invalid data according to data schema. Describing the perfect coverage requires complex data schemas, which is difficult to understand.
+- (from Cris) How to recommend Thing implementations to think of the Consumer application that needs to process the data (array of transactions example).
+- External Schema support: David Ezell has asked for it. Existing issue: https://github.com/w3c/wot-thing-description/issues/1249.
+- Unclear guidance on eventing
+- `type` vs `@type` issue is present again (Daniel's slides). Needs priority and follow-up with JSON-LD
+- Writeproperty with returned values: Jan has brought it up again. Issue 875: https://github.com/w3c/wot-thing-description/issues/875
+- Human Readable data being actually important (Toumura-san) for plugfests: Possible for LLMs too
+- URI Schemes for protocols that use unauthorized characters: OPC UA (https://github.com/eclipse-thingweb/node-wot/pull/1335#issuecomment-2527964513), MQTT (https://github.com/w3c/wot-binding-templates/issues/292)
+
+
 ### Existing Features
 
 We should ensure that the existing features the implementers have questions about are correctly specified. All these points are prioritized over new features.
