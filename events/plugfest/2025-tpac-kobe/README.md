@@ -4,12 +4,21 @@
 ## Preparation Wiki:
 https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#WoT_Plugfest_during_TPAC_2025_(Hybrid)
 
-# Expected demo participants
+## Expected demo participants
 
 ECHONET, ...
 
-# Demo devices
+## Demo devices
 
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| @@@       | @@@                                 | Wifi/Cable                                                              |  | Michael.Lagally@oracle.com |
+| @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
+
+## Proposed topics for PlugFests  
+* ECHONET Lite Binding
+* OPC UA Companions with WoT
+* testing WoT Registry and its assertions (https://w3c.github.io/wot-bindings-registry/#req-trancurr)
+* manageable actions based on current TD 2.0 version
+* OCPP 2.x 
+* NGSI-LD
+* ...
