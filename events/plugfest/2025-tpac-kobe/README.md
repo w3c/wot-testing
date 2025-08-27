@@ -1,4 +1,4 @@
-# Plugfest during the W3C TPAC 2025 - 9-12 Noember 2025
+# Plugfest during the W3C TPAC 2025 - 9-12 November 2025
 ## W3C Web of Things Interoperability Demos/Presentations
 
 ## Preparation Wiki:
