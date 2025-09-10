@@ -15,7 +15,7 @@ ECHONET, ...
 | @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
 
 ## Proposed topics for PlugFests  
-* ECHONET Lite Binding
+* ECHONET Lite Web API devices
 * OPC UA Companions with WoT
 * testing WoT Registry and its assertions (https://w3c.github.io/wot-bindings-registry/#req-trancurr)
 * manageable actions based on current TD 2.0 version
