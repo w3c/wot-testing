@@ -1,4 +1,12 @@
 # WoT PlugFest
+## Munich 2025
+* [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich)
+
+## Munich 2024
+* [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich)
+
+## Online 2023
+* [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/2023.03.Online)
 
 ## Lyon 2018
 * [Preparation Wiki]()
