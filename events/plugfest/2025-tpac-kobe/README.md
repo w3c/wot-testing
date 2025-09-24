@@ -28,7 +28,7 @@ ECHONET, ...
 * Collecting experience on Test Report for the WoT Registry: https://github.com/w3c/wot-binding-registry/issues/3
 * manageable actions based on current TD 2.0 version
 * OCPP 2.x: Possibly only F2F topics
-* NGSI-LD
+* NGSI-LD (needs to be confirmed; it seems there is a parallel ETSI event; maybe they can join the breakout session)
 * Demonstrating Interoperability via WoT in the Retail Domain
   * Participants from Connexxus: Ignite Retail, ArmorSafe
   * More participants are wanted
