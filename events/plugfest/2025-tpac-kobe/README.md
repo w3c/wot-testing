@@ -10,11 +10,13 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#WoT_Plugfest_during_T
 
 ECHONET, ...
 
-## Demo devices
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
-|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
+## What you should bring with you 
+
+* Extension cable and multiple socket outlet
+* If needed, power travel adapter
+* Ethernet cable
+* If possible, WiFi extender or small WLAN router with WiFi to LAN option
 
 ## Proposed topics for PlugFests
 
@@ -32,3 +34,16 @@ ECHONET, ...
 * Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
 * ...
+
+## Demo devices
+
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
+| @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
+
+## List of Consumers that will be available for the PlugFest
+
+| Organization     | Application                                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
+|------------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|---------------------------------------------------------------|-------|
+
+
