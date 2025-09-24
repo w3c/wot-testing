@@ -16,6 +16,7 @@ ECHONET, ...
 * Extension cable and multiple socket outlet
 * If needed, power travel adapter
 * Ethernet cable
+* LAN Switch (if possible)
 * If possible, WiFi extender or small WLAN router with WiFi to LAN option
 
 ## Proposed topics for PlugFests
