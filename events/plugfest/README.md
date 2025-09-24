@@ -1,6 +1,6 @@
 # WoT PlugFest
-## Munich 2025
-* [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich)
+## Kobe 2025
+* [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/plugfest/2025-tpac-kobe)
 
 ## Munich 2024
 * [Preparation page](https://github.com/w3c/wot-testing/tree/main/events/2024.11.Munich)
