@@ -39,10 +39,10 @@ ECHONET, Siemens, ...
 ## Demo devices
 
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact|
-|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| Siemens   |  SENTRON PAC4220 (Energy Meter)     | Lan connection                                                    | Modbus protocol          |       |
-| ...       |   ...                               | ...                                                               |                          |   @sebastiankb    |
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
+|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|--------------------|
+| Siemens   |  SENTRON PAC4220 (Energy Meter)     | Lan connection                                                    | Modbus protocol          |   @sebastiankb     |
+| ...       |   ...                               | ...                                                               |                          |                    |
 
 
 
