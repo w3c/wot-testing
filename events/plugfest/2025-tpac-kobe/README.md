@@ -8,8 +8,7 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#WoT_Plugfest_during_T
 
 ## Expected demo participants
 
-ECHONET, ...
-
+ECHONET, Siemens, ...
 
 ## What you should bring with you 
 
@@ -18,6 +17,7 @@ ECHONET, ...
 * Ethernet cable
 * LAN Switch (if possible)
 * If possible, WiFi extender or small WLAN router with WiFi to LAN option
+
 
 ## Proposed topics for PlugFests
 
@@ -38,9 +38,14 @@ ECHONET, ...
 
 ## Demo devices
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
+
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
+| Siemens   |  SENTRON PAC4220 (Energy Meter)     | Lan connection                                                    | Modbus protocol          |       |
+| ...       |   ...                               | ...                                                               |                          |   @sebastiankb    |
+
+
+
 
 ## List of Consumers that will be available for the PlugFest
 
