@@ -21,20 +21,23 @@ ECHONET, Siemens, ...
 
 ## Proposed topics for PlugFests
 
-* ECHONET Lite Web API devices
-* OPC UA Companions with WoT
+### ECHONET Lite Web API devices
+tbd
+### OPC UA Companions with WoT
   * Onboarding
-  * OPC UA Binding
-* Collecting experience on Test Report for the WoT Registry: https://github.com/w3c/wot-binding-registry/issues/3
-* manageable actions based on current TD 2.0 version
-* OCPP 2.x: Possibly only F2F topics
-* NGSI-LD (needs to be confirmed; it seems there is a parallel ETSI event; maybe they can join the breakout session)
-* Demonstrating Interoperability via WoT in the Retail Domain
+  * OPC UA Binding Collecting experience on Test Report for the WoT Registry: https://github.com/w3c/wot-binding-registry/issues/3
+### Manageable actions based on current TD 2.0 version
+tbd
+### OCPP 2.x: Possibly only F2F topics
+tbd
+### NGSI-LD 
+* needs to be confirmed; it seems there is a parallel ETSI event; maybe they can join the breakout session
+### Demonstrating Interoperability via WoT in the Retail Domain
   * Participants from Connexxus: Ignite Retail, ArmorSafe
   * More participants are wanted
-* Demonstrating how easy it is to build application logic (mashups) with others' devices
+### Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
-* ...
+###  ...
 
 ## Demo devices
 
