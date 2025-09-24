@@ -8,13 +8,13 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#WoT_Plugfest_during_T
 
 ## Expected demo participants
 
-ECHONET, ...
+ECHONET, Siemens, ...
 
 ## Demo devices
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments           |Contact|
+| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact|
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|-------|
-| @@@       | @@@                                 | Wifi/Cable                                                              |  |  |
+| Siemens   |  SENTRON PAC4220                    | Lan connection                                                    | Modbus protocol          |       |
 
 ## Proposed topics for PlugFests
 
