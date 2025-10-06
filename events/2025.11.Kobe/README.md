@@ -40,6 +40,9 @@ tbd
   * More participants are wanted
 ### Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
+### Common Definitions
+  * Participants: Siemens (Ege)
+  * Build scripts for transforming TDs back and forth with the new common definitions feature.
 ###  ...
 
 ## Demo devices
