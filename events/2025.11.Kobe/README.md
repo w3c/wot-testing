@@ -32,12 +32,15 @@ tbd
 ### Manageable actions based on current TD 2.0 version
 tbd
 ### OCPP 2.x: Possibly only F2F topics
-tbd
+* will be mainly a "coffee" talk topic
+
 ### NGSI-LD 
-* needs to be confirmed; it seems there is a parallel ETSI event; maybe they can join the breakout session
+* needs to be confirmed (Michael Koster will check); it seems there is a parallel ETSI event; maybe they can join the breakout session
+  
 ### Demonstrating Interoperability via WoT in the Retail Domain
   * Participants from Connexxus: Ignite Retail, ArmorSafe
   * More participants are wanted
+    
 ### Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
 ### Common Definitions
@@ -51,6 +54,7 @@ tbd
 | Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|--------------------|
 | Siemens   |  SENTRON PAC4220 (Energy Meter)     | Lan connection                                                    | Modbus protocol          |   @sebastiankb     |
+| ArmorSafe |  Safe                               | tbc                                                               | tbc                      |                    |
 | ...       |   ...                               | ...                                                               |                          |                    |
 
 
