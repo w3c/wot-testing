@@ -60,6 +60,7 @@ tbd
 |-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|--------------------|
 | Siemens   |  SENTRON PAC4220 (Energy Meter)     | Lan connection                                                    | Modbus protocol          |   @sebastiankb     |
 | ArmorSafe |  Safe                               | tbc                                                               | tbc                      |                    |
+| Hitachi   |  [M5Stack Roller485 Lite](https://docs.m5stack.com/en/unit/Unit-Roller485%20Lite)(Encoder/Motor) + [CoreMP135](https://docs.m5stack.com/en/core/M5CoreMP135)(Controller)     | Ethernet, 100V AC | HTTP, WebSocket | @k-toumura |
 | ...       |   ...                               | ...                                                               |                          |                    |
 
 
@@ -69,5 +70,5 @@ tbd
 
 | Organization     | Application                                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
 |------------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|---------------------------------------------------------------|-------|
-
-
+| Hitachi | Development Environment (Node-RED and others) | Yes | No | No | HTTP, WebSocket (tbd) | Ethernet, 100V AC | MacBook | @k-toumura |
+| ...              | ...                                           | ...      | ...    | ...     | ...                | ...                                                               | ...                                                           | ...   |
