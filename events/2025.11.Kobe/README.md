@@ -47,6 +47,7 @@ tbd
     
 ### Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
+  * maybe try to interact with a Modbus based device (SENTRON PAC)
     
 ### Common Definitions
   * Participants: Siemens (Ege)
