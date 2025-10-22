@@ -31,18 +31,23 @@ tbd
   * OPC UA Binding Collecting experience on Test Report for the WoT Registry: https://github.com/w3c/wot-binding-registry/issues/3
 ### Manageable actions based on current TD 2.0 version
 tbd
+
 ### OCPP 2.x: Possibly only F2F topics
-* will be mainly a "coffee" talk topic
+* will be mainly a "coffee" talk topic (e.g, during the coffee break)
 
 ### NGSI-LD 
-* needs to be confirmed (Michael Koster will check); it seems there is a parallel ETSI event; maybe they can join the breakout session
+* will be not a topic this time
   
 ### Demonstrating Interoperability via WoT in the Retail Domain
   * Participants from Connexxus: Ignite Retail, ArmorSafe
+  * same topics as shown last year in Munich
+  * the important difference is the TD is based on the retail use case conformance to the spec 
+  * potential Toshiba will join the use case
   * More participants are wanted
     
 ### Demonstrating how easy it is to build application logic (mashups) with others' devices
   * Participants: Hitachi, possibly Ignite Retail and ArmorSafe
+    
 ### Common Definitions
   * Participants: Siemens (Ege)
   * Build scripts for transforming TDs back and forth with the new common definitions feature.
