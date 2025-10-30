@@ -11,7 +11,7 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2025_planning#WoT_Plugfest_during_T
 ECHONET, Siemens, ...
 
 ## PlugFest Room
-PlugFest and breakout will take place in room R07
+PlugFest and breakout will take place in room R07 (tbc)
 
 ## What you should bring with you 
 
