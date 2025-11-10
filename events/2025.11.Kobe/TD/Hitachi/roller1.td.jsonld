@@ -1,0 +1,354 @@
+{
+  "@context": "https://www.w3.org/ns/wot-next/td",
+  "actions": {
+    "enable_motor": {
+      "description": "Motor enable switch",
+      "forms": [
+        {
+          "href": "enable",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "enable": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "enable"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Mode Switch"
+    },
+    "jam_remove": {
+      "description": "Unlock Jam protection. When Jam lock protection is triggered, send this command to unlock.",
+      "forms": [
+        {
+          "href": "jam_remove",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "safe": false,
+      "title": "Remove Protection"
+    },
+    "save_to_flash": {
+      "description": "Save configuration parameters to internal Flash.",
+      "forms": [
+        {
+          "href": "save",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "safe": false,
+      "title": "Save to Flash"
+    },
+    "set_current": {
+      "description": "Configure the target running current.",
+      "forms": [
+        {
+          "href": "current",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "current_ma": {
+            "maximum": 1200,
+            "minimum": -1200,
+            "type": "number"
+          }
+        },
+        "required": [
+          "current_ma"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Current Control"
+    },
+    "set_encoder": {
+      "description": "Set the current encoder value.",
+      "forms": [
+        {
+          "href": "encoder",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Encoder"
+    },
+    "set_mode": {
+      "description": "Motor operating mode setting",
+      "forms": [
+        {
+          "href": "mode",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "mode": {
+            "enum": [
+              "speed",
+              "position",
+              "current",
+              "encoder"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "mode"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Mode Setting"
+    },
+    "set_position": {
+      "description": "Configure the number of pulses to control the target rotation to the specific position, while also setting a maximum current limit",
+      "forms": [
+        {
+          "href": "position",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "max_current_ma": {
+            "maximum": 1200,
+            "minimum": -1200,
+            "type": "number"
+          },
+          "position": {
+            "maximum": 21000000,
+            "minimum": -21000000,
+            "type": "number"
+          }
+        },
+        "required": [
+          "position",
+          "max_current_ma"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Position Control"
+    },
+    "set_position_pid": {
+      "description": "Configure the PID parameters of the position loop",
+      "forms": [
+        {
+          "href": "position_pid",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "d": {
+            "type": "number"
+          },
+          "i": {
+            "type": "number"
+          },
+          "p": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "p",
+          "i",
+          "d"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Position PID Configuration"
+    },
+    "set_rgb": {
+      "description": "Control RGB LED color, brightness, and working mode.",
+      "forms": [
+        {
+          "href": "rgb",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "b": {
+            "maximum": 255,
+            "minimum": 0,
+            "type": "number"
+          },
+          "brightness": {
+            "maximum": 100,
+            "minimum": 0,
+            "type": "number"
+          },
+          "g": {
+            "maximum": 255,
+            "minimum": 0,
+            "type": "number"
+          },
+          "mode": {
+            "enum": [
+              0,
+              1
+            ],
+            "type": "number"
+          },
+          "r": {
+            "maximum": 255,
+            "minimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "r",
+          "g",
+          "b",
+          "mode",
+          "brightness"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "RGB LED Control"
+    },
+    "set_speed": {
+      "description": "Configure the target running speed and maximum current limit",
+      "forms": [
+        {
+          "href": "speed",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "max_current_ma": {
+            "maximum": 1200,
+            "minumum": -1200,
+            "type": "number"
+          },
+          "speed_rpm": {
+            "maximum": 21000000,
+            "minumum": -21000000,
+            "type": "number"
+          }
+        },
+        "required": [
+          "speed_rpm",
+          "max_current_ma"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Speed Control"
+    },
+    "set_speed_pid": {
+      "description": "Configure speed loop PID parameters",
+      "forms": [
+        {
+          "href": "speed_pid",
+          "op": "invokeaction"
+        }
+      ],
+      "idempotent": true,
+      "input": {
+        "properties": {
+          "d": {
+            "type": "number"
+          },
+          "i": {
+            "type": "number"
+          },
+          "p": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "p",
+          "i",
+          "d"
+        ],
+        "type": "object"
+      },
+      "safe": false,
+      "title": "Speed PID Configuration"
+    }
+  },
+  "base": "http://kt-mp135-1.local:3000/motor/",
+  "description": "This Thing is an integrated unit consisting of a Brushless DC Motor (BLDC motor), a Rotary Encoder, and an LED.\n\nTo use this Thing, you must perform an initialization step:\n- first, enable the motor using the `enable_motor` action,\n- and then set the desired operating mode using the `set_mode` action.\n\nPlease note that if you do not perform this setup,\nthe motor will not operate according to the specified speed or position settings.\n\nFurthermore, the state of the Thing and the control of the LED can be\naccessed without any prior initialization.\n",
+  "id": "urn:uuid:d1916446-34e6-5aad-884e-182bf4e1d4ab",
+  "properties": {
+    "motor_status": {
+      "description": "",
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "status",
+          "htv:methodName": "GET",
+          "op": "readproperty"
+        },
+        {
+          "href": "ws://kt-mp135-1.local:3000/motor/status/observe",
+          "op": "observeproperty"
+        }
+      ],
+      "properties": {
+        "current": {
+          "type": "number"
+        },
+        "error": {
+          "type": "object"
+        },
+        "mode": {
+          "type": "string"
+        },
+        "position": {
+          "type": "number"
+        },
+        "speed": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "readOnly": true,
+      "title": "status of the motor",
+      "type": "object"
+    }
+  },
+  "security": "no_sc",
+  "securityDefinitions": {
+    "no_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "title": "Encoder-Motor-kt-mp135-1"
+}
