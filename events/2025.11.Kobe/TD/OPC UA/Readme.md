@@ -1,6 +1,6 @@
 # OPC UA Binding for Web of Things
 
-## Big picture of the WoT Thing Description for OPC UA servers
+## WoT Thing Description for OPC UA servers
 
 <img width="1103" height="478" alt="image" src="https://github.com/user-attachments/assets/a08214d3-1cca-4bdd-92ff-f16154b94c10" />
 
