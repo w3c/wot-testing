@@ -12,7 +12,7 @@ The [Option I TD](https://github.com/w3c/wot-testing/blob/main/events/2025.11.Ko
 ```json
     "securityDefinitions": {
         "opcua_sc": {
-            "scheme": "opcua",
+            "scheme": "uav:opcua",
             "securityMode": [
                 "None",
                 "Sign",
