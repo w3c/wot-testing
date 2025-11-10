@@ -1,0 +1,1048 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "echonet:airCleaner:C0A80B06-013501@ba0256a6fea6c174",
+  "title": "airCleaner",
+  "titles": {
+    "en": "airCleaner",
+    "ja": "空気清浄器"
+  },
+  "description": "Air cleaner",
+  "descriptions": {
+    "en": "Air cleaner",
+    "ja": "空気清浄器"
+  },
+  "properties": {
+    "airFlowLevel": {
+      "title": "airFlowLevel",
+      "titles": {
+        "en": "airFlowLevel",
+        "ja": "風量設定"
+      },
+      "echonet:epc": "0xA0",
+      "description": "Air flow rate setting",
+      "descriptions": {
+        "en": "Air flow rate setting",
+        "ja": "風量設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8
+        },
+        {
+          "type": "string",
+          "enum": [
+            "auto"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "airPollutionDetection": {
+      "title": "airPollutionDetection",
+      "titles": {
+        "en": "airPollutionDetection",
+        "ja": "空気汚れ検知状態"
+      },
+      "echonet:epc": "0xC0",
+      "description": "Air pollution detection status",
+      "descriptions": {
+        "en": "Air pollution detection status",
+        "ja": "空気汚れ検知状態"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/airPollutionDetection",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/airPollutionDetection",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/airPollutionDetection",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/airPollutionDetection",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/airPollutionDetection",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "businessFacilityCode": {
+      "title": "businessFacilityCode",
+      "titles": {
+        "en": "businessFacilityCode",
+        "ja": "事業場コード"
+      },
+      "echonet:epc": "0x8B",
+      "description": "Business facility code",
+      "descriptions": {
+        "en": "Business facility code",
+        "ja": "事業場コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "consumedCumulativeElectricEnergy": {
+      "title": "consumedCumulativeElectricEnergy",
+      "titles": {
+        "en": "consumedCumulativeElectricEnergy",
+        "ja": "積算消費電力量計測値"
+      },
+      "echonet:epc": "0x85",
+      "description": "Measured cumulative electric energy consumption",
+      "descriptions": {
+        "en": "Measured cumulative electric energy consumption",
+        "ja": "積算消費電力量計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "kWh",
+      "minimum": 0,
+      "maximum": 999999.999,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/consumedCumulativeElectricEnergy",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/consumedCumulativeElectricEnergy",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/consumedCumulativeElectricEnergy",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/consumedCumulativeElectricEnergy",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/consumedCumulativeElectricEnergy",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "faultDescription": {
+      "title": "faultDescription",
+      "titles": {
+        "en": "faultDescription",
+        "ja": "異常内容"
+      },
+      "echonet:epc": "0x89",
+      "description": "Fault description",
+      "descriptions": {
+        "en": "Fault description",
+        "ja": "異常内容"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "noFault",
+        "trunOffOrUnplug",
+        "resetButton",
+        "setIncorrectly",
+        "supply",
+        "cleaning",
+        "changingBattery",
+        "recoverOperationNoReuired",
+        "userDefinable1",
+        "abnormalEventOrSafety",
+        "switch",
+        "sensorSystem",
+        "component",
+        "controlCircuitBoard",
+        "userDefinable2",
+        "repairLocationUnkown",
+        "fault"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "faultStatus": {
+      "title": "faultStatus",
+      "titles": {
+        "en": "faultStatus",
+        "ja": "異常発生状態"
+      },
+      "echonet:epc": "0x88",
+      "description": "Fault status",
+      "descriptions": {
+        "en": "Fault status",
+        "ja": "異常発生状態"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "installationLocation": {
+      "title": "installationLocation",
+      "titles": {
+        "en": "installationLocation",
+        "ja": "設置場所"
+      },
+      "echonet:epc": "0x81",
+      "description": "Installation location",
+      "descriptions": {
+        "en": "Installation location",
+        "ja": "設置場所"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "instantaneousElectricPowerConsumption": {
+      "title": "instantaneousElectricPowerConsumption",
+      "titles": {
+        "en": "instantaneousElectricPowerConsumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "echonet:epc": "0x84",
+      "description": "Measured instantaneous power consumption",
+      "descriptions": {
+        "en": "Measured instantaneous power consumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "W",
+      "minimum": 0,
+      "maximum": 65533,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturerFaultCode": {
+      "title": "manufacturerFaultCode",
+      "titles": {
+        "en": "manufacturerFaultCode",
+        "ja": "メーカ異常コード"
+      },
+      "echonet:epc": "0x86",
+      "description": "Manufacturer's fault code",
+      "descriptions": {
+        "en": "Manufacturer's fault code",
+        "ja": "メーカ異常コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "operationStatus": {
+      "title": "operationStatus",
+      "titles": {
+        "en": "operationStatus",
+        "ja": "動作状態"
+      },
+      "echonet:epc": "0x80",
+      "description": "Operation status",
+      "descriptions": {
+        "en": "Operation status",
+        "ja": "動作状態"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "productCode": {
+      "title": "productCode",
+      "titles": {
+        "en": "productCode",
+        "ja": "商品コード"
+      },
+      "echonet:epc": "0x8C",
+      "description": "Product code",
+      "descriptions": {
+        "en": "Product code",
+        "ja": "商品コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/aircleaner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/aircleaner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/aircleaner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "forms": [
+    {
+      "href": "http://192.168.1.16:8081/aircleaner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://192.168.100.20:8081/aircleaner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://10.1.1.128:8081/aircleaner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/aircleaner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/aircleaner/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}

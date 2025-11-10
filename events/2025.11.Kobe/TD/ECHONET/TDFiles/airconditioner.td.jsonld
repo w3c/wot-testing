@@ -1,0 +1,1514 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "echonet:homeAirConditioner:C0A8641A-013001@dc1c479ed21cd0e1",
+  "title": "homeAirConditioner",
+  "titles": {
+    "en": "homeAirConditioner",
+    "ja": "家庭用エアコン"
+  },
+  "description": "Home air conditioner",
+  "descriptions": {
+    "en": "Home air conditioner",
+    "ja": "家庭用エアコン"
+  },
+  "properties": {
+    "airFlowLevel": {
+      "title": "airFlowLevel",
+      "titles": {
+        "en": "airFlowLevel",
+        "ja": "風量設定"
+      },
+      "echonet:epc": "0xA0",
+      "description": "Air flow rate setting",
+      "descriptions": {
+        "en": "Air flow rate setting",
+        "ja": "風量設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 8
+        },
+        {
+          "type": "string",
+          "enum": [
+            "auto"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/airFlowLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/airFlowLevel/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "faultStatus": {
+      "title": "faultStatus",
+      "titles": {
+        "en": "faultStatus",
+        "ja": "異常発生状態"
+      },
+      "echonet:epc": "0x88",
+      "description": "Fault status",
+      "descriptions": {
+        "en": "Fault status",
+        "ja": "異常発生状態"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "humidity": {
+      "title": "humidity",
+      "titles": {
+        "en": "humidity",
+        "ja": "室内相対湿度計測値"
+      },
+      "echonet:epc": "0xBA",
+      "description": "Measured value of room relative humidity",
+      "descriptions": {
+        "en": "Measured value of room relative humidity",
+        "ja": "室内相対湿度計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "%",
+          "minimum": 0,
+          "maximum": 100
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unmeasurable"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/humidity",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "id": {
+      "title": "id",
+      "titles": {
+        "en": "id",
+        "ja": "識別番号"
+      },
+      "echonet:epc": "0x83",
+      "description": "Identification number",
+      "descriptions": {
+        "en": "Identification number",
+        "ja": "識別番号"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "installationLocation": {
+      "title": "installationLocation",
+      "titles": {
+        "en": "installationLocation",
+        "ja": "設置場所"
+      },
+      "echonet:epc": "0x81",
+      "description": "Installation location",
+      "descriptions": {
+        "en": "Installation location",
+        "ja": "設置場所"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "operationMode": {
+      "title": "operationMode",
+      "titles": {
+        "en": "operationMode",
+        "ja": "運転モード設定"
+      },
+      "echonet:epc": "0xB0",
+      "description": "Operation mode setting",
+      "descriptions": {
+        "en": "Operation mode setting",
+        "ja": "運転モード設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "enum": [
+        "auto",
+        "cooling",
+        "heating",
+        "dehumidification",
+        "circulation",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationMode/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "operationStatus": {
+      "title": "operationStatus",
+      "titles": {
+        "en": "operationStatus",
+        "ja": "動作状態"
+      },
+      "echonet:epc": "0x80",
+      "description": "Operation status",
+      "descriptions": {
+        "en": "Operation status",
+        "ja": "動作状態"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "powerSaving": {
+      "title": "powerSaving",
+      "titles": {
+        "en": "powerSaving",
+        "ja": "節電動作設定"
+      },
+      "echonet:epc": "0x8F",
+      "description": "Power-saving operation setting",
+      "descriptions": {
+        "en": "Power-saving operation setting",
+        "ja": "節電動作設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "productionDate": {
+      "title": "productionDate",
+      "titles": {
+        "en": "productionDate",
+        "ja": "製造年月日"
+      },
+      "echonet:epc": "0x8E",
+      "description": "Production date",
+      "descriptions": {
+        "en": "Production date",
+        "ja": "製造年月日"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "format": "date",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "relativeHumidityDehumidifying": {
+      "title": "relativeHumidityDehumidifying",
+      "titles": {
+        "en": "relativeHumidityDehumidifying",
+        "ja": "除湿モード時相対湿度設定値"
+      },
+      "echonet:epc": "0xB4",
+      "description": "Set value of relative humidity in dehumidifying mode",
+      "descriptions": {
+        "en": "Set value of relative humidity in dehumidifying mode",
+        "ja": "除湿モード時相対湿度設定値"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "roomTemperature": {
+      "title": "roomTemperature",
+      "titles": {
+        "en": "roomTemperature",
+        "ja": "室内温度計測値"
+      },
+      "echonet:epc": "0xBB",
+      "description": "Measured value of room temperature",
+      "descriptions": {
+        "en": "Measured value of room temperature",
+        "ja": "室内温度計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": -127,
+          "maximum": 125
+        },
+        {
+          "type": "string",
+          "enum": [
+            "unmeasurable"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/roomTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "targetTemperature": {
+      "title": "targetTemperature",
+      "titles": {
+        "en": "targetTemperature",
+        "ja": "温度設定値"
+      },
+      "echonet:epc": "0xB3",
+      "description": "Set temperature value",
+      "descriptions": {
+        "en": "Set temperature value",
+        "ja": "温度設定値"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": 0,
+          "maximum": 50
+        },
+        {
+          "type": "string",
+          "enum": [
+            "undefined"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperature",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "targetTemperatureCooling": {
+      "title": "targetTemperatureCooling",
+      "titles": {
+        "en": "targetTemperatureCooling",
+        "ja": "冷房モード時温度設定値"
+      },
+      "echonet:epc": "0xB5",
+      "description": "Set temperature value in cooling mode",
+      "descriptions": {
+        "en": "Set temperature value in cooling mode",
+        "ja": "冷房モード時温度設定値"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": 0,
+          "maximum": 50
+        },
+        {
+          "type": "string",
+          "enum": [
+            "undefined"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureCooling",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureCooling",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureCooling",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureCooling",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureCooling",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "targetTemperatureDehumidifying": {
+      "title": "targetTemperatureDehumidifying",
+      "titles": {
+        "en": "targetTemperatureDehumidifying",
+        "ja": "除湿モード時温度設定値"
+      },
+      "echonet:epc": "0xB7",
+      "description": "Set temperature value in dehumidifying mode",
+      "descriptions": {
+        "en": "Set temperature value in dehumidifying mode",
+        "ja": "除湿モード時温度設定値"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": 0,
+          "maximum": 50
+        },
+        {
+          "type": "string",
+          "enum": [
+            "undefined"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "targetTemperatureHeating": {
+      "title": "targetTemperatureHeating",
+      "titles": {
+        "en": "targetTemperatureHeating",
+        "ja": "暖房モード時温度設定値"
+      },
+      "echonet:epc": "0xB6",
+      "description": "Set temperature value in heating mode",
+      "descriptions": {
+        "en": "Set temperature value in heating mode",
+        "ja": "暖房モード時温度設定値"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "oneOf": [
+        {
+          "type": "number",
+          "unit": "Celsius",
+          "minimum": 0,
+          "maximum": 50
+        },
+        {
+          "type": "string",
+          "enum": [
+            "undefined"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureHeating",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureHeating",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureHeating",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureHeating",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureHeating",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "beepBuzzer": {
+      "title": "beepBuzzer",
+      "titles": {
+        "en": "beepBuzzer",
+        "ja": "ブザー"
+      },
+      "description": "Buzzer",
+      "descriptions": {
+        "en": "Buzzer",
+        "ja": "ブザー"
+      },
+      "input": {},
+      "output": {
+        "type": "object",
+        "description": "Return true/false and a message",
+        "descriptions": {
+          "en": "Return true/false and a message",
+          "ja": "true/false とメッセージを返す"
+        },
+        "properties": {
+          "result": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/homeairconditioner_2/actions/beepBuzzer",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "http://192.168.100.20:8081/homeairconditioner_2/actions/beepBuzzer",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "http://10.1.1.128:8081/homeairconditioner_2/actions/beepBuzzer",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/actions/beepBuzzer",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/actions/beepBuzzer",
+          "contentType": "application/json",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "idempotent": false,
+      "safe": false
+    }
+  },
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "forms": [
+    {
+      "href": "http://192.168.1.16:8081/homeairconditioner_2/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://192.168.100.20:8081/homeairconditioner_2/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://10.1.1.128:8081/homeairconditioner_2/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}

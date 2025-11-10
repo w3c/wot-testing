@@ -1,0 +1,1849 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "id": "echonet:generalLighting:C0A80B08-029001@ba0256a6fea6c174",
+  "title": "generalLighting",
+  "titles": {
+    "en": "generalLighting",
+    "ja": "一般照明"
+  },
+  "description": "General lighting",
+  "descriptions": {
+    "en": "General lighting",
+    "ja": "一般照明"
+  },
+  "properties": {
+    "businessFacilityCode": {
+      "title": "businessFacilityCode",
+      "titles": {
+        "en": "businessFacilityCode",
+        "ja": "事業場コード"
+      },
+      "echonet:epc": "0x8B",
+      "description": "Business facility code",
+      "descriptions": {
+        "en": "Business facility code",
+        "ja": "事業場コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/businessFacilityCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "faultDescription": {
+      "title": "faultDescription",
+      "titles": {
+        "en": "faultDescription",
+        "ja": "異常内容"
+      },
+      "echonet:epc": "0x89",
+      "description": "Fault description",
+      "descriptions": {
+        "en": "Fault description",
+        "ja": "異常内容"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "noFault",
+        "trunOffOrUnplug",
+        "resetButton",
+        "setIncorrectly",
+        "supply",
+        "cleaning",
+        "changingBattery",
+        "recoverOperationNoReuired",
+        "userDefinable1",
+        "abnormalEventOrSafety",
+        "switch",
+        "sensorSystem",
+        "component",
+        "controlCircuitBoard",
+        "userDefinable2",
+        "repairLocationUnkown",
+        "fault"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/faultDescription",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "faultStatus": {
+      "title": "faultStatus",
+      "titles": {
+        "en": "faultStatus",
+        "ja": "異常発生状態"
+      },
+      "echonet:epc": "0x88",
+      "description": "Fault status",
+      "descriptions": {
+        "en": "Fault status",
+        "ja": "異常発生状態"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/faultStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/faultStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "installationLocation": {
+      "title": "installationLocation",
+      "titles": {
+        "en": "installationLocation",
+        "ja": "設置場所"
+      },
+      "echonet:epc": "0x81",
+      "description": "Installation location",
+      "descriptions": {
+        "en": "Installation location",
+        "ja": "設置場所"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/installationLocation",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/installationLocation/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "instantaneousElectricPowerConsumption": {
+      "title": "instantaneousElectricPowerConsumption",
+      "titles": {
+        "en": "instantaneousElectricPowerConsumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "echonet:epc": "0x84",
+      "description": "Measured instantaneous power consumption",
+      "descriptions": {
+        "en": "Measured instantaneous power consumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "W",
+      "minimum": 0,
+      "maximum": 65533,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/instantaneousElectricPowerConsumption",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "lightColor": {
+      "title": "lightColor",
+      "titles": {
+        "en": "lightColor",
+        "ja": "光色設定"
+      },
+      "echonet:epc": "0xB1",
+      "description": "Light color setting",
+      "descriptions": {
+        "en": "Light color setting",
+        "ja": "光色設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other",
+        "undefined"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightColor",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorForMainLighting": {
+      "title": "lightColorForMainLighting",
+      "titles": {
+        "en": "lightColorForMainLighting",
+        "ja": "通常灯モード時光色設定"
+      },
+      "echonet:epc": "0xBB",
+      "description": "Light color setting for main lighting",
+      "descriptions": {
+        "en": "Light color setting for main lighting",
+        "ja": "通常灯モード時光色設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightColorForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightColorForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightColorForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightColorForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightColorForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorLevelStep": {
+      "title": "lightColorLevelStep",
+      "titles": {
+        "en": "lightColorLevelStep",
+        "ja": "光色レベル段数設定"
+      },
+      "echonet:epc": "0xB3",
+      "description": "Light color step setting",
+      "descriptions": {
+        "en": "Light color step setting",
+        "ja": "光色レベル段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightColorLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorLevelStepForMainLighting": {
+      "title": "lightColorLevelStepForMainLighting",
+      "titles": {
+        "en": "lightColorLevelStepForMainLighting",
+        "ja": "通常灯モード時光色レベル段数設定"
+      },
+      "echonet:epc": "0xBC",
+      "description": "Light color level step setting for main lighting",
+      "descriptions": {
+        "en": "Light color level step setting for main lighting",
+        "ja": "通常灯モード時光色レベル段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightColorLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelForMainLighting": {
+      "title": "lightLevelForMainLighting",
+      "titles": {
+        "en": "lightLevelForMainLighting",
+        "ja": "通常灯モード時照明の明るさ設定"
+      },
+      "echonet:epc": "0xB7",
+      "description": "Light level setting for main lighting",
+      "descriptions": {
+        "en": "Light level setting for main lighting",
+        "ja": "通常灯モード時照明の明るさ設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightLevelForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelForNightLighting": {
+      "title": "lightLevelForNightLighting",
+      "titles": {
+        "en": "lightLevelForNightLighting",
+        "ja": "常夜灯モード時照明の明るさ設定"
+      },
+      "echonet:epc": "0xB9",
+      "description": "Light level setting for night lighting",
+      "descriptions": {
+        "en": "Light level setting for night lighting",
+        "ja": "常夜灯モード時照明の明るさ設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStep": {
+      "title": "lightLevelStep",
+      "titles": {
+        "en": "lightLevelStep",
+        "ja": "照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xB2",
+      "description": "Light level step setting",
+      "descriptions": {
+        "en": "Light level step setting",
+        "ja": "照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightLevelStep",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStepForMainLighting": {
+      "title": "lightLevelStepForMainLighting",
+      "titles": {
+        "en": "lightLevelStepForMainLighting",
+        "ja": "通常灯モード時照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xB8",
+      "description": "Light level step setting for main lighting",
+      "descriptions": {
+        "en": "Light level step setting for main lighting",
+        "ja": "通常灯モード時照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightLevelStepForMainLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStepForNightLighting": {
+      "title": "lightLevelStepForNightLighting",
+      "titles": {
+        "en": "lightLevelStepForNightLighting",
+        "ja": "常夜灯モード時照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xBA",
+      "description": "Light level step setting for night lighting",
+      "descriptions": {
+        "en": "Light level step setting for night lighting",
+        "ja": "常夜灯モード時照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/lightLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/lightLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/lightLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/lightLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/lightLevelStepForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturerFaultCode": {
+      "title": "manufacturerFaultCode",
+      "titles": {
+        "en": "manufacturerFaultCode",
+        "ja": "メーカ異常コード"
+      },
+      "echonet:epc": "0x86",
+      "description": "Manufacturer's fault code",
+      "descriptions": {
+        "en": "Manufacturer's fault code",
+        "ja": "メーカ異常コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/manufacturerFaultCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "maximumSettableLevelForNightLighting": {
+      "title": "maximumSettableLevelForNightLighting",
+      "titles": {
+        "en": "maximumSettableLevelForNightLighting",
+        "ja": "常夜灯設定可能レベル最大値"
+      },
+      "echonet:epc": "0xB5",
+      "description": "Maximum value of settable level for night lighting",
+      "descriptions": {
+        "en": "Maximum value of settable level for night lighting",
+        "ja": "常夜灯設定可能レベル最大値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "lightLevel": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notLightLevel"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照明の明るさ",
+            "en": "Byte 1: light level"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Byte 2: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/maximumSettableLevelForNightLighting",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "maximumSpecifiableLevel": {
+      "title": "maximumSpecifiableLevel",
+      "titles": {
+        "en": "maximumSpecifiableLevel",
+        "ja": "設定可能レベル最大値"
+      },
+      "echonet:epc": "0xB4",
+      "description": "Maximum specifiable values",
+      "descriptions": {
+        "en": "Maximum specifiable values",
+        "ja": "設定可能レベル最大値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "lightLevel": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notLightLevel"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照明の明るさ",
+            "en": "Byte 1: light level"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Byte 2: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/maximumSpecifiableLevel",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "operationMode": {
+      "title": "operationMode",
+      "titles": {
+        "en": "operationMode",
+        "ja": "点灯モード設定"
+      },
+      "echonet:epc": "0xB6",
+      "description": "Lighting mode setting",
+      "descriptions": {
+        "en": "Lighting mode setting",
+        "ja": "点灯モード設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "auto",
+        "normal",
+        "night",
+        "color"
+      ],
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/operationMode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "operationStatus": {
+      "title": "operationStatus",
+      "titles": {
+        "en": "operationStatus",
+        "ja": "動作状態"
+      },
+      "echonet:epc": "0x80",
+      "description": "Operation status",
+      "descriptions": {
+        "en": "Operation status",
+        "ja": "動作状態"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/operationStatus",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/operationStatus/observable",
+          "contentType": "application/json",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "powerSaving": {
+      "title": "powerSaving",
+      "titles": {
+        "en": "powerSaving",
+        "ja": "節電動作設定"
+      },
+      "echonet:epc": "0x8F",
+      "description": "Power-saving operation setting",
+      "descriptions": {
+        "en": "Power-saving operation setting",
+        "ja": "節電動作設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/powerSaving",
+          "contentType": "application/json",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "productCode": {
+      "title": "productCode",
+      "titles": {
+        "en": "productCode",
+        "ja": "商品コード"
+      },
+      "echonet:epc": "0x8C",
+      "description": "Product code",
+      "descriptions": {
+        "en": "Product code",
+        "ja": "商品コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "productionDate": {
+      "title": "productionDate",
+      "titles": {
+        "en": "productionDate",
+        "ja": "製造年月日"
+      },
+      "echonet:epc": "0x8E",
+      "description": "Production date",
+      "descriptions": {
+        "en": "Production date",
+        "ja": "製造年月日"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "format": "date",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/productionDate",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "serialNumber": {
+      "title": "serialNumber",
+      "titles": {
+        "en": "serialNumber",
+        "ja": "製造番号"
+      },
+      "echonet:epc": "0x8D",
+      "description": "Serial number",
+      "descriptions": {
+        "en": "Serial number",
+        "ja": "製造番号"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://192.168.1.16:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://192.168.100.20:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://10.1.1.128:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/properties/serialNumber",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "@type": "Thing",
+  "security": [
+    "nosec_sc"
+  ],
+  "forms": [
+    {
+      "href": "http://192.168.1.16:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://192.168.100.20:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://10.1.1.128:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/generallighting/all/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  }
+}
