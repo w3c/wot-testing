@@ -35,4 +35,39 @@ The [Option I TD](https://github.com/w3c/wot-testing/blob/main/events/2025.11.Ko
 ```
 
 ### Option II
+The [Option II TD](https://github.com/w3c/wot-testing/blob/main/events/2025.11.Kobe/TD/OPC%20UA/1%3ACoffeeMachineA_OptionII.td.json) defines different schemes for the channel and authendication options. The combo tells you about that both security information needs to be considered:
 
+```json
+    "securityDefinitions": {
+        "opcuaChannel_sc": {
+            "scheme": "uav:channel",
+            "securityMode": [
+                "None",
+                "Sign",
+                "SignAndEncrypt"
+            ],
+            "securityPolicy": [
+                "None",
+                "Basic256Sha256",
+                "Aes128_Sha256_RsaOaep",
+                "Aes256_Sha256_RsaPss"
+            ]
+        },
+        "opcuaAuthentication_sc": {
+            "scheme": "uav:authentication",
+            "userIdentityTokens": [
+                "UserName",
+                "Certificate",
+                "Anonymous"
+            ]
+        },
+        "combo_sc": {
+            "scheme": "combo",
+            "allOff": [
+                "opcuaChannel_sc",
+                "opcuaAuthentication_sc"
+            ]
+        }
+    },
+    "security": "combo_sc",
+```
