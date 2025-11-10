@@ -14,7 +14,7 @@
     "base": "opc.tcp://opcuademo.sterfive.com:26543",
     "securityDefinitions": {
         "opcua_sc": {
-            "scheme": "opcua",
+            "scheme": "uav:opcua",
             "securityMode": [
                 "None",
                 "Sign",
