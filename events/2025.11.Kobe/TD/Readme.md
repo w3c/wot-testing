@@ -1,1 +1,1 @@
-Please share here your TDs. 
+Please share here your TDs in the subfolders. 
