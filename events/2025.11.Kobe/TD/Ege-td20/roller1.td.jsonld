@@ -2,12 +2,12 @@
   "@context": "https://www.w3.org/ns/wot-next/td",
   "description": "This Thing is an integrated unit consisting of a Brushless DC Motor (BLDC motor), a Rotary Encoder, and an LED.\n\nTo use this Thing, you must perform an initialization step:\n- first, enable the motor using the `enable_motor` action,\n- and then set the desired operating mode using the `set_mode` action.\n\nPlease note that if you do not perform this setup,\nthe motor will not operate according to the specified speed or position settings.\n\nFurthermore, the state of the Thing and the control of the LED can be\naccessed without any prior initialization.\n",
   "id": "urn:uuid:d1916446-34e6-5aad-884e-182bf4e1d4ab",
-  "base": "http://kt-mp135-1.local:3000/motor/",
-  "security": "no_sc",
-  "securityDefinitions": {
-    "no_sc": {
+  "form": {
+    "base": "http://kt-mp135-1.local:3000/motor/",
+    "security": {
       "scheme": "nosec"
-    }
+    },
+    "contentType": "application/json"
   },
   "title": "Encoder-Motor-kt-mp135-1",
   "properties": {
@@ -15,7 +15,6 @@
       "description": "",
       "forms": [
         {
-          "contentType": "application/json",
           "href": "status",
           "htv:methodName": "GET",
           "op": "readproperty"

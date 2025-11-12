@@ -11,9 +11,9 @@
     ],
     "title": "CoffeeMachineA",
     "uav:browseName": "1:CoffeeMachineA",
-    "base": "opc.tcp://opcuademo.sterfive.com:26543",
-    "securityDefinitions": {
-        "opcua_sc": {
+    "form": {
+        "base": "opc.tcp://opcuademo.sterfive.com:26543",
+        "security": {
             "scheme": "uav:opcua",
             "securityMode": [
                 "None",
@@ -33,7 +33,6 @@
             ]
         }
     },
-    "security": "opcua_sc",
     "properties": {
         "7:BoilerPressureSteam": {
             "title": "BoilerPressureSteam",
@@ -44,7 +43,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1054",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -78,7 +76,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1059",
-                    "contentType": "application/octet-stream",
                     "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:BoilerTempWater"
                 }
             ]
@@ -92,7 +89,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1062",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -112,7 +108,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1063",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -132,7 +127,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1064",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -152,7 +146,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1065",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -172,7 +165,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1068",
-                    "contentType": "application/octet-stream",
                     "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:CoffeeBeanLevel"
                 }
             ]
@@ -186,7 +178,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1070",
-                    "contentType": "application/octet-stream",
                     "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:WaterTankLevel"
                 }
             ]
@@ -200,7 +191,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1073",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -220,7 +210,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1076",
-                    "contentType": "application/octet-stream",
                     "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:ServedCoffeeCount"
                 }
             ]
@@ -234,7 +223,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1079",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -254,7 +242,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1080",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -274,7 +261,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1081",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -294,7 +280,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1082",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -314,7 +299,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1083",
-                    "contentType": "application/octet-stream",
                     "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:GrindingDuration"
                 }
             ]
@@ -328,7 +312,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1225",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -348,7 +331,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1228",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -368,7 +350,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1229",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -388,7 +369,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1231",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -408,7 +388,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1233",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -428,7 +407,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1236",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -448,7 +426,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1239",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -468,7 +445,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1242",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -488,7 +464,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1245",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -508,7 +483,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1248",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -528,7 +502,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1103",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -548,7 +521,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1104",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -568,7 +540,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1105",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "writeproperty",
@@ -585,7 +556,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1106",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -602,7 +572,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1107",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -622,7 +591,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1394",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -642,7 +610,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1547",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -662,7 +629,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1549",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -682,7 +648,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1550",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -702,7 +667,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1551",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -722,7 +686,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1552",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -742,7 +705,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1387",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -762,7 +724,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1396",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -782,7 +743,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1397",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -802,7 +762,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1398",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -822,7 +781,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1406",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -842,7 +800,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1407",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -862,7 +819,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1408",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -882,7 +838,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1409",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -902,7 +857,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1410",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -922,7 +876,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1411",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -942,7 +895,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1413",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -962,7 +914,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1415",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -982,7 +933,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1417",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1002,7 +952,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1422",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1022,7 +971,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1423",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1042,7 +990,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1424",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1062,7 +1009,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1425",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1082,7 +1028,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1426",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1102,7 +1047,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1427",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1122,7 +1066,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1428",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1142,7 +1085,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1429",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1162,7 +1104,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1400",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1179,7 +1120,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1110",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1196,7 +1136,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1111",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1213,7 +1152,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1112",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1230,7 +1168,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1113",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1247,7 +1184,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1114",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1264,7 +1200,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1115",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1281,7 +1216,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1116",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1298,7 +1232,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1117",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1315,7 +1248,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1118",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -1335,7 +1267,6 @@
             "forms": [
                 {
                     "href": "/?id=ns=1;i=1386",
-                    "contentType": "application/octet-stream",
                     "op": [
                         "readproperty",
                         "observeproperty"

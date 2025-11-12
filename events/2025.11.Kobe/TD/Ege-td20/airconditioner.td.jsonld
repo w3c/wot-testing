@@ -1,4 +1,5 @@
 {
+  "NOTE":"multiple forms in affordances are currently not allowed but this TD would be an example on how that should be",
   "@context": [
     "https://www.w3.org/ns/wot-next/td",
     {
@@ -20,13 +21,35 @@
     "ja": "家庭用エアコン"
   },
   "@type": "Thing",
-  "securityDefinitions": {
-    "nosec_sc": {
-      "scheme": "nosec"
+  "security": {
+    "scheme": "nosec"
+  },
+  "form": {
+    "contentType": "application/json"
+  },
+  "connectionDefinitions": {
+    "local1": {
+      "base": "http://192.168.1.16:8081/homeairconditioner_2/"
+    },
+    "local2": {
+      "base": "http://192.168.1.20:8081/homeairconditioner_2/"
+    },
+    "local3": {
+      "base": "http://10.1.1.128:8081/homeairconditioner_2/"
+    },
+    "local-ipv6-1": {
+      "base": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/"
+    },
+    "local-ipv6-2": {
+      "base": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/"
     }
   },
-  "security": [
-    "nosec_sc"
+  "connection":[
+    "local1",
+    "local2",
+    "local3",
+    "local-ipv6-1",
+    "local-ipv6-2"
   ],
   "properties": {
     "airFlowLevel": {
@@ -59,84 +82,14 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/airFlowLevel",
-          "contentType": "application/json",
+          "href": "properties/airFlowLevel",
           "op": [
             "readproperty",
             "writeproperty"
           ]
         },
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/airFlowLevel/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/airFlowLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/airFlowLevel/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/airFlowLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/airFlowLevel/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/airFlowLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/airFlowLevel/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/airFlowLevel",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/airFlowLevel/observable",
-          "contentType": "application/json",
+          "href": "properties/airFlowLevel/observable",
           "op": [
             "observeproperty",
             "unobserveproperty"
@@ -163,84 +116,14 @@
       "type": "boolean",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/faultStatus",
-          "contentType": "application/json",
+          "href": "properties/faultStatus",
           "op": [
             "readproperty"
           ],
           "htv:methodName": "GET"
         },
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/faultStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/faultStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/faultStatus/observable",
-          "contentType": "application/json",
+          "href": "properties/faultStatus/observable",
           "op": [
             "observeproperty",
             "unobserveproperty"
@@ -280,40 +163,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/humidity",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/humidity",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/humidity",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/humidity",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/humidity",
-          "contentType": "application/json",
+          "href": "properties/humidity",
           "op": [
             "readproperty"
           ],
@@ -339,40 +189,7 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/id",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/id",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/id",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/id",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/id",
-          "contentType": "application/json",
+          "href": "properties/id",
           "op": [
             "readproperty"
           ],
@@ -398,84 +215,14 @@
       "type": "string",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/installationLocation",
-          "contentType": "application/json",
+          "href": "properties/installationLocation",
           "op": [
             "readproperty",
             "writeproperty"
           ]
         },
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/installationLocation/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/installationLocation",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/installationLocation/observable",
-          "contentType": "application/json",
+          "href": "properties/installationLocation/observable",
           "op": [
             "observeproperty",
             "unobserveproperty"
@@ -518,40 +265,7 @@
       },
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/manufacturer",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/manufacturer",
-          "contentType": "application/json",
+          "href": "properties/manufacturer",
           "op": [
             "readproperty"
           ],
@@ -585,84 +299,14 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationMode",
-          "contentType": "application/json",
+          "href": "properties/operationMode",
           "op": [
             "readproperty",
             "writeproperty"
           ]
         },
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationMode/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationMode/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationMode/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationMode/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationMode",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationMode/observable",
-          "contentType": "application/json",
+          "href": "properties/operationMode/observable",
           "op": [
             "observeproperty",
             "unobserveproperty"
@@ -689,84 +333,14 @@
       "type": "boolean",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationStatus",
-          "contentType": "application/json",
+          "href": "properties/operationStatus",
           "op": [
             "readproperty",
             "writeproperty"
           ]
         },
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/operationStatus/observable",
-          "contentType": "application/json",
-          "op": [
-            "observeproperty",
-            "unobserveproperty"
-          ],
-          "subprotocol": "longpoll"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationStatus",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/operationStatus/observable",
-          "contentType": "application/json",
+          "href": "properties/operationStatus/observable",
           "op": [
             "observeproperty",
             "unobserveproperty"
@@ -793,40 +367,7 @@
       "type": "boolean",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/powerSaving",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/powerSaving",
-          "contentType": "application/json",
+          "href": "properties/powerSaving",
           "op": [
             "readproperty",
             "writeproperty"
@@ -853,40 +394,7 @@
       "format": "date",
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/productionDate",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/productionDate",
-          "contentType": "application/json",
+          "href": "properties/productionDate",
           "op": [
             "readproperty"
           ],
@@ -920,40 +428,7 @@
       },
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/protocol",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/protocol",
-          "contentType": "application/json",
+          "href": "properties/protocol",
           "op": [
             "readproperty"
           ],
@@ -982,40 +457,7 @@
       "maximum": 100,
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/relativeHumidityDehumidifying",
-          "contentType": "application/json",
+          "href": "properties/relativeHumidityDehumidifying",
           "op": [
             "readproperty",
             "writeproperty"
@@ -1054,40 +496,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/roomTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/roomTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/roomTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/roomTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty"
-          ],
-          "htv:methodName": "GET"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/roomTemperature",
-          "contentType": "application/json",
+          "href": "properties/roomTemperature",
           "op": [
             "readproperty"
           ],
@@ -1126,40 +535,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperature",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperature",
-          "contentType": "application/json",
+          "href": "properties/targetTemperature",
           "op": [
             "readproperty",
             "writeproperty"
@@ -1198,40 +574,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureCooling",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureCooling",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureCooling",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureCooling",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureCooling",
-          "contentType": "application/json",
+          "href": "properties/targetTemperatureCooling",
           "op": [
             "readproperty",
             "writeproperty"
@@ -1270,40 +613,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureDehumidifying",
-          "contentType": "application/json",
+          "href": "properties/targetTemperatureDehumidifying",
           "op": [
             "readproperty",
             "writeproperty"
@@ -1342,40 +652,7 @@
       ],
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/properties/targetTemperatureHeating",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/properties/targetTemperatureHeating",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/properties/targetTemperatureHeating",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/properties/targetTemperatureHeating",
-          "contentType": "application/json",
-          "op": [
-            "readproperty",
-            "writeproperty"
-          ]
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/properties/targetTemperatureHeating",
-          "contentType": "application/json",
+          "href": "properties/targetTemperatureHeating",
           "op": [
             "readproperty",
             "writeproperty"
@@ -1415,40 +692,7 @@
       },
       "forms": [
         {
-          "href": "http://192.168.1.16:8081/homeairconditioner_2/actions/beepBuzzer",
-          "contentType": "application/json",
-          "op": [
-            "invokeaction"
-          ],
-          "htv:methodName": "POST"
-        },
-        {
-          "href": "http://192.168.100.20:8081/homeairconditioner_2/actions/beepBuzzer",
-          "contentType": "application/json",
-          "op": [
-            "invokeaction"
-          ],
-          "htv:methodName": "POST"
-        },
-        {
-          "href": "http://10.1.1.128:8081/homeairconditioner_2/actions/beepBuzzer",
-          "contentType": "application/json",
-          "op": [
-            "invokeaction"
-          ],
-          "htv:methodName": "POST"
-        },
-        {
-          "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/actions/beepBuzzer",
-          "contentType": "application/json",
-          "op": [
-            "invokeaction"
-          ],
-          "htv:methodName": "POST"
-        },
-        {
-          "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/actions/beepBuzzer",
-          "contentType": "application/json",
+          "href": "actions/beepBuzzer",
           "op": [
             "invokeaction"
           ],
@@ -1461,48 +705,7 @@
   },
   "forms": [
     {
-      "href": "http://192.168.1.16:8081/homeairconditioner_2/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://192.168.100.20:8081/homeairconditioner_2/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://10.1.1.128:8081/homeairconditioner_2/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://[2401:4640:111:10:16e4:46e0:171f:9537]:8081/homeairconditioner_2/all/properties",
-      "contentType": "application/json",
-      "op": [
-        "readallproperties",
-        "readmultipleproperties",
-        "writeallproperties",
-        "writemultipleproperties"
-      ]
-    },
-    {
-      "href": "http://[2401:4640:111:10:aed:a413:b8a2:1385]:8081/homeairconditioner_2/all/properties",
-      "contentType": "application/json",
+      "href": "all/properties",
       "op": [
         "readallproperties",
         "readmultipleproperties",
