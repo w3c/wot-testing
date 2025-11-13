@@ -1,0 +1,423 @@
+{
+  "@context": "https://www.w3.org/ns/wot-next/td",
+  "id": "urn:dev:wot:CacheSYSTEM-2400-1234",
+  "@type": "Thing",
+  "title": "CacheSYSTEM 2400 Cash Deposit Device",
+  "description": "A Web of Things implementation of ArmorSafe CacheSYSTEM 2400 cash-deposit device. @Author: Denis Ioan",
+  "form": {
+    "href": "ws://192.168.1.3:8080",
+    "contentType": "application/json",
+    "subprotocol": "webthingprotocol",
+    "security": {
+      "scheme": "oauth2",
+      "flow": "client",
+      "token": "http://192.168.1.3:8080/token",
+      "scopes": [
+        "systemStatus",
+        "systemBalance",
+        "command"
+      ]
+    }
+  },
+  "properties": {
+    "systemStatus": {
+      "type": "object",
+      "description": "Object for describing system and device health and status. Represents the health and operating state of the overall system and each peripheral. Includes per-device status codes, errors and warnings, firmware versions, connectivity state, consumables and sensors, environmental conditions (e.g., temperature, tamper), and an overall system state (idle, busy, fault, maintenance).",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "properties": {
+        "overallSystemState": {
+          "type": "string",
+          "description": "Overall system state (idle, busy, fault, maintenance).",
+          "enum": [
+            "idle",
+            "busy",
+            "fault",
+            "maintenance"
+          ]
+        },
+        "deviceStatuses": {
+          "type": "array",
+          "description": "Array of device status objects.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "deviceId": {
+                "type": "string",
+                "description": "Unique identifier for the device."
+              },
+              "statusCodes": {
+                "type": "string",
+                "description": "Status codes for the device."
+              },
+              "errors": {
+                "type": "string",
+                "description": "Error codes for the device."
+              },
+              "warnings": {
+                "type": "array",
+                "description": "Collection of system and device warnings.",
+                "items": {
+                  "type": "string",
+                  "maxLength": 40
+                }
+              },
+              "firmwareVersion": {
+                "type": "string",
+                "description": "Firmware version of the device.",
+                "maxLength": 40
+              },
+              "connectivityState": {
+                "type": "string",
+                "description": "Connectivity state of the device."
+              },
+              "consumables": {
+                "type": "array",
+                "description": "Status and levels of consumable items like paper, ink, etc.",
+                "items": {
+                  "type": "object",
+                  "description": "Consumable status object.",
+                  "additionalProperties": true
+                }
+              },
+              "sensors": {
+                "type": "array",
+                "description": "Sensor readings and status information.",
+                "items": {
+                  "type": "object",
+                  "description": "Sensor status object.",
+                  "additionalProperties": true
+                }
+              },
+              "environmentalConditions": {
+                "type": "object",
+                "description": "Environmental conditions such as temperature and tamper.",
+                "additionalProperties": true
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Timestamp of the status report."
+              }
+            },
+            "required": [
+              "deviceId",
+              "statusCodes"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "overallSystemState",
+        "deviceStatuses"
+      ],
+      "forms": [
+        {
+          "href": "",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "systemBalance": {
+      "type": "object",
+      "description": "Object for describing system balances within the system. Provides the current monetary contents across all cash-handling modules in the system (e.g., deposit cassettes, recycler cassettes, escrow, dispense hoppers). Reports per-container counts and values by denomination and currency, plus aggregated totals, capacity utilization, and reconciliation checkpoints.",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "properties": {
+        "containers": {
+          "type": "array",
+          "description": "Array of containers holding monetary items (e.g., cashboxes, bags, recycler modules, loader modules).",
+          "items": {
+            "type": "object",
+            "properties": {
+              "containerId": {
+                "type": "string",
+                "description": "Unique identifier for the container."
+              },
+              "containerName": {
+                "type": "string",
+                "maxLength": 40,
+                "description": "Type/name of container (e.g., cashbox, bag, recycler, loader)."
+              },
+              "containerType": {
+                "type": "string",
+                "description": "Type of container (e.g., cashbox, bag, recycler, loader)."
+              },
+              "containerDirection": {
+                "type": "string",
+                "description": "Direction of the monetary flow (e.g., in, out, in/out)."
+              },
+              "contents": {
+                "type": "array",
+                "description": "Array of tuples containing a count and a monetary transfer object.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "The number of monetaryTransferObject."
+                    },
+                    "amount": {
+                      "type": "object",
+                      "description": "Denomination and currency for this entry.",
+                      "properties": {
+                        "denom": {
+                          "type": "number",
+                          "minimum": 0,
+                          "multipleOf": 0.01,
+                          "description": "Monetary denomination value."
+                        },
+                        "currency": {
+                          "type": "string",
+                          "minLength": 3,
+                          "maxLength": 3,
+                          "pattern": "^[A-Z]{3}$",
+                          "description": "Currency in 3-letter ISO 4217 format."
+                        }
+                      },
+                      "required": [
+                        "denom",
+                        "currency"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "count",
+                    "amount"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "totalValue": {
+                "type": "array",
+                "description": "Array of total values per currency for the container.",
+                "items": {
+                  "type": "object",
+                  "description": "Denomination and currency for this entry.",
+                  "properties": {
+                    "denom": {
+                      "type": "number",
+                      "minimum": 0,
+                      "multipleOf": 0.01,
+                      "description": "Monetary denomination value."
+                    },
+                    "currency": {
+                      "type": "string",
+                      "minLength": 3,
+                      "maxLength": 3,
+                      "pattern": "^[A-Z]{3}$",
+                      "description": "Currency in 3-letter ISO 4217 format."
+                    }
+                  },
+                  "required": [
+                    "denom",
+                    "currency"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "containerId",
+              "containerType",
+              "contents",
+              "totalValue"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "containers"
+      ],
+      "forms": [
+        {
+          "href": "",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    },
+    "currentTransaction": {
+      "type": "object",
+      "description": "Current in-progress transaction details in Conexxus format (or null if no transaction).",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "additionalProperties": true,
+      "forms": [
+        {
+          "href": "",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "command": {
+      "description": "Execute a command on the device or system (e.g., cashDeposit, systemReboot).",
+      "safe": false,
+      "idempotent": false,
+      "input": {
+        "type": "object",
+        "description": "Object for describing actionable commands issued to a device or system.",
+        "properties": {
+          "commandType": {
+            "type": "string",
+            "description": "Name of the command to be executed.",
+            "enum": [
+              "cashDeposit",
+              "systemReboot"
+            ]
+          },
+          "parameters": {
+            "type": "array",
+            "description": "Parameters required for the command execution.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "maxLength": 40,
+                  "description": "Name of the diagnostic property."
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 40,
+                  "description": "Value of the diagnostic property."
+                }
+              },
+              "required": [
+                "key",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "requestedScheduling": {
+            "type": "object",
+            "description": "Scheduling information for when the command should be executed.",
+            "properties": {
+              "executeImmediately": {
+                "type": "boolean",
+                "description": "Indicates if the command should be executed immediately."
+              },
+              "scheduledTime": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Specific time when the command should be executed if not immediate."
+              }
+            },
+            "additionalProperties": false
+          },
+          "expectedAcknowledgements": {
+            "type": "boolean",
+            "description": "Indicates if an acknowledgement is expected for the command."
+          }
+        },
+        "required": [
+          "commandType"
+        ],
+        "additionalProperties": false
+      },
+      "forms": [
+        {
+          "href": "",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    }
+  },
+  "events": {
+    "deviceEvent": {
+      "description": "Object for describing device events such as door opened, peripheral fault, capacity threshold reached.",
+      "data": {
+        "type": "object",
+        "properties": {
+          "eventType": {
+            "type": "string",
+            "description": "Type of the device event."
+          },
+          "eventSeverity": {
+            "type": "integer",
+            "description": "Severity level of the event.",
+            "enum": [
+              0,
+              1,
+              2
+            ]
+          },
+          "sourceComponent": {
+            "type": "string",
+            "description": "Identifier of the component that generated the event."
+          },
+          "eventTimestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the event occurred."
+          },
+          "userId": {
+            "type": "string",
+            "description": "Optional identifier to correlate the event to a user."
+          },
+          "transactionId": {
+            "type": "string",
+            "description": "Optional identifier to correlate the event to a transaction."
+          },
+          "diagnosticPayload": {
+            "type": "array",
+            "description": "Optional diagnostic data associated with the event as key-value pairs.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "maxLength": 40,
+                  "description": "Name of the diagnostic property."
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 40,
+                  "description": "Value of the diagnostic property."
+                }
+              },
+              "required": [
+                "key",
+                "value"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "eventType",
+          "eventSeverity",
+          "eventTimestamp"
+        ],
+        "additionalProperties": false
+      },
+      "forms": [
+        {
+          "href": "",
+          "op": [
+            "subscribeevent"
+          ]
+        }
+      ]
+    }
+  }
+}

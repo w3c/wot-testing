@@ -1,0 +1,1474 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/wot-next/td",
+        {
+            "1": "urn:opcuademo.sterfive.com:NodeOPCUA-Server-for-CTT",
+            "2": "http://opcfoundation.org/UA/DI/",
+            "7": "http://opcfoundation.org/UA/CommercialKitchenEquipment/",
+            "17": "http://sterfive.com/UA/CoffeeMachine/",
+            "uav": "http://opcfoundation.org/UA/WoT-Binding/"
+        }
+    ],
+    "title": "CoffeeMachineA",
+    "uav:browseName": "1:CoffeeMachineA",
+    "form": {
+        "base": "opc.tcp://opcuademo.sterfive.com:26543",
+        "security": {
+            "scheme": "uav:opcua",
+            "securityMode": [
+                "None",
+                "Sign",
+                "SignAndEncrypt"
+            ],
+            "securityPolicy": [
+                "None",
+                "Basic256Sha256",
+                "Aes128_Sha256_RsaOaep",
+                "Aes256_Sha256_RsaPss"
+            ],
+            "userIdentityTokens": [
+                "UserName",
+                "Certificate",
+                "Anonymous"
+            ]
+        }
+    },
+    "properties": {
+        "7:BoilerPressureSteam": {
+            "title": "BoilerPressureSteam",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1054",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:BoilerPressureSteam"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "7:BoilerPressureWater": {
+            "title": "BoilerPressureWater",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1056",
+                    "contentType": "application/octet-stream",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:BoilerPressureWater"
+                }
+            ]
+        },
+        "7:BoilerTempWater": {
+            "title": "BoilerTempWater",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1059",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:BoilerTempWater"
+                }
+            ]
+        },
+        "7:CurrentState": {
+            "title": "CurrentState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1062",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:CurrentState"
+                }
+            ],
+            "observable": true
+        },
+        "7:SystemClean": {
+            "title": "SystemClean",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1063",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:SystemClean"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "7:TotalMix": {
+            "title": "TotalMix",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1064",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:TotalMix"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "7:BoilerTempSteam": {
+            "title": "BoilerTempSteam",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1065",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/7:BoilerTempSteam"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "17:CoffeeBeanLevel": {
+            "title": "CoffeeBeanLevel",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1068",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:CoffeeBeanLevel"
+                }
+            ]
+        },
+        "17:WaterTankLevel": {
+            "title": "WaterTankLevel",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1070",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:WaterTankLevel"
+                }
+            ]
+        },
+        "17:MilkTankLevel": {
+            "title": "MilkTankLevel",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1073",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:MilkTankLevel"
+                }
+            ],
+            "observable": true
+        },
+        "17:ServedCoffeeCount": {
+            "title": "ServedCoffeeCount",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1076",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:ServedCoffeeCount"
+                }
+            ]
+        },
+        "17:HeaterStatus": {
+            "title": "HeaterStatus",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1079",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:HeaterStatus"
+                }
+            ],
+            "observable": true
+        },
+        "17:PumpStatus": {
+            "title": "PumpStatus",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1080",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:PumpStatus"
+                }
+            ],
+            "observable": true
+        },
+        "17:ValveStatus": {
+            "title": "ValveStatus",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1081",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:ValveStatus"
+                }
+            ],
+            "observable": true
+        },
+        "17:GrinderStatus": {
+            "title": "GrinderStatus",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1082",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:GrinderStatus"
+                }
+            ],
+            "observable": true
+        },
+        "17:GrindingDuration": {
+            "title": "GrindingDuration",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1053"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1083",
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:Parameters/17:GrindingDuration"
+                }
+            ]
+        },
+        "7:BeverageSize": {
+            "title": "BeverageSize",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1225",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:BeverageSize"
+                }
+            ],
+            "observable": true
+        },
+        "7:BeverageSML": {
+            "title": "BeverageSML",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1228",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:BeverageSML"
+                }
+            ],
+            "observable": true
+        },
+        "7:CoffeeType": {
+            "title": "CoffeeType",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1229",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:CoffeeType"
+                }
+            ],
+            "observable": true
+        },
+        "7:Container": {
+            "title": "Container",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1231",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:Container"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "7:FoamAmount": {
+            "title": "FoamAmount",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1233",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:FoamAmount"
+                }
+            ],
+            "observable": true
+        },
+        "7:GroundsAmount": {
+            "title": "GroundsAmount",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1236",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:GroundsAmount"
+                }
+            ],
+            "observable": true
+        },
+        "7:GroundsWater": {
+            "title": "GroundsWater",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1239",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:GroundsWater"
+                }
+            ],
+            "observable": true
+        },
+        "7:MilkAmount": {
+            "title": "MilkAmount",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1242",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:MilkAmount"
+                }
+            ],
+            "observable": true
+        },
+        "7:PowderAmount": {
+            "title": "PowderAmount",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1245",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:PowderAmount"
+                }
+            ],
+            "observable": true
+        },
+        "7:RcpType": {
+            "title": "RcpType",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1224"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1248",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/17:Recipes/1:Latte-Large/7:RcpType"
+                }
+            ],
+            "observable": true
+        },
+        "7:BatchId": {
+            "title": "BatchId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1102"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1103",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:BatchInformation/7:BatchId"
+                }
+            ],
+            "observable": true
+        },
+        "7:OrderId": {
+            "title": "OrderId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1102"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1104",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:BatchInformation/7:OrderId"
+                }
+            ],
+            "observable": true
+        },
+        "7:SystemTime": {
+            "title": "SystemTime",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1102"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1105",
+                    "op": [
+                        "readproperty",
+                        "writeproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:BatchInformation/7:SystemTime"
+                }
+            ],
+            "observable": true
+        },
+        "2:DeviceClass": {
+            "title": "DeviceClass",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1106",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceClass"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "7:DeviceLocationName": {
+            "title": "DeviceLocationName",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1107",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:DeviceLocationName"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ActiveState": {
+            "title": "ActiveState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1394",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ActiveState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "CurrentState": {
+            "title": "CurrentState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1546"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1547",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:ErrorConditions/17:MilkTankLevelAlarm/LimitState/CurrentState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "HighHighLimit": {
+            "title": "HighHighLimit",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1538"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1549",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:ErrorConditions/17:MilkTankLevelAlarm/HighHighLimit"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "HighLimit": {
+            "title": "HighLimit",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1538"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1550",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:ErrorConditions/17:MilkTankLevelAlarm/HighLimit"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "LowLimit": {
+            "title": "LowLimit",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1538"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1551",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:ErrorConditions/17:MilkTankLevelAlarm/LowLimit"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "LowLowLimit": {
+            "title": "LowLowLimit",
+            "type": "number",
+            "uav:componentOf": [
+                "ns=1;i=1538"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1552",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/7:ErrorConditions/17:MilkTankLevelAlarm/LowLowLimit"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "EnabledState": {
+            "title": "EnabledState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1387",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/EnabledState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "InputNode": {
+            "title": "InputNode",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1396",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/InputNode"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "SuppressedOrShelved": {
+            "title": "SuppressedOrShelved",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1397",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/SuppressedOrShelved"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "AckedState": {
+            "title": "AckedState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1398",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/AckedState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ConditionClassId": {
+            "title": "ConditionClassId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1406",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ConditionClassId"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ConditionClassName": {
+            "title": "ConditionClassName",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1407",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ConditionClassName"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ConditionName": {
+            "title": "ConditionName",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1408",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ConditionName"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "BranchId": {
+            "title": "BranchId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1409",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/BranchId"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Retain": {
+            "title": "Retain",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1410",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Retain"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Quality": {
+            "title": "Quality",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1411",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Quality"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "LastSeverity": {
+            "title": "LastSeverity",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1413",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/LastSeverity"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Comment": {
+            "title": "Comment",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1415",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Comment"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ClientUserId": {
+            "title": "ClientUserId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1417",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ClientUserId"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "EventId": {
+            "title": "EventId",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1422",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/EventId"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "EventType": {
+            "title": "EventType",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1423",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/EventType"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "SourceNode": {
+            "title": "SourceNode",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1424",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/SourceNode"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "SourceName": {
+            "title": "SourceName",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1425",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/SourceName"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Time": {
+            "title": "Time",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1426",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Time"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ReceiveTime": {
+            "title": "ReceiveTime",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1427",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ReceiveTime"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Message": {
+            "title": "Message",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1428",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Message"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "Severity": {
+            "title": "Severity",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1429",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/Severity"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "ConfirmedState": {
+            "title": "ConfirmedState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1400",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/ConfirmedState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:Manufacturer": {
+            "title": "Manufacturer",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1110",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:Manufacturer"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:Model": {
+            "title": "Model",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1111",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:Model"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:HardwareRevision": {
+            "title": "HardwareRevision",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1112",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:HardwareRevision"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:SoftwareRevision": {
+            "title": "SoftwareRevision",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1113",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:SoftwareRevision"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:DeviceRevision": {
+            "title": "DeviceRevision",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1114",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceRevision"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:DeviceManual": {
+            "title": "DeviceManual",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1115",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceManual"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:SerialNumber": {
+            "title": "SerialNumber",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1116",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:SerialNumber"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:RevisionCounter": {
+            "title": "RevisionCounter",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1117",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:RevisionCounter"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "2:DeviceHealth": {
+            "title": "DeviceHealth",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1118",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealth"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        },
+        "NormalState": {
+            "title": "NormalState",
+            "type": "string",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1386",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "uav:browsePath": "/Root/Objects/Server/1:CoffeeMachineA/2:DeviceHealthAlarms/1:OffSpecAlarm/NormalState"
+                }
+            ],
+            "readOnly": true,
+            "observable": true
+        }
+    },
+    "actions": {
+        "17:Start": {
+            "title": "Start",
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1085",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "17:Stop": {
+            "title": "Stop",
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1088",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "17:MakeCoffee": {
+            "title": "MakeCoffee",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "RecipeName": {
+                        "type": "string",
+                        "description": "the CoffeeType to brew"
+                    }
+                }
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "Success": {
+                        "type": "string"
+                    },
+                    "Error": {
+                        "type": "string"
+                    }
+                }
+            },
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1091",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "17:Cancel": {
+            "title": "Cancel",
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1094",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "17:FillTank": {
+            "title": "FillTank",
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1097",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "17:FillCoffeeBean": {
+            "title": "FillCoffeeBean",
+            "uav:componentOf": [
+                "ns=1;i=1084"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1100",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "Acknowledge": {
+            "title": "Acknowledge",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "EventId": {
+                        "type": "string",
+                        "description": "The identifier for the event to comment."
+                    },
+                    "Comment": {
+                        "type": "string",
+                        "description": "The comment to add to the condition."
+                    }
+                }
+            },
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1402",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "Disable": {
+            "title": "Disable",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1418",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "Enable": {
+            "title": "Enable",
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1419",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "AddComment": {
+            "title": "AddComment",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "EventId": {
+                        "type": "string",
+                        "description": "The identifier for the event to comment."
+                    },
+                    "Comment": {
+                        "type": "string",
+                        "description": "The comment to add to the condition."
+                    }
+                }
+            },
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1420",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "Confirm": {
+            "title": "Confirm",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "EventId": {
+                        "type": "string",
+                        "description": "The identifier for the event to comment."
+                    },
+                    "Comment": {
+                        "type": "string",
+                        "description": "The comment to add to the condition."
+                    }
+                }
+            },
+            "uav:componentOf": [
+                "ns=1;i=1385"
+            ],
+            "forms": [
+                {
+                    "href": "/?id=ns=1;i=1404",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        }
+    }
+}
