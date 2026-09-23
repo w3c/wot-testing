@@ -8,14 +8,14 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning
 
 ## Expected demo participants
 
-tbc
+See the list here https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#Participants
 
 ## PlugFest Room
 PlugFest and breakout will take place in room xxx (tbc)
 
 ## What you should bring with you 
 
-* Extension cable and multiple socket outlet
+* AC extension cable and multiple socket outlet
 * If needed, power travel adapter
 * Ethernet cable
 * LAN Switch (if possible)
@@ -24,11 +24,55 @@ PlugFest and breakout will take place in room xxx (tbc)
 
 ## Proposed topics for PlugFests
 
-### Topic 1
+### Media Streaming: Showcasing the state of the art and coming up with the proposal for integration with WoT, e.g., a binding, new vocabulary terms etc.
 
-### ...
+* Main driver: Kunihiko Toumura
+* Inviting the relevant people: To be extended by Kaz
 
- 
+### Security:
+
+* OAuth2 in ECHONET. Basic demonstration plus understanding what is missing in the standards to use the existing authenticated sessions in WoT Consumer applications
+* Main driver: Kazuyuki Ashimura
+  
+### Common Definitions:
+
+* Sentron PAC Energy Meter. Showing common definitions usage
+* Main driver: Ege Korkan
+  
+### Data Mapping
+
+* examples from the analysis
+* ECHONET Lite Web API (if they can join). Or a new binding. How to handle the layering of restricted HTTP Binding for ECHONET Lite Web API? Depends on their participation in the Plugfest with their devices
+* Kaz will check with ECHONET and @@@
+* Main driver: Christian Glomb
+  
+### LoRaWAN Binding
+
+* Ege and Erich to bring the devices to test interoperability
+* Demonstrating the toolchain to generate the decoders and automation of the onboarding process to Things Network and ChirpStack
+* Main driver: Erich and Ege
+  
+### Modbus Binding
+
+* SentronPAC from above to be reused
+* Main driver: Ege
+  
+### Ethernet/IP Binding
+
+* TBD based on the progress of the binding
+* Main driver: Erich
+  
+### TD and AI Agents
+
+* Showing scenarios where TD is used to bridge AI Agents into the physical world
+* Main driver: Sebastian?
+        
+### OPC UA Binding
+* Version 1.0 of the binding tested with node-wot
+* evaluating the latest draft of version 1.1
+* Main driver: Sebastian
+
+
  
 
 ## Demo devices
