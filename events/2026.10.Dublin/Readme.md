@@ -72,7 +72,9 @@ PlugFest and breakout will take place in room xxx (tbc)
 * evaluating the latest draft of version 1.1
 * Main driver: Sebastian
 
-
+### Matter Binding
+* combining Matter Binding and ECHONET Lite
+* Main driver: Kaz (ask to get support from the University)
  
 
 ## Demo devices
