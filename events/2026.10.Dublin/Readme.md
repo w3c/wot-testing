@@ -65,7 +65,7 @@ PlugFest and breakout will take place in room xxx (tbc)
 ### TD and AI Agents
 
 * Showing scenarios where TD is used to bridge AI Agents into the physical world
-* Main driver: Sebastian?
+* Main driver: Sebastian / Mahda?
         
 ### OPC UA Binding
 * Version 1.0 of the binding tested with node-wot
