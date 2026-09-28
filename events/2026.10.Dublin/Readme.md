@@ -8,7 +8,7 @@ https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning
 
 ## Expected demo participants
 
-See the list here https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#Participants
+See the list here https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#Participants_2
 
 ## PlugFest Room
 PlugFest and breakout will take place in room xxx (tbc)
