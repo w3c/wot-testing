@@ -1,0 +1,599 @@
+{
+  "@type": ["brick:Electricity_Meter"],
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+    "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",    
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/",
+      "qudt:unit": { "@type": "@id" },
+      "qudt:hasQuantityKind": { "@type": "@id" }
+    }
+  ],
+  "id": "b1034ddb-e09f-4275-949e-575d8f6c333d",
+  "security":"nosec",
+  "securityDefinitions":{
+    "nosec":{
+      "scheme":"nosec"
+    }
+  },
+  "schema:author": {
+    "name": "Siemens"
+  },
+  "schema:manufacturer": "Siemens",
+  "schema:mpn": "SENTRON 7KM PAC4200",
+  "title": "SIEMENS - SENTRON 7KM PAC4200",
+  "description": "measuring device 5A, Modbus TCP",
+  "base": "modbus+tcp://192.168.100.110:502/1",
+  "properties": {
+    "voltage-l1-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c39be484-4988-488e-bc81-d6d6692b6673",
+      "title": "Voltage L1-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/1",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "voltage-l2-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "d95bc58e-ec69-4de8-bd9d-3ae9ad72a232",
+      "title": "Voltage L2-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/3",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "voltage-l3-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "1755c08b-9f05-4c23-96df-049620fcd4c1",
+      "title": "Voltage L3-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/5",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "voltage-l1-l2": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "f99df171-ad26-40cd-a05e-2bb21e43aa65",
+      "title": "Voltage L1-L2",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/7",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "voltage-l2-l3": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "6406515a-ebcb-4d3c-8055-51085d20a645",
+      "title": "Voltage L2-L3",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/9",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "voltage-l3-l1": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c0d6fa24-dbd9-4e76-ba1f-054db585fa73",
+      "title": "Voltage L3-L1",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/11",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "current-l1": {
+      "@type": "brick:Current",
+      "id": "66a4f16d-95a7-40a0-8272-ba63c4e1bd30",
+      "title": "Current L1",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/13",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "current-l2": {
+      "@type": "brick:Current",
+      "id": "6919cc7f-83c6-46d9-bbc0-f3f1694e3bea",
+      "title": "Current L2",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/15",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "current-l3": {
+      "@type": "brick:Current",
+      "id": "bcf16bae-637c-4fc2-94af-93725b64f251",
+      "title": "Current L3",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/17",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "apparent-power-l1": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "11d54b26-a120-48ae-9d26-3ac339075fa9",
+      "title": "Apparent power L1",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/19",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "apparent-power-l2": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "15294689-0ecd-4d01-999c-dea243d823b7",
+      "title": "Apparent power L2",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/21",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "apparent-power-l3": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "f7344355-b201-42f3-9f52-54f91935a009",
+      "title": "Apparent power L3",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/23",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "active-power-l1": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "7274a765-6d14-4b15-b959-70c28e7f90d4",
+      "title": "Active power L1",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/25",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "active-power-l2": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "8d6695b7-9478-4e52-b4c2-6f1609ea4620",
+      "title": "Active power L2",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/27",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "active-power-l3": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "e44578ed-4ec0-4759-bc5b-33a17579b6d1",
+      "title": "Active power L3",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/29",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "reactive-power-l1-qn": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "8fd38174-2510-4cfd-a06c-3f05b01e435a",
+      "title": "Reactive Power L1 (Qn)",
+      "unit": "qunit:V-A_Reactive",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/31",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "reactive-power-l2-qn": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "31a4c1d1-5e7b-40b1-a5a5-bbb6e62fba13",
+      "title": "Reactive power L2 (Qn)",
+      "unit": "qunit:V-A_Reactive",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/33",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "reactive-power-l3-qn": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "c4ff6837-4d16-424f-b218-4a172820e9cd",
+      "title": "Reactive power L3 (Qn)",
+      "unit": "qunit:V-A_Reactive",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/35",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "power-factor-l1": {
+      "id": "7cb11e72-8147-4cb2-8509-df0b0effd129",
+      "title": "Power factor L1",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/37",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "power-factor-l2": {
+      "id": "41c704e3-fe35-4331-87fa-0528b2e1a3ad",
+      "title": "Power factor L2",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/39",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "power-factor-l3": {
+      "id": "1de1933b-3c2e-4d85-a7b0-ebe879ef64c2",
+      "title": "Power factor L3",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/41",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "thd-voltage-l1-l2": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "e4b732bf-1687-4bd1-8914-f4270f23202c",
+      "title": "THD voltage L1-L2",
+      "unit": "qunit:PERCENT",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/43",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "thd-voltage-l2-l3": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "e515f9d6-aec7-4d4c-aa65-c48d07d64c88",
+      "title": "THD voltage L2-L3",
+      "unit": "qunit:PERCENT",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/45",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "thd-voltage-l3-l1": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c57f7b71-dbfe-4df2-b680-1febbe9a9190",
+      "title": "THD voltage L3-L1",
+      "unit": "qunit:PERCENT",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/47",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "line-frequency": {
+      "@type": "brick:Frequency",
+      "id": "6204d20f-c7b0-4b60-b3c7-b77f87798638",
+      "title": "Line Frequency",
+      "unit": "qunit:HZ",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/55",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "3-phase-average-voltage-l-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "091430b1-05c1-4024-9625-27a969af3e93",
+      "title": "3-phase average voltage L-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/57",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "3-phase-average-voltage-l-l": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c766550f-7905-461e-9ea2-d0816a7ac765",
+      "title": "3-phase average voltage L-L",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/59",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "3-phase-average-current-l-l": {
+      "@type": "brick:Current",
+      "id": "189e950f-df4a-4f0d-8cec-0ef7e7f54f64",
+      "title": "3-Phase Average Current L-L",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/61",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "total-apparent-power": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "22efb72c-971e-4b71-864a-7a722199a06a",
+      "title": "Total Apparent Power",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/63",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "total-active-power": {
+      "id": "22a89901-fac6-4c9a-a16a-086a7ea39581",
+      "title": "Total Active Power",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/65",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "total-reactive-power-qn": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "17b68325-f0d8-44af-bece-9ccd4fc87c7e",
+      "title": "Total Reactive Power (Qn)",
+      "unit": "qunit:V-A_Reactive",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/67",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "total-power-factor": {
+      "id": "91a3d294-0eb1-40b9-8789-4eec08f099a1",
+      "title": "Total Power Factor",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/69",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "amplitude-unbalance-voltage": {
+      "id": "1d4ec53a-51d2-443c-be63-5d81cdf709e0",
+      "title": "Amplitude Unbalance Voltage",
+      "unit": "qunit:PERCENT",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/71",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    },
+    "amplitude-unbalance-current": {
+      "id": "e0272254-af84-40ce-9585-0e62c70ee00f",
+      "title": "Amplitude Unbalance Current",
+      "unit": "qunit:PERCENT",
+      "type": "number",
+      "forms": [
+        {
+          "op": "readproperty",
+          "href":"/73",
+          "modv:dataType": "float32",
+          "modv:endianness": "big_abcd",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        }
+      ]
+    }
+ }
+}
