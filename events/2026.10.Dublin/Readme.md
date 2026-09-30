@@ -112,8 +112,8 @@ Combining Matter Binding and ECHONET Lite
 
 | Company   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
 |-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
-| Siemens   |   Thing: SentronPAC4220 Energy Meter | TBD |Ethernet cable                                                   |                          | Ege Korkan         |
-| ...       |   ...                               | ...                                                               |                          |                    |
+| Siemens   |   Thing: SentronPAC4220 Energy Meter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/sentronpac4220.td.json) |Ethernet cable                                                   |                          | Ege Korkan         |
+| ...       |   ...                               | ...  | ...                                                             |                          |                    |
 
 
 ## List of Consumers that will be available for the PlugFest
