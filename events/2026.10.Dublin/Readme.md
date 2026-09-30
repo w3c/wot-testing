@@ -19,7 +19,9 @@
  
 ## Demo Scenarios
 
-To be filled asap
+To be filled asap. Something that can be understood by non-WoT experts.
+
+1. Demo with global VMT tags and devices. Integrating Rob Smith's demo with WoT. To do: name and description, and collaborating devices.
 
 ## Technical Topics for PlugFests
 
@@ -31,24 +33,39 @@ Showcasing the state of the art and coming up with the proposal for integration 
 
 * Main driver: Kunihiko Toumura
 * Inviting the relevant people: To be extended by Kaz
+* Things: Smartphone, RPi with a webcam (Pantilt HAT to be checked by Ege)
+* Further information on the analysis: https://github.com/w3c/wot-thing-description/blob/main/planning/work-items/analysis/analysis-media-streaming.md
+* MediaMTX to support various streaming protocols and represent those capabilities in TD.
+* Showing privacy awareness at the same time
 
-### Security:
+### Media Metadata with WoT
 
-OAuth2 in ECHONET. Basic demonstration plus understanding what is missing in the standards to use the existing authenticated sessions in WoT Consumer applications
+Geolocation and other metadata related to the media.
+* Relating to the global VMT tags and including TDs in there. WebVMT is a container format so TDs would fit in there.
+* Showing separate access rights (to video and metadata) to increase privacy, accessibility.
+
+### Security
+
+OAuth2 in ECHONET. Basic demonstration plus understanding what is missing in the standards to use the existing authenticated sessions in WoT Consumer applications.
 
 * Main driver: Kazuyuki Ashimura
+* Tentative based on ECHONET participation
+* Things: TBD
   
-### Common Definitions:
+### Common Definitions
 
 Showing common definitions usage with Sentron PAC Energy Meter.
+
 * Main driver: Ege Korkan
+* Things: TBD
   
 ### Data Mapping
 
-* Examples from the analysis
+Examples from the analysis
 * ECHONET Lite Web API (if they can join). Or a new binding. How to handle the layering of restricted HTTP Binding for ECHONET Lite Web API? Depends on their participation in the Plugfest with their devices
 * Kaz will check with ECHONET and @@@
 * Main driver: Christian Glomb
+* Things: SentronPAC, EtherNet/IP device, LoRaWAN devices
 
 ### TD and AI Agents
 
@@ -61,9 +78,11 @@ Main goal for all bindings is to bring devices and test interoperability.
 
 #### LoRaWAN Binding
 
-Ege and Erich (and Warren?) to bring the devices to test interoperability between Consumer implementations.
+Ege, Erich, and Warren to bring the devices to test interoperability between Consumer implementations.
 * Demonstrating the toolchain to generate the decoders and automation of the onboarding process to Things Network and ChirpStack
 * Main driver: Erich and Ege
+* Things: TBD
+* Consumers: TBD
   
 #### Modbus Binding
 
@@ -78,6 +97,7 @@ Demonstrating interoperability between Consumer implementations. TBD based on th
 #### OPC UA Binding
 
 Version 1.0 of the binding tested with node-wot
+
 * evaluating the latest draft of version 1.1
 * Main driver: Sebastian
 
@@ -85,12 +105,14 @@ Version 1.0 of the binding tested with node-wot
 
 Combining Matter Binding and ECHONET Lite
 * Main driver: Kaz (ask to get support from the University)
+* Tentative based on ECHONET participation
 
 ## Demo devices
 
 
-| Company   | Things/Devices/System/Tools         | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
-|-----------|-------------------------------------|-------------------------------------------------------------------|--------------------------|--------------------|
+| Company   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
+|-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
+| Siemens   |   Thing: SentronPAC4220 Energy Meter | TBD |Ethernet cable                                                   |                          | Ege Korkan         |
 | ...       |   ...                               | ...                                                               |                          |                    |
 
 
