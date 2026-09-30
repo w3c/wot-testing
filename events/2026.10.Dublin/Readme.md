@@ -70,7 +70,8 @@ Examples from the analysis
 ### TD and AI Agents
 
 Showing scenarios where TD is used to bridge AI Agents into the physical world
-* Main driver: Sebastian / Mahda?
+
+* Main driver: Mahda
 
 ### Bindings
 
