@@ -17,7 +17,7 @@
 * If possible, WiFi extender or small WLAN router with WiFi to LAN option
   - Siemens should be bringing one already
  
-## Demo Scenarios
+## Demo Scenarios (can be shown during breakout session)
 
 To be filled asap. Something that can be understood by non-WoT experts.
 
