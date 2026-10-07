@@ -115,9 +115,10 @@ Combining Matter Binding and ECHONET Lite
 |-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
 | Siemens   |   Thing: SentronPAC4220 Energy Meter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/sentronpac4220.td.json) |Ethernet cable                                                   |                          | Ege Korkan         |
 | Siemens   |   Raspberry Pi with PanTilt HAT |   | Wifi / Ethernet cable    |                          | Ege Korkan        |
-| Microsoft   |   Rockwell PLC |   |  Ethernet cable     |  tbd    | Erich Barnstedt      |
-| Microsoft   |   Siemens S7 PLC |   |  Ethernet cable   |    tbd                      | Erich Barnstedt     |
-| Microsoft   |   Industry Raspberry Pi |   |  Ethernet cable    |      tbd                    | Erich Barnstedt      |
+| Microsoft   |   Rockwell PLC | tbd  |  Ethernet cable     |  tbd    | Erich Barnstedt      |
+| Microsoft   |   Siemens S7 PLC | tbd  |  Ethernet cable   |    tbd                      | Erich Barnstedt     |
+| Microsoft   |   Industry Raspberry Pi | tbd  |  Ethernet cable    |      tbd                    | Erich Barnstedt      |
+| Hitachi   |   Raspberry Pi + Webcam (connected via USB)| tbd  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | ...       |   ...                               | ...  | ...                                                             |      ...                    | ...                   |
 
 
