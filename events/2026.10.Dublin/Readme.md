@@ -114,7 +114,11 @@ Combining Matter Binding and ECHONET Lite
 | Company   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
 |-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
 | Siemens   |   Thing: SentronPAC4220 Energy Meter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/sentronpac4220.td.json) |Ethernet cable                                                   |                          | Ege Korkan         |
-| ...       |   ...                               | ...  | ...                                                             |                          |                    |
+| Siemens   |   Raspberry Pi with PanTilt HAT |   | Wifi / Ethernet cable    |                          | Ege Korkan        |
+| Microsoft   |   Rockwell PLC |   |  Ethernet cable     |  tbd    | Erich Barnstedt      |
+| Microsoft   |   Siemens S7 PLC |   |  Ethernet cable   |    tbd                      | Erich Barnstedt     |
+| Microsoft   |   Industry Raspberry Pi |   |  Ethernet cable    |      tbd                    | Erich Barnstedt      |
+| ...       |   ...                               | ...  | ...                                                             |      ...                    | ...                   |
 
 
 ## List of Consumers that will be available for the PlugFest
