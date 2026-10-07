@@ -45,6 +45,7 @@ Showcasing the state of the art and coming up with the proposal for integration 
 Geolocation and other metadata related to the media.
 
 * Main driver: Rob Smith
+* Contributors: Ege
 * Relating to the global VMT tags and including TDs in there. WebVMT is a container format so TDs would fit in there.
 * Showing separate access rights (to video and metadata) to increase privacy, accessibility.
 
@@ -53,6 +54,7 @@ Geolocation and other metadata related to the media.
 OAuth2 in ECHONET. Basic demonstration plus understanding what is missing in the standards to use the existing authenticated sessions in WoT Consumer applications.
 
 * Main driver: Kazuyuki Ashimura
+* Contributors: tbd
 * Tentative based on ECHONET participation
 * Things: TBD
   
@@ -61,14 +63,16 @@ OAuth2 in ECHONET. Basic demonstration plus understanding what is missing in the
 Showing common definitions usage with Sentron PAC Energy Meter.
 
 * Main driver: Ege Korkan
+* Contributors: Sebastian
 * Things: TBD
   
 ### Data Mapping
 
 Examples from the analysis
+* Main driver: Christian Glomb
+* Contributors: tbd
 * ECHONET Lite Web API (if they can join). Or a new binding. How to handle the layering of restricted HTTP Binding for ECHONET Lite Web API? Depends on their participation in the Plugfest with their devices
 * Kaz will check with ECHONET and @@@
-* Main driver: Christian Glomb
 * Things: SentronPAC, EtherNet/IP device, LoRaWAN devices
 
 ### TD and AI Agents
@@ -76,6 +80,7 @@ Examples from the analysis
 Showing scenarios where TD is used to bridge AI Agents into the physical world
 
 * Main driver: Mahda
+* Contributors: Sebastian
 
 ### Bindings
 
@@ -84,6 +89,8 @@ Main goal for all bindings is to bring devices and test interoperability.
 #### LoRaWAN Binding
 
 Ege, Erich, and Warren to bring the devices to test interoperability between Consumer implementations.
+* Main driver: Erich
+* Contributors: Ege, Robert Warren
 * Demonstrating the toolchain to generate the decoders and automation of the onboarding process to Things Network and ChirpStack
 * Main driver: Erich and Ege
 * Things: TBD
@@ -101,15 +108,17 @@ Demonstrating interoperability between Consumer implementations. TBD based on th
      
 #### OPC UA Binding
 
-Version 1.0 of the binding tested with node-wot
+Version 1.0 of the binding tested with node-wot. Test some features of the version 1.1.
 
-* evaluating the latest draft of version 1.1
 * Main driver: Sebastian
+* Contributors: Erich
+* evaluating the latest draft of version 1.1
 
 #### Matter Binding
 
 Combining Matter Binding and ECHONET Lite
 * Main driver: Kaz (ask to get support from the University)
+* Contributors: tbd
 * Tentative based on ECHONET participation
 
 ## Demo devices
