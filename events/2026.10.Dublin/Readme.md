@@ -33,6 +33,7 @@ Showcasing the state of the art and coming up with the proposal for integration 
 
 * Main driver: Kunihiko Toumura
 * Contributors: Kaz, Yohei, Noriaki
+* Short description: tbd
 * Inviting the relevant people: To be extended by Kaz
 * Things: Smartphone, RPi with a webcam (Pantilt HAT to be checked by Ege)
 * Further information on the analysis: https://github.com/w3c/wot-thing-description/blob/main/planning/work-items/analysis/analysis-media-streaming.md
