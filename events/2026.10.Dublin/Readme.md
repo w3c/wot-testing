@@ -42,6 +42,8 @@ Showcasing the state of the art and coming up with the proposal for integration 
 ### Media Metadata with WoT
 
 Geolocation and other metadata related to the media.
+
+* Main driver: Rob Smith
 * Relating to the global VMT tags and including TDs in there. WebVMT is a container format so TDs would fit in there.
 * Showing separate access rights (to video and metadata) to increase privacy, accessibility.
 
