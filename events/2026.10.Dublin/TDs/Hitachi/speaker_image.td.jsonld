@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "wotmedia": "https://example.org/wot/media-streaming-provisional/v0.1#",
+      "streamcap": "https://example.org/wot/stream-capabilities-provisional/v0.1#",
+      "wotdisplay": "https://example.org/wot/display-provisional/v0.1#"
+    }
+  ],
+  "id": "urn:uuid:a090667b-ab3b-4610-8ff0-98880ff7f5f0",
+  "title": "Speaker + Subtitle",
+  "description": "CoreMP135 running Debian 12 (bookworm). Accepts an audio stream over WHIP and plays it on the built-in 1 W speaker via ffmpeg/ALSA. Also shows images on a 2.0-inch IPS panel.",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "wotdisplay:displays": [
+    {
+      "wotdisplay:name": "panel",
+      "wotdisplay:widthPx": 320,
+      "wotdisplay:heightPx": 240,
+      "wotdisplay:widthMm": 40.6,
+      "wotdisplay:heightMm": 30.5
+    }
+  ],
+  "properties": {
+    "audioSink": {
+      "@type": "wotmedia:Streaming",
+      "title": "Speaker audio input",
+      "description": "Send a live audio stream here over WHIP; it is played on the built-in speaker.",
+      "writeOnly": true,
+      "wotmedia:medium": "wotmedia:Audio",
+      "wotmedia:streamId": "spk",
+      "streamcap:accepts": [
+        {
+          "streamcap:audio": {
+            "streamcap:codec": "opus",
+            "streamcap:sampleRate": 48000,
+            "streamcap:numberOfChannels": 2
+          }
+        },
+        {
+          "streamcap:audio": {
+            "streamcap:codec": "ulaw",
+            "streamcap:sampleRate": 8000,
+            "streamcap:numberOfChannels": 1
+          }
+        }
+      ],
+      "forms": [
+        {
+          "op": "writeproperty",
+          "href": "http://kt-mp135-2.local:8889/audio/whip",
+          "contentType": "application/sdp",
+          "subprotocol": "wotmedia:whip",
+          "htv:methodName": "POST",
+          "response": {
+            "contentType": "application/sdp"
+          },
+          "streamcap:packaging": "streamcap:RTP",
+          "wotmedia:sessionResource": "wotmedia:FromLocationHeader"
+        },
+        {
+          "op": "writeproperty",
+          "href": "moqt://kt-mp135-2.local:8892/audio/",
+          "streamcap:packaging": "streamcap:LOC",
+          "wotmedia:certificateHashes": [
+            {
+              "alg": "sha-256",
+              "value": "40fe2ee6516b18e87cad0f18865b4026f003830f7e33f04d87f82084fc471a7a"
+            }
+          ]
+        }
+      ]
+    },
+    "image": {
+      "title": "image on the panel",
+      "description": "Write one JPEG; it replaces whatever is on the IPS panel.",
+      "writeOnly": true,
+      "wotdisplay:display": "panel",
+      "forms": [
+        {
+          "op": "writeproperty",
+          "href": "http://kt-mp135-2.local:8080/subtitle",
+          "contentType": "image/jpeg",
+          "htv:methodName": "POST",
+          "streamcap:receiveToPresentMeanMs": 80,
+          "streamcap:receiveToPresentMaxMs": 150
+        }
+      ]
+    }
+  },
+  "actions": {
+    "endAudioSession": {
+      "@type": "wotmedia:StreamControl",
+      "title": "End the inbound audio session",
+      "safe": false,
+      "idempotent": true,
+      "wotmedia:appliesToStream": "spk",
+      "uriVariables": {
+        "sessionId": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://kt-mp135-2.local:8889/audio/whip/{sessionId}",
+          "contentType": "application/json",
+          "subprotocol": "wotmedia:whip",
+          "htv:methodName": "DELETE",
+          "wotmedia:streamOp": "wotmedia:stopStream",
+          "wotmedia:appliesToStream": "spk",
+          "wotmedia:sessionResource": "wotmedia:FromLocationHeader"
+        }
+      ]
+    }
+  }
+}

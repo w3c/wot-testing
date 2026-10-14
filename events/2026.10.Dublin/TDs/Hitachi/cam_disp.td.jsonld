@@ -1,0 +1,157 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "wotmedia": "https://example.org/wot/media-streaming-provisional/v0.1#",
+      "streamcap": "https://example.org/wot/stream-capabilities-provisional/v0.1#",
+      "wotdisplay": "https://example.org/wot/display-provisional/v0.1#"
+    }
+  ],
+  "id": "urn:uuid:e25622b2-c0d2-4b32-b38a-764fdabeda4e",
+  "title": "Camera + Display",
+  "description": "Raspberry Pi 4B driving a 5-inch 800x480 HDMI panel with a built-in speaker. ",
+  "securityDefinitions": {
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "wotdisplay:displays": [
+    {
+      "wotdisplay:name": "panel",
+      "wotdisplay:widthPx": 800,
+      "wotdisplay:heightPx": 480,
+      "wotdisplay:widthMm": 110,
+      "wotdisplay:heightMm": 66
+    }
+  ],
+  "properties": {
+    "avSink": {
+      "@type": "wotmedia:Streaming",
+      "title": "Combined audio + video input",
+      "description": "Send one stream carrying both a video track and an audio track. Because they share a timeline, the receiver -- not the Consumer -- is responsible for keeping them in sync.",
+      "writeOnly": true,
+      "wotmedia:medium": "wotmedia:AudioVideo",
+      "wotmedia:streamId": "display",
+      "wotdisplay:display": "panel",
+      "streamcap:accepts": [
+        {
+          "streamcap:video": {
+            "streamcap:codec": "avc1.42E01F"
+          },
+          "streamcap:audio": {
+            "streamcap:codec": "opus",
+            "streamcap:sampleRate": 48000,
+            "streamcap:numberOfChannels": 2
+          }
+        }
+      ],
+      "forms": [
+        {
+          "op": "writeproperty",
+          "href": "http://emitter.local:8889/display/whip",
+          "contentType": "application/sdp",
+          "subprotocol": "wotmedia:whip",
+          "htv:methodName": "POST",
+          "response": {
+            "contentType": "application/sdp"
+          },
+          "streamcap:packaging": "streamcap:RTP",
+          "streamcap:receiveToPresentMeanMs": 260,
+          "streamcap:receiveToPresentMaxMs": 300,
+          "wotmedia:sessionResource": "wotmedia:FromLocationHeader"
+        },
+        {
+          "op": "writeproperty",
+          "href": "moqt://emitter.local:8892/display/",
+          "streamcap:packaging": "streamcap:LOC",
+          "streamcap:receiveToPresentMeanMs": 290,
+          "streamcap:receiveToPresentMaxMs": 300
+        }
+      ]
+    },
+    "videoStream": {
+      "@type": "wotmedia:Streaming",
+      "title": "Live video stream (only while a camera is plugged in)",
+      "description": "Present only while a USB webcam is attached to this Thing. Relayed by the local MediaMTX.",
+      "readOnly": true,
+      "observable": false,
+      "wotmedia:medium": "wotmedia:Video",
+      "wotmedia:streamId": "cam",
+      "streamcap:codec": "avc1.640028",
+      "streamcap:width": 1280,
+      "streamcap:height": 720,
+      "streamcap:framerate": 30,
+      "streamcap:bitrate": 2000000,
+      "streamcap:keyFrameIntervalFrames": 30,
+      "forms": [
+        {
+          "op": "readproperty",
+          "href": "http://emitter.local:8889/cam/whep",
+          "contentType": "application/sdp",
+          "subprotocol": "wotmedia:whep",
+          "htv:methodName": "POST",
+          "response": {
+            "contentType": "application/sdp"
+          },
+          "streamcap:packaging": "streamcap:RTP",
+          "streamcap:captureToSendMeanMs": 180,
+          "streamcap:captureToSendMaxMs": 210,
+          "wotmedia:sessionResource": "wotmedia:FromLocationHeader"
+        },
+        {
+          "op": "readproperty",
+          "href": "http://emitter.local:8888/cam/index.m3u8",
+          "contentType": "application/vnd.apple.mpegurl",
+          "htv:methodName": "GET",
+          "streamcap:packaging": "streamcap:FMP4",
+          "streamcap:captureToSendMeanMs": 340,
+          "streamcap:captureToSendMaxMs": 600
+        },
+        {
+          "op": "readproperty",
+          "href": "moqt://emitter.local:8892/cam/",
+          "streamcap:packaging": "streamcap:LOC",
+          "streamcap:captureToSendMeanMs": 200,
+          "streamcap:captureToSendMaxMs": 240
+        },
+        {
+          "op": "readproperty",
+          "href": "rtsp://emitter.local:8554/cam",
+          "contentType": "application/sdp",
+          "streamcap:packaging": "streamcap:RTP",
+          "streamcap:captureToSendMeanMs": 180,
+          "streamcap:captureToSendMaxMs": 210
+        }
+      ]
+    }
+  },
+  "actions": {
+    "endStreamSession": {
+      "@type": "wotmedia:StreamControl",
+      "title": "End an established stream session",
+      "description": "Releases the per-session resource created when a WHEP session on videoStream was established.",
+      "safe": false,
+      "idempotent": true,
+      "wotmedia:appliesToStream": "cam",
+      "uriVariables": {
+        "sessionId": {
+          "type": "string",
+          "description": "Opaque session identifier taken from the Location header of the WHEP POST response."
+        }
+      },
+      "forms": [
+        {
+          "op": "invokeaction",
+          "href": "http://emitter.local:8889/cam/whep/{sessionId}",
+          "contentType": "application/json",
+          "subprotocol": "wotmedia:whep",
+          "htv:methodName": "DELETE",
+          "wotmedia:streamOp": "wotmedia:stopStream",
+          "wotmedia:appliesToStream": "cam",
+          "wotmedia:sessionResource": "wotmedia:FromLocationHeader"
+        }
+      ]
+    }
+  }
+}
