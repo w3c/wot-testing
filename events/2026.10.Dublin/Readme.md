@@ -73,7 +73,7 @@ Showing common definitions usage with Sentron PAC Energy Meter.
 Examples from the analysis
 * Main driver: Christian Glomb
 * Contributors: Ege Korkan
-* Short Description: tbd
+* Short Description: Test and refine findings of data mapping analysis with real devices and a node-wot implementation.
 * ECHONET Lite Web API (if they can join). Or a new binding. How to handle the layering of restricted HTTP Binding for ECHONET Lite Web API? Depends on their participation in the Plugfest with their devices
 * Kaz will check with ECHONET and @@@
 * Things: SentronPAC, EtherNet/IP device, LoRaWAN devices
