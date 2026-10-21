@@ -146,6 +146,7 @@ Combining Matter Binding and ECHONET Lite
 | Thingweb   |   MQTT calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/mqtt-calculator.td.json) | | | |
 | Thingweb   |   CoAP calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/coap-calculator.td.json) | | | |
 | Thingweb   |   HTTP advanced coffee machine | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-advanced-coffee-machine.td.json) | | | |
+| Thingweb   |   HTTP Data Schema | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-data-schema.td.json) | | | |
 | Thingweb   |   HTTP counter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-counter.td.json) | | | |
 | Hitachi   |   USB Webcam on a Raspberry Pi | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/cam_disp.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | Hitachi   |   Speaker on an M5 Stack| [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/speaker_image.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
