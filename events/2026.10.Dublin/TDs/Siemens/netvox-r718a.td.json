@@ -1,0 +1,195 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/",
+      "qudt:unit": { "@type": "@id" },
+      "qudt:hasQuantityKind": { "@type": "@id" },
+      "knx:datapointType": { "@type": "@id" }
+    }
+  ],
+  "@type": ["Thing", "brick:Sensor_Equipment"],
+  "id": "urn:dev:netvox:r718a",
+  "title": "netvox_r718a",
+  "description": "Netvox R718A Temperature and Humidity Sensor for Low Temperature Environment.",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
+    }
+  },
+  "security": "otaa_sc",
+  "base": "lorawan://0000000000000000/{appKey}/device",
+  "lorav:devEUI": "00137a1000008bd1",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.2",
+  "schema:manufacturer": "Netvox",
+  "schema:mpn": "R718A",
+  "schema:version": "2",
+  "schema:softwareVersion": "10",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
+  "lorav:payloadLayout": "ports",
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": { "@id": "urn:example:location:TTC_fair" },
+  "brick:hasPoint": [
+    { "@id": "urn:dev:netvox:r718a#temperature" },
+    { "@id": "urn:dev:netvox:r718a#humidity" }
+  ],
+  "events": {
+    "reportType": {
+      "title": "fPort 6 report type",
+      "description": "Discriminator byte for fPort 6 uplinks. 0 = startup version report, 1 = periodic status report.",
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:fPort": 6,
+          "lorav:byteOffset": 2,
+          "lorav:wireType": "xsd:unsignedByte"
+        }
+      ]
+    },
+    "batteryVoltage": {
+      "title": "Battery voltage",
+      "description": "Battery voltage in volts (fPort 6, reportType 1). Carried in bits 0-6 of byte 3 as deci-volts; bit 7 is the low-battery flag (see lowBattery). The official codec appends a '(low battery)' string suffix when that flag is set -- not representable in this vocabulary, so it is exposed only as the separate lowBattery property.",
+      "data": {
+        "type": "number",
+        "unit": "V",
+        "qudt:unit": "qunit:V",
+        "qudt:hasQuantityKind": "quantitykind:Voltage",
+        "multipleOf": 0.1,
+        "minimum": 3.2,
+        "maximum": 3.6
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:fPort": 6,
+          "lorav:slot": 0,
+          "lorav:byteOffset": 3,
+          "lorav:wireType": "xsd:unsignedByte",
+          "lorav:bitmask": "0x7F",
+          "lorav:divisor": 10,
+          "lorav:presentWhen": {
+            "field": "reportType",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "lowBattery": {
+      "title": "Low battery flag",
+      "description": "Low-battery indicator carried in bit 7 of byte 3 (fPort 6, reportType 1); 1 = low battery.",
+      "data": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:fPort": 6,
+          "lorav:slot": 1,
+          "lorav:byteOffset": 3,
+          "lorav:wireType": "xsd:unsignedByte",
+          "lorav:bitmask": "0x80",
+          "lorav:presentWhen": {
+            "field": "reportType",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "temperature": {
+      "@id": "urn:dev:netvox:r718a#temperature",
+      "@type": "brick:Temperature_Sensor",
+      "knx:datapointType": "knx:valueTemp",
+      "title": "Temperature",
+      "description": "Measured temperature (fPort 6, reportType 1), signed big-endian hundredths of a degree Celsius.",
+      "data": {
+        "type": "number",
+        "unit": "Cel",
+        "qudt:unit": "qunit:DEG_C",
+        "qudt:hasQuantityKind": "quantitykind:Temperature",
+        "minimum": -40,
+        "maximum": 55,
+        "multipleOf": 0.01
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:fPort": 6,
+          "lorav:slot": 2,
+          "lorav:byteOffset": 4,
+          "lorav:wireType": "xsd:short",
+          "lorav:divisor": 100,
+          "lorav:presentWhen": {
+            "field": "reportType",
+            "value": 1
+          }
+        }
+      ]
+    },
+    "humidity": {
+      "@id": "urn:dev:netvox:r718a#humidity",
+      "@type": "brick:Relative_Humidity_Sensor",
+      "knx:datapointType": "knx:valueHumidity",
+      "title": "Relative humidity",
+      "description": "Relative humidity (fPort 6, reportType 1), unsigned big-endian hundredths of a percent.",
+      "data": {
+        "type": "number",
+        "unit": "%RH",
+        "qudt:unit": "qunit:PERCENT_RH",
+        "qudt:hasQuantityKind": "quantitykind:RelativeHumidity",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 0.01
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:fPort": 6,
+          "lorav:slot": 3,
+          "lorav:byteOffset": 6,
+          "lorav:wireType": "xsd:unsignedShort",
+          "lorav:divisor": 100,
+          "lorav:presentWhen": {
+            "field": "reportType",
+            "value": 1
+          }
+        }
+      ]
+    }
+  }
+}

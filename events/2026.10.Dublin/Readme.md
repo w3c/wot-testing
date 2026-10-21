@@ -131,13 +131,22 @@ Combining Matter Binding and ECHONET Lite
 ## Demo devices
 
 
-| Company   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
+| Organization   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
 |-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
 | Siemens   |   Thing: SentronPAC4220 Energy Meter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/sentronpac4220.td.json) |Ethernet cable                                                   |                          | Ege Korkan         |
 | Siemens   |   Raspberry Pi with PanTilt HAT |   | Wifi / Ethernet cable    |                          | Ege Korkan        |
+| Siemens   |   Adeunis Comfort 2 sensor | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/adeunis-comfort2.td.json) | | | Ege Korkan |
+| Siemens   |   mClimate LW-PIR Mini-01-BI sensor | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/mclimate-lw-pir-mini-01-bi.td.json) | | | Ege Korkan |
+| Siemens   |   Milesight EM300-ZLD sensor | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/milesight-em300-zld.td.json) | | | Ege Korkan |
+| Siemens   |   Netvox R718A sensor | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/netvox-r718a.td.json) | | | Ege Korkan |
 | Microsoft   |   Rockwell PLC | tbd  |  Ethernet cable     |  tbd    | Erich Barnstedt      |
 | Microsoft   |   Siemens S7 PLC | tbd  |  Ethernet cable   |    tbd                      | Erich Barnstedt     |
 | Microsoft   |   Industry Raspberry Pi | tbd  |  Ethernet cable    |      tbd                    | Erich Barnstedt      |
+| Thingweb   |   Modbus elevator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/modbus-elevator.td.json) | | | |
+| Thingweb   |   MQTT calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/mqtt-calculator.td.json) | | | |
+| Thingweb   |   CoAP calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/coap-calculator.td.json) | | | |
+| Thingweb   |   HTTP advanced coffee machine | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-advanced-coffee-machine.td.json) | | | |
+| Thingweb   |   HTTP counter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-counter.td.json) | | | |
 | Hitachi   |   USB Webcam on a Raspberry Pi | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/cam_disp.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | Hitachi   |   Speaker on an M5 Stack| [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/speaker_image.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | Robert Warren   |   LoRaWAN sensor |   |    |                          | Robert Warren        |
@@ -150,5 +159,4 @@ Combining Matter Binding and ECHONET Lite
 | Organization     | Application                                   | Physical | Remote | Virtual | Protocol Supported | Infrastructure requirements, e.g., open ports, power sockets, Wifi | Comments                                                     |Contact|
 |------------------|-----------------------------------------------|----------|--------|---------|--------------------|-------------------------------------------------------------------|---------------------------------------------------------------|-------|
 | ...              | ...                                           | ...      | ...    | ...     | ...                | ...                                                               | ...                                                           | ...   |
-
 

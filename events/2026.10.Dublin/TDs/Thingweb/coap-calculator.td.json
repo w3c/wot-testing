@@ -1,0 +1,130 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "coap-calculator-simple",
+    "description": "Calculator Thing",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "base": "coap://plugfest.thingweb.io:5683/coap-calculator-simple/",
+    "properties": {
+        "result": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "properties/result",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "href": "properties/result",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        },
+        "lastChange": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ]
+                },
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "add": {
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "idempotent": false,
+            "safe": false,
+            "forms": [
+                {
+                    "href": "actions/add",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ]
+        },
+        "subtract": {
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "idempotent": false,
+            "safe": false,
+            "forms": [
+                {
+                    "href": "actions/subtract",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ]
+        }
+    },
+    "events": {
+        "update": {
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "events/update",
+                    "contentType": "application/json",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ],
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        }
+    }
+}

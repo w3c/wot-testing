@@ -1,0 +1,132 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/",
+      "qudt:unit": { "@type": "@id" },
+      "qudt:hasQuantityKind": { "@type": "@id" },
+      "knx:datapointType": { "@type": "@id" }
+    }
+  ],
+  "@type": ["Thing", "brick:Sensor_Equipment"],
+  "id": "urn:dev:adeunis_comfort2",
+  "title": "adeunis comfort2",
+  "description": "Adeunis Comfort 2 basic sensor-reading mapping for the official 0x4C data frame (temperature/humidity history): first sample only.",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
+    }
+  },
+  "security": "otaa_sc",
+  "base": "lorawan://0000000000000000/{appKey}/device",
+  "lorav:devEUI": "0018b2100000d2ea",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.2",
+  "schema:manufacturer": "Adeunis",
+  "schema:mpn": "Comfort 2",
+  "schema:version": "1",
+  "schema:softwareVersion": "1",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
+  "lorav:payloadLayout": "fixed",
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": { "@id": "urn:example:location:TTC_fair" },
+  "brick:hasPoint": [
+    { "@id": "urn:dev:adeunis_comfort2#temperature" },
+    { "@id": "urn:dev:adeunis_comfort2#humidity" }
+  ],
+  "events": {
+    "frameCode": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:byteOffset": 0,
+          "lorav:wireType": "u8"
+        }
+      ]
+    },
+    "statusByte": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:byteOffset": 1,
+          "lorav:wireType": "u8"
+        }
+      ]
+    },
+    "temperature": {
+      "@id": "urn:dev:adeunis_comfort2#temperature",
+      "@type": "brick:Temperature_Sensor",
+      "knx:datapointType": "knx:valueTemp",
+      "data": {
+        "type": "number",
+        "unit": "Cel",
+        "qudt:unit": "qunit:DEG_C",
+        "qudt:hasQuantityKind": "quantitykind:Temperature",
+        "minimum": -20,
+        "maximum": 60,
+        "multipleOf": 0.1
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:byteOffset": 2,
+          "lorav:wireType": "s16",
+          "lorav:divisor": 10
+        }
+      ]
+    },
+    "humidity": {
+      "@id": "urn:dev:adeunis_comfort2#humidity",
+      "@type": "brick:Relative_Humidity_Sensor",
+      "knx:datapointType": "knx:valueHumidity",
+      "data": {
+        "type": "integer",
+        "unit": "%RH",
+        "qudt:unit": "qunit:PERCENT_RH",
+        "qudt:hasQuantityKind": "quantitykind:RelativeHumidity",
+        "minimum": 0,
+        "maximum": 85,
+        "multipleOf": 1
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:byteOffset": 4,
+          "lorav:wireType": "u8"
+        }
+      ]
+    }
+  }
+}
