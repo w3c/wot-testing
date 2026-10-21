@@ -1,0 +1,178 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/",
+      "qudt:unit": { "@type": "@id" },
+      "qudt:hasQuantityKind": { "@type": "@id" },
+      "knx:datapointType": { "@type": "@id" }
+    }
+  ],
+  "@type": ["Thing", "brick:Leak_Detector_Equipment"],
+  "id": "urn:dev:milesight_em300_zld",
+  "title": "milesight em300 zld",
+  "description": "Milesight EM300-ZLD leak detection sensor with battery, temperature, humidity, and leak status uplink events.",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
+    }
+  },
+  "security": "otaa_sc",
+  "base": "lorawan://0000000000000000/{appKey}/device",
+  "lorav:devEUI": "24e124136f481063",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.2",
+  "schema:manufacturer": "Milesight",
+  "schema:mpn": "EM300-ZLD",
+  "schema:version": "1",
+  "schema:softwareVersion": "1",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
+  "lorav:payloadLayout": "tlv",
+  "lorav:tagFields": [
+    {
+      "name": "channel_id",
+      "type": "u8"
+    },
+    {
+      "name": "channel_type",
+      "type": "u8"
+    }
+  ],
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": { "@id": "urn:example:location:TTC_fair" },
+  "brick:hasPoint": [
+    { "@id": "urn:dev:milesight_em300_zld#temperature" },
+    { "@id": "urn:dev:milesight_em300_zld#humidity" },
+    { "@id": "urn:dev:milesight_em300_zld#leakage_status" }
+  ],
+  "events": {
+    "battery": {
+      "data": {
+        "type": "integer",
+        "unit": "%",
+        "qudt:unit": "qunit:PERCENT",
+        "qudt:hasQuantityKind": "quantitykind:DimensionlessRatio",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:tag": [
+            1,
+            117
+          ],
+          "lorav:wireType": "u8"
+        }
+      ]
+    },
+    "temperature": {
+      "@id": "urn:dev:milesight_em300_zld#temperature",
+      "@type": "brick:Temperature_Sensor",
+      "knx:datapointType": "knx:valueTemp",
+      "data": {
+        "type": "number",
+        "unit": "Cel",
+        "qudt:unit": "qunit:DEG_C",
+        "qudt:hasQuantityKind": "quantitykind:Temperature",
+        "minimum": -30,
+        "maximum": 70,
+        "multipleOf": 0.1
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:tag": [
+            3,
+            103
+          ],
+          "lorav:wireType": "s16",
+          "lorav:endian": "little",
+          "lorav:divisor": 10
+        }
+      ]
+    },
+    "humidity": {
+      "@id": "urn:dev:milesight_em300_zld#humidity",
+      "@type": "brick:Relative_Humidity_Sensor",
+      "knx:datapointType": "knx:valueHumidity",
+      "data": {
+        "type": "number",
+        "unit": "%RH",
+        "qudt:unit": "qunit:PERCENT_RH",
+        "qudt:hasQuantityKind": "quantitykind:RelativeHumidity",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 0.5
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:tag": [
+            4,
+            104
+          ],
+          "lorav:wireType": "u8",
+          "lorav:divisor": 2
+        }
+      ]
+    },
+    "leakage_status": {
+      "@id": "urn:dev:milesight_em300_zld#leakage_status",
+      "@type": "brick:Leak_Alarm",
+      "data": {
+        "type": "string",
+        "enum": [
+          "normal",
+          "leak"
+        ]
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "lorav:tag": [
+            5,
+            0
+          ],
+          "lorav:wireType": "u8",
+          "lorav:valueMap": [
+            {
+              "wireValue": 0,
+              "value": "normal"
+            },
+            {
+              "wireValue": 1,
+              "value": "leak"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

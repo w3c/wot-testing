@@ -1,0 +1,88 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "modbus-elevator",
+    "description": "Elevator Thing",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "base": "modbus+tcp://plugfest.thingweb.io:3179/1",
+    "properties": {
+        "lightSwitch": {
+            "type": "boolean",
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [
+                {
+                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/1?quantity=1",
+                    "op": "readproperty",
+                    "modv:entity": "Coil",
+                    "modv:function": "readCoil",
+                    "contentType": "application/octet-stream"
+                },
+                {
+                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/1?quantity=1",
+                    "op": "writeproperty",
+                    "modv:entity": "Coil",
+                    "modv:function": "writeSingleCoil",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "onTheMove": {
+            "type": "boolean",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/10001?quantity=1",
+                    "op": [
+                        "readproperty",
+                        "observeproperty"
+                    ],
+                    "modv:entity": "DiscreteInput",
+                    "modv:function": "readDiscreteInput",
+                    "modv:pollingTime": 1000,
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        },
+        "floorNumber": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15,
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false,
+            "forms": [
+                {
+                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/40001?quantity=2",
+                    "op": "readproperty",
+                    "modv:entity": "HoldingRegister",
+                    "modv:function": "readHoldingRegisters",
+                    "contentType": "application/octet-stream"
+                },
+                {
+                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/40001?quantity=2",
+                    "op": "writeproperty",
+                    "modv:entity": "HoldingRegister",
+                    "modv:function": "writeSingleHoldingRegister",
+                    "contentType": "application/octet-stream"
+                }
+            ]
+        }
+    }
+}
