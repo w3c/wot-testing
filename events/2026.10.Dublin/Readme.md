@@ -5,8 +5,8 @@
 - Wiki: https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning
 - Participants: https://www.w3.org/WoT/IG/wiki/Wiki_for_TPAC_2026_planning#Participants_2
 - Dates: 24-27 October 2026
-- PlugFest Room: TBD
-- Breakout Room: TBD (but should be the same room)
+- PlugFest Room: Second Floor - Room 05
+- Breakout Room: Second Floor - Room 05
 
 ## What you should bring with you 
 
