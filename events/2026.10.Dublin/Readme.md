@@ -142,12 +142,12 @@ Combining Matter Binding and ECHONET Lite
 | Microsoft   |   Rockwell PLC | tbd  |  Ethernet cable     |  tbd    | Erich Barnstedt      |
 | Microsoft   |   Siemens S7 PLC | tbd  |  Ethernet cable   |    tbd                      | Erich Barnstedt     |
 | Microsoft   |   Industry Raspberry Pi | tbd  |  Ethernet cable    |      tbd                    | Erich Barnstedt      |
-| Thingweb   |   Modbus elevator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/modbus-elevator.td.json) | | | |
-| Thingweb   |   MQTT calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/mqtt-calculator.td.json) | | | |
-| Thingweb   |   CoAP calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/coap-calculator.td.json) | | | |
-| Thingweb   |   HTTP advanced coffee machine | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-advanced-coffee-machine.td.json) | | | |
-| Thingweb   |   HTTP Data Schema | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-data-schema.td.json) | | | |
-| Thingweb   |   HTTP counter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-counter.td.json) | | | |
+| Thingweb   |   Modbus elevator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/modbus-elevator.td.json) | Client access to public internet | | Ege Korkan |
+| Thingweb   |   MQTT calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/mqtt-calculator.td.json) | Client access to public internet | | Ege Korkan |
+| Thingweb   |   CoAP calculator | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/coap-calculator.td.json) | Client access to public internet | | Ege Korkan |
+| Thingweb   |   HTTP advanced coffee machine | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-advanced-coffee-machine.td.json) | Client access to public internet| | Ege Korkan |
+| Thingweb   |   HTTP Data Schema | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-data-schema.td.json) | Client access to public internet | | Ege Korkan |
+| Thingweb   |   HTTP counter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Thingweb/http-counter.td.json) | Client access to public internet | | Ege Korkan |
 | Hitachi   |   USB Webcam on a Raspberry Pi | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/cam_disp.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | Hitachi   |   Speaker on an M5 Stack| [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Hitachi/speaker_image.td.jsonld)  |  Wifi / Ethernet cable    |      tbd                    | Kunihiko Toumura      |
 | Robert Warren   |   LoRaWAN sensor |   |    |                          | Robert Warren        |
