@@ -1,0 +1,197 @@
+{
+    "@context": "https://www.w3.org/2022/wot/td/v1.1",
+    "@type": "Thing",
+    "title": "smart-home-simple-coffee-machine",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "resources": {
+            "readOnly": true,
+            "observable": true,
+            "type": "object",
+            "properties": {
+                "water": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000
+                },
+                "beans": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000
+                },
+                "milk": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1000
+                }
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties/resources",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties/resources/observable",
+                    "contentType": "application/json",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties/resources",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty"
+                    ],
+                    "htv:methodName": "GET"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties/resources/observable",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "subprotocol": "longpoll"
+                }
+            ],
+            "writeOnly": false
+        }
+    },
+    "actions": {
+        "brew": {
+            "synchronous": true,
+            "input": {
+                "type": "string",
+                "enum": [
+                    "espresso",
+                    "cappuccino",
+                    "americano"
+                ]
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/actions/brew",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/actions/brew",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "refill": {
+            "synchronous": true,
+            "input": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "water",
+                        "beans",
+                        "milk"
+                    ]
+                }
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/actions/refill",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/actions/refill",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        }
+    },
+    "events": {
+        "resourceEmpty": {
+            "data": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "water",
+                        "beans",
+                        "milk"
+                    ]
+                }
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/events/resourceEmpty",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/events/resourceEmpty",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:c38511fe-ecbe-4db1-8867-f5f9f48c1620",
+    "description": "A simple coffee machine that can be interacted over the Internet",
+    "support": "https://github.com/eclipse-thingweb/node-wot/",
+    "forms": [
+        {
+            "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        },
+        {
+            "href": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties"
+            ]
+        }
+    ]
+}

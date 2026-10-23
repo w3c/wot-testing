@@ -1,0 +1,594 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "http-data-schema-thing",
+    "securityDefinitions": {
+        "nosec": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec"
+    ],
+    "properties": {
+        "bool": {
+            "title": "Boolean",
+            "description": "Property that can be set to true or false",
+            "type": "boolean",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/bool",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/bool",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        },
+        "int": {
+            "title": "Integer",
+            "description": "An integer value that can be read and written",
+            "type": "integer",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/int",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/int",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        },
+        "num": {
+            "title": "Number",
+            "description": "A floating point value that can be read and written",
+            "type": "number",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/num",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/num",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        },
+        "string": {
+            "title": "String",
+            "description": "A string value that can be read and written",
+            "type": "string",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/string",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/string",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        },
+        "array": {
+            "title": "Array",
+            "description": "An Array (List) with no structure that can be read and written",
+            "type": "array",
+            "items": {},
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/array",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/array",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        },
+        "object": {
+            "title": "Object",
+            "description": "An object with id and name that can be read and written",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "description": "Integer identifier",
+                    "type": "integer"
+                },
+                "name": {
+                    "title": "Name",
+                    "description": "Name associated to the identifier",
+                    "type": "string"
+                }
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/object",
+                    "contentType": "application/json",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties/object",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "readproperty",
+                        "writeproperty"
+                    ]
+                }
+            ],
+            "readOnly": false,
+            "writeOnly": false,
+            "observable": false
+        }
+    },
+    "actions": {
+        "void-void": {
+            "title": "void-void Action",
+            "description": "Action without input nor output",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-void",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-void",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "void-int": {
+            "title": "void-int Action",
+            "description": "Action without input, but with integer output",
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-int",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-int",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "int-void": {
+            "title": "int-void Action",
+            "description": "Action with integer input, but without output",
+            "input": {
+                "type": "integer"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-void",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-void",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "int-int": {
+            "title": "int-int Action",
+            "description": "Action with integer input and output",
+            "input": {
+                "type": "integer"
+            },
+            "output": {
+                "type": "integer"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-int",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-int",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "int-string": {
+            "title": "int-string Action",
+            "description": "Action with integer input and string output",
+            "input": {
+                "type": "integer"
+            },
+            "output": {
+                "type": "string"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-string",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/int-string",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "void-obj": {
+            "title": "void-obj Action",
+            "description": "Action without input, but with object output",
+            "output": {
+                "type": "object",
+                "properties": {
+                    "prop1": {
+                        "type": "integer"
+                    },
+                    "prop2": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "prop1",
+                    "prop2"
+                ]
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-obj",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/void-obj",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        },
+        "obj-void": {
+            "title": "obj-void Action",
+            "description": "Action with object input, but without output",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "prop1": {
+                        "type": "integer"
+                    },
+                    "prop2": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "prop1",
+                    "prop2"
+                ]
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/obj-void",
+                    "contentType": "application/json",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/actions/obj-void",
+                    "contentType": "application/cbor",
+                    "op": [
+                        "invokeaction"
+                    ],
+                    "htv:methodName": "POST"
+                }
+            ],
+            "safe": false,
+            "idempotent": false
+        }
+    },
+    "events": {
+        "on-bool": {
+            "title": "Bool Property Change",
+            "description": "Event with boolean data that is emitted when the bool property is written to",
+            "data": {
+                "type": "boolean"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-bool",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-bool",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "on-int": {
+            "title": "Int Property Change",
+            "description": "Event with integer data that is emitted when the int property is written to ",
+            "data": {
+                "type": "integer"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-int",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-int",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "on-num": {
+            "title": "Num Property Change",
+            "description": "Event with number data that is emitted when the num property is written to",
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-num",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-num",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "on-string": {
+            "title": "String Property Change",
+            "description": "Event with number data that is emitted when the string property is written to",
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-string",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-string",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "on-array": {
+            "title": "Array Property Change",
+            "description": "Event with number data that is emitted when the array property is written to",
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-array",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-array",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        },
+        "on-object": {
+            "title": "Object Property Change",
+            "description": "Event with number data that is emitted when the object property is written to",
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-object",
+                    "contentType": "application/json",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                },
+                {
+                    "href": "https://plugfest.thingweb.io/http-data-schema-thing/events/on-object",
+                    "contentType": "application/cbor",
+                    "subprotocol": "longpoll",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ]
+                }
+            ]
+        }
+    },
+    "id": "urn:uuid:364c9d46-eeb9-4e74-a9e2-ca31b31e2442",
+    "description": "Test Thing",
+    "base": "https://plugfest.thingweb.io/http-data-schema-thing",
+    "forms": [
+        {
+            "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties",
+            "contentType": "application/json",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties",
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        },
+        {
+            "href": "https://plugfest.thingweb.io/http-data-schema-thing/properties",
+            "contentType": "application/cbor",
+            "op": [
+                "readallproperties",
+                "readmultipleproperties",
+                "writeallproperties",
+                "writemultipleproperties"
+            ]
+        }
+    ]
+}
