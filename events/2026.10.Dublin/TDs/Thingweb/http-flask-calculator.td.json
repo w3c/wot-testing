@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "actions": {
+        "add": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "actions/add",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "safe": false
+        },
+        "subtract": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "actions/subtract",
+                    "op": [
+                        "invokeaction"
+                    ]
+                }
+            ],
+            "idempotent": false,
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "safe": false
+        }
+    },
+    "base": "https://plugfest.thingweb.io/http-flask-calculator/",
+    "description": "Calculator Thing",
+    "events": {
+        "update": {
+            "data": {
+                "type": "string"
+            },
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "events/update",
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ],
+                    "subprotocol": "sse"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "lastChange": {
+            "format": "date-time",
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "properties/lastChange",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "type": "string",
+            "writeOnly": false
+        },
+        "result": {
+            "forms": [
+                {
+                    "contentType": "application/json",
+                    "href": "properties/result",
+                    "op": [
+                        "readproperty"
+                    ]
+                }
+            ],
+            "observable": true,
+            "readOnly": true,
+            "type": "number",
+            "writeOnly": false
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "title": "http-flask-calculator"
+}
