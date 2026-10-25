@@ -133,6 +133,7 @@ Combining Matter Binding and ECHONET Lite
 
 | Organization   | Things/Devices/System/Tools         | TD Link | Infrastructure requirements, e.g. open ports, power sockets, Wifi | Comments                 |Contact             |
 |-----------|-------------------------------------| --- | -------------------------------------------------------------------|--------------------------|--------------------|
+| Michael Koster | Modbus building controller | [Link](http://ktc-testplant.0m2m.net:8080/plant.td.json) | (web proxy hosted) | semantic model at [Link](http://ktc-testplant.0m2m.net:8080/plant.ttl) | Michael Koster | 
 | Siemens   |   Thing: SentronPAC4220 Energy Meter | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/sentronpac4220.td.json) |Ethernet cable                                                   |                          | Ege Korkan         |
 | Siemens   |   Raspberry Pi with PanTilt HAT |   | Wifi / Ethernet cable    |                          | Ege Korkan        |
 | Siemens   |   Adeunis Comfort 2 sensor | [Link](https://github.com/w3c/wot-testing/blob/main/events/2026.10.Dublin/TDs/Siemens/adeunis-comfort2.td.json) | | | Ege Korkan |
