@@ -83,7 +83,7 @@
           "additionalResponses": [],
           "contentType": "application/json",
           "op": "subscribeevent",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/battery"
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/battery"
         }
       ]
     },
@@ -105,7 +105,7 @@
           "additionalResponses": [],
           "contentType": "application/json",
           "op": "subscribeevent",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/temperature"
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/temperature"
         }
       ]
     },
@@ -127,7 +127,7 @@
           "additionalResponses": [],
           "contentType": "application/json",
           "op": "subscribeevent",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/humidity"
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/humidity"
         }
       ]
     },
@@ -143,7 +143,7 @@
           "additionalResponses": [],
           "contentType": "application/json",
           "op": "subscribeevent",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/leakage_status"
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/24e124136f481063/event/up/leakage_status"
         }
       ]
     }

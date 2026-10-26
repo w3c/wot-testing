@@ -64,7 +64,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/occupied",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/occupied",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -88,7 +88,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/sensorTemperature",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/sensorTemperature",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -112,7 +112,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/relativeHumidity",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/relativeHumidity",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -133,7 +133,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/batteryVoltage",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/batteryVoltage",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -156,7 +156,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/lux",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/lux",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -171,7 +171,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/luxStatus",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/luxStatus",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -187,7 +187,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/pirTriggerCount",
+          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/pirTriggerCount",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
