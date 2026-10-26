@@ -7,6 +7,7 @@
 - Dates: 24-27 October 2026
 - PlugFest Room: Second Floor - Room 05
 - Breakout Room: Second Floor - Room 05
+- PlugFest WIFI (SSID: wotiswot PW: wotplugfest)
 
 ## What you should bring with you 
 
