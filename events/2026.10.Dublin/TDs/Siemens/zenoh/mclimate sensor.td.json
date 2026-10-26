@@ -1,0 +1,198 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/"
+    }
+  ],
+  "@type": ["Thing", "brick:Sensor_Equipment"],
+  "id": "urn:dev:mclimate:motion_sensor",
+  "title": "mclimate sensor",
+  "description": "mClimate Sensor: PIR-based occupancy detection with ambient light, temperature, humidity and battery reporting over LoRaWAN.",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
+    }
+  },
+  "security": "otaa_sc",
+  "lorav:devEUI": "8c1f646ca30000a8",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.3",
+  "schema:manufacturer": "mClimate",
+  "schema:mpn": "Sensor",
+  "schema:version": "1",
+  "schema:softwareVersion": "1",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
+  "lorav:payloadLayout": "ports",
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": {
+    "@id": "urn:example:location:TTC_fair"
+  },
+  "brick:hasPoint": [
+    {
+      "@id": "urn:dev:mclimate:motion_sensor#occupied"
+    },
+    {
+      "@id": "urn:dev:mclimate:motion_sensor#temperature"
+    },
+    {
+      "@id": "urn:dev:mclimate:motion_sensor#humidity"
+    },
+    {
+      "@id": "urn:dev:mclimate:motion_sensor#illuminance"
+    }
+  ],
+  "events": {
+    "occupied": {
+      "@id": "urn:dev:mclimate:motion_sensor#occupied",
+      "@type": "brick:Occupancy_Sensor",
+      "title": "Occupancy",
+      "description": "Occupancy state derived from the PIR sensor; true while the room is considered occupied.",
+      "data": {
+        "type": "boolean"
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/occupied",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "sensorTemperature": {
+      "@id": "urn:dev:mclimate:motion_sensor#temperature",
+      "@type": "brick:Temperature_Sensor",
+      "knx:datapointType": "knx:valueTemp",
+      "title": "Temperature",
+      "description": "Ambient temperature measured by the on-board sensor.",
+      "data": {
+        "type": "number",
+        "unit": "Cel",
+        "qudt:unit": "qunit:DEG_C",
+        "qudt:hasQuantityKind": "quantitykind:Temperature",
+        "minimum": -30,
+        "maximum": 70,
+        "multipleOf": 0.1
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/sensorTemperature",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "relativeHumidity": {
+      "@id": "urn:dev:mclimate:motion_sensor#humidity",
+      "@type": "brick:Relative_Humidity_Sensor",
+      "knx:datapointType": "knx:valueHumidity",
+      "title": "Relative humidity",
+      "description": "Ambient relative humidity measured by the on-board sensor.",
+      "data": {
+        "type": "number",
+        "unit": "%RH",
+        "qudt:unit": "qunit:PERCENT_RH",
+        "qudt:hasQuantityKind": "quantitykind:RelativeHumidity",
+        "minimum": 0,
+        "maximum": 100,
+        "multipleOf": 1
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/relativeHumidity",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "batteryVoltage": {
+      "title": "Battery voltage",
+      "description": "Battery voltage in volts, reported with every uplink.",
+      "data": {
+        "type": "number",
+        "unit": "V",
+        "qudt:unit": "qunit:V",
+        "qudt:hasQuantityKind": "quantitykind:Voltage",
+        "minimum": 2.0,
+        "maximum": 3.6,
+        "multipleOf": 0.01
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/batteryVoltage",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "lux": {
+      "@id": "urn:dev:mclimate:motion_sensor#illuminance",
+      "@type": "brick:Illuminance_Sensor",
+      "knx:datapointType": "knx:valueLux",
+      "title": "Illuminance",
+      "description": "Ambient illuminance measured by the light sensor.",
+      "data": {
+        "type": "number",
+        "unit": "lx",
+        "qudt:unit": "qunit:LUX",
+        "qudt:hasQuantityKind": "quantitykind:Illuminance",
+        "minimum": 0,
+        "maximum": 100000
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/lux",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "luxStatus": {
+      "title": "Light sensor status",
+      "description": "Validity flag of the illuminance reading; true when the light sensor value is valid.",
+      "data": {
+        "type": "boolean"
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/luxStatus",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    },
+    "pirTriggerCount": {
+      "title": "PIR trigger count",
+      "description": "Cumulative number of PIR triggers counted since the last report.",
+      "data": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "forms": [
+        {
+          "contentType": "application/json",
+          "href": "zenoh+tcp://localhost:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/8c1f646ca30000a8/event/up/pirTriggerCount",
+          "additionalResponses": [],
+          "op": "subscribeevent"
+        }
+      ]
+    }
+  },
+  "properties": {}
+}
