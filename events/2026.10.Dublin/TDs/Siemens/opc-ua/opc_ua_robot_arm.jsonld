@@ -1,0 +1,165 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "uav": "http://opcfoundation.org/UA/WoT-Binding/",
+      "ua": "http://opcfoundation.org/UA/",
+      "robot": "urn:NodeOPCUA-Server-default"
+    }
+  ],
+  "@type": ["Thing", "uav:object"],
+  "id": "urn:example:robot-arm-01",
+  "title": "RobotArm",
+  "description": "Simulated single-joint robot arm, working range -90..90 deg",
+  "uav:bindingVersion": "1.1",
+  "uav:id": "nsu=urn:NodeOPCUA-Server-default;s=RobotArm",
+  "uav:browseName": "robot:RobotArm",
+  "base": "opc.tcp://localhost:4840/UA/RobotArm",
+  "securityDefinitions": { "nosec_sc": { "scheme": "nosec" } },
+  "security": ["nosec_sc"],
+  "properties": {
+    "jointAngle": {
+      "@type": "uav:variable",
+      "title": "Joint angle",
+      "uav:browseName": "robot:JointAngle",
+      "type": "number",
+      "unit": "deg",
+      "minimum": -90,
+      "maximum": 90,
+      "readOnly": true,
+      "observable": true,
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DJointAngle",
+        "op": ["readproperty", "observeproperty", "unobserveproperty"],
+        "contentType": "application/octet-stream"
+      }]
+    },
+    "status": {
+      "@type": "uav:variable",
+      "title": "Status",
+      "uav:browseName": "robot:Status",
+      "type": "string",
+      "enum": ["Idle", "Moving", "Warning"],
+      "readOnly": true,
+      "observable": true,
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DStatus",
+        "op": ["readproperty", "observeproperty", "unobserveproperty"],
+        "contentType": "application/octet-stream"
+      }]
+    },
+    "motorTemperature": {
+      "@type": "uav:variable",
+      "title": "Motor temperature",
+      "uav:browseName": "robot:MotorTemperature",
+      "type": "number",
+      "unit": "Cel",
+      "minimum": 0,
+      "maximum": 120,
+      "readOnly": true,
+      "observable": true,
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DMotorTemperature",
+        "op": ["readproperty", "observeproperty", "unobserveproperty"],
+        "contentType": "application/octet-stream"
+      }]
+    },
+    "limitExceeded": {
+      "@type": "uav:variable",
+      "title": "Joint limit exceeded",
+      "description": "Input node of the joint limit alarm",
+      "uav:browseName": "robot:LimitExceeded",
+      "type": "boolean",
+      "readOnly": true,
+      "observable": true,
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DLimitExceeded",
+        "op": ["readproperty", "observeproperty", "unobserveproperty"],
+        "contentType": "application/octet-stream"
+      }]
+    }
+  },
+
+  "actions": {
+    "moveTo": {
+      "@type": "uav:method",
+      "title": "Move to target angle",
+      "description": "Targets outside -90..90 deg are clamped to the limit and raise the jointLimit warning. Rejected while the warning is unacknowledged.",
+      "uav:browseName": "robot:MoveTo",
+      "input": {
+        "type": "object",
+        "uav:argumentLayout": "named",
+        "uav:fieldOrder": ["TargetAngle", "Speed"],
+        "required": ["TargetAngle", "Speed"],
+        "properties": {
+          "TargetAngle": { "type": "number", "unit": "deg", "uav:dataTypeId": "i=11" },
+          "Speed": { "type": "number", "unit": "deg/s", "exclusiveMinimum": 0, "uav:dataTypeId": "i=11" }
+        }
+      },
+      "output": {
+        "type": "object",
+        "uav:argumentLayout": "named",
+        "uav:fieldOrder": ["Accepted"],
+        "properties": {
+          "Accepted": { "type": "boolean", "uav:dataTypeId": "i=1" }
+        }
+      },
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DMoveTo",
+        "op": ["invokeaction"],
+        "uav:callObjectId": "nsu=urn:NodeOPCUA-Server-default;s=RobotArm",
+        "contentType": "application/octet-stream"
+      }]
+    },
+    "acknowledgeJointLimit": {
+      "@type": "uav:method",
+      "title": "Acknowledge joint limit warning",
+      "uav:conditionAction": "Acknowledge",
+      "uav:actsOn": "jointLimit",
+      "input": {
+        "type": "object",
+        "uav:argumentLayout": "named",
+        "uav:fieldOrder": ["EventId", "Comment"],
+        "required": ["EventId"],
+        "properties": {
+          "EventId": { "type": "string", "contentEncoding": "base64" },
+          "Comment": { "type": "string", "uav:dataTypeName": "ua:LocalizedText", "uav:dataTypeId": "i=21" }
+        }
+      },
+      "forms": [{
+        "href": "?id=i%3D9111",
+        "op": ["invokeaction"],
+        "uav:callObjectId": "nsu=urn:NodeOPCUA-Server-default;s=RobotArm-JointLimitAlarm",
+        "contentType": "application/octet-stream"
+      }]
+    }
+  },
+
+  "events": {
+    "jointLimit": {
+      "@type": "uav:eventType",
+      "title": "Joint limit warning",
+      "description": "Raised when a requested target lies outside -90..90 deg (Severity 500 = Warning)",
+      "uav:conditionType": "ua:AlarmConditionType",
+      "uav:conditionTypeId": "i=2915",
+      "data": {
+        "type": "object",
+        "properties": {
+          "EventId":     { "type": "string", "contentEncoding": "base64" },
+          "EventType":   { "type": "string" },
+          "SourceNode":  { "type": "string" },
+          "SourceName":  { "type": "string" },
+          "Time":        { "type": "string", "format": "date-time" },
+          "ReceiveTime": { "type": "string", "format": "date-time" },
+          "Message":     { "type": "string" },
+          "Severity":    { "type": "integer", "minimum": 1, "maximum": 1000 }
+        }
+      },
+      "forms": [{
+        "href": "?id=nsu%3Durn%3ANodeOPCUA-Server-default%3Bs%3DRobotArm",
+        "op": ["subscribeevent", "unsubscribeevent"],
+        "contentType": "application/octet-stream"
+      }]
+    }
+  }
+}
