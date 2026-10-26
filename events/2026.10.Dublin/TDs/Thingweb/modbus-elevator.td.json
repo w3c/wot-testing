@@ -17,7 +17,7 @@
     "security": [
         "nosec_sc"
     ],
-    "base": "modbus+tcp://plugfest.thingweb.io:3179/1",
+    "base": "modbus+tcp://plugfest.thingweb.io:8088/1",
     "properties": {
         "lightSwitch": {
             "type": "boolean",
@@ -26,14 +26,14 @@
             "observable": false,
             "forms": [
                 {
-                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/1?quantity=1",
+                    "href": "modbus+tcp://plugfest.thingweb.io:8088/1/1?quantity=1",
                     "op": "readproperty",
                     "modv:entity": "Coil",
                     "modv:function": "readCoil",
                     "contentType": "application/octet-stream"
                 },
                 {
-                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/1?quantity=1",
+                    "href": "modbus+tcp://plugfest.thingweb.io:8088/1/1?quantity=1",
                     "op": "writeproperty",
                     "modv:entity": "Coil",
                     "modv:function": "writeSingleCoil",
@@ -48,7 +48,7 @@
             "observable": true,
             "forms": [
                 {
-                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/10001?quantity=1",
+                    "href": "modbus+tcp://plugfest.thingweb.io:8088/1/10001?quantity=1",
                     "op": [
                         "readproperty",
                         "observeproperty"
@@ -69,14 +69,14 @@
             "observable": false,
             "forms": [
                 {
-                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/40001?quantity=2",
+                    "href": "modbus+tcp://plugfest.thingweb.io:8088/1/40001?quantity=2",
                     "op": "readproperty",
                     "modv:entity": "HoldingRegister",
                     "modv:function": "readHoldingRegisters",
                     "contentType": "application/octet-stream"
                 },
                 {
-                    "href": "modbus+tcp://plugfest.thingweb.io:3179/1/40001?quantity=2",
+                    "href": "modbus+tcp://plugfest.thingweb.io:8088/1/40001?quantity=2",
                     "op": "writeproperty",
                     "modv:entity": "HoldingRegister",
                     "modv:function": "writeSingleHoldingRegister",

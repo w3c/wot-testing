@@ -1,0 +1,315 @@
+{
+    "@context": [
+        "https://www.w3.org/2019/wot/td/v1",
+        "https://www.w3.org/2022/wot/td/v1.1",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "Thing",
+    "title": "coap-calculator-content-negotiation",
+    "description": "Calculator Thing",
+    "securityDefinitions": {
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "base": "coap://plugfest.thingweb.io:5684/coap-calculator-content-negotiation/",
+    "properties": {
+        "result": {
+            "type": "number",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "properties/result",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "readproperty",
+                    "cov:method": "GET",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                },
+                {
+                    "href": "properties/result",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    },
+                    "subprotocol": "cov:observe"
+                },
+                {
+                    "href": "properties/result",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "readproperty",
+                    "cov:method": "GET",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "properties/result",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    },
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        },
+        "lastChange": {
+            "type": "string",
+            "format": "date-time",
+            "readOnly": true,
+            "writeOnly": false,
+            "observable": true,
+            "forms": [
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "readproperty",
+                    "cov:method": "GET",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                },
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    },
+                    "subprotocol": "cov:observe"
+                },
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "readproperty",
+                    "cov:method": "GET",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "properties/lastChange",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": [
+                        "observeproperty",
+                        "unobserveproperty"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    },
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "add": {
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "idempotent": false,
+            "safe": false,
+            "forms": [
+                {
+                    "href": "actions/add",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                },
+                {
+                    "href": "actions/add",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "actions/add",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "actions/add",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                }
+            ]
+        },
+        "subtract": {
+            "input": {
+                "type": "number"
+            },
+            "output": {
+                "type": "number"
+            },
+            "idempotent": false,
+            "safe": false,
+            "forms": [
+                {
+                    "href": "actions/subtract",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                },
+                {
+                    "href": "actions/subtract",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "actions/subtract",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    }
+                },
+                {
+                    "href": "actions/subtract",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": "invokeaction",
+                    "cov:method": "POST",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    }
+                }
+            ]
+        }
+    },
+    "events": {
+        "update": {
+            "data": {
+                "type": "number"
+            },
+            "forms": [
+                {
+                    "href": "events/update",
+                    "contentType": "application/json",
+                    "cov:contentFormat": 50,
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 50,
+                    "response": {
+                        "contentType": "application/json",
+                        "cov:contentFormat": 50
+                    },
+                    "subprotocol": "cov:observe"
+                },
+                {
+                    "href": "events/update",
+                    "contentType": "application/cbor",
+                    "cov:contentFormat": 60,
+                    "op": [
+                        "subscribeevent",
+                        "unsubscribeevent"
+                    ],
+                    "cov:method": "GET",
+                    "cov:accept": 60,
+                    "response": {
+                        "contentType": "application/cbor",
+                        "cov:contentFormat": 60
+                    },
+                    "subprotocol": "cov:observe"
+                }
+            ]
+        }
+    }
+}
