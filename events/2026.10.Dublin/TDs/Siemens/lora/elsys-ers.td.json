@@ -2,19 +2,49 @@
   "@context": [
     "https://www.w3.org/2022/wot/td/v1.1",
     {
-      "lorav": "https://www.w3.org/2024/wot/lorawan#"
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/"
     }
   ],
-  "@type": "Thing",
+  "@type": [
+    "Thing",
+    "brick:Sensor_Equipment"
+  ],
   "id": "urn:dev:elsys_ers",
   "title": "elsys ers",
+  "description": "ELSYS ERS multi-sensor: temperature, humidity, light, motion, CO2, and more over LoRaWAN.",
   "securityDefinitions": {
-    "nosec_sc": {
-      "scheme": "nosec"
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
     }
   },
-  "security": "nosec_sc",
+  "security": "otaa_sc",
+  "lorav:devEUI": "a81758fffe0eafe4",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.3",
+  "schema:manufacturer": "ELSYS",
+  "schema:mpn": "ERS",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
   "lorav:payloadLayout": "tlv",
+  "lorav:tagFields": [
+    {
+      "name": "tag",
+      "type": "u8"
+    }
+  ],
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": {
+    "@id": "urn:example:location:TTC_fair"
+  },
   "events": {
     "temperature": {
       "data": {
@@ -23,17 +53,10 @@
       },
       "forms": [
         {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            1
-          ],
-          "lorav:wireType": "s16",
-          "lorav:endian": "big",
-          "lorav:divisor": 10
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/temperature"
         }
       ]
     },
@@ -44,115 +67,10 @@
       },
       "forms": [
         {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            2
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "x": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            3
-          ],
-          "lorav:slot": 0,
-          "lorav:wireType": "s8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "y": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            3
-          ],
-          "lorav:slot": 1,
-          "lorav:wireType": "s8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "z": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            3
-          ],
-          "lorav:slot": 2,
-          "lorav:wireType": "s8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "light": {
-      "data": {
-        "type": "integer",
-        "unit": "lux"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            4
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "motion": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            5
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/humidity"
         }
       ]
     },
@@ -163,16 +81,10 @@
       },
       "forms": [
         {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            6
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/co2"
         }
       ]
     },
@@ -183,486 +95,13 @@
       },
       "forms": [
         {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            7
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "analog1": {
-      "data": {
-        "type": "integer",
-        "unit": "mV"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            8
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "lat": {
-      "data": {
-        "type": "number",
-        "unit": "°"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            9
-          ],
-          "lorav:slot": 0,
-          "lorav:wireType": "s24",
-          "lorav:endian": "big",
-          "lorav:divisor": 10000
-        }
-      ]
-    },
-    "long": {
-      "data": {
-        "type": "number",
-        "unit": "°"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            9
-          ],
-          "lorav:slot": 1,
-          "lorav:wireType": "s24",
-          "lorav:endian": "big",
-          "lorav:divisor": 10000
-        }
-      ]
-    },
-    "pulse1": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            10
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "pulseAbs": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            11
-          ],
-          "lorav:wireType": "u32",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "externalTemperature": {
-      "data": {
-        "type": "number",
-        "unit": "°C"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            12
-          ],
-          "lorav:wireType": "s16",
-          "lorav:endian": "big",
-          "lorav:divisor": 10
-        }
-      ]
-    },
-    "digital": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            13
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "distance": {
-      "data": {
-        "type": "integer",
-        "unit": "mm"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            14
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "accMotion": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            15
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "irInternalTemperature": {
-      "data": {
-        "type": "number",
-        "unit": "°C"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            16
-          ],
-          "lorav:slot": 0,
-          "lorav:wireType": "s16",
-          "lorav:endian": "big",
-          "lorav:divisor": 10
-        }
-      ]
-    },
-    "irExternalTemperature": {
-      "data": {
-        "type": "number",
-        "unit": "°C"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            16
-          ],
-          "lorav:slot": 1,
-          "lorav:wireType": "s16",
-          "lorav:endian": "big",
-          "lorav:divisor": 10
-        }
-      ]
-    },
-    "occupancy": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            17
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "waterleak": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            18
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "pressure": {
-      "data": {
-        "type": "number",
-        "unit": "hPa"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            20
-          ],
-          "lorav:wireType": "u32",
-          "lorav:endian": "big",
-          "lorav:divisor": 1000
-        }
-      ]
-    },
-    "soundPeak": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            21
-          ],
-          "lorav:slot": 0,
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "soundAvg": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            21
-          ],
-          "lorav:slot": 1,
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "pulse2": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            22
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "pulse2Abs": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            23
-          ],
-          "lorav:wireType": "u32",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "analog2": {
-      "data": {
-        "type": "integer",
-        "unit": "mV"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            24
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "externalTemperature2": {
-      "data": {
-        "type": "number",
-        "unit": "°C"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            25
-          ],
-          "lorav:wireType": "s16",
-          "lorav:endian": "big",
-          "lorav:divisor": 10
-        }
-      ]
-    },
-    "digital2": {
-      "data": {
-        "type": "integer"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            26
-          ],
-          "lorav:wireType": "u8",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "analogUv": {
-      "data": {
-        "type": "integer",
-        "unit": "µV"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            27
-          ],
-          "lorav:wireType": "s32",
-          "lorav:endian": "big"
-        }
-      ]
-    },
-    "tvoc": {
-      "data": {
-        "type": "integer",
-        "unit": "ppb"
-      },
-      "forms": [
-        {
-          "href": "uplink",
-          "op": [
-            "subscribeevent",
-            "unsubscribeevent"
-          ],
-          "lorav:tag": [
-            28
-          ],
-          "lorav:wireType": "u16",
-          "lorav:endian": "big"
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/vdd"
         }
       ]
     }
   },
-  "lorav:tagFields": [
-    {
-      "name": "tag",
-      "type": "u8"
-    }
-  ]
+  "properties": {}
 }
