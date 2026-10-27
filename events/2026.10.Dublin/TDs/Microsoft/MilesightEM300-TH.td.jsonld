@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2026/wot/lorawan#",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "urn:milesight-em300-th",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey. Injected at runtime via the LORAWAN_APPKEY_24E124136E440353 environment variable; never stored in this file."
+    }
+  },
+  "security": [
+    "otaa_sc"
+  ],
+  "@type": [
+    "Thing"
+  ],
+  "name": "Milesight-EM300-TH-24E124136E440353",
+  "base": "lorawan://localhost/24E124136E440353/",
+  "title": "Milesight EM300-TH",
+  "lorav:payloadLayout": "ctv",
+  "lorav:tagFields": [
+    { "name": "channel_id", "type": "u8" },
+    { "name": "channel_type", "type": "u8" }
+  ],
+  "lorav:devEUI": "24E124136E440353",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.3",
+  "schema:manufacturer": "Milesight",
+  "schema:mpn": "EM300-TH",
+  "events": {
+    "batteryLevel": {
+      "data": {
+        "type": "number",
+        "unit": "P1",
+        "uav:mapToNodeId": "s=24E124136E440353_BatteryLevel"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [ "subscribeevent", "unsubscribeevent" ],
+          "type": "xsd:byte",
+          "lorav:tag": [ 1, 117 ],
+          "lorav:wireType": "xsd:unsignedByte",
+          "lorav:endian": "big"
+        }
+      ]
+    },
+    "temperature": {
+      "data": {
+        "type": "number",
+        "unit": "CEL",
+        "uav:mapToNodeId": "s=24E124136E440353_Temperature"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [ "subscribeevent", "unsubscribeevent" ],
+          "type": "xsd:short",
+          "lorav:tag": [ 3, 103 ],
+          "lorav:wireType": "xsd:short",
+          "lorav:endian": "little",
+          "lorav:divisor": 10
+        }
+      ]
+    },
+    "humidity": {
+      "data": {
+        "type": "number",
+        "unit": "P1",
+        "uav:mapToNodeId": "s=24E124136E440353_Humidity"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "op": [ "subscribeevent", "unsubscribeevent" ],
+          "type": "xsd:byte",
+          "lorav:tag": [ 4, 104 ],
+          "lorav:wireType": "xsd:unsignedByte",
+          "lorav:endian": "big",
+          "lorav:divisor": 2
+        }
+      ]
+    }
+  }
+}
