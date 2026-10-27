@@ -65,7 +65,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/reportType",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/reportType",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -86,7 +86,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/batteryVoltage",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/batteryVoltage",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -103,7 +103,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/lowBattery",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/lowBattery",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -127,7 +127,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/temperature",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/temperature",
           "additionalResponses": [],
           "op": "subscribeevent"
         }
@@ -151,7 +151,7 @@
       "forms": [
         {
           "contentType": "application/json",
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/humidity",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/00137a1000008bd1/event/up/humidity",
           "additionalResponses": [],
           "op": "subscribeevent"
         }

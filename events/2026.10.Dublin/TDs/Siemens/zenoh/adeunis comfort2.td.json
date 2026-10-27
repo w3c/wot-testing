@@ -63,7 +63,7 @@
       "forms": [
         {
           "additionalResponses": [],
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/frameCode",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/frameCode",
           "contentType": "application/json",
           "op": "subscribeevent"
         }
@@ -76,7 +76,7 @@
       "forms": [
         {
           "additionalResponses": [],
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/statusByte",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/statusByte",
           "contentType": "application/json",
           "op": "subscribeevent"
         }
@@ -98,7 +98,7 @@
       "forms": [
         {
           "additionalResponses": [],
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/temperature",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/temperature",
           "contentType": "application/json",
           "op": "subscribeevent"
         }
@@ -120,7 +120,7 @@
       "forms": [
         {
           "additionalResponses": [],
-          "href": "zenoh+tcp://192.168.100.208:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/humidity",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/0018b2100000d2ea/event/up/humidity",
           "contentType": "application/json",
           "op": "subscribeevent"
         }
