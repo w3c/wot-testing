@@ -1,12 +1,13 @@
-# ECHONET in Dublin
+# ECHONET
 
 ## ECHONET Lite Smart Home Appliances
 
 ### Remote: 11 devices 
 
 #### Connection
-These 11 devices in Ishikawa are available through SSH port forwarding via Yohei's PC in Dublin.
-Local relay IP address: `192.168.100.51`.
+All devices connect to the plugfest network by SSH port forwarding through a host that in public network.
+
+Local relay IP address in Dublin: `192.168.100.51`.
 
 ![Connection between Dublin and Ishikawa](./tpac2026-echonet-devices.png)
 
