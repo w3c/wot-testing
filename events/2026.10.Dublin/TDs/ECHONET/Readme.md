@@ -4,6 +4,8 @@
 
 ### Remote: 11 devices 
 
+For access from Dublin, see [ECHONET in Dublin](../ECHONET-in-Dublin/).
+
 #### Connection
 All devices connect to the plugfest network by SSH port forwarding through a host that in public network.
 
