@@ -1,0 +1,481 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+      "lorav": "https://www.w3.org/2024/wot/lorawan#",
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "knx": "http://schema.knx.org/2020/ontology/knx#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/"
+    }
+  ],
+  "@type": ["Thing", "brick:Sensor_Equipment"],
+  "id": "urn:dev:elsys_ers",
+  "title": "elsys ers",
+  "description": "ELSYS ERS multi-sensor: temperature, humidity, light, motion, CO2, and more over LoRaWAN.",
+  "securityDefinitions": {
+    "otaa_sc": {
+      "scheme": "apikey",
+      "in": "uri",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey (root key). Injected at runtime by the Servient; never stored in this TD."
+    }
+  },
+  "security": "otaa_sc",
+  "lorav:devEUI": "a81758fffe0eafe4",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.3",
+  "schema:manufacturer": "ELSYS",
+  "schema:mpn": "ERS",
+  "lorav:region": "EU868",
+  "lorav:frequencyPlan": "EU_863_870",
+  "lorav:payloadLayout": "tlv",
+  "lorav:tagFields": [
+    {
+      "name": "tag",
+      "type": "u8"
+    }
+  ],
+  "lorav:defaultEventingFrequencyMinutes": 10,
+  "brick:hasLocation": {
+    "@id": "urn:example:location:TTC_fair"
+  },
+  "events": {
+    "temperature": {
+      "data": {
+        "type": "number",
+        "unit": "°C"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/temperature"
+        }
+      ]
+    },
+    "humidity": {
+      "data": {
+        "type": "integer",
+        "unit": "%"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/humidity"
+        }
+      ]
+    },
+    "x": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/x"
+        }
+      ]
+    },
+    "y": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/y"
+        }
+      ]
+    },
+    "z": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/z"
+        }
+      ]
+    },
+    "light": {
+      "data": {
+        "type": "integer",
+        "unit": "lux"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/light"
+        }
+      ]
+    },
+    "motion": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/motion"
+        }
+      ]
+    },
+    "co2": {
+      "data": {
+        "type": "integer",
+        "unit": "ppm"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/co2"
+        }
+      ]
+    },
+    "vdd": {
+      "data": {
+        "type": "integer",
+        "unit": "mV"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/vdd"
+        }
+      ]
+    },
+    "analog1": {
+      "data": {
+        "type": "integer",
+        "unit": "mV"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/analog1"
+        }
+      ]
+    },
+    "lat": {
+      "data": {
+        "type": "number",
+        "unit": "°"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/lat"
+        }
+      ]
+    },
+    "long": {
+      "data": {
+        "type": "number",
+        "unit": "°"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/long"
+        }
+      ]
+    },
+    "pulse1": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/pulse1"
+        }
+      ]
+    },
+    "pulseAbs": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/pulseAbs"
+        }
+      ]
+    },
+    "externalTemperature": {
+      "data": {
+        "type": "number",
+        "unit": "°C"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/externalTemperature"
+        }
+      ]
+    },
+    "digital": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/digital"
+        }
+      ]
+    },
+    "distance": {
+      "data": {
+        "type": "integer",
+        "unit": "mm"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/distance"
+        }
+      ]
+    },
+    "accMotion": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/accMotion"
+        }
+      ]
+    },
+    "irInternalTemperature": {
+      "data": {
+        "type": "number",
+        "unit": "°C"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/irInternalTemperature"
+        }
+      ]
+    },
+    "irExternalTemperature": {
+      "data": {
+        "type": "number",
+        "unit": "°C"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/irExternalTemperature"
+        }
+      ]
+    },
+    "occupancy": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/occupancy"
+        }
+      ]
+    },
+    "waterleak": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/waterleak"
+        }
+      ]
+    },
+    "pressure": {
+      "data": {
+        "type": "number",
+        "unit": "hPa"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/pressure"
+        }
+      ]
+    },
+    "soundPeak": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/soundPeak"
+        }
+      ]
+    },
+    "soundAvg": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/soundAvg"
+        }
+      ]
+    },
+    "pulse2": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/pulse2"
+        }
+      ]
+    },
+    "pulse2Abs": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/pulse2Abs"
+        }
+      ]
+    },
+    "analog2": {
+      "data": {
+        "type": "integer",
+        "unit": "mV"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/analog2"
+        }
+      ]
+    },
+    "externalTemperature2": {
+      "data": {
+        "type": "number",
+        "unit": "°C"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/externalTemperature2"
+        }
+      ]
+    },
+    "digital2": {
+      "data": {
+        "type": "integer"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/digital2"
+        }
+      ]
+    },
+    "analogUv": {
+      "data": {
+        "type": "integer",
+        "unit": "µV"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/analogUv"
+        }
+      ]
+    },
+    "tvoc": {
+      "data": {
+        "type": "integer",
+        "unit": "ppb"
+      },
+      "forms": [
+        {
+          "additionalResponses": [],
+          "contentType": "application/json",
+          "op": "subscribeevent",
+          "href": "zenoh+tcp://192.168.100.150:7447/application/d209ff97-929d-46f8-9180-ea2f6c382e90/device/a81758fffe0eafe4/event/up/tvoc"
+        }
+      ]
+    }
+  },
+  "properties": {}
+}
