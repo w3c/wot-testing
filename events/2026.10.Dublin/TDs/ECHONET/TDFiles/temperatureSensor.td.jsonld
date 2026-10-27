@@ -1,0 +1,350 @@
+{
+  "@context": [
+    "https://www.w3.org/2019/wot/td/v1",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "id": "urn:echonet:elapi:Matter-temperatureSensor-6-6%40ba0256a6fea6c174",
+  "title": "temperatureSensor-Matter-temperatureSensor-6-6@ba0256a6fea6c174",
+  "titles": {
+    "en": "temperatureSensor-Matter-temperatureSensor-6-6@ba0256a6fea6c174",
+    "ja": "温度センサ"
+  },
+  "description": "Temperature sensor",
+  "descriptions": {
+    "en": "Temperature sensor",
+    "ja": "温度センサ"
+  },
+  "securityDefinitions": {
+    "nosec": {
+      "scheme": "nosec"
+    }
+  },
+  "security": [
+    "nosec"
+  ],
+  "properties": {
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/protocol",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/protocol",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/protocol",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "id": {
+      "title": "id",
+      "titles": {
+        "en": "id",
+        "ja": "識別番号"
+      },
+      "echonet:epc": "0x83",
+      "description": "Identification number",
+      "descriptions": {
+        "en": "Identification number",
+        "ja": "識別番号"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/id",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/id",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/id",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/manufacturer",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/manufacturer",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/manufacturer",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "productCode": {
+      "title": "productCode",
+      "titles": {
+        "en": "productCode",
+        "ja": "商品コード"
+      },
+      "echonet:epc": "0x8C",
+      "description": "Product code",
+      "descriptions": {
+        "en": "Product code",
+        "ja": "商品コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/productCode",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/productCode",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/productCode",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "value": {
+      "title": "value",
+      "titles": {
+        "en": "value",
+        "ja": "温度計測値"
+      },
+      "echonet:epc": "0xE0",
+      "description": "Measured temperature value",
+      "descriptions": {
+        "en": "Measured temperature value",
+        "ja": "温度計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "Celsius",
+      "minimum": -273.2,
+      "maximum": 3276.6,
+      "forms": [
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/value",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties/value",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/value",
+          "contentType": "application/json",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties/value",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    },
+    {
+      "href": "http://150.65.179.132:8080/temperaturesensor-matter-temperaturesensor-6-6%40ba0256a6fea6c174/properties",
+      "contentType": "application/cbor",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    },
+    {
+      "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    },
+    {
+      "href": "http://150.65.179.132:8080/urn%3Aechonet%3Aelapi%3AMatter-temperatureSensor-6-6%2540ba0256a6fea6c174/properties",
+      "contentType": "application/cbor",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    }
+  ],
+  "echonet:eoj": "0x0011"
+}
