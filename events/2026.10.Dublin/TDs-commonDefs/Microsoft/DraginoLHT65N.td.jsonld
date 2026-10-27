@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "lorav": "https://www.w3.org/2026/wot/lorawan#",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "urn:dragino-lht-65n-e3",
+  "@type": [
+    "Thing"
+  ],
+  "name": "Dragino-LHT65N-E3-A84041B98D5CB233",
+  "title": "Dragino LHT65N-E3",
+  "lorav:payloadLayout": "fixed",
+  "lorav:devEUI": "A84041B98D5CB233",
+  "lorav:joinEUI": "0000000000000000",
+  "lorav:macVersion": "1.0.3",
+  "schema:manufacturer": "Dragino",
+  "schema:mpn": "LHT65N-E3",
+  "events": {
+    "batteryLevel": {
+      "data": {
+        "type": "number",
+        "uav:mapToNodeId": "s=A84041B98D5CB233_BatteryLevel"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "lorav:byteOffset": 0,
+          "lorav:wireType": "xsd:unsignedShort",
+          "lorav:bitmask": "0x3FFF",
+          "lorav:divisor": 1000
+        }
+      ]
+    },
+    "temperature": {
+      "data": {
+        "type": "number",
+        "uav:mapToNodeId": "s=A84041B98D5CB233_Temperature"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "lorav:byteOffset": 2,
+          "lorav:wireType": "xsd:short",
+          "lorav:divisor": 100
+        }
+      ]
+    },
+    "humidity": {
+      "data": {
+        "type": "number",
+        "uav:mapToNodeId": "s=A84041B98D5CB233_Humidity"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "lorav:byteOffset": 4,
+          "lorav:wireType": "xsd:unsignedShort",
+          "lorav:divisor": 10
+        }
+      ]
+    },
+    "extTemperature": {
+      "data": {
+        "type": "number",
+        "uav:mapToNodeId": "s=A84041B98D5CB233_ExternalTemperature"
+      },
+      "forms": [
+        {
+          "href": "uplink",
+          "lorav:byteOffset": 7,
+          "lorav:wireType": "xsd:short",
+          "lorav:divisor": 100
+        }
+      ]
+    }
+  },
+  "formDefaults": {
+    "lorav:byteLength": 2,
+    "lorav:endian": "big",
+    "op": [
+      "subscribeevent",
+      "unsubscribeevent"
+    ],
+    "type": "xsd:short",
+    "base": "lorawan://localhost/A84041B98D5CB233/",
+    "security": {
+      "scheme": "apikey",
+      "in": "header",
+      "name": "appKey",
+      "description": "LoRaWAN OTAA AppKey. Injected at runtime via the LORAWAN_APPKEY_A84041B98D5CB233 environment variable; never stored in this file."
+    },
+    "contentType": "application/octet-stream"
+  }
+}

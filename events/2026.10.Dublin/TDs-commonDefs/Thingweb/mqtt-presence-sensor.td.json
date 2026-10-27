@@ -1,0 +1,36 @@
+{
+  "@context": "https://www.w3.org/ns/wot-next/td",
+  "@type": "Thing",
+  "title": "smart-home-presence-sensor",
+  "events": {
+    "presenceDetected": {
+      "title": "Presence Detected",
+      "description": "An event that is emitted when a person is detected in the room. It is mocked and emitted every 5 seconds",
+      "data": {
+        "type": "number",
+        "title": "Distance",
+        "minimum": 55,
+        "maximum": 1200
+      },
+      "forms": [
+        {
+          "href": "mqtt://plugfest.thingweb.io:8087/smart-home-presence-sensor/events/presenceDetected"
+        }
+      ]
+    }
+  },
+  "id": "urn:uuid:8de01d05-639d-4f1e-8277-33e7c399547e",
+  "description": "Thing that can detect presence of human nearby",
+  "support": "https://github.com/eclipse-thingweb/node-wot/",
+  "formDefaults": {
+    "contentType": "application/json",
+    "mqv:qos": "2",
+    "op": [
+      "subscribeevent",
+      "unsubscribeevent"
+    ],
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

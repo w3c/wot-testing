@@ -1,0 +1,120 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "coap-calculator-simple",
+  "description": "Calculator Thing",
+  "properties": {
+    "result": {
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/result",
+          "op": [
+            "readproperty"
+          ]
+        },
+        {
+          "href": "properties/result",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    },
+    "lastChange": {
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/lastChange",
+          "op": [
+            "readproperty"
+          ]
+        },
+        {
+          "href": "properties/lastChange",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "add": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/add",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    },
+    "subtract": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/subtract",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    }
+  },
+  "events": {
+    "update": {
+      "data": {
+        "type": "number"
+      },
+      "forms": [
+        {
+          "href": "events/update",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    }
+  },
+  "formDefaults": {
+    "contentType": "application/json",
+    "base": "coap://plugfest.thingweb.io:5683/coap-calculator-simple/",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

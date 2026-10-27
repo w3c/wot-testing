@@ -1,0 +1,103 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "mqtt-calculator",
+  "description": "Calculator Thing",
+  "properties": {
+    "result": {
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/result",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    },
+    "lastChange": {
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/lastChange",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "actions": {
+    "add": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/add",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    },
+    "subtract": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/subtract",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ]
+    }
+  },
+  "events": {
+    "update": {
+      "data": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "events/update",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    }
+  },
+  "formDefaults": {
+    "contentType": "application/json",
+    "base": "mqtt://plugfest.thingweb.io:8087/mqtt-calculator/",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

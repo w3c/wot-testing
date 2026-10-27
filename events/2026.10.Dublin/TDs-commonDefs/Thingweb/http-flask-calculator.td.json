@@ -1,0 +1,104 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "actions": {
+    "add": {
+      "forms": [
+        {
+          "href": "actions/add",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "safe": false
+    },
+    "subtract": {
+      "forms": [
+        {
+          "href": "actions/subtract",
+          "op": [
+            "invokeaction"
+          ]
+        }
+      ],
+      "idempotent": false,
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "safe": false
+    }
+  },
+  "description": "Calculator Thing",
+  "events": {
+    "update": {
+      "data": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "events/update",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "subprotocol": "sse"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "lastChange": {
+      "format": "date-time",
+      "forms": [
+        {
+          "href": "properties/lastChange",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "observable": true,
+      "readOnly": true,
+      "type": "string",
+      "writeOnly": false
+    },
+    "result": {
+      "forms": [
+        {
+          "href": "properties/result",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "observable": true,
+      "readOnly": true,
+      "type": "number",
+      "writeOnly": false
+    }
+  },
+  "title": "http-flask-calculator",
+  "formDefaults": {
+    "contentType": "application/json",
+    "base": "https://plugfest.thingweb.io/http-flask-calculator/",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

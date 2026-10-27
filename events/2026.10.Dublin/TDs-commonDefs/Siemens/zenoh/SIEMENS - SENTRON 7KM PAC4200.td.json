@@ -1,0 +1,374 @@
+{
+  "@type": [
+    "brick:Electricity_Meter"
+  ],
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "schema": "https://schema.org/",
+      "brick": "https://brickschema.org/schema/Brick#",
+      "qudt": "http://qudt.org/schema/qudt/",
+      "qunit": "http://qudt.org/vocab/unit/",
+      "quantitykind": "http://qudt.org/vocab/quantitykind/",
+      "qudt:unit": {
+        "@type": "@id"
+      },
+      "qudt:hasQuantityKind": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "b1034ddb-e09f-4275-949e-575d8f6c333d",
+  "schema:author": {
+    "name": "Siemens"
+  },
+  "schema:manufacturer": "Siemens",
+  "schema:mpn": "SENTRON 7KM PAC4200",
+  "title": "SIEMENS - SENTRON 7KM PAC4200",
+  "description": "measuring device 5A, Modbus TCP",
+  "properties": {
+    "voltage-l1-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c39be484-4988-488e-bc81-d6d6692b6673",
+      "title": "Voltage L1-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l1-n",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l1-n",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l1-n",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "voltage-l2-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "d95bc58e-ec69-4de8-bd9d-3ae9ad72a232",
+      "title": "Voltage L2-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l2-n",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l2-n",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l2-n",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "voltage-l3-n": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "1755c08b-9f05-4c23-96df-049620fcd4c1",
+      "title": "Voltage L3-N",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l3-n",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l3-n",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l3-n",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "voltage-l1-l2": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "f99df171-ad26-40cd-a05e-2bb21e43aa65",
+      "title": "Voltage L1-L2",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l1-l2",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l1-l2",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l1-l2",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "voltage-l2-l3": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "6406515a-ebcb-4d3c-8055-51085d20a645",
+      "title": "Voltage L2-L3",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l2-l3",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l2-l3",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l2-l3",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "voltage-l3-l1": {
+      "qudt:hasQuantityKind": "quantitykind:Voltage",
+      "id": "c0d6fa24-dbd9-4e76-ba1f-054db585fa73",
+      "title": "Voltage L3-L1",
+      "unit": "qunit:V",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l3-l1",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/voltage-l3-l1",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/voltage-l3-l1",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "current-l1": {
+      "@type": "brick:Current",
+      "id": "66a4f16d-95a7-40a0-8272-ba63c4e1bd30",
+      "title": "Current L1",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l1",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l1",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/current-l1",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "current-l2": {
+      "@type": "brick:Current",
+      "id": "6919cc7f-83c6-46d9-bbc0-f3f1694e3bea",
+      "title": "Current L2",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l2",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l2",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/current-l2",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "current-l3": {
+      "@type": "brick:Current",
+      "id": "bcf16bae-637c-4fc2-94af-93725b64f251",
+      "title": "Current L3",
+      "unit": "qunit:A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l3",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/current-l3",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/current-l3",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "apparent-power-l1": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "11d54b26-a120-48ae-9d26-3ac339075fa9",
+      "title": "Apparent power L1",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l1",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l1",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/apparent-power-l1",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "apparent-power-l2": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "15294689-0ecd-4d01-999c-dea243d823b7",
+      "title": "Apparent power L2",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l2",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l2",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/apparent-power-l2",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "apparent-power-l3": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "f7344355-b201-42f3-9f52-54f91935a009",
+      "title": "Apparent power L3",
+      "unit": "qunit:V-A",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l3",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/apparent-power-l3",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/apparent-power-l3",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "active-power-l1": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "7274a765-6d14-4b15-b959-70c28e7f90d4",
+      "title": "Active power L1",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l1",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l1",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/active-power-l1",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "active-power-l2": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "8d6695b7-9478-4e52-b4c2-6f1609ea4620",
+      "title": "Active power L2",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l2",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l2",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/active-power-l2",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "active-power-l3": {
+      "@type": "brick:Electricity_Power_Sensor",
+      "id": "e44578ed-4ec0-4759-bc5b-33a17579b6d1",
+      "title": "Active power L3",
+      "unit": "qunit:W",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l3",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/active-power-l3",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/active-power-l3",
+          "op": "observeproperty"
+        }
+      ]
+    },
+    "line-frequency": {
+      "@type": "brick:Frequency",
+      "id": "11cf2626-0b7f-4511-a4c2-2350d7cc7b8a",
+      "title": "Line Frequency",
+      "unit": "qunit:HZ",
+      "type": "number",
+      "forms": [
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/line-frequency",
+          "op": "readproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/requests/siemens-sentron-7km-pac4200/line-frequency",
+          "op": "writeproperty"
+        },
+        {
+          "href": "zenoh+tcp://192.168.100.150:7447/modbus-proxy/property/updates/siemens-sentron-7km-pac4200/line-frequency",
+          "op": "observeproperty"
+        }
+      ]
+    }
+  },
+  "formDefaults": {
+    "additionalResponses": [],
+    "contentType": "application/json",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

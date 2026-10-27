@@ -1,0 +1,153 @@
+{
+  "@context": "https://www.w3.org/ns/wot-next/td",
+  "@type": "Thing",
+  "title": "smart-home-simple-coffee-machine",
+  "properties": {
+    "resources": {
+      "readOnly": true,
+      "observable": true,
+      "type": "object",
+      "properties": {
+        "water": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "beans": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "milk": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      },
+      "forms": [
+        {
+          "href": "properties/resources",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "properties/resources/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "writeOnly": false
+    }
+  },
+  "actions": {
+    "brew": {
+      "synchronous": true,
+      "input": {
+        "type": "string",
+        "enum": [
+          "espresso",
+          "cappuccino",
+          "americano"
+        ]
+      },
+      "forms": [
+        {
+          "href": "actions/brew",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    },
+    "refill": {
+      "synchronous": true,
+      "input": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "water",
+            "beans",
+            "milk"
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "actions/refill",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    }
+  },
+  "events": {
+    "resourceEmpty": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "water",
+            "beans",
+            "milk"
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "events/resourceEmpty",
+          "subprotocol": "longpoll",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    }
+  },
+  "id": "urn:uuid:c38511fe-ecbe-4db1-8867-f5f9f48c1620",
+  "description": "A simple coffee machine that can be interacted over the Internet",
+  "support": "https://github.com/eclipse-thingweb/node-wot/",
+  "forms": [
+    {
+      "href": "properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    }
+  ],
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine",
+      "contentType": "application/json",
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "https://plugfest.thingweb.io:443/smart-home-simple-coffee-machine",
+      "contentType": "application/cbor",
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "id": "urn:echonet:elapi:Matter-electricLock-6-5%40ba0256a6fea6c174",
+  "title": "electricLock-Matter-electricLock-6-5@ba0256a6fea6c174",
+  "titles": {
+    "en": "electricLock-Matter-electricLock-6-5@ba0256a6fea6c174",
+    "ja": "電気錠"
+  },
+  "description": "Electric lock",
+  "descriptions": {
+    "en": "Electric lock",
+    "ja": "電気錠"
+  },
+  "properties": {
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/protocol"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/protocol"
+        }
+      ]
+    },
+    "id": {
+      "title": "id",
+      "titles": {
+        "en": "id",
+        "ja": "識別番号"
+      },
+      "echonet:epc": "0x83",
+      "description": "Identification number",
+      "descriptions": {
+        "en": "Identification number",
+        "ja": "識別番号"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/id"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/id"
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/manufacturer"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/manufacturer"
+        }
+      ]
+    },
+    "productCode": {
+      "title": "productCode",
+      "titles": {
+        "en": "productCode",
+        "ja": "商品コード"
+      },
+      "echonet:epc": "0x8C",
+      "description": "Product code",
+      "descriptions": {
+        "en": "Product code",
+        "ja": "商品コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/productCode"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/productCode"
+        }
+      ]
+    },
+    "mainElectricLock": {
+      "title": "mainElectricLock",
+      "titles": {
+        "en": "mainElectricLock",
+        "ja": "施錠設定1"
+      },
+      "echonet:epc": "0xE0",
+      "description": "Lock setting1",
+      "descriptions": {
+        "en": "Lock setting1",
+        "ja": "施錠設定1"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/mainElectricLock",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties/mainElectricLock/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/mainElectricLock",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties/mainElectricLock/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "href": "electriclock-matter-electriclock-6-5%40ba0256a6fea6c174/properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "urn%3Aechonet%3Aelapi%3AMatter-electricLock-6-5%2540ba0256a6fea6c174/properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "echonet:eoj": "0x026F",
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "http://192.168.100.51",
+      "contentType": "application/json",
+      "htv:methodName": "GET",
+      "op": [
+        "readproperty"
+      ],
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "http://192.168.100.51",
+      "contentType": "application/cbor",
+      "htv:methodName": "GET",
+      "op": [
+        "readproperty"
+      ],
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}

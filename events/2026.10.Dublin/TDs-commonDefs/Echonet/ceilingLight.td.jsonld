@@ -1,0 +1,1092 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "echonet": "https://echonet.jp/"
+    },
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "id": "urn:echonet:elapi:C0A80B08-029001%40ba0256a6fea6c174",
+  "title": "generalLighting-C0A80B08-029001@ba0256a6fea6c174",
+  "titles": {
+    "en": "generalLighting-C0A80B08-029001@ba0256a6fea6c174",
+    "ja": "一般照明"
+  },
+  "description": "General lighting",
+  "descriptions": {
+    "en": "General lighting",
+    "ja": "一般照明"
+  },
+  "properties": {
+    "operationStatus": {
+      "title": "operationStatus",
+      "titles": {
+        "en": "operationStatus",
+        "ja": "動作状態"
+      },
+      "echonet:epc": "0x80",
+      "description": "Operation status",
+      "descriptions": {
+        "en": "Operation status",
+        "ja": "動作状態"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/operationStatus",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/operationStatus/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/operationStatus",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/operationStatus/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "installationLocation": {
+      "title": "installationLocation",
+      "titles": {
+        "en": "installationLocation",
+        "ja": "設置場所"
+      },
+      "echonet:epc": "0x81",
+      "description": "Installation location",
+      "descriptions": {
+        "en": "Installation location",
+        "ja": "設置場所"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": true,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/installationLocation",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/installationLocation/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/installationLocation",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/installationLocation/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "protocol": {
+      "title": "protocol",
+      "titles": {
+        "en": "protocol",
+        "ja": "Protocolversion情報"
+      },
+      "echonet:epc": "0x82",
+      "description": "Protocol version information",
+      "descriptions": {
+        "en": "Protocol version information",
+        "ja": "Protocol version情報"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/protocol",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/protocol",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "instantaneousElectricPowerConsumption": {
+      "title": "instantaneousElectricPowerConsumption",
+      "titles": {
+        "en": "instantaneousElectricPowerConsumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "echonet:epc": "0x84",
+      "description": "Measured instantaneous power consumption",
+      "descriptions": {
+        "en": "Measured instantaneous power consumption",
+        "ja": "瞬時消費電力計測値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "W",
+      "minimum": 0,
+      "maximum": 65533,
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/instantaneousElectricPowerConsumption",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/instantaneousElectricPowerConsumption",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturerFaultCode": {
+      "title": "manufacturerFaultCode",
+      "titles": {
+        "en": "manufacturerFaultCode",
+        "ja": "メーカ異常コード"
+      },
+      "echonet:epc": "0x86",
+      "description": "Manufacturer's fault code",
+      "descriptions": {
+        "en": "Manufacturer's fault code",
+        "ja": "メーカ異常コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/manufacturerFaultCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/manufacturerFaultCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "faultStatus": {
+      "title": "faultStatus",
+      "titles": {
+        "en": "faultStatus",
+        "ja": "異常発生状態"
+      },
+      "echonet:epc": "0x88",
+      "description": "Fault status",
+      "descriptions": {
+        "en": "Fault status",
+        "ja": "異常発生状態"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/faultStatus",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/faultStatus/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/faultStatus",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/faultStatus/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ]
+    },
+    "faultDescription": {
+      "title": "faultDescription",
+      "titles": {
+        "en": "faultDescription",
+        "ja": "異常内容"
+      },
+      "echonet:epc": "0x89",
+      "description": "Fault description",
+      "descriptions": {
+        "en": "Fault description",
+        "ja": "異常内容"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "noFault",
+        "trunOffOrUnplug",
+        "resetButton",
+        "setIncorrectly",
+        "supply",
+        "cleaning",
+        "changingBattery",
+        "recoverOperationNoReuired",
+        "userDefinable",
+        "abnormalEventOrSafety",
+        "switch",
+        "sensorSystem",
+        "component",
+        "controlCircuitBoard",
+        "repairLocationUnkown",
+        "fault"
+      ],
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/faultDescription",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/faultDescription",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "manufacturer": {
+      "title": "manufacturer",
+      "titles": {
+        "en": "manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "echonet:epc": "0x8A",
+      "description": "Manufacturer",
+      "descriptions": {
+        "en": "Manufacturer",
+        "ja": "会員ID/メーカー"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "descriptions": {
+          "type": "object",
+          "properties": {
+            "ja": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/manufacturer",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/manufacturer",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "businessFacilityCode": {
+      "title": "businessFacilityCode",
+      "titles": {
+        "en": "businessFacilityCode",
+        "ja": "事業場コード"
+      },
+      "echonet:epc": "0x8B",
+      "description": "Business facility code",
+      "descriptions": {
+        "en": "Business facility code",
+        "ja": "事業場コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/businessFacilityCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/businessFacilityCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "productCode": {
+      "title": "productCode",
+      "titles": {
+        "en": "productCode",
+        "ja": "商品コード"
+      },
+      "echonet:epc": "0x8C",
+      "description": "Product code",
+      "descriptions": {
+        "en": "Product code",
+        "ja": "商品コード"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/productCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/productCode",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "serialNumber": {
+      "title": "serialNumber",
+      "titles": {
+        "en": "serialNumber",
+        "ja": "製造番号"
+      },
+      "echonet:epc": "0x8D",
+      "description": "Serial number",
+      "descriptions": {
+        "en": "Serial number",
+        "ja": "製造番号"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/serialNumber",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/serialNumber",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "productionDate": {
+      "title": "productionDate",
+      "titles": {
+        "en": "productionDate",
+        "ja": "製造年月日"
+      },
+      "echonet:epc": "0x8E",
+      "description": "Production date",
+      "descriptions": {
+        "en": "Production date",
+        "ja": "製造年月日"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "format": "date",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/productionDate",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/productionDate",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "powerSaving": {
+      "title": "powerSaving",
+      "titles": {
+        "en": "powerSaving",
+        "ja": "節電動作設定"
+      },
+      "echonet:epc": "0x8F",
+      "description": "Power-saving operation setting",
+      "descriptions": {
+        "en": "Power-saving operation setting",
+        "ja": "節電動作設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "boolean",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/powerSaving",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/powerSaving",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColor": {
+      "title": "lightColor",
+      "titles": {
+        "en": "lightColor",
+        "ja": "光色設定"
+      },
+      "echonet:epc": "0xB1",
+      "description": "Light color setting",
+      "descriptions": {
+        "en": "Light color setting",
+        "ja": "光色設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other",
+        "undefined"
+      ],
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightColor",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightColor",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStep": {
+      "title": "lightLevelStep",
+      "titles": {
+        "en": "lightLevelStep",
+        "ja": "照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xB2",
+      "description": "Light level step setting",
+      "descriptions": {
+        "en": "Light level step setting",
+        "ja": "照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightLevelStep",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightLevelStep",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorLevelStep": {
+      "title": "lightColorLevelStep",
+      "titles": {
+        "en": "lightColorLevelStep",
+        "ja": "光色レベル段数設定"
+      },
+      "echonet:epc": "0xB3",
+      "description": "Light color step setting",
+      "descriptions": {
+        "en": "Light color step setting",
+        "ja": "光色レベル段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightColorLevelStep",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightColorLevelStep",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "maximumSpecifiableLevel": {
+      "title": "maximumSpecifiableLevel",
+      "titles": {
+        "en": "maximumSpecifiableLevel",
+        "ja": "設定可能レベル最大値"
+      },
+      "echonet:epc": "0xB4",
+      "description": "Maximum specifiable values",
+      "descriptions": {
+        "en": "Maximum specifiable values",
+        "ja": "設定可能レベル最大値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "lightLevel": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notLightLevel"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照明の明るさ",
+            "en": "Byte 1: light level"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Byte 2: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/maximumSpecifiableLevel",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/maximumSpecifiableLevel",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "maximumSettableLevelForNightLighting": {
+      "title": "maximumSettableLevelForNightLighting",
+      "titles": {
+        "en": "maximumSettableLevelForNightLighting",
+        "ja": "常夜灯設定可能レベル最大値"
+      },
+      "echonet:epc": "0xB5",
+      "description": "Maximum value of settable level for night lighting",
+      "descriptions": {
+        "en": "Maximum value of settable level for night lighting",
+        "ja": "常夜灯設定可能レベル最大値"
+      },
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": false,
+      "type": "object",
+      "properties": {
+        "lightLevel": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notLightLevel"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "1Byte目:照明の明るさ",
+            "en": "Byte 1: light level"
+          }
+        },
+        "color": {
+          "oneOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 255
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notColor"
+              ]
+            }
+          ],
+          "descriptions": {
+            "ja": "2Byte目:光色",
+            "en": "Byte 2: light color"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/maximumSettableLevelForNightLighting",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/maximumSettableLevelForNightLighting",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ]
+    },
+    "operationMode": {
+      "title": "operationMode",
+      "titles": {
+        "en": "operationMode",
+        "ja": "点灯モード設定"
+      },
+      "echonet:epc": "0xB6",
+      "description": "Lighting mode setting",
+      "descriptions": {
+        "en": "Lighting mode setting",
+        "ja": "点灯モード設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "auto",
+        "normal",
+        "night",
+        "color"
+      ],
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/operationMode",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/operationMode",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelForMainLighting": {
+      "title": "lightLevelForMainLighting",
+      "titles": {
+        "en": "lightLevelForMainLighting",
+        "ja": "通常灯モード時照明の明るさ設定"
+      },
+      "echonet:epc": "0xB7",
+      "description": "Light level setting for main lighting",
+      "descriptions": {
+        "en": "Light level setting for main lighting",
+        "ja": "通常灯モード時照明の明るさ設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightLevelForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightLevelForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStepForMainLighting": {
+      "title": "lightLevelStepForMainLighting",
+      "titles": {
+        "en": "lightLevelStepForMainLighting",
+        "ja": "通常灯モード時照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xB8",
+      "description": "Light level step setting for main lighting",
+      "descriptions": {
+        "en": "Light level step setting for main lighting",
+        "ja": "通常灯モード時照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightLevelStepForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightLevelStepForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelForNightLighting": {
+      "title": "lightLevelForNightLighting",
+      "titles": {
+        "en": "lightLevelForNightLighting",
+        "ja": "常夜灯モード時照明の明るさ設定"
+      },
+      "echonet:epc": "0xB9",
+      "description": "Light level setting for night lighting",
+      "descriptions": {
+        "en": "Light level setting for night lighting",
+        "ja": "常夜灯モード時照明の明るさ設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "number",
+      "unit": "%",
+      "minimum": 0,
+      "maximum": 100,
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightLevelForNightLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightLevelForNightLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightLevelStepForNightLighting": {
+      "title": "lightLevelStepForNightLighting",
+      "titles": {
+        "en": "lightLevelStepForNightLighting",
+        "ja": "常夜灯モード時照明の明るさ段数設定"
+      },
+      "echonet:epc": "0xBA",
+      "description": "Light level step setting for night lighting",
+      "descriptions": {
+        "en": "Light level step setting for night lighting",
+        "ja": "常夜灯モード時照明の明るさ段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightLevelStepForNightLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightLevelStepForNightLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorForMainLighting": {
+      "title": "lightColorForMainLighting",
+      "titles": {
+        "en": "lightColorForMainLighting",
+        "ja": "通常灯モード時光色設定"
+      },
+      "echonet:epc": "0xBB",
+      "description": "Light color setting for main lighting",
+      "descriptions": {
+        "en": "Light color setting for main lighting",
+        "ja": "通常灯モード時光色設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "enum": [
+        "incandescent",
+        "white",
+        "daylightWhite",
+        "daylightColor",
+        "other"
+      ],
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightColorForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightColorForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    },
+    "lightColorLevelStepForMainLighting": {
+      "title": "lightColorLevelStepForMainLighting",
+      "titles": {
+        "en": "lightColorLevelStepForMainLighting",
+        "ja": "通常灯モード時光色レベル段数設定"
+      },
+      "echonet:epc": "0xBC",
+      "description": "Light color level step setting for main lighting",
+      "descriptions": {
+        "en": "Light color level step setting for main lighting",
+        "ja": "通常灯モード時光色レベル段数設定"
+      },
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "type": "string",
+      "forms": [
+        {
+          "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties/lightColorLevelStepForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties/lightColorLevelStepForMainLighting",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ]
+    }
+  },
+  "forms": [
+    {
+      "href": "generallighting-c0a80b08-029001%40ba0256a6fea6c174/properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    },
+    {
+      "href": "urn%3Aechonet%3Aelapi%3AC0A80B08-029001%2540ba0256a6fea6c174/properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "echonet:eoj": "0x0290",
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "http://192.168.100.51",
+      "contentType": "application/json",
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "http://192.168.100.51",
+      "contentType": "application/cbor",
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}
