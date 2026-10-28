@@ -32,10 +32,11 @@ jobs:
           changed_files=$(curl -s -X GET -G $url | jq -r '.[] | if .status!="removed" then .filename else empty end')
 
           exit_code=0
-          for file in $changed_files; do
+          while IFS= read -r file; do
+            [[ -z "$file" ]] && continue
             echo "===================="
             # Check the file extension — match both *.td.jsonld and *.td.json
-            if [[ $file == *.td.jsonld || $file == *.td.json ]]; then
+            if [[ "$file" == *.td.jsonld || "$file" == *.td.json ]]; then
 
               # Look for .td-validation.json in the file's directory (walk up to repo root)
               td_version="1.1"
@@ -52,23 +53,23 @@ jobs:
               done
 
               if [[ "$td_version" == "1.1" ]]; then
-                echo 'Validating (TD 1.1)' $file '...'
-                result=$(node $VALIDATION_SCRIPT -i $file -d)
+                echo "Validating (TD 1.1) $file ..."
+                result=$(node "$VALIDATION_SCRIPT" -i "$file" -d)
                 if [[ $result == *"'failed'"* ]]; then
                   echo "$result"
-                  echo '::error::Validation failed ✗'
+                  echo "::error::Validation failed ✗"
                   exit_code=1
                 else
                   echo "$result"
-                  echo 'Validation passed ✓'
+                  echo "Validation passed ✓"
                 fi
               elif [[ "$td_version" == "2.0" ]]; then
-                echo 'Skipping (TD 2.0 — no validator yet)' $file
+                echo "Skipping (TD 2.0 — no validator yet) $file"
               else
-                echo 'Skipping (unknown tdVersion:' "$td_version" ')' $file
+                echo "Skipping (unknown tdVersion: $td_version) $file"
               fi
             else
-              echo 'Skipped' $file
+              echo "Skipped $file"
             fi
-          done
+          done <<< "$changed_files"
           exit $exit_code
