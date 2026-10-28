@@ -1,0 +1,71 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:weather",
+  "title" : "Weather",
+  "description" : "Outdoor conditions",
+  "@type" : [ "apt:WeatherService" ],
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "temperature" : {
+      "type" : "number",
+      "minimum" : -40.0,
+      "maximum" : 50.0,
+      "unit" : "°C",
+      "description" : "Outside temperature",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/weather/properties/temperature",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/weather/properties/temperature/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "humidity" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 100.0,
+      "unit" : "%",
+      "description" : "Outside relative humidity",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/weather/properties/humidity",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/weather/properties/humidity/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "daylight" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 120000.0,
+      "unit" : "lx",
+      "description" : "Outdoor illuminance",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/weather/properties/daylight",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/weather/properties/daylight/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  }
+}

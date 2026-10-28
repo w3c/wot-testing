@@ -1,0 +1,48 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:bedroom-light",
+  "title" : "Bedroom light",
+  "description" : "The ceiling light of the bedroom (40 W)",
+  "@type" : [ "saref:LightSwitch" ],
+  "apt:room" : "bedroom",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "on" : {
+      "type" : "boolean",
+      "description" : "The light is on",
+      "readOnly" : false,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "coap://localhost:5690/bedroom-light/properties/on",
+        "op" : [ "readproperty", "writeproperty" ]
+      }, {
+        "href" : "coap://localhost:5690/bedroom-light/properties/on",
+        "op" : [ "observeproperty", "unobserveproperty" ],
+        "subprotocol" : "cov:observe"
+      } ]
+    }
+  },
+  "actions" : {
+    "toggle" : {
+      "description" : "Switch the light over; returns whether it is now on",
+      "output" : {
+        "type" : "boolean"
+      },
+      "forms" : [ {
+        "href" : "coap://localhost:5690/bedroom-light/actions/toggle",
+        "op" : [ "invokeaction" ],
+        "cov:method" : "POST"
+      } ]
+    }
+  }
+}

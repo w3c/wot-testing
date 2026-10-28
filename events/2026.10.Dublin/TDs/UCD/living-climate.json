@@ -1,0 +1,81 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:living-climate",
+  "title" : "Living room climate sensor",
+  "description" : "Temperature, humidity, CO2 and illuminance in the living room",
+  "@type" : [ "saref:Sensor", "apt:ClimateSensor" ],
+  "apt:room" : "living",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "temperature" : {
+      "type" : "number",
+      "minimum" : -30.0,
+      "maximum" : 60.0,
+      "unit" : "°C",
+      "description" : "Air temperature",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/living-climate/properties/temperature",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    },
+    "humidity" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 100.0,
+      "unit" : "%",
+      "description" : "Relative humidity",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/living-climate/properties/humidity",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    },
+    "co2" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 10000.0,
+      "unit" : "ppm",
+      "description" : "CO2 concentration",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/living-climate/properties/co2",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    },
+    "illuminance" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 100000.0,
+      "unit" : "lx",
+      "description" : "Illuminance",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/living-climate/properties/illuminance",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    }
+  }
+}

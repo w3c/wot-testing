@@ -1,0 +1,35 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:kitchen-window",
+  "title" : "Kitchen window",
+  "description" : "A motorised window in the kitchen: opening it ventilates the room quickly, and lets heat out",
+  "@type" : [ "apt:WindowActuator" ],
+  "apt:room" : "kitchen",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "open" : {
+      "type" : "boolean",
+      "description" : "The window is open",
+      "readOnly" : false,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/kitchen-window/properties/open",
+        "op" : [ "readproperty", "writeproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/kitchen-window/properties/open/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  }
+}

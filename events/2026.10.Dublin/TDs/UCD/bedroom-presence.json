@@ -1,0 +1,46 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:bedroom-presence",
+  "title" : "Bedroom presence sensor",
+  "description" : "Whether anyone is in the bedroom, and how many people",
+  "@type" : [ "saref:Sensor", "apt:PresenceSensor" ],
+  "apt:room" : "bedroom",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "occupied" : {
+      "type" : "boolean",
+      "description" : "Someone is in the room",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/bedroom-presence/properties/occupied",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    },
+    "people" : {
+      "type" : "integer",
+      "minimum" : 0,
+      "description" : "Number of people in the room",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/bedroom-presence/properties/people",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    }
+  }
+}

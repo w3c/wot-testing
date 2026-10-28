@@ -1,0 +1,88 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:tariff",
+  "title" : "Electricity tariff",
+  "description" : "Time-of-use electricity prices: off-peak 00:00-07:00, peak 17:00-21:00, standard otherwise",
+  "@type" : [ "apt:Tariff" ],
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "price" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 10.0,
+      "unit" : "EUR/kWh",
+      "description" : "Current price",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/tariff/properties/price",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/tariff/properties/price/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "period" : {
+      "type" : "string",
+      "enum" : [ "offpeak", "standard", "peak" ],
+      "description" : "Current tariff period",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/tariff/properties/period",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/tariff/properties/period/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "schedule" : {
+      "type" : "object",
+      "description" : "The daily tariff periods and prices",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/tariff/properties/schedule",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/tariff/properties/schedule/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  },
+  "events" : {
+    "periodChanged" : {
+      "description" : "A new tariff period started",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "period" : {
+            "type" : "string"
+          },
+          "price" : {
+            "type" : "number"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/tariff/events/periodChanged",
+        "op" : [ "subscribeevent" ],
+        "subprotocol" : "sse",
+        "contentType" : "text/event-stream"
+      } ]
+    }
+  }
+}

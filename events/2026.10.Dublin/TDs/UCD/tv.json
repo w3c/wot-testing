@@ -1,0 +1,94 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:tv",
+  "title" : "TV",
+  "description" : "The living room TV (120 W on, 2 W in standby). The occupants watch it in the evenings",
+  "@type" : [ "saref:Appliance", "apt:Television" ],
+  "apt:room" : "living",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "on" : {
+      "type" : "boolean",
+      "description" : "The TV is on",
+      "readOnly" : false,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "coap://localhost:5690/tv/properties/on",
+        "op" : [ "readproperty", "writeproperty" ]
+      }, {
+        "href" : "coap://localhost:5690/tv/properties/on",
+        "op" : [ "observeproperty", "unobserveproperty" ],
+        "subprotocol" : "cov:observe"
+      } ]
+    },
+    "power" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000.0,
+      "unit" : "W",
+      "description" : "Power drawn",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "coap://localhost:5690/tv/properties/power",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "coap://localhost:5690/tv/properties/power",
+        "op" : [ "observeproperty", "unobserveproperty" ],
+        "subprotocol" : "cov:observe"
+      } ]
+    }
+  },
+  "events" : {
+    "switchedOn" : {
+      "description" : "The TV was switched on",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "by" : {
+            "type" : "string",
+            "enum" : [ "occupant", "remote" ]
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "coap://localhost:5690/tv/events/switchedOn",
+        "op" : [ "subscribeevent", "unsubscribeevent" ],
+        "subprotocol" : "cov:observe"
+      } ]
+    },
+    "switchedOff" : {
+      "description" : "The TV was switched off (by the occupants, or remotely)",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "by" : {
+            "type" : "string",
+            "enum" : [ "occupant", "remote" ]
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "coap://localhost:5690/tv/events/switchedOff",
+        "op" : [ "subscribeevent", "unsubscribeevent" ],
+        "subprotocol" : "cov:observe"
+      } ]
+    }
+  }
+}

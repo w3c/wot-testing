@@ -1,0 +1,51 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:water-valve",
+  "title" : "Water valve",
+  "description" : "The apartment's main water valve. Closing it stops any leak, and the water supply",
+  "@type" : [ "apt:WaterValve" ],
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "open" : {
+      "type" : "boolean",
+      "description" : "Water is supplied",
+      "readOnly" : false,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/water-valve/properties/open",
+        "op" : [ "readproperty", "writeproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/water-valve/properties/open/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "waterLeaked" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000000.0,
+      "unit" : "l",
+      "description" : "Water leaked so far",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/water-valve/properties/waterLeaked",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/water-valve/properties/waterLeaked/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  }
+}

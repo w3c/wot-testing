@@ -1,0 +1,69 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:bathroom-thermostat",
+  "title" : "Bathroom thermostat",
+  "description" : "Controls the bathroom radiator (800 W) to keep the room at the target temperature",
+  "@type" : [ "saref:Thermostat" ],
+  "apt:room" : "bathroom",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "targetTemperature" : {
+      "type" : "number",
+      "minimum" : 5.0,
+      "maximum" : 30.0,
+      "unit" : "°C",
+      "description" : "Target temperature (5 °C keeps the radiator off)",
+      "readOnly" : false,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/targetTemperature",
+        "op" : [ "readproperty", "writeproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/targetTemperature/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "temperature" : {
+      "type" : "number",
+      "minimum" : -30.0,
+      "maximum" : 60.0,
+      "unit" : "°C",
+      "description" : "Measured temperature",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/temperature",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/temperature/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "heating" : {
+      "type" : "boolean",
+      "description" : "The radiator is heating",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/heating",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/bathroom-thermostat/properties/heating/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  }
+}

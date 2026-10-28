@@ -1,0 +1,105 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:energy-meter",
+  "title" : "Energy meter",
+  "description" : "The apartment's electricity meter",
+  "@type" : [ "saref:Meter" ],
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "power" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 20000.0,
+      "unit" : "W",
+      "description" : "Power drawn now",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/power",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/power/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "energyToday" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000.0,
+      "unit" : "kWh",
+      "description" : "Energy used today",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/energyToday",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/energyToday/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "costToday" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000.0,
+      "unit" : "EUR",
+      "description" : "Cost of the energy used today",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/costToday",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/costToday/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "energyTotal" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000000.0,
+      "unit" : "kWh",
+      "description" : "Energy used since the scenario started",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/energyTotal",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/energyTotal/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "costTotal" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 1000000.0,
+      "unit" : "EUR",
+      "description" : "Cost since the scenario started",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/costTotal",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/energy-meter/properties/costTotal/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  }
+}

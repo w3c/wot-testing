@@ -1,0 +1,75 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:kitchen-leak",
+  "title" : "Kitchen leak sensor",
+  "description" : "Detects water on the kitchen floor",
+  "@type" : [ "saref:Sensor", "apt:LeakSensor" ],
+  "apt:room" : "kitchen",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "leak" : {
+      "type" : "boolean",
+      "description" : "Water is detected",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "readproperty", "observeproperty", "unobserveproperty" ],
+        "mqv:filter" : "apartment/kitchen-leak/properties/leak",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    }
+  },
+  "events" : {
+    "leakDetected" : {
+      "description" : "Water was detected",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "room" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "subscribeevent", "unsubscribeevent" ],
+        "mqv:filter" : "apartment/kitchen-leak/events/leakDetected",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    },
+    "leakCleared" : {
+      "description" : "The floor is dry again",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "room" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "mqtt://localhost:1890",
+        "op" : [ "subscribeevent", "unsubscribeevent" ],
+        "mqv:filter" : "apartment/kitchen-leak/events/leakCleared",
+        "mqv:controlPacket" : "subscribe"
+      } ]
+    }
+  }
+}

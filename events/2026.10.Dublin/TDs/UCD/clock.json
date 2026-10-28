@@ -1,0 +1,291 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:clock",
+  "title" : "Simulation clock",
+  "description" : "Simulated time, advanced a minute per tick. In free mode ticks follow at the set speed (simulated seconds per real second); in lockstep mode each tick also waits until the registered participants acknowledge it",
+  "@type" : [ "apt:SimulationClock" ],
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "time" : {
+      "type" : "string",
+      "format" : "date-time",
+      "description" : "Simulated date and time",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/time",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/time/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "day" : {
+      "type" : "string",
+      "description" : "Day of the week",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/day",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/day/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "tick" : {
+      "type" : "integer",
+      "description" : "Ticks since the scenario started",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/tick",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/tick/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "speed" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 3600.0,
+      "description" : "Simulated seconds per real second",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/speed",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/speed/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "paused" : {
+      "type" : "boolean",
+      "description" : "The clock is paused",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/paused",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/paused/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "mode" : {
+      "type" : "string",
+      "enum" : [ "free", "lockstep" ],
+      "description" : "free or lockstep",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/mode",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/mode/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "scenario" : {
+      "type" : "string",
+      "description" : "The scenario being run",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/scenario",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/scenario/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "scenarios" : {
+      "type" : "array",
+      "description" : "The scenarios that can be loaded",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/scenarios",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/scenarios/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "participants" : {
+      "type" : "array",
+      "description" : "Participants registered for lockstep",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/properties/participants",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/clock/properties/participants/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  },
+  "actions" : {
+    "pause" : {
+      "description" : "Pause the clock",
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/pause",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "resume" : {
+      "description" : "Run the clock",
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/resume",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "step" : {
+      "description" : "Advance one tick while paused",
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/step",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "setSpeed" : {
+      "description" : "Set the speed (simulated seconds per real second; 60 = a minute a second)",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "speed" : {
+            "type" : "number",
+            "minimum" : 0.0,
+            "maximum" : 3600.0
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/setSpeed",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "setMode" : {
+      "description" : "Set the mode",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "mode" : {
+            "type" : "string",
+            "enum" : [ "free", "lockstep" ]
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/setMode",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "loadScenario" : {
+      "description" : "Load a scenario and start it from the beginning (paused)",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "scenario" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/loadScenario",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "register" : {
+      "description" : "Register a participant for lockstep",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "participant" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/register",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "unregister" : {
+      "description" : "Unregister a participant",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "participant" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/unregister",
+        "op" : [ "invokeaction" ]
+      } ]
+    },
+    "acknowledge" : {
+      "description" : "A participant has handled a tick",
+      "input" : {
+        "type" : "object",
+        "properties" : {
+          "tick" : {
+            "type" : "integer"
+          },
+          "participant" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/actions/acknowledge",
+        "op" : [ "invokeaction" ]
+      } ]
+    }
+  },
+  "events" : {
+    "tick" : {
+      "description" : "Simulated time advanced a minute",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "tick" : {
+            "type" : "integer"
+          },
+          "time" : {
+            "type" : "string"
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/clock/events/tick",
+        "op" : [ "subscribeevent" ],
+        "subprotocol" : "sse",
+        "contentType" : "text/event-stream"
+      } ]
+    }
+  }
+}

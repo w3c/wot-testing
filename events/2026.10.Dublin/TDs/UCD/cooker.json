@@ -1,0 +1,105 @@
+{
+  "@context" : [ "https://www.w3.org/2022/wot/td/v1.1", {
+    "saref" : "https://w3id.org/saref#",
+    "apt" : "https://example.org/apartment#",
+    "mqv" : "http://www.example.org/mqtt-binding#",
+    "cov" : "http://www.example.org/coap-binding#"
+  } ],
+  "id" : "urn:apartment:cooker",
+  "title" : "Cooker",
+  "description" : "The kitchen's electric cooker (2000 W). The occupants switch it on and off at the cooker; it warms the kitchen and adds steam while on. It cannot be switched on remotely, but a safety isolator can switch it off",
+  "@type" : [ "saref:Appliance", "apt:Cooker" ],
+  "apt:room" : "kitchen",
+  "securityDefinitions" : {
+    "nosec_sc" : {
+      "scheme" : "nosec"
+    }
+  },
+  "security" : "nosec_sc",
+  "properties" : {
+    "on" : {
+      "type" : "boolean",
+      "description" : "The cooker is on",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/cooker/properties/on",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/cooker/properties/on/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    },
+    "power" : {
+      "type" : "number",
+      "minimum" : 0.0,
+      "maximum" : 5000.0,
+      "unit" : "W",
+      "description" : "Power drawn",
+      "readOnly" : true,
+      "observable" : true,
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/cooker/properties/power",
+        "op" : [ "readproperty" ]
+      }, {
+        "href" : "http://localhost:8090/devices/cooker/properties/power/observe",
+        "op" : [ "observeproperty" ],
+        "subprotocol" : "longpoll"
+      } ]
+    }
+  },
+  "actions" : {
+    "switchOff" : {
+      "description" : "Cut the cooker's power with the safety isolator (for example when it was left on)",
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/cooker/actions/switchOff",
+        "op" : [ "invokeaction" ]
+      } ]
+    }
+  },
+  "events" : {
+    "switchedOn" : {
+      "description" : "The cooker was switched on",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "by" : {
+            "type" : "string",
+            "enum" : [ "occupant", "remote" ]
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/cooker/events/switchedOn",
+        "op" : [ "subscribeevent" ],
+        "subprotocol" : "sse",
+        "contentType" : "text/event-stream"
+      } ]
+    },
+    "switchedOff" : {
+      "description" : "The cooker was switched off (by the occupants, or remotely)",
+      "data" : {
+        "type" : "object",
+        "properties" : {
+          "time" : {
+            "type" : "string"
+          },
+          "by" : {
+            "type" : "string",
+            "enum" : [ "occupant", "remote" ]
+          }
+        }
+      },
+      "forms" : [ {
+        "href" : "http://localhost:8090/devices/cooker/events/switchedOff",
+        "op" : [ "subscribeevent" ],
+        "subprotocol" : "sse",
+        "contentType" : "text/event-stream"
+      } ]
+    }
+  }
+}
