@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "modbus-elevator",
+  "description": "Elevator Thing",
+  "properties": {
+    "lightSwitch": {
+      "type": "boolean",
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "modbus+tcp://plugfest.thingweb.io:8088/1/1?quantity=1",
+          "op": "readproperty",
+          "modv:entity": "Coil",
+          "modv:function": "readCoil"
+        },
+        {
+          "href": "modbus+tcp://plugfest.thingweb.io:8088/1/1?quantity=1",
+          "op": "writeproperty",
+          "modv:entity": "Coil",
+          "modv:function": "writeSingleCoil"
+        }
+      ]
+    },
+    "onTheMove": {
+      "type": "boolean",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "modbus+tcp://plugfest.thingweb.io:8088/1/10001?quantity=1",
+          "op": [
+            "readproperty",
+            "observeproperty"
+          ],
+          "modv:entity": "DiscreteInput",
+          "modv:function": "readDiscreteInput",
+          "modv:pollingTime": 1000
+        }
+      ]
+    },
+    "floorNumber": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 15,
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false,
+      "forms": [
+        {
+          "href": "modbus+tcp://plugfest.thingweb.io:8088/1/40001?quantity=2",
+          "op": "readproperty",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "readHoldingRegisters"
+        },
+        {
+          "href": "modbus+tcp://plugfest.thingweb.io:8088/1/40001?quantity=2",
+          "op": "writeproperty",
+          "modv:entity": "HoldingRegister",
+          "modv:function": "writeSingleHoldingRegister"
+        }
+      ]
+    }
+  },
+  "formDefaults": {
+    "contentType": "application/octet-stream",
+    "base": "modbus+tcp://plugfest.thingweb.io:8088/1",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

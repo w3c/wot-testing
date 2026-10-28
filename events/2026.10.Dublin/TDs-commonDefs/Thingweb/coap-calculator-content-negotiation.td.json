@@ -1,0 +1,141 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "coap-calculator-content-negotiation",
+  "description": "Calculator Thing",
+  "properties": {
+    "result": {
+      "type": "number",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/result",
+          "op": "readproperty"
+        },
+        {
+          "href": "properties/result",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    },
+    "lastChange": {
+      "type": "string",
+      "format": "date-time",
+      "readOnly": true,
+      "writeOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/lastChange",
+          "op": "readproperty"
+        },
+        {
+          "href": "properties/lastChange",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    }
+  },
+  "actions": {
+    "add": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/add",
+          "op": "invokeaction",
+          "cov:method": "POST"
+        }
+      ]
+    },
+    "subtract": {
+      "input": {
+        "type": "number"
+      },
+      "output": {
+        "type": "number"
+      },
+      "idempotent": false,
+      "safe": false,
+      "forms": [
+        {
+          "href": "actions/subtract",
+          "op": "invokeaction",
+          "cov:method": "POST"
+        }
+      ]
+    }
+  },
+  "events": {
+    "update": {
+      "data": {
+        "type": "number"
+      },
+      "forms": [
+        {
+          "href": "events/update",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ],
+          "subprotocol": "cov:observe"
+        }
+      ]
+    }
+  },
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "coap://plugfest.thingweb.io:5684/coap-calculator-content-negotiation",
+      "contentType": "application/json",
+      "cov:method": "GET",
+      "cov:accept": 50,
+      "response": {
+        "contentType": "application/json",
+        "cov:contentFormat": 50
+      },
+      "cov:contentFormat": 50,
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "coap://plugfest.thingweb.io:5684/coap-calculator-content-negotiation",
+      "contentType": "application/cbor",
+      "cov:method": "GET",
+      "cov:accept": 60,
+      "response": {
+        "contentType": "application/cbor",
+        "cov:contentFormat": 60
+      },
+      "cov:contentFormat": 60,
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}

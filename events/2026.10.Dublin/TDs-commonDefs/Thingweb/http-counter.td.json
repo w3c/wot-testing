@@ -1,0 +1,287 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "Counter",
+  "properties": {
+    "count": {
+      "title": "Count",
+      "type": "integer",
+      "description": "Current counter value",
+      "observable": true,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/count{?step}",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/count/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/count{?step}",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/count/observable",
+          "contentType": "application/cbor",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "writeOnly": false
+    },
+    "countAsImage": {
+      "description": "Current counter value as SVG image",
+      "observable": false,
+      "readOnly": true,
+      "uriVariables": {
+        "fill": {
+          "type": "string"
+        }
+      },
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/countAsImage{?fill,step}",
+          "contentType": "image/svg+xml",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/countAsImage{?fill,step}",
+          "contentType": "image/svg+xml",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false
+    },
+    "redDotImage": {
+      "description": "Red dot image as PNG",
+      "observable": false,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/redDotImage{?step}",
+          "contentType": "image/png;base64",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/redDotImage{?step}",
+          "contentType": "image/png;base64",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false
+    },
+    "lastChange": {
+      "title": "Last change",
+      "type": "string",
+      "description": "Last change of counter value",
+      "observable": true,
+      "readOnly": true,
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/lastChange{?step}",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/lastChange/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/lastChange{?step}",
+          "contentType": "application/cbor",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/properties/lastChange/observable",
+          "contentType": "application/cbor",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "writeOnly": false
+    }
+  },
+  "actions": {
+    "increment": {
+      "title": "Increment",
+      "description": "Increment counter value",
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/increment{?step}",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/increment{?step}",
+          "contentType": "application/cbor",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    },
+    "decrement": {
+      "title": "Decrement",
+      "description": "Decrementing counter value",
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/decrement{?step}",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/decrement{?step}",
+          "contentType": "application/cbor",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    },
+    "reset": {
+      "title": "Reset",
+      "description": "Resetting counter value",
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/reset{?step}",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/actions/reset{?step}",
+          "contentType": "application/cbor",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    }
+  },
+  "events": {
+    "change": {
+      "title": "Changed",
+      "description": "Change event",
+      "forms": [
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/events/change{?step}",
+          "subprotocol": "longpoll",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        },
+        {
+          "href": "https://plugfest.thingweb.io:443/counter/events/change{?step}",
+          "contentType": "application/cbor",
+          "subprotocol": "longpoll",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://www.thingweb.io/img/favicon/favicon.png",
+      "sizes": "16x14",
+      "rel": "icon"
+    }
+  ],
+  "id": "urn:uuid:134404e9-329b-44d7-91bc-7ed690d7d7af",
+  "description": "Counter example Thing",
+  "support": "https://github.com/eclipse-thingweb/node-wot/",
+  "uriVariables": {
+    "step": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 250
+    }
+  },
+  "forms": [
+    {
+      "href": "https://plugfest.thingweb.io:443/counter/properties",
+      "contentType": "application/json",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    },
+    {
+      "href": "https://plugfest.thingweb.io:443/counter/properties",
+      "contentType": "application/cbor",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties"
+      ]
+    }
+  ],
+  "formDefaults": {
+    "contentType": "application/json",
+    "base": "https://plugfest.thingweb.io/counter/",
+    "security": {
+      "scheme": "nosec"
+    }
+  }
+}

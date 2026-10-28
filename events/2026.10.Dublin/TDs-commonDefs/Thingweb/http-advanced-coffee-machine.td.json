@@ -1,0 +1,370 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "@language": "en"
+    }
+  ],
+  "@type": "Thing",
+  "title": "http-advanced-coffee-machine",
+  "properties": {
+    "allAvailableResources": {
+      "type": "object",
+      "description": "Current level of all available resources given as an integer percentage for each particular resource.\\nThe data is obtained from the machine's sensors but can be set manually via the availableResourceLevel property in case the sensors are broken.",
+      "readOnly": true,
+      "properties": {
+        "water": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "milk": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "chocolate": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coffeeBeans": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "forms": [
+        {
+          "href": "properties/allAvailableResources",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false,
+      "observable": false
+    },
+    "availableResourceLevel": {
+      "type": "number",
+      "description": "Current level of a particular resource. Requires resource id variable as uriVariables.\\nThe property can also be overridden, which also requires resource id as uriVariables.",
+      "uriVariables": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "water",
+            "milk",
+            "chocolate",
+            "coffeeBeans"
+          ]
+        }
+      },
+      "forms": [
+        {
+          "href": "properties/availableResourceLevel{?id}",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false
+    },
+    "possibleDrinks": {
+      "type": "array",
+      "description": "The list of possible drinks in general. Doesn't depend on the available resources.",
+      "readOnly": true,
+      "items": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "properties/possibleDrinks",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false,
+      "observable": false
+    },
+    "servedCounter": {
+      "type": "integer",
+      "description": "The total number of served beverages.",
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "properties/servedCounter",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        }
+      ],
+      "readOnly": false,
+      "writeOnly": false,
+      "observable": false
+    },
+    "maintenanceNeeded": {
+      "type": "boolean",
+      "description": "Shows whether a maintenance is needed. The property is observable. Automatically set to true when the servedCounter property exceeds 1000.",
+      "observable": true,
+      "forms": [
+        {
+          "href": "properties/maintenanceNeeded",
+          "op": [
+            "readproperty",
+            "writeproperty"
+          ]
+        },
+        {
+          "href": "properties/maintenanceNeeded/observable",
+          "op": [
+            "observeproperty",
+            "unobserveproperty"
+          ],
+          "subprotocol": "longpoll"
+        }
+      ],
+      "readOnly": false,
+      "writeOnly": false
+    },
+    "schedules": {
+      "type": "array",
+      "description": "The list of scheduled tasks.",
+      "readOnly": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "drinkId": {
+            "type": "string",
+            "description": "Defines what drink to make, drinkId is one of possibleDrinks property values, e.g. latte."
+          },
+          "size": {
+            "type": "string",
+            "description": "Defines the size of a drink, s = small, m = medium, l = large.",
+            "enum": [
+              "s",
+              "m",
+              "l"
+            ]
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Defines how many drinks to make, ranging from 1 to 5.",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "time": {
+            "type": "string",
+            "description": "Defines the time of the scheduled task in 24h format, e.g. 10: 00 or 21: 00."
+          },
+          "mode": {
+            "type": "string",
+            "description": "Defines the mode of the scheduled task, e.g. once or everyday. All the possible values are given in the enum field of this Thing Description.",
+            "enum": [
+              "once",
+              "everyday",
+              "everyMo",
+              "everyTu",
+              "everyWe",
+              "everyTh",
+              "everyFr",
+              "everySat",
+              "everySun"
+            ]
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "properties/schedules",
+          "op": [
+            "readproperty"
+          ],
+          "htv:methodName": "GET"
+        }
+      ],
+      "writeOnly": false,
+      "observable": false
+    }
+  },
+  "actions": {
+    "makeDrink": {
+      "description": "Make a drink from available list of beverages. Accepts drink id, size and quantity as uriVariables.\\nBrews one medium americano if no uriVariables are specified.",
+      "uriVariables": {
+        "drinkId": {
+          "type": "string",
+          "description": "Defines what drink to make, drinkId is one of possibleDrinks property values, e.g. latte."
+        },
+        "size": {
+          "type": "string",
+          "description": "Defines the size of a drink, s = small, m = medium, l = large.",
+          "enum": [
+            "s",
+            "m",
+            "l"
+          ]
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "Defines how many drinks to make, ranging from 1 to 5.",
+          "minimum": 1,
+          "maximum": 5
+        }
+      },
+      "output": {
+        "type": "object",
+        "description": "Returns true/false and a message when all invoked promises are resolved (asynchronous).",
+        "properties": {
+          "result": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "actions/makeDrink{?drinkId,size,quantity}",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    },
+    "setSchedule": {
+      "description": "Add a scheduled task to the schedules property. Accepts drink id, size, quantity, time and mode as body of a request.\\nAssumes one medium americano if not specified, but time and mode are mandatory fields.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "drinkId": {
+            "type": "string",
+            "description": "Defines what drink to make, drinkId is one of possibleDrinks property values, e.g. latte."
+          },
+          "size": {
+            "type": "string",
+            "description": "Defines the size of a drink, s = small, m = medium, l = large.",
+            "enum": [
+              "s",
+              "m",
+              "l"
+            ]
+          },
+          "quantity": {
+            "type": "integer",
+            "description": "Defines how many drinks to make, ranging from 1 to 5.",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "time": {
+            "type": "string",
+            "description": "Defines the time of the scheduled task in 24h format, e.g. 10: 00 or 21: 00."
+          },
+          "mode": {
+            "type": "string",
+            "description": "Defines the mode of the scheduled task, e.g. once or everyday. All the possible values are given in the enum field of this Thing Description.",
+            "enum": [
+              "once",
+              "everyday",
+              "everyMo",
+              "everyTu",
+              "everyWe",
+              "everyTh",
+              "everyFr",
+              "everySat",
+              "everySun"
+            ]
+          }
+        },
+        "required": [
+          "time",
+          "mode"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "description": "Returns true/false and a message when all invoked promises are resolved (asynchronous).",
+        "properties": {
+          "result": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "forms": [
+        {
+          "href": "actions/setSchedule",
+          "op": [
+            "invokeaction"
+          ],
+          "htv:methodName": "POST"
+        }
+      ],
+      "safe": false,
+      "idempotent": false
+    }
+  },
+  "events": {
+    "outOfResource": {
+      "description": "Out of resource event. Emitted when the available resource level is not sufficient for a desired drink.",
+      "data": {
+        "type": "string"
+      },
+      "forms": [
+        {
+          "href": "events/outOfResource",
+          "subprotocol": "longpoll",
+          "op": [
+            "subscribeevent",
+            "unsubscribeevent"
+          ]
+        }
+      ]
+    }
+  },
+  "id": "urn:uuid:6c9fa662-dead-4be5-bb97-f5d2fae9cbc2",
+  "description": "A smart coffee machine with a range of capabilities.\\nA complementary tutorial is available at http: //www.thingweb.io/smart-coffee-machine.html.",
+  "support": "https://github.com/eclipse-thingweb/node-wot/",
+  "forms": [
+    {
+      "href": "properties",
+      "op": [
+        "readallproperties",
+        "readmultipleproperties",
+        "writeallproperties",
+        "writemultipleproperties"
+      ]
+    }
+  ],
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "https://plugfest.thingweb.io/http-advanced-coffee-machine",
+      "contentType": "application/json",
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "https://plugfest.thingweb.io/http-advanced-coffee-machine",
+      "contentType": "application/cbor",
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}

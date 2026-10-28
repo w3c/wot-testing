@@ -1,0 +1,76 @@
+{
+  "@context": "https://www.w3.org/ns/wot-next/td",
+  "@type": "Thing",
+  "title": "smart-home-smart-clock",
+  "properties": {
+    "time": {
+      "readOnly": true,
+      "observable": true,
+      "type": "object",
+      "properties": {
+        "minute": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 59
+        },
+        "hour": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 23
+        }
+      },
+      "forms": [
+        {
+          "href": "properties/time"
+        },
+        {
+          "href": "properties/time",
+          "op": [
+            "readproperty"
+          ]
+        }
+      ],
+      "writeOnly": false
+    }
+  },
+  "id": "urn:uuid:8b65b4f0-6be6-4150-8f9e-6f8f3a411f19",
+  "description": "a smart clock that runs 60 times faster than real time, where 1 hour happens in 1 minute.",
+  "support": "https://github.com/eclipse-thingweb/node-wot/",
+  "forms": [
+    {
+      "href": "properties",
+      "op": [
+        "readmultipleproperties",
+        "readallproperties"
+      ]
+    }
+  ],
+  "formDefaults": [
+    "cbor",
+    "json"
+  ],
+  "formDefinitions": {
+    "json": {
+      "base": "coap://plugfest.thingweb.io:5685/smart-home-smart-clock",
+      "contentType": "application/json",
+      "op": [
+        "observeproperty",
+        "unobserveproperty"
+      ],
+      "security": {
+        "scheme": "nosec"
+      }
+    },
+    "cbor": {
+      "base": "coap://plugfest.thingweb.io:5685/smart-home-smart-clock",
+      "contentType": "application/cbor",
+      "op": [
+        "observeproperty",
+        "unobserveproperty"
+      ],
+      "security": {
+        "scheme": "nosec"
+      }
+    }
+  }
+}

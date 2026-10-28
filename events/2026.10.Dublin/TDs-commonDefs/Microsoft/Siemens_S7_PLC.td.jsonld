@@ -1,0 +1,779 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/wot-next/td",
+    {
+      "s7v": "https://www.w3.org/2026/wot/s7comm"
+    }
+  ],
+  "id": "urn:S7-1500_ET200MP_station_2.PLC_2",
+  "@type": [
+    "Thing"
+  ],
+  "name": "S7-1500_ET200MP_station_2.PLC_2",
+  "s7v:controller": "S7_1500",
+  "title": "PLC_2",
+  "properties": {
+    "AllTypesDB_Pulse_Bool": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX0.0:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Pulse_Char": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB1:CHAR",
+          "s7v:type": "s7v:CHAR"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_Byte": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "maximum": 255,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB2:BYTE",
+          "s7v:type": "s7v:BYTE"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_SInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -128,
+      "maximum": 127,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB3:SINT",
+          "s7v:type": "s7v:SINT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_USInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "maximum": 255,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB4:USINT",
+          "s7v:type": "s7v:USINT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_Word": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "maximum": 65535,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW6:WORD",
+          "s7v:type": "s7v:WORD"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_Int": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW8:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_UInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "maximum": 65535,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW10:UINT",
+          "s7v:type": "s7v:UINT"
+        }
+      ]
+    },
+    "AllTypesDB_Pulse_WChar": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW12:WCHAR",
+          "s7v:type": "s7v:WCHAR"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_DWord": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD14:DWORD",
+          "s7v:type": "s7v:DWORD"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_DInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD18:DINT",
+          "s7v:type": "s7v:DINT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_UDInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD22:UDINT",
+          "s7v:type": "s7v:UDINT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_Real": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD26:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_Random_Real": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD30:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_LReal": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX34:LREAL",
+          "s7v:type": "s7v:LREAL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_LInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX42:LINT",
+          "s7v:type": "s7v:LINT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_ULInt": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX50:ULINT",
+          "s7v:type": "s7v:ULINT"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_LWord": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX58:LWORD",
+          "s7v:type": "s7v:LWORD"
+        }
+      ]
+    },
+    "AllTypesDB_Pattern_String": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB66:STRING(80)",
+          "s7v:type": "s7v:STRING"
+        }
+      ]
+    },
+    "AllTypesDB_Pattern_WString": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW148:WSTRING(64)",
+          "s7v:type": "s7v:WSTRING"
+        }
+      ]
+    },
+    "AllTypesDB_Now_DTL": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB280:DTL",
+          "s7v:type": "s7v:DTL"
+        }
+      ]
+    },
+    "AllTypesDB_Now_DT": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBB292:DT",
+          "s7v:type": "s7v:DT"
+        }
+      ]
+    },
+    "AllTypesDB_Now_DATE": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW300:DATE",
+          "s7v:type": "s7v:DATE"
+        }
+      ]
+    },
+    "AllTypesDB_Now_TOD": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD302:TOD",
+          "s7v:type": "s7v:TOD"
+        }
+      ]
+    },
+    "AllTypesDB_Now_LTOD": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX306:LTOD",
+          "s7v:type": "s7v:LTOD"
+        }
+      ]
+    },
+    "AllTypesDB_Now_LDT": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX314:LDT",
+          "s7v:type": "s7v:LDT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_TIME": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD322:TIME",
+          "s7v:type": "s7v:TIME"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_LTIME": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX326:LTIME",
+          "s7v:type": "s7v:LTIME"
+        }
+      ]
+    },
+    "AllTypesDB_Saw_S5TIME": {
+      "type": "string",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW334:S5TIME",
+          "s7v:type": "s7v:S5TIME"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_0": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.0:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_1": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.1:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_2": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.2:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_3": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.3:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_4": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.4:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_5": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.5:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_6": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.6:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_7": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX336.7:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_8": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.0:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_9": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.1:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_10": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.2:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_11": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.3:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_12": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.4:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_13": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.5:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_14": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.6:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Bits_Array_15": {
+      "type": "boolean",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBX337.7:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_0": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW338:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_1": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW340:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_2": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW342:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_3": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW344:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_4": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW346:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_5": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW348:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_6": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW350:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_IntArray_7": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "forms": [
+        {
+          "href": "./%25DB1.DBW352:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_RealArray_0": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD354:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_RealArray_1": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD358:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_RealArray_2": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD362:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_Sine_RealArray_3": {
+      "type": "number",
+      "readOnly": false,
+      "observable": true,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD366:REAL",
+          "s7v:type": "s7v:REAL"
+        }
+      ]
+    },
+    "AllTypesDB_PRNG_State": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": 0,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD370:DWORD",
+          "s7v:type": "s7v:DWORD"
+        }
+      ]
+    },
+    "AllTypesDB_Tick_ms": {
+      "type": "integer",
+      "readOnly": false,
+      "observable": true,
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "forms": [
+        {
+          "href": "./%25DB1.DBD374:DINT",
+          "s7v:type": "s7v:DINT"
+        }
+      ]
+    },
+    "MB100_Saw_Byte": {
+      "type": "integer",
+      "observable": true,
+      "minimum": 0,
+      "maximum": 255,
+      "readOnly": false,
+      "forms": [
+        {
+          "href": "./%25M100:BYTE",
+          "s7v:type": "s7v:BYTE"
+        }
+      ]
+    },
+    "MW102_Saw_Word": {
+      "type": "integer",
+      "observable": true,
+      "minimum": -32768,
+      "maximum": 32767,
+      "readOnly": false,
+      "forms": [
+        {
+          "href": "./%25M102:INT",
+          "s7v:type": "s7v:INT"
+        }
+      ]
+    },
+    "MD104_Sine_DWord": {
+      "type": "integer",
+      "observable": true,
+      "minimum": -2147483648,
+      "maximum": 2147483647,
+      "readOnly": false,
+      "forms": [
+        {
+          "href": "./%25M104:DINT",
+          "s7v:type": "s7v:DINT"
+        }
+      ]
+    },
+    "M120_0_Pulse_Bool": {
+      "type": "boolean",
+      "observable": true,
+      "readOnly": false,
+      "forms": [
+        {
+          "href": "./%25M120.0:BOOL",
+          "s7v:type": "s7v:BOOL"
+        }
+      ]
+    },
+    "QB0_Saw_Byte": {
+      "type": "integer",
+      "observable": true,
+      "minimum": 0,
+      "maximum": 255,
+      "readOnly": false,
+      "forms": [
+        {
+          "href": "./%25Q0:BYTE",
+          "s7v:type": "s7v:BYTE"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "formDefaults": {
+    "op": [
+      "readproperty",
+      "observeproperty"
+    ],
+    "s7v:pollingTime": 1000,
+    "base": "s7://192.168.100.151/0,1/",
+    "security": {
+      "scheme": "nosec"
+    },
+    "contentType": "application/octet-stream"
+  }
+}
